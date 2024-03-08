@@ -1,0 +1,80 @@
+\chapter{Lab Test Review for Math 112}
+
+The following exercises are provided as examples of potential questions on the final lab test at the end of the semester.
+
+\section*{The Basics}
+
+\begin{enumerate}
+\item Evaluate $\sqrt[3]{\dfrac{5.0^2 - 3.0}{1.5 + 9.0^2}}$ to $15$ digits.
+\item Give the numerical value of ${\rm e}^2$ to $15$ digits.
+\item Factor the given cubic to find its roots.\[ 2x^3 - 7x^2 + 7x -2 \]
+\item Find the point of intersection of the curves $y = {\rm e}^x$ and $y = \frac{1}{x}$. Give both the $x$- and $y$-coordinates to $15$ digits.
+
+\section*{Limits}\index{limit}
+
+\item Find the left- and right-hand limits of  \[ \dfrac{x^2 |x-2|}{x-2} \] at $x=2$. Does the two-sided limit at $x=2$ exist? Explain.
+\item Consider the function \[ f(x)=\frac{\sin(x)}{x^2+1}+\arctan(x). \] Evaluate the following limits to $15$ digits.
+	\begin{enumerate}
+	\item $\dlim{x}{\infty} f(x)$
+	\item $\dlim{x}{-\infty} f(x)$
+	\end{enumerate}
+
+\section*{Vertical and Horizontal Asymptotes}\index{asymptote}
+
+\item Sketch the plot of $y=\dfrac{ \sqrt{4x^2 + 1} }{2x - 1}$ and state the equations of vertical and horizontal asymptotes.
+\item Find the horizontal asymptote of $\dfrac{5x^3 - 2x + 1}{1 - 8x^3}$.
+
+\section*{The Derivative of a Function}\index{derivative}
+
+\item Consider the function \[ f(x) = (1-x^2) {\rm e}^{-x^2/2}. \] Find all critical numbers of $f$ to $15$ digits.
+\item Consider the function \[ g(x) = \frac{x+2}{3\sqrt{x^2+5}}. \]
+	\begin{enumerate}
+	\item Plot $g(x)$, $g'(x)$, and $g''(x)$ on the same axes.
+	\item Find the maximum value of $g(x)$.
+	\item Find the maximum value of $g'(x)$.
+	\end{enumerate}
+\item The height in metres of a ball thrown from the top of a building is given by the function
+\[ h(t) = -9.80t^2 + 5.00t + 40. \]
+	\begin{enumerate}
+	\item Find the velocity of the ball at $t=2$ seconds.
+	\item At what time does the ball reach its maximum height?
+	\item What is the maximum height of the ball?
+	\end{enumerate}
+
+\section*{Tangent Lines}\index{lines}
+
+\item Given the function \[ f(x) = {\rm e}^x \cos x, \] find the equation of the tangent line to $f(x)$ at $x=1$ in the form $y = mx + b$.
+\item Given the function \[ g(x) = x^{\ln x}, \] find the equation of the tangent line to $g(x)$ at $x=5$ in the form $y = mx + b$.
+
+\section*{Implicit Functions}\index{implicit functions}
+
+\item Given the Folium of Descartes,
+\[ x^3 + y^3 = 6xy, \]
+find the slopes of the tangent lines to the curve at $x=2$.
+\item Find all points on the curve
+\[ (x^2+y^2)^2 = 16(y^2-x^2) \]
+where the slope of the tangent line to the curve is equal to $4$.\\
+\textit{(Hint: Use the \texttt{fsolve()} command over different intervals to find the required points.)}
+\end{enumerate}
+
+\clearpage
+
+\section*{Solutions}
+
+\begin{enumerate}
+    \item $0.643659589737087$
+    \item $7.38905609893068$
+    \item $\left(x-1\right) \left(x-2\right) \left(2 x-1\right)$
+    \item $x= 0.567143290409784, y= 1.76322283435190$
+    \item $4$ from the right, $-4$ from the left. No, the two-sided limit at $x = 2$ does not exist because the left and right limits are different.
+    \item (a) $1.57079632679490$\\ (b) $-1.57079632679490$
+    \item Vertical asymptote: $x=\frac{1}{2}$; Horizontal asymptotes: $y=\pm 1$
+    \item $y=-\frac{5}{8}$
+    \item $0, 1.73205080756888,- 1.73205080756888$
+    \item (b) Maximum value of $0.447213595499958$ at $x=2.5$. \\(c) Maximum value of $0.166566474658809$ at $x=-0.57767710879358$.
+    \item (a) $- 34.20$ \\(b) $t=0.255102040816327$ seconds \\(c) $40.6377551020408$ metres
+    \item $y=-0.818661347262959 x + 2.28735528717885$
+    \item $y=8.58386825467852 x - 29.5856982226701$
+    \item $-1.13715804260326, 0.742227198968559, 0.394930843634699$
+    \item $(-1.35130857040332, -1.95308486464414)$, $(-1.36235641252506, 2.87932257596956)$, $(1.36235641252506, -2.87932257596956)$, $(1.35130857040332, 1.95308486464414)$
+\end{enumerate}

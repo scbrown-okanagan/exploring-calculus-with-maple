@@ -1,0 +1,269 @@
+\chapter{Basic Operations}
+\label{chp:basic_operations}
+
+\section{Expressing a Result as a Decimal}
+
+Maple tries to use exact, symbolic values whenever it can. If you need a decimal representation of a value or expression, you can use the \texttt{evalf()} command as seen below.
+
+\index{evalf}
+\index{mathematical functions!square root}
+\index{Digits}
+\index{Pi}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{sqrt(2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{sqrt(2)}{\[\displaystyle  \sqrt{2}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{evalf(sqrt(2));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1.414213562}{\[\displaystyle  1.414213562\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote[-.8cm]{Maple will default to a decimal approximation anytime the input already uses decimals. For example, try \texttt{sqrt(2.0)} and see the result.}
+
+It is often useful to give the exact value as well as the decimal approximation in one execution group, using the \% shortcut: 
+\marginnote[.5cm]{Recall that using the \% symbol within another command will use the result of the first command automatically. } 
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{sqrt(2); evalf(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{sqrt(2)}{\[\displaystyle  \sqrt{2}\]}
+\end{maplelatex}
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1.414213562}{\[\displaystyle  1.414213562\]}
+\end{maplelatex}
+\end{maplegroup}
+
+By default, Maple will express a decimal with $10$-digit accuracy. This default can be changed by assigning a new value to \texttt{Digits}, or you can specify the number of digits anytime you use the \texttt{evalf()} command.
+
+\marginnote{The first letter of \texttt{Digits} must be capitalized and there must be a colon included before the equals sign.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Digits := 15;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Digits := 15}{\[\displaystyle {\it Digits}\, := \,15\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote{The assignment operator \texttt{:=} is explained in detail in Tutorial \ref{chp:assignment_operator} on page \pageref{chp:assignment_operator}.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Pi;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Pi}{\[\displaystyle \pi \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{evalf(Pi);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{3.14159265358979}{\[\displaystyle  3.14159265358979\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{evalf(Pi,50);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{3.1415926535897932384626433832795028841971693993751}{\[\displaystyle  3.1415926535897932384626433832795028841971693993751\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{Expanding Expressions}
+
+You can ask Maple to expand any expression with the \texttt{expand()} command, including products of polynomials and rational functions. Maple will also expand various logarithmic and trigonometric expressions.
+
+\index{expand}
+\index{mathematical functions!cosine}
+\index{mathematical functions!tangent}
+
+\marginnote{The multiplication operation * (or a space in 2D Math mode) is not required between numerical coefficients and variable. However, multiplication between multiple variables is required.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{expand((2*x + 3*y)\symbol{94}6);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{64*x^6+576*x^5*y+2160*x^4*y^2+4320*x^3*y^3+4860*x^2*y^4+2916*x*y^5+729*y^6}{\[\displaystyle 64\,x^6+576\,x^5y+2160\,x^4y^2+4320\,x^3y^3+4860\,x^2y^4+2916\,xy^5+729\,y^6\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{expand(cos(2*x));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{2*cos(x)^2-1}{\[\displaystyle 2\, \left( \cos \left( x \right)  \right) ^{2}-1\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{expand(tan(a + b));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(tan(a)+tan(b))/(1-tan(a)*tan(b))}{\[\displaystyle {\frac {\tan \left( a \right) +\tan \left( b \right) }{1-\tan \left( a \right) \tan \left( b \right) }}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+
+\section{Factoring Expressions}
+
+Maple can also factor expressions with the \texttt{factor()} command. It will factor polynomials (including those with multiple variables) and will even factor more complicated expressions (like those involving trig functions as seen below).
+
+\index{factor}
+\index{mathematical functions!sine}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{factor(x\symbol{94}2 - 1);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(x-1)*(x+1)}{\[\displaystyle  \left( x-1 \right)  \left( x+1 \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote[12pt]{In some cases, Maple may factor the expression and perform some additional basic simplification.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{factor((x\symbol{94}2 + 2*x - 15)/(x\symbol{94}2 + 7*x + 10));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(x-1)/(x+1)}{\[\displaystyle  \frac{x-3}{x+2} \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{factor(sin(x)\symbol{94}2 - 3*sin(x) + 2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(sin(x)-1)*(sin(x)-2)}{\[\displaystyle  \left( \sin \left( x \right) -1 \right)  \left( \sin \left( x \right) -2 \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote{If Maple cannot factor the expression given, it will output the original expression.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{factor(x\symbol{94}2 + 1);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{x^2+1}{\[\displaystyle {x}^{2}+1\]}
+\end{maplelatex}
+\end{maplegroup}
+
+Maple will factor expressions with multiple variables as well. Be sure to include multiplication (*) between variables.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{factor(a\symbol{94}3 + 3*a\symbol{94}2*b + 3*a*b\symbol{94}2 + b\symbol{94}3);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(a+b)^3}{\[\displaystyle (a+b)^3\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{Simplifying Expressions}
+
+Likewise, you can also simplify any expression with \texttt{simplify()}. This includes basic simplifications such as collecting like terms as well as more complicated algebraic simplifications such as canceling and simplifying radicals, exponents, logarithms, trigonometric functions, etc.
+
+\index{simplify}
+\index{mathematical functions!sine}
+\index{mathematical functions!cosine}
+\index{mathematical functions!tangent}
+\index{mathematical functions!logarithmic@natural logarithmic}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{simplify(3*sin(x)\symbol{94}2 + 3*cos(x)\symbol{94}2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{3}{\[\displaystyle 3\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote{The \texttt{simplify()} command can sometimes produce unexpected results. In some cases, the \texttt{factor} command may be more appropriate. In other cases, you may need to include some optional parameters in the command.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{simplify(4*(tan(x)\symbol{94}2 + 1));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{4/cos(x)^2}{\[\displaystyle 4\, \left( \cos \left( x \right)  \right) ^{-2}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{simplify(ln(3*x\symbol{94}3*y));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{ln(3)+ln(x^3*y)}{\[\displaystyle \ln  \left( 3 \right) +\ln  \left( {x}^{3}y \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote{Sometimes additional parameters need to be supplied in order for Maple to simplify the expression as you intend. Here, we add the assumption that all variables are positive so that $\ln(x)$ and $\ln(y)$ are defined.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{simplify(ln(3*x\symbol{94}3*y), assume=positive);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{ln(3)+3*ln(x)+ln(y)}{\[\displaystyle \ln  \left( 3 \right) +3\,\ln  \left( x \right) +\ln  \left( y \right) \]}
+\end{maplelatex}
+\end{maplegroup}

@@ -1,0 +1,177 @@
+\chapter{Integration using Numerical Approximation}
+\label{chp:integration_using_numerical_approximation}
+
+\section{The ApproximateInt Command}
+
+To use the \texttt{ApproximateInt} command, we must load the \texttt{Student[Calculus1]} package.
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{with(Student[Calculus1]):
+}{}
+\end{mapleinput}
+\end{maplegroup}
+
+We can set up a function and approximate the area under the curve over a specified interval.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{f(x) := x*sin(x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{f := proc (x) options operator, arrow; x*sin(x) end proc}{\[\displaystyle f\, := \,x\mapsto x\sin \left( x \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( f(x), x=-3..3, method=upper, output=plot, partition=10);
+}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/Riemann_Sumsplot2d1.eps}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( f(x), x=-3..3, method=upper, output=value, partition=10);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{7.981170598}{\[\displaystyle  7.981170598\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( f(x), x=-3..3, method=lower, output=value, partition=10);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{4.202044853}{\[\displaystyle  4.202044853\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( f(x), x=-3..3, method=midpoint, output=plot, partition=20);}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/Riemann_Sumsplot2d2.eps}
+\end{maplegroup}
+
+We can use different methods for the rectangles, such as left-point, right-point, midpoint, etc.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{g(x) := 10*exp(-x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{g := proc (x) options operator, arrow; 10*exp(-x) end proc}{\[\displaystyle g\, := \,x\mapsto 10\,{{\rm e}^{-x}}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(g(x), x = 0..4, method=left, output=value, partition=8);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{5+5*exp(-1/2)+5*exp(-1)+5*exp(-3/2)+5*exp(-2)+5*exp(-5/2)+5*exp(-3)+5*exp(-7/2)}{\[\displaystyle 5+5\,{{\rm e}^{-1/2}}+5\,{{\rm e}^{-1}}+5\,{{\rm e}^{-3/2}}+5\,{{\rm e}^{-2}}+5\,{{\rm e}^{-5/2}}+5\,{{\rm e}^{-3}}
++5\,{{\rm e}^{-7/2}}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(g(x), x = 0..4, method=right, output=value, partition=8);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{5*exp(-1/2)+5*exp(-1)+5*exp(-3/2)+5*exp(-2)+5*exp(-5/2)+5*exp(-3)+5*exp(-7/2)+5*exp(-4)}{\[\displaystyle 5\,{{\rm e}^{-1/2}}+5\,{{\rm e}^{-1}}+5\,{{\rm e}^{-3/2}}+5\,{{\rm e}^{-2}}+5\,{{\rm e}^{-5/2}}+5\,{{\rm e}^{-3}}+5\,{{\rm e}^{-7/2}}+5\,{{\rm e}^{-4}}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+We can also set up an integral to use numerical approximation on.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{int1 := Int( x\symbol{94}2, x=0..2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{int1 := Int(x^2, x = 0 .. 2)}{\[\displaystyle {\it int1}\, := \,\int _{0}^{2}\!{x}^{2}{dx}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{Maple Normal}{
+Evaluating integral with n=4 rectangles and three different methods we have:}\end{Maple Normal}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( int1, method=midpoint, output=value, partition=4);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{21/8}{\[\displaystyle {\frac {21}{8}}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( int1, method=trapezoid, output=value, partition=4);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{11/4}{\[\displaystyle 11/4\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( int1, method=simpson, output=value, partition=2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{8/3}{\[\displaystyle 8/3\]}
+\end{maplelatex}
+\end{maplegroup}
+
+Unlike other rules, Simpson's rule with 4 rectangles would be partition=2.
+
+To visualize the approximation, we use the option \texttt{output=plot}.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt( int1, method=trapezoid, output=plot, partition=2);
+}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/numerical_integration_using_ApproximateIntplot2d1.eps}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+To output the Riemann sum for approximation}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(int1,method=trapezoid,output=sum,partition=4);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(1/4)*(Sum((1/4)*i^2+((1/2)*i+1/2)^2, i = 0 .. 3))}{\[\displaystyle 1/4\,\sum _{i=0}^{3}1/4\,{i}^{2}+ \left( 1/2\,i+1/2 \right) ^{2}\]}
+\end{maplelatex}
+\end{maplegroup}

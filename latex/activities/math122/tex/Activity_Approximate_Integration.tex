@@ -1,0 +1,60 @@
+\section{Other Integral Approximation Techniques}
+\label{sec:approximate_integration}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+    \item \nameref{chp:derivative}, pg. \pageref{chp:derivative}
+	\item \nameref{chp:riemann_sums_and_area_approximation}, pg. \pageref{chp:riemann_sums_and_area_approximation}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+The trapezoid rule, the midpoint rule, and Simpson's rule are all useful methods for approximating a definite integral of a function $f(x)$. However, each of these methods has some error in its approximation for a finite number of subintervals. It is possible to calculate an upper bound for this error, which relies on calculating the the maximum value of $|f''(x)|$ (or $|f^{(4)}(x)|$ for Simpson's rule) over the interval first.
+
+In this activity, we will use Maple's \texttt{ApproximateInt()}\index{integral approximation!ApproximateInt} command to help visualize these three approximation methods and then calculate the error associated with them.
+
+\subsection*{Exercises:}
+
+Consider the definite integral $\displaystyle\int_{0}^1 {\rm e}^x\sin(x) \; dx$.\index{integral!}
+
+\begin{enumerate}
+    \item   Plot ${\rm e}^x\sin(x)$ on the interval $[0,1]$.
+    \marginnote{Don't forget that the \texttt{exp()}\index{mathematical functions!exponential} function is used for ${\rm e}^x$. You cannot use the letter `e' on the keyboard for the exponential function.}
+    \item   Consider the area under ${\rm e}^x\sin(x)$ using the \textbf{trapezoid} rule with \\ \texttt{partition=4} over the interval $[0,1]$.\index{integral approximation!ApproximateInt!method}
+        \index{integral approximation!ApproximateInt!partition}
+    \begin{enumerate}
+    	\item Display this area using \texttt{output=plot}.
+    	    \index{integral approximation!ApproximateInt!output options}
+    	\item Display the sum for this area using \texttt{output=sum}.
+    	\item Find the value of this area using \texttt{output=value}.
+    \end{enumerate}
+    \item   Consider the area under ${\rm e}^x\sin(x)$ using the \textbf{midpoint} rule with \\ \texttt{partition=4} subintervals over the interval $[0,1]$.\index{integral approximation!ApproximateInt!method}
+    \begin{enumerate}
+    	\item Display this area using \texttt{output=plot}.
+    	\item Display the sum for this area using \texttt{output=sum}.
+    	\item Find the value of this area using \texttt{output=value}.
+    \end{enumerate}
+    \item   Consider the area under ${\rm e}^x\sin(x)$ using \textbf{Simpson's} rule with \\ \texttt{partition=4} subintervals over the interval $[0,1]$.\index{integral approximation!ApproximateInt!method}
+    \begin{enumerate}
+    	\item Display this area using \texttt{output=plot}.
+    	\item Display the sum for this area using \texttt{output=sum}.
+    	\item Find the value of this area using \texttt{output=value}.
+    \end{enumerate}
+    \item The upper bounds for the errors of the \textbf{trapezoid} and \textbf{midpoint} rules over the interval $[a,b]$ are 
+    \[\abs{E_T}\le\dfrac{K(b-a)^3}{12n^2} \quad\text{and}\quad \abs{E_M}\le\dfrac{K(b-a)^3}{24n^2},\] respectively. In both cases, $K$ is the maximum value of $\abs{f''(x)}$ over the interval and $n$ is the number of subintervals. Compute these error bounds by following the steps listed.
+        \index{integral approximation!error}
+    \begin{enumerate}
+        \item Plot $|f''(x)|$ over the interval $[0,1]$. Notice that the maximum value of $|f''(x)|$ occurs at a critical number of $|f''(x)|$.
+        \item Find the critical number of $|f''(x)|$ by solving $f'''(x)=0$ for $x$. Plug this $x$-value back into $|f''(x)|$ to find the maximum, $K$.
+        \item Compute $|E_T|$ using the formula, $K$, and $n=4$.
+        \item Compute $|E_M|$ using the formula, $K$, and $n=4$.
+    \end{enumerate}
+    \marginnote[1cm]{When using Simpson's rule with \texttt{partition=4}, this actually correponds to $n=8$, since there is an additional sample point in each partition.}
+    \item  The upper bound for error of \textbf{Simpson's} rule over the interval $[a,b]$ is \[\abs{E_S}\le\dfrac{K(b-a)^5}{180n^4}\] where $\abs{f^{(4)}(x)}\le K$ and $n$ is \textbf{twice} the number of subintervals. Compute this error bound by following the steps listed.
+    \index{integral approximation!error}
+    \begin{enumerate}
+        \item Plot $|f^{(4)}(x)|$ over the interval $[0,1]$. Notice that the maximum value of $|f^{(4)}(x)|$ occurs at an endpoint of the interval.
+        \item Plug the $x$-value of this endpoint into $|f^{(4)}(x)|$ to find the maximum, $K$.
+        \item Compute $|E_S|$ using the formula, $K$, and $n=8$.
+    \end{enumerate}
+\end{enumerate}

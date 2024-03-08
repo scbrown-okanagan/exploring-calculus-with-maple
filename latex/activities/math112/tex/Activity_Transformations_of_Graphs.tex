@@ -1,0 +1,44 @@
+\section{Transformations of Graphs}
+\label{sec:transformations_of_graphs}
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:plotting_functions}, pg. \pageref{chp:plotting_functions}
+	\item \nameref{chp:assignment_operator}, pg. \pageref{chp:assignment_operator}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+In this activity, you will plot multiple functions at once to investigate basic transformations of functions.
+
+\subsection*{Exercises:}
+\begin{enumerate}
+    \item Plot the graphs of $\sin (x)$ and $\cos (x)$ on the same set of axes. Use \textit{red} for $\sin (x)$ and \textit{blue} for $\cos (x)$.  
+    \marginnote{If you do not specify the $x$-axis interval, Maple will default to increments of $\pi/8$ from $-2\pi$ to $2\pi$.}
+    \begin{enumerate}
+    	\item By what amount do you need to shift the graph of $\sin (x)$ \textit{to the left} (negative $x$ direction) so that it coincides with the graph of $\cos (x)$? Answer the question in sentence form by using the \includegraphics[width=0.04\textwidth]{tutorials/figures/new_text.PNG} button to create a new paragraph after the current line.
+        \marginnote[-0.5cm]{An example of plotting multiple functions at once can be found on page \pageref{sec:plotting_multiple_functions}.}
+    	\item By what amount do you need to shift the graph of $\sin (x)$ \textit{to the right} (positive $x$ direction) so that it coincides with the graph of $\cos (x)$? Write your answer in sentence form using a new paragraph.
+    \end{enumerate}
+    
+    \item The graphs of ${\rm e}^x$ and $\ln(x)$ should appear to be reflected over the line $y=x$. Plot all three graphs on the same axes using \texttt{linestyle=[solid,solid,dash}].\index{plot!line style}
+    \marginnote[-1.3cm]{The \texttt{exp(x)} function is the exponential function, ${\rm e}^x$.}
+    \marginnote[-0.3cm]{When plotting functions of the form $y=f(x)$ using the \texttt{plot()} command, we omit the $y=$.}
+    \marginnote[0.3cm]{When assigning the function to $f(x)$, use the $:=$ operator.}
+        \index{assignment operator}
+	\item Assign the function $f(x) = \sqrt{-x^2 + 4x + 21}$. \\Plot each of the following functions on the same set of axes:
+	\[y = f(x), \, y = f(2x), \, y = 3f(x), \, y = f(-x), \, y = -f(x).\]
+	Make sure that the graph is displayed with constrained scaling ($1:1$). Describe each transformation. Write your answer using a new paragraph.
+	\marginnote[-1.2cm]{An example of plotting transformations of a function can be found on page \pageref{subsec:plotting_transformations}.}
+	\marginnote[0cm]{It is always a good practice to specify the colours of multiple graphs in order to tell them apart. A list of plot colours can be found by typing \texttt{?colours} on a new Maple input.}\index{plot!colours}
+	
+    \item Plot each of the following graphs separately:
+    \marginnote[0.5cm]{The absolute value function $|\cdot|$ in Maple is denoted as \texttt{abs( )}.}
+\index{mathematical functions!absolute value}
+    \begin{enumerate}
+    	\item $y = \sin(x)$
+    	\item $y = \sin(|x|)$
+    	\item $y = |\sin(x)|$
+    \end{enumerate}
+    Create a new paragraph to describe the transformations of \\$y = \sin(x)$ in parts (b) and (c).
+\end{enumerate}

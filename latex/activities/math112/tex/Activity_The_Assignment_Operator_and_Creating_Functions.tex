@@ -1,0 +1,39 @@
+\section{The Assignment Operator and Creating Functions}
+\label{sec:assignment_operator_and_creating_functions}		
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:plotting_functions}, pg. \pageref{chp:plotting_functions}
+	\item \nameref{chp:assignment_operator}, pg. \pageref{chp:assignment_operator}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+In this activity, you will be using the assignment operator \texttt{:=}, which allows you assign Maple output to a name of your choice. This is especially useful for assigning expressions and functions on one Maple input, before manipulating those expressions later on in your worksheet.
+
+\subsection*{Exercises:}
+\begin{enumerate}
+    \item Assign the expression $ \dfrac{\sin(x)+3}{\cos(x)+1}$ to \texttt{expr} and then use the \texttt{subs()} command to substitute $x=3$ into \texttt{expr}. Evaluate this as a decimal with $15$ digits.
+    \item Assign the expression $x^2+2^x$ to \texttt{expr2} and substitute $y = $~\texttt{expr2} into the expression $y^2+3y$. 
+    \marginnote[0.2cm]{Instead of using the \texttt{subs} command multiple times, it is often a better practice to define a function and use function notation instead.}
+    \item  Assign the expression $2x^2-4x+7$ to \texttt{poly} and then substitute $x=5+h$ into \texttt{poly} and simplify.
+    
+    \item Consider the function $f(x) = (1-x^2) {\rm e}^{-\sfrac{x^2}{2}}$. \marginnote{The exponential function, ${\rm e}^x$, in Maple is denoted as  \texttt{exp(x)}.}
+    \index{mathematical functions!exponential}
+    \begin{enumerate}
+    	\item Assign the function to $f(x)$. 	
+    	\marginnote[0.2cm]{When assigning the function to $f(x)$, use the $:=$ operator.}\index{assignment operator}
+   		\item This function $f(x)$ is known as the \textit{Mexican Hat Function}. Can you see why? Plot the graph of $f(x)$.
+    \end{enumerate}
+    \item Maple, by default, does not know the function
+    \marginnote{Often, this function is denoted as ${\rm sinc}_\pi(x)$ and ${\rm sinc}(x) = \frac{\sin (x)}{x}$.}
+   	\[ sinc(x) = \dfrac{\sin(\pi x)}{\pi x}, \]
+   	which is important in engineering. 
+   	\marginnote[-0.3cm]{Be sure to include a multiplication symbol or space between $\pi$ and $x$.}\index{Pi}
+   	\marginnote[0.1cm]{The mathematical constant $\pi = 3.14\hdots$ must be typed into Maple as \texttt{Pi}.}\index{Pi}
+   	\begin{enumerate}
+	   	\item Assign this function to $sinc(x)$.   	\marginnote[0.2cm]{When assigning the function to $sinc(x)$, use the $:=$ operator.}\index{assignment operator}
+	   	\item Evaluate $sinc(3)$, $sinc\left(\frac{1}{2}\right)$, and $sinc(0.25)$.
+	   	\item Plot the graph of $sinc(x)$.
+   	\end{enumerate}
+\end{enumerate}

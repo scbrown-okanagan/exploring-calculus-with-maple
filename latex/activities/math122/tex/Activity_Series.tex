@@ -1,0 +1,64 @@
+\section{Series Convergence and Divergence}
+\label{sec:series_convergence_and_divergence}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+    \item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+        \index{integral}
+        \index{integral!improper}
+	\item \nameref{chp:sequence_and_sseries}, pg. \pageref{chp:sequence_and_sseries}
+	    \index{sequences and series!}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+An infinite series is a summation of the form
+\[ \sum_{n=0}^{\infty} a_n = a_0 + a_1 + a_2 + \dots. \]
+For example, we can look at the geometric series
+\begin{equation}
+    \label{eq:geometric_series}
+    \sum_{n=0}^{\infty} \frac{1}{2^n} = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots.
+\end{equation}
+To understand the result of the sum in equation \eqref{eq:geometric_series}, we can add the first few terms, one at a time. 
+\begin{align*}
+    1+\frac{1}{2} &= \frac{3}{2}\\
+    1+\frac{1}{2}+\frac{1}{4} &= \frac{7}{4}\\
+    1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8} &= \frac{15}{8}\\
+\end{align*}
+By looking at these partial sums, we can see that the sum is approaching the value $2$. We say that this series is \textit{convergent}. In other cases, the partial sums do not approach a finite value. We say that these series are \textit{divergent.}
+    \index{sequences and series!divergent}
+    \index{sequences and series!convergent}
+
+In this activity, we will use Maple to evaluate whether a series is convergent or divergent. Maple will give the value of the sum for a convergent series and will give the value $\infty$ or $-\infty$ if the series is divergent.\index{infinity}
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+\item For each of the following series, set up the series symbolically using the \texttt{Sum()} command. Then, use the \texttt{value(\%)} command to evaluate the sum and determine if it converges.
+    \index{sequences and series!Sum}
+    \index{value}
+    \index{ditto operator}
+\marginnote[0.5cm]{For (b), make sure you use "\texttt{Pi}" for $\pi$ and place multiplication between the $n$ and \texttt{Pi}.}
+    \index{Pi}
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\displaystyle\sum_{n=0}^{\infty} \dfrac{4^n}{n!}$
+    \item $\displaystyle\sum_{n=0}^{\infty} \sin(n\pi)\arctan(n)$
+    \item $\displaystyle\sum_{n=1}^{\infty} \ln(n)$
+    \item $\displaystyle\sum_{n=1}^{\infty} \dfrac{n!}{n^2}$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\clearpage
+The Integral Test for Convergence states that for a non-negative, monotonically decreasing function $f(n)$ and an integer $N$, the infinite series $$\sum_{n=N}^{\infty} f(n)$$ converges to a real number if and only if the improper integral $$\int_N^{\infty} f(x)\,dx$$ is finite. From this, we can also conclude that if the integral diverges, then the series diverges as well.\\
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Consider the series
+\[ \sum_{n=3}^{\infty}\dfrac{3}{n^2-3n+2}. \]
+\begin{enumerate}
+    
+    \item Graph the function $f(x) = \dfrac{3}{x^2-3x+2}$ to see that the function is non-negative and monotonically decreasing over the interval $[3,\infty)$.
+    \marginnote[-1.5cm]{After plotting $f(x)$, try to think about why this series starts at $n=3$.}
+    \item Use the Integral Test to determine whether or not the series converges or diverges.
+\end{enumerate}
+\end{enumerate}

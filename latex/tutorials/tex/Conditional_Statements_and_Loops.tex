@@ -1,0 +1,392 @@
+\chapter{Conditional Statements and Loops}
+\label{chp:conditional_statements_and_loops}	
+
+\section{\texttt{if}/\texttt{else} Statements}
+
+\index{conditional statements!if/else statements}
+
+`If' and `else' statements allow us to test various conditions. The result then changes based on whether the given condition is \textbf{true} or \textbf{false}.\\
+
+For example, let's say that someone makes the statement\\
+\begin{center} \textit{"If it's sunny tomorrow, then I will go for a bike ride."} \end{center}
+
+If it is, in fact, sunny tomorrow, then that person \textbf{will} go for a bike ride. In other words, since the "sunny tomorrow" condition becomes TRUE, then the following implication "go for a bike ride" will happen.\\
+
+As the statement stands now, we have no idea what this person will do if it is \textbf{not} sunny. Perhaps they will still go for a bike ride, perhaps not. We can define this action with an `else' statement.\\
+
+In other words, we can define what will happen if it is \textbf{not sunny}. For example:\\
+\begin{center} \textit{"If it's sunny tomorrow, then I will go for a bike ride. Otherwise, I will read a book at home."} \end{center}
+
+\noindent
+From this example, we know that the following are true.
+\begin{itemize}
+	\item If it's sunny tomorrow, then I will go for a bike ride.
+	\item If it's not sunny tomorrow, then I read a book at home.
+\end{itemize}
+
+\subsection{A Conditional Statement based on Numerical Value}
+
+We will outline this concept with a silly example. We define two variables $a=2$ and $b=5$. If $a<b$ is \textbf{true} (which it is because obviously $2$ is less than $5$), we print the word "Mario". Otherwise (if it's \textbf{false}), we print the word "Luigi". Therefore, we expect that "Mario" will be printed.
+\begin{maplegroup}
+\begin{mapleinput}
+\begin{verbatim}
+> a := 2: b := 5:
+> if a < b then
+    print("Mario")
+  else
+    print("Luigi")
+  end if
+\end{verbatim}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{"Mario"}{\[\displaystyle \text{``Mario''}\]}
+\end{maplelatex}
+\end{maplegroup}
+\marginnote[-1.5cm]{You can use Shift+Enter to create multiple lines within the same Maple input.}
+
+\subsection{A Conditional Statement to Check Even/Odd}
+
+Now we consider a more useful example. We define a function $f(x)$ and check whether substituting $x=2$ into this function outputs an \textbf{even} number or an \textbf{odd} number. 
+
+\begin{maplegroup}
+\begin{mapleinput}
+\begin{verbatim}
+> f(x) := x^2 + 3*x - 4:
+> if type(f(2), even) then
+    print(f(2), "even")
+  else
+    print(f(2), "odd")
+  end if
+\end{verbatim}
+\end{mapleinput}
+\marginnote[-1.5cm]{The \texttt{type()} command is used to check if the expression has the specified property.}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{6, "even"}{\[\displaystyle 6,\,\text{``even''}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\subsection{A Conditional Statement to Check if a Limit Exists}
+
+\index{conditional statements!if/else statements}
+\index{limit}
+
+We define a function $f(x)$ and then use an `if' statement to verify whether or not the limit of $f(x)$ as $x$ approaches $0$ is \textit{numeric}. In other words, we are checking to see whether or not this limit exists.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\begin{verbatim}
+> f(x) := 1/x:
+> L := limit(f(x), x=0):
+> if type(L, numeric) then
+    print("Limit is defined")
+  else
+    print("Limit is undefined")
+  end if
+\end{verbatim}
+\end{mapleinput}
+\mapleresult
+\marginnote[-1cm]{Does $\displaystyle\lim_{x \to 0} \dfrac{1}{x}$ exist? Does the limit give a number $L$ as a result, or something that is \textbf{not} a number?}
+\begin{maplelatex}
+\mapleinline{inert}{2d}{"Limit is undefined"}{\[\displaystyle \text{``Limit is undefined''}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{\texttt{if}/\texttt{elif}/\texttt{else} Statements}
+
+\index{conditional statements!if/elif/else statements}
+
+The \texttt{elif} (else if) command allows us to add more than one condition to our statement. For example, if we want to test whether a particular number is (i) positive, (ii) negative, or (iii) zero, and wish to have different outputs based on these \textbf{three} possibilities, we can do so with a combination of \texttt{if}, \texttt{else}, and \texttt{elif}.\\
+
+\subsection{Using Conditional Statements to Interpret the First Derivative}
+In this example, we will use one of these statements to illustrate the first derivative test in calculus. We would like to answer the following question: for a particular value $x=a$, is the function $g(x)$ (i) increasing (positive derivative), (ii) decreasing (negative derivative), or (iii) neither increasing nor decreasing (zero derivative)?
+
+\begin{maplegroup}
+\begin{mapleinput}
+\begin{verbatim}
+> g(x) := x^4 - 4*x^3 + 3*x^2:
+> a := 0:
+> if subs(x = a, diff(g(x), x)) > 0 then
+    print("increasing")
+  elif subs(x = a, diff(g(x), x)) < 0 then
+    print("decreasing")
+  else print("neither")
+  end if
+\end{verbatim}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{"neither"}{\[\displaystyle \text{``neither''}\]}
+\end{maplelatex}
+\end{maplegroup}
+\marginnote{This implies that $g'(0)$ is equal to $0$.}
+
+\index{conditional statements!if/elif/else statements}
+
+\section{\texttt{for} Loops}
+
+`For' loops allow us to carry out a computation repeatedly for an entire range of values. We can also combine these loops with conditional statements like `if' and `else'. To use a `for' loop, we are required to type\\
+
+\index{loops!for}
+
+\texttt{for i from a to b do}\\
+\hspace{0.5cm}$\cdots$\\
+\hspace{0.5cm}$\cdots$\\
+\texttt{end do}\\
+
+\noindent
+where $i$ is a ``dummy variable", referred to as an index. On the first iteration of the loop, the index begins at $a$. At the end of each iteration, the index is incremented by one. In the last iteration, the index will be equal to $b$.
+
+\subsection{Outputting the First $n$ Derivatives}
+
+We will use a basic `for' loop to output the first $10$ derivatives of the function $f(x)=\sin(2x)$. To do this, we will use the \texttt{diff()} command. The `for' loop will output the $k$\textsuperscript{th} derivative, starting from $k=1$ and ending at $k=10$.
+\marginnote{Recall that \texttt{diff(f(x), x\$k)} is the $k$\textsuperscript{th} derivative of $f$ with respect to $x$. Use of the \texttt{diff()} command is explained in Tutorial \ref{chp:derivative}, page \pageref{chp:derivative}.}
+
+\index{mathematical functions!sine}
+\index{derivative!diff!higher derivatives}
+
+\begin{maplegroup}
+	\begin{mapleinput}
+		\begin{verbatim}
+		> f(x) := sin(2*x);
+		\end{verbatim}
+	\end{mapleinput}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{f := proc (x) options operator, arrow; sin(2*x) end proc}{\[\displaystyle f\, := \,x\mapsto \sin \left( 2\,x \right) \]}
+	\end{maplelatex}
+		\begin{mapleinput}
+		\begin{verbatim}
+		> for k from 1 to 10 do
+		     diff(f(x), x$k)
+		  end do
+		\end{verbatim}
+	\end{mapleinput}
+	
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{2*cos(2*x)}{\[\displaystyle 2\,\cos \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{-4*sin(2*x)}{\[\displaystyle -4\,\sin \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{-8*cos(2*x)}{\[\displaystyle -8\,\cos \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{16*sin(2*x)}{\[\displaystyle 16\,\sin \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{32*cos(2*x)}{\[\displaystyle 32\,\cos \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{-64*sin(2*x)}{\[\displaystyle -64\,\sin \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{-128*cos(2*x)}{\[\displaystyle -128\,\cos \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{256*sin(2*x)}{\[\displaystyle 256\,\sin \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{512*cos(2*x)}{\[\displaystyle 512\,\cos \left( 2\,x \right) \]}
+	\end{maplelatex}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{-1024*sin(2*x)}{\[\displaystyle -1024\,\sin \left( 2\,x \right) \]}
+	\end{maplelatex}
+\end{maplegroup}
+
+
+\subsection{Outputting the Primes up to $50$}
+
+\index{loops!for}
+\index{isprime}
+
+Let's say we want to find all of the prime integers from $1$ to $50$. If we enter 
+\begin{maplegroup}
+	\begin{mapleinput}
+		\begin{verbatim}
+		> for i from 1 to 50 do
+		    print(i);
+		  end do
+		\end{verbatim}
+	\end{mapleinput}
+\end{maplegroup}
+\marginnote[-1.3cm]{You can use Shift+Enter to create multiple lines within the same Maple input.}
+\noindent
+into Maple, it will output all the integers from $1$ to $50$, rather than only the prime integers. We include an `if' statement that makes use of the \texttt{isprime()} command to only output primes. 
+
+\begin{maplegroup}
+\begin{mapleinput}
+\begin{verbatim}
+> for i from 1 to 50 do
+    if isprime(i) then
+      print(i);
+    end if
+  end do
+\end{verbatim}
+\end{mapleinput}
+\mapleresult
+\marginnote[-2cm]{Since we do not want Maple to do anything for a composite integer (an integer that is not prime), we can omit the 'else' component of this 'if' statement.}
+\begin{maplelatex}
+\mapleinline{inert}{2d}{2}{\[\displaystyle 2\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{3}{\[\displaystyle 3\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{5}{\[\displaystyle 5\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{7}{\[\displaystyle 7\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{11}{\[\displaystyle 11\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{13}{\[\displaystyle 13\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{17}{\[\displaystyle 17\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{19}{\[\displaystyle 19\]}
+\end{maplelatex}
+\begin{maplelatex}
+	\mapleinline{inert}{2d}{...}{\[\vdots\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{\texttt{for}/\texttt{while} Loops}
+
+\index{loops!while}
+
+Adding a `while' is a short way of adding an inherent `if' for every value of the `for' loop. In the next example, we add \texttt{`while i\symbol{94}2 < 100'} to check that the square of the index $i$ is less than $100$ every time it increases in value. The moment that this condition is no longer met, the loop terminates.
+
+Let's say we want to add the first few squares together: $1^2+2^2+3^2+\cdots$ until $i^2$ becomes greater than or equal to $100$. Instead of adding an `if' statement every time the loop increases, we can do the same thing with a `while':
+
+\marginnote{We assign an initial total of $0$ so that we can add a value to it for each iteration of the loop. 
+    \texttt{total := total + i}\string^\texttt{2}
+	adds $i^2$ to the current value of \texttt{total} before reassigning the new value.}
+\begin{maplegroup}
+\begin{mapleinput}
+\begin{verbatim}
+> total := 0:
+> for i from 1 while i^2 < 100 do
+    total := total + i^2
+  end do
+\end{verbatim}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 1}{\[\displaystyle {\it total}\, := \,1\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 5}{\[\displaystyle {\it total}\, := \,5\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 14}{\[\displaystyle {\it total}\, := \,14\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 30}{\[\displaystyle {\it total}\, := \,30\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 55}{\[\displaystyle {\it total}\, := \,55\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 91}{\[\displaystyle {\it total}\, := \,91\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 140}{\[\displaystyle {\it total}\, := \,140\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 204}{\[\displaystyle {\it total}\, := \,204\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{total := 285}{\[\displaystyle {\it total}\, := \,285\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+
+\index{loops!while}
+
+ \marginnote[-2cm]{This loop has calculated the value \[1^2+2^2+3^2+4^2+\cdots+7^2+8^2+9^2=285.\]}
+
+\section{\texttt{for} Loops with Conditionals}
+
+We now combine all of the various conditional statements and loops together into one example. Let's assume we have a function $g(x)$ and want to test whether this function is (i) increasing ($g'(x) > 0$), (ii) decreasing ($g'(x) < 0$), or (iii) neither (critical point ($g'(x) = 0$)).
+
+The loop we have constructed behaves according to the following steps:
+
+\index{loops!for}
+
+\begin{enumerate}
+	\item Begin with the value $j=-2$.
+	\marginnote[-0.3cm]{Note that we can use any letter for the loop index, but the most common choices are $i$, $j$, $k$, and $l$.}
+	\item If $g'(j)>0$, then $g$ is increasing at $x=j$.
+	\item If $g'(j)<0$, then $g$ is decreasing at $x=j$.
+	\item If $g'(j)=0$, then $g$ is neither increasing nor decreasing at $x=j$.
+	\item Update $j$ to the next value in the list and repeat steps $2$ through $4$.
+\end{enumerate}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\begin{verbatim}
+> g(x) := x^4 - 4*x^3 + 3*x^2:
+> for j in [-2, 0, 4] do
+    if subs(x = j, diff(g(x), x)) > 0 then
+      print(j, "increasing")
+    elif subs(x = j, diff(g(x), x)) < 0 then
+      print(j, "decreasing")
+    else print(j, "neither")
+    end if
+  end do
+\end{verbatim}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-2, "decreasing"}{\[\displaystyle -2,\,\text{``decreasing''}\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{0, "neither"}{\[\displaystyle 0,\,\text{``neither''}\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{4, "increasing"}{\[\displaystyle 4,\,\text{``increasing''}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{conditional statements!if/elif/else statements}
+\index{loops!for}
+
+\marginnote[-1cm]{From the output, we an see that $g'(-2) < 0$, $g'(0) = 0$, and $g'(4) > 0$.}

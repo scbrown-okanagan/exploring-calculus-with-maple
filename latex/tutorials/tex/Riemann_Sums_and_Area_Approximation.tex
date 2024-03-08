@@ -1,0 +1,275 @@
+\chapter{Riemann Sums and Approximations of Area}
+\label{chp:riemann_sums_and_area_approximation}	
+
+In this tutorial, we use numerical approximation to calculate definite integrals (namely, the right-sum, left-sum, midpoint, Simpson's, and trapezoidal methods). We then calculate these definite integrals using the Fundamental Theorem of Calculus. We will also learn how to find indefinite integrals as functions.
+
+\section{Approximating the Area Under a Function Using ApproximateInt}
+
+To use the \texttt{ApproximateInt()} command, we must load the \\
+\noindent\texttt{Student[Calculus1]} package.
+
+The function and interval must be specified. Other optional parameters may be included to change how the result is displayed and how the approximation is computed.
+
+\index{integral approximation!ApproximateInt}
+\index{integral approximation!ApproximateInt!method}
+\index{integral approximation!ApproximateInt!output options}
+\index{integral approximation!ApproximateInt!partition}
+
+\begin{table}
+\label{tbl:approximateint_options}
+\centering
+\begin{tabular}{lp{2.5in}}
+\hline
+Parameter & Description\\
+\hline
+\texttt{method = }\textit{method}	& Select the method for approximation (\texttt{left}, \texttt{right}, \texttt{lower}, 
+									\texttt{upper}, \texttt{midpoint}, \texttt{trapezoid}, \texttt{simpson}).\\
+\texttt{output = }\textit{output}	& Change how the output is displayed (\texttt{plot}, \texttt{value}, \texttt{sum}).\\
+\texttt{partition = $n$}			& Change the number of subintervals to use for approximation.\\
+\hline
+\end{tabular}
+\caption{A list of optional parameters for the \texttt{ApproximateInt()} command.}
+\end{table}
+
+Most of these methods of approximation are discussed in class: left-point, right-point, midpoint rule, trapezoid rule, and Simpson's rule. When using \texttt{method=upper}, the height of each rectangle corresponds to the maximum value of the function in each subinterval. Similarly, when using \texttt{method=lower}, the height of each rectangle corresponds to the minimum value of the function in each subinterval. 
+
+\subsection{Approximating the Area under $10 {\rm e}^{-x}$}
+
+We can use different methods for the rectangles, such as left-point and right-point. Let's define a function, $f(x)$ and calculate some approximations.
+\marginnote[-1cm]{These are two common methods that we learn when first calculating Riemann sums.}
+
+\index{mathematical functions!exponential}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{f(x) := 10*exp(-x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{f := proc (x) options operator, arrow; 10*exp(-x) end proc}{\[\displaystyle f\, := \,x\mapsto 10\,{{\rm e}^{-x}}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(f(x), x = 0..4, method=left, output=value, partition=8); evalf(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{5+5*exp(-1/2)+5*exp(-1)+5*exp(-3/2)+5*exp(-2)+5*exp(-5/2)+5*exp(-3)+5*exp(-7/2)}{\[\displaystyle 5+5\,{{\rm e}^{-1/2}}+5\,{{\rm e}^{-1}}+5\,{{\rm e}^{-3/2}}+5\,{{\rm e}^{-2}}+5\,{{\rm e}^{-5/2}}+5\,{{\rm e}^{-3}}
++5\,{{\rm e}^{-7/2}}\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{12.47472497}{\[\displaystyle  12.47472497\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(f(x), x = 0..4, method=right, output=value, partition=8); evalf(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{5*exp(-1/2)+5*exp(-1)+5*exp(-3/2)+5*exp(-2)+5*exp(-5/2)+5*exp(-3)+5*exp(-7/2)+5*exp(-4)}{\[\displaystyle 5\,{{\rm e}^{-1/2}}+5\,{{\rm e}^{-1}}+5\,{{\rm e}^{-3/2}}+5\,{{\rm e}^{-2}}+5\,{{\rm e}^{-5/2}}+5\,{{\rm e}^{-3}}+5\,{{\rm e}^{-7/2}}+5\,{{\rm e}^{-4}}\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{7.566303166}{\[\displaystyle  7.566303166\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{integral approximation!ApproximateInt}
+\index{integral approximation!ApproximateInt!method}
+\index{integral approximation!ApproximateInt!output options}
+\index{integral approximation!ApproximateInt!partition}
+\index{integral approximation!Riemann sum}
+\index{evalf}
+\index{ditto operator}
+\index{limit!at infinity}
+
+If we wish to get the actual area under the curve, we can give the Riemann sum for $n$ rectangles and take the limit as $n\rightarrow\infty$.
+
+\marginnote[1cm]{In some cases, Maple may not output this limit as a numerical value. Using the \texttt{value(\%)} command after the limit may help to convert the limit to a numerical result.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(f(x), x = 0..4, method=left, output=sum, partition=n); limit(%, n=infinity); evalf(%);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{4*(Sum(10*exp(-4*i/n), i = 0 .. n-1))/n}{\[\displaystyle 4\,{\frac {1}{n}\sum _{i=0}^{n-1}10\,{{\rm e}^{-4\,{\frac {i}{n}}}}}\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{10-10*exp(-4)}{\[\displaystyle 10-10\,{{\rm e}^{-4}}\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{9.816843611}{\[\displaystyle  9.816843611\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\subsection{Approximating the Area under $x \sin(x)$}
+
+We can define a function and approximate the area under the curve over a specified interval. In this example, we will use the \texttt{upper}, \texttt{lower}, and \texttt{midpoint} methods for approximating rectangles.
+
+\index{packages!Student[Calculus1]}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{with(Student[Calculus1]):
+}{}
+\end{mapleinput}
+\end{maplegroup}
+
+\index{mathematical functions!sine}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{f(x) := x*sin(x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{f := proc (x) options operator, arrow; x*sin(x) end proc}{\[\displaystyle f\, := \,x\mapsto x\sin \left( x \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(f(x), x=-3..3, method=upper, output=plot, partition=10);
+}{}
+\end{mapleinput}
+\marginnote[-2cm]{The \texttt{method=upper} parameter always uses the \textbf{highest} rectangle in an interval. This will force an overestimate of the actual area underneath the curve.}
+\mapleresult
+\mapleplot{tutorials/figures/Riemann_Sumsplot2d1-eps-converted-to.pdf}
+\end{maplegroup}
+\marginnote[-0.5cm]{The \texttt{method=lower} parameter always uses the \textbf{lowest} rectangle in an interval. This will force an underestimate of the actual area underneath the curve.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(f(x), x=-3..3, method=upper, output=value, partition=10);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{7.981170598}{\[\displaystyle  7.981170598\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(f(x), x=-3..3, method=lower, output=value, partition=10);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{4.202044853}{\[\displaystyle  4.202044853\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{integral approximation!ApproximateInt}
+\index{integral approximation!ApproximateInt!method}
+\index{integral approximation!ApproximateInt!output options}
+\index{integral approximation!ApproximateInt!partition}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(f(x), x=-3..3, method=midpoint, output=plot, partition=20);}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/Riemann_Sumsplot2d2-eps-converted-to.pdf}
+\end{maplegroup}
+
+\section{Approximating the Value of a Definite Integral}
+
+We can also set up an integral to use numerical approximation on.
+
+\marginnote{Use of the \texttt{Int()} command will be fully explained in Tutorial \ref{chp:definite_and_indefinite_Integrals} on page \pageref{chp:definite_and_indefinite_Integrals}.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{int1 := Int(x\symbol{94}2, x=0..2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{int1 := Int(x^2, x = 0 .. 2)}{\[\displaystyle {\it int1}\, := \,\int _{0}^{2}\!{x}^{2}{dx}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{integral!Int}
+
+We can evaluate this integral with $4$ subintervals using three different methods.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(int1, method=midpoint, output=value, partition=4);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{21/8}{\[\displaystyle {\frac {21}{8}}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(int1, method=trapezoid, output=value, partition=4);
+}{}
+\end{mapleinput}
+\index{integral approximation!ApproximateInt!method}
+\marginnote[-0.5cm]{The \texttt{method=trapezoid} parameter uses trapezoid shapes instead of rectangles to approximate the area. This usually gives a more accurate estimate of the area.}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{11/4}{\[\displaystyle \frac{11}{4}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+
+\begin{maplegroup}
+	\begin{mapleinput}
+		\mapleinline{active}{1d}{ApproximateInt(int1, method=simpson, output=value, partition=4);
+		}{}
+	\end{mapleinput}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{8/3}{\[\displaystyle \frac{8}{3}\]}
+	\end{maplelatex}
+\end{maplegroup}
+
+\index{integral approximation!ApproximateInt!method}
+\marginnote[-1.5cm]{When using Simpson's rule, an additional sample point is used per subinterval. So, if $n$ subintervals are used, then the number of sample points is $2n$.}
+Simpson's rule uses twice as many sample points as the other two methods used here. If we wish to have $4$ points used for Simpson's rule, we use \texttt{partition=2}.
+
+To visualize the approximation using any of the above methods, we use the option \texttt{output=plot}.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(int1, method=trapezoid, output=plot, partition=2);
+}{}
+\end{mapleinput}
+\marginnote[-0.5cm]{Notice that trapezoidal shapes are used instead of rectangles.}
+\mapleresult
+\mapleplot{tutorials/figures/numerical_integration_using_ApproximateIntplot2d1-eps-converted-to.pdf}
+\end{maplegroup}
+
+\index{integral approximation!ApproximateInt!method}
+\index{integral approximation!ApproximateInt}
+\index{integral approximation!ApproximateInt!method}
+\index{integral approximation!ApproximateInt!output options}
+\index{integral approximation!ApproximateInt!partition}
+
+\noindent
+Maple can also give the Riemann sum for any of the above approximations.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ApproximateInt(int1, method=trapezoid, output=sum, partition=4);
+}{}
+\end{mapleinput}
+\marginnote[0.5cm]{The \texttt{output=sum} shows you what the expanded summation looks like \textbf{before} it is evaluated.}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(1/4)*(Sum((1/4)*i^2+((1/2)*i+1/2)^2, i = 0 .. 3))}{\[\displaystyle \frac{1}{4}\,\sum _{i=0}^{3}\frac{1}{4}\,{i}^{2}+ \left( \frac{1}{2}\,i+\frac{1}{2} \right) ^{2}\]}
+\end{maplelatex}
+\end{maplegroup}

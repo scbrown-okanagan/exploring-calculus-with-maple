@@ -1,0 +1,53 @@
+\section{Applications of the Fundamental Theorem of Calculus}
+\label{sec:applications_of_ftc}			
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:limits}, pg. \pageref{chp:limits}
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:derivative}, pg. \pageref{chp:derivative}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+In this activity, you will need to make use of the Fundamental Theorem of Calculus in order to solve two applied problems. In particular, you will need to use the result \[ \frac{d}{dx} \int_a^x f(t) \, dt = f(x). \]
+    \index{integral!}
+
+\vspace{-.5cm}
+\subsection*{Exercises:}
+
+\begin{enumerate}        
+    \item In this exercise, our goal is to evaluate $\displaystyle\lim_{x \rightarrow 0} \dfrac{\int_{0}^x \sin(t^2) \; dt}{x^3}.$
+\index{limit}
+        \index{plot}
+        \index{limit!l'H\^opital}
+    \begin{enumerate}
+        \marginnote[1cm]{L'H\^opital's Rule states that if the limit \[\lim_{x\rightarrow a}\frac{f(x)}{g(x)}\] is indeterminate of the form $0/0$ or $\infty/\infty$, if $f$ and $g$ are differentiable at $a$, and if $g'(x) \neq 0$ near $a$, then \[\lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)},\] assuming that this limit exists.}
+        \item Define the function $s(x) = \dfrac{\int_{0}^x \sin(t^2) \; dt}{x^3}$.  Plot the graph of $s(x)$ over the interval $[-1,1]$. Try to estimate $\displaystyle\lim_{x\rightarrow0}s(x)$.
+        \item Is there an easy integration technique that you could use to integrate $\displaystyle\int_{0}^x \sin(t^2) \; dt$ by hand?  If not, why?
+        \item What is the indeterminate form of the limit?
+        \item Apply L'H\^opital's Rule by hand, in the space below. Check your answer by using the \texttt{limit()} command to evaluate $\displaystyle\lim_{x\rightarrow0}s(x)$.
+    \end{enumerate}
+    \begin{fullwidth}
+    \fbox{\parbox{1\linewidth}{$\displaystyle\lim_{x \rightarrow 0} \dfrac{\displaystyle\int_{0}^x \sin(t^2) \; dt}{x^3}=$ \vspace{6cm} }}
+    \end{fullwidth}
+\clearpage
+    \item In this exercise, our goal is to find a function $f$ and a number $a$ that satisfy the equation 
+    \begin{equation}
+        \label{eq:ftc_equation}
+        6 + \displaystyle\int_{a}^x \dfrac{f(t)}{t^2} dt = 2\sqrt{x}.
+    \end{equation}
+    \begin{enumerate}
+        \item Assign equation \eqref{eq:ftc_equation} to a name of your choice, such as \texttt{eqn}.
+        \marginnote[0.5cm]{The \texttt{diff()}\index{derivative!diff} command can be used to differentiate an equation with respect to an independent variable.}
+        \item In the space below, differentiate both sides of the equation with respect to $x$ and apply the Fundamental Theorem of Calculus. Check your answer by using the \texttt{diff()} command on the equation you assigned in the previous step.
+        \begin{fullwidth}
+        \fbox{\parbox{1\linewidth}{\[6 + \displaystyle\int_{a}^x \dfrac{f(t)}{t^2} dt = 2\sqrt{x}\] \vspace{3cm} }}
+        \end{fullwidth}
+     \index{solving equations!solve}
+        \item Solve the resulting equation for $f(x)$ using the \texttt{solve()} command. 
+        \item Replace $f(t)$ in equation \eqref{eq:ftc_equation} with the function that you solved for in part (c). Make sure to use $t$ as the variable. Assign this to a new name in Maple.
+        \item Evaluate the integral in the equation and solve for $a$ in Maple.
+    \end{enumerate}
+\end{enumerate}

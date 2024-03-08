@@ -1,0 +1,35 @@
+\section{The Sine Integral Function}
+\label{sec:sine_integral_function}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}
+	\item Tutorial \ref{chp:assignment_operator}, pg. \pageref{chp:assignment_operator}
+	\item Tutorial \ref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item Tutorial \ref{chp:limits}, pg. \pageref{chp:limits}
+	\item Tutorial \ref{chp:derivative}, pg. \pageref{chp:derivative}
+	\item Tutorial \ref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+The sine integral function
+\[Si(x) = \displaystyle\int_{0}^x \dfrac{\sin(t)}{t}\, dt\]
+is important in electrical engineering. Since the integrand is not defined at $t=0$, we define a continuous function $Si(x)$ by defining $Si(0)=1$ as seen belown.
+
+\[Si(x) = \begin{cases} 1 & x = 0\\ \displaystyle\int_{0}^x \dfrac{\sin(t)}{t}\, dt & \text{otherwise.} \end{cases}\]
+
+
+\marginnote[-2cm]{By taking the limit as the integration bounds approach $\pm\infty$, one can show that $\displaystyle\int_{-\infty}^{\infty}\dfrac{\sin(x)}{x} \, dx = \pi$.}
+
+\marginnote[-0.5cm]{It is an interesting exercise to integrate the sine integral function.  Indeed, $\displaystyle\int Si(x) \; dx = \cos(x) + xSi(x) + c$.}
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \item   Assign $Si(x)$ using the \texttt{piecewise()} command.  Since \texttt{Si} is a \textit{protected variable}, you may wish to define it as $SI(x)$ (with a capital I). 
+    \item   Use Maple to plot the graph of $Si(x)$.
+    \item   Determine the values of $x$ at which this function has local maximum values.
+    \marginnote[-0.75cm]{By the Fundamental Theorem of Calculus, \[\dfrac{d}{dx} Si(x) = \dfrac{\sin(x)}{x} = \text{sinc}(x)\] ($x \not = 0$).  This function is used in signal processing and the theory of Fourier transforms.}
+    \item   Find the coordinates of the first inflection point to the right of the origin.
+    \item   Does this function have a horizontal asymptote? Explain in a new paragraph.
+\end{enumerate}

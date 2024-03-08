@@ -1,0 +1,162 @@
+\chapter{Differential Equations}
+\label{chp:differential_equations}						
+
+We want to find solutions (and potentially graph said solutions) of \textbf{differential equations} -- equations that contain functions and derivatives of these functions. For the sake of ease, we will look at \textbf{first-order differential equations}: differential equations that only contain the \textbf{first} derivative (no higher-order derivatives).
+
+\section{Finding the General Solution to a Differential Equation}
+
+As an example, let's consider the differential equation $$y'=x^2y,$$ which is a first-order differential equation, where we assume $y$ is a function of $x$. The goal is to find the function $y(x)$ that satisfies this equation. \\
+
+When we define differential equations in Maple, we must ensure that we write $y$ in function notation; this means we write it as $y(x)$ and not as $y$.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{de1 := y'(x)= x\symbol{94}2*y(x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{de1 := y'(x) = x^2*y(x)}{\[\displaystyle {\it de1}\, := \,{\frac {d}{dx}}y \left( x \right) ={x}^{2}y \left( x \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+We use the \texttt{dsolve()} command to solve a differential equation.
+
+\index{assignment operator!differential equations}
+\index{differential equations!dsolve}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{dsolve(de1, y(x));
+}{}
+\end{mapleinput}
+\marginnote[-0.5cm]{A package does not need to be imported to use the \texttt{dsolve()} command.}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{y(x) = _C1*exp((1/3)*x^3)}{\[\displaystyle y \left( x \right) ={\it \_C1}\,{{\rm e}^{1/3\,{x}^{3}}}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\noindent
+Note that the result has $\_C1$ as the coefficient. This is an arbitrary constant that is part of the solution of the differential equation. By default, Maple names the constants $\_C1, \_C2, \_C3, \ldots \text{ etc}$.\\
+
+We can clean this up a bit by substituting a `nicer' constant for $\_C1$.
+
+\index{subs}
+\index{differential equations!dsolve!general solution}
+
+\begin{maplegroup}
+	\begin{mapleinput}
+		\mapleinline{active}{1d}{desoln := subs(_C1=A, _C1*exp((1/3)*x^3));
+		}{}
+	\end{mapleinput}
+	\mapleresult
+	\begin{maplelatex}
+		\mapleinline{inert}{2d}{desoln := A*exp((1/3)*x^3)}{\[\displaystyle desoln :={\it A}\,{{\rm e}^{1/3\,{x}^{3}}}\]}
+	\end{maplelatex}
+\end{maplegroup}
+
+\noindent
+This solution with the arbitrary constant $A$, is known as the \textbf{general solution} to the differential equation.
+
+\section{Finding the Particular Solution given Initial Conditions}
+
+\index{differential equations!dsolve!particular solution}
+\index{differential equations!dsolve!initial condition}
+
+The constant $A$ from the above example is arbitrary, meaning that the function $y(x)=A{\rm e}^{1/3\,{x}^{3}}$ is always a solution for the original differential equation, no matter the value of $A$.\\
+
+If we are given an \textbf{initial condition} of the form $y(x_0)=y_0$ for constants $x_0$ and $y_0$, then we can find a unique solution for the differential equation. This will give us a new value for $A$ every time we change the initial condition.
+
+For example, suppose that the function $y(x)$ goes through the point $(0,5)$. In this case, we have the initial condition $y(0)=5$.
+
+To include this initial condition when solving the differential equation in Maple, we add it into the \texttt{dsolve()} command as follows:
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{dsolve([de1, y(0) = 5], y(x));
+}{}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{y(x) = 5*exp((1/3)*x^3)}{\[\displaystyle y \left( x \right) =5\,{{\rm e}^{1/3\,{x}^{3}}}\]}
+\end{maplelatex}
+\marginnote[-0.5cm]{The particular solution to $y'=x^2y$ with the initial condition $y(0)=5$ is $y \left( x \right) =5\,{{\rm e}^{1/3\,{x}^{3}}}$.}
+\end{maplegroup}
+
+\section{Direction Fields}
+
+\index{packages!DETools}
+
+A direction field is a way to plot an entire family of solutions on a graph. Each arrow on this direction field represents the slope of the tangent line at every point in the graph's range. To access this command, we need to import the \texttt{DETools} package.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{with(DETools):
+}{}
+\end{mapleinput}
+\end{maplegroup}
+\marginnote[-0.3cm]{The \texttt{DETools} package must be loaded to use the \texttt{DEplot()} command.}
+
+\index{mathematical functions!sine}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{de2 := y'(x) = x\symbol{94}2 * sin(y(x));
+}{}
+\end{mapleinput}
+\mapleresult
+\marginnote[0.5cm]{This differential equation may be written as $y'=x^2\sin(y)$.}
+\begin{maplelatex}
+\mapleinline{inert}{2d}{de2 := y'(x) = x^2*sin(y(x))}{\[\displaystyle {\it de2}\, := \,{\frac {d}{dx}}y \left( x \right) ={x}^{2}\sin \left( y \left( x \right)  \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+We can use \texttt{DEplot()} to plot the direction field for the differential equation. The required parameters for the \texttt{DEplot()} command are the differential equation, the function for which it is to be solved for, and the ranges of the two variables.
+
+\index{differential equations!DEplot}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{DEplot(de2, y(x), x=-2..2, y=-2..2);
+}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/direction_fieldsplot2d1-eps-converted-to.pdf}
+\end{maplegroup}
+
+The above direction field allows us to track a "solution curve" for any particular initial condition. To track this curve, we start at a point $(x_0, y_0)$ and follow the directions of the arrows. This will give us the \textbf{one} unique curve that satisfies the initial condition $y(x_0)=y_0$. 
+
+\marginnote{Square brackets must be placed around the initial condition of a particular solution when plotting a solution curve.}
+Maple will plot a particular solution if the initial condition is placed inside square brackets and included as an additional parameter in the \texttt{DEplot()} command.
+
+\subsection{Plotting Solution Curves on a Direction Field}
+
+\index{differential equations!DEplot!axes intervals}
+\index{differential equations!DEplot!solution curves}
+\index{differential equations!DEplot!linecolour}
+
+If we want to force the \texttt{DEplot()} command to show a solution for one particular initial condition, say $y(0)=1$, we add the parameter as follows:
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{DEplot(de2, y(x), x=-2..2, y=-2..2, [y(0) = 1]);
+}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/direction_fieldsplot2d2-eps-converted-to.pdf}
+\end{maplegroup}
+\marginnote[-2cm]{Notice that this curve goes through the point $(0,1)$ and follows the direction of the arrows from the direction field.}
+
+We now plot the solutions that correspond to the initial conditions $y(0)=1$ and $y(2)=-1$:
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{DEplot(de2, y(x), x=-2..2, y=-2..2, [y(0) = 1, y(2) = -1], linecolour=[blue, cyan]);
+}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/direction_fieldsplot2d3-eps-converted-to.pdf}
+\end{maplegroup}
+
+\marginnote[-2cm]{The \texttt{linecolour = }\textit{colour} parameter is used to adjust the colour of the solution curves, rather than the direction field.}

@@ -1,0 +1,47 @@
+\section{The Net Change Theorem}
+\label{sec:visualizing_the_net_change_theorem}
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+    \item \nameref{chp:limits}, pg. \pageref{chp:limits}
+    \item \nameref{chp:riemann_sums_and_area_approximation}, pg. \pageref{chp:riemann_sums_and_area_approximation}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+The Net Change\index{integral!net change} Theorem states that if a quantity $Q = F(t)$ is a differentiable function on the interval $[a,b]$, then 
+\begin{align*}
+	\int_{a}^b F'(t) \; dt 
+	&= F(b) - F(a) \\
+	&= \text{ net change in } Q \text{ over } [a,b].
+\end{align*}
+    \index{integral!}
+In other words, the Net Change Theorem states that the definite integral of the rate of change of $Q$ from $a$ to $b$ is given by the difference in the initial quantity and the final quantity.
+
+We may also be interested in finding the total change of the quantity $Q$, given by the integral
+\[
+	\int_{a}^{b} |F'(t)| dt.
+\]
+\index{integral!total change}
+In this case, all area is positive. 
+
+We will use Maple's \texttt{ApproximateInt()}\index{integral approximation!ApproximateInt} command to help visualize the net change and total change of a function. In addition to the \texttt{method=left}\index{integral approximation!ApproximateInt!method} and \texttt{method=right} parameters, we can also use \newline\noindent\texttt{method=upper} and \texttt{method=lower} to ensure that our approximation is an overestimate or an underestimate, respectively.
+\marginnote[-2cm]{You will need to load the \texttt{Student[Calculus1]}\index{packages!Student[Calculus1]} package to use the \texttt{ApproximateInt()} command. You can do this by typing \texttt{with(Student[Calculus1]):} at the start of your worksheet.}
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \item   Define the function $f(x) = \dfrac{x}{x^2+4}$.  Plot $f(x)$ on the interval $[-5,10]$.
+    \item   Use the \texttt{ApproximateInt()}\index{integral approximation!ApproximateInt!method} command to calculate the \textit{net} change of $f(x)$ on the interval $[-5,10]$ with $15$ partitions. Use both\\ \texttt{method=upper} and \texttt{method=lower}.
+    \item   Use the \texttt{ApproximateInt()} command with \texttt{method=right} and $n$ partitions to give the Riemann sum for $f(x)$ on the interval $[-5,10]$.  Use the \texttt{limit()}\index{limit} command to find the limit of this value as $n$ goes to infinity. You may need to use the \texttt{value(\%)} command in order to get a numerical value.
+    \marginnote[-1cm]{This \texttt{value(\%)}\index{value}\index{ditto operator} command will force Maple to evaluate the limit and produce a numerical value.}
+    \item   Compute $\displaystyle\int_{-5}^{10} f(x) \; dx$ by using the \texttt{Int()} command.  Verify that this value matches the limit of the Riemann sum in the previous exercise.
+    \item   Use the \texttt{ApproximateInt()}\index{integral approximation!ApproximateInt} command to calculate the \textit{total} change\index{integral!total change} of $f(x)$ on the interval $[-5,10]$ with $15$ partitions. Use both\\ \texttt{method=upper} and \texttt{method=lower}.\index{integral approximation!ApproximateInt!method}
+    \marginnote{Recall that the \texttt{abs()}\index{mathematical functions!absolute value} command is used for absolute values in Maple.}
+    \item   Use the \texttt{ApproximateInt()} command with \texttt{method=right} and $n$ partitions to give the Riemann sum\index{integral approximation!Riemann sum} for $|f(x)|$ on the interval $[-5,10]$.  Use the \texttt{limit()}\index{limit} command to find the limit of this value as $n$ goes to infinity. You may need to use the \texttt{value(\%)}\index{value}\index{ditto operator} command in order to get a numerical value.
+    \item    Compute $\displaystyle\int_{-5}^{10} |f(x)| \; dx$ by using the \texttt{Int()} command\index{integral!Int}.  Verify that this value matches the limit of the Riemann sum in the previous exercise.
+    \marginnote[-1.5cm]{Think about how you would evaluate this integral if you could not integrate the absolute value function.  In general, computing $\displaystyle\int_{a}^b \abs{f(x)} \, dx$ is difficult.}
+    \item   In a new paragraph, describe the difference between the net area and the total area bounded by the function $f(x)$ and the $x$-axis on the interval $[-5,10]$.
+    \marginnote[-1cm]{The net area and the total area between a curve and the $x$-axis can be different quantities.  It is important to know when they are different and when they are the same.}\index{integral!net change}
+\end{enumerate}

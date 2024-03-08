@@ -1,0 +1,59 @@
+\section{Limits and Asymptotes}	
+\label{sec:limits_and_asymptotes}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:limits}, pg. \pageref{chp:limits}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+It is incorrect to assume that a vertical asymptote is always found whenever the denominator of a rational function is equal to zero. Instead, we say that $f(x)$ has a vertical asymptote at $x=a$ whenever
+\[ \dlim{x}{a^+} f(x) = \infty \]
+or
+\[ \dlim{x}{a^-} f(x) = \infty. \]
+In either case, the equation of the vertical asymptote\index{limit!one-sided}\index{asymptote!vertical} is $x=a$.
+
+Similarly, a horizontal asymptote \index{limit!at infinity}\index{asymptote!horizontal}of $f(x)$ is also defined in terms of limits. A function $f(x)$ has a horizontal asymptote $y = L$ if
+\[ \dlim{x}{\infty} f(x) = L \]
+or
+\marginnote{While a function may have many vertical asymptotes, it cannot have more than two horizontal asymptotes.}
+\[ \dlim{x}{-\infty} f(x) = L. \]
+In this case, the equation of the horizontal asymptote is $y=L$.
+
+You will need to use both of these definitions while answering the following exercises.
+
+\subsection*{Exercises:}
+\begin{enumerate} \index{plot!discontinuities}
+    \marginnote[-0.54cm]{Some versions of Maple may not properly display graphs of functions that contain vertical asymptotes. In this case, include \texttt{discont=true} as a parameter in the \texttt{plot( )} command. An example of finding vertical asymptotes is given on page \pageref{subsec:vertical_asymptotes}.}
+    \item Plot the function $f(x)=\dfrac{x-1}{x^2-x-2}$ and estimate its vertical asymptotes. Use Maple to prove that your guesses are, in fact, the vertical asymptotes by taking the one-sided limits at those values. Insert a new paragraph and state the equations of the vertical asymptotes.
+\marginnote[-0.3cm]{The \includegraphics[width=0.04\textwidth]{tutorials/figures/new_text.PNG} button or Ctrl+Shift+J can be used to create a paragraph after the current line.}       
+
+    \item Consider the function $g(x)=\dfrac{x+2}{x^2-x-6}$.
+    \begin{enumerate}
+    \item Use Maple to factor the denominator of $g(x)$.
+    \marginnote[-0.5cm]{If you use Maple's \texttt{denom()}\index{mathematical functions!denominator} command and type \texttt{denom($g(x)$)}, you will get the denominator of $g(x)$.}
+    \item By factoring the denominator of $g(x)$, you might suspect that the vertical asymptotes are $x=-2$ and $x=3$. Plot $g(x)$ and show why this may or may not be the case.
+    \end{enumerate}
+    
+
+    \item Consider the function $h(t)=\dfrac{\sin(t)}{t}$.\index{mathematical functions!sine}
+    \begin{enumerate}
+        \item Plot\index{plot} a graph of $h(t)$.
+        \item Use Maple's \texttt{limit()}\index{limit} command to find the horizontal asymptote(s) of $h(t)$. 
+        \marginnote{An example of finding horizontal asymptotes\index{asymptote!horizontal} is provided on page \pageref{subsec:horizontal_asymptotes}.}
+        \item Insert a new paragraph and state the equation(s) of the horizontal asymptote(s)\index{asymptote!horizontal}.
+      \end{enumerate}
+
+
+\item Consider the function  $Q(x)=\dfrac{\sqrt{2x^2+1}}{3x+5}$.
+\marginnote{The \texttt{sqrt()}\index{mathematical functions!square root} command is used to input a square root.}  
+    \begin{enumerate}
+        \item Plot a graph of $Q(x)$. Be sure to specify appropriate intervals for the $x$-axis and $y$-axis.
+        % \marginnote[-0.6cm]{Does $Q(x)$ have any vertical asymptotes? If so, make sure to use \texttt{discont=true} as a plot option.}
+        \item Use Maple's \texttt{limit()} command to find the horizontal asymptote(s) of $Q(x)$. 
+        \item Insert a new paragraph and state the equation(s) of the horizontal asymptote(s).
+        \marginnote[-0.6cm]{Maple provides a useful \texttt{Asymptotes()}\index{asymptote!asymptote command} command for finding the asymptotes of a function. Try typing \texttt{?Asymptotes} to learn more.}
+\end{enumerate}     
+
+\end{enumerate} 

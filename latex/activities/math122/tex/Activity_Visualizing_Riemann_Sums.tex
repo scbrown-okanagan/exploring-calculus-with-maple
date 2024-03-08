@@ -1,0 +1,41 @@
+\section{Riemann Sums for Monotonic Functions}
+\label{sec:riemann_sums_for_monotonic_functions}		
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+    \item \nameref{chp:limits}, pg. \pageref{chp:limits}
+	\item \nameref{chp:riemann_sums_and_area_approximation}, pg. \pageref{chp:riemann_sums_and_area_approximation}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+A monotonic function is one that is strictly increasing or strictly decreasing. In this activity, we will use Maple's \texttt{ApproximateInt()} command to visualize and calculate Riemann sums\index{integral approximation!Riemann sum} for the area below the monotonic function \[ f(x) = x - 2\ln(x).\]
+\index{integral approximation!ApproximateInt}
+\marginnote{You will need to load the \texttt{Student[Calculus1]}\index{packages!Student[Calculus1]} package to use the \texttt{ApproximateInt()} command. You can do this by typing \texttt{with(Student[Calculus1]):} at the start of your worksheet.}
+\index{integral approximation!ApproximateInt!method}\index{integral approximation!ApproximateInt!output options}
+
+\subsection*{Exercises:}
+
+\marginnote[1cm]{Using left and right endpoint methods, it is easy to come up with an overestimate and underestimate for monotonic functions.  In particular, to come up with an overestimate requires only one Riemann sum calculation.}
+\begin{enumerate}
+    \item Use the \texttt{ApproximateInt()} command for \[f(x) = x - 2\ln(x)\] on the interval $[2,10]$ with $10$ partitions.
+        \index{integral approximation!ApproximateInt!partition}
+    \begin{enumerate}
+        \item Use the options \texttt{method=left} and \texttt{output=plot}.
+        \item Repeat the command, but using \texttt{method=right} and \texttt{output=plot}.
+    \end{enumerate}
+\end{enumerate}
+For exercises $2$ through $5$, answer the question in a new paragraph on your Maple worksheet.
+\begin{enumerate}
+	\setcounter{enumi}{1}
+    \item   What do you notice about using the left-point method to estimate the area below a monotonically increasing function?
+    \item   What do you notice about using the right-point method to estimate the area below a monotonically increasing function?
+    \item   What do you suspect will happen if you use the left-point method to estimate the area below a monotonically decreasing function?
+    \item   What do you suspect will happen if you use the right-point method to estimate the area below a monotonically decreasing function?
+    \item   Repeat Exercise $1$, but change \texttt{output=plot} to \texttt{output=value}\index{integral approximation!ApproximateInt!output options}. Evaluate these areas to $15$ digits.
+    \marginnote[-2cm]{Don't forget that you can convert an exact value to decimal using the \texttt{evalf()}\index{evalf} command. You can set the accuracy to $15$ digits at the top of your worksheet using the command \texttt{Digits := 15}. Note that the first letter is always capitalized in \texttt{Digits}.}\index{Digits}
+    \item   Using $n$ partitions and \texttt{output=sum}, give the Riemann sum for $f(x)$ on the interval $[2,10]$. Use both left- and right-point methods.  What happens as $n \rightarrow \infty$?
+    \item   Estimate the Riemann sum for $f(x)$ on the interval $[0.5, 3]$ using $10$ boxes and left- and right-point methods.  What do you notice about your answers?  Does this contradict your findings about monotonic functions?
+    \marginnote[-1.5cm]{Any function that is not monotonic is not as easy to find an overestimate or underestimate for.}
+\end{enumerate}
+

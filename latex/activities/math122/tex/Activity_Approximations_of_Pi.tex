@@ -1,0 +1,41 @@
+\section{Approximations of $\pi$}
+\label{sec:approximations_of_pi}		
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:sequence_and_sseries}, pg. \pageref{chp:sequence_and_sseries}
+\end{itemize}
+\subsection*{Introduction:}
+
+In this activity, we will see how Taylor series can be used in order to approximate $\pi$.
+
+We know that the Taylor series of $\arctan(x)$ centred at $0$ is
+\[\arctan(x) = \sum_{n=0}^{\infty} \dfrac{(-1)^n x^{2n+1}}{2n+1}.\]
+From this, we can use the $k$\textsuperscript{th} partial sum 
+\begin{equation}
+    \label{eq:arctan_partial_sum}
+    \sum_{n=0}^{k} \dfrac{(-1)^n x^{2n+1}}{2n+1}
+\end{equation}
+to approximate $\pi$ to as many digits as necessary. How quickly can we determine the value of $\pi$ accurate to $15$ digits using equation \eqref{eq:arctan_partial_sum}?
+\marginnote[-1.5cm]{Borwein, Bailey, and Plouffe published a formula for $\pi$ that allows someone to find the $n^{th}$ binary digit of $\pi$ without needing to find any preceding digit.  Their formula, 
+\begin{align*}
+\scriptsize \pi = \displaystyle\sum_{k=0}^{\infty} &\left[\dfrac{1}{16^k}\left(\dfrac{4}{8k+1} - \dfrac{2}{8k+4}\right.\right.\\
+		&\left.\left. - \dfrac{1}{8k+5} - \dfrac{1}{8k+6}\right)\right],
+\end{align*}
+\noindent was published in the paper ``On the Rapid Computation of Various Polylogarithmic Constants'' in which they compute the $10$ billionth hexadecimal digit of $\pi$.  Can you see how this formula lends itself well for this type of calculation?}
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \item   As $k \rightarrow \infty$, we know that $\arctan(1) = \pi/4$.  How large does $k$ need to be in order to approximate $\pi$ accurate to $15$ digits?
+    \item   As $k \rightarrow \infty$, we know that $\arctan(1/2) + \arctan(1/3) = \pi/4$.  How large does $k$ need to be in order to approximate $\pi$ accurate to $15$ digits?
+    \item   As $k \rightarrow \infty$, we know that $2\arctan(1/2) - \arctan(1/7) = \pi/4$.  How large does $k$ need to be in order to approximate $\pi$ accurate to $15$ digits?
+    \item   As $k \rightarrow \infty$, we know that $2\arctan(1/3) + \arctan(1/7) = \pi/4$.  How large does $k$ need to be in order to approximate $\pi$ accurate to $15$ digits?
+    \marginnote[-1cm]{Many other formulas exist that can be used to approximate $\pi$ including $\dfrac{\pi}{4} = 5\arctan(1/7) + 2\arctan(3/79)$.}
+    \item   As $k \rightarrow \infty$, we know that $4\arctan(1/5) - \arctan(1/239) = \pi/4$.  How large does $k$ need to be in order to approximate $\pi$ accurate to $15$ digits?
+    \marginnote[-1cm]{The only possible formulas with two terms using $\arctan(1/k)$ to approximate $\pi/4$ are the ones listed in the exercises in this activity (Borwein and Bailey $2003$).}
+    \item   As $k \rightarrow \infty$, we know that $\arctan(1/2) + \arctan(1/5) + \arctan(1/8) = \pi/4$.  How large does $k$ need to be in order to approximate $\pi$ accurate to $15$ digits?
+    \marginnote[-0.5cm]{It is important to understand why some of these series converge quicker than others.}
+    \item   On a separate sheet of paper, use the power series for $\arctan(x)$ to prove that \\
+    \[\pi = 2\sqrt{3} \displaystyle\sum_{n=0}^{\infty} \dfrac{(-1)^n}{(2n+1)3^n}.\]  It may help to recall that $\arctan(1/\sqrt{3}) = \pi/6$.
+\end{enumerate}

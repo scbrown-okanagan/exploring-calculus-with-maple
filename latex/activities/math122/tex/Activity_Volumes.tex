@@ -1,0 +1,53 @@
+\section{Volumes of Revolution}\index{volume of revolution}
+\label{sec:volumes_of_revolution}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:implicit_functions}, pg. \pageref{chp:implicit_functions}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+Volumes of Revolution are often very challenging to visualize on paper. Luckily, Maple has an interactive way of visualizing the volume obtained by revolving a region about a central axis. In this activity, we will use the Volume of Revolution Tutor to find and plot the volume of a region rotated about a vertical axis or horizontal axis.
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \item Define the two functions $f(x)=x^5-x^3$ and $g(x)=\sin(x)$ in Maple.
+    \item 
+    \begin{enumerate}
+        \item Plot the graphs of $f(x)$ and $g(x)$ on the same set of axes.
+            \index{plot}
+        \item Find the points of intersection of the curves $f(x)$ and $g(x)$, where $x\geq0$.  You can assign this to an expression and use the expression name in the tutor.
+    \end{enumerate}
+    \marginnote[-1cm]{An example of finding intersection points is given on page \pageref{sec:solvingsystemeqs}.}
+        \index{solving equations!intersection points}
+    \item Suppose that the region between the curves $f(x)$ and $g(x)$, with $x \geq 0$, is revolved around the line $x=\pi$ to obtain a solid.
+    \begin{enumerate}
+        \item Using the \texttt{Int()} command, calculate the volume of revolution.
+        \item Use the Volume of Revolution Tutor to plot the solid and confirm your answer in part (a).
+        \marginnote[-1cm]{An example of using the Volume of Revolution Tutor can be found on page \pageref{sec:volume_of_revolution_tutor}.}
+    \end{enumerate}
+    \item Suppose that the region between the curves $f(x)$ and $g(x)$, with $x \geq 0$, is revolved around the line $y=-4$ to obtain a solid.
+    \begin{enumerate}
+        \item Use the Volume of Revolution Tutor to calculate the volume of the solid. Before closing the tutor, copy the text at the bottom (in the Maple Command box).
+        \marginnote{You will need to include the \texttt{Student[Calculus1]} package by typing \texttt{with(Student[Calculus1]):} on a new line before the \texttt{VolumeOfRevolution()} command will work.}
+            \index{volume of revolution!VolumeOfRevolution}
+        \item Paste this command onto a new line and change \texttt{'output'=plot} to \texttt{'output'=value} to output the volume of the resulting solid.
+            \index{volume of revolution!VolumeOfRevolution!output options}
+    \end{enumerate}
+    \clearpage
+    \item Suppose you want to find the volume of an egg that has an elliptical shape defined in the $xy$-plane by $\dfrac{x^2}{2}+y^2=1$.
+    \begin{enumerate}
+        \marginnote{Don't forget to include the \texttt{plots} package before using \texttt{implicitplot()}.}
+        \item Plot the curve using the \texttt{implicitplot()} command.
+        \marginnote[1.5cm]{When plotting the ellipse, it may initially look like a circle. This is because Maple does not use the same scaling for each axis. Try clicking on the plot and using the \includegraphics[scale=0.5]{tutorials/figures/1-1.png} button in the top menu.}
+            \index{packages!plots}
+        \item Solve the equation of the curve for $y$ to get the equations of the top and bottom halves of the ellipse.
+        \item Find the $x$-intercepts of this ellipse.
+        \item Use the Volume of Revolution Tutor or the \texttt{Int()} command to calculate the area of the solid obtained by revolving the top half of the ellipse about the $x$-axis.
+            \index{integral!Int}
+    \end{enumerate}
+\end{enumerate}

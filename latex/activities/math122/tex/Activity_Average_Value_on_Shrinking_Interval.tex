@@ -1,0 +1,40 @@
+\section{Average Value of a Function on a Shrinking Interval}
+\label{sec:average_value_of_function}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:limits}, pg. \pageref{chp:limits}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+The average value of a function\index{average value of a function} $f$ on the interval $[a,b]$ is defined as 
+\[ f_{ave} = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx. \]
+In this activity, we will investigate the function 
+\[ f(x) = \sqrt{1 + x^3} \]
+over a shrinking interval where $a = 2$ fixed and $b$ approaches $a$. To do this, we can let $b=2+h$ and take the limit as $h \rightarrow 0$. Specifically, we will determine the value of the integral
+\[\displaystyle\lim_{h \rightarrow 0} \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx.\]
+For convenience, we can view 
+\[avg(h) = \frac{1}{h}\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx\]
+as a function of $h$. This function gives the average value of \\\noindent $f(x) = \sqrt{1 + x^3}$ over the interval $[2,2+h]$.
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \marginnote{Note that you should use $h$ as the independent variable of this function.}
+    \item Assign the function $avg(h) = \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx$.
+    \item Use this function to find the average value of $f(x) = \sqrt{1+x^3}$ on the interval $[2,4]$.
+    \item Plot\index{plot} $avg(2)$ and $\sqrt{1+x^3}$ on the same axes over the interval $[2,4]$. Does $avg(2)$ appear to be the average value of $f(x) = \sqrt{1+x^3}$ on the interval $[2,4]$?
+    \item Plot $avg(h)$ over the interval $h\in[-1,1]$. Estimate the value $\displaystyle\lim_{h \rightarrow 0} \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx$ from your graph.
+    \item Is there an easy integration technique that you could use to integrate $\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx$ by hand? If not, why?
+    \item Determine $\displaystyle\lim_{h \rightarrow 0} \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3} \,dx$ by hand using L'H\^opital's Rule in the space below. Make sure to state the indeterminate form. 
+    \label{ex:average_value_limit}
+    \marginnote[-.7cm]{L'H\^opital's Rule states that if the limit \[\lim_{x\rightarrow a}\frac{f(x)}{g(x)}\] is indeterminate of the form $0/0$ or $\infty/\infty$, if $f$ and $g$ are differentiable at $a$, and if $g'(x) \neq 0$ near $a$, then \[\lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)},\] assuming that this limit exists.}
+    \index{limit!l'H\^opital}
+    \par
+    \fbox{\parbox{1\linewidth}{$\displaystyle\lim_{h \rightarrow 0} \dfrac{\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3} \,dx}{h}=$ \vspace{8cm} }}
+    \item Check your answer to question \ref{ex:average_value_limit} by using the \texttt{limit()} command to evaluate $\displaystyle\lim_{h\rightarrow0}avg(h)$.
+        \index{limit}
+\end{enumerate}
+

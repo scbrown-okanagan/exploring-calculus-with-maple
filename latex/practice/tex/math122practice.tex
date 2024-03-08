@@ -1,0 +1,110 @@
+\chapter{Lab Test Review for Math 122}
+
+The following exercises are provided as examples of potential questions on the final lab test at the end of the semester.
+
+\begin{enumerate}
+
+\section*{Riemann Sums}\index{integral approximation!Riemann sum}
+
+\item Assign the function $f(x) = x \lrp{1-x^2 {\rm e}^{-\frac{1}{6}x^2}}$ in Maple.
+	\begin{enumerate}
+	\item Evaluate the Riemann sum over the interval $\lrb{-4,2}$ using the \texttt{method=lower} option with $8$ partitions.
+	\item Evaluate the Riemann sum over the interval $\lrb{-4,2}$ using the \texttt{method=upper} option with $8$ partitions.
+	\end{enumerate}
+	
+\section*{Integral Approximation Techniques}
+    \index{integral approximation!ApproximateInt}
+
+\item Assign the following function in Maple: \[ g(x) = \sqrt{x} \sin(x) \]
+	\begin{enumerate}
+	\item Give an approximate value of $\dint_{1}^{8} g(x)~dx$ using the midpoint rule and $10$ partitions.
+	\item Give an approximate value of $\dint_{1}^{8} g(x)~dx$ using the trapezoid rule and $10$ partitions.
+	\item Give an approximate value of $\dint_{1}^{8} g(x)~dx$ using Simpson's rule and $10$ partitions.
+	\item Give the exact value of the definite integral $\dint_{1}^{8} g(x)~dx$ and evaluate as a decimal with $15$ digits.
+	\end{enumerate}
+
+\section*{Integral Functions and the Fundamental Theorem of Calculus}\index{integral}
+
+\item Consider the function \[ f(x) = \dint_{0}^{x} 10 {\rm e}^{-0.5 t} \sin(t) \: dt. \]
+	\begin{enumerate}
+	\item Assign the function to $f(x)$ and plot it over the interval $[0,10]$.
+	\item What is the derivative, $f'(x)$?
+	\item At what value in the interval $[0,10]$ does $f(x)$ reach its maximum?
+	\item What is the maximum value of $f(x)$ over the interval $[0,10]$?
+	\end{enumerate}
+
+\section*{Areas Between Curves}\index{integral!net area}\index{integral!total area}
+
+\item Assign the following function in Maple: $$h(x) = \dfrac{2x}{x^2+6}$$
+	\begin{enumerate}
+	\item Find the \textbf{net} area bounded by $h(x)$ and the $x$--axis on the interval $\lrb{-2,6}$.
+	\item Find the \textbf{total} area bounded by $h(x)$ and the $x$--axis on the interval $\lrb{-2,6}$.
+	\end{enumerate}
+
+\item Plot the region between the curves $f(x) = \tan^2(x)$ and $g(x) = \sqrt{x}$ and compute the area to $15$ digits.
+
+\section*{Average Value of a Function}\index{average value of a function}
+
+\item Find the average value of $f(x) = 2\sin(x) - \sin(2x)$ on the interval $[0,\pi]$.
+	
+\section*{Volumes of Revolution}\index{volume of revolution}
+
+\item Find the volume of the egg-shaped solid obtained by revolving the region bounded by the implicit curve \[ 4x^2 + y^2 = 12 \] about the $x$-axis.
+
+\item Find the volume bounded by the curves $y^2 - x^2 = 1$ and $y=2$ rotated about the $x$-axis.
+
+\section*{Arc Length}\index{arc length}
+
+\item Determine the arc length of the curve $f(x) = x\sqrt[3]{4-x}$ over the interval $[0,4]$ to $15$ digits.
+
+\section*{Infinite Integrals and Probability}
+    \index{integral!improper}
+    \index{probability}
+
+\item At an annual triathlon, the finishing times for male athletes can be modeled by the probability density function
+\[ p(x) = \dfrac{1}{\sigma \sqrt{2\pi}} {\rm e}^{-(x-\mu)^2/2\sigma^2}, \]
+where $\mu = 4313$ seconds (the average finish time) and $\sigma = 583$ seconds (the standard deviation of finish times). Define this function in Maple using the specified values of $\mu$ and $\sigma$.
+	\begin{enumerate}
+	\item Plot the function over the interval $[0,6500].$
+	\item What is the probability that a male athlete finishes the triathlon in under $3600$ seconds ($1$ hour)?
+	\item What is the probability that a male athlete finishes the triathlon in over $4200$ seconds ($1$ hour $10$ min)?
+	\item What is the probability that a male athlete takes between $3600$ and $5400$ seconds to finish the triathlon ($1$ hour to $1.5$ hours)?
+	\end{enumerate}
+	
+\section*{Differential Equations}
+    \index{differential equations}
+
+\item After $500$ fish are introduced to a lake, the rate of growth for the population of fish is given by the differential equation
+\[ \frac{dN}{dt} = \dfrac{N\lrp{7000 - N}}{10000}, \]
+where $N=N(t)$ is the population of fish after $t$ years. Define this differential equation in Maple.
+	\begin{enumerate}
+	\item Use \texttt{dsolve()} to give the solution to the differential equation for $N(t)$ using the initial condition $N(0)=500$.
+	\item How many fish will there be after $6$ years (to the nearest fish)?
+	\item What does the population of fish approach after a long time? (Take the limit as $t$ tends to infinity or use a plot).
+	\end{enumerate}
+
+\section*{Taylor Series}
+    \index{sequences and series!Taylor and Maclaurin series}
+
+\item Find the Taylor series expansion of $f(x) = {\rm e}^{2x} \tan(x)$ centred at $x=0$ (Maclaurin series) and give the coefficient of the $x^8$ term.
+
+\end{enumerate}
+
+\clearpage
+
+\section*{Solutions}
+
+\begin{enumerate}
+    \item (a) $1.06499989996052$ \\(b) $7.98649893432598$
+    \item (a) $0.87353651353133$ \\(b) $0.799055557908822$ \\(c) $0.848709528323826$ \\(d) $0.848559602278512$
+    \item (b) $10 {\mathrm e}^{- 0.5 x} \sin\! \left(x\right)$ \\(c) $3.14159265358979$ \\(d) $9.66303661080610$
+    \item (a) $1.43508452528932$ \\(b) $2.45673577282130$
+    \item $0.251416829858820$
+    \item $1.27323954473516$
+    \item $87.0623694832426$
+    \item $21.7655923708106$
+    \item $7.79878582727266$
+    \item (b) $0.110667763524550$ \\(c) $0.576843561268247$ \\(d) $0.858206054544922$
+    \item (a) $N\! \left(t\right)=\frac{7000}{1+13 {\mathrm e}^{-7 t/10}}$ \\(b) $5858.02246368622$ \\(c) $7000$
+    \item $2/5$
+\end{enumerate}

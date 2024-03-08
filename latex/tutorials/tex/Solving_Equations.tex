@@ -1,0 +1,409 @@
+\chapter{Equation Solvers}
+\label{chp:equation_solvers}		
+
+\section{Assigning Equations}
+
+The assignment operator \text{:=} can be used to assign a name to nearly any type of output. Often, it is useful to assign an equation (involving a regular $=$ sign) a name. Some of the operations that we discussed in Tutorial \ref{chp:basic_operations} (such as simplifying, expanding, substituting, etc.) can then be applied to that equation.
+
+\index{subs}
+\index{factor}
+\index{solving equations!solve}
+\index{solving equations!fsolve}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{circle := x\symbol{94}2 + y\symbol{94}2 = 25;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{circle:=x^2+y^2 = 25}{\[\displaystyle {\it circle}\, := \,{x}^{2}+{y}^{2}=25\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote[-.5cm]{Recall that $x^2+y^2=25$ represents a circle of radius 5 centred at the origin. The point $(3,4)$ lies on this circle because $x=3$ and $y=4$ satisfy the equation.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{subs(x = 3, y = 4, circle);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{25 = 25}{\[\displaystyle 25=25\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eqn := x\symbol{94}4 + 1 = 2*x\symbol{94}2;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eqn := x^4+1 = 2*x^2}{\[\displaystyle {\it eqn}\, := \,{x}^{4}+1=2\,{x}^{2}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote[.5cm]{Here we can see that it is possible to add or subtract a value from both sides of an equation and factor the result.}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eqn - 2*x\symbol{94}2; factor(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{x^4-2*x^2+1 = 0}{\[\displaystyle {x}^{4}-2\,{x}^{2}+1=0\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(x-1)^2*(x+1)^2 = 0}{\[\displaystyle  \left( x-1 \right) ^{2} \left( x+1 \right) ^{2}=0\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{Two Types of Solvers}
+
+We will make use of two different equations solvers in Maple:
+\begin{itemize}
+\item \texttt{solve()}
+	\begin{itemize}
+	\item This solver attempts to solve an equation and then display the solutions in their exact form.
+	\marginnote{Maple will give complex solutions using \mapleinline{inert}{2d}{I = sqrt(-1)}{$\displaystyle I= \sqrt{-1}$}. For most of the exercises in the activities, these solutions can be ignored.}
+	\item This solver will give both real and complex solutions.
+	\item Solutions to high-degree polynomials can be very large and may be displayed symbolically using ``\textit{RootOf}" placeholders.
+	\end{itemize}
+\item \texttt{fsolve()}
+	\begin{itemize}
+	\item This solver uses numerical approximation methods and displays the solutions in decimal form. 
+	\item This solver will give real solutions with the number of digits assigned to \texttt{Digits}.
+	\marginnote{It is a good idea to see the output of both solvers to decide which output is more useful. A good strategy is to use \texttt{solve()} and see if the output is helpful. If it is not, then type an \texttt{f} at the start of that input and rerun the new command.}
+	\item Some solutions may not be found by the methods used by the solver.
+	\end{itemize}
+\end{itemize}
+
+\section{Solving an Equation of One Variable}
+
+The parameters of \texttt{solve()} and \texttt{fsolve()} are the same in most cases. You must include the equation to be solved and you can specify the variable that you wish to solve for.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(x\symbol{94}2 = 5, x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{sqrt(5), -sqrt(5)}{\[\displaystyle  \sqrt{5},\,- \sqrt{5}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(x\symbol{94}2 = 5, x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-2.236067977, 2.236067977}{\[\displaystyle - 2.236067977,\, 2.236067977\]}
+\end{maplelatex}
+\end{maplegroup}
+
+If there is only one variable in the equation, then it is not necessary to specify the desired variable.
+
+\marginnote{It may not make sense to use \textit{both} \texttt{solve()} and \texttt{fsolve()}. Choose the solver that produces the most useful output.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(x\symbol{94}2 = 5);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{sqrt(5), -sqrt(5)}{\[\displaystyle  \sqrt{5},\,- \sqrt{5}\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(x\symbol{94}2 = 5);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-2.236067977, 2.236067977}{\[\displaystyle - 2.236067977,\, 2.236067977\]}
+\end{maplelatex}
+\end{maplegroup}
+
+If you provide \texttt{solve()} or \texttt{fsolve()} with an \textit{expression} rather than an \textit{equation}, then the solver will set that expression equal to $0$ and solve the resulting equation.
+
+\marginnote{Note that \texttt{solve(x\symbol{94}2 - 5)} is equivalent to typing \texttt{solve(x\symbol{94}2 - 5 = 0, x)}.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(x\symbol{94}2 - 5, x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{sqrt(5), -sqrt(5)}{\[\displaystyle  \sqrt{5},\,- \sqrt{5}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(x\symbol{94}2 - 5, x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-2.236067977, 2.236067977}{\[\displaystyle - 2.236067977,\, 2.236067977\]}
+\end{maplelatex}
+\end{maplegroup}
+
+Maple will give complex solutions using \mapleinline{inert}{2d}{I = sqrt(-1)}{$\displaystyle I= \sqrt{-1}$} when using \texttt{solve()}. Typically, \texttt{fsolve()} will not display complex solutions.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{poly := 12*x\symbol{94}3-14*x\symbol{94}2+13*x-6;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{poly := 12*x^3-14*x^2+13*x-6}{\[\displaystyle {\it poly}\, := \,12\,{x}^{3}-14\,{x}^{2}+13\,x-6\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{factor(poly = 0);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(4*x^2-2*x+3)*(3*x-2) = 0}{\[\displaystyle  \left( 4\,{x}^{2}-2\,x+3 \right)  \left( 3\,x-2 \right) =0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(poly = 0, x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1/4-(1/4*I)*sqrt(11), 1/4+(1/4*I)*sqrt(11), 2/3}{\[\displaystyle 1/4-I/4 \sqrt{11},\,1/4+I/4 \sqrt{11},\,2/3\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(poly = 0, x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{.6666666667}{\[\displaystyle  0.6666666667\]}
+\end{maplelatex}
+\end{maplegroup}
+
+When trying to solve high-degree polynomials, solutions may be displayed symbolically using \texttt{solve()}, while \texttt{fsolve()} may display a more useful output.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{high := x\symbol{94}4 + 133*x + 200;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{high := x^4+133*x+200}{\[\displaystyle {\it high}\, := \,{x}^{4}+133\,x+200\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote{This output is Maple's way of representing four solutions to the quartic symbolically. Switching to \texttt{fsolve()}, we see only two real solutions. The other two solutions are either complex or were not found using the methods used in \texttt{fsolve()}.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(high);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{RootOf(_Z^4+133*_Z+200, index = 1), RootOf(_Z^4+133*_Z+200, index = 2), RootOf(_Z^4+133*_Z+200, index = 3), RootOf(_Z^4+133*_Z+200, index = 4)}{\[\displaystyle \begin{array}{l}{\it RootOf} \left( {{\it \_Z}}^{4}+133\,{\it \_Z}+200,{\it index}=1 \right) ,\,\\
+{\it RootOf} \left( {{\it \_Z}}^{4}+133\,{\it \_Z}+200,{\it index}=2 \right) ,\,\\
+{\it RootOf} \left( {{\it \_Z}}^{4}+133\,{\it \_Z}+200,{\it index}=3 \right) ,\,\\
+{\it RootOf} \left( {{\it \_Z}}^{4}+133\,{\it \_Z}+200,{\it index}=4 \right)\end{array} \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(high);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-4.448682310, -1.546800745}{\[\displaystyle - 4.448682310,\,- 1.546800745\]}
+\end{maplelatex}
+\end{maplegroup}
+
+When using the \texttt{fsolve()} command, you may also specify an interval in which to look for a solution.
+
+\marginnote{In this example, solutions will only be found on the interval $[5,10]$.}
+\label{eg:fsolve_interval}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(cos(x) = tan(x), x = 5..10);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{6.949424740}{\[\displaystyle  6.949424740\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\subsection{Finding the Intersection of Two Functions}
+\label{subsec:functionintersection}
+
+In this example, we will find the intersection point of $f(x) = x\ln(x)$ and $g(x) = \sin(x)$.
+
+\index{mathematical functions!sine}
+\index{mathematical functions!logarithmic@natural logarithmic}
+\index{solving equations!system}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{f(x) := x*ln(x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{f := proc (x) options operator, arrow; x*ln(x) end proc}{\[\displaystyle f\, := \,x\mapsto x\ln  \left( x \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{g(x) := sin(x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{g := proc (x) options operator, arrow; sin(x) end proc}{\[\displaystyle g\, := \,x\mapsto \sin \left( x \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+Equating $f(x) = g(x)$, we can use either \texttt{solve()} or \texttt{fsolve()} to obtain a solution. Since this is an equation in $x$ only, we will get the $x$-coordinate of the point.
+
+\marginnote[0.5cm]{Sometimes when Maple cannot solve an expression algebraically, the \texttt{solve()} command will output a symbolic solution, using \textit{RootOf()} to describe the solution. In these cases, you may wish to try the \texttt{fsolve()} command instead.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(f(x) = g(x));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{RootOf(_Z*ln(_Z)-sin(_Z))}{\[\displaystyle {\it RootOf} \left( {\it \_Z}\,\ln  \left( {\it \_Z} \right) -\sin \left( {\it \_Z} \right)  \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(f(x) = g(x));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1.752677281}{\[\displaystyle  1.752677281\]}
+\end{maplelatex}
+\end{maplegroup}
+
+We can use this result and substitute into $f(x)$ or $g(x)$ to determine the corresponding $y$-coordinate.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{f(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{.9835052055}{\[\displaystyle  0.9835052055\]}
+\end{maplelatex}
+\end{maplegroup}
+
+So, the point of intersection is $(1.752677281,0.9835052055)$. This can be verified by plotting both functions.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot([f(x), g(x)], x=0..2);
+}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/functionintersectionplot2d1-eps-converted-to.pdf}
+\end{maplegroup}
+\marginnote[-1.5cm]{Although it appears that there is another intersection point at $x=0$, $f(0)$ is undefined.}
+
+\section{Solving a System of Equations in Multiple Variables}
+\label{sec:solvingsystemeqs}
+
+We can also solve a system of equations by placing the various equations in a list (by using curly brackets) inside the \texttt{solve()} command.
+
+\label{eg:solve_intersection_point}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eq1 := x - y = 2;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq1 := x-y = 2}{\[\displaystyle {\it eq1}\, := \,x-y=2\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eq2 := y = x\symbol{94}2 - 4;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq2 := y = x^2-4}{\[\displaystyle {\it eq2}\, := \,y={x}^{2}-4\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(\{eq1, eq2\}, \{x, y\});
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{[x = 2, y = 0], [x = -1, y = -3]}{\[\displaystyle  \left\{ x=2,y=0 \right\} ,\, \left\{ x=-1,y=-3 \right\} \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{solving equations!solve}
+\index{solving equations!system}
+\index{mathematical functions!logarithmic@natural logarithmic}
+\index{mathematical functions!sine}
+
+\subsection{Finding the Intersection of Two Functions (Continued)}
+
+Using a system of equations, we can complete the example from \ref{subsec:functionintersection} with either a single \texttt{solve()} or \texttt{fsolve()} command.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{solve(\{y = x*ln(x), y = sin(x)\}, \{x,y\});
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{{x = RootOf(_Z*ln(_Z)-sin(_Z)), y = sin(RootOf(_Z*ln(_Z)-sin(_Z)))}}{\[\displaystyle  \begin{array}{l}\left\{ x={\it RootOf} \left( {\it \_Z}\,\ln  \left( {\it \_Z} \right) -\sin \left( {\it \_Z} \right)  \right) ,\right.\\
+\left. y=\sin \left( {\it RootOf} \left( {\it \_Z}\,\ln  \left( {\it \_Z} \right) \mbox{}-\sin \left( {\it \_Z} \right)  \right)  \right)  \right\}\end{array} \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote{Once again, we find that \texttt{fsolve()} provides a more useful output.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(\{y = x*ln(x), y = sin(x)\}, \{x,y\});
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{{x = 1.752677281, y = .9835052061}}{\[\displaystyle  \left\{ x= 1.752677281,y= 0.9835052061 \right\} \]}
+\end{maplelatex}
+\end{maplegroup}

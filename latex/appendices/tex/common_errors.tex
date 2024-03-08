@@ -1,0 +1,243 @@
+\chapter{List of Common Errors}
+\label{chp:list_of_common_errors}
+
+In this section, we will review some of the most common errors encountered when using Maple. Many of these errors are caused when using 2D Math, which makes complicated expressions look pretty, but can cause other issues. For a description of font styles, see Tutorial \ref{chp:maple_environment}, page \pageref{chp:maple_environment}.
+
+\section*{Missing Brackets}
+
+In Maple, we will use several types of brackets such as parentheses, square brackets, and curly braces. Maple refers to these as delimiters. If these delimiters are not found in pairs, then Maple will be unable to understand the syntax of your command.
+
+\marginnote{In this example, there is an open square bracket, but no square closed bracket.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot([f(x), g(x), x =-5..5);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Error, mismatched or missing bracket/operator}{\texttt{Error, mismatched or missing bracket/operator}}
+\end{maplelatex}
+\end{maplegroup}
+
+\section*{Spelling Errors}
+
+Maple cannot correct for poor spelling. If a command is misspelled, then it will treat the command as a variable name.
+
+\marginnote{Maple doesn't know to solve this equation if you don't spell the \texttt{solve()} command properly!}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{slove(x^2 = 4);}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{slove(x^2 = 4)}{\[\displaystyle {\it slove} \left( {x}^{2}=4 \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section*{The \texttt{\%} Shortcut Not Working as Intended}
+
+The \texttt{\%} shortcut will only use the output command that was last run.
+
+\marginnote{
+	In this example, the expected output of the second command is the decimal value of $\cos(\pi)$, which is equal to $-1$. However, it appears that the second command was run after the third, producing the decimal approximation of the third command.
+	\par It is usually a good practice to use the \texttt{\%} operator on the same line as the previous command. For example:
+	\par 
+	\texttt{
+	> subs(x=Pi,cos(x)); evalf(\%);
+	}
+}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{subs(x = Pi, cos(x));}{\[> {\it subs}\!\left( x=\pi,\cos \left( x \right)  \right); \]}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{cos(Pi)}{\[\displaystyle \cos \left( \pi \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{evalf(%);}{\[> {\it evalf}\!\left(  \% \right); \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{.6735930582}{\[\displaystyle  0.6735930582\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{fsolve(x^3 + 4*x = 3);}{\[> {\it fsolve}\!\left( {x}^{3}+4\,x=3 \right); \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{.6735930582}{\[\displaystyle  0.6735930582\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section*{Missing Multiplication Between Variables}
+
+Whenever two variables (such as $x$ and $y$) are multiplied together, you must explicitly include the multiplication sign between them. If no * or space is included between the variables, it may be interpreted as an entirely different variable name.
+
+\marginnote{In this example, no multiplication was included between $x$ and $y$. Maple mistakenly thinks that $xy$ is the name of a third variable.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{implicitplot(x^2 + y^2 = 6xy, x =-5..5, y =-5..5);}{\[> {\it implicitplot}(x^2+y^2 = 6xy, x = -5 .. 5, y = -5 .. 5);\]}
+\end{mapleinput}
+\vspace{.3cm}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{}{\texttt{Error, (in plots/implicitplot) invalid input:}}
+\mapleinline{inert}{2d}{}{\texttt{the following extra unknowns were found in}}
+\mapleinline{inert}{2d}{}{\texttt{the input expression: \{xy\}}}
+\end{maplelatex}
+\end{maplegroup}
+
+\section*{Spaces and Parentheses: Multiplication versus Functions}
+
+When typing in 2D Math (the default font), spaces and parentheses may be interpreted by Maple in unintended ways. 
+
+When using commands, make sure that there is no space between the command name and its parentheses. This will be treated as multiplication.
+
+\marginnote{In this example, Maple thinks that the word ``plot" should be multiplied by the expression in parentheses. This is why the name of the command appears in the output.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot (x^2 + 5);}{\[> {\it plot} \, \left( {x}^{2}+5 \right); \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{plot*(x^2+5)}{\[\displaystyle  {\it plot} \, \left( {x}^{2}+5 \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+Similarly, if there is no space or \texttt{*} between a variable name and the parentheses, the notation may be mistaken as function notation.
+
+\marginnote{Clearly, Maple should be able to expand this basic expression. However, it misinterprets the user's input as being function notation. Maple reads this expression as ``$x$ of $x^3-1$".}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{expand(2*x(x^3 - 1));}{\[{\it expand} \left( 2\,x\!\left( {x}^{3}-1 \right)  \right); \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{2*x(x^3-1)}{\[\displaystyle 2\,x \left( {x}^{3}-1 \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section*{Assigning Expressions to $x$ or Other Common Variable Names}
+
+It's never a good idea to assign an expression to $x$, $y$, $t$, or other common variable names. If you want to unassign everything at once, you can do this with the \texttt{restart} command on a separate line.
+
+\marginnote{In this example, the value $3$ is assigned to $x$, so the expression $x^2-4x-12$ is equal to the value $-15$. This is remedied after using the \texttt{restart} command.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{x := 3; factor(x^2 - 4x - 12);}{\[> x := 3; \, {\it factor}(x^2-4x-12); \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{x := 3}{\[\displaystyle x\, := \,3\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-15}{\[\displaystyle -15\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\marginnote[1cm]{You will need to load any required packages again after running the \texttt{restart} command.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{restart; factor(x^2 - 4x - 12);}{\[> restart; \, {\it factor}(x^2-4x-12); \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(x+2)*(x-6)}{\[\displaystyle  \left( x+2 \right)  \left( x-6 \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\clearpage
+\section*{Equals Signs versus Assignment Operator}
+
+The equals sign \texttt{=} must be used for an equation and the assignment operator \texttt{:=} is used to store a value or expression for later use.
+
+\marginnote{The equals sign is used for the \texttt{subs()} command, since we are not assigning the value for the remainder of the document.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{subs(x := 5, cos(x) - 1);}{\[>{\it subs}\!\left(x :=5,\cos \left(x \right)-1\right);\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Error, invalid assignment}{\texttt{Error, invalid assignment}}
+\end{maplelatex}
+\end{maplegroup}
+
+\section*{Changing the Order of the Parameters in a Command}
+
+Many commands have multiple parameters and often the order in which the parameters is listed is important. Typing the parameters in an incorrect order in certain commands may cause an error message to be displayed when the command is executed.
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{subs(4x-3, x=2);}{}
+\end{mapleinput}
+\vspace{.3cm}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{}{\texttt{Error, invalid input: subs received 4x-3,}}
+\mapleinline{inert}{2d}{}{\texttt{which is not valid for its 1st argument}}
+
+\end{maplelatex}
+\end{maplegroup}
+\marginnote[-1.5cm]{In this example, the two parameters in the \texttt{subs()} command need to be interchanged.}
+
+\section*{Assigning a Function and Not Using Function Notation}
+
+If you have assigned a function (such as $f(x)$) in Maple, make sure to use function notation in other commands, rather than using only the name of the function.
+
+\marginnote{In this example, the \texttt{factor()} command should be \texttt{factor(f(x))}.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{f(x) := x^2 - 4; factor(f);}{\[> f(x) := x^2-4; \, {\it factor}(f);\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{f := proc (x) options operator, arrow; x^2-4 end proc}{\[\displaystyle f\, := \,x\mapsto {x}^{2}-4\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{f}{\[\displaystyle f\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section*{Case-Sensitive Commands}
+
+Commands are case-sensitive. Make sure to use the correct capitalization.
+
+\marginnote{The correct command here is \texttt{solve()}, which needs a lowercase `s'.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Solve(3*x + 5 = 2);}{\[> {\it Solve}\!\left( 3\,x+5=2 \right); \]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Solve(3*x+5 = 2)}{\[\displaystyle {\it Solve} \left( 3\,x+5=2 \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+There are examples of commands where the capitalized version behaves differently from the non-capitalized version.
+
+\marginnote{In this example, the \texttt{Int()} command and \texttt{int()} command behave differently. Using \texttt{Int()} followed by \texttt{value(\%)} will display the integral and then evaluate it.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Int(2x, x=10..13);}{\[> {\it Int}(2x, x = 10 .. 13);\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Int(2*x, x = 10 .. 13)}{\[\displaystyle \int_{10}^{13}\!2\,x\,{\rm d}x\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{int(2x, x=10..13);}{\[> {\it int}(2x, x = 10 .. 13);\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{69}{\[\displaystyle 69\]}
+\end{maplelatex}
+\end{maplegroup}

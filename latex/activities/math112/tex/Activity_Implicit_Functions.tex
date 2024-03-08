@@ -1,0 +1,52 @@
+\section{Implicit Functions}
+\label{sec:implicit_functions}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:implicit_functions}, pg. \pageref{chp:implicit_functions}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+In this activity, we will learn how to plot implicit functions, as well as compute their derivatives.
+
+\marginnote[-5cm]{There are a few important things to remember about the \texttt{implicitplot()} command during this activity:
+	\begin{itemize}
+	\item The \texttt{plots} package needs to be loaded using the \texttt{with()} command. 
+	\item Some versions of Maple may not produce a smooth plot. In this case, include either \texttt{numpoints=30000} or \texttt{grid=[250,250]} as a parameter.
+	\item The optional \texttt{scaling=constrained} parameter can be included to enforce $1:1$ scaling. Alternatively, the optional scaling can be performed by clicking on the graph and then clicking on the $1:1$ button in the plot toolbar at the top of the page.
+	\item If you are plotting multiple graphs on the same set of axes, it is a good idea to specify plot colours.
+	\end{itemize}
+}
+
+\vspace{2cm}
+
+\subsection*{Exercises:}
+\begin{enumerate}
+    \marginnote{A similar example is described on page \pageref{subsec:implicittanline}.}
+    \item  Consider the circle centred at the origin with radius $5$. 
+    \marginnote[1cm]{The equation of a circle that is centred at the point $(a,b)$ and has radius $r$ is
+    \[(x-a)^2+(y-b)^2=r^2.\]}\label{Mathematical function!Circle}
+    \begin{enumerate}
+    	\item Define the equation for this circle and plot it. Ensure that the circle appears smooth.
+    	\item Find the $y$-coordinates of the points when $x=2$.
+    	\item Compute the derivative, $\frac{dy}{dx}$\index{derivative}, of the circle.
+    	\item Find the slopes of the lines tangent to the circle at $x=2$.
+    	\marginnote[.3cm]{Recall that the tangent line\index{lines!tangent line} equation to the curve at the point $(x_0,y_0)$ is \[y=m\cdot(x-x_0)+y_0,\] where $m=\frac{dy}{dx}\Bigr|_{(x_0,y_0)}$.}
+    	\item Define the equations of the tangent lines to the curve at both points when $x=2$. Be sure to assign different names for each tangent line and include $y=$ in the equations of the lines so that the \texttt{implicitplot()}\index{implicit functions!implicitplot} command can plot them. Expand each of these tangent line equations so that they are written in the form $y=mx+b$.
+    	\item Plot the circle and the two tangent lines.
+    \end{enumerate}
+    
+    \marginnote[.3cm]{Do not forget to include multiplication between variables.}
+    \item Consider the Folium of Descartes: $x^3 + y^3 = 6xy.$
+
+    \begin{enumerate}
+    	\item Define this curve and plot it. Ensure the curve appears smooth.
+    	\item Compute the derivative, $\frac{dy}{dx}$.
+    	\marginnote{In exercise (c), try using the \texttt{solve()} command first, then change it to \texttt{fsolve()} if necessary.}
+    	\item Find the equations of each of the tangent lines at the points where $x=1$. Plot the Folium of Descartes and the tangent lines on the same graph.
+    	\marginnote{To solve part (d), you need to remember that the slope is zero when the tangent line is horizontal.\index{lines!horizontal tangent line} The equation $\frac{dy}{dx} = 0$ and the equation of the curve itself form a system of equations that can be solved by Maple to give the $x$ and $y$ value of each point. An example of solving a system of equations can be found on page \pageref{sec:solvingsystemeqs}.}
+    	\item Find any points on the Folium of Descartes where the tangent lines are horizontal.
+    \end{enumerate}
+\end{enumerate}

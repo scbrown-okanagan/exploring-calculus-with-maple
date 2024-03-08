@@ -1,0 +1,252 @@
+\chapter{Sequences and Series}
+\label{chp:sequence_and_sseries}			
+
+Suppose we want to generate a list of integers that are $2$ more than a multiple of $3$. For example, $32$ is one of these numbers because $32 = 3(10)+2$. In other words, we want to create a list of numbers of the form $3k+2$. \\
+
+\index{sequences and series}
+
+Or perhaps we want a nice way to express and generate all the odd numbers $1,3,5,7,9,\ldots$ (numbers of the form $2k+1$).\\
+
+These lists are called \textit{sequences}. In both of these examples, $k$ is known as an \textit{index}.
+
+\section{Sequences using \$ Notation}
+
+\index{sequences and series!\$ notation}
+
+The shortest way to list the terms in a sequence is using the \$ symbol. 
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{3*k\symbol{94}2+2 \$ k=0..3;
+}{}
+\end{mapleinput}
+\marginnote{The notation for these sequences is \[\displaystyle\left(3k^2+2\right)_{k=0}^3\] and \[\displaystyle\left(2k^2-k\right)_{k=1}^5.\]}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{2, 5, 14, 29}{\[\displaystyle 2,\,5,\,14,\,29\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\noindent Now let's generate five integers of the form $2k^2-k$:
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{2*k\symbol{94}2-k \$ k=1..5;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1, 6, 15, 28, 45}{\[\displaystyle 1,\,6,\,15,\,28,\,45\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{Sequences using the \texttt{seq()} Command}
+
+We can also list the terms in a sequence by using the \texttt{seq()} command. This command essentially performs the same operation as the \$ symbol from the previous section.
+
+\index{sequences and series!seq}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{seq(2*k\symbol{94}2-k, k=1..5);
+}{}
+\end{mapleinput}
+\marginnote{The sequence $\displaystyle\left(2k^2-k\right)_{k=1}^5$.}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1, 6, 15, 28, 45}{\[\displaystyle 1,\,6,\,15,\,28,\,45\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{Defining and Evaluating Series}
+
+We use the capitalized \texttt{Sum()} command to display the summation notation for a series symbolically. This also makes it possible to assign a name to the sum and use it in other commands later.
+
+Much like with sequences, we need a generating function involving an index, such as $k$. We then specify the range of indices for the terms in that sequence that are to be summed.
+
+\marginnote[0.5cm]{This is a called a \textit{finite} sum, since only finitely many terms are summed.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{s1 := Sum(2*k\symbol{94}2-k, k=1..5);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{s1 := Sum(2*k^2-k, k = 1 .. 5)}{\[\displaystyle {\it s1}\, := \,\sum _{k=1}^{5}2\,{k}^{2}-k\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{sequences and series!Sum}
+
+We use the lowercase \texttt{sum()} command to calculate the value of the sum. We may also use the \texttt{value()} command on the result of a capitalized \texttt{Sum()} command.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{value(s1);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{95}{\[\displaystyle 95\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{sum(2*k\symbol{94}2-k, k=1..5);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{95}{\[\displaystyle 95\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{value}
+\index{sequences and series!sum}
+
+To determine the value of the sum of infinitely many terms, we can use \texttt{infinity} as the a bound on the index. The value of an infinite sum may be a value (in the case of a convergent sum) or $\pm\infty$ (in the case of a divergent sum).
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{s2 := Sum((2/3)\symbol{94}k, k=0..infinity);
+}{}
+\end{mapleinput}
+\marginnote[0.5cm]{The infinite sum $\displaystyle\sum_{k=0}^{\infty} \left(\dfrac{2}{3}\right)^k$ is said to be convergent.}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{s2 := Sum((2/3)^k, k = 0 .. infinity)}{\[\displaystyle {\it s2}\, := \,\sum _{k=0}^{\infty } \left( 2/3 \right) ^{k}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{value(s2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{3}{\[\displaystyle 3\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{s3 := Sum(sin(k)+1, k=1..infinity);
+}{}
+\end{mapleinput}
+\marginnote[0.5cm]{The infinite sum $\,\,\,\,\displaystyle\sum_{k=1}^{\infty} (\sin(k)+1)$ is said to be divergent.}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{s3 := Sum(sin(k)+1, k = 1 .. infinity)}{\[\displaystyle {\it s3}\, := \,\sum _{k=1}^{\infty }\sin \left( k \right) +1\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\index{mathematical functions!sine}
+\index{sequences and series!infinite series}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{value(s3);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{infinity}{\[\displaystyle \infty \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\section{Taylor and Maclaurin Series}
+\label{sec:taylor_and_maclaurin_series}
+
+\index{sequences and series!Taylor and Maclaurin series}
+
+One use of series is to find the Taylor series expansion of a function. Recall that the Taylor series of a function $f(x)$, centred at $x=a$, is the sum 
+\begin{equation*}
+\sum_{k=0}^{\infty} \dfrac{f^{(k)}(a)}{n!}(x-a)^k.
+\end{equation*}
+A Taylor series that is centred at $x=0$ is known as a Maclaurin series.
+
+\subsection{Maclaurin Series Expansion of ${\rm e}^x$}
+
+\index{mathematical functions!exponential}
+\index{sequences and series!Taylor and Maclaurin series!taylor}
+
+\marginnote[0.5cm]{Maple has given $7$ terms as an output. The $O(x^6)$ term in this expression means "plus a bunch more terms with power $6$ and higher".}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{taylor(exp(x), x = 0);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1+x+(1/2)*x^2+(1/6)*x^3+(1/24)*x^4+(1/120)*x^5+O(x^6)}{\[\displaystyle 1+x+\frac{1}{2}\,{x}^{2}+\frac{1}{6}\,{x}^{3}+\frac{1}{24}\,{x}^{4}+\frac{1}{120}\,{x}^{5}+O \left( {x}^{6} \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+
+We can specify the order (related to number of terms) of the Taylor series by adding a number as the final argument to the command.
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{taylor(exp(x), x = 0, 10);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{1+x+(1/2)*x^2+(1/6)*x^3+(1/24)*x^4+(1/120)*x^5+(1/720)*x^6+(1/5040)*x^7+(1/40320)*x^8+(1/362880)*x^9+O(x^10)}
+{\[\begin{array}{l}\displaystyle 1+x+\frac{1}{2}\,{x}^{2}+\frac{1}{6}\,{x}^{3}+\frac{1}{24}\,{x}^{4}+\frac{1}{120}\,{x}^{5}\\
+\displaystyle +{\frac {1}{720}}\,{x}^{6}+{\frac {1}{5040}}\,{x}^{7}+{\frac {1}{40320}}\,{x}^{8}+{\frac {1}{362880}}\,{x}^{9}+O \left( {x}^{10} \right) \end{array}\]}
+\end{maplelatex}
+\end{maplegroup}
+\marginnote[-1cm]{In this example, Maple has displayed all the terms with powers less than $10$.}
+
+\subsection{Taylor Series Expansion of $\sin(x)$, Centred at $x=5$}
+
+\index{sequences and series!Taylor and Maclaurin series!taylor}
+\index{mathematical functions!sine}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{taylor(sin(x), x = 5, 4);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{sin(5)+cos(5)*(x-5)-(1/2)*sin(5)*(x-5)^2-(1/6)*cos(5)*(x-5)^3+O((x-5)^4)}
+{\[\begin{array}{l}\displaystyle \sin \left( 5 \right) +\cos \left( 5 \right)  \left( x-5 \right) -\frac{1}{2}\,\sin \left( 5 \right)  \left( x-5 \right) ^{2}\\
+\displaystyle -\frac{1}{6}\,\cos \left( 5 \right)  \left( x-5 \right) ^{3}+O \left(  \left( x-5 \right) ^{4} \right) \end{array} \]}
+\end{maplelatex}
+\end{maplegroup}
+
+\subsection{Comparing the Graphs of $\sin(x)$ and its Maclaurin Series}
+
+We can see how closely the Maclaurin (or Taylor) series expansion resembles the original function by plotting them on the same axes. To plot the Taylor series we need to get rid of the final term $O(\ldots)$. We use the \texttt{convert()} command to do this.
+
+\index{sequences and series!Taylor and Maclaurin series!convert to polynomial}
+\index{ditto operator}
+\index{plot!axes intervals}
+\index{plot!multiple functions}
+
+\marginnote[0.5cm]{This \texttt{convert()} command lets Maple know that we wish for the result to be a truncated polynomial.}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{taylor(sin(x), x = 0, 10); poly := convert(%, polynom);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{x-(1/6)*x^3+(1/120)*x^5-(1/5040)*x^7+(1/362880)*x^9+O(x^11)}{\[\displaystyle x-\frac{1}{6}\,{x}^{3}+{\frac {1}{120}}\,{x}^{5}-{\frac {1}{5040}}\,{x}^{7}+{\frac {1}{362880}}\,{x}^{9}+O \left( {x}^{11} \right) \]}
+\end{maplelatex}
+\begin{maplelatex}
+\mapleinline{inert}{2d}{poly := x-(1/6)*x^3+(1/120)*x^5-(1/5040)*x^7+(1/362880)*x^9}{\[\displaystyle {\it poly}\, := \,x-\frac{1}{6}\,{x}^{3}+{\frac {1}{120}}\,{x}^{5}-{\frac {1}{5040}}\,{x}^{7}+{\frac {1}{362880}}\,{x}^{9}\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot([sin(x), poly], x = -4*Pi..4*Pi, y = -10..10);
+}{}
+\end{mapleinput}
+\mapleresult
+\mapleplot{tutorials/figures/Taylor_and_Maclaurin_Seriesplot2d1-eps-converted-to.pdf}
+\end{maplegroup}

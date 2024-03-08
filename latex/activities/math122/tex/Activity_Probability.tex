@@ -1,0 +1,117 @@
+\section{Probability}\index{probability!}
+\label{sec:probability}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+    \item \nameref{chp:assignment_operator}, pg. \pageref{chp:assignment_operator}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+In this activity, we define probability density functions (pdf) for some continuous probability distributions. Let’s define our probability function as $f(x)$. If $f(x)$ is a valid probability function, then
+\[ \int_{-\infty}^{\infty} f(x)dx=1, \]
+and $ 0  \leq f(x) \leq 1$. 
+ \index{integral!improper}
+ 
+If we want to compute the probability that a given observation is less than $a$, then we calculate
+\[ P(x<a)=\int_{-\infty}^{a} f(x)dx. \]
+If we want to compute the probability that the given observation is more than $a$, then we calculate
+\[ P(x>a)=\int_{a}^{\infty} f(x)dx. \]
+If we want to compute the probability that the given observation is between two values $a$ and $b$, then we calculate 
+\[ P(a<x<b)=\int_{a}^{b} f(x)dx. \]
+
+\begin{marginfigure}[-0.5cm]
+    \hspace{-4cm}
+    \centering
+    \begin{tikzpicture}
+    \footnotesize
+    \begin{axis}[
+    width=6cm,
+    height=5cm,
+    axis lines=middle,
+    xlabel={$x$},
+    ylabel={$f(x)$},
+    xlabel style={below right},
+    ylabel style={above left},
+    xmin=0, xmax=12, xtick={0,5}, xticklabels={,$\lambda$},
+    ymin=0, ymax=0.22, ytick={0,0.2}, yticklabels={,$\frac{1}{\lambda}$}
+    ]
+        \addplot [domain=0:12, samples=100] {1/5*exp(-1/5*x)};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{The exponential probability density function.}
+    \label{fig:exponential_dist}
+\end{marginfigure}
+    
+The exponential distribution is defined as 
+\begin{equation}
+    \label{eq:exponential_dist}
+    f(x) = 
+    \begin{cases}
+        \lambda{\rm e}^{-\lambda x} & \text{if } x \geq 0 \\
+        0 & \text{if } x<0,
+    \end{cases}
+\end{equation}
+    \index{probability!exponential density function}
+where $\frac{1}{\lambda}$ is the mean and standard deviation of the probability distribution.
+
+\begin{marginfigure}
+    \hspace{-4cm}
+    \centering
+    \begin{tikzpicture}
+    \footnotesize
+    \begin{axis}[
+    width=6cm,
+    height=5cm,
+    axis lines=middle,
+    xlabel={$x$},
+    ylabel={$f(x)$},
+    xlabel style={below right},
+    ylabel style={above left},
+    xmin=0, xmax=12, xtick={0,2,4,6,8,10}, xticklabels={,,,$\mu$,,},
+    ymin=0, ymax=0.3, ytick={0,5}, yticklabels={,$\lambda$}
+    ]
+        \addplot [domain=0:12, samples=100] {1/(2*sqrt(2*pi))*exp(-(x-6)^2/(2*2^2))};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{The normal probability density function.}
+    \label{fig:normal_dist}
+\end{marginfigure}
+    \index{probability!normal probability density function}
+
+Define the normal distribution as 
+\begin{equation}
+    \label{eq:normal_dist}
+    f(x) = \frac{1}{\sigma \sqrt{2\pi}}{\rm e}^{-\frac{(x-\mu)^2}{2\sigma^2}},
+\end{equation} 
+where $\sigma$ is the standard deviation and $\mu$ is the mean.
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+\item Suppose that the lifetime of a certain tire is exponentially distributed with mean $\frac{1}{\lambda}=45,000$ miles.
+\begin{enumerate}
+    \marginnote{Examples of the \texttt{piecewise()} command can be found on page \pageref{sec:piecewise}.}
+        \index{mathematical functions!piecewise}
+	\item Use the \texttt{piecewise()} command to assign the function from equation \eqref{eq:exponential_dist} using $\lambda = \frac{1}{45000}$.
+	\item Verify that this function is a valid pdf.
+	\marginnote{Hint: take the integral and plot the function to verify this.}
+	\item Find the probability that a given tire will last more than $40{,}000$ miles.
+	\item Find the probability that a given tire will last less than $50{,}000$ miles.
+	\item Find the probability that a given tire will last between $40{,}000$ and $50{,}000$ miles.
+	\item Find the probability that a given tire will last exactly $40{,}000$ miles.
+\end{enumerate}
+\item Suppose that the height of a male is normally distributed with mean $\mu= 178$ cm and standard deviation  $\sigma= 10$ cm.
+\begin{enumerate}
+    \item Assign the function from equation \eqref{eq:normal_dist} using these values of $\mu$ and $\sigma$.
+    \marginnote{The commands \texttt{exp()}, \texttt{sqrt()}, and \texttt{Pi} will all have to be used for this function in Maple.}
+    \item Verify that this function is a valid pdf.
+        \index{mathematical functions!exponential}
+        \index{mathematical functions!square root}
+        \index{Pi}
+    \item You have a friend who is $7$ ft tall ($213$ cm). Find the probability that a given individual is that height or taller.
+    \item Find the probability that a given individual is $213$ cm or smaller.
+    \item What is the probability of selecting an individual with a height of exactly $213$ cm?
+\end{enumerate}
+
+\end{enumerate}

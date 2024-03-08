@@ -1,0 +1,57 @@
+\section{Describing the Shapes of Integral Functions}
+\label{sec:max_and_min_problems_for_integrals}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:assignment_operator}, pg. \pageref{chp:assignment_operator}
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:limits}, pg. \pageref{chp:limits}
+	\item \nameref{chp:derivative}, pg. \pageref{chp:derivative}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+\marginnote[1cm]{Recall that a critical point of a function $f(x)$ occurs when $f'(x) = 0$ or when $f'(x)$ does not exist.} 
+    \index{shapes of curves!critical number}
+\marginnote[1cm]{An inflection point of $f(x)$ is a point at which the concavity of $f(x)$ changes.}
+    \index{shapes of curves!inflection point}
+In this activity, we will examine two functions that are defined by integrals, in the form
+\[ f(x) = \int_0^x g(t) \, dt.\] 
+    \index{integral!}
+We may view these integral functions as the accumulated area under the function $g(t)$ over an interval from $0$ to $x$. Integral functions frequently appear in analysis and in differential equations.  Determining critical points and inflection points is incredibly important in the analysis of these types of problems.
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \item The sine integral function
+    \[Si(x) = \begin{cases} \displaystyle\int_{0}^x \dfrac{\sin(t)}{t}\, dt & x \neq 0 \\ 1 & x = 0 \end{cases}\]
+        \index{mathematical functions!piecewise}
+    is important in electrical engineering. By defining $Si(0)=1$ in the piecewise definition above, $Si(x)$ is a continuous function.
+    \begin{enumerate}
+        \item The sine integral function is already defined in Maple by typing \texttt{Si(x)}. Plot\index{plot} the graph of $Si(x)$ over the interval $[-15,15]$.
+        \marginnote[.2cm]{When you use the \texttt{fsolve()}\index{solving equations!fsolve} command, you can specify an interval in which you wish to search for solutions. An example of this can be found on page \pageref{eg:fsolve_interval}.}
+        \item On the graph of $Si(x)$, you will notice that there are many local minimum and maximum values. Use the \texttt{fsolve()} command to find the critical numbers\index{shapes of curves!critical number} of $Si(x)$ corresponding to the location of the absolute minimum and maximum values.
+        \index{shapes of curves!minimum}
+        \index{shapes of curves!maximum}
+        \item What are the absolute minimum and maximum values of $Si(x)$?
+        \marginnote[-1.cm]{By the Fundamental Theorem of Calculus, \[\dfrac{d}{dx} Si(x) = \dfrac{\sin(x)}{x} = \text{sinc}(x)\] ($x \not = 0$).  This function is used in signal processing and the theory of Fourier transforms.}
+        \vspace{-.5cm}
+        \item There is an inflection point just to the right of the absolute maximum value. Use the second derivative $Si''(x)$ and the \texttt{fsolve()} command to find its location.
+        \index{shapes of curves!inflection point}
+        \index{solving equations!fsolve}
+        \marginnote[.4cm]{Recall that if \[\lim_{x\rightarrow\infty} f(x) = L ~\text{or}~ \lim_{x\rightarrow-\infty} f(x) = L\] and $L$ is finite, then $y=L$ is a horizontal asymptote of $f(x)$.}
+        \item Use the \texttt{limit()} command to find the horizontal asymptote(s) of $Si(x)$.
+            \index{limit}
+            \index{asymptote!horizontal}
+    \end{enumerate}
+    \item   Consider the integral function: \[f(x) = \displaystyle\int_{0}^x \dfrac{1}{1 + t + t^2} \, dt.\]
+        \index{integral!}
+    \begin{enumerate}
+        \item Define $f(x)$ in Maple.
+        \item Plot\index{plot} the integral function, $f(x)$. Try to specify a plot interval that gives you a good idea of the shape of $f(x)$.
+        \item Use the second derivative\index{derivative}, $f''(x)$, to determine where $f(x)$ is concave up and where $f(x)$ is concave down.
+        \item Determine the inflection points of $f(x)$.
+            \index{shapes of curves!inflection point}
+    \end{enumerate}
+\end{enumerate}

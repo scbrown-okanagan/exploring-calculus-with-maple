@@ -1,0 +1,59 @@
+\section{Areas Between Curves}
+\label{sec:area_problem}
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+Consider two functions, $f(x)$ and $g(x)$. We can find the \textit{total} area between these two curves, over an interval $a \le x \le b$, by integrating the absolute value of the difference between these two functions. In other words, 
+\[ \text{Total Area} = \displaystyle\int_a^b \abs{f(x)-g(x)}\,dx. \]
+\index{integral!total area}
+If $f(x) \ge g(x)$ over that interval, then the absolute value can be dropped. If $g(x) \ge f(x)$ over that interval, then the absolute value can be dropped and the order of subtraction reversed.
+
+\marginnote[-1cm]{If $f(x)\ge g(x)$ for some subintervals of $a \le x \le b$ and $g(x) \ge f(x)$ for other subintervals of $a \le x \le b$, then the intersection points of the two functions must be found and the integral must be split into multiple parts for each subinterval. Maple handles this process automatically.}
+
+In other circumstances, we may be interested in the \textit{net} area between $f(x)$ and $g(x)$. For example, if $f(x)$ and $g(x)$ both represent rates of change of some quantity, then the net area 
+\[ \text{Net Area} = \displaystyle\int_a^b \left(f(x)-g(x)\right)\,dx \]
+will give us the net difference between the two quantities over an interval.
+\index{integral!net area}
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \item In this exercise, we will find the area of the region bounded by the curves 
+    \[ y = x^2 - c^2 \;\; \text{and} \;\; y = c^2 - x^2 \] 
+    and ultimately, determine the value of $c$ that gives an exact area of 576.
+    \begin{enumerate}
+    \marginnote[-0.5cm]{Maple will not be able to plot these two curves on the $xy$-plane, since there is an unexpected third variable, $c$. You will need to choose a value of $c$ to see an example.}
+        \item To begin, we should view the region between the two curves. Repeat the following steps for at least two different choices of $c$.
+        \begin{enumerate}
+            \item Plot $y = x^2 - c^2$ and $y=c^2 - x^2$ on the same axes using your choice of $c$.
+            \item Adjust the axes so that you can view the entire region.
+            \item Once the entire region is shown on your plot, estimate the $x$-coordinates of the two points of intersection.
+        \end{enumerate}
+        \marginnote[0.5cm]{An example of finding intersection points is provided on page \pageref{subsec:functionintersection}.}
+        \item Now, using the \texttt{solve()} (or \texttt{fsolve()}) command, find the $x$-coordinates of the two intersection points of $y = x^2 - c^2$ and $y = c^2 - x^2$. These $x$-coordinates should be dependant on $c$.
+            \index{solving equations!solve}
+        \item Set up an integral using the \texttt{int()} command to find the area between $y = x^2 - c^2$ and $y = c^2 - x^2$.
+        \item Set this area equal to $576$ and solve for $c$.
+    \end{enumerate}
+    \marginnote[1cm]{Since velocity is a rate of change of position, integrating velocity over an interval of time gives the net change in position, called displacement. Integrating the difference of two velocity functions gives the net difference between the two displacements.}
+    \item Suppose that two runners are competing in a $2$-minute sprint. After $t$ seconds, the velocity of runner A is given by 
+    \[ v_A(t) = \frac{64.8 {\rm e}^{-0.018t}}{(1 + 3{\rm e}^{-0.018t})^2}\]
+    and the velocity of runner B is given by
+    \[ v_B(t) = \frac{90.0 {\rm e}^{-0.015t}}{(1 + 4{\rm e}^{-0.015t})^2}.\]
+    Both velocities are in m/s.
+    \marginnote[-0.5cm]{Don’t forget that the \texttt{exp()} function is used for ${\rm e}^x$. You cannot use the letter `e’ on the keyboard for the exponential function.}
+        \index{mathematical functions!exponential}
+    \begin{enumerate}
+        \marginnote[1cm]{It is a good idea to choose colours for each function so that you can tell them apart on your plot.}
+        \item Plot both velocity functions on the same axes for duration of $2$ minutes (use $0 \leq t \leq 120$, since $t$ is in seconds).
+        \item Using your graph, try to guess which runner makes it the farthest distance in $2$ minutes.
+        \item Find the net area between $v_A(t)$ and $v_B(t)$ on the interval $[0,120]$. This corresponds to the net difference in displacement during the race.
+        \item Which runner made it the farthest distance in $2$ minutes? By how many metres?
+    \end{enumerate}
+\end{enumerate}

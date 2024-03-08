@@ -1,0 +1,374 @@
+\documentclass{tufte-book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Use this command to only compile the book with limited sections.
+% Comment out sections that you wish to omit.
+% This can help reduce the time for PDF to compile.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includeonly{
+%INTRODUCTION
+	introduction/tex/introduction,
+%MATH 112 ACTIVITIES
+	activities/math112/tex/Activity_Creating_a_Maple_Worksheet,
+	activities/math112/tex/Activity_The_Basics,
+	activities/math112/tex/Activity_The_Assignment_Operator_and_Creating_Functions,
+	activities/math112/tex/Activity_Transformations_of_Graphs,
+	activities/math112/tex/Activity_Solving_Equations_in_Maple,
+	activities/math112/tex/Activity_Limits,
+	activities/math112/tex/Activity_LimitsAsymp,
+	activities/math112/tex/Activity_AppliedLimit,
+	activities/math112/tex/Activity_Derivatives,
+	activities/math112/tex/Activity_TangentLines,
+	activities/math112/tex/Activity_Building_a_Roller_Coaster,
+	activities/math112/tex/Activity_Implicit_Functions,
+	activities/math112/tex/Activity_Orthogonal_Curves,
+	activities/math112/tex/Activity_NewtonMethod,
+	activities/math112/tex/Activity_The_Shape_of_a_Can,
+% 	activities/math112/tex/Activity_Rainbows,
+	activities/math112/tex/Activity_Sweet_16,
+%MATH 112 PRACTICE EXERCISES
+	practice/tex/math112practice,
+%MATH 122 ACTIVITIES
+	activities/math122/tex/Activity_Visualizing_Riemann_Sums,
+	activities/math122/tex/Activity_Sine_Integral_Function,
+	activities/math122/tex/Activity_FTC,
+	activities/math122/tex/Activity_Average_Value_on_Shrinking_Interval,
+	activities/math122/tex/Activity_Integral_Functions,
+	activities/math122/tex/Activity_Applications_of_the_FTC,
+	activities/math122/tex/Activity_FTC_By_Hand,
+	activities/math122/tex/Activity_Riemann_Sums_and_Net_Change,
+	activities/math122/tex/Activity_Shark_Attack,
+	activities/math122/tex/Activity_Area_Problem,
+	activities/math122/tex/Activity_Arc_Length,
+	activities/math122/tex/Activity_Volumes,
+	activities/math122/tex/Activity_Approximate_Integration,
+	activities/math122/tex/Activity_Infinite_Integrals,
+	activities/math122/tex/Activity_Probability,
+	activities/math122/tex/Activity_Spring,
+	activities/math122/tex/Activity_Tank,	
+	activities/math122/tex/Activity_Direction_Fields,
+	activities/math122/tex/Activity_Series,
+	activities/math122/tex/Activity_Taylor_Series,
+%	activities/math122/tex/Activity_Approximations_of_Pi, % Removed in second edition
+%MATH 122 PRACTICE EXERCISES
+	practice/tex/math122practice,
+%TUTORIALS
+	tutorials/tex/Maple_Environment,
+	tutorials/tex/Maple_Syntax,		
+	tutorials/tex/Basic_Operations,
+	tutorials/tex/Plotting_Functions,
+	tutorials/tex/Assignment_Operator,
+	tutorials/tex/Solving_Equations,
+	tutorials/tex/Limits,
+	tutorials/tex/The_Derivative,
+	tutorials/tex/Implicit_Functions,
+	tutorials/tex/Riemann_Sums_and_Area_Approximation,
+	tutorials/tex/Definite_and_Indefinite_Integrals,
+	tutorials/tex/Differential_Equations,
+	tutorials/tex/Sequences_and_Series,
+	tutorials/tex/Conditional_Statements_and_Loops,
+%APPENDICES
+	appendices/tex/common_commands,
+	appendices/tex/common_errors
+}
+
+% Common Packages
+\usepackage{import}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{pgfplots}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing,positioning}
+\usepackage[detect-all]{siunitx}
+\usepackage{multicol}
+\usepackage{xfrac}
+\usepackage{longtable}
+\usepackage{pdflscape}
+%\usepackage{tcolorbox}
+\usepackage{enumitem}
+
+% Automatically look for figures in several subdirectories
+\graphicspath{{./math112/figures/}{./math122/figures/}{./tutorials/figures/}}
+
+% Used to crop in adjimportgraphics command
+\usepackage[export]{adjustbox}
+
+\hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
+
+%No hyphenation
+\usepackage[none]{hyphenat}
+
+%%
+% Book metadata
+\title{Exploring Calculus with Maple \\ \noindent{\Huge Third Edition}}
+\author[Math Stats]{Mathematics and Statistics Department}
+\publisher{Okanagan College}
+
+% Generates the index
+\usepackage{makeidx}
+\makeindex
+
+%Used for maple input/output/plots
+\usepackage{maplestd2e}
+%Maple Commands
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Normal}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Error}
+\DefineCharStyle{Maple Hyperlink}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+
+\input{commondef}
+
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+
+% Include page numbers on all pages, including start of chapters
+\fancypagestyle{plain}{}
+
+% chapter format
+\titleformat{\chapter}%
+  {\huge\rmfamily\itshape\color{red}}% format applied to label+text
+  {\llap{\colorbox{red}{\parbox{1.5cm}{\hfill\itshape\huge\color{white}\thechapter}}}}% label
+  {2pt}% horizontal separation between label and title body
+  {}% before the title body
+  []% after the title body
+
+% section format
+\titleformat{\section}%
+  {\normalfont\Large\itshape\color{orange}}% format applied to label+text
+  {\llap{\colorbox{orange}{\parbox{1.5cm}{\hfill\color{white}\thesection}}}}% label
+  {1em}% horizontal separation between label and title body
+  {}% before the title body
+  []% after the title body
+
+% subsection format
+\titleformat{\subsection}%
+  {\normalfont\large\itshape\color{blue}}% format applied to label+text
+  {\llap{\colorbox{blue}{\parbox{1.5cm}{\hfill\color{white}\thesubsection}}}}% label
+  {1em}% horizontal separation between label and title body
+  {}% before the title body
+  []% after the title body
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------
+\frontmatter
+
+% title page
+\maketitle
+\title{Exploring Calculus with Maple}
+
+% copyright page
+\newpage
+\begin{fullwidth}
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+Copyright \copyright\ \the\year\ \thanklessauthor
+\par\smallcaps{Published by \thanklesspublisher}
+%\par Licensed under...
+\end{fullwidth}
+
+% contents
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+% introduction
+\cleardoublepage
+\include{introduction/tex/introduction}
+
+%----------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------
+\mainmatter
+
+\part{Activities}
+\label{pt:Activities}
+
+\chapter{Activities for Math 112}
+\label{Calc1Activities}
+
+The following list serves as a suggestion for which activities are considered core versus optional:
+\begin{table}[h]
+\begin{tabular}{lll}
+\ref{sec:creating_a_maple_worksheet}
+\nameref{sec:creating_a_maple_worksheet}					& pg. \pageref{sec:creating_a_maple_worksheet}					& Core\\
+\ref{sec:basics}
+\nameref{sec:basics}										& pg. \pageref{sec:basics}										& Core\\
+\ref{sec:assignment_operator_and_creating_functions}
+\nameref{sec:assignment_operator_and_creating_functions}	& pg. \pageref{sec:assignment_operator_and_creating_functions}	& Core\\
+\ref{sec:transformations_of_graphs}
+\nameref{sec:transformations_of_graphs}						& pg. \pageref{sec:transformations_of_graphs}					& Optional\\
+\ref{sec:solving_equations_in_maple}
+\nameref{sec:solving_equations_in_maple}					& pg. \pageref{sec:solving_equations_in_maple}					& Core\\
+\ref{sec:limits}
+\nameref{sec:limits}										& pg. \pageref{sec:limits}										& Core\\
+\ref{sec:limits_and_asymptotes}
+\nameref{sec:limits_and_asymptotes}							& pg. \pageref{sec:limits_and_asymptotes}						& Optional\\
+\ref{sec:applied_limit_problem}
+\nameref{sec:applied_limit_problem}							& pg. \pageref{sec:applied_limit_problem}						& Optional\\
+\ref{sec:derivative_of_a_function}
+\nameref{sec:derivative_of_a_function}						& pg. \pageref{sec:derivative_of_a_function}					& Core\\
+\ref{sec:tangent_lines}
+\nameref{sec:tangent_lines}									& pg. \pageref{sec:tangent_lines}								& Optional\\
+\ref{sec:building_a_roller_coaster}
+\nameref{sec:building_a_roller_coaster}						& pg. \pageref{sec:building_a_roller_coaster}					& Optional\\
+\ref{sec:implicit_functions}
+\nameref{sec:implicit_functions}							& pg. \pageref{sec:implicit_functions}							& Core\\
+\ref{sec:orthogonal_curves}
+\nameref{sec:orthogonal_curves}								& pg. \pageref{sec:orthogonal_curves}							& Optional\\
+\ref{sec:newtons_method}
+\nameref{sec:newtons_method}								& pg. \pageref{sec:newtons_method}								& Core\\
+\ref{sec:shape_of_a_can}
+\nameref{sec:shape_of_a_can}								& pg. \pageref{sec:shape_of_a_can}								& Optional\\
+% \ref{sec:rainbows}
+% \nameref{sec:rainbows}										& pg. \pageref{sec:rainbows}									& Optional\\
+\ref{sec:sweet_16}
+\nameref{sec:sweet_16}										& pg. \pageref{sec:sweet_16}									& Optional
+\end{tabular}
+\end{table}
+		
+\include{activities/math112/tex/Activity_Creating_a_Maple_Worksheet}
+\include{activities/math112/tex/Activity_The_Basics}
+\include{activities/math112/tex/Activity_The_Assignment_Operator_and_Creating_Functions}
+\include{activities/math112/tex/Activity_Transformations_of_Graphs}
+\include{activities/math112/tex/Activity_Solving_Equations_in_Maple}
+\include{activities/math112/tex/Activity_Limits}
+\include{activities/math112/tex/Activity_LimitsAsymp}
+\include{activities/math112/tex/Activity_AppliedLimit}
+\include{activities/math112/tex/Activity_Derivatives}
+\include{activities/math112/tex/Activity_TangentLines}
+\include{activities/math112/tex/Activity_Building_a_Roller_Coaster}
+\include{activities/math112/tex/Activity_Implicit_Functions}
+\include{activities/math112/tex/Activity_Orthogonal_Curves}
+\include{activities/math112/tex/Activity_NewtonMethod}
+\include{activities/math112/tex/Activity_The_Shape_of_a_Can}
+% \include{activities/math112/tex/Activity_Rainbows}
+\include{activities/math112/tex/Activity_Sweet_16}
+
+\include{practice/tex/math112practice}
+
+\chapter{Activities for Math 122}
+\label{Calc2Activities}
+
+The following list serves as a suggestion for which activities are considered core versus optional:
+\begin{table}[h]
+\begin{tabular}{lll}
+\ref{sec:riemann_sums_for_monotonic_functions}
+\nameref{sec:riemann_sums_for_monotonic_functions}			& pg. \pageref{sec:riemann_sums_for_monotonic_functions}		& Core\\
+\ref{sec:visualizing_the_net_change_theorem}
+\nameref{sec:visualizing_the_net_change_theorem}			& pg. \pageref{sec:visualizing_the_net_change_theorem}			& Core\\
+\ref{sec:approximate_integration}
+\nameref{sec:approximate_integration}						& pg. \pageref{sec:approximate_integration}						& Optional\\
+\ref{sec:max_and_min_problems_for_integrals}
+\nameref{sec:max_and_min_problems_for_integrals}			& pg. \pageref{sec:max_and_min_problems_for_integrals}			& Optional\\
+\ref{sec:applications_of_ftc}
+\nameref{sec:applications_of_ftc}							& pg. \pageref{sec:applications_of_ftc}							& Optional\\
+\ref{sec:average_value_of_function}
+\nameref{sec:average_value_of_function}						& pg. \pageref{sec:average_value_of_function}					& Optional\\
+\ref{sec:shark_attack}
+\nameref{sec:shark_attack}									& pg. \pageref{sec:shark_attack}								& Optional\\
+\ref{sec:area_problem}
+\nameref{sec:area_problem}									& pg. \pageref{sec:area_problem}								& Core\\
+\ref{sec:volumes_of_revolution}
+\nameref{sec:volumes_of_revolution}							& pg. \pageref{sec:volumes_of_revolution}						& Optional\\
+\ref{sec:golden_gate_bridge_problem}
+\nameref{sec:golden_gate_bridge_problem}					& pg. \pageref{sec:golden_gate_bridge_problem}					& Optional\\
+\ref{sec:infinite_integrals}
+\nameref{sec:infinite_integrals}							& pg. \pageref{sec:infinite_integrals}							& Core\\
+\ref{sec:probability}
+\nameref{sec:probability}									& pg. \pageref{sec:probability}									& Optional\\
+\ref{sec:motion_of_a_mass_connected_to_a_spring}
+\nameref{sec:motion_of_a_mass_connected_to_a_spring}		& pg. \pageref{sec:motion_of_a_mass_connected_to_a_spring}		& Optional$^1$\\
+\ref{sec:tank_mixing_problem}
+\nameref{sec:tank_mixing_problem}							& pg. \pageref{sec:tank_mixing_problem}							& Optional$^1$\\
+\ref{sec:direction_fields}
+\nameref{sec:direction_fields}								& pg. \pageref{sec:direction_fields}							& Optional$^1$\\
+\ref{sec:series_convergence_and_divergence}
+\nameref{sec:series_convergence_and_divergence}				& pg. \pageref{sec:series_convergence_and_divergence}			& Core\\
+\ref{sec:taylor_series}
+\nameref{sec:taylor_series}									& pg. \pageref{sec:taylor_series}								& Core\\
+%\ref{sec:approximations_of_pi}
+%\nameref{sec:approximations_of_pi}							& pg. \pageref{sec:approximations_of_pi}						& Optional
+\\
+\multicolumn{3}{l}{$^1$One of these activities covering differential equations should be chosen as core.}
+\end{tabular}
+\end{table}
+
+\include{activities/math122/tex/Activity_Visualizing_Riemann_Sums}
+\include{activities/math122/tex/Activity_Riemann_Sums_and_Net_Change}
+\include{activities/math122/tex/Activity_Approximate_Integration}
+\include{activities/math122/tex/Activity_Integral_Functions}
+\include{activities/math122/tex/Activity_Applications_of_the_FTC}
+\include{activities/math122/tex/Activity_Average_Value_on_Shrinking_Interval}
+\include{activities/math122/tex/Activity_Shark_Attack}
+\include{activities/math122/tex/Activity_Area_Problem}
+\include{activities/math122/tex/Activity_Volumes}
+\include{activities/math122/tex/Activity_Arc_Length}
+\include{activities/math122/tex/Activity_Infinite_Integrals}
+\include{activities/math122/tex/Activity_Probability}
+\include{activities/math122/tex/Activity_Spring}
+\include{activities/math122/tex/Activity_Tank}	
+\include{activities/math122/tex/Activity_Direction_Fields}
+\include{activities/math122/tex/Activity_Series}
+\include{activities/math122/tex/Activity_Taylor_Series}
+%\include{activities/math122/tex/Activity_Approximations_of_Pi}
+
+\include{practice/tex/math122practice}
+
+%----------------------------------------------------------------------------------------------
+
+\part{Tutorials}
+\label{pt:Tutorials}
+
+\setcounter{chapter}{0}
+\renewcommand{\thechapter}{\Alph{chapter}}
+\renewcommand{\theHchapter}{otherchapter\thechapter}
+
+\include{tutorials/tex/Maple_Environment}
+\include{tutorials/tex/Maple_Syntax}		
+\include{tutorials/tex/Basic_Operations}
+\include{tutorials/tex/Plotting_Functions}
+\include{tutorials/tex/Assignment_Operator}
+\include{tutorials/tex/Solving_Equations}
+\include{tutorials/tex/Limits}
+\include{tutorials/tex/The_Derivative}
+\include{tutorials/tex/Implicit_Functions}
+\include{tutorials/tex/Riemann_Sums_and_Area_Approximation}
+\include{tutorials/tex/Definite_and_Indefinite_Integrals}
+\include{tutorials/tex/Differential_Equations}
+\include{tutorials/tex/Sequences_and_Series}
+\include{tutorials/tex/Conditional_Statements_and_Loops}
+
+%----------------------------------------------------------------------------------------------%----------------------------------------------------------------------------------------------
+\backmatter
+
+% list of common errors
+\include{appendices/tex/common_errors}
+
+% list of common maple commands
+\include{appendices/tex/common_commands}
+
+% bibliography
+%\bibliography{maplelab}
+%\bibliographystyle{plainnat}
+
+% index
+\printindex
+
+%----------------------------------------------------------------------------------------------%----------------------------------------------------------------------------------------------
+\end{document}

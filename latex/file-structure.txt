@@ -1,0 +1,314 @@
+Maple Lab Manual Dev Summer 2019
+|   commands.aux
+|   common-commands.aux
+|   commondef.tex
+|   common_commands.aux
+|   common_commands.tex
+|   file-structure.txt
+|   maple-lab-manual.aux
+|   maple-lab-manual.idx
+|   maple-lab-manual.log
+|   maple-lab-manual.out
+|   maple-lab-manual.pdf
+|   maple-lab-manual.synctex.gz
+|   maple-lab-manual.tex
+|   maple-lab-manual.tex.bak
+|   maple-lab-manual.toc
+|   maple-lab-manual.toc.bak
+|   mapleenv.def
+|   mapleenv.sty
+|   maplestd2e.sty
+|   tufte-book.cls
+|
++---activities
+|   +---math112
+|   |       Acitiviy_Solving_Equations_in_Maple.aux
+|   |       Activity_Advanced_Plotting.aux
+|   |       Activity_AppliedLimit.aux
+|   |       Activity_AppliedLimit.tex
+|   |       Activity_AssignEval.aux
+|   |       Activity_Building_a_Roller_Coaster.aux
+|   |       Activity_Building_a_Roller_Coaster.tex
+|   |       Activity_Creating_a_Maple_Worksheet.aux
+|   |       Activity_Creating_a_Maple_Worksheet.tex
+|   |       Activity_Derivatives.aux
+|   |       Activity_Derivatives.tex
+|   |       Activity_Functions.aux
+|   |       Activity_Implicit_Functions.aux
+|   |       Activity_Implicit_Functions.tex
+|   |       Activity_Limits.aux
+|   |       Activity_Limits.tex
+|   |       Activity_LimitsAsymp.aux
+|   |       Activity_LimitsAsymp.tex
+|   |       Activity_ManipExpr.aux
+|   |       Activity_NewtonMethod.aux
+|   |       Activity_NewtonMethod.tex
+|   |       Activity_NewtonMethod.tex.bak
+|   |       Activity_Orthogonal_Curves.aux
+|   |       Activity_Orthogonal_Curves.tex
+|   |       Activity_Rainbows.aux
+|   |       Activity_Rainbows.tex
+|   |       Activity_Solving_Equations_in_Maple.aux
+|   |       Activity_Solving_Equations_in_Maple.tex
+|   |       Activity_Sweet_16.aux
+|   |       Activity_Sweet_16.tex
+|   |       Activity_TangentLines.aux
+|   |       Activity_TangentLines.tex
+|   |       Activity_TangentLines.tex.bak
+|   |       Activity_The_Assignment_Operator_and_Creating_Functions.aux
+|   |       Activity_The_Assignment_Operator_and_Creating_Functions.tex
+|   |       Activity_The_Basics.aux
+|   |       Activity_The_Basics.tex
+|   |       Activity_The_Maple_Environment.aux
+|   |       Activity_The_Shape_of_a_Can.aux
+|   |       Activity_The_Shape_of_a_Can.tex
+|   |       Activity_Transformations_of_Graphs.aux
+|   |       Activity_Transformations_of_Graphs.tex
+|   |       AppliedLimit-eps-converted-to.pdf
+|   |       AppliedLimit.eps
+|   |       hexagons-eps-converted-to.pdf
+|   |       hexagons.eps
+|   |       Rainbow-eps-converted-to.pdf
+|   |       Rainbow.eps
+|   |       Rainbow2-eps-converted-to.pdf
+|   |       Rainbow2.eps
+|   |       Rainbow3-eps-converted-to.pdf
+|   |       Rainbow3.eps
+|   |       Rainbow4-eps-converted-to.pdf
+|   |       Rainbow4.eps
+|   |       squares-eps-converted-to.pdf
+|   |       squares.eps
+|   |
+|   \---math122
+|           Activity_Approximate_Integration.aux
+|           Activity_Approximate_Integration.tex
+|           Activity_Approximations_of_Pi.aux
+|           Activity_Approximations_of_Pi.tex
+|           Activity_Arc_Length.aux
+|           Activity_Arc_Length.tex
+|           Activity_Area_Problem.aux
+|           Activity_Area_Problem.tex
+|           Activity_A_Limit_Problem.aux
+|           Activity_A_Limit_Problem.tex
+|           Activity_Direction_Fields.aux
+|           Activity_Direction_Fields.tex
+|           Activity_FTC.aux
+|           Activity_FTC.tex
+|           Activity_FTC_By_Hand.aux
+|           Activity_FTC_By_Hand.tex
+|           Activity_Infinite_Integrals.aux
+|           Activity_Infinite_Integrals.tex
+|           Activity_Integral_Max_and_Mins.aux
+|           Activity_Integral_Max_and_Mins.tex
+|           Activity_Probability.aux
+|           Activity_Probability.tex
+|           Activity_Riemann_Sums_and_Net_Change.aux
+|           Activity_Riemann_Sums_and_Net_Change.tex
+|           Activity_Series.aux
+|           Activity_Series.tex
+|           Activity_Shark_Attack.aux
+|           Activity_Shark_Attack.tex
+|           Activity_Sine_Integral_Function.aux
+|           Activity_Sine_Integral_Function.tex
+|           Activity_Spring.aux
+|           Activity_Spring.tex
+|           Activity_Tank.aux
+|           Activity_Tank.tex
+|           Activity_Taylor_Series.aux
+|           Activity_Taylor_Series.tex
+|           Activity_Visualizing_Riemann_Sums.aux
+|           Activity_Visualizing_Riemann_Sums.tex
+|           Activity_Volumes.aux
+|           Activity_Volumes.tex
+|
++---practice
+|       math112practice.aux
+|       math112practice.tex
+|       math112practice.tex.bak
+|       math122practice.aux
+|       math122practice.tex
+|       math122practice.tex.bak
+|
+\---tutorials
+        Applications_of_the_Integral.aux
+        Applications_of_the_Integral.tex
+        Assignment_Operator.aux
+        Assignment_Operator.tex
+        autocomplete.eps
+        autocomplete.png
+        Basic_Operations.aux
+        Basic_Operations.tex
+        Conditional_Statements_and_Loops.aux
+        Conditional_Statements_and_Loops.tex
+        Creating_and_Assigning_Expressions.aux
+        Definite_and_Indefinite_Integrals.aux
+        Definite_and_Indefinite_Integrals.tex
+        Definite_And_Indefinite_Integralsplot2d1-eps-converted-to.pdf
+        Definite_And_Indefinite_Integralsplot2d1.eps
+        Definite_And_Indefinite_Integralsplot2d2-eps-converted-to.pdf
+        Definite_And_Indefinite_Integralsplot2d2.eps
+        Definite_And_Indefinite_Integralsplot2d3-eps-converted-to.pdf
+        Definite_And_Indefinite_Integralsplot2d3.eps
+        DerivativeTutorLoad1-eps-converted-to.pdf
+        DerivativeTutorLoad1.eps
+        DerivativeTutorLoad2-eps-converted-to.pdf
+        DerivativeTutorLoad2.eps
+        DerivativeTutorQ1-1-eps-converted-to.pdf
+        DerivativeTutorQ1-1.eps
+        DerivativeTutorQ1-2-eps-converted-to.pdf
+        DerivativeTutorQ1-2.eps
+        Differential_Equations.aux
+        Differential_Equations.tex
+        DiffTutorLoad1-eps-converted-to.pdf
+        DiffTutorLoad1.eps
+        DiffTutorLoad2-eps-converted-to.pdf
+        DiffTutorLoad2.eps
+        DiffTutorQ1-1-eps-converted-to.pdf
+        DiffTutorQ1-1.eps
+        DiffTutorQ1-2-eps-converted-to.pdf
+        DiffTutorQ1-2.eps
+        DiffTutorQ1-3-eps-converted-to.pdf
+        DiffTutorQ1-3.eps
+        DiffTutorQ1-4-eps-converted-to.pdf
+        DiffTutorQ1-4.eps
+        DiffTutorQ2-1-eps-converted-to.pdf
+        DiffTutorQ2-1.eps
+        DiffTutorQ2-2-eps-converted-to.pdf
+        DiffTutorQ2-2.eps
+        DiffTutorQ2-3-eps-converted-to.pdf
+        DiffTutorQ2-3.eps
+        direction_fieldsplot2d1-eps-converted-to.pdf
+        direction_fieldsplot2d1.eps
+        direction_fieldsplot2d2-eps-converted-to.pdf
+        direction_fieldsplot2d2.eps
+        direction_fieldsplot2d3-eps-converted-to.pdf
+        direction_fieldsplot2d3.eps
+        ExtremeValues-eps-converted-to.pdf
+        ExtremeValues.eps
+        Functions_in_Maple.aux
+        ImplicitTangent-eps-converted-to.pdf
+        ImplicitTangent.eps
+        Implicit_Functions.aux
+        Implicit_Functions.tex
+        Implicit_Functions_and_Differentiationplot2d1-eps-converted-to.pdf
+        Implicit_Functions_and_Differentiationplot2d1.eps
+        Implicit_Functions_and_Differentiationplot2d2-eps-converted-to.pdf
+        Implicit_Functions_and_Differentiationplot2d2.eps
+        Implicit_Functions_and_Graphsplot2d1-eps-converted-to.pdf
+        Implicit_Functions_and_Graphsplot2d1.eps
+        Implicit_Functions_and_Graphsplot2d2-eps-converted-to.pdf
+        Implicit_Functions_and_Graphsplot2d2.eps
+        Implicit_Functions_and_Graphsplot2d3-eps-converted-to.pdf
+        Implicit_Functions_and_Graphsplot2d3.eps
+        InsertInput.eps
+        InsertInput.png
+        InsertParagraph.eps
+        InsertParagraph.png
+        Integration_using_Numerical_Approximation.aux
+        Integration_using_Numerical_Approximation.tex
+        IntTutorLoad1-eps-converted-to.pdf
+        IntTutorLoad1.eps
+        IntTutorLoad2-eps-converted-to.pdf
+        IntTutorLoad2.eps
+        IntTutorQ1-1-eps-converted-to.pdf
+        IntTutorQ1-1.eps
+        IntTutorQ1-2-eps-converted-to.pdf
+        IntTutorQ1-2.eps
+        IntTutorQ1-3-eps-converted-to.pdf
+        IntTutorQ1-3.eps
+        IntTutorQ1-4-eps-converted-to.pdf
+        IntTutorQ1-4.eps
+        IntTutorQ1-5-eps-converted-to.pdf
+        IntTutorQ1-5.eps
+        IntTutorQ1-6-eps-converted-to.pdf
+        IntTutorQ1-6.eps
+        IntTutorQ2-eps-converted-to.pdf
+        IntTutorQ2.eps
+        Limits.aux
+        Limits.tex
+        Limitsplot2d1-eps-converted-to.pdf
+        Limitsplot2d1.eps
+        Limitsplot2d2-eps-converted-to.pdf
+        Limitsplot2d2.eps
+        LimitTutorLoad-eps-converted-to.pdf
+        LimitTutorLoad.eps
+        LimitTutorLoad2-eps-converted-to.pdf
+        LimitTutorLoad2.eps
+        LimitTutorQ1-1-eps-converted-to.pdf
+        LimitTutorQ1-1.eps
+        LimitTutorQ1-2-eps-converted-to.pdf
+        LimitTutorQ1-2.eps
+        LimitTutorQ1-3-eps-converted-to.pdf
+        LimitTutorQ1-3.eps
+        LimitTutorQ2-1-eps-converted-to.pdf
+        LimitTutorQ2-1.eps
+        LimitTutorQ2-2-eps-converted-to.pdf
+        LimitTutorQ2-2.eps
+        LimitTutorQ2-3-eps-converted-to.pdf
+        LimitTutorQ2-3.eps
+        Maple_Environment.aux
+        Maple_Environment.tex
+        Maple_Syntax.aux
+        Maple_Syntax.tex
+        newtonsmethodplot2d1-eps-converted-to.pdf
+        newtonsmethodplot2d1.eps
+        new_input-eps-converted-to.pdf
+        new_input.eps
+        new_input.pdf
+        new_section-eps-converted-to.pdf
+        new_section.eps
+        new_text-eps-converted-to.pdf
+        new_text.eps
+        numerical_integration_using_ApproximateIntplot2d1-eps-converted-to.pdf
+        numerical_integration_using_ApproximateIntplot2d1.eps
+        Operations_on_Equations.aux
+        Operations_on_Expressions.aux
+        OrthogonalCurves-eps-converted-to.pdf
+        OrthogonalCurves.eps
+        palettes1.eps
+        palettes1.PNG
+        palettes2.eps
+        palettes2.PNG
+        palettes3.eps
+        palettes3.PNG
+        Plotting_Functions.aux
+        Plotting_Functions.tex
+        Plotting_Functionsplot2d1a-eps-converted-to.pdf
+        Plotting_Functionsplot2d1a.eps
+        Plotting_Functionsplot2d1b-eps-converted-to.pdf
+        Plotting_Functionsplot2d1b.eps
+        Plotting_Functionsplot2d1c-eps-converted-to.pdf
+        Plotting_Functionsplot2d1c.eps
+        Plotting_Functionsplot2d2a-eps-converted-to.pdf
+        Plotting_Functionsplot2d2a.eps
+        Plotting_Functionsplot2d2b-eps-converted-to.pdf
+        Plotting_Functionsplot2d2b.eps
+        Plotting_Functionsplot2d3-eps-converted-to.pdf
+        Plotting_Functionsplot2d3.eps
+        Plotting_Functionsplot2d4-eps-converted-to.pdf
+        Plotting_Functionsplot2d4.eps
+        Riemann_Sumsplot2d1-eps-converted-to.pdf
+        Riemann_Sumsplot2d1.eps
+        Riemann_Sumsplot2d2-eps-converted-to.pdf
+        Riemann_Sumsplot2d2.eps
+        Riemann_Sumsplot2d3.eps
+        Sequences_and_Series.aux
+        Sequences_and_Series.tex
+        Solving_Equations.aux
+        Solving_Equations.tex
+        TangentLine-eps-converted-to.pdf
+        TangentLine.eps
+        Taylor_and_Maclaurin_Seriesplot2d1-eps-converted-to.pdf
+        Taylor_and_Maclaurin_Seriesplot2d1.eps
+        The_Derivative.aux
+        The_Derivative.tex
+        VoRTutorLoad1-eps-converted-to.pdf
+        VoRTutorLoad1.eps
+        VoRTutorLoad2-eps-converted-to.pdf
+        VoRTutorLoad2.eps
+        VoRTutorQ0-1-eps-converted-to.pdf
+        VoRTutorQ0-1.eps
+        VoRTutorQ1-1-eps-converted-to.pdf
+        VoRTutorQ1-1.eps
+        VoRTutorQ1-2-eps-converted-to.pdf
+        VoRTutorQ1-2.eps

@@ -1,0 +1,52 @@
+\section{Infinite Integrals}\index{integral!improper}
+\label{sec:infinite_integrals}
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:plotting_functions}, pg. \pageref{chp:plotting_functions}
+	\item \nameref{chp:assignment_operator}, pg. \pageref{chp:assignment_operator}
+	\item \nameref{chp:definite_and_indefinite_Integrals}, pg. \pageref{chp:definite_and_indefinite_Integrals}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+Infinite integrals are used in a variety of applications, including finding solutions to differential equations by way of the Laplace transform. Infinite integrals can be challenging to evaluate by hand, but in this activity we will see that Maple can handle infinite integrals easily.
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+    \item   
+    \begin{enumerate} 
+    	\item Define the function $f(x) = \dfrac{1}{\sqrt{2-x}}$ in Maple.
+    	\marginnote{Don't forget to use \texttt{sqrt()} when defining this function.}
+    	    \index{mathematical functions!square root}
+    	\item Plot $f(x)$.
+    	    \index{plot!}
+    	\item Evaluate the integral $\displaystyle\int_{-\infty}^{-1} f(x) dx$.
+    	    \index{integral!}
+    \end{enumerate}
+    \marginnote[-0.5cm]{It is important to check that the function does not have any points of discontinuity before you integrate.}
+    \item   
+    \begin{enumerate} 
+    	\item Define the function $g(x) = x{\rm e}^{-x^2}$ in Maple.
+    	\marginnote{Don't forget to use \texttt{exp()} when defining this function.}
+    	\item Plot $g(x)$.
+    	\item Evaluate the integral $\displaystyle\int_{-\infty}^{\infty} g(x) dx$.
+    \end{enumerate}
+    
+    \item 
+    \begin{enumerate} 
+    	\item Define the function $h(x) = \dfrac{\ln x}{x}$ in Maple.
+    	\item Plot $h(x)$.
+    	\item Evaluate the integral $\displaystyle\int_{1}^{\infty} h(x) dx$.
+    \end{enumerate}
+    \item   The Laplace transform for a function $J(t)$ is given by the improper integral 
+    \[F(s) = \displaystyle\int_{0}^{\infty} J(t){\rm e}^{-st} dt.\]
+    \begin{enumerate}
+        \item We will assume that $s$ is positive. You will need to type \\
+        \texttt{assume(s, positive)} on a new line so that Maple will understand this assumption.
+            \index{assume}
+        \marginnote{In your output, $s\!\sim$ means that $s$ is now assumed to be a positive value.}
+        \item Evaluate the Laplace transform of $J(t) = t$.
+    \end{enumerate}
+\end{enumerate}

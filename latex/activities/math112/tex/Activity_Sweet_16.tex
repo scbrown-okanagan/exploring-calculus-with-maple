@@ -1,0 +1,39 @@
+\section{Sweet 16}
+\label{sec:sweet_16}
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:limits}, pg. \pageref{chp:limits}
+	\item \nameref{chp:derivative}, pg. \pageref{chp:derivative}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+\marginnote{If we remove the restriction that $a$ and $b$ have to be integers, this problem becomes a lot more interesting. \par It can be shown that for any value $N > {\rm e}^{\rm e}$, there exist real numbers $a$ and $b$ that satisfy $N = a^b = b^a$ with $a \neq b$. To prove this, one needs to be very careful in evaluating the limit \[\lim_{\substack{a \rightarrow 1\\ b \rightarrow \infty}} a^b.\]  It is not obvious that this limit goes to infinity. However, if it does, all $N > {\rm e}^{\rm e}$ will have the desired property. It may help to recall that \[\lim_{n \rightarrow \infty} \left(1 + \frac{1}{n} \right)^n = {\rm e}.\]  So, just because the base tends to $1$ and the exponent tends to infinity, the value of $a^b$ is not necessarily infinity.
+}\index{limit}\index{limit!at infinity}\index{limit!definition of e}
+
+We all know that $16$ exhibits the following interesting property: \[16 = 2^4 = 4^2\] Are there any other positive integers $N$ for which there exist positive integers $a$ and $b$ ($a \not = b$) such that \[N = a^b = b^a?\]  This activity will explore this question.
+
+\subsection*{Exercises:}
+
+Let's assume that for some $N \not = 16$, there are positive integers $a$ and $b$ such that $N = a^b = b^a$.
+
+\begin{enumerate}
+    \item   If $a^b = b^a$, can we solve for $a$ or $b$?  Why or why not?  Try to do this by hand and comment on the result in a new paragraph.
+    \item   Rearrange the equation to separate the $a$'s and $b$'s, so that all $a$'s are on one side and all $b$'s are on the other side. Comment about what you notice about the left and right sides of the equation in a new paragraph.
+    \item   Assign the function $f(x) = \ln(x)/x$.  Graph $f(x)$ using Maple.
+    \item   Determine the critical point(s) and the maximum and minimum values (if they exist).\index{shapes of curves!critical number}\index{shapes of curves!maximum}\index{shapes of curves!minimum}
+    \item   Insert a new paragraph and comment on what happens to $f(x)$ as $x \rightarrow \infty$.\index{shapes of curves!horizontal asymptote}\index{asymptote!horizontal}
+    \item   On what intervals is $f(x)$ increasing and decreasing? Answer on a new paragraph.\index{shapes of curves!increasing}\index{shapes of curves!decreasing}
+    \marginnote[-2cm]{\textbf{Rolle's Theorem:}\index{Rolle's theorem} Let $f$ be a function that satisfies the following three hypotheses:
+    	\begin{enumerate}
+    	\item $f$ is continuous on the closed interval $[a,b]$.
+    	\item $f$ is differentiable on the open interval $(a,b)$.
+    	\item $f(a) = f(b)$.
+    	\end{enumerate}
+    	Then there is a number $c$ in $(a,b)$ such that $f'(c) = 0$.
+    }
+    \item   If $f(a) = f(b)$ and $a < b$, what does that mean in terms of the graph? Answer on a new paragraph. \\(\textit{Hint: Rolle's Theorem})
+    \item   If $f(a) = f(b)$ and $a < b$, prove that $a = 2$ is the only positive integer such that $a^b = b^a$.
+\end{enumerate}

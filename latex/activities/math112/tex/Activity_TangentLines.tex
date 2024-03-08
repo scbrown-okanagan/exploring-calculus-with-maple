@@ -1,0 +1,56 @@
+\section{Tangent Lines}
+\label{sec:tangent_lines}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:assignment_operator}, pg. \pageref{chp:assignment_operator}
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:derivative}, pg. \pageref{chp:derivative}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+In this activity, students will find tangent lines to various functions, and then will display the tangent lines and function on the same graph.\\
+
+\noindent To find the tangent line to a function $f(x)$ at $x = a$, two pieces of information are needed:
+\begin{itemize}
+\item The point, $(a, f(a))$.
+\item The slope of the tangent line, $f'(a)$.
+\end{itemize}
+\marginnote{A detailed example of finding and plotting tangent lines is described on page \pageref{subsec:equation_of_tangent_line}.}
+Plugging these two pieces of information into the point-slope form of a line gives the following equation.
+\begin{align}
+y - y_0 &= m_{tan} \cdot (x-x_0) \nonumber\\ 
+y - f(a) &= f'(a) \cdot (x-a) \nonumber\\
+y &= f'(a) \cdot (x-a) + f(a) \label{eq:tanline}
+\end{align}\index{lines!tangent line}\index{lines!slope of a tangent line}
+We will use equation \eqref{eq:tanline} for the following exercises.
+
+\subsection*{Exercises:}
+\begin{enumerate}
+	\item  Consider the function $f(x) = \sqrt{9 - x}$.
+    \begin{enumerate} \marginnote[-0.5cm]{Be sure to choose different names for each tangent line. If you assign a new expression to an old name, the new expression will overwrite what was previously assigned.}
+    	\item Define the equations of the tangent lines at $x=0$ and $x=5$.
+    	
+    	\item Plot $f(x)$ and the two tangent lines on the same axes.\index{plot!multiple functions}
+    	\marginnote[0.1cm]{Since you are plotting more than one
+tangent line on the same axes, it is a good idea to specify plot colours.}
+    \end{enumerate}
+    \item Consider the function $g(x)=x{\rm e}^{x}$.\index{mathematical functions!exponential}
+    \marginnote[0.3cm]{In Maple, \texttt{exp(x)} is used to denote the exponential function, ${\rm e}^x$.}\index{mathematical functions!exponential}
+		\begin{enumerate}
+			\item Define the equations of the tangent lines at $x=1$ and $x=-1$.
+			\item Plot $g(x)$ and the two tangent lines on the same axes.
+		\end{enumerate}
+	\item Consider the function $h(x)=x^3-x^2-9x+9$. 
+	\begin{enumerate}
+		\item Find the $x$-values where the function has tangent lines with slope equal to $1$. 
+		\item Find the $x$-values where the function has horizontal tangent lines\index{lines!horizontal tangent line}.
+		\marginnote[-0.5cm]{To solve part (b), you need to remember what the slope of a horizontal tangent line is.}
+%		\item Find the equation of the tangent line at $x=2$, then plot the function and the tangent line on the same set of axes.
+	\end{enumerate}
+\end{enumerate}
+%\subsection*{Notes:}
+%\begin{itemize}
+%    \item   
+%\end{itemize}

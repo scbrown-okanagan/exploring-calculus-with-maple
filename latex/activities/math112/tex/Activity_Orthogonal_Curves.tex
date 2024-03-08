@@ -1,0 +1,52 @@
+\section{Orthogonal Curves}
+\label{sec:orthogonal_curves}
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+	\item \nameref{chp:implicit_functions}, pg. \pageref{chp:implicit_functions}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+Orthogonal curves are curves that are perpendicular whenever they intersect. Perpendicular lines\index{lines!perpendicular lines} are an elementary example of this. We know that if $m_1$ and $m_2$ are the slopes of two perpendicular lines, then $m_1 m_2 = -1$. Similarly, two curves are orthogonal if their derivatives multiply to $-1$ whenever they intersect.
+
+\marginnote[-6cm]{There are a few important things to remember about the \texttt{implicitplot()} command during this activity:\index{implicit functions!implicitplot}
+	\begin{itemize}
+	\item The \texttt{plots} package needs to be loaded using the \texttt{with()} command. 
+	\item Some versions of Maple may not produce a smooth plot. In this case, include either \texttt{numpoints=30000} or \texttt{grid=[250,250]} as a parameter.
+	\item The optional \texttt{scaling=constrained}\index{implicit functions!implicitplot!scaling} parameter can be included to enforce $1:1$ scaling. Alternatively, the optional scaling can be performed by clicking on the graph and then clicking on the $1:1$ button in the plot toolbar at the top of the page.
+	\item If you are plotting multiple graphs on the same set of axes, it is a good idea to specify plot colours.\index{implicit functions!implicitplot!multiple plots}\index{implicit functions!implicitplot}
+	\end{itemize}
+}
+\vspace{1cm}
+\subsection*{Exercises:}
+
+\begin{enumerate}
+	\marginnote{Do not forget to include multiplication between $x$ and $y$.}
+    \item Consider the curves $y^2 - x^2 = 3$ and $xy = 2$.
+    \begin{enumerate}
+    	\item Plot both of these curves on the same set of axes. Make sure both curves appear smooth.
+    	\marginnote[-0.4cm]{In order to find points of intersection, Maple can solve a system of equations in one \texttt{solve()} \index{solving equations!solve} or \texttt{fsolve()}\index{solving equations!fsolve} command for both $x$ and $y$. If you choose to use the \texttt{solve()} command, you may need to include the optional parameter \texttt{explicit=true} to avoid the \textit{RootOf()} output.}
+    	\item Find the $x$- and $y$-coordinates of the points of intersection.
+    	\item Compute the derivatives of both curves.
+    	\marginnote[0.3cm]{A similar example is detailed on page \pageref{subsec:orthocurves}.}
+    	\item Are these curves orthogonal at the points of intersection? Confirm this using the fact that $m_1 m_2 = -1$ for perpendicular slopes.
+    \end{enumerate}
+    \index{solving equations!removing \texttt{RootOf()}}
+    \vspace{0.8cm}
+    \item Consider the two families of curves given by \[ y = cx^2 \] and \[ x^2 + 2y^2 = k, \] where $c$ and $k > 0$ are arbitrary constants. 
+    \marginnote[0.8cm]{Be sure to include $y=$ when using the \texttt{implicitplot()} command to plot the curves for the first family.}
+    \begin{enumerate}
+    	\item Plot several curves of the first family using 
+    	\[ c=-2,-1,0,1,2 \] 
+    	\marginnote[0.2cm]{You may wish to make all curves of the same family the same colour.}
+    	and several curves of the second family using
+    	\[ k=1,4,9 \]
+    	on the same axes.
+    	\item Find the $x$ and $y$ coordinates of the four intersection points of the two families of curves. The coordinates of the points should be given in terms of $c$ and $k$.
+    	\item Compute the derivative of each family of curves. 
+    	\marginnote{It is a good idea to use the assignment operator $:=$ to assign each derivative in part (c) to a name. This will allow you to easily reference the derivatives when completing part (d).}
+    	\item Show that the two families of curves are orthogonal at each of the four intersection points, regardless of $c$ and $k$.
+    \end{enumerate}
+\end{enumerate}

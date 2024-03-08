@@ -1,0 +1,46 @@
+\section{Solving Equations in Maple}
+\label{sec:solving_equations_in_maple}		
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:equation_solvers}, pg. \pageref{chp:equation_solvers}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+In this activity, students will be asked to assign expressions and then evaluate and manipulate them.
+
+\subsection*{Exercises:}
+\begin{enumerate} 
+    \item Suppose we want to find the $x$-intercepts of the function \[ f(x) = x^5+x^4-4x^3-3x^2+3x+1.\] 
+    \begin{enumerate}
+        	\item Assign the function to $f(x)$.  \marginnote[-0.1cm]{When assigning the function to $f(x)$, use the $:=$ operator.}
+        	\index{assignment operator}
+    	\item Plot $f(x)$. Choose an interval for $x$ that shows all $x$-intercepts. How many do you see?
+    	\item Factor $f(x)$. Does $f(x)$ factor? 
+    	\item Solve $f(x)=0$ using both the \texttt{solve()} and \texttt{fsolve()} commands.
+    	\marginnote[-1.2cm]{With \texttt{fsolve()}, you can also specify an interval for solutions if you wish to only find a particular solution. An example of this can be found on page \pageref{eg:fsolve_interval}.}
+    	\index{solving equations!solve}	\index{solving equations!fsolve}
+    \end{enumerate}
+    \item Solve the quadratic equation $x^2+4x+6=0$ three ways:
+    
+    \begin{enumerate}
+    	\item Using the quadratic formula by hand. \marginnote[-0.5cm]{Given a quadratic equation of the form $ax^2+bx+c=0$, the quadratic formula is
+\[x=\dfrac{-b\pm \sqrt{b^2-4ac}}{2a}.\]}
+    	\item Using \texttt{solve()}, followed by evaluating the result as a decimal.
+    	\item Using \texttt{fsolve()}.
+    \end{enumerate}
+    Compare your results from (b) and (c).
+    \marginnote[-0.2cm]{In Maple, $\sqrt{-1}$ is denoted as $I$.}\index{imaginary}
+
+    \item Consider the curves $y=x^2$ and $y=\frac{3}{x}$.
+        \marginnote[0.6cm]{An example that shows how to find the intersection point of two functions is given on page \pageref{subsec:functionintersection}.}
+    \begin{enumerate}
+    \item Find the point $(x,y)$ where the two curves intersect. Try using both the \texttt{solve()} and \texttt{fsolve()} commands.
+    
+    \item Plot the two curves on the same set of axes to verify that your intersection point from part (a) is correct.
+    \marginnote[-0.4cm]{When plotting equations of the form $y=f(x)$ using the \texttt{plot()} command, we never include the $y=$.}
+    \marginnote[0.2cm]{When multiple curves are plotted on the same set of axes, it is a good practice to specify the colour of each one, so that you can tell them apart.}
+	\end{enumerate}     
+    
+\end{enumerate}

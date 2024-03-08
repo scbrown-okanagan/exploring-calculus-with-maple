@@ -1,0 +1,76 @@
+\section{The Basics}
+\label{sec:basics}
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:basic_operations}, pg. \pageref{chp:basic_operations}
+	\item \nameref{chp:plotting_functions}, pg. \pageref{chp:plotting_functions}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+In this activity, you will learn basic usage of some of the most common Maple commands:
+\par
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+\item \texttt{expand()}\index{expand}
+\item \texttt{factor()}\index{factor}
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+\item \texttt{simplify()}\index{simplify}
+\item \texttt{plot()}\index{plot}
+\end{itemize}
+\end{minipage}
+
+\subsection*{Exercises:}
+\begin{enumerate}
+    \item Expand the polynomial $(2x-y)^6$.
+    \item Factor the polynomial $16x^4-160x^3y+600x^2y^2-1000xy^3+625y^4$.
+    \marginnote{When two or more variables appear next to each other, be sure to include a \texttt{*} or space between them, so that Maple knows that they are multiplied together.}
+    \item Simplify the expression $\dfrac{x^3-1}{x-1}$.
+    \item Now we would like Maple perform all three commands together.
+    \marginnote{It is a good practice when using the \% \index{ditto operator} shortcut to run the commands simultaneously on the same Maple input.}
+    \begin{enumerate}
+    	\item Have Maple expand the rational expression $\dfrac{(x-y)^2+(x+y)^2}{x^3-y^3}$.
+    	\item Add a semicolon to the end of the line, followed by \texttt{simplify(\%)}.
+    	\item Add another semicolon to the end of the line, followed by \texttt{factor(\%)}.
+    	\item Hit Enter to run all three commands together.
+    \end{enumerate}
+    \marginnote{You can add a line break between commands without running them with Shift+Enter.}
+    You should see three outputs now: expanding, simplifying, and factoring.
+    \item (Optional) Consider polynomials of the form $x^p-1$, where $p$ is a prime number. Try factoring each of the following:
+    \begin{enumerate}
+		\begin{minipage}[t]{0.5\textwidth}
+    	\item $x^2 - 1$
+    	\item $x^3 - 1$
+    	\item $x^5 - 1$
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+    	\item $x^7 - 1$
+    	\item $x^{19} - 1$
+		\end{minipage}
+    \end{enumerate} 	
+    Can you notice a pattern and show that these polynomials follow a particular form when factored? To explain your solution, use the \includegraphics[width=.04\textwidth]{tutorials/figures/new_text.PNG} button to create a new paragraph after the current line.
+    \marginnote[-0.5cm]{Ctrl+Shift+J can also be used to create a paragraph after the current line.}
+    \newpage
+    \item Plot\index{plot} the following two functions using separate \texttt{plot()} commands and note the difference in domain:
+    \begin{enumerate}
+    	\item $x^{\sfrac{1}{3}}$
+    	\item $\texttt{surd}(x,3)$\index{mathematical functions!nth root@$n$\textsuperscript{th} root}
+    	\marginnote[-1cm]{The \texttt{surd(x,3)} function is equivalent to $\sqrt[3]{x}$. Similarly, \texttt{surd(x,5)} is equivalent to $\sqrt[5]{x}$, etc.}
+    \end{enumerate}
+    \item On a new Maple input, create a plot\index{plot} of the following list of functions
+    \begin{center}
+    \texttt{[ x\^{}2, x\^{}3, sqrt(x), surd(x,3), abs(x) ]}\index{plot!multiple functions}
+    \end{center}
+    and include the following options (separated by commas).
+    \marginnote{Square brackets in Maple are used to create a comma-separated list of items in the specified order.}
+    \begin{itemize}
+    \item \texttt{x = -5..10} \hfill\textit{(This specifies the $x$-axis)}\index{plot!axes intervals}
+    \item \texttt{y = -5..10} \hfill\textit{(This specifies the $y$-axis)}
+    \item \texttt{colour = [red,blue,green,purple,orange]} \index{plot!colours}
+    \end{itemize}
+    \marginnote[-0.5cm]{An example of plotting multiple functions at once can be found on page \pageref{sec:plotting_multiple_functions}.}\index{plot!multiple functions}
+\end{enumerate}

@@ -1,0 +1,78 @@
+\section{Creating a Maple Worksheet}
+\label{sec:creating_a_maple_worksheet}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:maple_environment}, pg. \pageref{chp:maple_environment}
+	\item \nameref{chp:basics_of_maple_syntax}, pg. \pageref{chp:basics_of_maple_syntax}
+		\item \nameref{chp:basic_operations}, pg. \pageref{chp:basic_operations}
+\end{itemize}
+
+\subsection*{Introduction:}
+
+This activity will give you practice with:
+\begin{itemize}
+\item setting up a new worksheet in Maple for future activities.
+\item switching between paragraphs for text and execution groups for Maple input.
+\item evaluating expressions in exact and decimal form.
+\end{itemize}
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+	\item Open up Maple on your lab computer. If you are asked whether you would like to update Maple, you can select No. You should now have a blank worksheet for the following exercises.
+	\marginnote[0.7cm]{The output of these commands is not useful on its own. However, you have now told Maple to clear its memory and that you would like numerical answers to be displayed with up to $15$ digit accuracy.} 
+		
+	\item On the first line of your worksheet you should be in Maple input, which is indicated by the \texttt{>} at the start of the line. Type in your first two commands, hitting Enter to run each command:
+		\par \texttt{> restart;} \index{restart}
+		\par \texttt{> Digits := 15;}\index{Digits}
+		
+	\item Create a new paragraph for text using \includegraphics[width=0.04\textwidth]{tutorials/figures/new_text.png} and type in the following information:
+	\marginnote{Ctrl+Shift+J and Ctrl+Shift+K are useful shortcuts for creating paragraphs after or before the current line.}
+	\begin{enumerate}
+		\item Your first and last name.
+		\item Your student number.
+		\item The name of your instructor.
+		\item The title of the activity.
+	\end{enumerate}
+	
+	\item Open up the palettes menu on the top left-hand side of Maple by clicking the small black triangle that points to the right. You may wish to use the Expression palette for the next few exercises.
+	
+    \item \label{ex-maple-input} Create a new execution group by using the \includegraphics[width=0.05\textwidth]{tutorials/figures/new_input.PNG} button and evaluate $5 + 2(7-4)$.
+    \marginnote[-0.7cm]{Ctrl+J and Ctrl+K are useful shortcuts for creating execution groups after or before the current line.}
+    
+    \item Create a new execution group and evaluate $\left(\dfrac{5^2 - 9}{9-5}\right)^2$.
+    \marginnote[-0.4cm]{You can create a fraction by encasing the numerator, $5^2-9$, in a set of parentheses before dividing. Alternatively, you can highlight $5^2-9$ and hit the \texttt{/} key to make a fraction.}
+    \clearpage
+    \marginnote[0.2cm]{To input a square root, use the \texttt{sqrt()} command.} \index{mathematical functions!square root}
+    \item Create a new execution group and evaluate $\sqrt{\dfrac{3+6^2}{4^2-3}}$.
+    \marginnote[0.2cm]{Whenever possible, Maple will produce output in exact form. However, using decimals in a Maple input will produce output in decimal form (called a floating point decimal).}
+    \item  Create a new execution group and evaluate $\sqrt{\dfrac{3.0+6.0^2}{4.0^2-3.0}}$. \label{ex-sqrt-digits}
+    
+    \item For each of the following, create a new execution group and evaluate the expression. \label{ex-builtin-functions}
+    \begin{enumerate}
+        	\marginnote[0.2cm]{The mathematical constant $\pi = 3.14\hdots$\index{Pi} must be typed into Maple as capitalized \texttt{Pi}. Do not type \texttt{pi}, as this is simply the Greek letter $\pi$.}
+    	\item $\cos\!\left(\frac{\pi}{6}\right)$
+    	\item $\arcsin\!\left(\frac{\sqrt{3}}{2}\right)$
+    	\item $\exp(2)$
+    	\marginnote{The \texttt{exp(x)}\index{mathematical functions!exponential} function is the exponential function, ${\rm e}^x$. If you type ${\rm e}^x$ using the 'e' key on the keyboard, Maple will not recognize it as the exponential function.}
+    	\item $\ln\!\left(5^{\sfrac{1}{2}}\right)$
+    \end{enumerate}
+    
+    \item \label{ex-evalf} On each of the four Maple inputs you created in exercise \ref{ex-builtin-functions}, add a semicolon at the end of the line, followed by the command \texttt{evalf(\%)}. For example:
+    \par \texttt{> cos(Pi/6); evalf(\%);}
+        \marginnote[-0.7cm]{The semicolon \texttt{;} separates commands if you want to run multiple commands on the same Maple input.}
+    
+    
+    \item If you have accidentally created any additional paragraphs or execution groups that you wish to delete, then delete them now by clicking on that line and pressing Ctrl+Del on the keyboard.
+    	\marginnote[0.1cm]{Use the \includegraphics[width=0.1\textwidth]{tutorials/figures/new_section.PNG} buttons to create or remove sections. Alternatively, the shortcuts Ctrl+. and Ctrl+, can be used to enclose execution groups of paragraphs in a section or remove any section enclosing an input.} 
+    	
+    \item Organize your work by using a new section for each of exercises \ref{ex-maple-input}-\ref{ex-evalf}. Be sure to clearly label each question by creating a section title immediately to the right of the arrow at the top of the section.
+    \marginnote[0.1cm]{You can highlight several execution groups or paragraphs with the mouse before combining them into one section.}
+    \item (Optional) Go back to the top of your worksheet and change the second line to:
+    \par \texttt{> Digits := 50;}
+    \par Now run each Maple input again by hitting Enter on each line or by pressing the \includegraphics[width=0.05\textwidth]{activities/math112/figures/execute_button.eps} button. What changed?
+    \marginnote[-1cm]{You do not need to have your cursor at the end of the line to run the command. Hitting Enter with your cursor anywhere on the Maple input will run the command.}
+    
+    \marginnote[0.2cm]{Pressing the \includegraphics[width=0.05\textwidth]{activities/math112/figures/execute_button.eps}\index{execute entire worksheet} button executes every command in the entire worksheet.}
+\end{enumerate}

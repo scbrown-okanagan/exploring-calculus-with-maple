@@ -1,0 +1,71 @@
+\section{Taylor and Maclaurin Series}
+\label{sec:taylor_series}	
+
+\subsection*{Recommended Tutorials:}
+\begin{itemize}[noitemsep]
+	\item \nameref{chp:sequence_and_sseries}, pg. \pageref{chp:sequence_and_sseries}  
+	    \index{sequences and series}
+\end{itemize}
+
+\subsection*{Introduction:}
+The Taylor series of a function $f$ centred at $a$ is given by the equation
+    \index{sequences and series!Taylor and Maclaurin series}
+\begin{align*}
+f(x) 
+&= \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n\\
+&= f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots.
+\end{align*}
+The Maclaurin series is a special case of the Taylor series, where $a=0$:
+    \index{sequences and series!Taylor and Maclaurin series!formula}
+\[
+f(x) 
+= \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n 
+= f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \cdots.
+\]
+
+In both series, we can use partial sums to approximate the shape of the function $f(x)$ in a region centred at $a$ by a polynomial. In this activity, we will compute and plot Taylor and Maclaurin series approximations to understand how the radius of convergence works.
+\marginnote[-0.5cm]{The radius of convergence for a Taylor series is the values of $x$ for which a Taylor series will converge to the function $f(x)$.}
+
+\subsection*{Exercises:}
+
+\begin{enumerate}
+\item Consider the function $f(x) = \cos(x)$.
+	\begin{enumerate}
+	\marginnote{Examples of finding and plotting Taylor series can be found on page \pageref{sec:taylor_and_maclaurin_series}.}
+	\item Compute the Maclaurin series of $f(x)$ accurate to order $3$ using \\
+	\texttt{taylor(cos(x), x=0, 3)}. Convert this to a polynomial and assign it to \textit{poly3} using the command \\
+	\texttt{poly3 := convert(\%, polynom)}.
+	    \index{sequences and series!Taylor and Maclaurin series!taylor}
+	    \index{sequences and series!Taylor and Maclaurin series!convert to polynomial}
+	    \index{ditto operator}
+	\item Repeat part (a) using orders $6$, $12$, and $24$. Assign each of these polynomials to a different name.
+    \marginnote[0.5cm]{You may want to choose different colours for each of these four curves to keep track of which is which if you plan to plot all of them on the same set of axes.} 
+    \item Plot the graph of $f(x)$ and the Maclaurin series from parts (a) and (b).
+        \index{plot}
+    \item In a new paragraph, describe what happens to the graph of the Maclaurin series approximation as we increase its order (that is, have higher degree polynomials).
+    \item If we increase our order to infinity, we expect that the approximation will converge to the radius of convergence on either side of $0$. In a new paragraph in your worksheet, state what you expect the radius of convergence to be.
+	\end{enumerate}
+	\clearpage
+\item Consider the function $g(x) = \ln(1+x)$.
+	\begin{enumerate}
+	\item Find the Maclaurin series of $g(x)$.
+    \item Compute the Maclaurin series of $g(x)$ accurate to orders $3$, $6$, $12$, and $24$. 
+    \item Plot the graph of $g(x)$ and the Maclaurin series from part (b).
+    \marginnote[-0.5cm]{You may want to choose different colours for each curve to keep track of which is which.} 
+    \item In a new paragraph in your worksheet, state what you expect the radius of convergence to be.
+	\end{enumerate}
+	
+\item It turns out that the full Taylor series for the functions from exercises $1$ and $2$ are
+\begin{align*}
+\cos(x)&=\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} \\
+\ln(1+x)&=\sum_{n=0}^{\infty} \frac{(-1)^{n-1} x^n}{n}
+\end{align*}
+
+Find the radius of convergence for these two series by hand in the space below. In a new paragraph, confirm whether or not it matches your predictions from your Maple plots.
+
+\begin{fullwidth}
+    \fbox{\parbox{1\linewidth}{$\displaystyle\cos(x)=\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}$ \vspace{5cm} }}
+    \fbox{\parbox{1\linewidth}{$\displaystyle\ln(1+x)=\sum_{n=0}^{\infty} \frac{(-1)^{n-1} x^n}{n}$ \vspace{5cm} }}
+\end{fullwidth}
+
+\end{enumerate}
