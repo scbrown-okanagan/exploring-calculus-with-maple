@@ -5,6 +5,7 @@
 \index{assignment operator!implicit function}
 
 \section{Implicit Functions}
+\label{sec:implicit_functions_tutorial}
 
 An implicit function cannot be defined as a normal function. Instead, the curve is defined as an \textit{equation} of multiple variables. It is easiest to assign a name to the entire equation, including the $=$ sign.
 
@@ -77,6 +78,7 @@ Many implicit functions cannot be expressed as a single function $y=f(x)$. Howev
 \end{maplegroup}
 
 \section{Plotting Implicit Functions}
+\label{sec:plotting_implicit_functions}
 
 The \texttt{implicitplot()} command can be used to plot implicit functions. It requires use of the \texttt{plots} package. Unlike the normal \texttt{plot()} command, each curve that is being plotted must be in the form of an \textit{equation} of two variables, including the $=$ sign. Additionally, you must specify an interval for \textit{both} variables.
 \marginnote[.6cm]{The \texttt{plots} package can be loaded using the \texttt{with()} command. This only needs to be loaded once per Maple worksheet and needs to be run each time you open a new or previously closed document.}
@@ -124,6 +126,7 @@ Be careful not to choose too large of a value, otherwise the output may take a v
 \end{maplegroup}
 
 \section{Implicit Differentiation}
+\label{sec:implicit_differentiation}
 
 We need to use the \texttt{implicitdiff()} command to find the derivative of an implicit function. It is easiest to first assign a name to the equation.
 
@@ -270,6 +273,7 @@ Then you can find the slopes of the tangent lines by computing the derivative wi
 \end{maplegroup}
 
 \section{Applications of Implicit Differentiation}
+\label{sec:applications_of_implicit_differentiation}
 
 In these examples, we will make use of the \texttt{implicitdiff()} and \texttt{implicitplot()} commands.
 

@@ -3,7 +3,7 @@
 
 In this section, we will review some of the most common errors encountered when using Maple. Many of these errors are caused when using 2D Math, which makes complicated expressions look pretty, but can cause other issues. For a description of font styles, see Tutorial \ref{chp:maple_environment}, page \pageref{chp:maple_environment}.
 
-\section*{Missing Brackets}
+\subsection{Missing Brackets}
 
 In Maple, we will use several types of brackets such as parentheses, square brackets, and curly braces. Maple refers to these as delimiters. If these delimiters are not found in pairs, then Maple will be unable to understand the syntax of your command.
 
@@ -18,7 +18,7 @@ In Maple, we will use several types of brackets such as parentheses, square brac
 \end{maplelatex}
 \end{maplegroup}
 
-\section*{Spelling Errors}
+\subsection{Spelling Errors}
 
 Maple cannot correct for poor spelling. If a command is misspelled, then it will treat the command as a variable name.
 
@@ -33,7 +33,7 @@ Maple cannot correct for poor spelling. If a command is misspelled, then it will
 \end{maplelatex}
 \end{maplegroup}
 
-\section*{The \texttt{\%} Shortcut Not Working as Intended}
+\subsection{The \texttt{\%} Shortcut Not Working as Intended}
 
 The \texttt{\%} shortcut will only use the output command that was last run.
 
@@ -76,7 +76,7 @@ The \texttt{\%} shortcut will only use the output command that was last run.
 \end{maplelatex}
 \end{maplegroup}
 
-\section*{Missing Multiplication Between Variables}
+\subsection{Missing Multiplication Between Variables}
 
 Whenever two variables (such as $x$ and $y$) are multiplied together, you must explicitly include the multiplication sign between them. If no * or space is included between the variables, it may be interpreted as an entirely different variable name.
 
@@ -94,7 +94,7 @@ Whenever two variables (such as $x$ and $y$) are multiplied together, you must e
 \end{maplelatex}
 \end{maplegroup}
 
-\section*{Spaces and Parentheses: Multiplication versus Functions}
+\subsection{Spaces and Parentheses: Multiplication versus Functions}
 
 When typing in 2D Math (the default font), spaces and parentheses may be interpreted by Maple in unintended ways. 
 
@@ -124,7 +124,7 @@ Similarly, if there is no space or \texttt{*} between a variable name and the pa
 \end{maplelatex}
 \end{maplegroup}
 
-\section*{Assigning Expressions to $x$ or Other Common Variable Names}
+\subsection{Assigning Expressions to $x$ or Other Common Variable Names}
 
 It's never a good idea to assign an expression to $x$, $y$, $t$, or other common variable names. If you want to unassign everything at once, you can do this with the \texttt{restart} command on a separate line.
 
@@ -154,7 +154,8 @@ It's never a good idea to assign an expression to $x$, $y$, $t$, or other common
 \end{maplelatex}
 \end{maplegroup}
 \clearpage
-\section*{Equals Signs versus Assignment Operator}
+
+\subsection{Equals Signs versus Assignment Operator}
 
 The equals sign \texttt{=} must be used for an equation and the assignment operator \texttt{:=} is used to store a value or expression for later use.
 
@@ -169,7 +170,7 @@ The equals sign \texttt{=} must be used for an equation and the assignment opera
 \end{maplelatex}
 \end{maplegroup}
 
-\section*{Changing the Order of the Parameters in a Command}
+\subsection{Changing the Order of the Parameters in a Command}
 
 Many commands have multiple parameters and often the order in which the parameters is listed is important. Typing the parameters in an incorrect order in certain commands may cause an error message to be displayed when the command is executed.
 \begin{maplegroup}
@@ -186,7 +187,7 @@ Many commands have multiple parameters and often the order in which the paramete
 \end{maplegroup}
 \marginnote[-1.5cm]{In this example, the two parameters in the \texttt{subs()} command need to be interchanged.}
 
-\section*{Assigning a Function and Not Using Function Notation}
+\subsection{Assigning a Function and Not Using Function Notation}
 
 If you have assigned a function (such as $f(x)$) in Maple, make sure to use function notation in other commands, rather than using only the name of the function.
 
@@ -205,7 +206,7 @@ If you have assigned a function (such as $f(x)$) in Maple, make sure to use func
 \end{maplelatex}
 \end{maplegroup}
 
-\section*{Case-Sensitive Commands}
+\subsection{Case-Sensitive Commands}
 
 Commands are case-sensitive. Make sure to use the correct capitalization.
 

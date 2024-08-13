@@ -2,6 +2,7 @@
 \label{chp:basics_of_maple_syntax}
 
 \section{Algebraic Operations}
+\label{sec:algebraic_operations}
 
 At its elementary level, Maple can be used as a really large, powerful calculator. It can do any arithmetic operation including, but not limited to, addition (+), subtraction (-), multiplication (*), division (/), powers (\textasciicircum), and other more complicated operations such as radicals (roots), logarithms, and exponentials. Anytime Maple performs an arithmetic operation, it is creating an \textit{expression}.
 
@@ -63,6 +64,7 @@ At its elementary level, Maple can be used as a really large, powerful calculato
 \end{maplegroup}
 
 \section{Maple Commands}
+\label{sec:maple_commands}
 
 If we wish to do anything more complicated than basic arithmetic in Maple, we likely need to use a special \textit{command} to perform the desired task. Commands have two parts:
 \begin{itemize}
@@ -79,6 +81,7 @@ You should note that the parameters are always enclosed in parentheses \texttt{(
 Some commands only need one parameter, while others need multiple parameters. In many cases, additional, optional parameters can be added to perform a more specialized procedure.
 
 \section{Radical Functions}
+\label{sec:radical_functions}
 
 For your first commands, you should know how to type a square root or other root into Maple. The \texttt{sqrt()} command can be used for square roots, while it is usually better to use \texttt{surd()} for higher roots.
 
@@ -119,7 +122,9 @@ For your first commands, you should know how to type a square root or other root
 
 \marginnote{Note that capitalization is important in Maple. Capitalizing a character that is not supposed to be capitalized will result in an error or useless output.}
 
-\section{Absolute Value Function} \index{mathematical functions!absolute value}
+\section{Absolute Value Function}
+\label{sec:absolute_value_function}
+\index{mathematical functions!absolute value}
 
 The absolute value function in Maple can be typed out using the \texttt{abs()} command. There is also an absolute value button under the Expression palette if you prefer that method.
 
@@ -135,7 +140,10 @@ The absolute value function in Maple can be typed out using the \texttt{abs()} c
 \end{maplelatex}
 \end{maplegroup}
 
-\section{Exponential and Logarithmic Functions} \index{mathematical functions!exponential} \index{mathematical functions!logarithmic}
+\section{Exponential and Logarithmic Functions}
+\label{sec:exponential_and_logarithmic_functions}
+\index{mathematical functions!exponential}
+\index{mathematical functions!logarithmic}
 
 Another common command that we will frequently use is \texttt{exp()}. This is meant to be used as the exponential function. Unfortunately, simply typing in ${\rm e}^x$ using the `e' key on the keyboard will not perform the correct operation. Instead, Maple treats `e' as it does any other letter, such as `x' or `y'.
 
@@ -169,6 +177,7 @@ We will mostly be using the natural logarithm in calculus, but Maple provides co
 \end{multicols}
 
 \section{Trigonometric and Inverse Trigonometric Functions}
+\label{sec:trigonometric_and_inverse_trigonometric_functions}
 
 Trigonometric functions can be typed directly into a Maple input using parentheses. For inverse trigonometric functions, it is generally considered better to use the $\arctan()$ notation instead of $\tan^{-1}()$ notation.
 
@@ -203,6 +212,7 @@ Trigonometric functions can be typed directly into a Maple input using parenthes
 \end{multicols}
 
 \section{Other Common Functions}
+\label{sec:other_common_functions}
 
 Maple possesses many other useful built-in functions for performing common mathematical operations. They include, but are not limited to, commands that compute the factorial of a number, find the floor or ceiling of a numerical value, return the numerator or denominator of an expression, or determine the maximum or minimum of a collection of arguments.
 
@@ -229,6 +239,7 @@ Maple possesses many other useful built-in functions for performing common mathe
 \end{multicols}
 
 \section{Maple Help}
+\label{sec:maple_help}
 
 \index{help}
 
@@ -240,6 +251,7 @@ If you are unsure of the command name for a procedure that you think Maple shoul
 \noindent will give a description of commands for finding the greatest common divisor and lowest common multiple of two values.
 
 \section{Autocompleting Commands}
+\label{sec:autocompleting_commands}
 
 For convenience, Maple can automatically fill in the command that you wish to type. To do this, type in the first few letters of the command  and then hit ESC. 
 \marginnote{Ctrl+Space is another shortcut for this feature, if you find it more convenient while typing.}
@@ -252,6 +264,7 @@ For example, typing in \texttt{exp} and hitting ESC will provide the following l
 From here, you can select the \texttt{exp} command for the exponential function, or possibly the \texttt{expand} command, which we will look at later. If the command requires a parameter, it should already be highlighted so that you can type in its value. If a command has multiple parameters, you can hit the Tab key to highlight the next parameter.
 
 \section{Multiple Commands at Once}
+\label{sec:multiple_commands_at_once}
 
 As you may have noticed, each time that we have used Maple input in this tutorial, there is a semicolon \texttt{;} at the end of the line. This used to be required in older versions of Maple, though it is no longer mandatory in modern versions.
 
@@ -276,8 +289,8 @@ The reason why the semicolon continues to be important is because it tells Maple
 \end{maplegroup}
 \marginnote{If you use a full colon \texttt{:} instead of a semicolon, then the output of that command is hidden from the screen when it is executed.}
 
-\section{The \% Shortcut}\label{percentage}
-
+\section{The \% Shortcut}
+\label{sec:ditto_operator}
 \index{ditto operator}
 
 Many of the exercises in the activities will involve executing multiple commands to obtain the answer. Often, this means running a command and then running a second command on the result of the first. Although copying and pasting the result from the first command takes less time than typing it out, it often causes many syntax problems.

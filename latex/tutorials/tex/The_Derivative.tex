@@ -2,6 +2,7 @@
 \label{chp:derivative}			
 
 \section{The \texttt{diff()} Command}
+\label{sec:the_diff_command}
 
 The \texttt{diff()} command is probably the most basic way of finding the derivative of an expression. The first parameter is the expression to be differentiated and the second parameter is the variable that the expression is to be differentiated with respect to.
 \index{derivative!diff}
@@ -110,6 +111,7 @@ Higher derivatives can be evaluated by applying the \texttt{diff()} command mult
 \end{maplegroup}
 
 \section{Using Function Notation}
+\label{sec:derivs_using_function_notation}
 
 If you have properly defined a function $f(x)$, you may also make use of the familiar $f'(x)$ notation used in class.
 \index{derivative!prime notation}
@@ -163,7 +165,6 @@ This notation is especially useful for evaluating the derivative at a value, wit
 \end{maplelatex}
 \end{maplegroup}
 
-
 \subsection{Higher Derivatives using Prime Notation}
 
 Higher derivatives are also notated in much the same way as in class. Rather than using a string of tick marks, we use a raised exponent in parentheses to specify the $n$\textsuperscript{th} derivative.
@@ -191,6 +192,7 @@ Higher derivatives are also notated in much the same way as in class. Rather tha
 \end{maplegroup}
 
 \section{Applications of the Derivative}
+\label{sec:Applications_of_the_derivative}
 
 In these examples, we will use the function notation method for derivatives, though the \texttt{diff()} command may also be used.
 
@@ -198,6 +200,7 @@ In these examples, we will use the function notation method for derivatives, tho
 \label{subsec:equation_of_tangent_line}
 \index{lines!tangent line}
 \index{mathematical functions!square root}
+
 In this example, we will find the equation of the tangent line to the function $f(x)=6\sqrt{x} - 2x$ at $x=4$. We start by assigning the function a name.
 
 \begin{maplegroup}
@@ -355,27 +358,27 @@ By factoring the derivative, we can see that $x=0$ is a critical number. We can 
 
 \marginnote{If a closed interval was not specified, we could use the second derivative test to find local minima and maxima.
 	
-	\begin{maplegroup}
-	\begin{mapleinput}
-	\mapleinline{active}{1d}{f''(CN1); f''(CN2); f''(CN3);
-	}{}
-	\end{mapleinput}
-	\mapleresult
-	\begin{maplelatex}
-	\mapleinline{inert}{2d}{-20}{\[\displaystyle -20\]}
-	\end{maplelatex}
-	\mapleresult
-	\begin{maplelatex}
-	\mapleinline{inert}{2d}{8.886020129}{\[\displaystyle  8.886020129\]}
-	\end{maplelatex}
-	\mapleresult
-	\begin{maplelatex}
-	\mapleinline{inert}{2d}{-8.221546325}{\[\displaystyle - 8.221546325\]}
-	\end{maplelatex}
-	\end{maplegroup}
-	
-	\noindent
-	Since $f(x)$ is concave down at \texttt{CN1} and \texttt{CN3}, we have found two local maxima. Since $f(x)$ is concave up at \texttt{CN2}, we have found one local minimum.
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{f''(CN1); f''(CN2); f''(CN3);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-20}{\[\displaystyle -20\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{8.886020129}{\[\displaystyle  8.886020129\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-8.221546325}{\[\displaystyle - 8.221546325\]}
+\end{maplelatex}
+\end{maplegroup}
+
+\noindent
+Since $f(x)$ is concave down at \texttt{CN1} and \texttt{CN3}, we have found two local maxima. Since $f(x)$ is concave up at \texttt{CN2}, we have found one local minimum.
 }
 
 \begin{maplegroup}
@@ -463,7 +466,7 @@ Comparing these values, we see that $x=3.201521345$ gives an absolute maximum of
 \clearpage
 
 \section{The Derivatives Tutor}
-
+\label{sec:the_derivatives_tutor}
 \index{derivative!tutor}
 
 The Derivatives tutor is a useful way for visualising the graphs of the first (and second) derivatives of a given function.
@@ -497,6 +500,7 @@ The Derivatives tutor is a useful way for visualising the graphs of the first (a
 \end{figure}
 
 \section{The Differentiation Methods Tutor}
+\label{sec:the_differentiation_methods_tutor}
 
 The Differentiation Methods tutor is useful for showing each individual differentiation rule as a separate step when finding the derivative of a given function.
 
@@ -556,7 +560,8 @@ The Differentiation Methods tutor is useful for showing each individual differen
 \adjincludegraphics[width=0.8\textwidth,trim={0 {0.3\height} 0 0},clip]{tutorials/figures/DiffTutorQ2-3-eps-converted-to.pdf}
 \end{figure}
 
-\section{Newton's Method} \label{sec:newtonsmethod}
+\section{Newton's Method}
+\label{sec:newtonsmethod}
 
 Suppose we start with the function $f(x) = {\rm e}^x - 2$. We know that the root of this function is $x = \ln 2$. If we wish to evaluate $\ln 2$ as a decimal, we can simply use \texttt{fsolve()}.
 

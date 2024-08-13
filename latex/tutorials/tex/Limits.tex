@@ -2,6 +2,8 @@
 \label{chp:limits}				
 
 \section{Limits}
+\label{sec:limits_tutorial}
+
 \marginnote[0.3cm]{The order of the parameters in the \texttt{limit()} command is important. An error message will be displayed if you switch the order of the parameters in the command and then try to execute it.}
 We can use the \texttt{limit()} command to evaluate the limit of a function as $x$ approaches $a$. The \texttt{limit()} command needs two parameters. The first parameter is the expression and the second parameter gives the value for a variable to approach.
 
@@ -48,6 +50,7 @@ We can use the \texttt{limit()} command to evaluate the limit of a function as $
 \end{marginfigure}
 
 \section{One-Sided Limits}
+\label{sec:one_sided_limits}
 
 For one-sided limits, you will need to add an additional parameter to the \texttt{limit()} command, specifying which side (left or right) to approach the value from. In the case of a vertical asymptote, these limits will be equal to $\pm \infty$.
 
@@ -188,6 +191,7 @@ Even though this limit does not exist, we cannot automatically conclude that $f(
 Since these limits are given as $\pm \infty$, we know that $f(x)$ has a vertical asymptote at $x=5$.
 
 \section{Limits at Infinity}
+\label{sec:limits_at_infinity}
 
 To take the limit of a function as $x$ becomes infinitely large, Maple recognizes \texttt{infinity} and \texttt{-infinity}. These can be used to find horizontal asymptotes. If the function does not have a horizontal asymptote, the limit may result in $\pm \infty$.
 
@@ -306,6 +310,7 @@ To find the left-hand asymptote, we take the limit as $t \rightarrow -\infty$.
 
 \section{Limits and Piecewise Functions}
 \label{sec:limits_and_piecewise_functions}
+
 A piecewise function is a good opportunity to practice plotting discontinuities and investigating one- and two-sided limits.
 \index{mathematical functions!piecewise}
 \begin{maplegroup}
@@ -396,6 +401,7 @@ The Limit Methods tutor will walk you through each step needed to evaluate a lim
 \newpage
 
 \subsection{Using Limit Laws for a One-sided Limit}
+
 \index{limit!tutor!one-sided}
 This example will illustrate all of the steps required to evaluate \[ \displaystyle\lim_{x \rightarrow 2^+} \frac{x-2}{x^2-x-2}. \]
 \begin{figure}[h]
@@ -417,6 +423,7 @@ This example will illustrate all of the steps required to evaluate \[ \displayst
 \clearpage
 
 \subsection{Using Limit Laws for a Limit at Infinity}
+
 \index{limit!tutor!at infinity}
 In this example, we will see all of the limit laws used to evaluate \[ \displaystyle\lim_{x \rightarrow -\infty} \frac{2x-1}{\sqrt{x^2-x+3}}. \]
 

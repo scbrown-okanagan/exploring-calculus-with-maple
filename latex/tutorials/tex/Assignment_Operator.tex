@@ -2,6 +2,7 @@
 \label{chp:assignment_operator}
 
 \section{Assigning Expressions}
+\label{sec:assigning_expressions}
 
 Having to retype the same expression multiple times is tedious, but using copy and paste in Maple can sometimes produce unwanted effects. A better way to reuse an expression multiple times is to assign a name to it. You can assign any expression to a name of your choice (with some exceptions that Maple has protected) by using the \text{:=} operator.
 \index{assignment operator}
@@ -78,6 +79,7 @@ Having to retype the same expression multiple times is tedious, but using copy a
 \end{maplegroup}
 
 \section{Making a Substitution into an Expression}
+\label{sec:making_substitutions}
 
 Let's suppose you have assigned an expression a name, and wish to replace one of its variables with a value or expression. As an example, we will assign an expression a name of \texttt{expr} and then substitute the numerical value for $\pi$, which is denoted as \texttt{Pi} in Maple, into \texttt{expr}. The command used to substitute a value into an expression is \texttt{subs()}.
 
@@ -156,7 +158,8 @@ You can also substitute one expression into another:
 \end{mapleinput}
 \end{maplegroup}
 
-\section{Defining a Function} \label{sec:define_function}
+\section{Defining a Function}
+\label{sec:define_function}
 
 Instead of defining an expression, it is sometimes more useful to define a function. A function specifies the variables that are included in the expression. This allows us to substitute values into our functions easily using function notation, such as $f(5)$.
 
@@ -206,6 +209,7 @@ A function's name does not have to be a single letter. In fact, it is often a go
 \end{marginfigure}
 
 \section{Using Function Notation}
+\label{sec:function_notation}
 
 Once we have defined a function, we can use function notation much like we would in class. For example, instead of defining an expression involving $x$ to a name such as \texttt{expr} and then using the \texttt{subs()} command to substitute $x=0$ into \texttt{expr}, we can now use the function $f(x)$ as assigned in Section \ref{sec:define_function} and type $f(0)$.
 
@@ -245,6 +249,7 @@ It is easy to substitute an expression into a function using function notation.
 \end{maplegroup}
 
 \section{Operations on Functions}
+\label{sec:operations_on_functions}
 
 Once one or more functions are assigned, we can make expressions using function notation, or perform other operations on those functions.
 
@@ -416,6 +421,7 @@ A piecewise-defined function is a function defined by multiple sub-functions. Ea
 \end{maplegroup}
 
 \section{Functions of More than One Variable}
+\label{sec:functions_multiple_variables}
 
 We can also define functions of multiple variables and use the notation the same way as one variable functions.
 
@@ -474,7 +480,8 @@ An example of a function of more than one variable is the volume of a circular c
 \end{maplelatex}
 \end{maplegroup}
 
-\section{Assigning Plots and the \texttt{display()} Command} \label{sec:display_command}
+\section{Assigning Plots and the \texttt{display()} Command}
+\label{sec:display_command}
 
 You can use the assignment operator to assign just about any type of output to a variable name, including plots. This can be useful when different types of plots need to be displayed on the same graph. You can assign the output of several \texttt{plot()} commands to variables and then 'display' them all on the same set of axes. 
 
