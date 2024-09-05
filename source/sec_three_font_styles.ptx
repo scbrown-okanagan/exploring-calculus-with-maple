@@ -1,0 +1,115 @@
+<section xml:id="sec_three_font_styles">
+  <title>Three Font Styles</title>
+  <p>
+    There are two font styles that are commonly used in execution groups.
+  </p>
+  <ul>
+    <li>
+      <p>
+        <q>2D Math</q>
+        (the default in modern versions)
+      </p>
+      <ul>
+        <li>
+          <p>
+            In this mode, mathematical expressions are formatted nicely,
+            as one would write them on paper.
+          </p>
+        </li>
+        <li>
+          <p>
+            Text will appear in <em>italic</em>,
+            with the exception of common mathematical functions and constants.
+          </p>
+        </li>
+        <li>
+          <p>
+            An example of an expression in 2D Math:
+            <me>
+              \displaystyle {\frac {{x}^{5}}{{ e}^{x}+\sin \left( x \right) }}
+            </me>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Switch to 2D Math using Ctrl+R.
+          </p>
+        </li>
+      </ul>
+      <aside>
+        <p>
+          While 2D Math has the advantage of looking prettier,
+          it often treats spaces as multiplication and it doesn't always treat brackets as multiplication when desired.
+          Maple Input causes fewer issues with how Maple interprets what has been typed,
+          but it often requires the use of many more parenthesis.
+          This lab manual will make frequent use of Maple Input for clarity,
+          but you will likely use 2D Math for most of your exercises.
+        </p>
+      </aside>
+    </li>
+    <li>
+      <p>
+        <q>Maple Input</q>
+        (the default for old versions)
+        <ul>
+          <li>
+            <p>
+              In this mode, mathematical expressions are displayed inline,
+              with no additional formatting.
+            </p>
+          </li>
+          <li>
+            <p>
+              All text is shown in <c>monospaced font</c>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The above expression in Maple input:
+              <pre> x^5/(exp(x)+sin(x)) </pre>
+            </p>
+          </li>
+          <li>
+            <p>
+              Switch to Maple Input using Ctrl+M.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </li>
+  </ul>
+  <p>
+    Finally, paragraphs use a third style of font.
+  </p>
+  <ul>
+    <li>
+      <p>
+        <q>Plain Text</q>
+        <aside>
+          <p>
+            It can be useful to switch to 2D Math in paragraphs for an expression or equation,
+            then switch back to text afterwards.
+          </p>
+        </aside>
+      </p>
+      <ul>
+        <li>
+          <p>
+            In this mode, mathematical expressions are displayed inline,
+            with no additional formatting.
+          </p>
+        </li>
+        <li>
+          <p>
+            All text is shown in a standard font, such as this line.
+          </p>
+        </li>
+        <li>
+          <p>
+            Switch to Plain Text using Ctrl+T.
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>

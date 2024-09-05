@@ -1,0 +1,50 @@
+<section xml:id="sec_radical_functions">
+  <title>Radical Functions</title>
+  <p>
+    For your first commands,
+    you should know how to type a square root or other root into Maple.
+    The <c>sqrt()</c> command can be used for square roots,
+    while it is usually better to use <c>surd()</c> for higher roots.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {sqrt(a);
+    <idx><h>mathematical functions</h><h>square root</h></idx> } \end{mapleinput} \relax \begin{maplelatex} {sqrt(a)}{
+    <me>
+      \displaystyle  \sqrt{a}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      The <c>sqrt()</c> command can also be found in the Expression palette by clicking <m>\sqrt{a}</m>.
+      However, the <c>surd()</c> command is better than using the
+      <m>\sqrt[n]{a}</m> button in most cases.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {surd(a, 3);} <idx><h>mathematical functions</h><h>nth root@<m>n</m><sup>th</sup> root</h></idx> \end{mapleinput} \relax \begin{maplelatex} {a^(1/3)}{
+    <me>
+      \displaystyle \sqrt [3]{a}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {surd(a, 4); } \end{mapleinput} \relax \begin{maplelatex} {a^(1/4)}{
+    <me>
+      \displaystyle \sqrt [4]{a}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      Note that capitalization is important in Maple.
+      Capitalizing a character that is not supposed to be capitalized will result in an error or useless output.
+    </p>
+  </aside>
+</section>

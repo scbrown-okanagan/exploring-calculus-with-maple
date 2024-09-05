@@ -1,0 +1,89 @@
+<section xml:id="sec_assigning_expressions">
+  <title>Assigning Expressions</title>
+  <p>
+    Having to retype the same expression multiple times is tedious,
+    but using copy and paste in Maple can sometimes produce unwanted effects.
+    A better way to reuse an expression multiple times is to assign a name to it.
+    You can assign any expression to a name of your choice
+    (with some exceptions that Maple has protected)
+    by using the \text{ := } operator.
+        <idx><h>assignment operator</h></idx>
+        <idx><h>mathematical functions</h><h>exponential</h></idx>
+        <idx><h>mathematical functions</h><h>square root</h></idx>
+  </p>
+  <aside>
+    <p>
+      Protected names include common functions such as <c>exp</c>.
+      For example,
+      <c>> exp := 2*x;</c> would cause an error.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {poly := 3*x\symbol{94}4 - 2*x + 1; } \end{mapleinput} \relax \begin{maplelatex} {poly := 3*x^4-2*x+1}{
+    <me>
+      \displaystyle \textit{poly}\, := \,3\,{x}^{4}-2\,x+1
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {poly; } \end{mapleinput} \relax \begin{maplelatex} {3*x^4-2*x+1}{
+    <me>
+      \displaystyle 3\,{x}^{4}-2\,x+1
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      Never assign anything to single-letter names such as <m>x</m> or <m>y</m>.
+      It is best to keep single letters as arbitrary variables.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {poly\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {(3*x^4-2*x+1)^2}{
+    <me>
+      \displaystyle  \left( 3\,{x}^{4}-2\,x+1 \right) ^{2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {expr := (4\symbol{94}x - x\symbol{94}4) / exp(x + 1); } \end{mapleinput} \relax \begin{maplelatex} {expr:=(4^x-x^4)/exp(x+1)}{
+    <me>
+      \displaystyle \textit{expr}\, := \,{\frac {{4}^{x}-{x}^{4}}{{{ e}^{x+1}}}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      It is important to assign expressions to names that make sense to you and are easy to remember.
+      It is also recommended not to reuse a name in the same document.
+      If you assign a new expression to an old name,
+      the new expression will overwrite what was previously assigned.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {expr; } \end{mapleinput} \relax \begin{maplelatex} {(4^x-x^4)/exp(x+1)}{
+    <me>
+      \displaystyle {\frac {{4}^{x}-{x}^{4}}{{{ e}^{x+1}}}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {sqrt(expr); } \end{mapleinput} \relax \begin{maplelatex} {sqrt((4^x-x^4)/exp(x+1))}{
+    <me>
+      \displaystyle  \sqrt{{\frac {{4}^{x}-{x}^{4}}{{{ e}^{x+1}}}}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

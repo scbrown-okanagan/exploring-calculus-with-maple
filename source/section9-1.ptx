@@ -1,0 +1,115 @@
+<section>
+  <title>Expressing a Result as a Decimal</title>
+  <p>
+    Maple tries to use exact, symbolic values whenever it can.
+    If you need a decimal representation of a value or expression,
+    you can use the <c>evalf()</c> command as seen below.
+  </p>
+  <p>
+        <idx><h>evalf</h></idx>
+        <idx><h>mathematical functions</h><h>square root</h></idx>
+        <idx><h>Digits</h></idx>
+        <idx><h>Pi</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {sqrt(2); } \end{mapleinput} \relax \begin{maplelatex} {sqrt(2)}{
+    <me>
+      \displaystyle  \sqrt{2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {evalf(sqrt(2)); } \end{mapleinput} \relax \begin{maplelatex} {1.414213562}{
+    <me>
+      \displaystyle  1.414213562
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      Maple will default to a decimal approximation anytime the input already uses decimals.
+      For example, try <c>sqrt(2.0)</c> and see the result.
+    </p>
+  </aside>
+  <p>
+    It is often useful to give the exact value as well as the decimal approximation in one execution group,
+    using the % shortcut:
+  </p>
+  <aside>
+    <p>
+      Recall that using the % symbol within another command will use the result of the first command automatically.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {sqrt(2);
+    evalf( } \end{mapleinput} \relax \begin{maplelatex} {sqrt(2)}{
+    <me>
+      \displaystyle  \sqrt{2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \begin{maplelatex} {1.414213562}{
+    <me>
+      \displaystyle  1.414213562
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    By default, Maple will express a decimal with <m>10</m>-digit accuracy.
+    This default can be changed by assigning a new value to <c>Digits</c>,
+    or you can specify the number of digits anytime you use the <c>evalf()</c> command.
+  </p>
+  <aside>
+    <p>
+      The first letter of <c>Digits</c> must be capitalized and there must be a colon included before the equals sign.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {Digits := 15; } \end{mapleinput} \relax \begin{maplelatex} {Digits := 15}{
+    <me>
+      \displaystyle \textit{Digits}\, := \,15
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      The assignment operator <c>:=</c> is explained in detail in <xref ref="chp_assignment_operator">Tutorial</xref>
+      on <xref ref="chp_assignment_operator">page</xref>.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {Pi; } \end{mapleinput} \relax \begin{maplelatex} {Pi}{
+    <me>
+      \displaystyle \pi
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {evalf(Pi); } \end{mapleinput} \relax \begin{maplelatex} {3.14159265358979}{
+    <me>
+      \displaystyle  3.14159265358979
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {evalf(Pi,50); } \end{mapleinput} \relax \begin{maplelatex} {3.1415926535897932384626433832795028841971693993751}{
+    <me>
+      \displaystyle  3.1415926535897932384626433832795028841971693993751
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

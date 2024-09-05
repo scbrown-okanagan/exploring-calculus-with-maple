@@ -1,0 +1,30 @@
+<section xml:id="sec_paragraphs">
+  <title>Paragraphs</title>
+  <aside>
+    <p>
+      <image width="50%" source="images/InsertParagraph.png"/>
+    </p>
+  </aside>
+  <p>
+    <em>Paragraphs</em> are used for text,
+    rather than for computation.
+    Hitting Enter simply creates a new line of text and does not try to display a result.
+    <ul>
+      <li>
+        <p>
+          Create new text after the current line with the <image width="4%" source="images/new_text.png"/> button.
+        </p>
+      </li>
+      <li>
+        <p>
+          Create new text after the current line with Ctrl+Shift+J.
+        </p>
+      </li>
+      <li>
+        <p>
+          Create new text before the current line with Ctrl+Shift+K.
+        </p>
+      </li>
+    </ul>
+  </p>
+</section>

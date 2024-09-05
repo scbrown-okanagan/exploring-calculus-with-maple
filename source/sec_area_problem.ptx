@@ -1,0 +1,195 @@
+<section xml:id="sec_area_problem">
+  <title>Areas Between Curves</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:definite_and_indefinite_Integrals}, pg.
+          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Consider two functions, <m>f(x)</m> and <m>g(x)</m>.
+      We can find the <em>total</em> area between these two curves,
+      over an interval <m>a \le x \le b</m>,
+      by integrating the absolute value of the difference between these two functions.
+      In other words,
+      <me>
+        \text{ Total Area }  = \displaystyle\int_a^b \abs{f(x)-g(x)}\,dx
+      </me>.
+    </p>
+    <p>
+          <idx><h>integral</h><h>total area</h></idx>
+      If <m>f(x) \ge g(x)</m> over that interval, then the absolute value can be dropped.
+      If <m>g(x) \ge f(x)</m> over that interval,
+      then the absolute value can be dropped and the order of subtraction reversed.
+    </p>
+    <aside>
+      <p>
+        If <m>f(x)\ge g(x)</m> for some subintervals of <m>a \le x \le b</m> and
+        <m>g(x) \ge f(x)</m> for other subintervals of <m>a \le x \le b</m>,
+        then the intersection points of the two functions must be found and the integral must be split into multiple parts for each subinterval.
+        Maple handles this process automatically.
+      </p>
+    </aside>
+    <p>
+      In other circumstances, we may be interested in the <em>net</em>
+      area between <m>f(x)</m> and <m>g(x)</m>.
+      For example,
+      if <m>f(x)</m> and <m>g(x)</m> both represent rates of change of some quantity,
+      then the net area
+      <me>
+        \text{ Net Area }  = \displaystyle\int_a^b \left(f(x)-g(x)\right)\,dx
+      </me>
+      will give us the net difference between the two quantities over an interval.
+          <idx><h>integral</h><h>net area</h></idx>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          In this exercise,
+          we will find the area of the region bounded by the curves
+          <me>
+            y = x^2 - c^2 \;\; \text{ and }  \;\; y = c^2 - x^2
+          </me>
+          and ultimately,
+          determine the value of <m>c</m> that gives an exact area of 576.
+        </p>
+        <ol>
+          <aside>
+            <p>
+              Maple will not be able to plot these two curves on the <m>xy</m>-plane,
+              since there is an unexpected third variable, <m>c</m>.
+              You will need to choose a value of <m>c</m> to see an example.
+            </p>
+          </aside>
+          <li>
+            <p>
+              To begin, we should view the region between the two curves.
+              Repeat the following steps for at least two different choices of <m>c</m>.
+            </p>
+            <ol>
+              <li>
+                <p>
+                  Plot <m>y = x^2 - c^2</m> and
+                  <m>y=c^2 - x^2</m> on the same axes using your choice of <m>c</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Adjust the axes so that you can view the entire region.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Once the entire region is shown on your plot,
+                  estimate the <m>x</m>-coordinates of the two points of intersection.
+                </p>
+              </li>
+            </ol>
+            <aside>
+              <p>
+                An example of finding intersection points is provided on <xref ref="subsec_functionintersection">page</xref>.
+              </p>
+            </aside>
+          </li>
+          <li>
+            <p>
+              Now, using the <c>solve()</c> (or <c>fsolve()</c>) command,
+              find the <m>x</m>-coordinates of the two intersection points of
+              <m>y = x^2 - c^2</m> and <m>y = c^2 - x^2</m>.
+              These <m>x</m>-coordinates should be dependant on <m>c</m>.
+            <idx><h>solving equations</h><h>solve</h></idx>
+        </p>
+          </li>
+          <li>
+            <p>
+              Set up an integral using the <c>int()</c> command to find the area between
+              <m>y = x^2 - c^2</m> and <m>y = c^2 - x^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Set this area equal to <m>576</m> and solve for <m>c</m>.
+            </p>
+          </li>
+        </ol>
+        <aside>
+          <p>
+            Since velocity is a rate of change of position,
+            integrating velocity over an interval of time gives the net change in position,
+            called displacement.
+            Integrating the difference of two velocity functions gives the net difference between the two displacements.
+          </p>
+        </aside>
+      </li>
+      <li>
+        <p>
+          Suppose that two runners are competing in a <m>2</m>-minute sprint.
+          After <m>t</m> seconds, the velocity of runner A is given by
+          <me>
+            v_A(t) = \frac{64.8 { e}^{-0.018t}}{(1 + 3{ e}^{-0.018t})^2}
+          </me>
+          and the velocity of runner B is given by
+          <me>
+            v_B(t) = \frac{90.0 { e}^{-0.015t}}{(1 + 4{ e}^{-0.015t})^2}
+          </me>.
+          Both velocities are in m/s.
+          <aside>
+            <p>
+              Don't forget that the <c>exp()</c> function is used for <m>{ e}^x</m>.
+              You cannot use the letter <sq>e</sq> on the keyboard for the exponential function.
+            </p>
+          </aside>
+            <idx><h>mathematical functions</h><h>exponential</h></idx>
+          <ol>
+            <aside>
+              <p>
+                It is a good idea to choose colours for each function so that you can tell them apart on your plot.
+              </p>
+            </aside>
+            <li>
+              <p>
+                Plot both velocity functions on the same axes for duration of <m>2</m> minutes
+                (use <m>0 \leq t \leq 120</m>,
+                since <m>t</m> is in seconds).
+              </p>
+            </li>
+            <li>
+              <p>
+                Using your graph,
+                try to guess which runner makes it the farthest distance in <m>2</m> minutes.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the net area between <m>v_A(t)</m> and <m>v_B(t)</m> on the interval <m>[0,120]</m>.
+                This corresponds to the net difference in displacement during the race.
+              </p>
+            </li>
+            <li>
+              <p>
+                Which runner made it the farthest distance in <m>2</m> minutes?
+                By how many metres?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

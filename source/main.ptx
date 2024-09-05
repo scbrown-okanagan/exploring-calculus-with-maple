@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <docinfo>
+<macros>
+\renewcommand{\thechapter}{\Alph{chapter}}
+\renewcommand{\theHchapter}{otherchapter\thechapter}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\oztexmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\swpmapleplot}
+\def\imapleplot{\mapleplot}
+\def\MakeTab#1{\catcode `#1 = 4 }
+\def\MakeParameter#1{\catcode `#1 = 6 }
+\def\MakeSuperScript#1{\catcode `#1 = 7 }
+\def\MakeSubScript#1{\catcode `#1 = 8 }
+\def\MakeLetter#1{\catcode `#1 = 11 }
+\def\MakeOther#1{\catcode`#1 = 12 }
+\def\MakeActive#1{\catcode `#1 = \active\relax }
+\def\MakeTabActive{\MakeActive{\^^I}}
+\def\MakeEolActive{\MakeActive{\^^M}}
+\def\MapleSpace{\ }
+\def\endmaplelatex{}
+\newcommand{\mapleinline}[2]{}
+\def\maplegroup{\relax}
+\def\endmaplegroup{\relax}
+\def\mapleresult{\relax}
+\newcommand{\mapleplotname}[1]{
+\vskip.5\MaplePlotHeight
+\begin{center}\Large \bfseries Plot:  #1\end{center}
+\vskip.5\MaplePlotHeight
+}
+\def\mapleplot{\mapleplotname}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\epsfigmapleplot}
+\def\imapleplot{\mapleplot}
+\def\mapleplot{\mapleplotname}
+\def\imapleplot{\mapleplot}
+\newcommand{\maplesmartplot}[2]{\mapleplotname{#1}}
+\def\csname{Maple 2D Comment\endcsname#1{{\rmfamily\upshape #1}}}
+\def\csname{Maple 2D Input\endcsname#1{{\rmfamily\upshape #1}}}
+\def\csname{Maple 2D Math\endcsname#1{{\rmfamily\upshape #1}}}
+\def\csname{Maple 2D Output\endcsname#1{{\rmfamily\upshape #1}}}
+\def\csname{Maple Help Heading\endcsname#1{{\large\bfseries\sffamily\upshape #1}}}
+\def\csname{Maple Help Normal\endcsname#1{{\rmfamily\textit #1}}}
+\def\csname{Maple 2D Comment\endcsname#1{{\rmfamily\textit #1}}}
+\def\csname{Maple Maple Input\endcsname#1{{\ttfamily\upshape #1}}}
+\def\csname{Maple Output Labels\endcsname#1{{\ttfamily\upshape #1}}}
+\def\csname{Maple Plot Title\endcsname#1{{\large\sffamily\upshape #1}}}
+\def\csname{Maple Plot Text\endcsname#1{{\sffamily\upshape #1}}}
+\def\csname{Maple Popup\endcsname#1{{\bfseries\sffamily\upshape #1}}}
+\def\csname{Maple Hyperlink\endcsname#1{{\bfseries\rmfamily\textit #1}}}
+\def\labelLink#1#2{\Hyperlink{#2}}
+\def\docLink#1#2{\Hyperlink{#2}}
+\def\endmaplespreadsheet{\end{tabular}\end{center}\MapleTableCellfalse}
+\newcommand{\lrp}[1]{\left(#1\right)}
+\newcommand{\lrb}[1]{\left[#1\right]}
+\newcommand{\lrbrace}[1]{\left\lbrace#1\right\rbrace}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\dint}{\displaystyle\int}
+\newcommand{\defint}[2]{\dint^{#2}_{#1}}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}\,}
+\newcommand{\dydx}{\dfrac{dy}{dx}}
+\newcommand{\ddx}{\tfrac{d}{dx}}
+\newcommand{\dddx}{\dfrac{d}{dx}}
+\newcommand{\ifsol}[1]{\ifprintanswers{#1}\fi}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Whole}{\mathbb{W}}
+\newcommand{\Int}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+</macros>
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usepackage{pgfplots}
+</latex-image-preamble>
+  </docinfo>
+  <book>
+    <title>Exploring Calculus with Maple \\ {\Huge Third Edition}</title>
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Mathematics</personname>
+        </author>
+        <author>
+          <personname>Statistics Department</personname>
+        </author>
+      </titlepage>
+    </frontmatter>
+    <xi:include href="./chp_lab_syllabus.ptx"/>
+    <xi:include href="./chp_introduction.ptx"/>
+    <xi:include href="./Calc1Activities.ptx"/>
+    <xi:include href="./chp_lab_test_review_math_112.ptx"/>
+    <xi:include href="./Calc2Activities.ptx"/>
+    <xi:include href="./chp_lab_test_review_math_122.ptx"/>
+    <xi:include href="./chp_maple_environment.ptx"/>
+    <xi:include href="./chp_basics_of_maple_syntax.ptx"/>
+    <xi:include href="./chp_basic_operations.ptx"/>
+    <xi:include href="./chp_plotting_functions.ptx"/>
+    <xi:include href="./chp_assignment_operator.ptx"/>
+    <xi:include href="./chp_equation_solvers.ptx"/>
+    <xi:include href="./chp_limits.ptx"/>
+    <xi:include href="./chp_derivative.ptx"/>
+    <xi:include href="./chp_implicit_functions.ptx"/>
+    <xi:include href="./chp_riemann_sums_and_area_approximation.ptx"/>
+    <xi:include href="./chp_definite_and_indefinite_Integrals.ptx"/>
+    <xi:include href="./chp_differential_equations.ptx"/>
+    <xi:include href="./chp_sequence_and_sseries.ptx"/>
+    <xi:include href="./chp_conditional_statements_and_loops.ptx"/>
+    <xi:include href="./chp_list_of_common_errors.ptx"/>
+    <xi:include href="./chp_list_of_common_commands.ptx"/>
+    <backmatter>
+      <xi:include href="./bibliography.ptx"/>
+      <index>
+        <title>Index</title>
+        <index-list/>
+      </index>
+    </backmatter>
+  </book>
+</pretext>

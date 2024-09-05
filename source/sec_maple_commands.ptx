@@ -1,0 +1,41 @@
+<section xml:id="sec_maple_commands">
+  <title>Maple Commands</title>
+  <p>
+    If we wish to do anything more complicated than basic arithmetic in Maple,
+    we likely need to use a special <em>command</em>
+    to perform the desired task.
+    Commands have two parts:
+    <ul>
+      <li>
+        <p>
+          the <em>command name</em>:
+          this is usually one or more words with no spaces that describes what the command does.
+        </p>
+      </li>
+      <li>
+        <p>
+          the <em>parameters</em> of the command:
+          these are the objects that the command needs to be given so that it can complete its procedure.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    The syntax of a command is as follows:
+  </p>
+  <aside>
+    <p>
+      Never include a space between the name of the command and the parentheses around the parameters.
+      Maple will erroneously treat this space as multiplication.
+    </p>
+  </aside>
+  <p>
+     <c>command( parameter1, parameter2, ... )</c> You should note that the parameters are always enclosed in parentheses <c>( )</c> and there is no space between the name of the command and the first parenthesis.
+  </p>
+  <p>
+    Some commands only need one parameter,
+    while others need multiple parameters.
+    In many cases, additional,
+    optional parameters can be added to perform a more specialized procedure.
+  </p>
+</section>

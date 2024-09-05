@@ -1,0 +1,67 @@
+<section xml:id="sec_algebraic_operations">
+  <title>Algebraic Operations</title>
+  <p>
+    At its elementary level, Maple can be used as a really large,
+    powerful calculator.
+    It can do any arithmetic operation including, but not limited to,
+    addition (+), subtraction (-), multiplication (*), division (/), powers (\textasciicircum),
+    and other more complicated operations such as radicals (roots),
+    logarithms, and exponentials.
+    Anytime Maple performs an arithmetic operation,
+    it is creating an <em>expression</em>.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {a + b; } \end{mapleinput} \relax \begin{maplelatex} {a+b}{
+    <me>
+      \displaystyle a+b
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {a - b; } \end{mapleinput} \relax \begin{maplelatex} {a-b}{
+    <me>
+      \displaystyle a-b
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {a * b; } \end{mapleinput} \relax \begin{maplelatex} {a*b}{
+    <me>
+      \displaystyle ab
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      In 2D Math mode
+      (the default font),
+      it is also possible to perform multiplication by including a space between two variables.
+      However, do not use brackets for multiplication.
+      Maple has no way of knowing whether <m>a(b)</m> is meant as multiplication or as a function of <m>b</m>.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {a / b; } \end{mapleinput} \relax \begin{maplelatex} {a/b}{
+    <me>
+      \displaystyle {\frac {a}{b}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {a \symbol{94} b; } \end{mapleinput} \relax \begin{maplelatex} {a^b}{
+    <me>
+      \displaystyle {a}^{b}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

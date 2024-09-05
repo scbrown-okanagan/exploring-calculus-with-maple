@@ -1,0 +1,211 @@
+<section xml:id="sec_approximate_integration">
+  <title>Other Integral Approximation Techniques</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:derivative}, pg.
+          <xref ref="chp_derivative"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:riemann_sums_and_area_approximation}, pg.
+          <xref ref="chp_riemann_sums_and_area_approximation"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      The trapezoid rule, the midpoint rule,
+      and Simpson's rule are all useful methods for approximating a definite integral of a function <m>f(x)</m>.
+      However, each of these methods has some error in its approximation for a finite number of subintervals.
+      It is possible to calculate an upper bound for this error,
+      which relies on calculating the the maximum value of <m>|f''(x)|</m> (or
+      <m>|f^{(4)}(x)|</m> for Simpson's rule) over the interval first.
+    </p>
+    <p>
+      In this activity,
+      we will use Maple's <c>ApproximateInt()</c><idx><h>integral approximation</h><h>ApproximateInt</h></idx> command to help visualize these three approximation methods and then calculate the error associated with them.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <p>
+      Consider the definite integral <m>\displaystyle\int_{0}^1 { e}^x\sin(x) \; dx</m>.
+          <idx><h>integral</h><h></h></idx>
+    </p>
+    <ol>
+      <li>
+        <p>
+          Plot <m>{ e}^x\sin(x)</m> on the interval <m>[0,1]</m>.
+          <aside>
+            <p>
+              Don't forget that the <c>exp()</c><idx><h>mathematical functions</h><h>exponential</h></idx> function is used for <m>{ e}^x</m>.
+              You cannot use the letter <sq>e</sq> on the keyboard for the exponential function.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the area under <m>{ e}^x\sin(x)</m> using the <em>trapezoid</em>
+          rule with <c>partition=4</c> over the interval <m>[0,1]</m>.
+            <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+            <idx><h>integral approximation</h><h>ApproximateInt!partition</h></idx>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Display this area using <c>output=plot</c>.
+            <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
+            </p>
+          </li>
+          <li>
+            <p>
+              Display the sum for this area using <c>output=sum</c>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the value of this area using <c>output=value</c>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Consider the area under <m>{ e}^x\sin(x)</m> using the <em>midpoint</em>
+          rule with <c>partition=4</c> subintervals over the interval <m>[0,1]</m>.
+            <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+        <ol>
+            <li>
+              <p>
+                Display this area using <c>output=plot</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Display the sum for this area using <c>output=sum</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the value of this area using <c>output=value</c>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the area under <m>{ e}^x\sin(x)</m> using <em>Simpson's</em>
+          rule with <c>partition=4</c> subintervals over the interval <m>[0,1]</m>.
+            <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+        <ol>
+            <li>
+              <p>
+                Display this area using <c>output=plot</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Display the sum for this area using <c>output=sum</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the value of this area using <c>output=value</c>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          The upper bounds for the errors of the
+          <em>trapezoid</em> and <em>midpoint</em>
+          rules over the interval <m>[a,b]</m> are
+          <me>
+            \abs{E_T}\le\dfrac{K(b-a)^3}{12n^2} \text{ and }  \abs{E_M}\le\dfrac{K(b-a)^3}{24n^2}
+          </me>,
+          respectively.
+          In both cases, <m>K</m> is the maximum value of
+          <m>\abs{f''(x)}</m> over the interval and <m>n</m> is the number of subintervals.
+          Compute these error bounds by following the steps listed.
+            <idx><h>integral approximation</h><h>error</h></idx>
+        <ol>
+            <li>
+              <p>
+                Plot <m>|f''(x)|</m> over the interval <m>[0,1]</m>.
+                Notice that the maximum value of
+                <m>|f''(x)|</m> occurs at a critical number of <m>|f''(x)|</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the critical number of
+                <m>|f''(x)|</m> by solving <m>f'''(x)=0</m> for <m>x</m>.
+                Plug this <m>x</m>-value back into
+                <m>|f''(x)|</m> to find the maximum, <m>K</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute <m>|E_T|</m> using the formula, <m>K</m>, and <m>n=4</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute <m>|E_M|</m> using the formula, <m>K</m>, and <m>n=4</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <aside>
+          <p>
+            When using Simpson's rule with <c>partition=4</c>,
+            this actually correponds to <m>n=8</m>,
+            since there is an additional sample point in each partition.
+          </p>
+        </aside>
+      </li>
+      <li>
+        <p>
+          The upper bound for error of <em>Simpson's</em>
+          rule over the interval <m>[a,b]</m> is
+          <me>
+            \abs{E_S}\le\dfrac{K(b-a)^5}{180n^4}
+          </me>
+          where <m>\abs{f^{(4)}(x)}\le K</m> and <m>n</m> is <em>twice</em>
+          the number of subintervals.
+          Compute this error bound by following the steps listed.
+            <idx><h>integral approximation</h><h>error</h></idx>
+        <ol>
+            <li>
+              <p>
+                Plot <m>|f^{(4)}(x)|</m> over the interval <m>[0,1]</m>.
+                Notice that the maximum value of
+                <m>|f^{(4)}(x)|</m> occurs at an endpoint of the interval.
+              </p>
+            </li>
+            <li>
+              <p>
+                Plug the <m>x</m>-value of this endpoint into
+                <m>|f^{(4)}(x)|</m> to find the maximum, <m>K</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute <m>|E_S|</m> using the formula, <m>K</m>, and <m>n=8</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

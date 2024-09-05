@@ -1,0 +1,68 @@
+<section xml:id="sec_two_types_of_solvers">
+  <title>Two Types of Solvers</title>
+  <p>
+    We will make use of two different equations solvers in Maple:
+  </p>
+  <ul>
+    <li>
+      <p>
+        <c>solve()</c>
+      </p>
+      <ul>
+        <li>
+          <p>
+            This solver attempts to solve an equation and then display the solutions in their exact form.
+            <aside>
+              <p>
+                Maple will give complex solutions using {I = sqrt(-1)}{<m>\displaystyle I= \sqrt{-1}</m>}. For most of the exercises in the activities,
+                these solutions can be ignored.
+              </p>
+            </aside>
+          </p>
+        </li>
+        <li>
+          <p>
+            This solver will give both real and complex solutions.
+          </p>
+        </li>
+        <li>
+          <p>
+            Solutions to high-degree polynomials can be very large and may be displayed symbolically using
+            <q><em>RootOf</em></q>
+            placeholders.
+          </p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>
+        <c>fsolve()</c>
+        <ul>
+          <li>
+            <p>
+              This solver uses numerical approximation methods and displays the solutions in decimal form.
+            </p>
+          </li>
+          <li>
+            <p>
+              This solver will give real solutions with the number of digits assigned to <c>Digits</c>.
+              <aside>
+                <p>
+                  It is a good idea to see the output of both solvers to decide which output is more useful.
+                  A good strategy is to use <c>solve()</c> and see if the output is helpful.
+                  If it is not,
+                  then type an <c>f</c> at the start of that input and rerun the new command.
+                </p>
+              </aside>
+            </p>
+          </li>
+          <li>
+            <p>
+              Some solutions may not be found by the methods used by the solver.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </li>
+  </ul>
+</section>

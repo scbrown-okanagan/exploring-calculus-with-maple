@@ -1,0 +1,266 @@
+<section xml:id="sec_newtons_method">
+  <title>Newton's Method</title>
+  <introduction>
+    <p>
+          <idx><h>Newton's method</h></idx>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:derivative}, pg.
+          <xref ref="chp_derivative"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:conditional_statements_and_loops}, pg.
+          <xref ref="chp_conditional_statements_and_loops"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Newton's method is an algorithm that can be used to approximate the root of a continuous function.
+      In class, we learned that the linear approximation for <m>f(x)</m> at <m>x=a</m> is given by the function
+    </p>
+    <aside>
+      <p>
+        There are some practical considerations you should be aware of when using Newton's method including:
+        <ol>
+          <li>
+            <p>
+              how difficult it is to compute the derivative,
+            </p>
+          </li>
+          <li>
+            <p>
+              poor initial guesses, and
+            </p>
+          </li>
+          <li>
+            <p>
+              convergence to the wrong root.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Any of these will lead Newton's method to be less useful.
+      </p>
+    </aside>
+    <me>
+      L(x) = f'(a) (x-a) + f(a)
+    </me>.
+    <p>
+          <idx><h>Newton's method</h><h>formula</h></idx>
+      Now, suppose we are given a continuous function <m>f</m> with a root <m>r</m> and wish to approximate <m>r</m>.
+      One way we could do this is to choose a value <m>a</m> close to <m>r</m>,
+      determine the linear approximation <m>L(x)</m> at <m>x=a</m> and find the root of <m>L(x)</m> by setting it to zero:
+      <me>
+        f'(a) (x-a) + f(a) = 0
+      </me>.
+    </p>
+    <p>
+      This gives the root of <m>L(x)</m> as
+    </p>
+    <aside>
+      <p>
+        Newton's method will fail for a number of different reasons:
+        <ol>
+          <li>
+            <p>
+              if the starting point leads to a cycle between two or more points,
+            </p>
+          </li>
+          <li>
+            <p>
+              if the iteration point is at a critical point, or
+            </p>
+          </li>
+          <li>
+            <p>
+              if the derivative is discontinuous.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Be careful of such situations.
+      </p>
+    </aside>
+    <me>
+      x = a - \frac{f(a)}{f'(a)}
+    </me>.
+    <p>
+      Now, assuming that this value of <m>x</m> is closer to <m>r</m> than our initial value <m>a</m>,
+      we could repeat this process again.
+      Therefore, our formula for each new approximation can be simplified to
+      <me>
+        x_{new} = x_{old} - \dfrac{f(x_{old})}{f^{\prime}(x_{old})}
+      </me>.
+    </p>
+    <p>
+      By repeated evaluation of this equation,
+      we can continue to find better approximations of <m>r</m>.
+    </p>
+    <figure xml:id="fig_newtonsmethod">
+      <caption>Using three iterations of Newton's Method to approximate the root <m>r</m>.</caption>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+width=\linewidth,
+height=0.4\linewidth,
+axis lines=middle,
+xlabel={\(x\)},
+ylabel={\(y\)},
+xlabel style={below right},
+ylabel style={above left},
+xmin=-10, xmax=80, xtick={0},
+ymin=-20, ymax=120, ytick={0}
+]
+\addplot [domain=-10:100, samples=100, thick] {1.05^(x+30)-10};
+\addplot [domain=51.06267696:70, samples=100] {6.415967957*x-327.6164992};
+\addplot [domain=34.49325000:51.06267696, samples=100] {2.546792633*x-87.84715498};
+\addplot [domain=22.80985278:34.49325000, samples=100] {1.134746996*x-25.88341192};
+\addplot[mark=*] coordinates {(17.19363282,0)} node [below] {\(r\)};
+\addplot[mark=*] coordinates {(70,0)} node [below] {\(x_0\)};
+\addplot +[mark=none] coordinates {(70,0) (70, 121.5012578)};
+\addplot[mark=*] coordinates {(51.06267696,0)} node [below] {\(x_1\)};
+\addplot +[mark=none] coordinates {(51.062676960,0) (51.06267696, 42.19889452)};
+\addplot[mark=*] coordinates {(34.49325000,0)} node [below] {\(x_2\)};
+\addplot +[mark=none] coordinates {(34.49325000,0) (34.49325000, 13.25769989)};
+\addplot[mark=*] coordinates {(22.80985278,0)} node [below] {\(x_3\)};
+\addplot +[mark=none] coordinates {(22.80985278,0) (22.80985278, 3.15236232)};
+\draw(axis cs:55,75) node {\(f(x)\)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+    <aside>
+      <p>
+        Newton's method can be used to approximate the critical points
+        (max or min)
+        of a function.
+        Since a function <m>f</m> has a maximum or minimum at a point <m>c</m> for which <m>f^{\prime}(c) = 0</m>,
+        we can simply change our Newton's method to be
+        <me>
+          x_{new} = x_{old} - \dfrac{f^{\prime}(x_{old})}{f^{\prime \prime}(x_{old})}
+        </me>.
+      </p>
+    </aside>
+    <p>
+      In the following exercises,
+      you can make use of the <c>NewtonsMethod()</c> command,
+      provided as part of the <c>Student[Calculus1]</c> package.
+      A useful example can be found in <xref ref="sec_newtonsmethod">Tutorial</xref>
+      on <xref ref="sec_newtonsmethod">page</xref>.
+      However, it is also beneficial to try more advanced coding methods and implement a
+      <q>while</q>
+      loop if you are interested;
+      information regarding loops is given in <xref ref="chp_conditional_statements_and_loops">Tutorial</xref>
+      on <xref ref="chp_conditional_statements_and_loops">page</xref>.
+    </p>
+    <aside>
+      <p>
+        To load the <c>Student[Calculus1]</c> package,
+        the <c>with()</c> command needs to be used.
+        Make sure you capitalize the appropriate letters in the package name,
+        or else it will not load the necessary commands.
+      </p>
+    </aside>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <aside>
+        <p>
+          Be sure to load the <c>Student[Calculus1]</c> package before using the <c>NewtonsMethod()</c> command.
+          The package only needs to be loaded once in your document,
+          not every time you use one of its commands.
+        </p>
+      </aside>
+      <idx><h>Newton's method</h><h>NewtonsMethod</h></idx>
+      <li>
+        <p>
+          Use Maple's <c>NewtonsMethod()</c> command to determine the value of the root of the function <m>f(x) = x^2 - 2</m>.
+          Use an initial guess of <m>2</m>.
+          Iterate until you get <m>10</m> decimal places of accuracy.
+          <aside>
+            <p>
+              Adding the optional <c>iterations</c> parameter to the <c>NewtonsMethod()</c> command allows you to choose how many iterations are performed.
+              By default, <c>NewtonsMethod()</c> carries out <m>5</m> iterations.
+            </p>
+          </aside>
+          <aside>
+            <p>
+              The output of Maple's <c>NewtonsMethod()</c> command can be displayed in different ways,
+              depending on whether the <c>output</c> parameter is set equal to <c>value</c>,
+              <c>plot</c>,
+              <c>animation</c>,
+              or <c>sequence</c>.
+              See <xref ref="sec_newtonsmethod">page</xref> for more information.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply Newton's method to determine the value of the root of the function <m>f(x) = x^2 - 2</m>.
+          Use an initial guess of <m>-2</m>.
+          Iterate until you get <m>10</m> decimal places of accuracy.
+        </p>
+      </li>
+      <li>
+        <p>
+          We cannot use Newton's method to find the root of the function
+          <m>f(x) = x^2 - 2</m> if we use an initial guess of <m>0</m>.
+          Use a graph to help explain why,
+          and discuss your answer by using a new paragraph.
+        </p>
+      </li>
+      <li>
+        <p>
+          Suppose you wish to find the value of
+          <m>\sqrt{7}</m> using Newton's method.
+          <ol>
+            <li>
+              <p>
+                What function would we use if we wanted to apply Newton's method to determine the value of <m>\sqrt{7}</m>?
+                State your answer using a new paragraph.
+              </p>
+            </li>
+            <li>
+              <p>
+                Evaluate <m>\sqrt{7}</m> to <m>15</m> digits using <c>evalf()</c>.
+                Apply Newton's method to the function from part (a) with an appropriate initial guess for <m>x</m> and verify that the values agree.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Newton's method converges with <em>quadratic convergence</em>.
+          That roughly means that you will get twice as many correct digits for <m>x_{new}</m> as you did for <m>x_{old}</m>.
+          Iterate Newton's method for
+          <me>
+            g(x) = x^2 - \sin(x) - 0.5
+          </me>
+          with an initial guess of <m>x = 2</m>.
+          Find the value of the zero of <m>g(x)</m> to <m>16</m> decimal places.
+        </p>
+      </li>
+      <li>
+        <p>
+          (Optional) Write a "while" loop that allows you to solve exercises 1 and 2.
+            <idx><h>loops</h></idx>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

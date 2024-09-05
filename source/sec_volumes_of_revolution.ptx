@@ -1,0 +1,167 @@
+<section xml:id="sec_volumes_of_revolution">
+  <title>Volumes of Revolution</title>
+  <introduction>
+    <p>
+          <idx><h>volume of revolution</h></idx>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:implicit_functions}, pg.
+          <xref ref="chp_implicit_functions"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:definite_and_indefinite_Integrals}, pg.
+          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Volumes of Revolution are often very challenging to visualize on paper.
+      Luckily, Maple has an interactive way of visualizing the volume obtained by revolving a region about a central axis.
+      In this activity,
+      we will use the Volume of Revolution Tutor to find and plot the volume of a region rotated about a vertical axis or horizontal axis.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Define the two functions <m>f(x)=x^5-x^3</m> and <m>g(x)=\sin(x)</m> in Maple.
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Plot the graphs of <m>f(x)</m> and <m>g(x)</m> on the same set of axes.
+            <idx><h>plot</h></idx>
+        </p>
+          </li>
+          <li>
+            <p>
+              Find the points of intersection of the curves <m>f(x)</m> and <m>g(x)</m>,
+              where <m>x\geq0</m>.
+              You can assign this to an expression and use the expression name in the tutor.
+            </p>
+          </li>
+        </ol>
+        <aside>
+          <p>
+            An example of finding intersection points is given on <xref ref="sec_solvingsystemeqs">page</xref>.
+          </p>
+        </aside>
+            <idx><h>solving equations</h><h>intersection points</h></idx>
+      </li>
+      <li>
+        <p>
+          Suppose that the region between the curves <m>f(x)</m> and <m>g(x)</m>,
+          with <m>x \geq 0</m>,
+          is revolved around the line <m>x=\pi</m> to obtain a solid.
+          <ol>
+            <li>
+              <p>
+                Using the <c>Int()</c> command,
+                calculate the volume of revolution.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the Volume of Revolution Tutor to plot the solid and confirm your answer in part (a).
+                <aside>
+                  <p>
+                    An example of using the Volume of Revolution Tutor can be found on <xref ref="sec_volume_of_revolution_tutor">page</xref>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Suppose that the region between the curves <m>f(x)</m> and <m>g(x)</m>,
+          with <m>x \geq 0</m>,
+          is revolved around the line <m>y=-4</m> to obtain a solid.
+          <ol>
+            <li>
+              <p>
+                Use the Volume of Revolution Tutor to calculate the volume of the solid.
+                Before closing the tutor, copy the text at the bottom
+                (in the Maple Command box).
+                <aside>
+                  <p>
+                    You will need to include the <c>Student[Calculus1]</c> package by typing <c>with(Student[Calculus1]):</c> on a new line before the <c>VolumeOfRevolution()</c> command will work.
+                  </p>
+                </aside>
+            <idx><h>volume of revolution</h><h>VolumeOfRevolution</h></idx>
+              </p>
+            </li>
+            <li>
+              <p>
+                Paste this command onto a new line and change <c>'output'=plot</c> to <c>'output'=value</c> to output the volume of the resulting solid.
+            <idx><h>volume of revolution</h><h>VolumeOfRevolution!output options</h></idx>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Suppose you want to find the volume of an egg that has an elliptical shape defined in the <m>xy</m>-plane by <m>\dfrac{x^2}{2}+y^2=1</m>.
+          <ol>
+            <aside>
+              <p>
+                Don't forget to include the <c>plots</c> package before using <c>implicitplot()</c>.
+              </p>
+            </aside>
+            <li>
+              <p>
+                Plot the curve using the <c>implicitplot()</c> command.
+                <aside>
+                  <p>
+                    When plotting the ellipse, it may initially look like a circle.
+                    This is because Maple does not use the same scaling for each axis.
+                    Try clicking on the plot and using the <image width="50%" source="images/1-1.png"/> button in the top menu.
+                  </p>
+                </aside>
+            <idx><h>packages</h><h>plots</h></idx>
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve the equation of the curve for <m>y</m> to get the equations of the top and bottom halves of the ellipse.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the <m>x</m>-intercepts of this ellipse.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the Volume of Revolution Tutor or the <c>Int()</c> command to calculate the area of the solid obtained by revolving the top half of the ellipse about the <m>x</m>-axis.
+            <idx><h>integral</h><h>Int</h></idx>
+        </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

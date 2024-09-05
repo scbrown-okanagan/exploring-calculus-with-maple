@@ -1,0 +1,82 @@
+<section xml:id="sec_derivs_using_function_notation">
+  <title>Using Function Notation</title>
+  <introduction>
+    <p>
+      If you have properly defined a function <m>f(x)</m>,
+      you may also make use of the familiar <m>f'(x)</m> notation used in class.
+          <idx><h>derivative</h><h>prime notation</h></idx>
+          <idx><h>mathematical functions</h><h>sine</h></idx>
+          <idx><h>Pi</h></idx>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := sin(x) + x\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator, arrow;
+      sin(x)+x^2 end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto \sin \left( x \right) +{x}^{2}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {deriv1 := f'(x); } \end{mapleinput} \relax \begin{maplelatex} {deriv1 := cos(x)+2*x}{
+      <me>
+        \displaystyle \textit{deriv1}\, := \,\cos \left( x \right) +2\,x
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      This notation is especially useful for evaluating the derivative at a value,
+      without using the <c>subs()</c> command separately.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {slope1 := f'(0); } \end{mapleinput} \relax \begin{maplelatex} {1}{
+      <me>
+        \displaystyle \textit{deriv1}\, := \, 1
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        While using <m>m</m> is a common choice for slope,
+        it is a good idea to avoid overusing it in your Maple worksheet.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {slope2 := f'(Pi); } \end{mapleinput} \relax \begin{maplelatex} {1}{
+      <me>
+        \displaystyle \textit{slope2}\, := \, -1 + 2\pi
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </introduction>
+  <subsection>
+    <title>Higher Derivatives using Prime Notation</title>
+    <p>
+      Higher derivatives are also notated in much the same way as in class.
+      Rather than using a string of tick marks,
+      we use a raised exponent in parentheses to specify the <m>n</m><sup>th</sup> derivative.
+          <idx><h>derivative</h><h>prime notation!higher derivatives</h></idx>
+      \begin{maplegroup} \begin{mapleinput} {deriv2 := f''(x); } \end{mapleinput} \relax \begin{maplelatex} {deriv2 := -sin(x)+2}{
+      <me>
+        \displaystyle \textit{deriv2}\, := -\sin \left( x \right) +2
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {deriv3 := f<sup>(3)</sup>(x); } \end{mapleinput} \relax \begin{maplelatex} {deriv3 := -cos(x)}{
+      <me>
+        \displaystyle \textit{deriv3}\, := -\cos \left( x \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+</section>

@@ -1,0 +1,135 @@
+<section xml:id="sec_limits">
+  <title>Limits</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:limits}, pg.
+          <xref ref="chp_limits"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      In this activity,
+      students will use the <c>limit()</c>
+          <idx><h>limit</h></idx>
+      command to find various limits.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Calculate the limit <m>\displaystyle\lim_{x \to 1} \dfrac{\ln(x^4+1)-1}{x-2}</m>.
+          <aside>
+            <p>
+              There is a shortcut for limits on the palettes toolbar under Calculus.<image width="50%" source="images/palettelimit.png"/>
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Plot the function
+          <me>
+            f(x)=\dfrac{|x|}{x}
+          </me>
+          over an appropriate range, and then use the <c>limit()</c>
+            <idx><h>limit</h></idx>
+          command to calculate the left-hand limit,
+          the right-hand limit, and the two-sided limit as <m>x</m> tends to zero.
+          <aside>
+            <p>
+              In Maple, the absolute value function <m>|\cdot|</m> is denoted as <c>abs( )</c>.
+            </p>
+          </aside>
+            <idx><h>plot</h><h>discontinuities</h></idx>
+          <aside>
+            <p>
+              Some versions of Maple may not properly display graphs of certain functions that contain discontinuities.
+              In this case,
+              include <c>discont=true</c> as a parameter in the <c>plot( )</c> command.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>g(x)=\dfrac{x^2+x}{\sqrt{x^3+x^2}}</m>.
+          <aside>
+            <p>
+              Use <c>sqrt()</c> to input a square root in Maple.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Use the <c>plot()</c> command between <m>x=-2</m> and <m>x=2</m> to estimate the left-hand-limit,
+                the right-hand limit, and the two-sided limit as <m>x</m> tends to zero.
+                <aside>
+                  <p>
+                    You need to find the limit as <m>x</m> approaches zero,
+                    not as it approaches <m>-2</m> or <m>2</m>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the <c>limit()</c> command to verify your results from part (a).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Estimate the value of
+          <me>
+            \displaystyle\lim_{t\to 0} \dfrac{\sin(t)}{\sin(\pi t)}
+          </me>
+          by using Maple's <c>plot()</c> command,
+          and then check your answer with Maple's <c>limit()</c> command.
+          <aside>
+            <p>
+              Do not forget to use <c>Pi</c> for <m>\pi</m> and include multiplication between <m>\pi</m> and <m>t</m>.
+              You will also need to use <m>t</m> instead of <m>x</m> in your <c>plot()</c> command!
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Calculate <m>\displaystyle\lim_{x \to \infty} \sqrt{x+1}-x</m>.
+            <idx><h>limit</h><h>at infinity</h></idx>
+        <aside>
+            <p>
+              To denote <m>\infty</m> in Maple,
+              you need to type the word <c>infinity</c>.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the Limit Methods Tutor to explore the steps to calculate
+          <me>
+            \displaystyle\lim_{x \to -\infty} \sqrt{x^2+x+1}+x
+          </me>.
+            <idx><h>limit</h><h>at infinity</h></idx>
+        <aside>
+            <p>
+              The Limit Methods Tutor is described on <xref ref="sec_limitmethodstutor">page</xref>.
+            </p>
+          </aside>
+            <idx><h>limit</h><h>tutor</h></idx>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

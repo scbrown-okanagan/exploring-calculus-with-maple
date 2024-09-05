@@ -1,0 +1,33 @@
+<section xml:id="sec_plotting_multiple_functions">
+  <title>Plotting Multiple Functions</title>
+  <p>
+    You can also plot multiple expressions and functions on the same graph using the <c>plot()</c> command.
+    Instead of specifying a single function as your first parameter,
+    create a list of functions using square brackets.
+  </p>
+  <p>
+    Similarly, instead of specifying a single colour,
+    specify a list of colours using square brackets.
+    The order of the functions matches the order of the colours.
+  </p>
+  <aside>
+    <p>
+      If a list of colours is not specified when plotting multiple functions on the same graph,
+      it may be difficult to match each curve to its corresponding function.
+      The first three colours in Maple's default palette are dull shades of red, blue,
+      and green.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {plot([exp(x),
+    sin(x) + cos(x)], x=-10..10, y=-5..5, colour=[black,
+    blue]); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+    tutorials/figures/Plotting_Functionsplot2d2a-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+  </p>
+  <p>
+    If you need several complicated graphs to display at once,
+    you may wish to explore the potential of the <c>display()</c> command,
+    found in <xref ref="sec_display_command">section</xref>
+    on <xref ref="sec_display_command">page</xref>.
+  </p>
+</section>

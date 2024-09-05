@@ -1,0 +1,150 @@
+<section xml:id="sec_transformations_of_graphs">
+  <title>Transformations of Graphs</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:plotting_functions}, pg.
+          <xref ref="chp_plotting_functions"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:assignment_operator}, pg.
+          <xref ref="chp_assignment_operator"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      In this activity,
+      you will plot multiple functions at once to investigate basic transformations of functions.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Plot the graphs of <m>\sin (x)</m> and
+          <m>\cos (x)</m> on the same set of axes.
+          Use <em>red</em> for <m>\sin (x)</m> and
+          <em>blue</em> for <m>\cos (x)</m>.
+          <aside>
+            <p>
+              If you do not specify the <m>x</m>-axis interval, Maple will default to increments of <m>\pi/8</m> from <m>-2\pi</m> to <m>2\pi</m>.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                By what amount do you need to shift the graph of <m>\sin (x)</m> <em>to the left</em>
+                (negative <m>x</m> direction)
+                so that it coincides with the graph of <m>\cos (x)</m>?
+                Answer the question in sentence form by using the <image width="4%" source="images/new_text.png"/> button to create a new paragraph after the current line.
+                <aside>
+                  <p>
+                    An example of plotting multiple functions at once can be found on <xref ref="sec_plotting_multiple_functions">page</xref>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                By what amount do you need to shift the graph of
+                <m>\sin (x)</m> <em>to the right</em>
+                (positive <m>x</m> direction)
+                so that it coincides with the graph of <m>\cos (x)</m>?
+                Write your answer in sentence form using a new paragraph.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          The graphs of <m>{ e}^x</m> and <m>\ln(x)</m> should appear to be reflected over the line <m>y=x</m>.
+          Plot all three graphs on the same axes using <c>linestyle=[solid,solid,dash</c>].
+            <idx><h>plot</h><h>line style</h></idx>
+        <aside>
+            <p>
+              The <c>exp(x)</c> function is the exponential function,
+              <m>{ e}^x</m>.
+            </p>
+          </aside>
+          <aside>
+            <p>
+              When plotting functions of the form <m>y=f(x)</m> using the <c>plot()</c> command,
+              we omit the <m>y=</m>.
+            </p>
+          </aside>
+          <aside>
+            <p>
+              When assigning the function to <m>f(x)</m>,
+              use the <m>:=</m> operator.
+            </p>
+          </aside>
+            <idx><h>assignment operator</h></idx>
+        </p>
+      </li>
+      <li>
+        <p>
+          Assign the function <m>f(x) = \sqrt{-x^2 + 4x + 21}</m>.
+          Plot each of the following functions on the same set of axes:
+          <me>
+            y = f(x), \, y = f(2x), \, y = 3f(x), \, y = f(-x), \, y = -f(x)
+          </me>.
+          Make sure that the graph is displayed with constrained scaling
+          (<m>1:1</m>).
+          Describe each transformation.
+          Write your answer using a new paragraph.
+          <aside>
+            <p>
+              An example of plotting transformations of a function can be found on <xref ref="subsec_plotting_transformations">page</xref>.
+            </p>
+          </aside>
+          <aside>
+            <p>
+              It is always a good practice to specify the colours of multiple graphs in order to tell them apart.
+              A list of plot colours can be found by typing <c>?colours</c> on a new Maple input.
+            </p>
+          </aside>
+            <idx><h>plot</h><h>colours</h></idx>
+        </p>
+      </li>
+      <li>
+        <p>
+          Plot each of the following graphs separately:
+          <aside>
+            <p>
+              The absolute value function <m>|\cdot|</m> in Maple is denoted as <c>abs( )</c>.
+            </p>
+          </aside>
+            <idx><h>mathematical functions</h><h>absolute value</h></idx>
+          <ol>
+            <li>
+              <p>
+                <m>y = \sin(x)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y = \sin(|x|)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y = |\sin(x)|</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        Create a new paragraph to describe the transformations of
+        <m>y = \sin(x)</m> in parts (b) and (c).
+      </li>
+    </ol>
+  </subsection>
+</section>

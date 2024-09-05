@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_conditional_statements_and_loops">
+  <title>Conditional Statements and Loops</title>
+  <xi:include  href="sec_if_else_statements.ptx"/>
+  <xi:include  href="sec_if_elif_else_statements.ptx"/>
+  <xi:include  href="sec_for_loops.ptx"/>
+  <xi:include  href="sec_for_while_loops.ptx"/>
+  <xi:include  href="sec_for_loops_with_conditionals.ptx"/>
+</chapter>

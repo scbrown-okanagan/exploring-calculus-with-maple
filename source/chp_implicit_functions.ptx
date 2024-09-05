@@ -1,0 +1,13 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_implicit_functions">
+  <title>Implicit Functions</title>
+  <introduction>
+    <p>
+          <idx><h>implicit functions</h></idx>
+          <idx><h>assignment operator</h><h>implicit function</h></idx>
+    </p>
+  </introduction>
+  <xi:include  href="sec_implicit_functions_tutorial.ptx"/>
+  <xi:include  href="sec_plotting_implicit_functions.ptx"/>
+  <xi:include  href="sec_implicit_differentiation.ptx"/>
+  <xi:include  href="sec_applications_of_implicit_differentiation.ptx"/>
+</chapter>

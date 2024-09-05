@@ -1,0 +1,9 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_maple_environment">
+  <title>The Maple Environment</title>
+  <xi:include  href="sec_execution_groups.ptx"/>
+  <xi:include  href="sec_paragraphs.ptx"/>
+  <xi:include  href="sec_deleting_intputs.ptx"/>
+  <xi:include  href="sec_three_font_styles.ptx"/>
+  <xi:include  href="sec_using_sections.ptx"/>
+  <xi:include  href="sec_palettes_toolbar.ptx"/>
+</chapter>

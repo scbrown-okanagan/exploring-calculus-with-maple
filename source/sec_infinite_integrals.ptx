@@ -1,0 +1,148 @@
+<section xml:id="sec_infinite_integrals">
+  <title>Infinite Integrals</title>
+  <introduction>
+    <p>
+          <idx><h>integral</h><h>improper</h></idx>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:plotting_functions}, pg.
+          <xref ref="chp_plotting_functions"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:assignment_operator}, pg.
+          <xref ref="chp_assignment_operator"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:definite_and_indefinite_Integrals}, pg.
+          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Infinite integrals are used in a variety of applications,
+      including finding solutions to differential equations by way of the Laplace transform.
+      Infinite integrals can be challenging to evaluate by hand,
+      but in this activity we will see that Maple can handle infinite integrals easily.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Define the function <m>f(x) = \dfrac{1}{\sqrt{2-x}}</m> in Maple.
+              <aside>
+                <p>
+                  Don't forget to use <c>sqrt()</c> when defining this function.
+                </p>
+              </aside>
+            <idx><h>mathematical functions</h><h>square root</h></idx>
+            </p>
+          </li>
+          <li>
+            <p>
+              Plot <m>f(x)</m>.
+            <idx><h>plot</h><h></h></idx>
+        </p>
+          </li>
+          <li>
+            <p>
+              Evaluate the integral <m>\displaystyle\int_{-\infty}^{-1} f(x) dx</m>.
+            <idx><h>integral</h><h></h></idx>
+        </p>
+          </li>
+        </ol>
+        <aside>
+          <p>
+            It is important to check that the function does not have any points of discontinuity before you integrate.
+          </p>
+        </aside>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Define the function <m>g(x) = x{ e}^{-x^2}</m> in Maple.
+              <aside>
+                <p>
+                  Don't forget to use <c>exp()</c> when defining this function.
+                </p>
+              </aside>
+            </p>
+          </li>
+          <li>
+            <p>
+              Plot <m>g(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Evaluate the integral <m>\displaystyle\int_{-\infty}^{\infty} g(x) dx</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Define the function <m>h(x) = \dfrac{\ln x}{x}</m> in Maple.
+            </p>
+          </li>
+          <li>
+            <p>
+              Plot <m>h(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Evaluate the integral <m>\displaystyle\int_{1}^{\infty} h(x) dx</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          The Laplace transform for a function <m>J(t)</m> is given by the improper integral
+          <me>
+            F(s) = \displaystyle\int_{0}^{\infty} J(t){ e}^{-st} dt
+          </me>.
+          <ol>
+            <li>
+              <p>
+                We will assume that <m>s</m> is positive.
+                You will need to type <c>assume(s, positive)</c> on a new line so that Maple will understand this assumption.
+            <idx><h>assume</h></idx>
+        <aside>
+                  <p>
+                    In your output,
+                    <m>s\!\sim</m> means that <m>s</m> is now assumed to be a positive value.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Evaluate the Laplace transform of <m>J(t) = t</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

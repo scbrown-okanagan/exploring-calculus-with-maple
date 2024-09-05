@@ -1,0 +1,75 @@
+<section xml:id="sec_solvingsystemeqs">
+  <title>Solving a System of Equations in Multiple Variables</title>
+  <introduction>
+    <p>
+      We can also solve a system of equations by placing the various equations in a list
+      (by using curly brackets)
+      inside the <c>solve()</c> command. \begin{maplegroup} \begin{mapleinput} {eq1 := x - y = 2; } \end{mapleinput} \relax \begin{maplelatex} {eq1 := x-y = 2}{
+      <me>
+        \displaystyle \textit{eq1}\, := \,x-y=2
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {eq2 := y = x\symbol{94}2 - 4; } \end{mapleinput} \relax \begin{maplelatex} {eq2 := y = x^2-4}{
+      <me>
+        \displaystyle \textit{eq2}\, := \,y={x}^{2}-4
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {solve(\{eq1,
+      eq2\}, \{x, y\}); } \end{mapleinput} \relax \begin{maplelatex} {[x = 2, y = 0], [x = -1, y = -3]}{
+      <me>
+        \displaystyle  \left\{ x=2,y=0 \right\} ,\, \left\{ x=-1,y=-3 \right\}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>solving equations</h><h>solve</h></idx>
+          <idx><h>solving equations</h><h>system</h></idx>
+          <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx>
+          <idx><h>mathematical functions</h><h>sine</h></idx>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Finding the Intersection of Two Functions (Continued)</title>
+    <p>
+      Using a system of equations,
+      we can complete the example from <xref ref="subsec_functionintersection"></xref>
+      with either a single <c>solve()</c> or <c>fsolve()</c> command.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {solve(\{y = x*ln(x),
+      y = sin(x)\}, \{x,y\}); } \end{mapleinput} \relax \begin{maplelatex} {{x = RootOf(_Z*ln(_Z)-sin(_Z)),
+      y = sin(RootOf(_Z*ln(_Z)-sin(_Z)))}}{
+      <me>
+        \displaystyle  \begin{array}{l}\left\{ x=\textit{RootOf} \left( \textit{\_Z}\,\ln  \left( \textit{\_Z} \right) -\sin \left( \textit{\_Z} \right)  \right) ,\right.\\ \left. y=\sin \left( \textit{RootOf} \left( \textit{\_Z}\,\ln  \left( \textit{\_Z} \right)-\sin \left( \textit{\_Z} \right)  \right)  \right)  \right\} \end{array}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        Once again, we find that <c>fsolve()</c> provides a more useful output.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {fsolve(\{y = x*ln(x),
+      y = sin(x)\}, \{x,y\}); } \end{mapleinput} \relax \begin{maplelatex} {{x = 1.752677281, y = .9835052061}}{
+      <me>
+        \displaystyle  \left\{ x= 1.752677281,y= 0.9835052061 \right\}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+</section>

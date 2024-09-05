@@ -1,0 +1,22 @@
+<section xml:id="sec_maple_help">
+  <title>Maple Help</title>
+  <p>
+        <idx><h>help</h></idx>
+  </p>
+  <p>
+    For more information on any of these or other commands
+    (for example, the
+    <q>sin</q>
+    command),
+    you can type a question mark followed by the command name: \begin{mapleinput} {?sin} \end{mapleinput} A help menu will open,
+    which describes the required parameters in the order they must be listed,
+    as well as a few examples.
+    These examples can be very useful for more complicated procedures.
+    There may also be several options described for you to customize the procedure.
+  </p>
+  <p>
+    If you are unsure of the command name for a procedure that you think Maple should have built in,
+    you can also search Maple help.
+    For example, \begin{mapleinput} {?gcd} \end{mapleinput} will give a description of commands for finding the greatest common divisor and lowest common multiple of two values.
+  </p>
+</section>

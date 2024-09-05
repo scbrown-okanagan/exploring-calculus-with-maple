@@ -1,0 +1,179 @@
+<section xml:id="sec_orthogonal_curves">
+  <title>Orthogonal Curves</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:implicit_functions}, pg.
+          <xref ref="chp_implicit_functions"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Orthogonal curves are curves that are perpendicular whenever they intersect.
+      Perpendicular lines<idx><h>lines</h><h>perpendicular lines</h></idx> are an elementary example of this.
+      We know that if <m>m_1</m> and <m>m_2</m> are the slopes of two perpendicular lines,
+      then <m>m_1 m_2 = -1</m>.
+      Similarly, two curves are orthogonal if their derivatives multiply to <m>-1</m> whenever they intersect.
+    </p>
+    <aside>
+      <p>
+        There are a few important things to remember about the <c>implicitplot()</c> command during this activity:<idx><h>implicit functions</h><h>implicitplot</h></idx>
+        <ul>
+          <li>
+            <p>
+              The <c>plots</c> package needs to be loaded using the <c>with()</c> command.
+            </p>
+          </li>
+          <li>
+            <p>
+              Some versions of Maple may not produce a smooth plot.
+              In this case,
+              include either <c>numpoints=30000</c> or <c>grid=[250,250]</c> as a parameter.
+            </p>
+          </li>
+          <li>
+            <p>
+              The optional <c>scaling=constrained</c><idx><h>implicit functions</h><h>implicitplot!scaling</h></idx> parameter can be included to enforce <m>1:1</m> scaling.
+              Alternatively,
+              the optional scaling can be performed by clicking on the graph and then clicking on the <m>1:1</m> button in the plot toolbar at the top of the page.
+            </p>
+          </li>
+          <li>
+            <p>
+              If you are plotting multiple graphs on the same set of axes,
+              it is a good idea to specify plot colours.
+                <idx><h>implicit functions</h><h>implicitplot!multiple plots</h></idx>
+                <idx><h>implicit functions</h><h>implicitplot</h></idx>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </aside>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <aside>
+        <p>
+          Do not forget to include multiplication between <m>x</m> and <m>y</m>.
+        </p>
+      </aside>
+      <li>
+        <p>
+          Consider the curves <m>y^2 - x^2 = 3</m> and <m>xy = 2</m>.
+          <ol>
+            <li>
+              <p>
+                Plot both of these curves on the same set of axes.
+                Make sure both curves appear smooth.
+                <aside>
+                  <p>
+                    In order to find points of intersection, Maple can solve a system of equations in one <c>solve()</c> <idx><h>solving equations</h><h>solve</h></idx> or <c>fsolve()</c><idx><h>solving equations</h><h>fsolve</h></idx> command for both <m>x</m> and <m>y</m>.
+                    If you choose to use the <c>solve()</c> command,
+                    you may need to include the optional parameter <c>explicit=true</c> to avoid the
+                    <em>RootOf()</em> output.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the <m>x</m>- and <m>y</m>-coordinates of the points of intersection.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute the derivatives of both curves.
+                <aside>
+                  <p>
+                    A similar example is detailed on <xref ref="subsec_orthocurves">page</xref>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Are these curves orthogonal at the points of intersection?
+                Confirm this using the fact that
+                <m>m_1 m_2 = -1</m> for perpendicular slopes.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <idx><h>solving equations</h><h>removing <c>RootOf()</c></h></idx>
+      </li>
+      <li>
+        <p>
+          Consider the two families of curves given by
+          <me>
+            y = cx^2
+          </me>
+          and
+          <me>
+            x^2 + 2y^2 = k
+          </me>,
+          where <m>c</m> and <m>k > 0</m> are arbitrary constants.
+          <aside>
+            <p>
+              Be sure to include <m>y=</m> when using the <c>implicitplot()</c> command to plot the curves for the first family.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Plot several curves of the first family using
+                <me>
+                  c=-2,-1,0,1,2
+                </me>
+                <aside>
+                  <p>
+                    You may wish to make all curves of the same family the same colour.
+                  </p>
+                </aside>
+                and several curves of the second family using
+                <me>
+                  k=1,4,9
+                </me>
+                on the same axes.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the <m>x</m> and <m>y</m> coordinates of the four intersection points of the two families of curves.
+                The coordinates of the points should be given in terms of <m>c</m> and <m>k</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute the derivative of each family of curves.
+                <aside>
+                  <p>
+                    It is a good idea to use the assignment operator <m>:=</m> to assign each derivative in part (c) to a name.
+                    This will allow you to easily reference the derivatives when completing part (d).
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Show that the two families of curves are orthogonal at each of the four intersection points,
+                regardless of <m>c</m> and <m>k</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

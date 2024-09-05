@@ -1,0 +1,331 @@
+<section xml:id="sec_Applications_of_the_derivative">
+  <title>Applications of the Derivative</title>
+  <introduction>
+    <p>
+      In these examples,
+      we will use the function notation method for derivatives,
+      though the <c>diff()</c> command may also be used.
+    </p>
+  </introduction>
+  <subsection xml:id="subsec_equation_of_tangent_line">
+    <title>Finding the Equation of a Tangent Line</title>
+    <p>
+          <idx><h>lines</h><h>tangent line</h></idx>
+          <idx><h>mathematical functions</h><h>square root</h></idx>
+    </p>
+    <p>
+      In this example,
+      we will find the equation of the tangent line to the function <m>f(x)=6\sqrt{x} - 2x</m> at <m>x=4</m>.
+      We start by assigning the function a name.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := 6*sqrt(x) - 2*x; } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+      arrow; 6*sqrt(x)-2*x end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto 6\,\sqrt {x}-2\,x
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f'(x); } \end{mapleinput} \relax \begin{maplelatex} {3/sqrt(x)-2}{
+      <me>
+        \displaystyle \frac{3}{\sqrt{x}}-2
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      The <m>y</m>-coordinate and the slope can be found by substituting <m>x=4</m> into the function and its derivative,
+      respectively.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(4); } \end{mapleinput} \relax \begin{maplelatex} {4}{
+      <me>
+        \displaystyle 4
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        Sometimes Maple output can be easily simplified,
+        such as <m>\sqrt{4}</m> here.
+        Alternatively,
+        an <c>evalf(%)</c> command would produce a decimal output.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f'(4);
+      simplify( } \end{mapleinput} \relax \begin{maplelatex} {(3/4)*sqrt(4)-2}{
+      <me>
+        \displaystyle \frac{3}{4}\, \sqrt{4}-2
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {-1/2}{
+      <me>
+        \displaystyle -\frac{1}{2}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+          <idx><h>simplify</h></idx>
+          <idx><h>ditto operator</h></idx>
+    </p>
+    <p>
+      The equation of the tangent line at <m>x=a</m> is
+      <me>
+        L(x) = f'(a) (x-a) + f(a)
+      </me>.
+    </p>
+    <p>
+      In this case, the tangent line is at <m>x=4</m>.
+    </p>
+    <aside>
+      <p>
+        The equation of a tangent line is a major topic of Math 112.
+        Make sure you know this equation well!
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {line := f'(4)*(x-4) + f(4);
+      expand(line); } \end{mapleinput} \relax \begin{maplelatex} {line := ((3/4)*sqrt(4)-2)*(x-4)+4}{
+      <me>
+        \displaystyle \textit{line}\, := \, \left( \frac{3}{4}\, \sqrt{4}-2 \right)  \left( x-4 \right) +4
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax
+    </p>
+    <aside>
+      <p>
+        After expanding the equation,
+        we have the equation of a line in standard <m>y=mx+b</m> form.
+      </p>
+    </aside>
+    <p>
+      \begin{maplelatex} {-(1/2)*x+6}{
+      <me>
+        \displaystyle -\frac{1}{2}x+6
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>expand</h></idx>
+          <idx><h>plot</h></idx>
+          <idx><h>plot</h><h>multiple functions</h></idx>
+          <idx><h>plot</h><h>axes intervals</h></idx>
+    </p>
+    <p>
+      Notice that the line is only defined as an expression and is not in function notation.
+      We can now plot the function and the line.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {plot([f(x),line], x=-1..10);} \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/TangentLine-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        It is a good idea to specify plot colours,
+        especially if plotting more than one tangent line on the same axes.
+      </p>
+    </aside>
+  </subsection>
+  <subsection xml:id="subsec_closed_interval_method">
+    <title>The Closed Interval Method for Min/Max Problems</title>
+    <p>
+          <idx><h>shapes of curves</h><h>maximum</h></idx>
+          <idx><h>shapes of curves</h><h>minimum</h></idx>
+    </p>
+    <p>
+          <idx><h>shapes of curves</h><h>closed interval method</h></idx>
+    </p>
+    <p>
+      In this example,
+      we will find the absolute minimum and maximum values of
+      <me>
+        \displaystyle f(x) = \frac {-x^4+5x^3+20}{\sqrt{x^2+1}}
+      </me>
+      on the interval <m>[-1,5]</m>.
+      It is best to define the function and plot it first to get an idea of where the critical numbers are located.
+    </p>
+    <p>
+          <idx><h>mathematical functions</h><h>square root</h></idx>
+    </p>
+    <aside>
+      <p>
+        Here we have chosen to plot the function <m>f(x)</m> on the interval <m>[-1.5, 5.5]</m>.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := (20 + 5*x\symbol{94}3 - x\symbol{94}4)/sqrt(x\symbol{94}2 + 1); }
+          <idx><h>assignment operator</h></idx>
+      \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+      arrow; (20+5*x^3-x^4)/sqrt(x^2+1) end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto {\frac {-{x}^{4}+5\,{x}^{3}+20}{\sqrt {{x}^{2}+1}}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>plot</h></idx>
+          <idx><h>plot</h><h>axes intervals</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {plot(f(x),
+      x=-1.5..5.5); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/ExtremeValues-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <p>
+      By factoring the derivative, we can see that <m>x=0</m> is a critical number.
+      We can use the <c>fsolve()</c> command over smaller intervals to find the remaining critical numbers.
+    </p>
+    <p>
+          <idx><h>factor</h></idx>
+          <idx><h>shapes of curves</h><h>critical number</h></idx>
+          <idx><h>solving equations</h><h>fsolve</h></idx>
+          <idx><h>derivative</h><h>prime notation</h></idx>
+          <idx><h>solving equations</h><h>fsolve!interval</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {factor(f'(x)); } \end{mapleinput} \relax \begin{maplelatex} {-x*(3*x^4-10*x^3+4*x^2-15*x+20)/(x^2+1)^(3/2)}{
+      <me>
+        \displaystyle -{\frac {x \left( 3\,{x}^{4}-10\,{x}^{3}+4\,{x}^{2}-15\,x+20 \right) }{ \left( {x}^{2}+1 \right) ^{3/2}}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        If a closed interval was not specified,
+        we could use the second derivative test to find local minima and maxima.
+      </p>
+      <p>
+        \begin{maplegroup} \begin{mapleinput} {f''(CN1); f''(CN2);
+        f''(CN3); } \end{mapleinput} \relax \begin{maplelatex} {-20}{
+        <me>
+          \displaystyle -20
+        </me>
+      </p>
+      <p>
+        } \end{maplelatex} \relax \begin{maplelatex} {8.886020129}{
+        <me>
+          \displaystyle  8.886020129
+        </me>
+      </p>
+      <p>
+        } \end{maplelatex} \relax \begin{maplelatex} {-8.221546325}{
+        <me>
+          \displaystyle - 8.221546325
+        </me>
+      </p>
+      <p>
+        } \end{maplelatex} \end{maplegroup}
+      </p>
+      <p>
+        Since <m>f(x)</m> is concave down at <c>CN1</c> and <c>CN3</c>,
+        we have found two local maxima.
+        Since <m>f(x)</m> is concave up at <c>CN2</c>,
+        we have found one local minimum.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {CN1:=0; } \end{mapleinput} \relax \begin{maplelatex} {CN1 := 0}{
+      <me>
+        \displaystyle \textit{CN1}\, := \,0
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {CN2:=fsolve(f'(x)=0, x=1..2); } \end{mapleinput} \relax \begin{maplelatex} {CN2 := 1.078091128}{
+      <me>
+        \displaystyle \textit{CN2}\, := \, 1.078091128
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {CN3:=fsolve(f'(x)=0, x=3..4); } \end{mapleinput} \relax \begin{maplelatex} {CN3 := 3.201521345}{
+      <me>
+        \displaystyle \textit{CN3}\, := \, 3.201521345
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      To apply the closed interval method,
+      we must evaluate the function at all critical numbers in the interval as well as the two endpoints.
+    </p>
+    <p>
+          <idx><h>shapes of curves</h><h>closed interval method</h></idx>
+          <idx><h>evalf</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(CN1); f(CN2);
+      f(CN3); } \end{mapleinput} \relax \begin{maplelatex} {20}{
+      <me>
+        \displaystyle 20
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {16.94310958}{
+      <me>
+        \displaystyle  16.94310958
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {23.55848432}{
+      <me>
+        \displaystyle  23.55848432
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(-1):
+      evalf( } \end{mapleinput} \relax \begin{maplelatex} {9.899494934}{
+      <me>
+        \displaystyle  9.899494934
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        The full colon <c>:</c> here hides the output of inputting the endpoint into the function.
+        Only the output of the <c>evalf(%)</c> command is displayed.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(5):
+      evalf( } \end{mapleinput} \relax \begin{maplelatex} {3.922322703}{
+      <me>
+        \displaystyle  3.922322703
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      Comparing these values, we see that
+      <m>x=3.201521345</m> gives an absolute maximum of
+      <m>23.55848432</m> and that <m>x=5</m> gives an absolute minimum of
+      <m>3.922322703</m> on the interval <m>[-1,5]</m>.
+    </p>
+  </subsection>
+</section>

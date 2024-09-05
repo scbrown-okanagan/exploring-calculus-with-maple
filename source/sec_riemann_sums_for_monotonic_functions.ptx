@@ -1,0 +1,145 @@
+<section xml:id="sec_riemann_sums_for_monotonic_functions">
+  <title>Riemann Sums for Monotonic Functions</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:limits}, pg.
+          <xref ref="chp_limits"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:riemann_sums_and_area_approximation}, pg.
+          <xref ref="chp_riemann_sums_and_area_approximation"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      A monotonic function is one that is strictly increasing or strictly decreasing.
+      In this activity,
+      we will use Maple's <c>ApproximateInt()</c> command to visualize and calculate Riemann sums<idx><h>integral approximation</h><h>Riemann sum</h></idx> for the area below the monotonic function
+      <me>
+        f(x) = x - 2\ln(x)
+      </me>.
+    </p>
+    <p>
+          <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
+    </p>
+    <aside>
+      <p>
+        You will need to load the <c>Student[Calculus1]</c><idx><h>packages</h><h>Student[Calculus1]</h></idx> package to use the <c>ApproximateInt()</c> command.
+        You can do this by typing <c>with(Student[Calculus1]):</c> at the start of your worksheet.
+      </p>
+    </aside>
+    <p>
+          <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <aside>
+      <p>
+        Using left and right endpoint methods,
+        it is easy to come up with an overestimate and underestimate for monotonic functions.
+        In particular,
+        to come up with an overestimate requires only one Riemann sum calculation.
+      </p>
+    </aside>
+    <ol>
+      <li>
+        <p>
+          Use the <c>ApproximateInt()</c> command for
+          <me>
+            f(x) = x - 2\ln(x)
+          </me>
+          on the interval <m>[2,10]</m> with <m>10</m> partitions.
+            <idx><h>integral approximation</h><h>ApproximateInt!partition</h></idx>
+        <ol>
+            <li>
+              <p>
+                Use the options <c>method=left</c> and <c>output=plot</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Repeat the command,
+                but using <c>method=right</c> and <c>output=plot</c>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+    <p>
+      For exercises <m>2</m> through <m>5</m>,
+      answer the question in a new paragraph on your Maple worksheet.
+      <ol>
+        <li>
+          <p>
+            What do you notice about using the left-point method to estimate the area below a monotonically increasing function?
+          </p>
+        </li>
+        <li>
+          <p>
+            What do you notice about using the right-point method to estimate the area below a monotonically increasing function?
+          </p>
+        </li>
+        <li>
+          <p>
+            What do you suspect will happen if you use the left-point method to estimate the area below a monotonically decreasing function?
+          </p>
+        </li>
+        <li>
+          <p>
+            What do you suspect will happen if you use the right-point method to estimate the area below a monotonically decreasing function?
+          </p>
+        </li>
+        <li>
+          <p>
+            Repeat Exercise <m>1</m>,
+            but change <c>output=plot</c> to <c>output=value</c>.
+              <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
+            Evaluate these areas to <m>15</m> digits.
+            <aside>
+              <p>
+                Don't forget that you can convert an exact value to decimal using the <c>evalf()</c>
+              <idx><h>evalf</h></idx>
+                command.
+                You can set the accuracy to <m>15</m> digits at the top of your worksheet using the command <c>Digits := 15</c>.
+                Note that the first letter is always capitalized in <c>Digits</c>.
+              </p>
+            </aside>
+              <idx><h>Digits</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            Using <m>n</m> partitions and <c>output=sum</c>,
+            give the Riemann sum for <m>f(x)</m> on the interval <m>[2,10]</m>.
+            Use both left- and right-point methods.
+            What happens as <m>n \rightarrow \infty</m>?
+          </p>
+        </li>
+        <li>
+          <p>
+            Estimate the Riemann sum for <m>f(x)</m> on the interval
+            <m>[0.5, 3]</m> using <m>10</m> boxes and left- and right-point methods.
+            What do you notice about your answers?
+            Does this contradict your findings about monotonic functions?
+            <aside>
+              <p>
+                Any function that is not monotonic is not as easy to find an overestimate or underestimate for.
+              </p>
+            </aside>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+</section>

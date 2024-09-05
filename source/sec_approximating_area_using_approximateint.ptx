@@ -1,0 +1,248 @@
+<section xml:id="sec_approximating_area_using_approximateint">
+  <title>Approximating the Area Under a Function Using ApproximateInt</title>
+  <introduction>
+    <p>
+      To use the <c>ApproximateInt()</c> command, we must load the
+    </p>
+    <p>
+       <c>Student[Calculus1]</c> package.
+    </p>
+    <p>
+      The function and interval must be specified.
+      Other optional parameters may be included to change how the result is displayed and how the approximation is computed.
+    </p>
+    <p>
+          <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!partition</h></idx>
+    </p>
+    <table xml:id="tbl_approximateint_options">
+      <title>A list of optional parameters for the <c>ApproximateInt()</c> command</title>
+      <tabular>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>Parameter</cell>
+          <cell>Description</cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><c>method = </c><em>method</em></cell>
+          <cell>Select the method for approximation (<c>left</c>, <c>right</c>, <c>lower</c>,
+<c>upper</c>, <c>midpoint</c>, <c>trapezoid</c>, <c>simpson</c>).</cell>
+        </row>
+        <row>
+          <cell><c>output = </c><em>output</em></cell>
+          <cell>Change how the output is displayed (<c>plot</c>, <c>value</c>, <c>sum</c>).</cell>
+        </row>
+        <row>
+          <cell><c>partition =  n </c></cell>
+          <cell>Change the number of subintervals to use for approximation.</cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
+    <p>
+      Most of these methods of approximation are discussed in class:
+      left-point, right-point, midpoint rule,
+      trapezoid rule, and Simpson's rule.
+      When using <c>method=upper</c>,
+      the height of each rectangle corresponds to the maximum value of the function in each subinterval.
+      Similarly, when using <c>method=lower</c>,
+      the height of each rectangle corresponds to the minimum value of the function in each subinterval.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Approximating the Area under <m>10 { e}^{-x}</m></title>
+    <p>
+      We can use different methods for the rectangles,
+      such as left-point and right-point.
+      Let's define a function, <m>f(x)</m> and calculate some approximations.
+    </p>
+    <aside>
+      <p>
+        These are two common methods that we learn when first calculating Riemann sums.
+      </p>
+    </aside>
+    <p>
+          <idx><h>mathematical functions</h><h>exponential</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := 10*exp(-x); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+      arrow; 10*exp(-x) end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto 10\,{{ e}^{-x}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {ApproximateInt(f(x),
+      x = 0..4, method=left, output=value, partition=8);
+      evalf( } \end{mapleinput} \relax \begin{maplelatex} {5+5*exp(-1/2)+5*exp(-1)+5*exp(-3/2)+5*exp(-2)+5*exp(-5/2)+5*exp(-3)+5*exp(-7/2)}{
+      <me>
+        \displaystyle 5+5\,{{ e}^{-1/2}}+5\,{{ e}^{-1}}+5\,{{ e}^{-3/2}}+5\,{{ e}^{-2}}+5\,{{ e}^{-5/2}}+5\,{{ e}^{-3}} +5\,{{ e}^{-7/2}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {12.47472497}{
+      <me>
+        \displaystyle  12.47472497
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {ApproximateInt(f(x),
+      x = 0..4, method=right, output=value, partition=8);
+      evalf( } \end{mapleinput} \relax \begin{maplelatex} {5*exp(-1/2)+5*exp(-1)+5*exp(-3/2)+5*exp(-2)+5*exp(-5/2)+5*exp(-3)+5*exp(-7/2)+5*exp(-4)}{
+      <me>
+        \displaystyle 5\,{{ e}^{-1/2}}+5\,{{ e}^{-1}}+5\,{{ e}^{-3/2}}+5\,{{ e}^{-2}}+5\,{{ e}^{-5/2}}+5\,{{ e}^{-3}}+5\,{{ e}^{-7/2}}+5\,{{ e}^{-4}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {7.566303166}{
+      <me>
+        \displaystyle  7.566303166
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!partition</h></idx>
+          <idx><h>integral approximation</h><h>Riemann sum</h></idx>
+          <idx><h>evalf</h></idx>
+          <idx><h>ditto operator</h></idx>
+          <idx><h>limit</h><h>at infinity</h></idx>
+    </p>
+    <p>
+      If we wish to get the actual area under the curve,
+      we can give the Riemann sum for <m>n</m> rectangles and take the limit as <m>n\rightarrow\infty</m>.
+    </p>
+    <aside>
+      <p>
+        In some cases, Maple may not output this limit as a numerical value.
+        Using the <c>value(%)</c> command after the limit may help to convert the limit to a numerical result.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {ApproximateInt(f(x),
+      x = 0..4, method=left, output=sum, partition=n);
+      limit( \end{mapleinput} \relax \begin{maplelatex} {4*(Sum(10*exp(-4*i/n),
+      i = 0 .. n-1))/n}{
+      <me>
+        \displaystyle 4\,{\frac {1}{n}\sum _{i=0}^{n-1}10\,{{ e}^{-4\,{\frac {i}{n}}}}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {10-10*exp(-4)}{
+      <me>
+        \displaystyle 10-10\,{{ e}^{-4}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {9.816843611}{
+      <me>
+        \displaystyle  9.816843611
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+  <subsection>
+    <title>Approximating the Area under <m>x \sin(x)</m></title>
+    <p>
+      We can define a function and approximate the area under the curve over a specified interval.
+      In this example,
+      we will use the <c>upper</c>,
+      <c>lower</c>,
+      and <c>midpoint</c> methods for approximating rectangles.
+    </p>
+    <p>
+          <idx><h>packages</h><h>Student[Calculus1]</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {with(Student[Calculus1]): } \end{mapleinput} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>mathematical functions</h><h>sine</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := x*sin(x); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+      arrow; x*sin(x) end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto x\sin \left( x \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {ApproximateInt(f(x),
+      x=-3..3, method=upper, output=plot,
+      partition=10); } \end{mapleinput}
+    </p>
+    <aside>
+      <p>
+        The <c>method=upper</c> parameter always uses the <em>highest</em>
+        rectangle in an interval.
+        This will force an overestimate of the actual area underneath the curve.
+      </p>
+    </aside>
+    <p>
+      \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/Riemann_Sumsplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        The <c>method=lower</c> parameter always uses the <em>lowest</em>
+        rectangle in an interval.
+        This will force an underestimate of the actual area underneath the curve.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {ApproximateInt(f(x),
+      x=-3..3, method=upper, output=value,
+      partition=10);} \end{mapleinput} \relax \begin{maplelatex} {7.981170598}{
+      <me>
+        \displaystyle  7.981170598
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {ApproximateInt(f(x),
+      x=-3..3, method=lower, output=value,
+      partition=10);} \end{mapleinput} \relax \begin{maplelatex} {4.202044853}{
+      <me>
+        \displaystyle  4.202044853
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!partition</h></idx> \begin{maplegroup} \begin{mapleinput} {ApproximateInt(f(x), x=-3..3, method=midpoint, output=plot, partition=20);} \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot: tutorials/figures/Riemann_Sumsplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+  </subsection>
+</section>

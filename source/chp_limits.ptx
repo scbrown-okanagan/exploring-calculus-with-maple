@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_limits">
+  <title>Limits</title>
+  <xi:include  href="sec_limits_tutorial.ptx"/>
+  <xi:include  href="sec_one_sided_limits.ptx"/>
+  <xi:include  href="sec_limits_at_infinity.ptx"/>
+  <xi:include  href="sec_limits_and_piecewise_functions.ptx"/>
+  <xi:include  href="sec_limitmethodstutor.ptx"/>
+</chapter>

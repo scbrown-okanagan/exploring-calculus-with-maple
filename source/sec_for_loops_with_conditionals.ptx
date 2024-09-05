@@ -1,0 +1,94 @@
+<section xml:id="sec_for_loops_with_conditionals">
+  <title><c>for</c> Loops with Conditionals</title>
+  <p>
+    We now combine all of the various conditional statements and loops together into one example.
+    Let's assume we have a function <m>g(x)</m> and want to test whether this function is (i) increasing (<m>g'(x) > 0</m>), (ii) decreasing (<m>g'(x) \lt 0</m>),
+    or (iii) neither (critical point (<m>g'(x) = 0</m>)).
+  </p>
+  <p>
+    The loop we have constructed behaves according to the following steps:
+  </p>
+  <p>
+        <idx><h>loops</h><h>for</h></idx>
+    <ol>
+      <li>
+        <p>
+          Begin with the value <m>j=-2</m>.
+          <aside>
+            <p>
+              Note that we can use any letter for the loop index,
+              but the most common choices are <m>i</m>,
+              <m>j</m>, <m>k</m>, and <m>l</m>.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>g'(j)>0</m>, then <m>g</m> is increasing at <m>x=j</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>g'(j)\lt 0</m>, then <m>g</m> is decreasing at <m>x=j</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>g'(j)=0</m>,
+          then <m>g</m> is neither increasing nor decreasing at <m>x=j</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Update <m>j</m> to the next value in the list and repeat steps <m>2</m> through <m>4</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput}
+  </p>
+<pre>
+> g(x) := x^4 - 4*x^3 + 3*x^2:
+> for j in [-2, 0, 4] do
+if subs(x = j, diff(g(x), x)) > 0 then
+print(j, "increasing")
+elif subs(x = j, diff(g(x), x)) &lt; 0 then
+print(j, "decreasing")
+else print(j, "neither")
+end if
+end do
+</pre>
+  <p>
+    \end{mapleinput} \relax \begin{maplelatex} {-2, "decreasing"}{
+    <me>
+      \displaystyle -2,\,\text{ ``decreasing'' }
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {0, "neither"}{
+    <me>
+      \displaystyle 0,\,\text{ ``neither'' }
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {4, "increasing"}{
+    <me>
+      \displaystyle 4,\,\text{ ``increasing'' }
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+        <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
+        <idx><h>loops</h><h>for</h></idx>
+  </p>
+  <aside>
+    <p>
+      From the output, we an see that <m>g'(-2) \lt 0</m>,
+      <m>g'(0) = 0</m>, and <m>g'(4) > 0</m>.
+    </p>
+  </aside>
+</section>

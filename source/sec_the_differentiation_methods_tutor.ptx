@@ -1,0 +1,51 @@
+<section xml:id="sec_the_differentiation_methods_tutor">
+  <title>The Differentiation Methods Tutor</title>
+  <introduction>
+    <p>
+      The Differentiation Methods tutor is useful for showing each individual differentiation rule as a separate step when finding the derivative of a given function.
+    </p>
+    <figure>
+      <caption>Opening up the Differentiation Methods tutor using menus.</caption>
+      \adjincludegraphics[width=\textwidth]{tutorials/figures/DiffTutorLoad1-eps-converted-to.pdf}
+    </figure>
+    <figure>
+      <caption>Opening up the Differentiation Methods tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
+      \adjincludegraphics[width=\textwidth]{tutorials/figures/DiffTutorLoad2-eps-converted-to.pdf}
+    </figure>
+  </introduction>
+  <subsection>
+    <title>Differentiating <m>x^2\cos(x)</m> using Product and Power Rules</title>
+    <figure>
+      <caption>Using the Get Hint button gives you suggestions as to what differentiation rule to use.</caption>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.6\height} 0 0},clip]{tutorials/figures/DiffTutorQ1-1-eps-converted-to.pdf}
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.3\height} 0 0},clip]{tutorials/figures/DiffTutorQ1-2-eps-converted-to.pdf}
+    </figure>
+    <aside>
+      <p>
+        When typing out the function in the tutor,
+        you will not have access to the palettes toolbar in Maple.
+        You will need to type out commands such as <c>sqrt()</c> for square roots.
+        You must also include the symbol * for multiplication.
+      </p>
+    </aside>
+    <figure>
+      <caption>If a rule cannot be applied, then the tutor will provide additional hints.</caption>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.28\height} 0 0},clip]{tutorials/figures/DiffTutorQ1-3-eps-converted-to.pdf}
+    </figure>
+    <figure>
+      <caption>Using the product rule, the power rule, and the derivative of <m>\cos(x)</m> to differentiate <m>x^2\cos(x)</m>.</caption>
+      <image width="80%" source="images/DiffTutorQ1-4-eps-converted-to.png"/>
+    </figure>
+  </subsection>
+  <subsection>
+    <title>Differentiating <m>\frac{\sin(x)}{x\tan(x)}</m> using Rewrite and Quotient Rule</title>
+    <figure>
+      <caption>Using the Rewrite button allows you to replace an expression with another equivalent expression.</caption>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.2\height} 0 0},clip]{tutorials/figures/DiffTutorQ2-1-eps-converted-to.pdf}
+    </figure>
+    <figure>
+      <caption>Applying the quotient rule to differentiate <m>\frac{\sin(x)}{x\tan(x)}</m>.</caption>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.3\height} 0 0},clip]{tutorials/figures/DiffTutorQ2-3-eps-converted-to.pdf}
+    </figure>
+  </subsection>
+</section>

@@ -1,0 +1,6 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_plotting_functions">
+  <title>Basics of Plotting</title>
+  <xi:include  href="sec_plotting_a_single_function.ptx"/>
+  <xi:include  href="sec_common_plot_options.ptx"/>
+  <xi:include  href="sec_plotting_multiple_functions.ptx"/>
+</chapter>

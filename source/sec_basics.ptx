@@ -1,0 +1,234 @@
+<section xml:id="sec_basics">
+  <title>The Basics</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:basic_operations}, pg.
+          <xref ref="chp_basic_operations"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:plotting_functions}, pg.
+          <xref ref="chp_plotting_functions"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      In this activity,
+      you will learn basic usage of some of the most common Maple commands:
+    </p>
+    <sidebyside>
+      <ul>
+        <li>
+          <p>
+            <c>expand()</c>
+              <idx><h>expand</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>factor()</c>
+              <idx><h>factor</h></idx>
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <c>simplify()</c>
+              <idx><h>simplify</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>plot()</c>
+              <idx><h>plot</h></idx>
+          </p>
+        </li>
+      </ul>
+    </sidebyside>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Expand the polynomial <m>(2x-y)^6</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Factor the polynomial <m>16x^4-160x^3y+600x^2y^2-1000xy^3+625y^4</m>.
+          <aside>
+            <p>
+              When two or more variables appear next to each other,
+              be sure to include a <c>*</c> or space between them,
+              so that Maple knows that they are multiplied together.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Simplify the expression <m>\dfrac{x^3-1}{x-1}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Now we would like Maple perform all three commands together.
+          <aside>
+            <p>
+              It is a good practice when using the %
+            <idx><h>ditto operator</h></idx>
+              shortcut to run the commands simultaneously on the same Maple input.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Have Maple expand the rational expression <m>\dfrac{(x-y)^2+(x+y)^2}{x^3-y^3}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Add a semicolon to the end of the line,
+                followed by <c>simplify(%)</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Add another semicolon to the end of the line,
+                followed by <c>factor(%)</c>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Hit Enter to run all three commands together.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <aside>
+          <p>
+            You can add a line break between commands without running them with Shift+Enter.
+          </p>
+        </aside>
+        You should see three outputs now:
+        expanding, simplifying, and factoring.
+      </li>
+      <li>
+        <p>
+          (Optional) Consider polynomials of the form <m>x^p-1</m>,
+          where <m>p</m> is a prime number.
+          Try factoring each of the following:
+          <ol>
+            \begin{minipage}[t]{0.5\textwidth}
+            <li>
+              <p>
+                <m>x^2 - 1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^3 - 1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^5 - 1</m> \end{minipage} \begin{minipage}[t]{0.5\textwidth}
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^7 - 1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x^{19} - 1</m> \end{minipage}
+              </p>
+            </li>
+          </ol>
+        </p>
+        Can you notice a pattern and show that these polynomials follow a particular form when factored?
+        To explain your solution,
+        use the <image width="4%" source="images/new_text.png"/> button to create a new paragraph after the current line.
+        <aside>
+          <p>
+            Ctrl+Shift+J can also be used to create a paragraph after the current line.
+          </p>
+        </aside>
+      </li>
+      <li>
+        <p>
+          Plot
+            <idx><h>plot</h></idx>
+          the following two functions using separate <c>plot()</c> commands and note the difference in domain:
+          <ol>
+            <li>
+              <p>
+                <m>x^{\sfrac{1}{3}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\texttt{surd}(x,3)</m><idx><h>mathematical functions</h><h>nth root@<m>n</m><sup>th</sup> root</h></idx>
+                <aside>
+                  <p>
+                    The <c>surd(x,3)</c> function is equivalent to <m>\sqrt[3]{x}</m>.
+                    Similarly, <c>surd(x,5)</c> is equivalent to <m>\sqrt[5]{x}</m>, etc.
+                  </p>
+                </aside>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          On a new Maple input, create a plot
+            <idx><h>plot</h></idx>
+          of the following list of functions <c>[ x\^2, x\^3, sqrt(x),
+          surd(x,3),
+          abs(x) ]</c><idx><h>plot</h><h>multiple functions</h></idx> and include the following options
+          (separated by commas).
+          <aside>
+            <p>
+              Square brackets in Maple are used to create a comma-separated list of items in the specified order.
+            </p>
+          </aside>
+          <ul>
+            <li>
+              <p>
+                <c>x = -5..10</c> <em>(This specifies the <m>x</m>-axis)</em><idx><h>plot</h><h>axes intervals</h></idx>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>y = -5..10</c> <em>(This specifies the <m>y</m>-axis)</em>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>colour = [red,blue,green,purple,orange]</c>
+            <idx><h>plot</h><h>colours</h></idx>
+              </p>
+            </li>
+          </ul>
+        </p>
+        <aside>
+          <p>
+            An example of plotting multiple functions at once can be found on <xref ref="sec_plotting_multiple_functions">page</xref>.
+          </p>
+        </aside>
+            <idx><h>plot</h><h>multiple functions</h></idx>
+      </li>
+    </ol>
+  </subsection>
+</section>

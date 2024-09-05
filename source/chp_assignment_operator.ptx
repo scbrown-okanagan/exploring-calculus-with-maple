@@ -1,0 +1,11 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_assignment_operator">
+  <title>The Assignment Operator and Defining Functions</title>
+  <xi:include  href="sec_assigning_expressions.ptx"/>
+  <xi:include  href="sec_making_substitutions.ptx"/>
+  <xi:include  href="sec_define_function.ptx"/>
+  <xi:include  href="sec_function_notation.ptx"/>
+  <xi:include  href="sec_operations_on_functions.ptx"/>
+  <xi:include  href="sec_piecewise.ptx"/>
+  <xi:include  href="sec_functions_multiple_variables.ptx"/>
+  <xi:include  href="sec_display_command.ptx"/>
+</chapter>

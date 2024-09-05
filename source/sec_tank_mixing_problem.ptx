@@ -1,0 +1,150 @@
+<section xml:id="sec_tank_mixing_problem">
+  <title>Tank Mixing Problem</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:limits}, pg.
+          <xref ref="chp_limits"></xref>
+            <idx><h>limit</h><h></h></idx>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:differential_equations}, pg.
+          <xref ref="chp_differential_equations"></xref>
+            <idx><h>differential equations</h><h></h></idx>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <aside>
+      <p>
+        Concentration is defined as
+        <me>
+          \text{ concentration } =\frac{\text{ mass } }{\text{ volume } }
+        </me>.
+      </p>
+      <p>
+        If we wish to determine mass,
+        then we can rearrange the equation to obtain
+        <me>
+          \text{ mass } =\text{ concentration } \times\text{ volume }
+        </me>.
+      </p>
+    </aside>
+    <p>
+      Suppose you are having a wedding and you start with a <m>5</m> L tank of coffee that has a concentration of \SI{60}{\gram/\liter}. The wedding guests are drinking the coffee at a rate of \SI{0.2}{\liter/\minute}. You are refilling the tank at a rate of \SI{0.15}{\liter/\minute} with coffee of a concentration of \SI{50}{\gram/\liter}.
+    </p>
+    <p>
+      \tikzset{ ragged border/.style={ decoration={random steps,
+      segment length=1mm, amplitude=0.5mm}, decorate, } }
+    </p>
+    <figure xml:id="fig_coffe_tank">
+      <caption>An illustration of the tank of coffee. The initial conditions for the volume and mass of coffee are shown.</caption>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\fill[cyan!30]
+decorate[ragged border]{
+(0,2) -- (6,2)
+}
+-- (6,1) -- (6.5,1) -- (6.5,0.5) -- (6,0.5) --(6,0) -- (0,0) -- cycle;
+\fill[cyan!30] (-0.5,2.5) -- (0,2.5) to[in=120,out=0](0.7,1.9)-- (1.4,1.9)
+to[out=120,in=0] (0,3) -- (-0.5,3) -- cycle;
+\draw (-0.5,2.5) -- (0,2.5) -- (0,0) -- (6,0) -- (6,0.5) -- (6.5,0.5);
+\draw (-0.5,3) -- (0,3) -- (0,3.5) -- (6,3.5) -- (6,1) -- (6.5,1);
+\draw[|-|] (-0.3,0) --
+node[fill=white,font=,inner ysep=2pt,inner
+xsep=0]{\(V(t)\)}(-0.3,2);
+\draw[stealth-] (-0.5,2.75) -- (-1,2.75)
+node[anchor=east,font=,align=right]{\SI{0.15}{\liter/\minute}\\\SI{50}{\gram/\liter}};
+\draw[-stealth] (6.5,0.75) -- (7.2,0.75)
+node[anchor=west,font=]{\SI{0.2}{\liter/\minute}};
+\node[anchor=north,font=] at (3,3.5) {
+\(\begin{array}{l}
+V(t)=? \\
+m(t)=? \\
+C(t)=?
+\end{array} \)
+};
+\node[anchor=north,font=] at (3,1.5) {
+\(\begin{array}{l}
+V(0)=\SI{5}{\liter}  \\
+m(0)=\SI{300}{\gram} \\
+C(0)=\SI{60}{\gram/\liter}
+\end{array} \)
+};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Setup a differential equation for the volume of coffee in the tank using <m>V'(t) = (\text{ rate in } ) - (\text{ rate out } )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Solve this differential equation using the initial condition to obtain a formula for the volume <m>V(t)</m> after <m>t</m> minutes.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use the <c>solve()</c><idx><h>solving equations</h><h>solve</h></idx> command to compute how long it will be until you run out of coffee.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Set up a differential equation for the mass of coffee in the tank using
+              <me>
+                m'(t) = \lrp{\begin{array}{l} \text{ concentration }   \\ \text{ entering tank } \end{array} } \lrp{\begin{array}{l} \text{ volume }   \\ \text{ rate in } \end{array} } - \lrp{\begin{array}{l} \text{ concentration }   \\ \text{ in tank at time } t \end{array} } \lrp{\begin{array}{l} \text{ volume }   \\ \text{ rate out } \end{array} }
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Solve the differential equation for mass using your initial condition for the mass of the coffee <m>m(t)</m> after <m>t</m> minutes.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Determine the function for the concentration of the coffee in the tank <m>C(t)</m> after <m>t</m> minutes using <m>C(t) = m(t)/V(t)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Plot <m>V(t)</m>, <m>m(t)</m>,
+          and <m>C(t)</m> on separate graphs to see what happens to the mass,
+          volume, and concentration over time.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the <c>limit()</c>
+            <idx><h>limit</h></idx>
+          command to determine the concentration of coffee as you approach the last drop of coffee.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>
