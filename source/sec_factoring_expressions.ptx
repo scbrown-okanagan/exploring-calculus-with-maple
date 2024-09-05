@@ -1,0 +1,74 @@
+<section xml:id="sec_factoring_expressions">
+  <title>Factoring Expressions</title>
+  <p>
+    Maple can also factor expressions with the <c>factor()</c> command.
+    It will factor polynomials
+    (including those with multiple variables)
+    and will even factor more complicated expressions
+    (like those involving trig functions as seen below).
+  </p>
+  <p>
+        <idx><h>factor</h></idx>
+        <idx><h>mathematical functions</h><h>sine</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {factor(x\symbol{94}2 - 1); } \end{mapleinput} \relax \begin{maplelatex} {(x-1)*(x+1)}{
+    <me>
+      \displaystyle  \left( x-1 \right)  \left( x+1 \right)
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      In some cases, Maple may factor the expression and perform some additional basic simplification.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {factor((x\symbol{94}2 + 2*x - 15)/(x\symbol{94}2 + 7*x + 10)); } \end{mapleinput} \relax \begin{maplelatex} {(x-1)/(x+1)}{
+    <me>
+      \displaystyle  \frac{x-3}{x+2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {factor(sin(x)\symbol{94}2 - 3*sin(x) + 2); } \end{mapleinput} \relax \begin{maplelatex} {(sin(x)-1)*(sin(x)-2)}{
+    <me>
+      \displaystyle  \left( \sin \left( x \right) -1 \right)  \left( \sin \left( x \right) -2 \right)
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      If Maple cannot factor the expression given,
+      it will output the original expression.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {factor(x\symbol{94}2 + 1); } \end{mapleinput} \relax \begin{maplelatex} {x^2+1}{
+    <me>
+      \displaystyle {x}^{2}+1
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    Maple will factor expressions with multiple variables as well.
+    Be sure to include multiplication (*) between variables.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {factor(a\symbol{94}3 + 3*a\symbol{94}2*b + 3*a*b\symbol{94}2 + b\symbol{94}3); } \end{mapleinput} \relax \begin{maplelatex} {(a+b)^3}{
+    <me>
+      \displaystyle (a+b)^3
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

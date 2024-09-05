@@ -1,0 +1,107 @@
+<section xml:id="sec_for_while_loops">
+  <title><c>for</c>/<c>while</c> Loops</title>
+  <p>
+        <idx><h>loops</h><h>while</h></idx>
+  </p>
+  <p>
+    Adding a <sq>while</sq> is a short way of adding an inherent <sq>if</sq> for every value of the <sq>for</sq> loop.
+    In the next example,
+    we add <c><sq>while i\symbol{94}2 &lt; 100</sq></c> to check that the square of the index <m>i</m> is less than <m>100</m> every time it increases in value.
+    The moment that this condition is no longer met, the loop terminates.
+  </p>
+  <p>
+    Let's say we want to add the first few squares together:
+    <m>1^2+2^2+3^2+\cdots</m> until <m>i^2</m> becomes greater than or equal to <m>100</m>.
+    Instead of adding an <sq>if</sq> statement every time the loop increases,
+    we can do the same thing with a <sq>while</sq>:
+  </p>
+  <aside>
+    <p>
+      We assign an initial total of <m>0</m> so that we can add a value to it for each iteration of the loop.
+      <c>total := total + i</c>\string^<c>2</c> adds <m>i^2</m> to the current value of <c>total</c> before reassigning the new value.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput}
+  </p>
+<pre>
+> total := 0:
+> for i from 1 while i^2 &lt; 100 do
+total := total + i^2
+end do
+</pre>
+  <p>
+    \end{mapleinput} \relax \begin{maplelatex} {total := 1}{
+    <me>
+      \displaystyle \textit{total}\, := \,1
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 5}{
+    <me>
+      \displaystyle \textit{total}\, := \,5
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 14}{
+    <me>
+      \displaystyle \textit{total}\, := \,14
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 30}{
+    <me>
+      \displaystyle \textit{total}\, := \,30
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 55}{
+    <me>
+      \displaystyle \textit{total}\, := \,55
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 91}{
+    <me>
+      \displaystyle \textit{total}\, := \,91
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 140}{
+    <me>
+      \displaystyle \textit{total}\, := \,140
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 204}{
+    <me>
+      \displaystyle \textit{total}\, := \,204
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {total := 285}{
+    <me>
+      \displaystyle \textit{total}\, := \,285
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup} \begin{Maple Normal}{ \begin{Maple Normal}{ {
+    <me>
+      \displaystyle
+    </me>
+  </p>
+  <p>
+    } }\end{Maple Normal} }\end{Maple Normal}
+  </p>
+  <p>
+        <idx><h>loops</h><h>while</h></idx>
+  </p>
+  <aside>
+    <p>
+      This loop has calculated the value
+      <me>
+        1^2+2^2+3^2+4^2+\cdots+7^2+8^2+9^2=285
+      </me>.
+    </p>
+  </aside>
+</section>

@@ -1,0 +1,7 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_equation_solvers">
+  <title>Equation Solvers</title>
+  <xi:include  href="sec_assigning_equations.ptx"/>
+  <xi:include  href="sec_two_types_of_solvers.ptx"/>
+  <xi:include  href="sec_solving_an_equation_of_one_variable.ptx"/>
+  <xi:include  href="sec_solvingsystemeqs.ptx"/>
+</chapter>

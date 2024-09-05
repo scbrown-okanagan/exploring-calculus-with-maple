@@ -1,0 +1,12 @@
+<section xml:id="sec_the_maple_computer_algebra_system">
+  <title>The Maple Computer Algebra System</title>
+  <p>
+    In lab, you will be using the latest version of Maple,
+    which is a symbolic and numeric computing environment.
+    Maple provides an interface for analyzing,
+    exploring, visualizing, and solving mathematical problems.
+    The interface also allows you to maintain an easy-to-follow document so that you can retrace your thought process.
+    If you plan to pursue any branch of mathematics or field that relies on mathematics,
+    having basic knowledge of a computer algebra system is a very useful tool.
+  </p>
+</section>

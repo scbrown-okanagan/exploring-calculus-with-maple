@@ -1,0 +1,150 @@
+<section xml:id="sec_newtonsmethod">
+  <title>Newton's Method</title>
+  <p>
+    Suppose we start with the function <m>f(x) = { e}^x - 2</m>.
+    We know that the root of this function is <m>x = \ln 2</m>.
+    If we wish to evaluate <m>\ln 2</m> as a decimal,
+    we can simply use <c>fsolve()</c>.
+  </p>
+  <p>
+        <idx><h>mathematical functions</h><h>exponential</h></idx>
+        <idx><h>solving equations</h><h>fsolve</h></idx>
+  </p>
+  <p>
+        <idx><h>packages</h><h>Student[Calculus1]</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {f(x) := exp(x) - 2; } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+    arrow; exp(x)-2 end proc}{
+    <me>
+      \displaystyle f\, := \,x\mapsto {{ e}^{x}}-2
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {fsolve(f(x) = 0); } \end{mapleinput} \relax \begin{maplelatex} {.6931471806}{
+    <me>
+      \displaystyle  0.6931471806
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    We can also find this root by applying Newton's method with an initial guess of <m>x=2</m>.
+    We need to load the <c>Student[Calculus1]</c> package before we use the <c>NewtonsMethod()</c> command.
+  </p>
+  <p>
+    Optional parameters may be included to change how the result is displayed and how many iterations of the method are performed.
+  </p>
+  <p>
+        <idx><h>Newton's method</h><h>NewtonsMethod!output options</h></idx>
+        <idx><h>Newton's method</h><h>NewtonsMethod!iterations</h></idx>
+  </p>
+  <table xml:id="tbl_newtonsmethod_options">
+    <title>A list of optional parameters for the <c>NewtonsMethod()</c> command</title>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Parameter</cell>
+        <cell>Description</cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><c>output = value</c></cell>
+        <cell>Outputs the numerical result of Newton's method.</cell>
+      </row>
+      <row>
+        <cell><c>output = plot</c></cell>
+        <cell>Outputs a plot showing the tangent line approximation approach to finding the root.</cell>
+      </row>
+      <row>
+        <cell><c>output = animation</c></cell>
+        <cell>Much like the <c>plot</c> output, only with each iteration as a separate frame.</cell>
+      </row>
+      <row>
+        <cell><c>output = sequence</c></cell>
+        <cell>Outputs the original guess and the result of each iteration of Newton's method.</cell>
+      </row>
+      <row>
+        <cell><c>iterations = </c><m>n</m></cell>
+        <cell>Specifies the number of iterations to perform in Newton's method.</cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {with(Student[Calculus1]): } \end{mapleinput} \end{maplegroup}
+  </p>
+  <p>
+        <idx><h>packages</h><h>with</h></idx>
+        <idx><h>packages</h><h>Student[Calculus1]</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {NewtonsMethod(f(x),
+    x=2, output=plot); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+    tutorials/figures/newtonsmethodplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+  </p>
+  <p>
+    If we wish to simply evaluate the root,
+    the <c>output=plot</c> option may be omitted.
+    For more accuracy,
+    the algorithm can be run with additional iterations.
+  </p>
+  <p>
+        <idx><h>Newton's method</h><h>NewtonsMethod</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {NewtonsMethod(f(x),
+    x=2); } \end{mapleinput} \relax \begin{maplelatex} {.6931471814}{
+    <me>
+      \displaystyle  0.6931471814
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+        <idx><h>Newton's method</h><h>NewtonsMethod!output options</h></idx>
+        <idx><h>Newton's method</h><h>NewtonsMethod!iterations</h></idx>
+  </p>
+  <aside>
+    <p>
+      The default number of iterations for <c>NewtonsMethod()</c> with the parameter <c>ouput=sequence</c> is <m>5</m>.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {NewtonsMethod(f(x),
+    x=2, output=sequence); } \end{mapleinput} \relax \begin{maplelatex} {2, 1.270670566, .8319573035, .7023505839, .6931894021, .6931471814}{
+    <me>
+      \displaystyle \begin{array}{l}2,\, 1.270670566,\, 0.8319573035,\, 0.7023505839,\, \\ 0.6931894021,\, 0.6931471814 \end{array}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {NewtonsMethod(f(x),
+    x=2, iterations=10); } \end{mapleinput} \relax \begin{maplelatex} {.6931471804}{
+    <me>
+      \displaystyle  0.6931471804
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} \end{mapleinput} \end{maplegroup}
+  </p>
+</section>

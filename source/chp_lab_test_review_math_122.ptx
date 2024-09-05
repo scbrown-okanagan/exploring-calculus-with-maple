@@ -1,0 +1,298 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_lab_test_review_math_122">
+  <title>Lab Test Review for Math 122</title>
+  <p>
+    The following exercises are provided as examples of potential questions on the final lab test at the end of the semester.
+  </p>
+  <ol>
+    \subsection{Riemann Sums}<idx><h>integral approximation</h><h>Riemann sum</h></idx>
+    <li>
+      <p>
+        Assign the function <m>f(x) = x \lrp{1-x^2 { e}^{-\frac{1}{6}x^2}}</m> in Maple.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Evaluate the Riemann sum over the interval
+            <m>\lrb{-4,2}</m> using the <c>method=lower</c> option with <m>8</m> partitions.
+          </p>
+        </li>
+        <li>
+          <p>
+            Evaluate the Riemann sum over the interval
+            <m>\lrb{-4,2}</m> using the <c>method=upper</c> option with <m>8</m> partitions.
+          </p>
+        </li>
+      </ol>
+      \subsection{Integral Approximation Techniques} <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
+    </li>
+    <li>
+      <p>
+        Assign the following function in Maple:
+        <me>
+          g(x) = \sqrt{x} \sin(x)
+        </me>
+        <ol>
+          <li>
+            <p>
+              Give an approximate value of
+              <m>\dint_{1}^{8} g(x)~dx</m> using the midpoint rule and <m>10</m> partitions.
+            </p>
+          </li>
+          <li>
+            <p>
+              Give an approximate value of
+              <m>\dint_{1}^{8} g(x)~dx</m> using the trapezoid rule and <m>10</m> partitions.
+            </p>
+          </li>
+          <li>
+            <p>
+              Give an approximate value of
+              <m>\dint_{1}^{8} g(x)~dx</m> using Simpson's rule and <m>10</m> partitions.
+            </p>
+          </li>
+          <li>
+            <p>
+              Give the exact value of the definite integral
+              <m>\dint_{1}^{8} g(x)~dx</m> and evaluate as a decimal with <m>15</m> digits.
+            </p>
+          </li>
+        </ol>
+      </p>
+      \subsection{Integral Functions and the Fundamental Theorem of Calculus}
+          <idx><h>integral</h></idx>
+    </li>
+    <li>
+      <p>
+        Consider the function
+        <me>
+          f(x) = \dint_{0}^{x} 10 { e}^{-0.5 t} \sin(t) \: dt
+        </me>.
+        <ol>
+          <li>
+            <p>
+              Assign the function to <m>f(x)</m> and plot it over the interval <m>[0,10]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the derivative, <m>f'(x)</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              At what value in the interval <m>[0,10]</m> does <m>f(x)</m> reach its maximum?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the maximum value of <m>f(x)</m> over the interval <m>[0,10]</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+      \subsection{Areas Between Curves}
+          <idx><h>integral</h><h>net area</h></idx>
+          <idx><h>integral</h><h>total area</h></idx>
+    </li>
+    <li>
+      <p>
+        Assign the following function in Maple:
+        <me>
+          h(x) = \dfrac{2x}{x^2+6}
+        </me>
+        <ol>
+          <li>
+            <p>
+              Find the <em>net</em> area bounded by <m>h(x)</m> and the <m>x</m><ndash/>axis on the interval <m>\lrb{-2,6}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the <em>total</em> area bounded by <m>h(x)</m> and the <m>x</m><ndash/>axis on the interval <m>\lrb{-2,6}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </li>
+    <li>
+      <p>
+        Plot the region between the curves <m>f(x) = \tan^2(x)</m> and
+        <m>g(x) = \sqrt{x}</m> and compute the area to <m>15</m> digits. \subsection{Average Value of a Function}<idx><h>average value of a function</h></idx>
+      </p>
+    </li>
+    <li>
+      <p>
+        Find the average value of <m>f(x) = 2\sin(x) - \sin(2x)</m> on the interval <m>[0,\pi]</m>. \subsection{Volumes of Revolution}
+          <idx><h>volume of revolution</h></idx>
+      </p>
+    </li>
+    <li>
+      <p>
+        Find the volume of the egg-shaped solid obtained by revolving the region bounded by the implicit curve
+        <me>
+          4x^2 + y^2 = 12
+        </me>
+        about the <m>x</m>-axis.
+      </p>
+    </li>
+    <li>
+      <p>
+        Find the volume bounded by the curves
+        <m>y^2 - x^2 = 1</m> and <m>y=2</m> rotated about the <m>x</m>-axis. \subsection{Arc Length}
+          <idx><h>arc length</h></idx>
+      </p>
+    </li>
+    <li>
+      <p>
+        Determine the arc length of the curve
+        <m>f(x) = x\sqrt[3]{4-x}</m> over the interval <m>[0,4]</m> to <m>15</m> digits. \subsection{Infinite Integrals and Probability}
+          <idx><h>integral</h><h>improper</h></idx>
+          <idx><h>probability</h></idx>
+      </p>
+    </li>
+    <li>
+      <p>
+        At an annual triathlon,
+        the finishing times for male athletes can be modeled by the probability density function
+        <me>
+          p(x) = \dfrac{1}{\sigma \sqrt{2\pi}} { e}^{-(x-\mu)^2/2\sigma^2}
+        </me>,
+        where <m>\mu = 4313</m> seconds
+        (the average finish time)
+        and <m>\sigma = 583</m> seconds
+        (the standard deviation of finish times).
+        Define this function in Maple using the specified values of <m>\mu</m> and <m>\sigma</m>.
+        <ol>
+          <li>
+            <p>
+              Plot the function over the interval <m>[0,6500]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the probability that a male athlete finishes the triathlon in under <m>3600</m> seconds (<m>1</m> hour)?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the probability that a male athlete finishes the triathlon in over <m>4200</m> seconds (<m>1</m> hour <m>10</m> min)?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the probability that a male athlete takes between <m>3600</m> and <m>5400</m> seconds to finish the triathlon (<m>1</m> hour to <m>1.5</m> hours)?
+            </p>
+          </li>
+        </ol>
+      </p>
+      \subsection{Differential Equations}
+          <idx><h>differential equations</h></idx>
+    </li>
+    <li>
+      <p>
+        After <m>500</m> fish are introduced to a lake,
+        the rate of growth for the population of fish is given by the differential equation
+        <me>
+          \frac{dN}{dt} = \dfrac{N\lrp{7000 - N}}{10000}
+        </me>,
+        where <m>N=N(t)</m> is the population of fish after <m>t</m> years.
+        Define this differential equation in Maple.
+        <ol>
+          <li>
+            <p>
+              Use <c>dsolve()</c> to give the solution to the differential equation for <m>N(t)</m> using the initial condition <m>N(0)=500</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              How many fish will there be after <m>6</m> years (to the nearest fish)?
+            </p>
+          </li>
+          <li>
+            <p>
+              What does the population of fish approach after a long time? (Take the limit as <m>t</m> tends to infinity or use a plot).
+            </p>
+          </li>
+        </ol>
+      </p>
+      \subsection{Taylor Series} <idx><h>sequences and series</h><h>Taylor and Maclaurin series</h></idx>
+    </li>
+    <li>
+      <p>
+        Find the Taylor series expansion of
+        <m>f(x) = { e}^{2x} \tan(x)</m> centred at <m>x=0</m> (Maclaurin series) and give the coefficient of the <m>x^8</m> term.
+      </p>
+    </li>
+  </ol>
+  <p>
+    \subsection{Solutions}
+    <ol>
+      <li>
+        <p>
+          (a) <m>1.06499989996052</m> (b) <m>7.98649893432598</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          (a) <m>0.87353651353133</m> (b) <m>0.799055557908822</m> (c)
+          <m>0.848709528323826</m> (d) <m>0.848559602278512</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          (b) <m>10 {\mathrm e}^{- 0.5 x} \sin\! \left(x\right)</m> (c)
+          <m>3.14159265358979</m> (d) <m>9.66303661080610</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          (a) <m>1.43508452528932</m> (b) <m>2.45673577282130</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>0.251416829858820</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>1.27323954473516</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>87.0623694832426</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>21.7655923708106</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>7.79878582727266</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          (b) <m>0.110667763524550</m> (c)
+          <m>0.576843561268247</m> (d) <m>0.858206054544922</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          (a) <m>N\! \left(t\right)=\frac{7000}{1+13 {\mathrm e}^{-7 t/10}}</m> (b) <m>5858.02246368622</m> (c) <m>7000</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>2/5</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    \part{Tutorials}
+  </p>
+</chapter>

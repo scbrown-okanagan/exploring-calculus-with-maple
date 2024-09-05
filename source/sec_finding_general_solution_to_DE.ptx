@@ -1,0 +1,76 @@
+<section xml:id="sec_finding_general_solution_to_DE">
+  <title>Finding the General Solution to a Differential Equation</title>
+  <p>
+    As an example, let's consider the differential equation
+    <me>
+      y'=x^2y
+    </me>,
+    which is a first-order differential equation,
+    where we assume <m>y</m> is a function of <m>x</m>.
+    The goal is to find the function <m>y(x)</m> that satisfies this equation.
+  </p>
+  <p>
+    When we define differential equations in Maple,
+    we must ensure that we write <m>y</m> in function notation;
+    this means we write it as <m>y(x)</m> and not as <m>y</m>.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {de1 := y'(x)= x\symbol{94}2*y(x); } \end{mapleinput} \relax \begin{maplelatex} {de1 := y'(x) = x^2*y(x)}{
+    <me>
+      \displaystyle \textit{de1}\, := \,{\frac {d}{dx}}y \left( x \right) ={x}^{2}y \left( x \right)
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    We use the <c>dsolve()</c> command to solve a differential equation.
+  </p>
+  <p>
+        <idx><h>assignment operator</h><h>differential equations</h></idx>
+        <idx><h>differential equations</h><h>dsolve</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {dsolve(de1, y(x)); } \end{mapleinput}
+  </p>
+  <aside>
+    <p>
+      A package does not need to be imported to use the <c>dsolve()</c> command.
+    </p>
+  </aside>
+  <p>
+    \relax \begin{maplelatex} {y(x) = _C1*exp((1/3)*x^3)}{
+    <me>
+      \displaystyle y \left( x \right) =\textit{\_C1}\,{{ e}^{1/3\,{x}^{3}}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    Note that the result has <m>\_C1</m> as the coefficient.
+    This is an arbitrary constant that is part of the solution of the differential equation.
+    By default, Maple names the constants <m>\_C1, \_C2, \_C3, \ldots \text{ etc }</m>.
+  </p>
+  <p>
+    We can clean this up a bit by substituting a <sq>nicer</sq> constant for <m>\_C1</m>.
+  </p>
+  <p>
+        <idx><h>subs</h></idx>
+        <idx><h>differential equations</h><h>dsolve!general solution</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {desoln := subs(_C1=A, _C1*exp((1/3)*x^3)); } \end{mapleinput} \relax \begin{maplelatex} {desoln := A*exp((1/3)*x^3)}{
+    <me>
+      \displaystyle desoln :=\textit{A}\,{{ e}^{1/3\,{x}^{3}}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    This solution with the arbitrary constant <m>A</m>,
+    is known as the <em>general solution</em>
+    to the differential equation.
+  </p>
+</section>

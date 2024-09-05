@@ -1,0 +1,63 @@
+<section xml:id="sec_if_elif_else_statements">
+  <title><c>if</c>/<c>elif</c>/<c>else</c> Statements</title>
+  <introduction>
+    <p>
+          <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
+    </p>
+    <p>
+      The <c>elif</c> (else if) command allows us to add more than one condition to our statement.
+      For example,
+      if we want to test whether a particular number is (i) positive, (ii) negative,
+      or (iii) zero,
+      and wish to have different outputs based on these
+      <em>three</em> possibilities,
+      we can do so with a combination of <c>if</c>,
+      <c>else</c>,
+      and <c>elif</c>.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Using Conditional Statements to Interpret the First Derivative</title>
+    <p>
+      In this example,
+      we will use one of these statements to illustrate the first derivative test in calculus.
+      We would like to answer the following question:
+      for a particular value <m>x=a</m>,
+      is the function <m>g(x)</m> (i) increasing
+      (positive derivative),
+      (ii) decreasing
+      (negative derivative),
+      or (iii) neither increasing nor decreasing (zero derivative)?
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput}
+    </p>
+<pre>
+> g(x) := x^4 - 4*x^3 + 3*x^2:
+> a := 0:
+> if subs(x = a, diff(g(x), x)) > 0 then
+print("increasing")
+elif subs(x = a, diff(g(x), x)) &lt; 0 then
+print("decreasing")
+else print("neither")
+end if
+</pre>
+    <p>
+      \end{mapleinput} \relax \begin{maplelatex} {"neither"}{
+      <me>
+        \displaystyle \text{ ``neither'' }
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        This implies that <m>g'(0)</m> is equal to <m>0</m>.
+      </p>
+    </aside>
+    <p>
+          <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
+    </p>
+  </subsection>
+</section>

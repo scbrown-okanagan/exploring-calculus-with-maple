@@ -1,0 +1,270 @@
+<section xml:id="sec_solving_an_equation_of_one_variable">
+  <title>Solving an Equation of One Variable</title>
+  <introduction>
+    <p>
+      The parameters of <c>solve()</c> and <c>fsolve()</c> are the same in most cases.
+      You must include the equation to be solved and you can specify the variable that you wish to solve for.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {solve(x\symbol{94}2 = 5, x); } \end{mapleinput} \relax \begin{maplelatex} {sqrt(5), -sqrt(5)}{
+      <me>
+        \displaystyle  \sqrt{5},\,- \sqrt{5}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {fsolve(x\symbol{94}2 = 5, x); } \end{mapleinput} \relax \begin{maplelatex} {-2.236067977, 2.236067977}{
+      <me>
+        \displaystyle - 2.236067977,\, 2.236067977
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      If there is only one variable in the equation,
+      then it is not necessary to specify the desired variable.
+    </p>
+    <aside>
+      <p>
+        It may not make sense to use <em>both</em>
+        <c>solve()</c> and <c>fsolve()</c>.
+        Choose the solver that produces the most useful output.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {solve(x\symbol{94}2 = 5); } \end{mapleinput} \relax \begin{maplelatex} {sqrt(5), -sqrt(5)}{
+      <me>
+        \displaystyle  \sqrt{5},\,- \sqrt{5}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {fsolve(x\symbol{94}2 = 5); } \end{mapleinput} \relax \begin{maplelatex} {-2.236067977, 2.236067977}{
+      <me>
+        \displaystyle - 2.236067977,\, 2.236067977
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      If you provide <c>solve()</c> or <c>fsolve()</c> with an <em>expression</em>
+      rather than an <em>equation</em>,
+      then the solver will set that expression equal to <m>0</m> and solve the resulting equation.
+    </p>
+    <aside>
+      <p>
+        Note that <c>solve(x\symbol{94}2 - 5)</c> is equivalent to typing <c>solve(x\symbol{94}2 - 5 = 0, x)</c>.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {solve(x\symbol{94}2 - 5, x); } \end{mapleinput} \relax \begin{maplelatex} {sqrt(5), -sqrt(5)}{
+      <me>
+        \displaystyle  \sqrt{5},\,- \sqrt{5}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {fsolve(x\symbol{94}2 - 5, x); } \end{mapleinput} \relax \begin{maplelatex} {-2.236067977, 2.236067977}{
+      <me>
+        \displaystyle - 2.236067977,\, 2.236067977
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      Maple will give complex solutions using {I = sqrt(-1)}{<m>\displaystyle I= \sqrt{-1}</m>} when using <c>solve()</c>.
+      Typically, <c>fsolve()</c> will not display complex solutions.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {poly := 12*x\symbol{94}3-14*x\symbol{94}2+13*x-6; } \end{mapleinput} \relax \begin{maplelatex} {poly := 12*x^3-14*x^2+13*x-6}{
+      <me>
+        \displaystyle \textit{poly}\, := \,12\,{x}^{3}-14\,{x}^{2}+13\,x-6
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {factor(poly = 0); } \end{mapleinput} \relax \begin{maplelatex} {(4*x^2-2*x+3)*(3*x-2) = 0}{
+      <me>
+        \displaystyle  \left( 4\,{x}^{2}-2\,x+3 \right)  \left( 3\,x-2 \right) =0
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {solve(poly = 0, x); } \end{mapleinput} \relax \begin{maplelatex} {1/4-(1/4*I)*sqrt(11), 1/4+(1/4*I)*sqrt(11), 2/3}{
+      <me>
+        \displaystyle 1/4-I/4 \sqrt{11},\,1/4+I/4 \sqrt{11},\,2/3
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {fsolve(poly = 0, x); } \end{mapleinput} \relax \begin{maplelatex} {.6666666667}{
+      <me>
+        \displaystyle  0.6666666667
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      When trying to solve high-degree polynomials,
+      solutions may be displayed symbolically using <c>solve()</c>,
+      while <c>fsolve()</c> may display a more useful output.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {high := x\symbol{94}4 + 133*x + 200; } \end{mapleinput} \relax \begin{maplelatex} {high := x^4+133*x+200}{
+      <me>
+        \displaystyle \textit{high}\, := \,{x}^{4}+133\,x+200
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        This output is Maple's way of representing four solutions to the quartic symbolically.
+        Switching to <c>fsolve()</c>,
+        we see only two real solutions.
+        The other two solutions are either complex or were not found using the methods used in <c>fsolve()</c>.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {solve(high); } \end{mapleinput} \relax \begin{maplelatex} {RootOf(_Z^4+133*_Z+200,
+      index = 1), RootOf(_Z^4+133*_Z+200,
+      index = 2), RootOf(_Z^4+133*_Z+200,
+      index = 3), RootOf(_Z^4+133*_Z+200, index = 4)}{
+      <me>
+        \displaystyle \begin{array}{l}\textit{RootOf} \left( {\textit{\_Z}}^{4}+133\,\textit{\_Z}+200,\textit{index}=1 \right) ,\,\\ \textit{RootOf} \left( {\textit{\_Z}}^{4}+133\,\textit{\_Z}+200,\textit{index}=2 \right) ,\,\\ \textit{RootOf} \left( {\textit{\_Z}}^{4}+133\,\textit{\_Z}+200,\textit{index}=3 \right) ,\,\\ \textit{RootOf} \left( {\textit{\_Z}}^{4}+133\,\textit{\_Z}+200,\textit{index}=4 \right) \end{array}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {fsolve(high); } \end{mapleinput} \relax \begin{maplelatex} {-4.448682310, -1.546800745}{
+      <me>
+        \displaystyle - 4.448682310,\,- 1.546800745
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      When using the <c>fsolve()</c> command,
+      you may also specify an interval in which to look for a solution.
+    </p>
+    <aside>
+      <p>
+        In this example,
+        solutions will only be found on the interval <m>[5,10]</m>.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {fsolve(cos(x) = tan(x),
+      x = 5..10); } \end{mapleinput} \relax \begin{maplelatex} {6.949424740}{
+      <me>
+        \displaystyle  6.949424740
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </introduction>
+  <subsection xml:id="subsec_functionintersection">
+    <title>Finding the Intersection of Two Functions</title>
+    <p>
+      In this example, we will find the intersection point of
+      <m>f(x) = x\ln(x)</m> and <m>g(x) = \sin(x)</m>.
+    </p>
+    <p>
+          <idx><h>mathematical functions</h><h>sine</h></idx>
+          <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx>
+          <idx><h>solving equations</h><h>system</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := x*ln(x); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator, arrow;
+      x*ln(x) end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto x\ln  \left( x \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {g(x) := sin(x); } \end{mapleinput} \relax \begin{maplelatex} {g := proc (x) options operator, arrow;
+      sin(x) end proc}{
+      <me>
+        \displaystyle g\, := \,x\mapsto \sin \left( x \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      Equating <m>f(x) = g(x)</m>,
+      we can use either <c>solve()</c> or <c>fsolve()</c> to obtain a solution.
+      Since this is an equation in <m>x</m> only,
+      we will get the <m>x</m>-coordinate of the point.
+    </p>
+    <aside>
+      <p>
+        Sometimes when Maple cannot solve an expression algebraically,
+        the <c>solve()</c> command will output a symbolic solution,
+        using <em>RootOf()</em> to describe the solution.
+        In these cases,
+        you may wish to try the <c>fsolve()</c> command instead.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {solve(f(x) = g(x)); } \end{mapleinput} \relax \begin{maplelatex} {RootOf(_Z*ln(_Z)-sin(_Z))}{
+      <me>
+        \displaystyle \textit{RootOf} \left( \textit{\_Z}\,\ln  \left( \textit{\_Z} \right) -\sin \left( \textit{\_Z} \right)  \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {fsolve(f(x) = g(x)); } \end{mapleinput} \relax \begin{maplelatex} {1.752677281}{
+      <me>
+        \displaystyle  1.752677281
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      We can use this result and substitute into <m>f(x)</m> or <m>g(x)</m> to determine the corresponding <m>y</m>-coordinate.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f( } \end{mapleinput} \relax \begin{maplelatex} {.9835052055}{
+      <me>
+        \displaystyle  0.9835052055
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      So, the point of intersection is <m>(1.752677281,0.9835052055)</m>.
+      This can be verified by plotting both functions.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {plot([f(x),
+      g(x)], x=0..2); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/functionintersectionplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        Although it appears that there is another intersection point at <m>x=0</m>,
+        <m>f(0)</m> is undefined.
+      </p>
+    </aside>
+  </subsection>
+</section>

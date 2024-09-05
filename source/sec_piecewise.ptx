@@ -1,0 +1,36 @@
+<section xml:id="sec_piecewise">
+  <title>Assigning Piecewise Functions</title>
+  <p>
+    A piecewise-defined function is a function defined by multiple sub-functions.
+    Each sub-function applies to a certain interval of the domain,
+    called a sub-domain.
+    We can define piecewise functions in Maple by using the <c>piecewise()</c> command.
+    The sub-domain of each sub-function is specified before its expression.
+  </p>
+  <p>
+        <idx><h>mathematical functions</h><h>piecewise</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {P(x) := piecewise(x&lt;=-1, x\symbol{94}2, -1&lt;
+    x &lt;=1, -x, 1&lt;
+    x , x-4); } <idx><h>mathematical functions</h><h>piecewise</h></idx> \end{mapleinput} \relax \begin{maplelatex} {P := proc (x) options operator, arrow;
+    piecewise(x &lt;= -1, x^2, -1 &lt;
+    x &lt;= 1, -x, 1 &lt; x, x-4) end proc}{
+    <me>
+      \displaystyle P\, := \,x\mapsto \begin{cases}{x}^{2}\amp x\leq -1 \\ -x\amp -1\lt  x\leq 1 \\ x-4\amp 1\lt  x \end{cases}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {P(x); } \end{mapleinput} \relax \begin{maplelatex} {piecewise(x &lt;= -1, x^2, -1 &lt;
+    x &lt;= 1, -x, 1 &lt; x, x-4)}{
+    <me>
+      \displaystyle \begin{cases}{x}^{2}\amp  x\leq -1 \\ -x\amp  -1 \lt  x\leq 1 \\ x-4\amp 1\lt  x \end{cases}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

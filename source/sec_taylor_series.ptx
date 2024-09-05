@@ -1,0 +1,150 @@
+<section xml:id="sec_taylor_series">
+  <title>Taylor and Maclaurin Series</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:sequence_and_sseries}, pg.
+          <xref ref="chp_sequence_and_sseries"></xref>
+            <idx><h>sequences and series</h></idx>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      The Taylor series of a function <m>f</m> centred at <m>a</m> is given by the equation <idx><h>sequences and series</h><h>Taylor and Maclaurin series</h></idx>
+      <md>
+        <mrow>f(x) \amp = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n</mrow>
+        <mrow>\amp = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots</mrow>
+      </md>.
+    </p>
+    <p>
+      The Maclaurin series is a special case of the Taylor series,
+      where <m>a=0</m>:
+      <idx><h>sequences and series</h><h>Taylor and Maclaurin series!formula</h></idx>
+      <me>
+        f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \cdots
+      </me>.
+    </p>
+    <p>
+      In both series,
+      we can use partial sums to approximate the shape of the function <m>f(x)</m> in a region centred at <m>a</m> by a polynomial.
+      In this activity,
+      we will compute and plot Taylor and Maclaurin series approximations to understand how the radius of convergence works.
+    </p>
+    <aside>
+      <p>
+        The radius of convergence for a Taylor series is the values of <m>x</m> for which a Taylor series will converge to the function <m>f(x)</m>.
+      </p>
+    </aside>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Consider the function <m>f(x) = \cos(x)</m>.
+          <ol>
+            <aside>
+              <p>
+                Examples of finding and plotting Taylor series can be found on <xref ref="sec_taylor_and_maclaurin_series">page</xref>.
+              </p>
+            </aside>
+            <li>
+              <p>
+                Compute the Maclaurin series of <m>f(x)</m> accurate to order <m>3</m> using <c>taylor(cos(x),
+                x=0, 3)</c>.
+                Convert this to a polynomial and assign it to <em>poly3</em>
+                using the command <c>poly3 := convert(%, polynom)</c>.
+            <idx><h>sequences and series</h><h>Taylor and Maclaurin series!taylor</h></idx>
+            <idx><h>sequences and series</h><h>Taylor and Maclaurin series!convert to polynomial</h></idx>
+            <idx><h>ditto operator</h></idx>
+              </p>
+            </li>
+            <li>
+              <p>
+                Repeat part (a) using orders <m>6</m>, <m>12</m>, and <m>24</m>.
+                Assign each of these polynomials to a different name.
+                <aside>
+                  <p>
+                    You may want to choose different colours for each of these four curves to keep track of which is which if you plan to plot all of them on the same set of axes.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Plot the graph of <m>f(x)</m> and the Maclaurin series from parts (a) and (b).
+            <idx><h>plot</h></idx>
+        </p>
+            </li>
+            <li>
+              <p>
+                In a new paragraph,
+                describe what happens to the graph of the Maclaurin series approximation as we increase its order
+                (that is, have higher degree polynomials).
+              </p>
+            </li>
+            <li>
+              <p>
+                If we increase our order to infinity,
+                we expect that the approximation will converge to the radius of convergence on either side of <m>0</m>.
+                In a new paragraph in your worksheet,
+                state what you expect the radius of convergence to be.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>g(x) = \ln(1+x)</m>.
+          <ol>
+            <li>
+              <p>
+                Find the Maclaurin series of <m>g(x)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute the Maclaurin series of <m>g(x)</m> accurate to orders <m>3</m>,
+                <m>6</m>, <m>12</m>, and <m>24</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Plot the graph of <m>g(x)</m> and the Maclaurin series from part (b).
+                <aside>
+                  <p>
+                    You may want to choose different colours for each curve to keep track of which is which.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                In a new paragraph in your worksheet,
+                state what you expect the radius of convergence to be.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          It turns out that the full Taylor series for the functions from exercises <m>1</m> and <m>2</m> are
+          <md>
+            <mrow>\cos(x)\amp =\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}</mrow>
+            <mrow>\ln(1+x)\amp =\sum_{n=0}^{\infty} \frac{(-1)^{n-1} x^n}{n}</mrow>
+          </md>
+          Find the radius of convergence for these two series by hand in the space below.
+          In a new paragraph,
+          confirm whether or not it matches your predictions from your Maple plots.  \begin{fullwidth} \fbox{<m>\displaystyle\cos(x)=\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}</m>  } \fbox{<m>\displaystyle\ln(1+x)=\sum_{n=0}^{\infty} \frac{(-1)^{n-1} x^n}{n}</m>  } \end{fullwidth}
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

@@ -1,0 +1,63 @@
+<section xml:id="sec_execution_groups">
+  <title>Execution Groups</title>
+  <p>
+    Maple input is used for computations and must use recognizable commands.
+    Maple output gives the result of the computation after hitting the Enter key.
+    Together, Maple input and output are called an
+    <em>execution group</em>.
+    <ul>
+      <li>
+        <p>
+          Place a new execution group after the current line with the <image width="5%" source="images/new_input.png"/> button.
+        </p>
+      </li>
+      <li>
+        <p>
+          Place a new execution group after the current line with Ctrl+J.
+        </p>
+      </li>
+      <li>
+        <p>
+          Place a new execution group before the current line with Ctrl+K.
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    Maple input is preceded by the <m>></m> character
+    (sometimes called a "carrot").
+    Maple output is displayed in the centre of the following line.
+  </p>
+  <aside>
+    <p>
+      <image width="50%" source="images/InsertInput.png"/>
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {2 + 2; } \end{mapleinput} \relax \begin{maplelatex} {4}{
+    <me>
+      \displaystyle 4
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {8 / 2; } \end{mapleinput} \relax \begin{maplelatex} {4}{
+    <me>
+      \displaystyle 4
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    If at any point you wish to correct a previous Maple input line,
+    you may simply go back to that line and modify it.
+    However, there will be no change to the output until you hit Enter.
+    You do not need to be at the end of the line in order to run it.
+  </p>
+  <p>
+    You may wish to have more than one calculation or command on a single Maple input.
+    For more information on this,
+    see <xref ref="chp_basics_of_maple_syntax">Tutorial</xref>
+    on <xref ref="chp_basics_of_maple_syntax">page</xref>.
+  </p>
+</section>

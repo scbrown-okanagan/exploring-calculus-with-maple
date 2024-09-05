@@ -1,0 +1,7 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_basic_operations">
+  <title>Basic Operations</title>
+  <xi:include  href="section9-1.ptx"/>
+  <xi:include  href="sec_expanding_expressions.ptx"/>
+  <xi:include  href="sec_factoring_expressions.ptx"/>
+  <xi:include  href="sec_simplifying_expressions.ptx"/>
+</chapter>

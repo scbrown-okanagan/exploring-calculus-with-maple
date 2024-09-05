@@ -1,0 +1,166 @@
+<section xml:id="sec_if_else_statements">
+  <title><c>if</c>/<c>else</c> Statements</title>
+  <introduction>
+    <p>
+          <idx><h>conditional statements</h><h>if/else statements</h></idx>
+    </p>
+    <p>
+      <sq>If</sq> and <sq>else</sq> statements allow us to test various conditions.
+      The result then changes based on whether the given condition is
+      <em>true</em> or <em>false</em>.
+    </p>
+    <p>
+      For example, let's say that someone makes the statement
+      <em>"If it's sunny tomorrow,
+      then I will go for a bike ride."</em>
+    </p>
+    <p>
+      If it is, in fact, sunny tomorrow,
+      then that person <em>will</em> go for a bike ride.
+      In other words,
+      since the "sunny tomorrow" condition becomes TRUE, then the following implication "go for a bike ride" will happen.
+    </p>
+    <p>
+      As the statement stands now,
+      we have no idea what this person will do if it is <em>not</em> sunny.
+      Perhaps they will still go for a bike ride, perhaps not.
+      We can define this action with an <sq>else</sq> statement.
+    </p>
+    <p>
+      In other words,
+      we can define what will happen if it is <em>not sunny</em>.
+      For example: <em>"If it's sunny tomorrow,
+      then I will go for a bike ride.
+      Otherwise, I will read a book at home."</em>
+    </p>
+    <p>
+      From this example, we know that the following are true.
+      <ul>
+        <li>
+          <p>
+            If it's sunny tomorrow, then I will go for a bike ride.
+          </p>
+        </li>
+        <li>
+          <p>
+            If it's not sunny tomorrow, then I read a book at home.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </introduction>
+  <subsection>
+    <title>A Conditional Statement based on Numerical Value</title>
+    <p>
+      We will outline this concept with a silly example.
+      We define two variables <m>a=2</m> and <m>b=5</m>.
+      If <m>a\lt b</m> is <em>true</em>
+      (which it is because obviously <m>2</m> is less than <m>5</m>),
+      we print the word "Mario". Otherwise
+      (if it's <em>false</em>),
+      we print the word "Luigi". Therefore,
+      we expect that "Mario" will be printed. \begin{maplegroup} \begin{mapleinput}
+    </p>
+<pre>
+> a := 2: b := 5:
+> if a &lt; b then
+print("Mario")
+else
+print("Luigi")
+end if
+</pre>
+    <p>
+      \end{mapleinput} \relax \begin{maplelatex} {"Mario"}{
+      <me>
+        \displaystyle \text{ ``Mario'' }
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        You can use Shift+Enter to create multiple lines within the same Maple input.
+      </p>
+    </aside>
+  </subsection>
+  <subsection>
+    <title>A Conditional Statement to Check Even/Odd</title>
+    <p>
+      Now we consider a more useful example.
+      We define a function <m>f(x)</m> and check whether substituting <m>x=2</m> into this function outputs an <em>even</em>
+      number or an <em>odd</em> number.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput}
+    </p>
+<pre>
+> f(x) := x^2 + 3*x - 4:
+> if type(f(2), even) then
+print(f(2), "even")
+else
+print(f(2), "odd")
+end if
+</pre>
+    <p>
+      \end{mapleinput}
+    </p>
+    <aside>
+      <p>
+        The <c>type()</c> command is used to check if the expression has the specified property.
+      </p>
+    </aside>
+    <p>
+      \relax \begin{maplelatex} {6, "even"}{
+      <me>
+        \displaystyle 6,\,\text{ ``even'' }
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+  <subsection>
+    <title>A Conditional Statement to Check if a Limit Exists</title>
+    <p>
+          <idx><h>conditional statements</h><h>if/else statements</h></idx>
+          <idx><h>limit</h></idx>
+    </p>
+    <p>
+      We define a function <m>f(x)</m> and then use an <sq>if</sq> statement to verify whether or not the limit of <m>f(x)</m> as <m>x</m> approaches <m>0</m> is <em>numeric</em>.
+      In other words,
+      we are checking to see whether or not this limit exists.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput}
+    </p>
+<pre>
+> f(x) := 1/x:
+> L := limit(f(x), x=0):
+> if type(L, numeric) then
+print("Limit is defined")
+else
+print("Limit is undefined")
+end if
+</pre>
+    <p>
+      \end{mapleinput} \relax
+    </p>
+    <aside>
+      <p>
+        Does <m>\displaystyle\lim_{x \to 0} \dfrac{1}{x}</m> exist?
+        Does the limit give a number <m>L</m> as a result,
+        or something that is <em>not</em> a number?
+      </p>
+    </aside>
+    <p>
+      \begin{maplelatex} {"Limit is undefined"}{
+      <me>
+        \displaystyle \text{ ``Limit is undefined'' }
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+</section>

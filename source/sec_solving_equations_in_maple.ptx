@@ -1,0 +1,150 @@
+<section xml:id="sec_solving_equations_in_maple">
+  <title>Solving Equations in Maple</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      In this activity,
+      students will be asked to assign expressions and then evaluate and manipulate them.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Suppose we want to find the <m>x</m>-intercepts of the function
+          <me>
+            f(x) = x^5+x^4-4x^3-3x^2+3x+1
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Assign the function to <m>f(x)</m>.
+                <aside>
+                  <p>
+                    When assigning the function to <m>f(x)</m>,
+                    use the <m>:=</m> operator.
+                  </p>
+                </aside>
+            <idx><h>assignment operator</h></idx>
+              </p>
+            </li>
+            <li>
+              <p>
+                Plot <m>f(x)</m>.
+                Choose an interval for <m>x</m> that shows all <m>x</m>-intercepts.
+                How many do you see?
+              </p>
+            </li>
+            <li>
+              <p>
+                Factor <m>f(x)</m>.
+                Does <m>f(x)</m> factor?
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve <m>f(x)=0</m> using both the <c>solve()</c> and <c>fsolve()</c> commands.
+                <aside>
+                  <p>
+                    With <c>fsolve()</c>,
+                    you can also specify an interval for solutions if you wish to only find a particular solution.
+                    An example of this can be found on <xref ref="eg_fsolve_interval">page</xref>.
+                  </p>
+                </aside>
+            <idx><h>solving equations</h><h>solve</h></idx>
+            <idx><h>solving equations</h><h>fsolve</h></idx>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Solve the quadratic equation <m>x^2+4x+6=0</m> three ways:
+          <ol>
+            <li>
+              <p>
+                Using the quadratic formula by hand.
+                <aside>
+                  <p>
+                    Given a quadratic equation of the form
+                    <m>ax^2+bx+c=0</m>, the quadratic formula is
+                    <me>
+                      x=\dfrac{-b\pm \sqrt{b^2-4ac}}{2a}
+                    </me>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Using <c>solve()</c>,
+                followed by evaluating the result as a decimal.
+              </p>
+            </li>
+            <li>
+              <p>
+                Using <c>fsolve()</c>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        Compare your results from (b) and (c).
+        <aside>
+          <p>
+            In Maple, <m>\sqrt{-1}</m> is denoted as <m>I</m>.
+          </p>
+        </aside>
+            <idx><h>imaginary</h></idx>
+      </li>
+      <li>
+        <p>
+          Consider the curves <m>y=x^2</m> and <m>y=\frac{3}{x}</m>.
+          <aside>
+            <p>
+              An example that shows how to find the intersection point of two functions is given on <xref ref="subsec_functionintersection">page</xref>.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Find the point <m>(x,y)</m> where the two curves intersect.
+                Try using both the <c>solve()</c> and <c>fsolve()</c> commands.
+              </p>
+            </li>
+            <li>
+              <p>
+                Plot the two curves on the same set of axes to verify that your intersection point from part (a) is correct.
+                <aside>
+                  <p>
+                    When plotting equations of the form <m>y=f(x)</m> using the <c>plot()</c> command,
+                    we never include the <m>y=</m>.
+                  </p>
+                </aside>
+                <aside>
+                  <p>
+                    When multiple curves are plotted on the same set of axes,
+                    it is a good practice to specify the colour of each one,
+                    so that you can tell them apart.
+                  </p>
+                </aside>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

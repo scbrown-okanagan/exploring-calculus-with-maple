@@ -1,0 +1,19 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_differential_equations">
+  <title>Differential Equations</title>
+  <introduction>
+    <p>
+      We want to find solutions
+      (and potentially graph said solutions)
+      of <em>differential equations</em>
+      <mdash/> equations that contain functions and derivatives of these functions.
+      For the sake of ease, we will look at
+      <em>first-order differential equations</em>:
+      differential equations that only contain the
+      <em>first</em> derivative
+      (no higher-order derivatives).
+    </p>
+  </introduction>
+  <xi:include  href="sec_finding_general_solution_to_DE.ptx"/>
+  <xi:include  href="sec_finding_particular_solution_given_IC.ptx"/>
+  <xi:include  href="sec_direction_fields_tutorial.ptx"/>
+</chapter>

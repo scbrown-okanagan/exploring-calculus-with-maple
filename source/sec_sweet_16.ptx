@@ -1,0 +1,168 @@
+<section xml:id="sec_sweet_16">
+  <title>Sweet 16</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:limits}, pg.
+          <xref ref="chp_limits"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:derivative}, pg.
+          <xref ref="chp_derivative"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <aside>
+      <p>
+        If we remove the restriction that <m>a</m> and <m>b</m> have to be integers,
+        this problem becomes a lot more interesting.
+      </p>
+      <p>
+        It can be shown that for any value <m>N > { e}^{ e}</m>,
+        there exist real numbers <m>a</m> and <m>b</m> that satisfy
+        <m>N = a^b = b^a</m> with <m>a \neq b</m>.
+        To prove this,
+        one needs to be very careful in evaluating the limit
+        <me>
+          \lim_{\substack{a \rightarrow 1\\ b \rightarrow \infty} } a^b
+        </me>.
+      </p>
+      <p>
+        It is not obvious that this limit goes to infinity.
+        However, if it does,
+        all <m>N > { e}^{ e}</m> will have the desired property.
+        It may help to recall that
+        <me>
+          \lim_{n \rightarrow \infty} \left(1 + \frac{1}{n} \right)^n = { e}
+        </me>.
+      </p>
+      <p>
+        So, just because the base tends to <m>1</m> and the exponent tends to infinity,
+        the value of <m>a^b</m> is not necessarily infinity.
+      </p>
+    </aside>
+    <p>
+          <idx><h>limit</h></idx>
+          <idx><h>limit</h><h>at infinity</h></idx>
+          <idx><h>limit</h><h>definition of e</h></idx>
+    </p>
+    <p>
+      We all know that <m>16</m> exhibits the following interesting property:
+      <me>
+        16 = 2^4 = 4^2
+      </me>
+    </p>
+    <p>
+      Are there any other positive integers <m>N</m> for which there exist positive integers <m>a</m> and <m>b</m> (<m>a \not = b</m>) such that
+      <me>
+        N = a^b = b^a?
+      </me>
+    </p>
+    <p>
+      This activity will explore this question.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <p>
+      Let's assume that for some <m>N \not = 16</m>,
+      there are positive integers <m>a</m> and <m>b</m> such that <m>N = a^b = b^a</m>.
+      <ol>
+        <li>
+          <p>
+            If <m>a^b = b^a</m>, can we solve for <m>a</m> or <m>b</m>?
+            Why or why not?
+            Try to do this by hand and comment on the result in a new paragraph.
+          </p>
+        </li>
+        <li>
+          <p>
+            Rearrange the equation to separate the <m>a</m>'s and <m>b</m>'s, so that all <m>a</m>'s are on one side and all <m>b</m>'s are on the other side.
+            Comment about what you notice about the left and right sides of the equation in a new paragraph.
+          </p>
+        </li>
+        <li>
+          <p>
+            Assign the function <m>f(x) = \ln(x)/x</m>.
+            Graph <m>f(x)</m> using Maple.
+          </p>
+        </li>
+        <li>
+          <p>
+            Determine the critical point(s) and the maximum and minimum values
+            (if they exist).
+              <idx><h>shapes of curves</h><h>critical number</h></idx>
+              <idx><h>shapes of curves</h><h>maximum</h></idx>
+              <idx><h>shapes of curves</h><h>minimum</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            Insert a new paragraph and comment on what happens to <m>f(x)</m> as <m>x \rightarrow \infty</m>.
+              <idx><h>shapes of curves</h><h>horizontal asymptote</h></idx>
+              <idx><h>asymptote</h><h>horizontal</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            On what intervals is <m>f(x)</m> increasing and decreasing?
+            Answer on a new paragraph.
+              <idx><h>shapes of curves</h><h>increasing</h></idx>
+              <idx><h>shapes of curves</h><h>decreasing</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>f(a) = f(b)</m> and <m>a \lt b</m>,
+            what does that mean in terms of the graph?
+            Answer on a new paragraph. (<em>Hint: Rolle's Theorem</em>)
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>f(a) = f(b)</m> and <m>a \lt b</m>,
+            prove that <m>a = 2</m> is the only positive integer such that <m>a^b = b^a</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      <em>Rolle's Theorem:</em>
+          <idx><h>Rolle's theorem</h></idx>
+      Let <m>f</m> be a function that satisfies the following three hypotheses:
+      <ol>
+        <li>
+          <p>
+            <m>f</m> is continuous on the closed interval <m>[a,b]</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>f</m> is differentiable on the open interval <m>(a,b)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>f(a) = f(b)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Then there is a number <m>c</m> in <m>(a,b)</m> such that <m>f'(c) = 0</m>.
+    </p>
+  </subsection>
+</section>

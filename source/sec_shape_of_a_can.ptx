@@ -1,0 +1,169 @@
+<section xml:id="sec_shape_of_a_can">
+  <title>The Shape of a Can</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:derivative}, pg.
+          <xref ref="chp_derivative"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Your goal in this question is to design the most economical shape of a perfectly cylindrical can.
+    </p>
+    <figure>
+      <caption>A simple can in the shape of a circular cylinder.</caption>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\draw (0,0) ellipse (1.25 and 0.5);
+\draw (-1.25,0) -- (-1.25,-2.5);
+\draw (-1.25,-2.5) arc (180:360:1.25 and 0.5);
+\draw [dashed] (-1.25,-2.5) arc (180:360:1.25 and -0.5);
+\draw (1.25,-2.5) -- (1.25,0);
+\fill [gray,opacity=0.5] (-1.25,0) -- (-1.25,-2.5) arc (180:360:1.25 and 0.5) -- (1.25,0) arc (0:180:1.25 and -0.5);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+    <p>
+      First, let us assume the can has to hold a volume of 250 mL (250<nbsp/>cm<m>^3</m>).
+      The cylindrical sides as well as the top and bottom circles are cut from sheets of aluminum.
+      The material for the cylindrical sides of the cans is made from rectangles that are bent,
+      so no material is wasted.
+      However, some amount of material is always wasted when trying to cut circles from a sheet of metal.
+      To make the most economical can,
+      your goal is to reduce the <em>total</em>
+      amount of material needed,
+      including any wasted metal.
+    </p>
+    <figure xml:id="fig_square">
+      <caption>Cutting circles in a square pattern.</caption>
+      <image width="50%" source="images/squares.png"/>
+    </figure>
+    <figure xml:id="fig_hexagon">
+      <caption>Cutting circles in a hexagonal pattern.</caption>
+      <image width="50%" source="images/hexagons.png"/>
+    </figure>
+    <p>
+      If the circles are cut according to <xref ref="fig_square">Figure</xref>,
+      then the total amount of material required for each can is a rectangle and two squares,
+      which wastes a lot of material.
+      If we plan to minimize the amount of material required,
+      we will instead cut out circles according to <xref ref="fig_hexagon">Figure</xref>.
+      The total area of material required for each can then becomes a rectangle and two hexagons.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <p>
+      We will set up an equation for the total surface area of sheet metal required and then find when it is a minimum.
+      <ol>
+        <aside>
+          <p>
+            Don't forget that the mathematical constant <m>\pi</m> is represented in Maple as <c>Pi</c>.
+          </p>
+        </aside>
+          <idx><h>Pi</h></idx>
+        <li>
+          <p>
+            The side of the can is in the shape of a rectangle that has width <m>h</m> and a length equal to the circumference of the lid.
+            Give an equation for this area in terms of <m>r</m> and <m>h</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The two hexagons that are needed for the top and bottom of the can circumscribe a circle of radius <m>r</m>.
+            Give an equation for the area of this hexagon in terms of <m>r</m>.
+            <xref ref="hexagoncircle">Figure</xref>
+            may be helpful for splitting the hexagon up into six equilateral triangles.
+            <figure xml:id="hexagoncircle">
+              <caption>A hexagon circumscribing a circle.</caption>
+              <image>
+                 <latex-image> <![CDATA[\begin{tikzpicture}\draw[] (0,0) circle (1.732050808cm); \node[regular polygon, regular polygon sides=6, draw, inner sep=1.2247cm] at (0,0) {}; \draw (-1,1.732050808) -- (1,-1.732050808); \draw (-1,-1.732050808) -- (1,1.732050808); \draw (-2,0) -- (2,0); \draw (0,-1.732050808) -- (0,-1) node[right] {\(r\)} -- (0,0); \draw [<->] (-1,-2) -- (1,-2); \draw (0,-2) node [below] {\(b\)};\end{tikzpicture}]]> </latex-image>
+              </image>
+            </figure>
+            <aside>
+              <p>
+                Using trigonometric ratios of
+                <m>\tfrac{\pi}{3}=60^\circ</m> and <m>\tfrac{\pi}{6}=30^\circ</m>,
+                it is possible to compute the length of <m>b</m> in terms of <m>r</m>.
+              </p>
+            </aside>
+            <aside>
+              <p>
+                The area of each of the six triangles is <m>\tfrac{1}{2}br</m>.
+              </p>
+            </aside>
+          </p>
+        </li>
+        <li>
+          <p>
+            Give an equation for the total area <m>A</m> required
+            (including waste)
+            as a function of <m>r</m> and <m>h</m>.
+            This total area should include two hexagons and the rectangle that is used for the side of the can.
+            <aside>
+              <p>
+                The volume of a circular cylinder is
+                <me>
+                  V=\pi r^2 h
+                </me>.
+              </p>
+            </aside>
+          </p>
+        </li>
+        <li>
+          <p>
+            Given the required total volume <m>V=250</m>,
+            use a substitution for <m>h</m> to give the area from exercise 3 in terms of <m>r</m> only.
+            Assign this function as <m>A(r)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Plot a graph of <m>A(r)</m> over the interval <m>0 \leq r \leq 5</m>.
+            Limit the vertical range to <m>-200 \leq A \leq 400</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the second derivative test to find the value of <m>r</m> that minimizes the total area <m>A(r)</m>.
+            <aside>
+              <p>
+                For the second derivative test,
+                find Type I critical numbers where <m>A'(r)=0</m>.
+                Then show that <m>A''(r)>0</m> for all <m>r>0</m> to indicate that the area is an absolute minimum at this critical number.
+              </p>
+            </aside>
+          </p>
+        </li>
+        <li>
+          <p>
+            Calculate the height of the can using this radius.
+            <aside>
+              <p>
+                It can be shown that the ratio of height to radius of the optimized can is
+                <m>\dfrac{h}{r} =~\dfrac{4\sqrt{3}}{\pi}</m>, regardless of volume.
+              </p>
+            </aside>
+          </p>
+        </li>
+        <li>
+          <p>
+            Show that the ratio of height to radius is <m>\dfrac{h}{r} = \dfrac{4\sqrt{3}}{\pi} \approx 2.21</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+</section>

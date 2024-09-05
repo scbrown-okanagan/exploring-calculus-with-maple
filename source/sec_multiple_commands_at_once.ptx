@@ -1,0 +1,45 @@
+<section xml:id="sec_multiple_commands_at_once">
+  <title>Multiple Commands at Once</title>
+  <p>
+    As you may have noticed,
+    each time that we have used Maple input in this tutorial,
+    there is a semicolon <c>;</c> at the end of the line.
+    This used to be required in older versions of Maple,
+    though it is no longer mandatory in modern versions.
+  </p>
+  <p>
+        <idx><h>mathematical functions</h><h>exponential</h></idx>
+        <idx><h>mathematical functions</h><h>nth root@<m>n</m><sup>th</sup> root</h></idx>
+  </p>
+  <p>
+    The reason why the semicolon continues to be important is because it tells Maple when one command ends and another begins.
+    You can use this to run multiple commands within one Maple input:
+  </p>
+  <aside>
+    <p>
+      Multiple commands can be run at the same time by placing a semicolon <c>;</c> in between them.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {surd(x,3);
+    exp(x); } \end{mapleinput} \relax \begin{maplelatex} {surd(x,3)}{
+    <me>
+      \displaystyle \sqrt[3]{x}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \begin{maplelatex} {exp(x)}{
+    <me>
+      \displaystyle { e}^{x}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      If you use a full colon <c>:</c> instead of a semicolon,
+      then the output of that command is hidden from the screen when it is executed.
+    </p>
+  </aside>
+</section>

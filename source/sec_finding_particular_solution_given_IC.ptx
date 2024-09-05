@@ -1,0 +1,45 @@
+<section xml:id="sec_finding_particular_solution_given_IC">
+  <title>Finding the Particular Solution given Initial Conditions</title>
+  <p>
+        <idx><h>differential equations</h><h>dsolve!particular solution</h></idx>
+        <idx><h>differential equations</h><h>dsolve!initial condition</h></idx>
+  </p>
+  <p>
+    The constant <m>A</m> from the above example is arbitrary,
+    meaning that the function <m>y(x)=A{ e}^{1/3\,{x}^{3}}</m> is always a solution for the original differential equation,
+    no matter the value of <m>A</m>.
+  </p>
+  <p>
+    If we are given an <em>initial condition</em>
+    of the form <m>y(x_0)=y_0</m> for constants <m>x_0</m> and <m>y_0</m>,
+    then we can find a unique solution for the differential equation.
+    This will give us a new value for <m>A</m> every time we change the initial condition.
+  </p>
+  <p>
+    For example,
+    suppose that the function <m>y(x)</m> goes through the point <m>(0,5)</m>.
+    In this case, we have the initial condition <m>y(0)=5</m>.
+  </p>
+  <p>
+    To include this initial condition when solving the differential equation in Maple,
+    we add it into the <c>dsolve()</c> command as follows: \begin{maplegroup} \begin{mapleinput} {dsolve([de1,
+    y(0) = 5], y(x)); } \end{mapleinput}
+  </p>
+  <p>
+    \relax \begin{maplelatex} {y(x) = 5*exp((1/3)*x^3)}{
+    <me>
+      \displaystyle y \left( x \right) =5\,{{ e}^{1/3\,{x}^{3}}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex}
+  </p>
+  <aside>
+    <p>
+      The particular solution to <m>y'=x^2y</m> with the initial condition <m>y(0)=5</m> is <m>y \left( x \right) =5\,{{ e}^{1/3\,{x}^{3}}}</m>.
+    </p>
+  </aside>
+  <p>
+    \end{maplegroup}
+  </p>
+</section>

@@ -1,0 +1,23 @@
+<section xml:id="sec_palettes_toolbar">
+  <title>Palettes Toolbar</title>
+  <p>
+    You can open or close the palettes toolbar by clicking on the black arrows at the left side of the page.
+  </p>
+  <figure>
+    <caption>Opening and closing the palettes toolbar.</caption>
+    \adjincludegraphics[width=0.495\textwidth]{tutorials/figures/palettes1.png}\hspace{.2cm}
+    \adjincludegraphics[width=0.505\textwidth]{tutorials/figures/palettes2.png}
+  </figure>
+  <p>
+    With the palettes toolbar open,
+    you can see several palettes that are available.
+    These can be used to quickly access common operations and procedures by clicking on the appropriate buttons.
+    Each palette can be expanded or closed.
+    The Expression palette is especially useful for common functions.
+  </p>
+  <aside>
+    <p>
+      \adjincludegraphics[scale=0.6,trim={0 {.3\height} 0 0},clip]{tutorials/figures/palettes3.png}
+    </p>
+  </aside>
+</section>

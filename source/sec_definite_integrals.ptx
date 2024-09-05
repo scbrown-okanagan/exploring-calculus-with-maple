@@ -1,0 +1,153 @@
+<section xml:id="sec_definite_integrals">
+  <title>Definite Integrals</title>
+  <introduction>
+    <p>
+      We now turn our attention to using the Fundamental Theorem of Calculus to calculate definite integrals to
+      (in most cases)
+      obtain the area underneath a curve.
+    </p>
+    <p>
+      The <c>int()</c> command allows us to compute integrals
+      (both definite and indefinite)
+      directly.
+      The <c>Int()</c> command allows us to symbolically view the integral,
+      or assign it to a variable to use later for other computations or calculations.
+      Capitalization is important in Maple.
+    </p>
+  </introduction>
+  <subsection>
+    <title>The Definite Integral <m>\displaystyle\int_{-3}^{3}\frac{1}{x^2+1}\  dx</m></title>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := 1/(1+x\symbol{94}2); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+      arrow; 1/(1+x^2) end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto  \frac{1}{ {x}^{2}+1 }
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {plot(f(x),
+      x=-3..3); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/Definite_And_Indefinite_Integralsplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>plot</h><h>axes intervals</h></idx>
+          <idx><h>integral</h><h>int!definite</h></idx>
+          <idx><h>integral</h><h>Int!definite</h></idx>
+    </p>
+    <p>
+      We use the <c>Int()</c> command to display the integral,
+      and the <c>int()</c> command to evaluate the integral.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {Int(f(x),
+      x=-3..3); } \end{mapleinput}
+    </p>
+    <aside>
+      <p>
+        Note the capital
+        <q>I</q>
+        in this command.
+        This prevents Maple from automatically evaluating the integral.
+      </p>
+    </aside>
+    <p>
+      \relax \begin{maplelatex} {Int(1/(x^2+1), x = -3 .. 3)}{
+      <me>
+        \displaystyle \int _{-3}^{3}\! \frac{1}{ {x}^{2}+1 }\,{dx}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {int(f(x), x=-3..3);
+      evalf( } \end{mapleinput} \relax \begin{maplelatex} {2*arctan(3)}{
+      <me>
+        \displaystyle 2\,\arctan \left( 3 \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \begin{maplelatex} {2.498091544}{
+      <me>
+        \displaystyle  2.498091544
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+  <subsection>
+    <title>The Definite Integral <m>\displaystyle\int_{1}^{10} \ln(x) \  dx</m></title>
+    <p>
+          <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {g(x) := ln(x); } \end{mapleinput} \relax \begin{maplelatex} {g := proc (x) options operator, arrow;
+      ln(x) end proc}{
+      <me>
+        \displaystyle g\, := \,x\mapsto \ln  \left( x \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {plot(g(x),
+      x=1..10); } \end{mapleinput} \relax  \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/Definite_And_Indefinite_Integralsplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight  \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {int(g(x),
+      x=1..10);
+      evalf( } \end{mapleinput} \relax \begin{maplelatex} {-9+10*ln(2)+10*ln(5)}{
+      <me>
+        \displaystyle -9+10\,\ln  \left( 2 \right) +10\,\ln  \left( 5 \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \begin{maplelatex} {14.02585093}{
+      <me>
+        \displaystyle  14.02585093
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>plot</h><h>axes intervals</h></idx>
+          <idx><h>integral</h><h>int!definite</h></idx>
+          <idx><h>evalf</h></idx>
+          <idx><h>ditto operator</h></idx>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Improper Integrals</title>
+    <p>
+          <idx><h>integral</h><h>int!improper</h></idx>
+          <idx><h>integral</h><h>Int!improper</h></idx>
+    </p>
+    <p>
+      The <c>int()</c> and <c>Int()</c> commands can also be used to compute improper integrals.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {h(x) := 1/x\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {h := proc (x) options operator,
+      arrow; 1/x^2 end proc}{
+      <me>
+        \displaystyle h\, := \,x\mapsto {x}^{-2}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {plot(h(x),
+      x=0..infinity); } \end{mapleinput} \relax  \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/Definite_And_Indefinite_Integralsplot2d3-eps-converted-to.pdf\vskip.5\MaplePlotHeight  \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {Int(h(x),
+      x=1..infinity); } \end{mapleinput} \relax \begin{maplelatex} {Int(1/x^2, x = 1 .. infinity)}{
+      <me>
+        \displaystyle \int _{1}^{\infty }\!{x}^{-2}{dx}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {int(h(x),
+      x=1..infinity); } \end{mapleinput} \relax \begin{maplelatex} {1}{
+      <me>
+        \displaystyle 1
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+</section>

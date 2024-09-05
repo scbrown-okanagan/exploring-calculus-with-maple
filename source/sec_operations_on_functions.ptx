@@ -1,0 +1,136 @@
+<section xml:id="sec_operations_on_functions">
+  <title>Operations on Functions</title>
+  <introduction>
+    <p>
+      Once one or more functions are assigned,
+      we can make expressions using function notation,
+      or perform other operations on those functions.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := 2*x\symbol{94}3; } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+      arrow; 2*x^3 end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto 2\,{x}^{3}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {g(t) := t+1; } \end{mapleinput} \relax \begin{maplelatex} {g := proc (t) options operator, arrow;
+      t+1 end proc}{
+      <me>
+        \displaystyle g\, := \,t\mapsto t+1
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {f(g(t));
+      expand( } \end{mapleinput} \relax \begin{maplelatex} {2*(t+1)^3}{
+      <me>
+        \displaystyle 2\, \left( t+1 \right) ^{3}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \relax \begin{maplelatex} {2*t^3+6*t^2+6*t+2}{
+      <me>
+        \displaystyle 2\,{t}^{3}+6\,{t}^{2}+6\,t+2
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {plot(f(x),
+      x=-5..5); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/funtionnotationplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>expand</h></idx>
+          <idx><h>plot</h></idx>
+          <idx><h>plot</h><h>axes intervals</h></idx>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Average Rate of Change of a Function over an Interval</title>
+    <p>
+      In this example,
+      we will find the average rate of change of the function
+      <m>f(x) = -2x^3 + 25x^2 + 15</m> over the interval <m>[2,7]</m>.
+      We begin by defining the function:
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := -2*x\symbol{94}3 + 25*x\symbol{94}2 + 15; } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
+      arrow; -2*x^3+25*x^2+15 end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto -2\,{x}^{3}+25\,{x}^{2}+15
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      Once the function is defined,
+      we can calculate the average rate of change over an interval <m>[a,b]</m> by using the formula
+      <me>
+        \frac{f(b)-f(a)}{b-a}
+      </me>.
+    </p>
+    <p>
+      In this case, we let <m>a=2</m> and <m>b=7</m>:
+    </p>
+    <aside>
+      <p>
+        This fraction will look much nicer on your screen if you use 2D Math font.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {(f(7) - f(2))/(7 - 2); } \end{mapleinput} \relax \begin{maplelatex} {91}{
+      <me>
+        \displaystyle 91
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} \end{mapleinput} \end{maplegroup}
+    </p>
+    <p>
+      The average rate of change over the interval <m>[2,7]</m> is <m>91</m>.
+      The units of this rate would be given in (units of <m>y</m>)/(units of <m>x</m>).
+    </p>
+  </subsection>
+  <subsection xml:id="subsec_plotting_transformations">
+    <title>Plotting Transformations of Functions</title>
+    <p>
+      Suppose that we start with a sinusoidal function <m>g(x)</m> with amplitude <m>2</m> and period <m>2</m>.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {g(x) := 2*sin(Pi*x); } \end{mapleinput} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {plot(g(x),
+      x=0..4, y=-4..4); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/transformationsplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>plot</h></idx>
+          <idx><h>Pi</h></idx>
+          <idx><h>plot</h><h>axes intervals</h></idx>
+          <idx><h>plot</h><h>multiple functions</h></idx>
+    </p>
+    <p>
+      We can then plot the original function <m>g(x)</m> and and the transformation
+      <m>\frac{1}{2}g(x)</m> on the same axes to see that the amplitude has been halved.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {plot([g(x), 0.5*g(x)], x=0..4, y=-4..4); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/transformationsplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <p>
+      We can also see how an absolute value transformation of <m>g(x)</m> compares to the original function.
+      The result here is known as a fully rectified sine wave.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {plot([ g(x),
+      abs(g(x)) ], x=0..4, y=-4..4); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/transformationsplot2d3-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>mathematical functions</h><h>absolute value</h></idx>
+          <idx><h>plot</h><h>axes intervals</h></idx>
+          <idx><h>plot</h><h>multiple functions</h></idx>
+    </p>
+  </subsection>
+</section>

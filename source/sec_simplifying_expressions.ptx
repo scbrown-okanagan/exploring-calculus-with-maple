@@ -1,0 +1,67 @@
+<section xml:id="sec_simplifying_expressions">
+  <title>Simplifying Expressions</title>
+  <p>
+    Likewise, you can also simplify any expression with <c>simplify()</c>.
+    This includes basic simplifications such as collecting like terms as well as more complicated algebraic simplifications such as canceling and simplifying radicals,
+    exponents, logarithms, trigonometric functions, etc.
+  </p>
+  <p>
+        <idx><h>simplify</h></idx>
+        <idx><h>mathematical functions</h><h>sine</h></idx>
+        <idx><h>mathematical functions</h><h>cosine</h></idx>
+        <idx><h>mathematical functions</h><h>tangent</h></idx>
+        <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {simplify(3*sin(x)\symbol{94}2 + 3*cos(x)\symbol{94}2); } \end{mapleinput} \relax \begin{maplelatex} {3}{
+    <me>
+      \displaystyle 3
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      The <c>simplify()</c> command can sometimes produce unexpected results.
+      In some cases,
+      the <c>factor</c> command may be more appropriate.
+      In other cases,
+      you may need to include some optional parameters in the command.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {simplify(4*(tan(x)\symbol{94}2 + 1)); } \end{mapleinput} \relax \begin{maplelatex} {4/cos(x)^2}{
+    <me>
+      \displaystyle 4\, \left( \cos \left( x \right)  \right) ^{-2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {simplify(ln(3*x\symbol{94}3*y)); } \end{mapleinput} \relax \begin{maplelatex} {ln(3)+ln(x^3*y)}{
+    <me>
+      \displaystyle \ln  \left( 3 \right) +\ln  \left( {x}^{3}y \right)
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      Sometimes additional parameters need to be supplied in order for Maple to simplify the expression as you intend.
+      Here, we add the assumption that all variables are positive so that <m>\ln(x)</m> and <m>\ln(y)</m> are defined.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {simplify(ln(3*x\symbol{94}3*y),
+    assume=positive);} \end{mapleinput} \relax \begin{maplelatex} {ln(3)+3*ln(x)+ln(y)}{
+    <me>
+      \displaystyle \ln  \left( 3 \right) +3\,\ln  \left( x \right) +\ln  \left( y \right)
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

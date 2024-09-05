@@ -1,0 +1,226 @@
+<section xml:id="sec_derivative_of_a_function">
+  <title>The Derivative of a Function</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:assignment_operator}, pg.
+          <xref ref="chp_assignment_operator"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:derivative}, pg.
+          <xref ref="chp_derivative"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      In this activity,
+      we will investigate the derivative of a function and use Maple's powerful computational skills to simplify the process of finding a derivative.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Consider the function <m>f(x) = \sqrt{9 - x}</m>.
+          <aside>
+            <p>
+              To input a square root, use the <c>sqrt()</c> command.
+            </p>
+          </aside>
+            <idx><h>mathematical functions</h><h>square root</h></idx>
+          <aside>
+            <p>
+              When assigning the function to <m>f(x)</m>,
+              use the <m>:=</m> operator.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Define this function in Maple.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the derivative,
+            <idx><h>derivative</h></idx>
+                <m>f'(x)</m>, using the <c>limit()</c>
+            <idx><h>limit</h></idx>
+                command and the limit definition of the derivative.
+                <aside>
+                  <p>
+                    Don't forget!
+                    <me>
+                      f'(x) = \dlim{h}{0}\dfrac{f(x+h)-f(x)}{h}
+                    </me>
+                  </p>
+                </aside>
+            <idx><h>limit</h><h>definition of a derivative</h></idx>
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the derivative, <m>f'(x)</m>,
+                using the <c>diff()</c>
+            <idx><h>derivative</h><h>diff</h></idx>
+                command.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the derivative, <m>f'(x)</m>,
+                using <c>'</c><idx><h>derivative</h><h>prime notation</h></idx> notation.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          A toy rocket is fired straight upward, and its height
+          (in metres)
+          is given by:
+          <m>h(t) = t + 10 - \sqrt{2t^2 + 100}</m>,
+          with <m>0 \leq t \leq 20</m>,
+          where <m>t</m> is the time in seconds.
+          <aside>
+            <p>
+              If you decide to define a height function,
+              be sure that the variable in your function name matches the variable in your function.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Plot
+            <idx><h>plot</h></idx>
+                a graph of height as a function of time.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find a formula for velocity in terms of <m>t</m>.
+                <aside>
+                  <p>
+                    Recall that the derivative of position with respect to time is velocity.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                At what time is the velocity <m>0</m> m/s?
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the maximum height that the rocket attains?
+                <aside>
+                  <p>
+                    When the velocity of the rocket is <m>0</m> m/s, the rocket has reached its maximum height.
+                  </p>
+                </aside>
+                <aside>
+                  <p>
+                    An example of finding minimum and maximum values on a closed interval can be found on <xref ref="subsec_closed_interval_method">page</xref>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Molten lava can fill a chamber in the earth's crust before it builds up enough pressure to erupt.
+          Let the pressure be modeled by <m>P(t) = 0.47 t^2 { e}^{0.0035 t}</m>,
+          where <m>t</m> is the time in months.
+          <aside>
+            <p>
+              Recall that <c>exp()</c> <idx><h>mathematical functions</h><h>exponential</h></idx> is used to denote the exponential function in Maple.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                What is the rate of change of pressure with respect to time?
+              </p>
+            </li>
+            <li>
+              <p>
+                Suppose that an eruption is highly likely to occur if pressure increases at a rate greater than <m>20</m>.
+                Is an eruption likely when <m>t=30</m> months?
+                Use a new paragraph to state your answer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>g(x)=\sin(2\pi^2 x)</m>.
+            <idx><h>mathematical functions</h><h>sine</h></idx>
+        <aside>
+            <p>
+              To type the mathematical constant <m>\pi = 3.14\cdots</m>,
+            <idx><h>Pi</h></idx>
+              be sure to use <c>Pi</c>.
+            </p>
+          </aside>
+          <aside>
+            <p>
+              Don't forget to include multiplication between <m>\pi^2</m> and <m>x</m>.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Use Maple to find the first derivative, the second derivative,
+                the third derivative, and the fourth derivative of <m>g(x)</m>.
+                You should notice a pattern, so use a new paragraph to describe it.
+                <aside>
+                  <p>
+                    The <m>n</m><sup>th</sup> derivative<idx><h>derivative</h><h>diff!higher derivatives</h></idx>
+            <idx><h>derivative</h><h>prime notation!higher derivatives</h></idx>
+                    of the function can be computed by using the <c>diff()</c> command or <c>'</c> notation.
+                    See <xref ref="chp_derivative">page</xref> for more information.
+                    You can also make use of the Calculus palette:
+                    <image width="80%" source="images/palettediff.png"/>
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Use your answer from part (a) to predict what the <m>77</m><sup>th</sup> derivative of <m>g(x)</m> is,
+                and then verify that your prediction is correct by computing this derivative using Maple.
+              </p>
+            </li>
+            <li>
+              <p>
+                (Optional) Use the information in <xref ref="chp_conditional_statements_and_loops">Tutorial</xref>
+                on <xref ref="chp_conditional_statements_and_loops">page</xref> to write a loop
+            <idx><h>loops</h></idx>
+                that will output the first <m>100</m> derivatives of <m>g(x)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

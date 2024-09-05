@@ -1,0 +1,30 @@
+<section xml:id="sec_autocompleting_commands">
+  <title>Autocompleting Commands</title>
+  <p>
+    For convenience, Maple can automatically fill in the command that you wish to type.
+    To do this, type in the first few letters of the command and then hit ESC.
+  </p>
+  <aside>
+    <p>
+      Ctrl+Space is another shortcut for this feature,
+      if you find it more convenient while typing.
+    </p>
+  </aside>
+  <p>
+    For example,
+    typing in <c>exp</c> and hitting ESC will provide the following list of commands.
+  </p>
+  <figure>
+    <caption>Using autocomplete with ESC gives a menu of possible commands you are trying to use.</caption>
+    <image width="73%" source="images/autocomplete.png"/>
+  </figure>
+  <p>
+    From here, you can select the <c>exp</c> command for the exponential function,
+    or possibly the <c>expand</c> command,
+    which we will look at later.
+    If the command requires a parameter,
+    it should already be highlighted so that you can type in its value.
+    If a command has multiple parameters,
+    you can hit the Tab key to highlight the next parameter.
+  </p>
+</section>

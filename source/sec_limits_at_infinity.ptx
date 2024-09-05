@@ -1,0 +1,135 @@
+<section xml:id="sec_limits_at_infinity">
+  <title>Limits at Infinity</title>
+  <introduction>
+    <p>
+      To take the limit of a function as <m>x</m> becomes infinitely large, Maple recognizes <c>infinity</c> and <c>-infinity</c>.
+      These can be used to find horizontal asymptotes.
+      If the function does not have a horizontal asymptote,
+      the limit may result in <m>\pm \infty</m>.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {g(x) := (3*x\symbol{94}2 + 5*x - 10) / (5*x\symbol{94}2 - 20*x + 1); } \end{mapleinput} \relax \begin{maplelatex} {g := proc (x) options operator,
+      arrow; (3*x^2+5*x-10)/(5*x^2-20*x+1) end proc}{
+      <me>
+        \displaystyle g\, := \,x\mapsto {\frac {3\,{x}^{2}+5\,x-10}{5\,{x}^{2}-20\,x+1}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+          <idx><h>limit</h><h>at infinity</h></idx>
+      \begin{maplegroup} \begin{mapleinput} {limit(g(x),
+      x=infinity); } \end{mapleinput} \relax \begin{maplelatex} {3/5}{
+      <me>
+        \displaystyle 3/5
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {
+    </p>
+    <p>
+      } \end{mapleinput} \end{maplegroup}
+    </p>
+    <p>
+      An oscillating function such as <m>\sin(x)</m> may not have a definable limit.
+      Maple will attempt to determine a range for the minimum and maximum of the function.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {h(x) := sin(x); } \end{mapleinput} \relax \begin{maplelatex} {h := proc (x) options operator, arrow;
+      sin(x) end proc}{
+      <me>
+        \displaystyle h\, := \,x\mapsto \sin \left( x \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <aside>
+      <p>
+        Since <m>\sin(x)</m> oscillates between <m>-1</m> and <m>1</m>, Maple cannot determine a unique value for the limit as <m>x \rightarrow -\infty</m>.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {limit(h(x), x=-infinity); }
+          <idx><h>limit</h><h>at infinity</h></idx>
+      \end{mapleinput} \relax \begin{maplelatex} {-1 .. 1}{
+      <me>
+        \displaystyle {-1\ldots 1}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </introduction>
+  <subsection xml:id="subsec_horizontal_asymptotes">
+    <title>Horizontal Asymptotes and Limits at Infinity</title>
+    <p>
+      In this example, we will examine the function
+      <me>
+        f(t) = \frac{2000}{1+{ e}^{-t+2}}
+      </me>,
+      which is known as a logistic function.
+          <idx><h>mathematical functions</h><h>logistic function</h></idx>
+          <idx><h>mathematical functions</h><h>exponential function</h></idx>
+          <idx><h>plot</h></idx>
+      \begin{maplegroup} \begin{mapleinput} {logistic(t) := 2000/(1 + exp(-t+2)); } \end{mapleinput} \relax \begin{maplelatex} {logistic := proc (t) options operator,
+      arrow; 2000/(1+exp(-t+2)) end proc}{
+      <me>
+        \displaystyle \textit{logistic}\, := \,t\mapsto \frac{2000}{1+{{ e}^{-t+2}}}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      Judging by the plot of the logistic function,
+      it appears that the function may have horizontal asymptotes.
+    </p>
+    <aside>
+      <p>
+        Logistic functions have many applications,
+        such as population modeling.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {plot(logistic(t));} \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+      tutorials/figures/logisticasymptotesplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    </p>
+    <p>
+      To find the right-hand asymptote,
+      we take the limit as <m>t \rightarrow \infty</m>.
+    </p>
+    <aside>
+      <p>
+        Here we are using <c>t=infinity</c> rather than <m>x</m>,
+        since the variable of this function is <m>t</m>.
+      </p>
+    </aside>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {limit(logistic(t),
+      t=infinity); } \end{mapleinput} \relax \begin{maplelatex} {2000}{
+      <me>
+        \displaystyle 2000
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      To find the left-hand asymptote,
+      we take the limit as <m>t \rightarrow -\infty</m>.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {limit(logistic(t),
+      t=-infinity); } \end{mapleinput} \relax \begin{maplelatex} {0}{
+      <me>
+        \displaystyle 0
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+</section>

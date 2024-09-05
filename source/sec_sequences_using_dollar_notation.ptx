@@ -1,0 +1,45 @@
+<section xml:id="sec_sequences_using_dollar_notation">
+  <title>Sequences using $ Notation</title>
+  <p>
+        <idx><h>sequences and series</h><h>$ notation</h></idx>
+  </p>
+  <p>
+    The shortest way to list the terms in a sequence is using the $ symbol.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {3*k\symbol{94}2+2 $ k=0..3; } \end{mapleinput}
+  </p>
+  <aside>
+    <p>
+      The notation for these sequences is
+      <me>
+        \displaystyle\left(3k^2+2\right)_{k=0}^3
+      </me>
+      and
+      <me>
+        \displaystyle\left(2k^2-k\right)_{k=1}^5
+      </me>.
+    </p>
+  </aside>
+  <p>
+    \relax \begin{maplelatex} {2, 5, 14, 29}{
+    <me>
+      \displaystyle 2,\,5,\,14,\,29
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    Now let's generate five integers of the form <m>2k^2-k</m>:
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {2*k\symbol{94}2-k $ k=1..5; } \end{mapleinput} \relax \begin{maplelatex} {1, 6, 15, 28, 45}{
+    <me>
+      \displaystyle 1,\,6,\,15,\,28,\,45
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

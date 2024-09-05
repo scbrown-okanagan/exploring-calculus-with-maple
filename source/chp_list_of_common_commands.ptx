@@ -1,0 +1,351 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_list_of_common_commands">
+  <title>List of Common Commands</title>
+  <p>
+    \begin{fullwidth} \begin{longtable}{p{0.33\linewidth} p{0.66\linewidth}} \multicolumn{2}{l}{<em>Keyboard Shortcuts</em>}
+  </p>
+  <p>
+    \hline Ctrl+J, Ctrl+K &amp; New execution group (after or before current line)
+  </p>
+  <p>
+    Ctrl+Shift+J, Ctrl+Shift+K &amp; New paragraph (after or before current line)
+  </p>
+  <p>
+    Ctrl+T &amp; Convert line to Paragraph
+  </p>
+  <p>
+    Ctrl+M &amp; Convert line to Maple input
+  </p>
+  <p>
+    Ctrl+. &amp; Indent section
+  </p>
+  <p>
+    Ctrl+, &amp; Unindent section
+  </p>
+  <p>
+    Ctrl+Delete &amp; Delete section
+  </p>
+  <p>
+    F4 &amp; Merge consecutive execution groups
+  </p>
+  <p>
+    F5 &amp; Toggle between Text, Nonexecutable Math, and Math types
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Common Expressions</em>}
+  </p>
+  <p>
+    \hline exp(x) &amp; The exponential function
+  </p>
+  <p>
+    sqrt(x) &amp; The square root function
+  </p>
+  <p>
+    abs(x) &amp; The absolute value function
+  </p>
+  <p>
+    surd(x,n) &amp; The primitive <m>n</m><sup>th</sup> root,
+    <m>x^{1/n}</m>
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Manipulating Expressions</em>}
+  </p>
+  <p>
+    \hline name := expression &amp; Assigns an expression to a variable
+  </p>
+  <p>
+    subs(x=a, expression) &amp; Evaluate an expression at <m>x = a</m>
+  </p>
+  <p>
+    evalf(expression) &amp; Evaluate the given expression as a
+    (floating point)
+    decimal
+  </p>
+  <p>
+    factor(expression) &amp; Factor the given expression
+  </p>
+  <p>
+    simplify(expression) &amp; Simplify the given expression
+  </p>
+  <p>
+    expand(expression) &amp; Expand the given expression
+  </p>
+  <p>
+    collect(expression,var) &amp; Collect terms of the expression by the specified variable
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Solving Equations</em>}
+  </p>
+  <p>
+    \hline solve(equation,var) &amp; Solves the given equation for the specified variable
+  </p>
+  <p>
+    fsolve(equation,var) &amp; Solves the given equation for the specified variable (as a decimal)
+  </p>
+  <p>
+    fsolve(equation,var=a..b) &amp; Solves the given equation for the specified variable
+    (as a decimal)
+    on the interval <m>[a,b]</m>
+  </p>
+  <p>
+    solve(\{eqn1,eqn2\},\{var1,var2\}) &amp; Solves a system of equations for all specified variables
+  </p>
+  <p>
+    fsolve(\{eqn1,eqn2\},\{var1,var2\}) &amp; Solves a system of equations for all specified variables (as a decimal)
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Defining Functions</em>}
+  </p>
+  <p>
+    \hline name(var) := expression &amp; Assigns a function of the specified variable
+  </p>
+  <p>
+    name := unapply(expression,var) &amp; Convert an expression to a function of the specified variable
+  </p>
+  <p>
+    name(var) := piecewise(condition, &amp; Create a piecewise function of the specified variable where
+  </p>
+  <p>
+    expr,…,condition,expr,…) &amp;
+    each condition is an interval
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Plotting Functions</em>}
+  </p>
+  <p>
+    \hline plot(f(x),x=a..b) &amp; Plot the given function,
+    <m>f(x)</m>, over the interval <m>[a,b]</m>
+  </p>
+  <p>
+    plot([f(x),g(x)],x=a..b) &amp; Plot two functions,
+    <m>f(x)</m> and <m>g(x)</m>, over the interval <m>[a,b]</m>
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Additional Plot Parameters</em>
+    (Include these after necessary parameters)}
+  </p>
+  <p>
+    y=c..d &amp; Only plot the range <m>c \leq y \leq d</m>
+  </p>
+  <p>
+    discont=true &amp; Includes discontinuities in a plot
+  </p>
+  <p>
+    colour=blue &amp; Specify the colour for a graph (black, blue,
+    red, etc.)
+  </p>
+  <p>
+    linestyle=dotted &amp; Specify the style of the line (dash,
+    dot, etc.)
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Limits</em>}
+  </p>
+  <p>
+    \hline limit(expression,var=a) &amp; Find the limit of the expression as var approaches <m>a</m>
+  </p>
+  <p>
+    limit(expression,var=a,right) &amp; Find the limit of the expression as var approaches <m>a</m> from the right
+  </p>
+  <p>
+    limit(expression,var=a,left) &amp; Find the limit of the expression as var approaches <m>a</m> from the left
+  </p>
+  <p>
+    limit(expression,var=infinity) &amp; Find the limit of the expression as var approaches infinity
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Derivatives</em>}
+  </p>
+  <p>
+    \hline diff(expression,var) &amp; The derivative of the given expression with respect to variable
+  </p>
+  <p>
+    diff(expression,var,var) &amp; The second derivative of the given expression with respect to variable
+  </p>
+  <p>
+    diff(expression,var$2) &amp; The second derivative of the given expression with respect to variable
+  </p>
+  <p>
+    f'(var) &amp; The derivative of the function <m>f</m> with respect to variable
+  </p>
+  <p>
+    f\symbol{94}(n)(var) &amp; The nth derivative of the function <m>f</m> with respect to variable
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Implicit Functions</em>
+    (requires "plots" package for plotting)}
+  </p>
+  <p>
+    \hline implicitplot(equation,x=a..b,y=c..d) &amp; Plot the implicit function over the specified region
+  </p>
+  <p>
+    implicitdiff(equation,y,x) &amp; The derivative of the implicit function,
+    given as <m>dy/dx</m>
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Riemann Sums and Numerical Integration</em>
+    (requires "Student[Calculus1]" package)}
+  </p>
+  <p>
+    \hline ApproximateInt(f(x),x=a..b) &amp; Approximate the definite integral of <m>f(x)</m> from <m>x=a</m> to <m>x=b</m>
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Additional ApproximateInt Parameters</em>
+    (Include these after necessary parameters)}
+  </p>
+  <p>
+    method=left &amp; Choose left rectangles for approximation
+  </p>
+  <p>
+    method=right &amp; Choose right rectangles for approximation
+  </p>
+  <p>
+    method=lower &amp; Choose lower bound rectangles for approximation
+  </p>
+  <p>
+    method=upper &amp; Choose upper bound rectangles for approximation
+  </p>
+  <p>
+    method=midpoint &amp; Choose midpoint rectangles for approximation
+  </p>
+  <p>
+    method=trapezoid &amp; Choose trapezoid rule approximation
+  </p>
+  <p>
+    method=simpson &amp; Choose Simpson's rule approximation
+  </p>
+  <p>
+    output=sum &amp; Output summation notation for given approximation method
+  </p>
+  <p>
+    output=value &amp; Output exact value of approximation
+  </p>
+  <p>
+    output=plot &amp; Output graph of integrand function and approximation
+  </p>
+  <p>
+    output=animation &amp; Output animation of approximation as <m>n</m> increases
+  </p>
+  <p>
+    partition=n &amp; Use <m>n</m> equally spaced subintervals for approximation
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Sequences and Series</em>}
+  </p>
+  <p>
+    \hline expression $ var=a..b &amp; Display the sequence of the expression from var = <m>a</m> up to var = <m>b</m>
+  </p>
+  <p>
+    seq(expression,var=a..b) &amp; Display the sequence of the expression from var = <m>a</m> up to var = <m>b</m>
+  </p>
+  <p>
+    Sum(expression,var=a..b) &amp; Display the sum for the expression from var = <m>a</m> up to var = <m>b</m>)
+  </p>
+  <p>
+    sum(expression,var=a..b) &amp; Give the value of the sum of the expression from var = <m>a</m> up to var = <m>b</m>
+  </p>
+  <p>
+    taylor(f(x),x=a,n) &amp; Give the Taylor series expansion of <m>f(x)</m> about <m>x=a</m>,
+    including terms up to power <m>n-1</m>
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Integrals</em>}
+  </p>
+  <p>
+    \hline Int(f(x),x) &amp; The indefinite integral, display "inert" form
+  </p>
+  <p>
+    int(f(x),x) &amp; The indefinite integral, evaluated
+  </p>
+  <p>
+    Int(f(x),x=a..b) &amp; The definite integral over the specified interval,
+    display "inert" form
+  </p>
+  <p>
+    int(f(x),x=a..b) &amp; The definite integral over the specified interval,
+    evaluated
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Differential Equations</em>}
+  </p>
+  <p>
+    \hline dsolve(DE, y(x)) &amp; Solves the given differential equation for <m>y(x)</m>
+  </p>
+  <p>
+    dsolve([DE, ICs], y(x)) &amp; Solves the given differential equation with initial conditions for <m>y(x)</m>
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Direction Fields</em> (Requires
+    <q>DEtools</q>
+    package)}
+  </p>
+  <p>
+    \hline DEplot(DE,y(x),x=a..b,y=a..b) &amp; Plot the direction field for the differential equation <m>dy/dx</m>
+  </p>
+  <p>
+    DEplot(DE,y(x),x=a..b,y=a..b,[ICs]) &amp; Plot the direction field for the differential equation <m>dy/dx</m> with initial conditions
+  </p>
+  <p>
+    &amp;
+  </p>
+  <p>
+    \multicolumn{2}{l}{<em>Additional DEplot Parameters</em>
+    (Include these after necessary parameters)}
+  </p>
+  <p>
+    arrows=line &amp; Use lines for the direction field, rather than arrows
+  </p>
+  <p>
+    colour=black &amp; Change arrow colour
+  </p>
+  <p>
+    linecolour=blue &amp; Change solution curve colour
+  </p>
+  <p>
+    \end{longtable}\end{fullwidth}
+  </p>
+</chapter>

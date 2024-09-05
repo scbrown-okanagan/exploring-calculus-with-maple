@@ -1,0 +1,264 @@
+<section xml:id="sec_creating_a_maple_worksheet">
+  <title>Creating a Maple Worksheet</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:maple_environment}, pg.
+          <xref ref="chp_maple_environment"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:basics_of_maple_syntax}, pg.
+          <xref ref="chp_basics_of_maple_syntax"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:basic_operations}, pg.
+          <xref ref="chp_basic_operations"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      This activity will give you practice with:
+      <ul>
+        <li>
+          <p>
+            setting up a new worksheet in Maple for future activities.
+          </p>
+        </li>
+        <li>
+          <p>
+            switching between paragraphs for text and execution groups for Maple input.
+          </p>
+        </li>
+        <li>
+          <p>
+            evaluating expressions in exact and decimal form.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Open up Maple on your lab computer.
+          If you are asked whether you would like to update Maple,
+          you can select No.
+          You should now have a blank worksheet for the following exercises.
+          <aside>
+            <p>
+              The output of these commands is not useful on its own.
+              However, you have now told Maple to clear its memory and that you would like numerical answers to be displayed with up to <m>15</m> digit accuracy.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          On the first line of your worksheet you should be in Maple input,
+          which is indicated by the <c>></c> at the start of the line.
+          Type in your first two commands,
+          hitting Enter to run each command:
+          <c>> restart;</c>
+            <idx><h>restart</h></idx>
+          <c>> Digits := 15;</c>
+            <idx><h>Digits</h></idx>
+        </p>
+      </li>
+      <li>
+        <p>
+          Create a new paragraph for text using <image width="4%" source="images/new_text.png"/> and type in the following information:
+          <aside>
+            <p>
+              Ctrl+Shift+J and Ctrl+Shift+K are useful shortcuts for creating paragraphs after or before the current line.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Your first and last name.
+              </p>
+            </li>
+            <li>
+              <p>
+                Your student number.
+              </p>
+            </li>
+            <li>
+              <p>
+                The name of your instructor.
+              </p>
+            </li>
+            <li>
+              <p>
+                The title of the activity.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Open up the palettes menu on the top left-hand side of Maple by clicking the small black triangle that points to the right.
+          You may wish to use the Expression palette for the next few exercises.
+        </p>
+      </li>
+      <li xml:id="ex-maple-input">
+        <p>
+          Create a new execution group by using the <image width="5%" source="images/new_input.png"/> button and evaluate <m>5 + 2(7-4)</m>.
+          <aside>
+            <p>
+              Ctrl+J and Ctrl+K are useful shortcuts for creating execution groups after or before the current line.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Create a new execution group and evaluate <m>\left(\dfrac{5^2 - 9}{9-5}\right)^2</m>.
+          <aside>
+            <p>
+              You can create a fraction by encasing the numerator,
+              <m>5^2-9</m>, in a set of parentheses before dividing.
+              Alternatively,
+              you can highlight <m>5^2-9</m> and hit the <c>/</c> key to make a fraction.
+            </p>
+          </aside>
+          <aside>
+            <p>
+              To input a square root, use the <c>sqrt()</c> command.
+            </p>
+          </aside>
+            <idx><h>mathematical functions</h><h>square root</h></idx>
+        </p>
+      </li>
+      <li>
+        <p>
+          Create a new execution group and evaluate <m>\sqrt{\dfrac{3+6^2}{4^2-3}}</m>.
+          <aside>
+            <p>
+              Whenever possible, Maple will produce output in exact form.
+              However, using decimals in a Maple input will produce output in decimal form
+              (called a floating point decimal).
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li xml:id="ex-sqrt-digits">
+        <p>
+          Create a new execution group and evaluate <m>\sqrt{\dfrac{3.0+6.0^2}{4.0^2-3.0}}</m>.
+        </p>
+      </li>
+      <li xml:id="ex-builtin-functions">
+        <p>
+          For each of the following,
+          create a new execution group and evaluate the expression.
+          <ol>
+            <aside>
+              <p>
+                The mathematical constant <m>\pi = 3.14\cdots</m>
+    <idx><h>Pi</h></idx>
+                must be typed into Maple as capitalized <c>Pi</c>.
+                Do not type <c>pi</c>,
+                as this is simply the Greek letter <m>\pi</m>.
+              </p>
+            </aside>
+            <li>
+              <p>
+                <m>\cos\!\left(\frac{\pi}{6}\right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\arcsin\!\left(\frac{\sqrt{3}}{2}\right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\exp(2)</m>
+                <aside>
+                  <p>
+                    The <c>exp(x)</c><idx><h>mathematical functions</h><h>exponential</h></idx> function is the exponential function,
+                    <m>{ e}^x</m>.
+                    If you type <m>{ e}^x</m> using the 'e' key on the keyboard, Maple will not recognize it as the exponential function.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\ln\!\left(5^{\sfrac{1}{2}}\right)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="ex-evalf">
+        <p>
+          On each of the four Maple inputs you created in <xref ref="ex-builtin-functions">exercise</xref>,
+          add a semicolon at the end of the line,
+          followed by the command <c>evalf(%)</c>.
+          For example: <c>> cos(Pi/6);
+          evalf(%);</c>
+          <aside>
+            <p>
+              The semicolon <c>;</c> separates commands if you want to run multiple commands on the same Maple input.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          If you have accidentally created any additional paragraphs or execution groups that you wish to delete,
+          then delete them now by clicking on that line and pressing Ctrl+Del on the keyboard.
+          <aside>
+            <p>
+              Use the <image width="10%" source="images/new_section.png"/> buttons to create or remove sections.
+              Alternatively,
+              the shortcuts Ctrl+. and Ctrl+, can be used to enclose execution groups of paragraphs in a section or remove any section enclosing an input.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Organize your work by using a new section for each of <xref ref="ex-maple-input">exercises</xref>- <xref ref="ex-evalf"></xref>.
+          Be sure to clearly label each question by creating a section title immediately to the right of the arrow at the top of the section.
+          <aside>
+            <p>
+              You can highlight several execution groups or paragraphs with the mouse before combining them into one section.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          (Optional) Go back to the top of your worksheet and change the second line to:
+          <c>> Digits := 50;</c> Now run each Maple input again by hitting Enter on each line or by pressing the <image width="5%" source="images/execute_button.png"/> button.
+          What changed?
+          <aside>
+            <p>
+              You do not need to have your cursor at the end of the line to run the command.
+              Hitting Enter with your cursor anywhere on the Maple input will run the command.
+            </p>
+          </aside>
+          <aside>
+            <p>
+              Pressing the <image width="5%" source="images/execute_button.png"/> <idx><h>execute entire worksheet</h></idx> button executes every command in the entire worksheet.
+            </p>
+          </aside>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

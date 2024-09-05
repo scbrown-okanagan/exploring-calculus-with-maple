@@ -1,0 +1,110 @@
+<section xml:id="sec_arc_length">
+  <title>Arc Length</title>
+  <introduction>
+    <p>
+      We can use the <c>ArcLength()</c> command that is available in the <c>Student[Calculus1]</c> package to find the arc length of a function over a specified interval.
+    </p>
+    <p>
+          <idx><h>packages</h><h>Student[Calculus1]</h></idx>
+          <idx><h>arc length</h></idx>
+          <idx><h>evalf</h></idx>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Arc Length of a Parabola</title>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {with(Student[Calculus1]): } \end{mapleinput} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {g(x) := x\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {g := proc (x) options operator, arrow;
+      x^2 end proc}{
+      <me>
+        \displaystyle g\, := \,x\mapsto {x}^{2}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {arcg := ArcLength(g(x),
+      x=0..Pi); } \end{mapleinput} \relax \begin{maplelatex} {arcg := (1/2)*Pi*sqrt(4*Pi^2+1)-(1/4)*ln(-2*Pi+sqrt(4*Pi^2+1))}{
+      <me>
+        \displaystyle \textit{arcg}\, := \,1/2\,\pi \, \sqrt{4\,{\pi }^{2}+1}-1/4\,\ln  \left( -2\,\pi + \sqrt{4\,{\pi }^{2}+1} \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {evalf(arcg); } \end{mapleinput} \relax \begin{maplelatex} {10.62814707}{
+      <me>
+        \displaystyle  10.62814707
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+  <subsection>
+    <title>Arc Length of a Sinusoid</title>
+    <p>
+          <idx><h>mathematical functions</h><h>sine</h></idx>
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {f(x) := sin(x); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator, arrow;
+      sin(x) end proc}{
+      <me>
+        \displaystyle f\, := \,x\mapsto \sin \left( x \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {arcf := ArcLength(f(x),
+      x=0..Pi); } \end{mapleinput} \relax
+    </p>
+    <aside>
+      <p>
+         <c>EllipticE()</c> is a special function in Maple that you don't have to know.
+         We at least can evaluate it, however.
+      </p>
+    </aside>
+    <p>
+      \begin{maplelatex} {arcf := 2*sqrt(2)*EllipticE((1/2)*sqrt(2))}{
+      <me>
+        \displaystyle \textit{arcf}\, := \,2\, \sqrt{2}\textit{EllipticE} \left( 1/2\, \sqrt{2} \right)
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {evalf(arcf); } \end{mapleinput} \relax \begin{maplelatex} {3.820197788}{
+      <me>
+        \displaystyle  3.820197788
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+    <p>
+          <idx><h>arc length</h></idx>
+          <idx><h>evalf</h></idx>
+          <idx><h>arc length</h><h>output=integral</h></idx>
+    </p>
+    <p>
+      We can add the parameter <c>output = integral</c> to the <c>ArcLength()</c> command to display the integral for calculating the arc length.
+    </p>
+    <p>
+      \begin{maplegroup} \begin{mapleinput} {ArcLength(f(x),
+      x=0..Pi, output=integral); } \end{mapleinput} \relax \begin{maplelatex} {Int(sqrt(cos(x)^2+1), x = 0 .. Pi)}{
+      <me>
+        \displaystyle \int _{0}^{\pi }\! \sqrt{ \left( \cos \left( x \right)  \right) ^{2}+1}\,\,{dx}
+      </me>
+    </p>
+    <p>
+      } \end{maplelatex} \end{maplegroup}
+    </p>
+  </subsection>
+</section>

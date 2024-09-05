@@ -1,0 +1,32 @@
+<section xml:id="sec_other_common_functions">
+  <title>Other Common Functions</title>
+  <p>
+    Maple possesses many other useful built-in functions for performing common mathematical operations.
+    They include, but are not limited to,
+    commands that compute the factorial of a number,
+    find the floor or ceiling of a numerical value,
+    return the numerator or denominator of an expression,
+    or determine the maximum or minimum of a collection of arguments.
+  </p>
+  <p>
+        <idx><h>mathematical functions</h><h>factorial</h></idx>
+        <idx><h>mathematical functions</h><h>floor</h></idx>
+        <idx><h>mathematical functions</h><h>minimum</h></idx>
+        <idx><h>mathematical functions</h><h>maximum</h></idx>
+        <idx><h>mathematical functions</h><h>ceiling</h></idx>
+        <idx><h>mathematical functions</h><h>denominator</h></idx>
+        <idx><h>mathematical functions</h><h>numerator</h></idx>
+  </p>
+  <aside>
+    <p>
+      Factorial notation \text{!} works much like algebraic operations and does not need parentheses.
+      However, a <c>factorial()</c> command is also available.
+    </p>
+  </aside>
+  <p>
+    \begin{mapleinput} {!} \end{mapleinput} \begin{mapleinput} {floor( )} \end{mapleinput} \begin{mapleinput} {ceil( )} \end{mapleinput}
+  </p>
+  <p>
+    \begin{mapleinput} {numer( )} \end{mapleinput} \begin{mapleinput} {denom( )} \end{mapleinput} \begin{mapleinput} {max( )} \end{mapleinput} \begin{mapleinput} {min( )} \end{mapleinput}
+  </p>
+</section>

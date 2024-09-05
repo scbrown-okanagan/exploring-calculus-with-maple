@@ -1,0 +1,180 @@
+<section xml:id="sec_limits_and_asymptotes">
+  <title>Limits and Asymptotes</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:limits}, pg.
+          <xref ref="chp_limits"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      It is incorrect to assume that a vertical asymptote is always found whenever the denominator of a rational function is equal to zero.
+      Instead, we say that <m>f(x)</m> has a vertical asymptote at <m>x=a</m> whenever
+      <me>
+        \dlim{x}{a^+} f(x) = \infty
+      </me>
+      or
+      <me>
+        \dlim{x}{a^-} f(x) = \infty
+      </me>.
+    </p>
+    <p>
+      In either case, the equation of the vertical asymptote
+          <idx><h>limit</h><h>one-sided</h></idx>
+          <idx><h>asymptote</h><h>vertical</h></idx>
+      is <m>x=a</m>.
+    </p>
+    <p>
+      Similarly, a horizontal asymptote
+          <idx><h>limit</h><h>at infinity</h></idx>
+          <idx><h>asymptote</h><h>horizontal</h></idx>
+      of <m>f(x)</m> is also defined in terms of limits.
+      A function <m>f(x)</m> has a horizontal asymptote <m>y = L</m> if
+      <me>
+        \dlim{x}{\infty} f(x) = L
+      </me>
+      or
+    </p>
+    <aside>
+      <p>
+        While a function may have many vertical asymptotes,
+        it cannot have more than two horizontal asymptotes.
+      </p>
+    </aside>
+    <me>
+      \dlim{x}{-\infty} f(x) = L
+    </me>.
+    <p>
+      In this case,
+      the equation of the horizontal asymptote is <m>y=L</m>.
+    </p>
+    <p>
+      You will need to use both of these definitions while answering the following exercises.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <idx><h>plot</h><h>discontinuities</h></idx>
+      <aside>
+        <p>
+          Some versions of Maple may not properly display graphs of functions that contain vertical asymptotes.
+          In this case,
+          include <c>discont=true</c> as a parameter in the <c>plot( )</c> command.
+          An example of finding vertical asymptotes is given on <xref ref="subsec_vertical_asymptotes">page</xref>.
+        </p>
+      </aside>
+      <li>
+        <p>
+          Plot the function <m>f(x)=\dfrac{x-1}{x^2-x-2}</m> and estimate its vertical asymptotes.
+          Use Maple to prove that your guesses are, in fact,
+          the vertical asymptotes by taking the one-sided limits at those values.
+          Insert a new paragraph and state the equations of the vertical asymptotes.
+          <aside>
+            <p>
+              The <image width="4%" source="images/new_text.png"/> button or Ctrl+Shift+J can be used to create a paragraph after the current line.
+            </p>
+          </aside>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>g(x)=\dfrac{x+2}{x^2-x-6}</m>.
+          <ol>
+            <li>
+              <p>
+                Use Maple to factor the denominator of <m>g(x)</m>.
+                <aside>
+                  <p>
+                    If you use Maple's <c>denom()</c><idx><h>mathematical functions</h><h>denominator</h></idx> command and type <c>denom( g(x) )</c>,
+                    you will get the denominator of <m>g(x)</m>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                By factoring the denominator of <m>g(x)</m>,
+                you might suspect that the vertical asymptotes are <m>x=-2</m> and <m>x=3</m>.
+                Plot <m>g(x)</m> and show why this may or may not be the case.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>h(t)=\dfrac{\sin(t)}{t}</m>.
+            <idx><h>mathematical functions</h><h>sine</h></idx>
+        <ol>
+            <li>
+              <p>
+                Plot
+            <idx><h>plot</h></idx>
+                a graph of <m>h(t)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use Maple's <c>limit()</c>
+            <idx><h>limit</h></idx>
+                command to find the horizontal asymptote(s) of <m>h(t)</m>.
+                <aside>
+                  <p>
+                    An example of finding horizontal asymptotes<idx><h>asymptote</h><h>horizontal</h></idx> is provided on <xref ref="subsec_horizontal_asymptotes">page</xref>.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Insert a new paragraph and state the equation(s) of the horizontal asymptote(s).
+            <idx><h>asymptote</h><h>horizontal</h></idx>
+        </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the function <m>Q(x)=\dfrac{\sqrt{2x^2+1}}{3x+5}</m>.
+          <aside>
+            <p>
+              The <c>sqrt()</c><idx><h>mathematical functions</h><h>square root</h></idx> command is used to input a square root.
+            </p>
+          </aside>
+          <ol>
+            <li>
+              <p>
+                Plot a graph of <m>Q(x)</m>.
+                Be sure to specify appropriate intervals for the <m>x</m>-axis and <m>y</m>-axis.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use Maple's <c>limit()</c> command to find the horizontal asymptote(s) of <m>Q(x)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Insert a new paragraph and state the equation(s) of the horizontal asymptote(s).
+                <aside>
+                  <p>
+                    Maple provides a useful <c>Asymptotes()</c><idx><h>asymptote</h><h>asymptote command</h></idx> command for finding the asymptotes of a function.
+                    Try typing <c>?Asymptotes</c> to learn more.
+                  </p>
+                </aside>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

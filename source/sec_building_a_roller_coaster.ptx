@@ -1,0 +1,296 @@
+<section xml:id="sec_building_a_roller_coaster">
+  <title>Building a Roller Coaster</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:assignment_operator}, pg.
+          <xref ref="chp_assignment_operator"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:equation_solvers}, pg.
+          <xref ref="chp_equation_solvers"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:derivative}, pg.
+          <xref ref="chp_derivative"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      You are in charge of designing the first hill of a new roller coaster.
+      For an initial design,
+      you connect a straight stretch of track for the lift hill followed by two parabolas,
+      as shown in <xref ref="fig_rollercoaster">Figure</xref>.
+    </p>
+    <figure xml:id="fig_rollercoaster">
+      <caption>A simple design for the initial hill of a roller coaster.</caption>
+      \hspace{-3cm}
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+width=\textwidth,
+height=0.5\textwidth,
+axis lines=middle,
+xlabel={\(x\)},
+ylabel={\(y\)},
+xlabel style={below right},
+ylabel style={above left},
+xmin=-10, xmax=320, xtick={0,100,200,300},
+ymin=-10, ymax=120, ytick={0,25,50,75,100}
+]
+\addplot [domain=-10:100, samples=100] {0.8*x};
+\addplot [domain=100:130, samples=100, dashed] {0.8*x};
+\addplot [domain= 70:100, samples=100, dashed] {(-0.012)*x^2+3.2*x-120};
+\addplot [domain=100:200, samples=100] {(-0.012)*x^2+3.2*x-120};
+\addplot [domain=200:220, samples=100, dashed] {(-0.012)*x^2+3.2*x-120};
+\addplot [domain=170:200, samples=100, dashed] {0.017*x^2+((-1)*8.4)*x+1040};
+\addplot [domain=200:320, samples=100] {0.017*x^2+((-1)*8.4)*x+1040};
+\addplot[mark=*] coordinates {(50,40)};
+\draw [dashed] (axis cs:100,0) -- (axis cs:100,80);
+\addplot[mark=*] coordinates {(100,80)};
+\draw(axis cs:50,30) node [rotate=42] {\(slope = 0.8\)};
+\addplot[mark=*] coordinates {(200,40)};
+\draw [dashed] (axis cs:200,0) -- (axis cs:200,40);
+\draw(axis cs:210,40) node [rotate=-60] {\(slope = -1.6\)};
+\addplot[mark=*] coordinates {(300,50)} node [left] {\(height=50~\)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+    <p>
+      The following criteria must be met to build the roller coaster:
+      <ul>
+        <li>
+          <p>
+            The lift hill will have a slope of <m>0.8</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The straight section of the lift hill will cover a horizontal distance of <m>100</m> ft.
+          </p>
+        </li>
+        <li>
+          <p>
+            The slope of the first descent will reach a maximum magnitude of <m>1.6</m> after another <m>100</m> ft.
+          </p>
+        </li>
+        <li>
+          <p>
+            The next hill will reach a height of <m>50</m> ft after another <m>100</m> ft.
+          </p>
+        </li>
+        <li>
+          <p>
+            The track must be smooth (i.e. there cannot be any sudden changes in the slope of the track).
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <p>
+      The goal of the following exercises is to develop a piecewise function that satisfies all of the above criteria.
+    </p>
+    <ol>
+      <li>
+        <p>
+          Let <m>L(x)</m> be the function for the lift hill,
+          which is a linear function passing through the origin.
+        </p>
+        <ol>
+          <aside>
+            <p>
+              The lift hill function can easily expressed in <m>y=mx+b</m> form.
+            </p>
+          </aside>
+            <idx><h>lines</h><h>slope-intercept form</h></idx>
+          <li>
+            <p>
+              Using the given criteria,
+              assign the function <m>L(x)</m> in Maple for the lift hill.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the <m>x</m>- and <m>y</m>-coordinates at which the lift hill connects to the first parabola,
+              <m>f(x)</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Let <m>f(x)</m> be the function for the first parabola,
+          opening downward.
+          We will define this function in a few steps.
+          <ol>
+            <li>
+              <p>
+                Assign the function <m>f(x)=ax^2+bx+c</m> as a general quadratic function.
+                We will solve for the coefficients using the above criteria over the next two steps.
+                <aside>
+                  <p>
+                    Be sure to include multiplication between variables.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                We can solve for <m>a</m>, <m>b</m>,
+                and <m>c</m>, by using three equations.
+                Write an equation in function notation for each of the following conditions.
+                <aside>
+                  <p>
+                    Each of these equations can be written in the form of
+                    <me>
+                      f(\alpha)=\beta
+                    </me>
+                    or
+                    <me>
+                      f'(\alpha)=\beta
+                    </me>.
+                  </p>
+                </aside>
+                <ul>
+                  <li>
+                    <p>
+                      <m>f</m> must pass through the point from exercise 1(b).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The derivative of <m>f</m> at <m>x=100</m> is <m>0.8</m>,
+                      so that the track is smooth (differentiable) where it connects to the lift hill.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The derivative of <m>f</m> at <m>x=200</m> is <m>-1.6</m>,
+                      according to the given criteria.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Use a <c>solve()</c><idx><h>solving equations</h><h>solve</h></idx> or <c>fsolve()</c><idx><h>solving equations</h><h>fsolve</h></idx> command and function notation to solve the system of equations for <m>a</m>,
+                <m>b</m>,
+                and <m>c</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Reassign the function <m>f(x)</m> using the values you have just calculated.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the <m>x</m>- and <m>y</m>-coordinates at which the <m>f(x)</m> connects to the next parabola
+                (when <m>x=200</m>).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>g(x)</m> be the function for the second parabola,
+          opening upward.
+          We will define this function in a few steps.
+          <ol>
+            <aside>
+              <p>
+                Be sure to include multiplication between variables.
+              </p>
+            </aside>
+            <li>
+              <p>
+                Assign a function <m>g(x)=px^2+qx+r</m> as a general quadratic function.
+                We will solve for the coefficients using the above criteria over the next two steps.
+              </p>
+            </li>
+            <li>
+              <p>
+                We can solve for <m>p</m>, <m>q</m>,
+                and <m>r</m>, by using three equations.
+                Write an equation in function notation for each of the following conditions.
+                <ul>
+                  <li>
+                    <p>
+                      <m>g</m> must pass through the point from exercise 2(e).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The derivative of <m>g</m> at <m>x=200</m> is <m>-1.6</m> so that the track is smooth (differentiable) where it connects to <m>f(x)</m>.
+                      <aside>
+                        <p>
+                          Each of these equations can be written in the form of
+                          <me>
+                            g(\alpha)=\beta
+                          </me>
+                          or
+                          <me>
+                            g'(\alpha)=\beta
+                          </me>.
+                        </p>
+                      </aside>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The height of <m>g</m> at <m>x=300</m> is <m>50</m>,
+                      according to the given criteria.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Use a <c>solve()</c> or <c>fsolve()</c> command and function notation to solve the system of equations for <m>p</m>,
+                <m>q</m>,
+                and <m>r</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Reassign the function <m>g(x)</m> using the values you have just calculated.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <aside>
+          <p>
+            The <c>piecewise()</c> command can be found on <xref ref="chp_assignment_operator">page</xref>.
+          </p>
+        </aside>
+      </li>
+      <li>
+        <p>
+          Use the <c>piecewise()</c> command to define a piecewise function<idx><h>mathematical functions</h><h>piecewise</h></idx> called <em>coaster(x)</em>
+          that consists of the three pieces:
+          <m>coaster(x) = \left\lbrace \begin{array}{ll} L(x) \amp 0 \leq x \lt 100 \\ f(x) \amp 100 \leq x \lt 200 \\ g(x) \amp 200 \leq x \leq 300 \end{array} \right</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Plot the piecewise function, <em>coaster(x)</em>.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

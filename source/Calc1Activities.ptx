@@ -1,0 +1,124 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Calc1Activities">
+  <title>Activities for Math 112</title>
+  <introduction>
+    <p>
+      The following list serves as a suggestion for which activities are considered core versus optional:
+    </p>
+    <table>
+      <tabular>
+        <row>
+          <cell><xref ref="sec_creating_a_maple_worksheet"></xref>
+            \nameref{sec:creating_a_maple_worksheet}</cell>
+          <cell>pg. <xref ref="sec_creating_a_maple_worksheet"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_basics"></xref>
+            \nameref{sec:basics}</cell>
+          <cell>pg. <xref ref="sec_basics"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_assignment_operator_and_creating_functions"></xref>
+            \nameref{sec:assignment_operator_and_creating_functions}</cell>
+          <cell>pg. <xref ref="sec_assignment_operator_and_creating_functions"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_transformations_of_graphs"></xref>
+            \nameref{sec:transformations_of_graphs}</cell>
+          <cell>pg. <xref ref="sec_transformations_of_graphs"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_solving_equations_in_maple"></xref>
+            \nameref{sec:solving_equations_in_maple}</cell>
+          <cell>pg. <xref ref="sec_solving_equations_in_maple"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_limits"></xref>
+            \nameref{sec:limits}</cell>
+          <cell>pg. <xref ref="sec_limits"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_limits_and_asymptotes"></xref>
+            \nameref{sec:limits_and_asymptotes}</cell>
+          <cell>pg. <xref ref="sec_limits_and_asymptotes"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_applied_limit_problem"></xref>
+            \nameref{sec:applied_limit_problem}</cell>
+          <cell>pg. <xref ref="sec_applied_limit_problem"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_derivative_of_a_function"></xref>
+            \nameref{sec:derivative_of_a_function}</cell>
+          <cell>pg. <xref ref="sec_derivative_of_a_function"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_tangent_lines"></xref>
+            \nameref{sec:tangent_lines}</cell>
+          <cell>pg. <xref ref="sec_tangent_lines"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_building_a_roller_coaster"></xref>
+            \nameref{sec:building_a_roller_coaster}</cell>
+          <cell>pg. <xref ref="sec_building_a_roller_coaster"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_implicit_functions"></xref>
+            \nameref{sec:implicit_functions}</cell>
+          <cell>pg. <xref ref="sec_implicit_functions"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_orthogonal_curves"></xref>
+            \nameref{sec:orthogonal_curves}</cell>
+          <cell>pg. <xref ref="sec_orthogonal_curves"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_newtons_method"></xref>
+            \nameref{sec:newtons_method}</cell>
+          <cell>pg. <xref ref="sec_newtons_method"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_shape_of_a_can"></xref>
+            \nameref{sec:shape_of_a_can}</cell>
+          <cell>pg. <xref ref="sec_shape_of_a_can"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_sweet_16"></xref>
+            \nameref{sec:sweet_16}</cell>
+          <cell>pg. <xref ref="sec_sweet_16"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+      </tabular>
+    </table>
+  </introduction>
+  <xi:include  href="sec_creating_a_maple_worksheet.ptx"/>
+  <xi:include  href="sec_basics.ptx"/>
+  <xi:include  href="sec_assignment_operator_and_creating_functions.ptx"/>
+  <xi:include  href="sec_transformations_of_graphs.ptx"/>
+  <xi:include  href="sec_solving_equations_in_maple.ptx"/>
+  <xi:include  href="sec_limits.ptx"/>
+  <xi:include  href="sec_limits_and_asymptotes.ptx"/>
+  <xi:include  href="sec_applied_limit_problem.ptx"/>
+  <xi:include  href="sec_derivative_of_a_function.ptx"/>
+  <xi:include  href="sec_tangent_lines.ptx"/>
+  <xi:include  href="sec_building_a_roller_coaster.ptx"/>
+  <xi:include  href="sec_implicit_functions.ptx"/>
+  <xi:include  href="sec_orthogonal_curves.ptx"/>
+  <xi:include  href="sec_newtons_method.ptx"/>
+  <xi:include  href="sec_shape_of_a_can.ptx"/>
+  <xi:include  href="sec_sweet_16.ptx"/>
+</chapter>

@@ -1,0 +1,137 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Calc2Activities">
+  <title>Activities for Math 122</title>
+  <introduction>
+    <p>
+      The following list serves as a suggestion for which activities are considered core versus optional:
+    </p>
+    <table>
+      <tabular>
+        <row>
+          <cell><xref ref="sec_riemann_sums_for_monotonic_functions"></xref>
+            \nameref{sec:riemann_sums_for_monotonic_functions}</cell>
+          <cell>pg. <xref ref="sec_riemann_sums_for_monotonic_functions"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_visualizing_the_net_change_theorem"></xref>
+            \nameref{sec:visualizing_the_net_change_theorem}</cell>
+          <cell>pg. <xref ref="sec_visualizing_the_net_change_theorem"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_approximate_integration"></xref>
+            \nameref{sec:approximate_integration}</cell>
+          <cell>pg. <xref ref="sec_approximate_integration"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_max_and_min_problems_for_integrals"></xref>
+            \nameref{sec:max_and_min_problems_for_integrals}</cell>
+          <cell>pg. <xref ref="sec_max_and_min_problems_for_integrals"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_applications_of_ftc"></xref>
+            \nameref{sec:applications_of_ftc}</cell>
+          <cell>pg. <xref ref="sec_applications_of_ftc"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_average_value_of_function"></xref>
+            \nameref{sec:average_value_of_function}</cell>
+          <cell>pg. <xref ref="sec_average_value_of_function"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_shark_attack"></xref>
+            \nameref{sec:shark_attack}</cell>
+          <cell>pg. <xref ref="sec_shark_attack"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_area_problem"></xref>
+            \nameref{sec:area_problem}</cell>
+          <cell>pg. <xref ref="sec_area_problem"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_volumes_of_revolution"></xref>
+            \nameref{sec:volumes_of_revolution}</cell>
+          <cell>pg. <xref ref="sec_volumes_of_revolution"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_golden_gate_bridge_problem"></xref>
+            \nameref{sec:golden_gate_bridge_problem}</cell>
+          <cell>pg. <xref ref="sec_golden_gate_bridge_problem"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_infinite_integrals"></xref>
+            \nameref{sec:infinite_integrals}</cell>
+          <cell>pg. <xref ref="sec_infinite_integrals"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_probability"></xref>
+            \nameref{sec:probability}</cell>
+          <cell>pg. <xref ref="sec_probability"></xref></cell>
+          <cell>Optional</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_motion_of_a_mass_connected_to_a_spring"></xref>
+            \nameref{sec:motion_of_a_mass_connected_to_a_spring}</cell>
+          <cell>pg. <xref ref="sec_motion_of_a_mass_connected_to_a_spring"></xref></cell>
+          <cell>Optional<m>^1</m></cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_tank_mixing_problem"></xref>
+            \nameref{sec:tank_mixing_problem}</cell>
+          <cell>pg. <xref ref="sec_tank_mixing_problem"></xref></cell>
+          <cell>Optional<m>^1</m></cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_direction_fields"></xref>
+            \nameref{sec:direction_fields}</cell>
+          <cell>pg. <xref ref="sec_direction_fields"></xref></cell>
+          <cell>Optional<m>^1</m></cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_series_convergence_and_divergence"></xref>
+            \nameref{sec:series_convergence_and_divergence}</cell>
+          <cell>pg. <xref ref="sec_series_convergence_and_divergence"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell><xref ref="sec_taylor_series"></xref>
+            \nameref{sec:taylor_series}</cell>
+          <cell>pg. <xref ref="sec_taylor_series"></xref></cell>
+          <cell>Core</cell>
+        </row>
+        <row>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>^1</m>One of these activities covering differential equations should be chosen as core.</cell>
+        </row>
+      </tabular>
+    </table>
+  </introduction>
+  <xi:include  href="sec_riemann_sums_for_monotonic_functions.ptx"/>
+  <xi:include  href="sec_visualizing_the_net_change_theorem.ptx"/>
+  <xi:include  href="sec_approximate_integration.ptx"/>
+  <xi:include  href="sec_max_and_min_problems_for_integrals.ptx"/>
+  <xi:include  href="sec_applications_of_ftc.ptx"/>
+  <xi:include  href="sec_average_value_of_function.ptx"/>
+  <xi:include  href="sec_shark_attack.ptx"/>
+  <xi:include  href="sec_area_problem.ptx"/>
+  <xi:include  href="sec_volumes_of_revolution.ptx"/>
+  <xi:include  href="sec_golden_gate_bridge_problem.ptx"/>
+  <xi:include  href="sec_infinite_integrals.ptx"/>
+  <xi:include  href="sec_probability.ptx"/>
+  <xi:include  href="sec_motion_of_a_mass_connected_to_a_spring.ptx"/>
+  <xi:include  href="sec_tank_mixing_problem.ptx"/>
+  <xi:include  href="sec_direction_fields.ptx"/>
+  <xi:include  href="sec_series_convergence_and_divergence.ptx"/>
+  <xi:include  href="sec_taylor_series.ptx"/>
+</chapter>

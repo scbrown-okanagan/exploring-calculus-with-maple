@@ -1,0 +1,15 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_riemann_sums_and_area_approximation">
+  <title>Riemann Sums and Approximations of Area</title>
+  <introduction>
+    <p>
+      In this tutorial,
+      we use numerical approximation to calculate definite integrals
+      (namely, the right-sum, left-sum,
+      midpoint, Simpson's, and trapezoidal methods).
+      We then calculate these definite integrals using the Fundamental Theorem of Calculus.
+      We will also learn how to find indefinite integrals as functions.
+    </p>
+  </introduction>
+  <xi:include  href="sec_approximating_area_using_approximateint.ptx"/>
+  <xi:include  href="sec_approximating_a_definite_integral.ptx"/>
+</chapter>

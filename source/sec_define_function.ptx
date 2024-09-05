@@ -1,0 +1,62 @@
+<section xml:id="sec_define_function">
+  <title>Defining a Function</title>
+  <p>
+    Instead of defining an expression,
+    it is sometimes more useful to define a function.
+    A function specifies the variables that are included in the expression.
+    This allows us to substitute values into our functions easily using function notation,
+    such as <m>f(5)</m>.
+  </p>
+  <aside>
+    <p>
+      If you have properly defined a function,
+      you should see an arrow (<m>\rightarrow</m>) in your output.
+      If you do not see an arrow within the output,
+      then you have not defined the function properly.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {f(x) := sin(x) - exp(x); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator, arrow;
+    sin(x)-exp(x) end proc}{
+    <me>
+      \displaystyle f\, := \,x\mapsto \sin \left( x \right) -{{ e}^{x}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      Make sure that the variable in the function name matches the variable in the function.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {g(t) := -4.9*t\symbol{94}2 + 5*t + 20; } \end{mapleinput} \relax \begin{maplelatex} {g := proc (t) options operator,
+    arrow; (-1)*4.9*t^2+5*t+20 end proc}{
+    <me>
+      \displaystyle g\, := \,t\mapsto - 4.9\,{t}^{2}+5\,t+20
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    A function's name does not have to be a single letter.
+    In fact, it is often a good idea to have a function's name correspond to what the function represents.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {area(r) := Pi*r\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {area := proc (r) options operator,
+    arrow; Pi*r^2 end proc}{
+    <me>
+      \displaystyle \textit{area}\, := \,r\mapsto \pi\,{r}^{2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      <image width="80%" source="images/palettefunc.png"/>
+    </p>
+  </aside>
+</section>

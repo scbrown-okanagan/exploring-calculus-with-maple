@@ -1,0 +1,51 @@
+<section xml:id="sec_plotting_a_single_function">
+  <title>Plotting a Single Function</title>
+  <p>
+    You can plot a function in Maple by using the <c>plot()</c> command.
+    The only required parameter is the function you wish to plot.
+    However, there are many additional parameters you can add to customise the way that the graph looks.
+  </p>
+  <aside>
+    <p>
+      By default, Maple will plot trigonometric functions with an <m>x</m>-axis from <m>-2\pi</m> to <m>2\pi</m>.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {plot(sin(cos(x))); }
+        <idx><h>plot</h></idx>
+    \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+    tutorials/figures/Plotting_Functionsplot2d1a-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+  </p>
+  <p>
+    It is often useful to specify the interval for the <m>x</m>-axis.
+    Choose left and right endpoint for the <m>x</m>-axis that are appropriate for your graph.
+        <idx><h>plot</h><h>axes intervals</h></idx>
+  </p>
+  <aside>
+    <p>
+      If you are plotting a function of <m>t</m>,
+      then make sure to specify the interval as <c>t=a..b</c>.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {plot(sin(cos(x)),
+    x=-10..10); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+    tutorials/figures/Plotting_Functionsplot2d1b-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      The order of the parameters in the <c>plot()</c> command is important.
+      The interval for the <m>x</m>-axis must be listed before the interval for the <m>y</m>-axis.
+    </p>
+  </aside>
+  <p>
+    You can also specify the interval for the <m>y</m>-axis for your graph.
+        <idx><h>plot</h><h>axes intervals</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {plot(sin(cos(x)),
+    x=-10..10,
+    y=-5..5);<idx><h>plot</h><h>axes intervals</h></idx> } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
+    tutorials/figures/Plotting_Functionsplot2d1c-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+  </p>
+</section>

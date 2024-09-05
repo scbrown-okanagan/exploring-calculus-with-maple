@@ -1,0 +1,218 @@
+<section xml:id="sec_probability">
+  <title>Probability</title>
+  <introduction>
+    <p>
+          <idx><h>probability</h><h></h></idx>
+    </p>
+  </introduction>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <ul>
+      <li>
+        <p>
+          \nameref{chp:assignment_operator}, pg.
+          <xref ref="chp_assignment_operator"></xref>
+        </p>
+      </li>
+      <li>
+        <p>
+          \nameref{chp:definite_and_indefinite_Integrals}, pg.
+          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
+        </p>
+      </li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      In this activity,
+      we define probability density functions (pdf) for some continuous probability distributions.
+      Let's define our probability function as <m>f(x)</m>.
+      If <m>f(x)</m> is a valid probability function, then
+      <me>
+        \int_{-\infty}^{\infty} f(x)dx=1
+      </me>,
+      and <m>0  \leq f(x) \leq 1</m>.
+          <idx><h>integral</h><h>improper</h></idx>
+    </p>
+    <p>
+      If we want to compute the probability that a given observation is less than <m>a</m>,
+      then we calculate
+      <me>
+        P(x\lt a)=\int_{-\infty}^{a} f(x)dx
+      </me>.
+    </p>
+    <p>
+      If we want to compute the probability that the given observation is more than <m>a</m>,
+      then we calculate
+      <me>
+        P(x>a)=\int_{a}^{\infty} f(x)dx
+      </me>.
+    </p>
+    <p>
+      If we want to compute the probability that the given observation is between two values <m>a</m> and <m>b</m>,
+      then we calculate
+      <me>
+        P(a\lt  x \lt b)=\int_{a}^{b} f(x)dx
+      </me>.
+    </p>
+    <aside>
+      <title>-0.5cm</title>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+width=6cm,
+height=5cm,
+axis lines=middle,
+xlabel={\(x\)},
+ylabel={\(f(x)\)},
+xlabel style={below right},
+ylabel style={above left},
+xmin=0, xmax=12, xtick={0,5}, xticklabels={\(,\lambda\)},
+ymin=0, ymax=0.22, ytick={0,0.2}, yticklabels={\(,\frac{1}{\lambda}\)}
+]
+\addplot [domain=0:12, samples=100] {1/5*exp(-1/5*x)};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </aside>
+    <p>
+      The exponential distribution is defined as
+      <men xml:id="eq_exponential_dist">
+        f(x) = \begin{cases} \lambda{ e}^{-\lambda x} \amp  \text{ if }  x \geq 0 \\ 0 \amp  \text{ if }  x\lt 0, \end{cases}
+      </men>
+    </p>
+    <p>
+          <idx><h>probability</h><h>exponential density function</h></idx>
+      where <m>\frac{1}{\lambda}</m> is the mean and standard deviation of the probability distribution.
+    </p>
+    <aside>
+      <image>
+<latex-image>
+<![CDATA[\begin{tikzpicture}\begin{axis}[
+width=6cm,
+height=5cm,
+axis lines=middle,
+xlabel={\(x\)},
+ylabel={\(f(x)\)},
+xlabel style={below right},
+ylabel style={above left},
+xmin=0, xmax=12, xtick={0,2,4,6,8,10}, xticklabels={,\(,,\mu\),,},
+ymin=0, ymax=0.3, ytick={0,5}, yticklabels={\(,\lambda\)}
+]
+\addplot [domain=0:12, samples=100] {1/(2*sqrt(2*pi))*exp(-(x-6)^2/(2*2^2))};
+\end{axis}\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </aside>
+    <p>
+          <idx><h>probability</h><h>normal probability density function</h></idx>
+    </p>
+    <p>
+      Define the normal distribution as
+      <men xml:id="eq_normal_dist">
+        f(x) = \frac{1}{\sigma \sqrt{2\pi}}{ e}^{-\frac{(x-\mu)^2}{2\sigma^2}}
+      </men>,
+      where <m>\sigma</m> is the standard deviation and <m>\mu</m> is the mean.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Exercises:</title>
+    <ol>
+      <li>
+        <p>
+          Suppose that the lifetime of a certain tire is exponentially distributed with mean <m>\frac{1}{\lambda}=45,000</m> miles.
+          <ol>
+            <aside>
+              <p>
+                Examples of the <c>piecewise()</c> command can be found on <xref ref="sec_piecewise">page</xref>.
+              </p>
+            </aside>
+            <idx><h>mathematical functions</h><h>piecewise</h></idx>
+            <li>
+              <p>
+                Use the <c>piecewise()</c> command to assign the function from equation <xref ref="eq_exponential_dist"/> using <m>\lambda = \frac{1}{45000}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Verify that this function is a valid pdf.
+                <aside>
+                  <p>
+                    Hint: take the integral and plot the function to verify this.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the probability that a given tire will last more than <m>40{,}000</m> miles.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the probability that a given tire will last less than <m>50{,}000</m> miles.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the probability that a given tire will last between
+                <m>40{,}000</m> and <m>50{,}000</m> miles.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the probability that a given tire will last exactly <m>40{,}000</m> miles.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Suppose that the height of a male is normally distributed with mean
+          <m>\mu= 178</m> cm and standard deviation <m>\sigma= 10</m> cm.
+          <ol>
+            <li>
+              <p>
+                Assign the function from equation <xref ref="eq_normal_dist"/> using these values of <m>\mu</m> and <m>\sigma</m>.
+                <aside>
+                  <p>
+                    The commands <c>exp()</c>,
+                    <c>sqrt()</c>,
+                    and <c>Pi</c> will all have to be used for this function in Maple.
+                  </p>
+                </aside>
+              </p>
+            </li>
+            <li>
+              <p>
+                Verify that this function is a valid pdf.
+            <idx><h>mathematical functions</h><h>exponential</h></idx>
+            <idx><h>mathematical functions</h><h>square root</h></idx>
+            <idx><h>Pi</h></idx>
+              </p>
+            </li>
+            <li>
+              <p>
+                You have a friend who is <m>7</m> ft tall
+                (<m>213</m> cm).
+                Find the probability that a given individual is that height or taller.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the probability that a given individual is <m>213</m> cm or smaller.
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the probability of selecting an individual with a height of exactly <m>213</m> cm?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

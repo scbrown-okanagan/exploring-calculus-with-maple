@@ -1,0 +1,72 @@
+<section xml:id="sec_assigning_equations">
+  <title>Assigning Equations</title>
+  <p>
+    The assignment operator \text{ := } can be used to assign a name to nearly any type of output.
+    Often, it is useful to assign an equation
+    (involving a regular <m>=</m> sign)
+    a name.
+    Some of the operations that we discussed in <xref ref="chp_basic_operations">Tutorial</xref>
+    (such as simplifying, expanding, substituting, etc.)
+    can then be applied to that equation.
+  </p>
+  <p>
+        <idx><h>subs</h></idx>
+        <idx><h>factor</h></idx>
+        <idx><h>solving equations</h><h>solve</h></idx>
+        <idx><h>solving equations</h><h>fsolve</h></idx>
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {circle := x\symbol{94}2 + y\symbol{94}2 = 25; } \end{mapleinput} \relax \begin{maplelatex} {circle:=x^2+y^2 = 25}{
+    <me>
+      \displaystyle \textit{circle}\, := \,{x}^{2}+{y}^{2}=25
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      Recall that <m>x^2+y^2=25</m> represents a circle of radius 5 centred at the origin.
+      The point <m>(3,4)</m> lies on this circle because <m>x=3</m> and <m>y=4</m> satisfy the equation.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {subs(x = 3, y = 4, circle); } \end{mapleinput} \relax \begin{maplelatex} {25 = 25}{
+    <me>
+      \displaystyle 25=25
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {eqn := x\symbol{94}4 + 1 = 2*x\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {eqn := x^4+1 = 2*x^2}{
+    <me>
+      \displaystyle \textit{eqn}\, := \,{x}^{4}+1=2\,{x}^{2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <aside>
+    <p>
+      Here we can see that it is possible to add or subtract a value from both sides of an equation and factor the result.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {eqn - 2*x\symbol{94}2;
+    factor( } \end{mapleinput} \relax \begin{maplelatex} {x^4-2*x^2+1 = 0}{
+    <me>
+      \displaystyle {x}^{4}-2\,{x}^{2}+1=0
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \relax \begin{maplelatex} {(x-1)^2*(x+1)^2 = 0}{
+    <me>
+      \displaystyle  \left( x-1 \right) ^{2} \left( x+1 \right) ^{2}=0
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>

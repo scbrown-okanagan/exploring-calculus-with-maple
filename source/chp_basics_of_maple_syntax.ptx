@@ -1,0 +1,14 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_basics_of_maple_syntax">
+  <title>Basics of Maple Syntax</title>
+  <xi:include  href="sec_algebraic_operations.ptx"/>
+  <xi:include  href="sec_maple_commands.ptx"/>
+  <xi:include  href="sec_radical_functions.ptx"/>
+  <xi:include  href="sec_absolute_value_function.ptx"/>
+  <xi:include  href="sec_exponential_and_logarithmic_functions.ptx"/>
+  <xi:include  href="sec_trigonometric_and_inverse_trigonometric_functions.ptx"/>
+  <xi:include  href="sec_other_common_functions.ptx"/>
+  <xi:include  href="sec_maple_help.ptx"/>
+  <xi:include  href="sec_autocompleting_commands.ptx"/>
+  <xi:include  href="sec_multiple_commands_at_once.ptx"/>
+  <xi:include  href="sec_ditto_operator.ptx"/>
+</chapter>

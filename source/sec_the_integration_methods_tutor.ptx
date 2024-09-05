@@ -1,0 +1,60 @@
+<section xml:id="sec_the_integration_methods_tutor">
+  <title>The Integration Methods Tutor</title>
+  <introduction>
+    <p>
+          <idx><h>integral</h><h>integration methods tutor</h></idx>
+    </p>
+    <p>
+      The Integration Methods tutor can be used to evaluate an integral step-by-step.
+      You can either manually attempt different techniques on the integral,
+      or let Maple decide which techniques to use.
+    </p>
+    <figure>
+      <caption>Opening up the Integration Methods tutor using menus.</caption>
+      \adjincludegraphics[width=\textwidth]{tutorials/figures/IntTutorLoad1-eps-converted-to.pdf}
+    </figure>
+    <figure>
+      <caption>Opening up the Integration Methods tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
+      \adjincludegraphics[width=\textwidth]{tutorials/figures/IntTutorLoad2-eps-converted-to.pdf}
+    </figure>
+  </introduction>
+  <subsection>
+    <title>Evaluating <m>\displaystyle\int x^2e^x</m> Using Integration by Parts</title>
+    <p>
+          <idx><h>integral</h><h>integration methods tutor</h></idx>
+    </p>
+    <figure>
+      <caption>If the Get Hint button is clicked, Maple will suggest an integration technique.</caption>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.2\height} 0 0},clip]{tutorials/figures/IntTutorQ1-1-eps-converted-to.pdf}
+    </figure>
+    <aside>
+      <p>
+        When typing out the function in the tutor,
+        you will not have access to the palettes toolbar in Maple.
+        You will need to type out commands such as <c>sqrt()</c> for square roots.
+        You must also include the symbol * for multiplication.
+      </p>
+    </aside>
+    <figure>
+      <caption>Integration by parts  can be applied to integrals of the form <m>\int u\ dv</m>, where <m>u=f(x)</m> and <m>dv = g'(x) dx</m>.</caption>
+      <image width="60%" source="images/IntTutorQ1-2-eps-converted-to.png"/>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.5\height} 0 0},clip]{tutorials/figures/IntTutorQ1-3-eps-converted-to.pdf}
+    </figure>
+    <figure>
+      <caption>Using the constant multiple rule, integration by parts a second time, and the exponential rule to evaluate the integral.</caption>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.2\height} 0 0},clip]{tutorials/figures/IntTutorQ1-4-eps-converted-to.pdf}
+      <image width="60%" source="images/IntTutorQ1-5-eps-converted-to.png"/>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.2\height} 0 0},clip]{tutorials/figures/IntTutorQ1-6-eps-converted-to.pdf}
+    </figure>
+  </subsection>
+  <subsection>
+    <title>Evaluating <m>\displaystyle\int_{-\pi/2}^{\pi/4} x\sin(x^2+1)</m> Using Substitution</title>
+    <p>
+          <idx><h>integral</h><h>integration methods tutor</h></idx>
+    </p>
+    <figure>
+      <caption>If you use the All Steps button, then Maple will evaluate the integral, showing all steps.</caption>
+      \adjincludegraphics[width=0.8\textwidth,trim={0 0 0 0},clip]{tutorials/figures/IntTutorQ2-eps-converted-to.pdf}
+    </figure>
+  </subsection>
+</section>

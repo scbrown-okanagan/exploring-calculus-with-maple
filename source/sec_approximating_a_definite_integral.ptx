@@ -1,0 +1,133 @@
+<section xml:id="sec_approximating_a_definite_integral">
+  <title>Approximating the Value of a Definite Integral</title>
+  <p>
+    We can also set up an integral to use numerical approximation on.
+  </p>
+  <aside>
+    <p>
+      Use of the <c>Int()</c> command will be fully explained in <xref ref="chp_definite_and_indefinite_Integrals">Tutorial</xref>
+      on <xref ref="chp_definite_and_indefinite_Integrals">page</xref>.
+    </p>
+  </aside>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {int1 := Int(x\symbol{94}2, x=0..2); } \end{mapleinput} \relax \begin{maplelatex} {int1 := Int(x^2, x = 0 .. 2)}{
+    <me>
+      \displaystyle \textit{int1}\, := \,\int _{0}^{2}\!{x}^{2}{dx}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+        <idx><h>integral</h><h>Int</h></idx>
+  </p>
+  <p>
+    We can evaluate this integral with <m>4</m> subintervals using three different methods.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1, method=midpoint,
+    output=value,
+    partition=4); } \end{mapleinput} \relax \begin{maplelatex} {21/8}{
+    <me>
+      \displaystyle {\frac {21}{8}}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1,
+    method=trapezoid, output=value,
+    partition=4); } \end{mapleinput} <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+  </p>
+  <aside>
+    <p>
+      The <c>method=trapezoid</c> parameter uses trapezoid shapes instead of rectangles to approximate the area.
+      This usually gives a more accurate estimate of the area.
+    </p>
+  </aside>
+  <p>
+    \relax \begin{maplelatex} {11/4}{
+    <me>
+      \displaystyle \frac{11}{4}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1, method=simpson,
+    output=value,
+    partition=4); } \end{mapleinput} \relax \begin{maplelatex} {8/3}{
+    <me>
+      \displaystyle \frac{8}{3}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+  <p>
+        <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+  </p>
+  <aside>
+    <p>
+      When using Simpson's rule,
+      an additional sample point is used per subinterval.
+      So, if <m>n</m> subintervals are used,
+      then the number of sample points is <m>2n</m>.
+    </p>
+  </aside>
+  <p>
+    Simpson's rule uses twice as many sample points as the other two methods used here.
+    If we wish to have <m>4</m> points used for Simpson's rule,
+    we use <c>partition=2</c>.
+  </p>
+  <p>
+    To visualize the approximation using any of the above methods,
+    we use the option <c>output=plot</c>.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1,
+    method=trapezoid, output=plot,
+    partition=2); } \end{mapleinput}
+  </p>
+  <aside>
+    <p>
+      Notice that trapezoidal shapes are used instead of rectangles.
+    </p>
+  </aside>
+  <p>
+    \relax \vskip.5\MaplePlotHeight Plot:
+    tutorials/figures/numerical_integration_using_ApproximateIntplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+  </p>
+  <p>
+        <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+        <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
+        <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+        <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
+        <idx><h>integral approximation</h><h>ApproximateInt!partition</h></idx>
+  </p>
+  <p>
+    Maple can also give the Riemann sum for any of the above approximations.
+  </p>
+  <p>
+    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1,
+    method=trapezoid, output=sum,
+    partition=4); } \end{mapleinput}
+  </p>
+  <aside>
+    <p>
+      The <c>output=sum</c> shows you what the expanded summation looks like
+      <em>before</em> it is evaluated.
+    </p>
+  </aside>
+  <p>
+    \relax \begin{maplelatex} {(1/4)*(Sum((1/4)*i^2+((1/2)*i+1/2)^2, i = 0 .. 3))}{
+    <me>
+      \displaystyle \frac{1}{4}\,\sum _{i=0}^{3}\frac{1}{4}\,{i}^{2}+ \left( \frac{1}{2}\,i+\frac{1}{2} \right) ^{2}
+    </me>
+  </p>
+  <p>
+    } \end{maplelatex} \end{maplegroup}
+  </p>
+</section>
