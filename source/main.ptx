@@ -107,23 +107,27 @@
 </latex-image-preamble>
   </docinfo>
   <book>
-    <title>Exploring Calculus with Maple \\ {\Huge Third Edition}</title>
+    <title>Exploring Calculus with Maple</title>
+	<subtitle>Fourth Edition</subtitle>
     <frontmatter>
       <titlepage>
         <author>
-          <personname>Mathematics</personname>
-        </author>
-        <author>
-          <personname>Statistics Department</personname>
+          <personname>Stephen Brown</personname>
+		  <department>Department of Mathematics and Statistics</department>
+          <institution>Okanagan College</institution>
+          <email>scbrown@okanagan.bc.ca</email>
         </author>
       </titlepage>
+	  <xi:include href="./chp_lab_syllabus.ptx"/>
+	  <xi:include href="./chp_introduction.ptx"/>
     </frontmatter>
-    <xi:include href="./chp_lab_syllabus.ptx"/>
-    <xi:include href="./chp_introduction.ptx"/>
+	<part>Math 112</part>
     <xi:include href="./Calc1Activities.ptx"/>
     <xi:include href="./chp_lab_test_review_math_112.ptx"/>
+	<part>Math 122</part>
     <xi:include href="./Calc2Activities.ptx"/>
     <xi:include href="./chp_lab_test_review_math_122.ptx"/>
+	<part>Tutorials</part>
     <xi:include href="./chp_maple_environment.ptx"/>
     <xi:include href="./chp_basics_of_maple_syntax.ptx"/>
     <xi:include href="./chp_basic_operations.ptx"/>
@@ -137,10 +141,10 @@
     <xi:include href="./chp_definite_and_indefinite_Integrals.ptx"/>
     <xi:include href="./chp_differential_equations.ptx"/>
     <xi:include href="./chp_sequence_and_sseries.ptx"/>
-    <xi:include href="./chp_conditional_statements_and_loops.ptx"/>
-    <xi:include href="./chp_list_of_common_errors.ptx"/>
-    <xi:include href="./chp_list_of_common_commands.ptx"/>
+    <xi:include href="./chp_conditional_statements_and_loops.ptx"/>    
     <backmatter>
+	  <xi:include href="./chp_list_of_common_errors.ptx"/>
+	  <xi:include href="./chp_list_of_common_commands.ptx"/>
       <xi:include href="./bibliography.ptx"/>
       <index>
         <title>Index</title>
