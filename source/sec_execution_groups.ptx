@@ -33,21 +33,18 @@
       <image width="50%" source="images/InsertInput.png"/>
     </p>
   </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {2 + 2; } \end{mapleinput} \relax \begin{maplelatex} {4}{
-    <me>
-      \displaystyle 4
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {8 / 2; } \end{mapleinput} \relax \begin{maplelatex} {4}{
-    <me>
-      \displaystyle 4
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
+  <console prompt="> ">
+    <input>2 + 2;</input>
+  </console>
+  <me>
+    4
+  </me>
+  <console prompt="> ">
+    <input>8 / 2;</input>
+  </console>
+  <me>
+    \displaystyle 4
+  </me>
   <p>
     If at any point you wish to correct a previous Maple input line,
     you may simply go back to that line and modify it.
