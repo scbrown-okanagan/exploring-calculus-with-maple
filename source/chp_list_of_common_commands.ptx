@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_list_of_common_commands">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_list_of_common_commands">
   <title>List of Common Commands</title>
   <p>
     \begin{fullwidth} \begin{longtable}{p{0.33\linewidth} p{0.66\linewidth}} \multicolumn{2}{l}{<em>Keyboard Shortcuts</em>}
@@ -348,4 +348,4 @@
   <p>
     \end{longtable}\end{fullwidth}
   </p>
-</chapter>
+</appendix>

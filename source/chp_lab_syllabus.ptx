@@ -1,6 +1,10 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_lab_syllabus">
+<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_lab_syllabus">
   <title>Lab Description</title>
+  <paragraphs>
+    <title>Lab Expectations</title>
+	<p>Text</p>
+  </paragraphs>
   <xi:include  href="sec_purpose_of_lab.ptx"/>
   <xi:include  href="sec_lab_expectations.ptx"/>
   <xi:include  href="sec_lab_test.ptx"/>
-</chapter>
+</preface>
