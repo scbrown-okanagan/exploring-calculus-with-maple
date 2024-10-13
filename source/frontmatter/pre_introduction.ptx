@@ -1,6 +1,6 @@
 <preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_introduction">
   <title>Introduction to Maple</title>
   <xi:include  href="sec_the_maple_computer_algebra_system.ptx"/>
-  <xi:include  href="how_to_use_this_manual.ptx"/>
+  <xi:include  href="sec_how_to_use_this_manual.ptx"/>
   <xi:include  href="sec_accessing_maple.ptx"/>
 </preface>

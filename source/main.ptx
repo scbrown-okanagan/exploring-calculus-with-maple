@@ -118,39 +118,39 @@
           <email>scbrown@okanagan.bc.ca</email>
         </author>
       </titlepage>
-	  <xi:include href="./chp_lab_syllabus.ptx"/>
-	  <xi:include href="./chp_introduction.ptx"/>
+	  <xi:include href="./frontmatter/pre_lab_syllabus.ptx"/>
+	  <xi:include href="./frontmatter/pre_introduction.ptx"/>
     </frontmatter>
 	<part>
 	  <title>Math 112</title>
-      <xi:include href="./Calc1Activities.ptx"/>
-      <xi:include href="./chp_lab_test_review_math_112.ptx"/>
+      <xi:include href="./activities_math112/math112activities.ptx"/>
+      <xi:include href="./activities_math112/lab_test_review_math_112.ptx"/>
 	</part>
 	<part>
 	  <title>Math 122</title>
-      <xi:include href="./Calc2Activities.ptx"/>
-      <xi:include href="./chp_lab_test_review_math_122.ptx"/>
+      <xi:include href="./activities_math122/math122activities.ptx"/>
+      <xi:include href="./activities_math122/lab_test_review_math_122.ptx"/>
 	</part>
 	<part>
 	<title>Tutorials</title>
-    <xi:include href="./chp_maple_environment.ptx"/>
-    <xi:include href="./chp_basics_of_maple_syntax.ptx"/>
-    <xi:include href="./chp_basic_operations.ptx"/>
-    <xi:include href="./chp_plotting_functions.ptx"/>
-    <xi:include href="./chp_assignment_operator.ptx"/>
-    <xi:include href="./chp_equation_solvers.ptx"/>
-    <xi:include href="./chp_limits.ptx"/>
-    <xi:include href="./chp_derivative.ptx"/>
-    <xi:include href="./chp_implicit_functions.ptx"/>
-    <xi:include href="./chp_riemann_sums_and_area_approximation.ptx"/>
-    <xi:include href="./chp_definite_and_indefinite_Integrals.ptx"/>
-    <xi:include href="./chp_differential_equations.ptx"/>
-    <xi:include href="./chp_sequence_and_sseries.ptx"/>
-    <xi:include href="./chp_conditional_statements_and_loops.ptx"/>    
+    <xi:include href="./maple_environment/chp_maple_environment.ptx"/>
+    <xi:include href="./basics_of_maple_syntax/chp_basics_of_maple_syntax.ptx"/>
+    <xi:include href="./basic_operations/chp_basic_operations.ptx"/>
+    <xi:include href="./plotting_functions/chp_plotting_functions.ptx"/>
+    <xi:include href="./assignment_operator/chp_assignment_operator.ptx"/>
+    <xi:include href="./equation_solvers/chp_equation_solvers.ptx"/>
+    <xi:include href="./limits/chp_limits.ptx"/>
+    <xi:include href="./derivative/chp_derivative.ptx"/>
+    <xi:include href="./implicit_functions/chp_implicit_functions.ptx"/>
+    <xi:include href="./riemann_sums_and_area_approximation/chp_riemann_sums_and_area_approximation.ptx"/>
+    <xi:include href="./definite_and_indefinite_integrals/chp_definite_and_indefinite_integrals.ptx"/>
+    <xi:include href="./differential_equations/chp_differential_equations.ptx"/>
+    <xi:include href="./sequence_and_series/chp_sequence_and_series.ptx"/>
+    <xi:include href="./conditional_statements_and_loops/chp_conditional_statements_and_loops.ptx"/>    
 	</part>
     <backmatter>
-	  <xi:include href="./chp_list_of_common_errors.ptx"/>
-	  <xi:include href="./chp_list_of_common_commands.ptx"/>
+	  <xi:include href="./list_of_common_errors.ptx"/>
+	  <xi:include href="./list_of_common_commands.ptx"/>
       <xi:include href="./bibliography.ptx"/>
       <index>
         <title>Index</title>

@@ -3,5 +3,5 @@
   <xi:include  href="sec_assigning_equations.ptx"/>
   <xi:include  href="sec_two_types_of_solvers.ptx"/>
   <xi:include  href="sec_solving_an_equation_of_one_variable.ptx"/>
-  <xi:include  href="sec_solvingsystemeqs.ptx"/>
+  <xi:include  href="sec_solving_a_system.ptx"/>
 </chapter>

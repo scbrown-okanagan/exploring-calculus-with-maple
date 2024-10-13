@@ -1,9 +1,9 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_derivative">
   <title>The Derivative</title>
   <xi:include  href="sec_the_diff_command.ptx"/>
-  <xi:include  href="sec_derivs_using_function_notation.ptx"/>
-  <xi:include  href="sec_Applications_of_the_derivative.ptx"/>
+  <xi:include  href="sec_derivatives_using_function_notation.ptx"/>
+  <xi:include  href="sec_applications_of_the_derivative.ptx"/>
   <xi:include  href="sec_the_derivatives_tutor.ptx"/>
   <xi:include  href="sec_the_differentiation_methods_tutor.ptx"/>
-  <xi:include  href="sec_newtonsmethod.ptx"/>
+  <xi:include  href="sec_newtons_method.ptx"/>
 </chapter>
