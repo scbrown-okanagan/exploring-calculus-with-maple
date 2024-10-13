@@ -2,7 +2,7 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
   <docinfo>
 <macros>
-\renewcommand{\thechapter}{\Alph{chapter}}
+<!-- \renewcommand{\thechapter}{\Alph{chapter}}
 \renewcommand{\theHchapter}{otherchapter\thechapter}
 \def\mapleplot{\epsfigmapleplot}
 \def\imapleplot{\mapleplot}
@@ -74,7 +74,7 @@
 \def\csname{Maple Hyperlink\endcsname#1{{\bfseries\rmfamily\textit #1}}}
 \def\labelLink#1#2{\Hyperlink{#2}}
 \def\docLink#1#2{\Hyperlink{#2}}
-\def\endmaplespreadsheet{\end{tabular}\end{center}\MapleTableCellfalse}
+\def\endmaplespreadsheet{\end{tabular}\end{center}\MapleTableCellfalse} -->
 \newcommand{\lrp}[1]{\left(#1\right)}
 \newcommand{\lrb}[1]{\left[#1\right]}
 \newcommand{\lrbrace}[1]{\left\lbrace#1\right\rbrace}
@@ -121,17 +121,17 @@
 	  <xi:include href="./frontmatter/pre_lab_syllabus.ptx"/>
 	  <xi:include href="./frontmatter/pre_introduction.ptx"/>
     </frontmatter>
-	<part>
-	  <title>Math 112</title>
+	<part xml:id="prt_calc1_activities">
+	  <title>Calculus I</title>
       <xi:include href="./activities_math112/math112activities.ptx"/>
       <xi:include href="./activities_math112/lab_test_review_math_112.ptx"/>
 	</part>
-	<part>
-	  <title>Math 122</title>
+	<part xml:id="prt_calc2_activities">
+	  <title>Calculus II</title>
       <xi:include href="./activities_math122/math122activities.ptx"/>
       <xi:include href="./activities_math122/lab_test_review_math_122.ptx"/>
 	</part>
-	<part>
+	<part xml:id="prt_tutorials">
 	<title>Tutorials</title>
     <xi:include href="./maple_environment/chp_maple_environment.ptx"/>
     <xi:include href="./basics_of_maple_syntax/chp_basics_of_maple_syntax.ptx"/>
