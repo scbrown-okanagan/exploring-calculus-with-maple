@@ -2,31 +2,32 @@
   <title>The Assignment Operator and Creating Functions</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:plotting_functions}, pg.
-          <xref ref="chp_plotting_functions"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:assignment_operator}, pg.
-          <xref ref="chp_assignment_operator"></xref>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li>Basics of Plotting, <xref ref="chp_plotting_functions"></xref></li>
+        <li>The Assignment Operator and Defining Functions, <xref ref="chp_assignment_operator"></xref></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      In this activity,
-      you will be using the assignment operator <c>:=</c>,
-      which allows you assign Maple output to a name of your choice.
-      This is especially useful for assigning expressions and functions on one Maple input,
-      before manipulating those expressions later on in your worksheet.
+      In this activity, you will be using the assignment operator <c>:=</c>, which allows you assign Maple output to a name of your choice.
+      This is especially useful for assigning expressions and functions on one Maple input, before manipulating those expressions later on in your worksheet.
     </p>
   </subsection>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Assign the expression <m>\dfrac{\sin(x)+3}{\cos(x)+1}</m> to <c>expr</c> and then use the <c>subs()</c> command to substitute <m>x=3</m> into <c>expr</c>.
+          Evaluate this as a decimal with <m>15</m> digits.
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+  <!--TODO: Convert excercises to proper xml type-->
   <subsection>
     <title>Exercises:</title>
     <ol>

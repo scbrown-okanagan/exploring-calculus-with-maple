@@ -2,22 +2,26 @@
   <title>The Basics</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-		<p>Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:</p>
-    <ul>
-      <li>Basic Operations, <xref ref="chp_basic_operations"></xref></li>
-      <li>Basics of Plotting, <xref ref="chp_plotting_functions"></xref></li>
-    </ul>
+		<p>
+			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			<ul>
+			<li>Basic Operations, <xref ref="chp_basic_operations"></xref></li>
+			<li>Basics of Plotting, <xref ref="chp_plotting_functions"></xref></li>
+			</ul>
+		</p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
-    <p>In this activity, you will learn basic usage of some of the most common Maple commands:</p>
+    <p>In this activity, you will learn basic usage of some of the most common Maple commands:
 		<ul>
 			<li><c>expand()</c><idx><h>expand</h></idx></li>
 			<li><c>factor()</c><idx><h>factor</h></idx></li>
 			<li><c>simplify()</c><idx><h>simplify</h></idx></li>
 			<li><c>plot()</c><idx><h>plot</h></idx></li>
 		</ul>
+	</p>
   </subsection>
+  <!---->
 	<exercises>
 		<exercise>
 			<statement>
@@ -63,6 +67,7 @@
 			<task>
 				<statement>
 					<p>Hit Enter to run all three commands together.</p>
+          
 				</statement>
 				<hint>
 					<p>
@@ -72,14 +77,14 @@
 			</task>
 			<conclusion>
         <p>You should see three outputs now: expanding, simplifying, and factoring.</p>
+				<aside>
+					<title>Multi-line commands</title>
+					<p>
+					You can add a line break between commands on the same Maple input without running them with Shift+Enter.
+					</p>
+				</aside>
 			</conclusion>
 		</exercise>
-		<aside>
-			<title>Multi-line commands</title>
-			<p>
-				You can add a line break between commands on the same Maple input without running them with Shift+Enter.
-			</p>
-		</aside>
 		<exercise>
 			<introduction>
         <p>
@@ -113,16 +118,20 @@
 			</task>
 			<conclusion>
 				<p>
-					Can you notice a pattern and show that these polynomials follow a particular form when factored? To explain the patter, use the <image width="4%" source="images/new_text.png"/> button to create a new paragraph after the current line.
+					Can you notice a pattern and show that these polynomials follow a particular form when factored? To explain the pattern, use the
+        </p>
+        <image width="4%" source="images/new_text.png"/>
+        <p>
+          button to create a new paragraph after the current line.
 				</p>
+        <aside>
+          <title>New paragraph shortcut</title>
+          <p>
+            Ctrl+Shift+J can also be used to create a paragraph after the current line.
+          </p>
+        </aside>
 			</conclusion>
 		</exercise>
-		<aside>
-			<title>New paragraph shortcut</title>
-			<p>
-				Ctrl+Shift+J can also be used to create a paragraph after the current line.
-			</p>
-		</aside>
 		<exercise>
 			<introduction>
         <p>
@@ -136,36 +145,34 @@
 			</task>
 			<task>
 				<statement>
-					<p><m>surd(x,3)</m><idx><h>mathematical functions</h><h>nth root@<m>n</m><sup>th</sup> root</h></idx></p>
+					<p><m>surd(x,3)</m><idx><h>mathematical functions</h><h>nth root@<m>n</m>th root</h></idx></p>
 				</statement>
 			</task>
 			<conclusion>
 				<p>State the difference in domain using a new paragraph.</p>
+        <aside>
+          <title>The <c>surd()</c> command</title>
+          <p>
+            The <c>surd(x,3)</c> function is equivalent to <m>\sqrt[3]{x}</m>. Similarly, <c>surd(x,5)</c> is equivalent to <m>\sqrt[5]{x}</m>, etc. It is often better to use the <c>surd()</c> command than to use a fractional exponent.
+          </p>
+        </aside>
 			</conclusion>
-		</exercise>
-		<aside>
-			<title>The <c>surd()</c> command</title>
-			<p>
-				The <c>surd(x,3)</c> function is equivalent to <m>\sqrt[3]{x}</m>. Similarly, <c>surd(x,5)</c> is equivalent to <m>\sqrt[5]{x}</m>, etc. It is often better to use the <c>surd()</c> command than to use a fractional exponent.
-			</p>
-		</aside>
+		</exercise>		
 		<exercise>
 			<statement>
         <p>
           On a new Maple input, create a plot <idx><h>plot</h></idx>of the following list of functions
-				</p>
-				<md>
-					<mrow>[ x^2, x^3, sqrt(x), surd(x,3), abs(x) ]</mrow>
-					<idx><h>plot</h><h>multiple functions</h></idx>
-				</md>
-				<p>
+          <idx><h>plot</h><h>multiple functions</h></idx>
+          <md>
+            <mrow>[ x^2, x^3, sqrt(x), surd(x,3), abs(x) ]</mrow>
+          </md>
 					and include the following options (separated by commas).
+          <ul>
+            <li><c>x = -5..10</c> <em>(This specifies the <m>x</m>-axis)</em><idx><h>plot</h><h>axes intervals</h></idx></li>
+            <li><c>y = -5..10</c> <em>(This specifies the <m>y</m>-axis)</em></li>
+            <li><c>colour = [red,blue,green,purple,orange]</c><idx><h>plot</h><h>colours</h></idx></li>
+          </ul>
 				</p>
-				<ul>
-					<li><c>x = -5..10</c> <em>(This specifies the <m>x</m>-axis)</em><idx><h>plot</h><h>axes intervals</h></idx></li>
-					<li><c>y = -5..10</c> <em>(This specifies the <m>y</m>-axis)</em></li>
-					<li><c>colour = [red,blue,green,purple,orange]</c><idx><h>plot</h><h>colours</h></idx></li>
-				</ul>
 			</statement>
 			<hint>
 				<p>
