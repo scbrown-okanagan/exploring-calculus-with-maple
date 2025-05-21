@@ -104,6 +104,7 @@
 \usetikzlibrary{shapes}
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 </latex-image-preamble>
   </docinfo>
   <book>

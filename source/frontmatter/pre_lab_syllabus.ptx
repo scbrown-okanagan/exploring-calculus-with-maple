@@ -17,7 +17,7 @@
       You must complete each component of each activity individually.
       Plagiarism of lab work will not be tolerated.
     </p>
-	  <image>
+		<image width="40%">
 			<latex-image>
 				\begin{tikzpicture}
 					\node [rectangle, draw, text centered, rounded corners, text width=10em] (read) {Read through activity and tutorials};
@@ -31,7 +31,7 @@
 					\path [draw, -latex'] (save) -- (quiz);
 				\end{tikzpicture}
 			</latex-image>
-	  </image>
+		</image>
   </paragraphs>
   <paragraphs>
     <title>Prior to lab</title>

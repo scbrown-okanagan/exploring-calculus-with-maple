@@ -1,0 +1,180 @@
+<section xml:id="sec_basics">
+  <title>The Basics</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+		<p>Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:</p>
+    <ul>
+      <li>Basic Operations, <xref ref="chp_basic_operations"></xref></li>
+      <li>Basics of Plotting, <xref ref="chp_plotting_functions"></xref></li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>In this activity, you will learn basic usage of some of the most common Maple commands:</p>
+		<ul>
+			<li><c>expand()</c><idx><h>expand</h></idx></li>
+			<li><c>factor()</c><idx><h>factor</h></idx></li>
+			<li><c>simplify()</c><idx><h>simplify</h></idx></li>
+			<li><c>plot()</c><idx><h>plot</h></idx></li>
+		</ul>
+  </subsection>
+	<exercises>
+		<exercise>
+			<statement>
+        <p>Expand the polynomial <m>(2x-y)^6</m>.</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+        <p>Factor the polynomial <m>16x^4-160x^3y+600x^2y^2-1000xy^3+625y^4</m>.</p>
+			</statement>
+			<hint>
+				<p>
+					When two or more variables appear next to each other, be sure to include a <c>*</c> or space between them, so that Maple knows that they are multiplied together.
+				</p>
+			</hint>
+		</exercise>
+		<exercise>
+			<statement>
+        <p>
+          Simplify the expression <m>\dfrac{x^3-1}{x-1}</m>.
+        </p>
+			</statement>
+		</exercise>
+		<exercise>
+			<introduction>
+        <p>Now we would like Maple perform all three commands together.</p>
+			</introduction>
+			<task>
+				<statement>
+					<p>Have Maple expand the rational expression <m>\dfrac{(x-y)^2+(x+y)^2}{x^3-y^3}</m>.</p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p>Add a semicolon to the end of the line, followed by <c>simplify(%)</c>.</p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p>Add another semicolon to the end of the line, followed by <c>factor(%)</c>.</p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p>Hit Enter to run all three commands together.</p>
+				</statement>
+				<hint>
+					<p>
+						It is a good practice whenever using the % <idx><h>ditto operator</h></idx> shortcut on a previous command to run both commands simultaneously on the same Maple input.
+					</p>
+				</hint>
+			</task>
+			<conclusion>
+        <p>You should see three outputs now: expanding, simplifying, and factoring.</p>
+			</conclusion>
+		</exercise>
+		<aside>
+			<title>Multi-line commands</title>
+			<p>
+				You can add a line break between commands on the same Maple input without running them with Shift+Enter.
+			</p>
+		</aside>
+		<exercise>
+			<introduction>
+        <p>
+          (Optional) Consider polynomials of the form <m>x^p-1</m>, where <m>p</m> is a prime number. Try factoring each of the following:
+        </p>
+			</introduction>
+			<task>
+				<statement>
+					<p><m>x^2 - 1</m></p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p><m>x^3 - 1</m></p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p><m>x^5 - 1</m></p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p><m>x^7 - 1</m></p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p><m>x^{19} - 1</m></p>
+				</statement>
+			</task>
+			<conclusion>
+				<p>
+					Can you notice a pattern and show that these polynomials follow a particular form when factored? To explain the patter, use the <image width="4%" source="images/new_text.png"/> button to create a new paragraph after the current line.
+				</p>
+			</conclusion>
+		</exercise>
+		<aside>
+			<title>New paragraph shortcut</title>
+			<p>
+				Ctrl+Shift+J can also be used to create a paragraph after the current line.
+			</p>
+		</aside>
+		<exercise>
+			<introduction>
+        <p>
+          Plot <idx><h>plot</h></idx>the following two functions using separate <c>plot()</c> commands and note the difference in domain:
+        </p>
+			</introduction>
+			<task>
+				<statement>
+					<p><m>x^{\sfrac{1}{3}}</m></p>
+				</statement>
+			</task>
+			<task>
+				<statement>
+					<p><m>surd(x,3)</m><idx><h>mathematical functions</h><h>nth root@<m>n</m><sup>th</sup> root</h></idx></p>
+				</statement>
+			</task>
+			<conclusion>
+				<p>State the difference in domain using a new paragraph.</p>
+			</conclusion>
+		</exercise>
+		<aside>
+			<title>The <c>surd()</c> command</title>
+			<p>
+				The <c>surd(x,3)</c> function is equivalent to <m>\sqrt[3]{x}</m>. Similarly, <c>surd(x,5)</c> is equivalent to <m>\sqrt[5]{x}</m>, etc. It is often better to use the <c>surd()</c> command than to use a fractional exponent.
+			</p>
+		</aside>
+		<exercise>
+			<statement>
+        <p>
+          On a new Maple input, create a plot <idx><h>plot</h></idx>of the following list of functions
+				</p>
+				<md>
+					<mrow>[ x^2, x^3, sqrt(x), surd(x,3), abs(x) ]</mrow>
+					<idx><h>plot</h><h>multiple functions</h></idx>
+				</md>
+				<p>
+					and include the following options (separated by commas).
+				</p>
+				<ul>
+					<li><c>x = -5..10</c> <em>(This specifies the <m>x</m>-axis)</em><idx><h>plot</h><h>axes intervals</h></idx></li>
+					<li><c>y = -5..10</c> <em>(This specifies the <m>y</m>-axis)</em></li>
+					<li><c>colour = [red,blue,green,purple,orange]</c><idx><h>plot</h><h>colours</h></idx></li>
+				</ul>
+			</statement>
+			<hint>
+				<p>
+					Square brackets in Maple are used to create a comma-separated list of items in the specified order. Curly braces may also be used to create a list where order does not matter.
+				</p>
+			</hint>
+			<hint>
+				<p>An example of plotting multiple functions at once can be found in <xref ref="sec_plotting_multiple_functions">Section</xref>.</p>
+			</hint>
+		</exercise>
+	</exercises>
+</section>

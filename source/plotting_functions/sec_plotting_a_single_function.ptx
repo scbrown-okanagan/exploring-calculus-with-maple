@@ -10,12 +10,10 @@
       By default, Maple will plot trigonometric functions with an <m>x</m>-axis from <m>-2\pi</m> to <m>2\pi</m>.
     </p>
   </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {plot(sin(cos(x))); }
-        <idx><h>plot</h></idx>
-    \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Plotting_Functionsplot2d1a-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-  </p>
+  <console prompt="> ">
+		<input>plot( sin( cos(x) ) );</input>
+	</console>
+	<image source="Plotting_Functionsplot2d1a-eps-converted-to"></image>
   <p>
     It is often useful to specify the interval for the <m>x</m>-axis.
     Choose left and right endpoint for the <m>x</m>-axis that are appropriate for your graph.
