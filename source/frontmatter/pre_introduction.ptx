@@ -1,12 +1,10 @@
 <preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_introduction">
   <title>Introduction to Maple</title>
   <paragraphs xml:id="sec_the_maple_computer_algebra_system">
-  <title>The Maple Computer Algebra System</title>
+  	<title>The Maple Computer Algebra System</title>
 	  <p>
-			In lab, you will be using the latest version of Maple,
-			which is a symbolic and numeric computing environment.
-			Maple provides an interface for analyzing,
-			exploring, visualizing, and solving mathematical problems.
+			In lab, you will be using the latest version of Maple, which is a symbolic and numeric computing environment.
+			Maple provides an interface for analyzing, exploring, visualizing, and solving mathematical problems.
 			The interface also allows you to maintain an easy-to-follow document so that you can retrace your thought process.
 			If you plan to pursue any branch of mathematics or field that relies on mathematics,
 			having basic knowledge of a computer algebra system is a very useful tool.
@@ -19,8 +17,7 @@
 		</p>
 		<p>
 			<xref ref="prt_calc1_activities">Part</xref> and <xref ref="prt_calc2_activities">Part</xref>
-			consist of activities for you to complete.
-			These activities are divided into two chapters: Calculus I and Calculus II.
+			consist of activities for you to complete. These activities are divided into two chapters: Calculus I and Calculus II.
 			Each activity focuses on one topic from that course and contains a list of exercises for you to complete with Maple.
 			Some of these exercises may give very explicit instructions for typing a command into Maple,
 			while others may require you to use your own intuition and understanding of the capabilities of Maple.
@@ -32,8 +29,7 @@
 			Each of these examples was completed within Maple and should be reproducible on your own computer.
 		</p>
 		<p>
-			At the beginning of each activity,
-			a list of the most relevant tutorials is given.
+			At the beginning of each activity, a list of the most relevant tutorials is given.
 			It is expected that you read through those tutorials as you complete the exercises of that activity.
 			Many activities build upon previously learned commands,
 			so it is a good idea to thoroughly read through all of the relevant tutorials as you progress through lab.
@@ -48,68 +44,44 @@
 	</paragraphs>
 	<paragraphs>
 		<title>Opening Maple on School Computers</title>
-		<aside>
-			<p>
-				<image width="92.5%" source="images/horizonvmware.png"/>
-			</p>
-		</aside>
 		<p>
-			On some Windows computers,
-			the most recent version of Maple may be installed directly.
-			In this case,
-			you can simply hit the Start Menu key on your keyboard
-			(in the lower left corner)
-			and begin typing the word "Maple". If Maple is installed directly,
-			then Windows Search will automatically find the version installed and display a link to the application.
-			Alternatively,
-			you should be able to find Maple by browsing the list of installed programs on the Start Menu.
+			On most Windows computers, the current version of Maple is installed directly.
+			In this case, you can simply hit the Start Menu key on your keyboard (in the lower left corner)
+			and begin typing the word "Maple". Windows Search will automatically find the version installed and display a link to the application.
+			Alternatively, you should be able to find Maple by browsing the list of installed programs on the Start Menu.
 		</p>
 		<p>
-			On other computers,
-			you may need to log into a virtual machine to access Maple remotely.
-			On these machines,
-			you will typically find a link to VMware Horizon Client on the desktop.
+			On other computers, you may need to log into a virtual machine to access Maple remotely.
+			On these machines, you will typically find a link to VMware Horizon Client on the desktop.
 			You will need to open this client and log into the remote machine using the same information as you previously used to log into the computer.
-			Once the remote machine loads,
-			you should find Maple in the Start Menu as described above.
+			Once the remote machine loads, you should find Maple in the Start Menu as described above.
 		</p>
-		<aside>
-			<title>-5cm</title>
-			<p>
-				<image width="92.5%" source="images/mapleupdate.png"/>
-			</p>
-		</aside>
+    <p>
+      If you are prompted to install an available update to Maple on a school computer, you may hit Cancel to decline the update.
+    </p>
+    <image width="60%" source="images/mapleupdate.png"/>
 	</paragraphs>
 	<paragraphs xml:id="pt_Activities">
 		<title>Organizing Files in your OneDrive</title>
 		<p>
-			You are given your own personal cloud storage through your college Microsoft account. You can find this folder by opening up File Explorer on a school computer. Look for your OneDrive folder with the cloud icon. You will likely need to log into your Microsoft account to open this folder and you may need your phone to authenticate the login.
+			You are given your own personal cloud storage through your college Microsoft account. You can find this folder by opening up File Explorer on a school computer.
 		</p>
-		<figure>
-			<caption>The shortcut for File Explorer should be on the taskbar.</caption>
-			<image width="20%" source="images/fileexplorer.png"/>
-		</figure>
+    <image width="20%" source="images/fileexplorer.png"/>
 		<p>
-			It is best to create a new subfolder in your OneDrive folder for your lab. This folder could be called something like "Math 112 Labs" so that it is easy to find and organize all of your saved Maple files. When you wish to save your file in Maple, now you can navigate to this folder and save your file with the name of the activity.
+			Look for your OneDrive folder with the cloud icon. You will likely need to log into your Microsoft account to open this folder and you may need your phone to authenticate the login.
+      It is best to create a new subfolder in your OneDrive folder for your lab. This folder could be called something like "Math 112 Labs" so that it is easy to find and organize all of your saved Maple files. When you wish to save your file in Maple, now you can navigate to this folder and save your file with the name of the activity.
 		</p>
-		<figure>
-			<caption>Make sure to create a folder for your lab inside your OneDrive folder. Save all of your files here using obvious names so that they are easy to find again later.</caption>
-			\adjincludegraphics[width=0.9\textwidth,trim={0 {0.3\height} 0 0},clip]{introduction/figures/fileorganization}
-		</figure>
-		<p>
-			The files that Maple saves are only readable through Maple.
-			However, you can find the Export As tool under the File menu.
-			From there, you can change the file type to PDF and save your document.
-			PDF files can be read by other programs,
-			but cannot be edited by Maple.
-		</p>
-		<figure>
-			<caption>You can export your Maple worksheet as a PDF file type, which can be opened on most devices without Maple. However, Maple cannot edit PDF files.</caption>
-			\adjincludegraphics[width=0.3\textwidth,trim={0 {0.3\height} {0.2\width} 0},clip]{introduction/figures/exportas}
-			<image width="60%" source="images/exportpdf.png"/>
-		</figure>
+    <image width="60%" source="images/fileorganization.png"/>
 		<p>
 			The files that you have saved on your OneDrive folder on campus can be accessed from home through a browser by installing OneDrive on a personal device.
 		</p>
+	</paragraphs>
+	<paragraphs xml:id="pt_Activities">
+		<title>File Types</title>
+		<p>
+			The files that Maple saves are only readable through Maple. However, you can find the Export As tool under the File menu.
+			From there, you can change the file type to PDF and save your document. PDF files can be read by other programs, but cannot be edited by Maple.
+		</p>
+		<image width="60%" source="images/exportpdf.png"/>
 	</paragraphs>
 </preface>
