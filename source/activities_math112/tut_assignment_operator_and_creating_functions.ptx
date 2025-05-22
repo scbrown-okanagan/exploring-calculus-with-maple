@@ -18,127 +18,137 @@
     </p>
   </subsection>
   <exercises>
+    <exercise>    
+      <introduction>
+        <p>
+          In this exercise, you'll learn how to evaluate an expression at a given value of <m>x</m> two ways: using the <c>subs()</c> command, and using function notation.
+        </p>
+        <aside>
+          <p>
+            Instead of using the <c>subs</c> command multiple times,
+            it is often a better practice to define a function and use function notation instead.
+          </p>
+        </aside>
+      </introduction>    
+      <task>
+        <statement>
+          <p>
+            Assign the expression <m>\dfrac{\sin(x)+3}{\cos(x)+1}</m> to <c>expr</c> as follows:
+          </p>
+          <console prompt="> ">
+            <input>expr := ( sin(x) + 3)/( cos(x) + 1);</input>
+          </console>
+          <p>
+           Then use the <c>subs()</c> command to substitute <m>x=3</m> into <c>expr</c>. Evaluate the result as a decimal with <m>15</m> digits.
+          </p>
+        </statement>
+      </task>  
+      <task>
+        <statement>
+          <p>
+            Assign the function <m>g(x) = \dfrac{\sin(x)+3}{\cos(x)+1}</m> as follows:
+          </p>
+          <console prompt="> ">
+            <input>g(x) := ( sin(x) + 3)/( cos(x) + 1);</input>
+          </console>
+          <p>
+            Now, evaluate <m>g(3)</m> to <m>15</m> digits to get the same result.
+          </p>
+        </statement>
+      </task>
+    </exercise>
     <exercise>
       <statement>
         <p>
-          Assign the expression <m>\dfrac{\sin(x)+3}{\cos(x)+1}</m> to <c>expr</c> and then use the <c>subs()</c> command to substitute <m>x=3</m> into <c>expr</c>.
-          Evaluate this as a decimal with <m>15</m> digits.
+          Assign the expression <m>x^2+2^x</m> to <c>expr2</c>. Then, substitute <m>y =</m><nbsp/><c>expr2</c> into <m>y^2+3y</m> and expand the result.
         </p>
       </statement>
     </exercise>
-  </exercises>
-  <!--TODO: Convert excercises to proper xml type-->
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
-        <p>
-          Assign the expression <m>\dfrac{\sin(x)+3}{\cos(x)+1}</m> to <c>expr</c> and then use the <c>subs()</c> command to substitute <m>x=3</m> into <c>expr</c>.
-          Evaluate this as a decimal with <m>15</m> digits.
-        </p>
-      </li>
-      <li>
-        <p>
-          Assign the expression <m>x^2+2^x</m> to <c>expr2</c> and substitute <m>y =</m><nbsp/><c>expr2</c> into the expression <m>y^2+3y</m>.
-          <aside>
-            <p>
-              Instead of using the <c>subs</c> command multiple times,
-              it is often a better practice to define a function and use function notation instead.
-            </p>
-          </aside>
-        </p>
-      </li>
-      <li>
+    <exercise>
+      <statement>
         <p>
           Assign the expression <m>2x^2-4x+7</m> to <c>poly</c> and then substitute <m>x=5+h</m> into <c>poly</c> and simplify.
         </p>
-      </li>
-      <li>
+      </statement>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the function <m>f(x) = (1-x^2) { e}^{-\sfrac{x^2}{2}}</m>.
-          <aside>
-            <p>
-              The exponential function, <m>{ e}^x</m>,
-              in Maple is denoted as <c>exp(x)</c>.
-            </p>
-          </aside>
-            <idx><h>mathematical functions</h><h>exponential</h></idx>
-          <ol>
-            <li>
-              <p>
-                Assign the function to <m>f(x)</m>.
-                <aside>
-                  <p>
-                    When assigning the function to <m>f(x)</m>,
-                    use the <m>:=</m> operator.
-                  </p>
-                </aside>
-            <idx><h>assignment operator</h></idx>
-              </p>
-            </li>
-            <li>
-              <p>
-                This function <m>f(x)</m> is known as the
-                <em>Mexican Hat Function</em>.
-                Can you see why?
-                Plot the graph of <m>f(x)</m>.
-              </p>
-            </li>
-          </ol>
+          The function <m>f(x) = (1-x^2) { e}^{-\sfrac{x^2}{2}}</m> is known as the Mexican Hat Function.
         </p>
-      </li>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Assign the function to <m>f(x)</m> using the <c>:=</c> operator.
+            <idx><h>assignment operator</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The exponential function, <m>{ e}^x</m>, in Maple may be typed as <c>exp(x)</c>. You may also use the palette toolbar to use the proper <m>e</m>.
+            You may not simply type the letter `e` for the natural exponential function.
+            <idx><h>mathematical functions</h><h>exponential</h></idx>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the graph of <m>f(x)</m>. Adjust the bounds and scaling of the graph as necessary to see why this is known as the Mexican Hat Function.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
           Maple, by default, does not know the function
-          <aside>
-            <p>
-              Often, this function is denoted as
-              <m>{ sinc}_\pi(x)</m> and <m>{ sinc}(x) = \frac{\sin (x)}{x}</m>.
-            </p>
-          </aside>
           <me>
             sinc(x) = \dfrac{\sin(\pi x)}{\pi x}
           </me>,
           which is important in engineering.
-          <aside>
-            <p>
-              Be sure to include a multiplication symbol or space between <m>\pi</m> and <m>x</m>.
-            </p>
-          </aside>
-            <idx><h>Pi</h></idx>
-          <aside>
-            <p>
-              The mathematical constant <m>\pi = 3.14\cdots</m> must be typed into Maple as <c>Pi</c>.
-            </p>
-          </aside>
-            <idx><h>Pi</h></idx>
-          <ol>
-            <li>
-              <p>
-                Assign this function to <m>sinc(x)</m>.
-                <aside>
-                  <p>
-                    When assigning the function to <m>sinc(x)</m>,
-                    use the <m>:=</m> operator.
-                  </p>
-                </aside>
-            <idx><h>assignment operator</h></idx>
-              </p>
-            </li>
-            <li>
-              <p>
-                Evaluate <m>sinc(3)</m>,
-                <m>sinc\left(\frac{1}{2}\right)</m>, and <m>sinc(0.25)</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the graph of <m>sinc(x)</m>.
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-    </ol>
-  </subsection>
+        <aside>
+          <p>
+            Often, this function is denoted as
+            <m>{ sinc}_\pi(x)</m> and <m>{ sinc}(x) = \frac{\sin (x)}{x}</m>.
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Assign the <m>sinc(x)</m> function using the assignment operator.
+            <idx><h>assignment operator</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Be sure to include a multiplication symbol or space between <m>\pi</m> and <m>x</m>.
+          </p>
+        </hint>
+        <hint>
+          <p>
+            The mathematical constant <m>\pi = 3.14\cdots</m> must be typed into Maple as <c>Pi</c>.
+            <idx><h>Pi</h></idx>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate <m>sinc(3)</m>, <m>sinc\left(\frac{1}{2}\right)</m>, and <m>sinc(0.25)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the graph of <m>sinc(x)</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>

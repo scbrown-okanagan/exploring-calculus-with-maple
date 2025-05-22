@@ -21,7 +21,6 @@
 		</ul>
 	</p>
   </subsection>
-  <!---->
 	<exercises>
 		<exercise>
 			<statement>
@@ -87,9 +86,9 @@
 		</exercise>
 		<exercise>
 			<introduction>
-        <p>
-          (Optional) Consider polynomials of the form <m>x^p-1</m>, where <m>p</m> is a prime number. Try factoring each of the following:
-        </p>
+				<p>
+				(Optional) Consider polynomials of the form <m>x^p-1</m>, where <m>p</m> is a prime number. Try factoring each of the following:
+				</p>
 			</introduction>
 			<task>
 				<statement>
