@@ -5,8 +5,8 @@
 		<p>
 			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
 			<ul>
-			<li>Basic Operations, <xref ref="chp_basic_operations"></xref></li>
-			<li>Basics of Plotting, <xref ref="chp_plotting_functions"></xref></li>
+			<li><xref ref="chp_basic_operations" text="title" /></li>
+			<li><xref ref="chp_plotting_functions" text="title" /></li>
 			</ul>
 		</p>
   </subsection>

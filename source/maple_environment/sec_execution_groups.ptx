@@ -29,22 +29,22 @@
     Maple output is displayed in the centre of the following line.
   </p>
   <aside>
-    <p>
-      <image width="50%" source="images/InsertInput.png"/>
-    </p>
+    <image width="50%" source="images/InsertInput.png"/>
   </aside>
-  <console prompt="> ">
-    <input>2 + 2;</input>
-  </console>
-  <me>
-    4
-  </me>
-  <console prompt="> ">
-    <input>8 / 2;</input>
-  </console>
-  <me>
-    \displaystyle 4
-  </me>
+  <p>
+    <console prompt="> ">
+      <input>2 + 2;</input>
+    </console>
+    <me>
+      4
+    </me>
+    <console prompt="> ">
+      <input>8 / 2;</input>
+    </console>
+    <me>
+      4
+    </me>
+  </p>
   <p>
     If at any point you wish to correct a previous Maple input line,
     you may simply go back to that line and modify it.

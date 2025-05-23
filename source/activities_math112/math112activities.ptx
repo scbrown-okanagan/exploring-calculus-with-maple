@@ -4,14 +4,14 @@
     <p>
       The following activities are considered core and should be covered during the semester:
       <ul>
-        <li><xref ref="sec_creating_a_maple_worksheet"></xref></li>
-        <li><xref ref="sec_basics"></xref></li>
-        <li><xref ref="sec_assignment_operator_and_creating_functions"></xref></li>
-        <li><xref ref="sec_solving_equations_in_maple"></xref></li>
-        <li><xref ref="sec_limits"></xref></li>
-        <li><xref ref="sec_derivative_of_a_function"></xref></li>
-        <li><xref ref="sec_implicit_functions"></xref></li>
-        <li><xref ref="sec_newtons_method"></xref></li>
+        <li><xref ref="sec_creating_a_maple_worksheet" text="title" /></li>
+        <li><xref ref="sec_basics" text="title" /></li>
+        <li><xref ref="sec_assignment_operator_and_creating_functions" text="title" /></li>
+        <li><xref ref="sec_solving_equations_in_maple" text="title" /></li>
+        <li><xref ref="sec_limits" text="title" /></li>
+        <li><xref ref="sec_derivative_of_a_function" text="title" /></li>
+        <li><xref ref="sec_implicit_functions" text="title" /></li>
+        <li><xref ref="sec_newtons_method" text="title" /></li>
       </ul>
     </p>
   </introduction>
