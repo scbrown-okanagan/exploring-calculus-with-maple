@@ -2,149 +2,152 @@
   <title>Solving Equations in Maple</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:equation_solvers}, pg.
-          <xref ref="chp_equation_solvers"></xref>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_equation_solvers" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      In this activity,
-      students will be asked to assign expressions and then evaluate and manipulate them.
+      In this activity, you will investigate the two main solvers that Maple uses, <c>solve()</c> and <c>fsolve()</c>.
+      In some cases, you may find one is much more helpful than the other. Both commands provide unique benefits 
+      in specific circumstances.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
           Suppose we want to find the <m>x</m>-intercepts of the function
-          <me>
-            f(x) = x^5+x^4-4x^3-3x^2+3x+1
-          </me>.
-          <ol>
-            <li>
-              <p>
-                Assign the function to <m>f(x)</m>.
-                <aside>
-                  <p>
-                    When assigning the function to <m>f(x)</m>,
-                    use the <m>:=</m> operator.
-                  </p>
-                </aside>
-            <idx><h>assignment operator</h></idx>
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot <m>f(x)</m>.
-                Choose an interval for <m>x</m> that shows all <m>x</m>-intercepts.
-                How many do you see?
-              </p>
-            </li>
-            <li>
-              <p>
-                Factor <m>f(x)</m>.
-                Does <m>f(x)</m> factor?
-              </p>
-            </li>
-            <li>
-              <p>
-                Solve <m>f(x)=0</m> using both the <c>solve()</c> and <c>fsolve()</c> commands.
-                <aside>
-                  <p>
-                    With <c>fsolve()</c>,
-                    you can also specify an interval for solutions if you wish to only find a particular solution.
-                    An example of this can be found on <xref ref="eg_fsolve_interval">page</xref>.
-                  </p>
-                </aside>
-            <idx><h>solving equations</h><h>solve</h></idx>
-            <idx><h>solving equations</h><h>fsolve</h></idx>
-              </p>
-            </li>
-          </ol>
+          <me>f(x) = x^5+x^4-4x^3-3x^2+3x+1</me>.
         </p>
-      </li>
-      <li>
-        <p>
-          Solve the quadratic equation <m>x^2+4x+6=0</m> three ways:
-          <ol>
-            <li>
-              <p>
-                Using the quadratic formula by hand.
-                <aside>
-                  <p>
-                    Given a quadratic equation of the form
-                    <m>ax^2+bx+c=0</m>, the quadratic formula is
-                    <me>
-                      x=\dfrac{-b\pm \sqrt{b^2-4ac}}{2a}
-                    </me>.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                Using <c>solve()</c>,
-                followed by evaluating the result as a decimal.
-              </p>
-            </li>
-            <li>
-              <p>
-                Using <c>fsolve()</c>.
-              </p>
-            </li>
-          </ol>
-        </p>
-        Compare your results from (b) and (c).
         <aside>
           <p>
-            In Maple, <m>\sqrt{-1}</m> is denoted as <m>I</m>.
+            With <c>fsolve()</c>,
+            you can also specify an interval for solutions if you wish to only find a particular solution.
+            An example of this can be found in <xref ref="sec_solving_an_equation_of_one_variable" />.
           </p>
         </aside>
-            <idx><h>imaginary</h></idx>
-      </li>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Assign the function to <m>f(x)</m> using the assignment operator <c>:=</c>.
+            <idx><h>assignment operator</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot <m>f(x)</m>, choosing ranges for <m>x</m> and <m>y</m> so that you can clearly see all five
+            <m>x</m>-intercepts on the graph (you may need to adjust each a few times).
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Try factoring <m>f(x)</m> to see if it is factorable. Does this method work for finding the <m>x</m>-intercepts?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Try solving <m>f(x)=0</m> using the <c>solve()</c> command. Maple will attempt to give exact values of all five roots.
+            Note that for challenging equations such as this one, the output may be more symbollic than you may prefer.
+            <idx><h>solving equations</h><h>solve</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Finally, try solving <m>f(x)=0</m> using the <c>fsolve()</c> command. Maple will only attempt to give numerical approximations
+            of all five roots. The number of digits given will depend on the current value assigned to <c>Digits</c>.
+            <idx><h>solving equations</h><h>fsolve</h></idx>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the curves <m>y=x^2</m> and <m>y=\frac{3}{x}</m>.
-          <aside>
-            <p>
-              An example that shows how to find the intersection point of two functions is given on <xref ref="subsec_functionintersection">page</xref>.
-            </p>
-          </aside>
-          <ol>
-            <li>
-              <p>
-                Find the point <m>(x,y)</m> where the two curves intersect.
-                Try using both the <c>solve()</c> and <c>fsolve()</c> commands.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the two curves on the same set of axes to verify that your intersection point from part (a) is correct.
-                <aside>
-                  <p>
-                    When plotting equations of the form <m>y=f(x)</m> using the <c>plot()</c> command,
-                    we never include the <m>y=</m>.
-                  </p>
-                </aside>
-                <aside>
-                  <p>
-                    When multiple curves are plotted on the same set of axes,
-                    it is a good practice to specify the colour of each one,
-                    so that you can tell them apart.
-                  </p>
-                </aside>
-              </p>
-            </li>
-          </ol>
+          Let's look at how these two solvers behave differently for the quadratic equation <m>x^2+4x+6=0</m>.
         </p>
-      </li>
-    </ol>
-  </subsection>
+        <aside>
+          <p>
+            Using <c>solve()</c> followed by an <c>evalf()</c> command is not the same as using <c>fsolve()</c> is most cases! In this example,
+            one solver behaves quite differently from the other. The fact that one solver gives exact values and other other gives a 
+            numerical approximation is not the only difference.
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            First, start off by solving the quadratic without Maple using the formula
+            <me>x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}</me>
+            to see if the equation has two real roots, one repeated root, or no real roots.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now, solve the quadratic using the <c>solve()</c> command. This solver allows for the display of 
+            imaginary roots using <m>I = \sqrt{-1}</m>.
+            <idx><h>imaginary</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Finally, solve the quadratic using the <c>fsolve()</c> command. Since this solver uses numerical approximation,
+            it will only display real roots (if it finds any).
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          In this exercise, you will be finding the intersection point <c>(x,y)</c> of the curves <m>y=x^2</m> and <m>y=\frac{3}{x}</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot <m>x^2</m> and <m>\frac{3}{x}</m> using a single <c>plot()</c> command and adjust the command as necessary to view both 
+            curves and their intersection point.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            When multiple curves are plotted on the same set of axes, it is a good practice to specify the colour of each one. You can do 
+            this after specifying the ranges for <m>x</m> and <m>y</m>.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use either solver (<c>solve()</c> or <c>fsolve()</c>) to find the <m>x</m>- and <m>y</m>-values of the point of intersection.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            There are multiple ways that you can solve for both! You may start by solving <m>x=\frac{3}{x}</m> to find the <m>x</m>-coordinate
+            first and then use <c>subs()</c> to find <m>y</m>. Instead, you may want to solve a system of equations in one command. An example 
+            is provided in <xref ref="sec_solvingsystemeqs"/>
+          </p>
+        </hint>
+      </task>
+    </exercise>
+  </exercises>
 </section>
