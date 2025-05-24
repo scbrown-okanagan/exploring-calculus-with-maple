@@ -35,13 +35,13 @@
       <introduction>
         <p>
           Limits are quite useful for determining the behavour of a function around a discontinuity.
-          <idx><h>plot</h><h>discontinuities</h></idx>
         </p>
         <aside>
           <p>
             Some versions of Maple may not display discontinutes of certain functions properly. Instead, the graph may even appear 
             as connected with a vertical line! In this case, you may include <c>discont=true</c> as a parameter in the <c>plot( )</c> 
             command to fix the graph output.
+            <idx><h>plot</h><h>discontinuities</h></idx>
           </p>
         </aside>
       </introduction>

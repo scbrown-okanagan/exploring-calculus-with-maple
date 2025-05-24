@@ -2,179 +2,162 @@
   <title>Limits and Asymptotes</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:limits}, pg.
-          <xref ref="chp_limits"></xref>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_limits" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
       It is incorrect to assume that a vertical asymptote is always found whenever the denominator of a rational function is equal to zero.
       Instead, we say that <m>f(x)</m> has a vertical asymptote at <m>x=a</m> whenever
-      <me>
-        \dlim{x}{a^+} f(x) = \infty
-      </me>
-      or
-      <me>
-        \dlim{x}{a^-} f(x) = \infty
-      </me>.
+      <me>\dlim{x}{a^+} f(x) = \infty \text{ or } \dlim{x}{a^-} f(x) = \infty</me>.
     </p>
     <p>
-      In either case, the equation of the vertical asymptote
-          <idx><h>limit</h><h>one-sided</h></idx>
-          <idx><h>asymptote</h><h>vertical</h></idx>
-      is <m>x=a</m>.
+      In either case, the equation of the vertical asymptote is <m>x=a</m>.
+      <idx><h>limit</h><h>one-sided</h></idx>
+      <idx><h>asymptote</h><h>vertical</h></idx>
     </p>
     <p>
-      Similarly, a horizontal asymptote
-          <idx><h>limit</h><h>at infinity</h></idx>
-          <idx><h>asymptote</h><h>horizontal</h></idx>
-      of <m>f(x)</m> is also defined in terms of limits.
+      Similarly, a horizontal asymptote of <m>f(x)</m> is also defined in terms of limits.
       A function <m>f(x)</m> has a horizontal asymptote <m>y = L</m> if
-      <me>
-        \dlim{x}{\infty} f(x) = L
-      </me>
-      or
+      <me>\dlim{x}{\infty} f(x) = L \text{ or } \dlim{x}{-\infty} f(x) = L</me>.
+      In this case, the equation of the horizontal asymptote is <m>y=L</m>.
+      <idx><h>limit</h><h>at infinity</h></idx>
+      <idx><h>asymptote</h><h>horizontal</h></idx>
     </p>
     <aside>
       <p>
-        While a function may have many vertical asymptotes,
-        it cannot have more than two horizontal asymptotes.
+        While a function may have many vertical asymptotes, it cannot have more than two horizontal asymptotes.
       </p>
     </aside>
-    <me>
-      \dlim{x}{-\infty} f(x) = L
-    </me>.
-    <p>
-      In this case,
-      the equation of the horizontal asymptote is <m>y=L</m>.
-    </p>
     <p>
       You will need to use both of these definitions while answering the following exercises.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <idx><h>plot</h><h>discontinuities</h></idx>
-      <aside>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          Some versions of Maple may not properly display graphs of functions that contain vertical asymptotes.
-          In this case,
-          include <c>discont=true</c> as a parameter in the <c>plot( )</c> command.
-          An example of finding vertical asymptotes is given on <xref ref="subsec_vertical_asymptotes">page</xref>.
+          Assign the function <m>f(x)=\dfrac{x-1}{x^2-x-2}</m> using the assignment operator <c>:=</c>.
         </p>
-      </aside>
-      <li>
+        <aside>
+          <p>
+            Some versions of Maple may not display discontinutes of certain functions properly. Instead, the graph may even appear 
+            as connected with a vertical line! In this case, you may include <c>discont=true</c> as a parameter in the <c>plot( )</c> 
+            command to fix the graph output.
+            <idx><h>plot</h><h>discontinuities</h></idx>
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot the function and visually try to determine the <m>x</m>-values of any vertical asymptotes.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the left- and right-hand limits on either side of each value from the previous step using <c>limit()</c> commands. If Maple has 
+            outputted <m>\infty</m> or <m>-\infty</m> as the value of these limits, then you have correctly determined the location of a vertical asymptote.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Plot the function <m>f(x)=\dfrac{x-1}{x^2-x-2}</m> and estimate its vertical asymptotes.
-          Use Maple to prove that your guesses are, in fact,
-          the vertical asymptotes by taking the one-sided limits at those values.
-          Insert a new paragraph and state the equations of the vertical asymptotes.
-          <aside>
-            <p>
-              The <image width="4%" source="images/new_text.png"/> button or Ctrl+Shift+J can be used to create a paragraph after the current line.
-            </p>
-          </aside>
+          Assign the function <m>g(x)=\dfrac{x+2}{x^2-x-6}</m>.
         </p>
-      </li>
-      <li>
-        <p>
-          Consider the function <m>g(x)=\dfrac{x+2}{x^2-x-6}</m>.
-          <ol>
-            <li>
-              <p>
-                Use Maple to factor the denominator of <m>g(x)</m>.
-                <aside>
-                  <p>
-                    If you use Maple's <c>denom()</c><idx><h>mathematical functions</h><h>denominator</h></idx> command and type <c>denom( g(x) )</c>,
-                    you will get the denominator of <m>g(x)</m>.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                By factoring the denominator of <m>g(x)</m>,
-                you might suspect that the vertical asymptotes are <m>x=-2</m> and <m>x=3</m>.
-                Plot <m>g(x)</m> and show why this may or may not be the case.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-      <li>
-        <p>
-          Consider the function <m>h(t)=\dfrac{\sin(t)}{t}</m>.
-            <idx><h>mathematical functions</h><h>sine</h></idx>
-        <ol>
-            <li>
-              <p>
-                Plot
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Factor the denominator of <m>g(x)</m> to determine any values where the function has a discontinuity.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Maple provides a <c>denom()</c> command as a handy way to get the denominator of an expression. By nesting multiple commands, you
+            should not need to retype any part of the function:
+          </p>
+          <console prompt="> ">
+            <input>factor(denom(g(x))</input>
+          </console>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Remember that just because a rational expression has a discontinuity at a certain value, it does not mean that there is a vertical asymptote
+            at that value! Plot <m>g(x)</m> so that both discontinuities are visible. How many asymptotes does <m>g(x)</m> have?
             <idx><h>plot</h></idx>
-                a graph of <m>h(t)</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Use Maple's <c>limit()</c>
-            <idx><h>limit</h></idx>
-                command to find the horizontal asymptote(s) of <m>h(t)</m>.
-                <aside>
-                  <p>
-                    An example of finding horizontal asymptotes<idx><h>asymptote</h><h>horizontal</h></idx> is provided on <xref ref="subsec_horizontal_asymptotes">page</xref>.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                Insert a new paragraph and state the equation(s) of the horizontal asymptote(s).
-            <idx><h>asymptote</h><h>horizontal</h></idx>
-        </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-      <li>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the function <m>Q(x)=\dfrac{\sqrt{2x^2+1}}{3x+5}</m>.
-          <aside>
-            <p>
-              The <c>sqrt()</c><idx><h>mathematical functions</h><h>square root</h></idx> command is used to input a square root.
-            </p>
-          </aside>
-          <ol>
-            <li>
-              <p>
-                Plot a graph of <m>Q(x)</m>.
-                Be sure to specify appropriate intervals for the <m>x</m>-axis and <m>y</m>-axis.
-              </p>
-            </li>
-            <li>
-              <p>
-                Use Maple's <c>limit()</c> command to find the horizontal asymptote(s) of <m>Q(x)</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Insert a new paragraph and state the equation(s) of the horizontal asymptote(s).
-                <aside>
-                  <p>
-                    Maple provides a useful <c>Asymptotes()</c><idx><h>asymptote</h><h>asymptote command</h></idx> command for finding the asymptotes of a function.
-                    Try typing <c>?Asymptotes</c> to learn more.
-                  </p>
-                </aside>
-              </p>
-            </li>
-          </ol>
+          Assign the function <m>h(t)=\dfrac{\sin(t)}{t}</m>.
+          <idx><h>mathematical functions</h><h>sine</h></idx>
         </p>
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot a graph of <m>h(t)</m>. Adjust the bounds for <m>x</m> and for <m>y</m> so that the graph shows a reasonable amount of detail 
+            and gives you and idea of any horizontal asymptotes.
+            <idx><h>plot</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the <c>limit()</c> command to find the horizontal asymptote(s) of <m>h(t)</m>.
+            <idx><h>limit</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            An example of finding horizontal asymptotes<idx><h>asymptote</h><h>horizontal</h></idx> is provided in <xref ref="subsec_horizontal_asymptotes"/>.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Assign the function <m>Q(x)=\dfrac{\sqrt{2x^2+1}}{3x+5}</m>.
+        </p>
+        <aside>
+          <p>
+            Maple provides a useful <c>Asymptotes()</c><idx><h>asymptote</h><h>asymptote command</h></idx> command for finding the asymptotes of a function.
+            Try typing <c>?Asymptotes</c> to learn more on the usage of this command.
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot a graph of <m>Q(x)</m>. Be sure to specify appropriate intervals for the <m>x</m>-axis and <m>y</m>-axis so that
+            you can observe the shape of the function as well as whether it has any horizontal asymptotes.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the <c>limit()</c> command to find the horizontal asymptote(s) of <m>Q(x)</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>
