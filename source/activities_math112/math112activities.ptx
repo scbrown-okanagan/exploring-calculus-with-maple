@@ -15,20 +15,20 @@
       </ul>
     </p>
   </introduction>
-  <xi:include  href="tut_creating_a_maple_worksheet.ptx"/>
-  <xi:include  href="tut_basics.ptx"/>
-  <xi:include  href="tut_assignment_operator_and_creating_functions.ptx"/>
-  <xi:include  href="tut_transformations_of_graphs.ptx"/>
-  <xi:include  href="tut_solving_equations_in_maple.ptx"/>
-  <xi:include  href="tut_limits.ptx"/>
-  <xi:include  href="tut_limits_and_asymptotes.ptx"/>
-  <xi:include  href="tut_shrinking_circle_problem.ptx"/>
-  <xi:include  href="tut_derivative_of_a_function.ptx"/>
-  <xi:include  href="tut_tangent_lines.ptx"/>
-  <xi:include  href="tut_building_a_roller_coaster.ptx"/>
-  <xi:include  href="tut_implicit_functions.ptx"/>
-  <xi:include  href="tut_orthogonal_curves.ptx"/>
-  <xi:include  href="tut_newtons_method.ptx"/>
-  <xi:include  href="tut_shape_of_a_can.ptx"/>
-  <xi:include  href="tut_sweet_16.ptx"/>
+  <xi:include  href="act_creating_a_maple_worksheet.ptx"/>
+  <xi:include  href="act_basics.ptx"/>
+  <xi:include  href="act_assignment_operator_and_creating_functions.ptx"/>
+  <xi:include  href="act_transformations_of_graphs.ptx"/>
+  <xi:include  href="act_solving_equations_in_maple.ptx"/>
+  <xi:include  href="act_limits.ptx"/>
+  <xi:include  href="act_limits_and_asymptotes.ptx"/>
+  <xi:include  href="act_shrinking_circle_problem.ptx"/>
+  <xi:include  href="act_derivative_of_a_function.ptx"/>
+  <xi:include  href="act_tangent_lines.ptx"/>
+  <xi:include  href="act_building_a_roller_coaster.ptx"/>
+  <xi:include  href="act_implicit_functions.ptx"/>
+  <xi:include  href="act_orthogonal_curves.ptx"/>
+  <xi:include  href="act_newtons_method.ptx"/>
+  <xi:include  href="act_shape_of_a_can.ptx"/>
+  <xi:include  href="act_sweet_16.ptx"/>
 </chapter>
