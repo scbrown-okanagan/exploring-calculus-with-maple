@@ -1,0 +1,158 @@
+<section xml:id="sec_shrinking_circle_problem">
+  <title>A Shrinking Circle Problem</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_equation_solvers" text="title" /></li>
+        <li><xref ref="chp_limits" text="title" /></li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Limits may seem trivial when you first learn them, but they are fundamental building blocks in calculus.
+      They are used to explain terms like <q>infinitesimally small</q> and <q>infinitely large</q>. It may be interesting 
+      to know that they can also be used in applied problems. This activity will explore a geometry problem and will solve 
+      it using limits, instead of an elementary geometric approach.
+    </p>
+    <p>
+      <xref ref="fig_applied_limit">Figure</xref> below shows two circles:
+      <ul>
+        <li>
+          <m>C_1</m>, centred at the point <m>(1,0)</m> with radius <m>1</m> and equation
+          <me>(x-1)^2+y^2=1</me>.
+        </li>
+        <li>
+          <m>C_2</m>, centred at the origin with radius <m>r</m> and equation
+          <me>x^2+y^2=r^2</me>.
+        </li>
+      </ul>
+    </p>
+    <figure xml:id="fig_applied_limit">
+      <caption>What happens to the point <m>R</m> as the radius of the thicker circle <m>C_2</m> shrinks?</caption>
+      <image>
+        <latex-image>
+          <![CDATA[\begin{tikzpicture}\begin{axis}[
+          width=0.8\linewidth,
+          axis lines=middle,
+          xlabel={\(x\)},
+          ylabel={\(y\)},
+          xlabel style={below right},
+          ylabel style={above left},
+          xmin=-2, xmax=4, xtick={-1,0,1,2,3},
+          ymin=-2, ymax=2, ytick={-1,0,1},
+          axis equal image
+          ]
+          \addplot[domain=-2:4] {1.500000000-.4514162296*x};
+          \addplot[mark=*] coordinates {(0,1.5)} node [above right] {\(P (0,r)\)};
+          \addplot[mark=*] coordinates {(1.125000000,0.9921567417)} node [above right] {\(Q\)};
+          \addplot[mark=*] coordinates {(3.322875656,0)} node [above right] {\(R\)};
+          \draw(axis cs:0,0) [very thick, red] circle[radius=1.5];
+          \draw(axis cs:-0.8,0.8) node {\(C_2\)};
+          \draw(axis cs:1,0) circle[radius=1];
+          \draw(axis cs:0.5,0.5) node {\(C_1\)};
+          \end{axis}\end{tikzpicture}]]>
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      If we define <m>P</m> as the point <m>(0,r)</m> at the top of the circle <m>C_2</m>,
+      and <m>Q</m> as the upper point of intersection of the two circles,
+      then we can construct the line <m>PQ</m> and see that it crosses the <m>x</m>-axis.
+      Let <m>R</m> be the <m>x</m>-intercept of the line <m>PQ</m>.
+    </p>
+    <aside>
+      <p>
+        Note that neither <m>P</m> nor <m>Q</m> is fixed as the radius of <m>C_2</m> shrinks.
+      </p>
+    </aside>
+    <p>
+      Now, begin to shrink the radius of circle <m>C_2</m>; that is, let <m>r\rightarrow 0^{+}</m>.
+      What happens to the point <m>R</m> as <m>C_2</m> shrinks?
+    </p>
+  </subsection>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Assign names to the equations of both circles, such as <c>C1</c> and <c>C2</c>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Find the point of intersection of <m>C_1</m> and <m>C_2</m> in quadrant I. These are the coordinates of <m>Q</m> 
+          and should be expressions of <m>r</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          You can find the point of intersection with a single <c>solve()</c> command, using both equations and solving for 
+          <m>x</m> and <m>y</m> at once. See <xref ref="sec_solvingsystemeqs"/> for an example.
+        </p>
+      </hint>
+      <hint>
+        <p>
+          You may need to include the optional parameter <c>explicit=true</c> to avoid the <em>RootOf()</em> output when using the
+          <c>solve()</c> command.
+          <idx><h>solving equations</h><h>removing <c>RootOf()</c></h></idx>
+        </p>
+      </hint>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Now that you have the coordinates of two points, <m>P = (0,r)</m> and <m>Q</m> (from the previous exercise), you can 
+          construct the equation of the line <m>PQ</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find the slope of the line <m>PQ</m> using the slope equation
+            <me>m = \frac{\Delta y}{\Delta x}</me>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Using the fact that the <m>y</m>-intercept is known to be <m>(0,r)</m>, assign the equation of the line
+            <me>L(x) = m x + r</me>.
+            <idx><h>lines</h><h>slope-intercept form</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Make sure to include multiplication or a space between two symbols, <m>m</m> and <m>x</m>.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Find the <m>x</m>-coordinate of point <m>R</m> by solving <m>L(x)=0</m> (the <m>x</m>-intercept of this line). 
+          This coordinate should also be an expression involving <m>r</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Finally, you can determine what happens as the red circle shrinks. Determine the limit of <m>R</m> as <m>r \to 0^+</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Make sure to use a right-hand limit when using the <c>limit()</c> command.
+          <idx><h>limit</h></idx>
+        </p>
+      </hint>
+    </exercise>
+  </exercises>
+</section>

@@ -22,7 +22,7 @@
   <xi:include  href="tut_solving_equations_in_maple.ptx"/>
   <xi:include  href="tut_limits.ptx"/>
   <xi:include  href="tut_limits_and_asymptotes.ptx"/>
-  <xi:include  href="tut_applied_limit_problem.ptx"/>
+  <xi:include  href="tut_shrinking_circle_problem.ptx"/>
   <xi:include  href="tut_derivative_of_a_function.ptx"/>
   <xi:include  href="tut_tangent_lines.ptx"/>
   <xi:include  href="tut_building_a_roller_coaster.ptx"/>
