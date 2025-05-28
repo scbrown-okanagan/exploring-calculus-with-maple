@@ -2,178 +2,184 @@
   <title>Implicit Functions</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:equation_solvers}, pg.
-          <xref ref="chp_equation_solvers"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:implicit_functions}, pg.
-          <xref ref="chp_implicit_functions"></xref>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_equation_solvers" text="title" /></li>
+        <li><xref ref="chp_implicit_functions" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      In this activity, we will learn how to plot implicit functions,
-      as well as compute their derivatives.
+      In this activity, you will learn how to plot implicit functions and compute their derivatives. You will need to ensure that 
+      the <c>plots</c> package is loaded using the <c>with()</c> command. It is typically a good idea to include packages at the start
+      of your Maple worksheet. If you close and reopen your worksheet, you will need to run the command to load packages again.
     </p>
-    <aside>
-      <p>
-        There are a few important things to remember about the <c>implicitplot()</c> command during this activity:
-        <ul>
-          <li>
-            <p>
-              The <c>plots</c> package needs to be loaded using the <c>with()</c> command.
-            </p>
-          </li>
-          <li>
-            <p>
-              Some versions of Maple may not produce a smooth plot.
-              In this case,
-              include either <c>numpoints=30000</c> or <c>grid=[250,250]</c> as a parameter.
-            </p>
-          </li>
-          <li>
-            <p>
-              The optional <c>scaling=constrained</c> parameter can be included to enforce <m>1:1</m> scaling.
-              Alternatively,
-              the optional scaling can be performed by clicking on the graph and then clicking on the <m>1:1</m> button in the plot toolbar at the top of the page.
-            </p>
-          </li>
-          <li>
-            <p>
-              If you are plotting multiple graphs on the same set of axes,
-              it is a good idea to specify plot colours.
-            </p>
-          </li>
-        </ul>
-      </p>
-    </aside>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <aside>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          A similar example is described on <xref ref="subsec_implicittanline">page</xref>.
+          The equation of a circle with radius <m>r</m> and centre <m>(h,k)</m> is given by
+          <me>(x-h)^2+(y-k)^2=r^2</me>.
         </p>
-      </aside>
-      <li xml:id="Mathematical_function_Circle">
         <p>
-          Consider the circle centred at the origin with radius <m>5</m>.
-          <aside>
-            <p>
-              The equation of a circle that is centred at the point <m>(a,b)</m> and has radius <m>r</m> is
-              <me>
-                (x-a)^2+(y-b)^2=r^2
-              </me>.
-            </p>
-          </aside>
-          <ol>
-            <li>
-              <p>
-                Define the equation for this circle and plot it.
-                Ensure that the circle appears smooth.
-              </p>
-            </li>
-            <li>
-              <p>
-                Find the <m>y</m>-coordinates of the points when <m>x=2</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Compute the derivative, <m>\frac{dy}{dx}</m>,
-    <idx><h>derivative</h></idx>
-                of the circle.
-              </p>
-            </li>
-            <li>
-              <p>
-                Find the slopes of the lines tangent to the circle at <m>x=2</m>.
-                <aside>
-                  <p>
-                    Recall that the tangent line<idx><h>lines</h><h>tangent line</h></idx> equation to the curve at the point <m>(x_0,y_0)</m> is
-                    <me>
-                      y=m\cdot(x-x_0)+y_0
-                    </me>,
-                    where <m>m=\frac{dy}{dx}\Bigr|_{(x_0,y_0)}</m>.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                Define the equations of the tangent lines to the curve at both points when <m>x=2</m>.
-                Be sure to assign different names for each tangent line and include <m>y=</m> in the equations of the lines so that the <c>implicitplot()</c><idx><h>implicit functions</h><h>implicitplot</h></idx> command can plot them.
-                Expand each of these tangent line equations so that they are written in the form <m>y=mx+b</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the circle and the two tangent lines.
-              </p>
-            </li>
-          </ol>
+          Start by assigning the equation of a circle with radius <m>5</m> and centre at the origin to the name <c>circle</c>.
+          In the following exercise, you will be determining the equations of two tangent lines to this circle and plotting them with the circle. 
+          A very similar example may be found in <xref ref="subsec_implicittanline"/>.
         </p>
-        <aside>
+      </introduction>
+      <task>
+        <statement>
           <p>
-            Do not forget to include multiplication between variables.
+            Start by plotting this circle using the <c>implicitplot()</c> command. Make sure that the entire circle is visible and 
+            appears smooth.
+            <idx><h>implicit functions</h><h>implicitplot</h></idx>
           </p>
-        </aside>
-      </li>
-      <li>
+        </statement>
+        <hint>
+          <p>
+            When using <c>implicitplot</c> on some equations, the graph may not always appear smooth. This was especially common in earlier editions of Maple.
+            If this is ever the case, you may include either <c>numpoints=30000</c> or <c>grid=[250,250]</c> as a parameter to increase the number of plot points.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            There should be exactly two points on this circle where <m>x=2</m>. Substitute this value of <m>x</m> into <c>circle</c> and solve for the two 
+            <m>y</m>-coordinates. You may wish to assign these values for the next steps.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            If you are assigning the output of a <c>solve()</c> or <c>fsolve()</c> command to something like <c>yCoords</c> and there are multiple solutions, then 
+            you may use <c>yCoords[1]</c> and <c>yCoords[2]</c> as the first and second solution, respectively.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the <c>implicitdiff()</c> command to assign the derivative, <m>\frac{dy}{dx}</m>, of the circle to a name such as <c>dydx</c>.
+            Then, evaluate this expression at the two points where <m>x=2</m> to obtain two slopes.
+            <idx><h>derivative</h><h>implicit</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You will need to substitute both an <m>x</m>-coordinate and a <m>y</m>-coordinate into the derivative for each point when using the 
+            <c>subs()</c> command.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now, determine the equations of the two tangent lines at these points and assign them to <c>line1</c> and <c>line2</c>. Make sure to include the 
+            <c>y=</c> in both equations, since the <c>implicitplot()</c> requires each curve to be given as an equation.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Recall that the tangent line<idx><h>lines</h><h>tangent line</h></idx> equation to the curve at the point <m>(x_0,y_0)</m> is
+            <me>y=m\cdot(x-x_0)+y_0</me>,
+            where <m>m=\frac{dy}{dx}\Bigr|_{(x_0,y_0)}</m>.
+          </p>
+        </hint>
+        <hint>
+          <p>
+            Do not forget to include multiplication between variables and brackets to indicate multiplication instead of function notation.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the circle and the two tangent lines.
+            <idx><h>implicit functions</h><h>implicitplot</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The optional <c>scaling=constrained</c> parameter can be included to enforce <m>1:1</m> scaling. Alternatively, the optional scaling can be performed 
+            by clicking on the graph and then clicking on the <m>1:1</m> button in the plot toolbar at the top of the page.
+          </p>
+        </hint>
+        <hint>
+          <p>
+            If you are plotting multiple graphs on the same set of axes, it is a good idea to specify plot colours.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the Folium of Descartes:
-          <m>x^3 + y^3 = 6xy</m>.
-          <ol>
-            <li>
-              <p>
-                Define this curve and plot it.
-                Ensure the curve appears smooth.
-              </p>
-            </li>
-            <li>
-              <p>
-                Compute the derivative, <m>\frac{dy}{dx}</m>.
-                <aside>
-                  <p>
-                    In exercise (c),
-                    try using the <c>solve()</c> command first,
-                    then change it to <c>fsolve()</c> if necessary.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                Find the equations of each of the tangent lines at the points where <m>x=1</m>.
-                Plot the Folium of Descartes and the tangent lines on the same graph.
-                <aside>
-                  <p>
-                    To solve part (d),
-                    you need to remember that the slope is zero when the tangent line is horizontal.
-            <idx><h>lines</h><h>horizontal tangent line</h></idx>
-        The equation <m>\frac{dy}{dx} = 0</m> and the equation of the curve itself form a system of equations that can be solved by Maple to give the <m>x</m> and <m>y</m> value of each point.
-                    An example of solving a system of equations can be found on <xref ref="sec_solvingsystemeqs">page</xref>.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                Find any points on the Folium of Descartes where the tangent lines are horizontal.
-              </p>
-            </li>
-          </ol>
+          In this exercise, you will investigate the equations of tangent lines to the Folium of Descartes, given by the equation
+          <me>x^3 + y^3 = 6xy</me>.
         </p>
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Assign the equation of this curve to <c>descartes</c> and plot it. You may need to adjust the range of your graph to get a good idea of the shape 
+            of this curve. You should be able to visibly see three points on the curve where <m>x=1</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Compute the derivative, <m>\frac{dy}{dx}</m> and optionally, assign this to a name such as <c>dydx2</c>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            There are three points on the Foilum of Descartes where <m>x=1</m>. Determine the equations of the tangent lines at these three points. Then, plot 
+            the curve and all three lines on the same graph.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            It is a good idea to assign these equations to unused names such as <c>line3</c>, <c>line4</c>, and <c>line5</c> so that they don't get confused 
+            with your tangent lines in the previous exercise.
+          </p>
+        </hint>
+        <hint>
+          <p>
+            Depending on the complexity of the equation of the curve, you may find that using <c>fsolve()</c> to get numerical values for the <m>y</m>-coordinates
+            is a better option.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Looking at the graph of the Folium of Descartes, you should notice that there are multiple points where the tangent line is horizontal. Solve for 
+            these points.
+            <idx><h>lines</h><h>horizontal tangent line</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Recall that the a curve has a horizontal tangent line when <m>\frac{dy}{dx} = 0</m>.
+          </p>
+        </hint>
+        <hint>
+          <p>
+            In order to solve for both <m>x</m> and <m>y</m>, you will need to solve a system of two equations. One equation is that the derivative must equal zero,
+            but the second equation is the curve itself.
+          </p>
+          <p>
+            An example of solving a system of equations can be found in <xref ref="sec_solvingsystemeqs"/>.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+  </exercises>
 </section>
