@@ -8,8 +8,9 @@
     <ul>
       <li>
         <p>
-          Place a new execution group after the current line with the <image width="5%" source="images/new_input.png"/> button.
+          Place a new execution group after the current line with the button in the top insert menu.
         </p>
+        <image width="5%" source="images/new_input.png"/>
       </li>
       <li>
         <p>
@@ -24,27 +25,19 @@
     </ul>
   </p>
   <p>
-    Maple input is preceded by the <m>></m> character
-    (sometimes called a "carrot").
-    Maple output is displayed in the centre of the following line.
+    Maple input is preceded by the <m>></m> character (sometimes called a "carrot"). Maple output is displayed in the centre of the following line.
   </p>
   <aside>
     <image width="50%" source="images/InsertInput.png"/>
   </aside>
-  <p>
-    <console prompt="> ">
-      <input>2 + 2;</input>
-    </console>
-    <me>
-      4
-    </me>
-    <console prompt="> ">
-      <input>8 / 2;</input>
-    </console>
-    <me>
-      4
-    </me>
-  </p>
+  <console prompt="> ">
+    <input>2 + 2;</input>
+  </console>
+  <p><me>4</me></p>
+  <console prompt="> ">
+    <input>8 / 2;</input>
+  </console>  
+  <p><me>4</me></p>
   <p>
     If at any point you wish to correct a previous Maple input line,
     you may simply go back to that line and modify it.

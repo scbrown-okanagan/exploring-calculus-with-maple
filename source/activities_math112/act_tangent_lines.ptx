@@ -2,152 +2,135 @@
   <title>Tangent Lines</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:assignment_operator}, pg.
-          <xref ref="chp_assignment_operator"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:equation_solvers}, pg.
-          <xref ref="chp_equation_solvers"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:derivative}, pg.
-          <xref ref="chp_derivative"></xref>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_assignment_operator" text="title" /></li>
+        <li><xref ref="chp_equation_solvers" text="title" /></li>
+        <li><xref ref="chp_derivative" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      In this activity,
-      students will find tangent lines to various functions,
-      and then will display the tangent lines and function on the same graph.
+      In this activity, you will calculate tangent lines to functions, at various points and graph them along with the function. You 
+      will also find points on a function where the tangent line has a specific slope.
     </p>
     <p>
-      To find the tangent line to a function <m>f(x)</m> at <m>x = a</m>,
-      two pieces of information are needed:
+      To find the tangent line to a function <m>f(x)</m> at <m>x = a</m>, two pieces of information are needed:
       <ul>
-        <li>
-          <p>
-            The point, <m>(a, f(a))</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            The slope of the tangent line, <m>f'(a)</m>.
-          </p>
-        </li>
+        <li>The point, <m>(a, f(a))</m>.</li>
+        <li>The slope of the tangent line, <m>f'(a)</m>.</li>
       </ul>
     </p>
     <aside>
       <p>
-        A detailed example of finding and plotting tangent lines is described on <xref ref="subsec_equation_of_tangent_line">page</xref>.
+        A detailed example of finding and plotting tangent lines is described in <xref ref="subsec_equation_of_tangent_line"/>.
       </p>
     </aside>
     <p>
-      Plugging these two pieces of information into the point-slope form of a line gives the following equation.
+      Substituting these two pieces of information into the point-slope form of a line gives the following equation.
       <md>
         <mrow>y - y_0 \amp = m_{tan} \cdot (x-x_0) \nonumber</mrow>
         <mrow>y - f(a) \amp = f'(a) \cdot (x-a) \nonumber</mrow>
         <mrow xml:id="eq_tanline" number="yes">y \amp = f'(a) \cdot (x-a) + f(a)</mrow>
       </md>
-    </p>
-    <p>
-          <idx><h>lines</h><h>tangent line</h></idx>
-          <idx><h>lines</h><h>slope of a tangent line</h></idx>
-      We will use equation <xref ref="eq_tanline"/> for the following exercises.
+      <idx><h>lines</h><h>tangent line</h></idx>
+      <idx><h>lines</h><h>slope of a tangent line</h></idx>
+      You will need to use the resulting equation <xref ref="eq_tanline"/> in the following exercises.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          Consider the function <m>f(x) = \sqrt{9 - x}</m>.
-          <ol>
-            <aside>
-              <p>
-                Be sure to choose different names for each tangent line.
-                If you assign a new expression to an old name,
-                the new expression will overwrite what was previously assigned.
-              </p>
-            </aside>
-            <li>
-              <p>
-                Define the equations of the tangent lines at <m>x=0</m> and <m>x=5</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot <m>f(x)</m> and the two tangent lines on the same axes.
+          Assign the function <m>f(x) = \sqrt{9 - x}</m> using the assignment operator <c>:=</c>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Determine the equations of the tangent lines at <m>x=0</m> and <m>x=5</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Be sure to assign different names for each tangent line, such as <c>line1</c> and <c>line2</c>. You will unique names 
+            so that you can plot each line as well as <m>f(x)</m> in the next step.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot <m>f(x)</m> and the two tangent lines using a single <c>plot()</c> command.
             <idx><h>plot</h><h>multiple functions</h></idx>
-        <aside>
-                  <p>
-                    Since you are plotting more than one tangent line on the same axes,
-                    it is a good idea to specify plot colours.
-                  </p>
-                </aside>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-      <li>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Since you are plotting more than one tangent line on the same axes, it is a good idea to specify plot colours. An example 
+            can be found in <xref ref="sec_plotting_multiple_functions"/>.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the function <m>g(x)=x{ e}^{x}</m>.
-            <idx><h>mathematical functions</h><h>exponential</h></idx>
-        <aside>
-            <p>
-              In Maple, <c>exp(x)</c> is used to denote the exponential function,
-              <m>{ e}^x</m>.
-            </p>
-          </aside>
-            <idx><h>mathematical functions</h><h>exponential</h></idx>
-          <ol>
-            <li>
-              <p>
-                Define the equations of the tangent lines at <m>x=1</m> and <m>x=-1</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot <m>g(x)</m> and the two tangent lines on the same axes.
-              </p>
-            </li>
-          </ol>
+          Assign the function <m>g(x)=x{ e}^{x}</m>.
         </p>
-      </li>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Determine the equations of the tangent lines at <m>x=1</m> and <m>x=-1</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Make sure that you have properly defined your function using either <c>exp()</c> as the exponential function or using 
+            the <m>e</m> from the palettes toolbar.
+            <idx><h>mathematical functions</h><h>exponential</h></idx>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot <m>g(x)</m> and the two tangent lines using a single <c>plot()</c> command.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the function <m>h(x)=x^3-x^2-9x+9</m>.
-          <ol>
-            <li>
-              <p>
-                Find the <m>x</m>-values where the function has tangent lines with slope equal to <m>1</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Find the <m>x</m>-values where the function has horizontal tangent lines.
+          Assign the function <m>h(x)=x^3-x^2-9x+9</m>. In this exercise, you will need to solve for values of <m>x</m> where the 
+          tangent line has a specified slope.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Determine the <m>x</m>-values where the function has tangent lines with slope equal to <m>1</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the <m>x</m>-values where the function has horizontal tangent lines.
             <idx><h>lines</h><h>horizontal tangent line</h></idx>
-        <aside>
-                  <p>
-                    To solve part (b),
-                    you need to remember what the slope of a horizontal tangent line is.
-                  </p>
-                </aside>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-    </ol>
-  </subsection>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You'll need to remember what the slope of a horizontal tangent line is to solve for <m>x</m>.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+  </exercises>
 </section>
