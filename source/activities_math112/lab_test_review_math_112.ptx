@@ -3,268 +3,333 @@
   <p>
     The following exercises are provided as examples of potential questions on the final lab test at the end of the semester.
   </p>
-  <p>
-    \subsection{The Basics}
-  </p>
-  <ol>
-    <li>
-      <p>
-        Evaluate <m>\sqrt[3]{\dfrac{5.0^2 - 3.0}{1.5 + 9.0^2}}</m> to <m>15</m> digits.
-      </p>
-    </li>
-    <li>
-      <p>
-        Give the numerical value of <m>{ e}^2</m> to <m>15</m> digits.
-      </p>
-    </li>
-    <li>
-      <p>
-        Factor the given cubic to find its roots.
-        <me>
-          2x^3 - 7x^2 + 7x -2
-        </me>
-      </p>
-    </li>
-    <li>
-      <p>
-        Find the point of intersection of the curves
-        <m>y = { e}^x</m> and <m>y = \frac{1}{x}</m>.
-        Give both the <m>x</m>- and <m>y</m>-coordinates to <m>15</m> digits. \subsection{Limits}
-          <idx><h>limit</h></idx>
-      </p>
-    </li>
-    <li>
-      <p>
-        Find the left- and right-hand limits of
-        <me>
-          \dfrac{x^2 |x-2|}{x-2}
-        </me>
-        at <m>x=2</m>.
-        Does the two-sided limit at <m>x=2</m> exist?
-        Explain.
-      </p>
-    </li>
-    <li>
-      <p>
-        Consider the function
-        <me>
-          f(x)=\frac{\sin(x)}{x^2+1}+\arctan(x)
-        </me>.
-        Evaluate the following limits to <m>15</m> digits.
-      </p>
-      <ol>
-        <li>
+  <exercises>
+    <subexercises>
+      <title>The Basics</title>
+      <exercise>
+        <statement>
           <p>
-            <m>\dlim{x}{\infty} f(x)</m>
+            Evaluate <m>\sqrt[3]{\dfrac{5.0^2 - 3.0}{1.5 + 9.0^2}}</m> to <m>15</m> digits.
+            <idx><h>evalf</h></idx>
           </p>
-        </li>
-        <li>
+        </statement>
+        <solution>
           <p>
-            <m>\dlim{x}{-\infty} f(x)</m>
+            <m>0.643659589737087</m>
           </p>
-        </li>
-      </ol>
-      \subsection{Vertical and Horizontal Asymptotes}
-          <idx><h>asymptote</h></idx>
-    </li>
-    <li>
-      <p>
-        Sketch the plot of <m>y=\dfrac{ \sqrt{4x^2 + 1} }{2x - 1}</m> and state the equations of vertical and horizontal asymptotes.
-      </p>
-    </li>
-    <li>
-      <p>
-        Find the horizontal asymptote of
-        <m>\dfrac{5x^3 - 2x + 1}{1 - 8x^3}</m>. \subsection{The Derivative of a Function}
-          <idx><h>derivative</h></idx>
-      </p>
-    </li>
-    <li>
-      <p>
-        Consider the function
-        <me>
-          f(x) = (1-x^2) { e}^{-x^2/2}
-        </me>.
-        Find all critical numbers of <m>f</m> to <m>15</m> digits.
-      </p>
-    </li>
-    <li>
-      <p>
-        Consider the function
-        <me>
-          g(x) = \frac{x+2}{3\sqrt{x^2+5}}
-        </me>.
-        <ol>
-          <li>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Give the numerical value of <m>{ e}^2</m> to <m>15</m> digits.
+            <idx><h>evalf</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>7.38905609893068</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Factor the given cubic to find its roots.
+            <me>2x^3 - 7x^2 + 7x -2</me>
+            <idx><h>factor</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>\left(x-1\right) \left(x-2\right) \left(2 x-1\right)</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Find the point of intersection of the curves <m>y = { e}^x</m> and <m>y = \frac{1}{x}</m>.
+            Give both the <m>x</m>- and <m>y</m>-coordinates to <m>15</m> digits.
+            <idx><h>solving equations</h><h>solve</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>x= 0.567143290409784, y= 1.76322283435190</m>
+          </p>
+        </solution>
+      </exercise>
+    </subexercises>
+
+    <subexercises>
+      <title>Limits</title>
+      <exercise>
+        <statement>
+          <p>
+            Find the left- and right-hand limits of
+            <me>\dfrac{x^2 |x-2|}{x-2}</me>
+            at <m>x=2</m>. Does the two-sided limit at <m>x=2</m> exist? Explain.
+            <idx><h>limit</h><h>one-sided</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>4</m> from the right, <m>-4</m> from the left.
+            No, the two-sided limit at <m>x = 2</m> does not exist because the left and right limits are different.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <introduction>
+          <p>
+            Consider the function
+            <me>f(x)=\frac{\sin(x)}{x^2+1}+\arctan(x)</me>.
+            Evaluate the following limits to <m>15</m> digits.
+            <idx><h>limit</h></idx>
+          </p>
+        </introduction>
+        <task>
+          <statement>
             <p>
-              Plot <m>g(x)</m>, <m>g'(x)</m>,
-              and <m>g''(x)</m> on the same axes.
+              <m>\dlim{x}{\infty} f(x)</m>
             </p>
-          </li>
-          <li>
+          </statement>
+          <solution>
+            <p>
+              <m>1.57079632679490</m>
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <m>\dlim{x}{-\infty} f(x)</m>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              <m>-1.57079632679490</m>
+            </p>
+          </solution>
+        </task>
+      </exercise>
+    </subexercises>
+
+    <subexercises>
+      <title>Vertical and Horizontal Asymptotes</title>
+      <exercise>
+        <statement>
+          <p>
+            Sketch the plot of <m>y=\dfrac{ \sqrt{4x^2 + 1} }{2x - 1}</m> and state the equations of vertical and horizontal asymptotes.
+            <idx><h>asymptote</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Vertical asymptote: <m>x=\frac{1}{2}</m>; Horizontal asymptotes: <m>y=\pm 1</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Find the horizontal asymptote of
+            <m>\dfrac{5x^3 - 2x + 1}{1 - 8x^3}</m>.
+            <idx><h>asymptote</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>y=-\frac{5}{8}</m>
+          </p>
+        </solution>
+      </exercise>
+    </subexercises>
+
+    <subexercises>
+      <title>The Derivative of a Function</title>
+      <exercise>
+        <statement>
+          <p>
+            Consider the function
+            <me>f(x) = (1-x^2) { e}^{-x^2/2}</me>.
+            Find all critical numbers of <m>f</m> to <m>15</m> digits.
+            <idx><h>shapes of curves</h><h>critical number</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>0, 1.73205080756888,- 1.73205080756888</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <introduction>
+          <p>
+            Consider the function
+            <me>g(x) = \frac{x+2}{3\sqrt{x^2+5}}</me>.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Plot <m>g(x)</m>, <m>g'(x)</m>, and <m>g''(x)</m> on the same axes.
+              <idx><h>derivative</h></idx>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
             <p>
               Find the maximum value of <m>g(x)</m>.
+              <idx><h>shapes of curves</h><h>maximum</h></idx>
             </p>
-          </li>
-          <li>
+          </statement>
+          <solution>
+            <p>
+              Maximum value of <m>0.447213595499958</m> at <m>x=2.5</m>.              
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
             <p>
               Find the maximum value of <m>g'(x)</m>.
+              <idx><h>shapes of curves</h><h>maximum</h></idx>
             </p>
-          </li>
-        </ol>
-      </p>
-    </li>
-    <li>
-      <p>
-        The height in metres of a ball thrown from the top of a building is given by the function
-        <me>
-          h(t) = -9.80t^2 + 5.00t + 40
-        </me>.
-        <ol>
-          <li>
+          </statement>
+          <solution>
+            <p>
+              Maximum value of <m>0.166566474658809</m> at <m>x=-0.57767710879358</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+      <exercise>
+        <introduction>
+          <p>
+            The height in metres of a ball thrown from the top of a building is given by the function
+            <me>h(t) = -9.80t^2 + 5.00t + 40</me>.
+          </p>
+        </introduction>
+        <task>
+          <statement>
             <p>
               Find the velocity of the ball at <m>t=2</m> seconds.
+              <idx><h>derivative</h></idx>
             </p>
-          </li>
-          <li>
+          </statement>
+          <solution>
+            <p>
+              <m>- 34.20</m>
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
             <p>
               At what time does the ball reach its maximum height?
+              <idx><h>shapes of curves</h><h>critical number</h></idx>
             </p>
-          </li>
-          <li>
+          </statement>
+          <solution>
+            <p>
+              <m>t=0.255102040816327</m> seconds
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
             <p>
               What is the maximum height of the ball?
+              <idx><h>shapes of curves</h><h>maximum</h></idx>
             </p>
-          </li>
-        </ol>
-      </p>
-      \subsection{Tangent Lines}
-          <idx><h>lines</h></idx>
-    </li>
-    <li>
-      <p>
-        Given the function
-        <me>
-          f(x) = { e}^x \cos x
-        </me>,
-        find the equation of the tangent line to <m>f(x)</m> at <m>x=1</m> in the form <m>y = mx + b</m>.
-      </p>
-    </li>
-    <li>
-      <p>
-        Given the function
-        <me>
-          g(x) = x^{\ln x}
-        </me>,
-        find the equation of the tangent line to <m>g(x)</m> at <m>x=5</m> in the form
-        <m>y = mx + b</m>.  \subsection{Implicit Functions}
-          <idx><h>implicit functions</h></idx>
-      </p>
-    </li>
-    <li>
-      <p>
-        Given the Folium of Descartes,
-        <me>
-          x^3 + y^3 = 6xy
-        </me>,
-        find the slopes of the tangent lines to the curve at <m>x=2</m>.
-      </p>
-    </li>
-    <li>
-      <p>
-        Find all points on the curve
-        <me>
-          (x^2+y^2)^2 = 16(y^2-x^2)
-        </me>
-        where the slope of the tangent line to the curve is equal to <m>4</m>.
-        <em>(Hint: Use the <c>fsolve()</c> command over different intervals to find the required points.)</em>
-      </p>
-    </li>
-  </ol>
-  <p>
-    \subsection{Solutions}
-    <ol>
-      <li>
-        <p>
-          <m>0.643659589737087</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>7.38905609893068</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>\left(x-1\right) \left(x-2\right) \left(2 x-1\right)</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>x= 0.567143290409784, y= 1.76322283435190</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>4</m> from the right, <m>-4</m> from the left.
-          No, the two-sided limit at <m>x = 2</m> does not exist because the left and right limits are different.
-        </p>
-      </li>
-      <li>
-        <p>
-          (a) <m>1.57079632679490</m> (b) <m>-1.57079632679490</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          Vertical asymptote:
-          <m>x=\frac{1}{2}</m>; Horizontal asymptotes: <m>y=\pm 1</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>y=-\frac{5}{8}</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>0, 1.73205080756888,- 1.73205080756888</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          (b) Maximum value of <m>0.447213595499958</m> at <m>x=2.5</m>. (c) Maximum value of
-          <m>0.166566474658809</m> at <m>x=-0.57767710879358</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          (a) <m>- 34.20</m> (b) <m>t=0.255102040816327</m> seconds (c) <m>40.6377551020408</m> metres
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>y=-0.818661347262959 x + 2.28735528717885</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>y=8.58386825467852 x - 29.5856982226701</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>-1.13715804260326, 0.742227198968559, 0.394930843634699</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>(-1.35130857040332, -1.95308486464414)</m>,
-          <m>(-1.36235641252506, 2.87932257596956)</m>,
-          <m>(1.36235641252506, -2.87932257596956)</m>,
-          <m>(1.35130857040332, 1.95308486464414)</m>
-        </p>
-      </li>
-    </ol>
-  </p>
+          </statement>
+          <solution>
+            <p>
+              <m>40.6377551020408</m> metres
+            </p>
+          </solution>
+        </task>
+      </exercise>
+    </subexercises>
+
+    <subexercises>
+      <title>Tangent Lines</title>
+      <exercise>
+        <statement>
+          <p>
+            Given the function
+            <me>f(x) = { e}^x \cos x</me>,
+            find the equation of the tangent line to <m>f(x)</m> at <m>x=1</m> in the form <m>y = mx + b</m>.
+            <idx><h>lines</h><h>tangent line</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>y=-0.818661347262959 x + 2.28735528717885</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Given the function
+            <me>g(x) = x^{\ln x}</me>,
+            find the equation of the tangent line to <m>g(x)</m> at <m>x=5</m> in the form
+            <m>y = mx + b</m>.
+            <idx><h>lines</h><h>tangent line</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>y=8.58386825467852 x - 29.5856982226701</m>
+          </p>
+        </solution>
+      </exercise>
+    </subexercises>
+
+    <subexercises>
+      <title>Implicit Functions</title>
+      <exercise>
+        <statement>
+          <p>
+            Given the Folium of Descartes,
+            <me>x^3 + y^3 = 6xy</me>,
+            find the slopes of the tangent lines to the curve at <m>x=2</m>.
+            <idx><h>implicit functions</h></idx>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>-1.13715804260326, 0.742227198968559, 0.394930843634699</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Find all points on the curve
+            <me>(x^2+y^2)^2 = 16(y^2-x^2)</me>
+            where the slope of the tangent line to the curve is equal to <m>4</m>.
+            <idx><h>implicit functions</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You may need to use the <c>fsolve()</c> command and specify different intervals to find the required points.
+          </p>
+        </hint>
+        <solution>
+          <p>
+            <m>(-1.35130857040332, -1.95308486464414)</m>,
+            <m>(-1.36235641252506, 2.87932257596956)</m>,
+            <m>(1.36235641252506, -2.87932257596956)</m>,
+            <m>(1.35130857040332, 1.95308486464414)</m>
+          </p>
+        </solution>
+      </exercise>
+    </subexercises>
+  </exercises>
 </chapter>
