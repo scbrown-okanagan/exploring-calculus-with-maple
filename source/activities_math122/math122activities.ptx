@@ -17,7 +17,7 @@
   <xi:include  href="act_riemann_sums_for_monotonic_functions.ptx"/>
   <xi:include  href="act_visualizing_the_net_change_theorem.ptx"/>
   <xi:include  href="act_approximate_integration.ptx"/>
-  <xi:include  href="act_max_and_min_problems_for_integrals.ptx"/>
+  <xi:include  href="act_shapes_of_integral_functions.ptx"/>
   <xi:include  href="act_applications_of_ftc.ptx"/>
   <xi:include  href="act_average_value_of_function.ptx"/>
   <xi:include  href="act_shark_attack.ptx"/>
