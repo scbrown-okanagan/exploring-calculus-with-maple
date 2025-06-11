@@ -2,155 +2,166 @@
   <title>The Net Change Theorem</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:limits}, pg.
-          <xref ref="chp_limits"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:riemann_sums_and_area_approximation}, pg.
-          <xref ref="chp_riemann_sums_and_area_approximation"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:definite_and_indefinite_Integrals}, pg.
-          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
-        </p>
-      </li>
-    </ul>
+		<p>
+			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			<ul>
+			<li><xref ref="chp_limits" text="title" /></li>
+			<li><xref ref="chp_riemann_sums_and_area_approximation" text="title" /></li>
+			<li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+			</ul>
+		</p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      The Net Change<idx><h>integral</h><h>net change</h></idx> Theorem states that if a quantity
-      <m>Q = F(t)</m> is a differentiable function on the interval <m>[a,b]</m>, then
+      The Net Change Theorem states that if a quantity <m>Q = F(t)</m> is a differentiable function on the interval <m>[a,b]</m>, then
       <md>
         <mrow>\int_{a}^b F'(t) \; dt \amp = F(b) - F(a)</mrow>
         <mrow>\amp = \text{ net change in }  Q \text{ over }  [a,b]</mrow>
       </md>.
+      <idx><h>integral</h><h></h></idx>
+      <idx><h>integral</h><h>net change</h></idx>
+      In other words, the Net Change Theorem states that the definite integral of the rate of change of <m>Q</m> from <m>a</m> to 
+      <m>b</m> is given by the difference in the initial quantity and the final quantity.
     </p>
     <p>
-          <idx><h>integral</h><h></h></idx>
-      In other words, the Net Change Theorem states that the definite integral of the rate of change of <m>Q</m> from <m>a</m> to <m>b</m> is given by the difference in the initial quantity and the final quantity.
-    </p>
-    <p>
-      We may also be interested in finding the total change of the quantity <m>Q</m>,
-      given by the integral
-      <me>
-        \int_{a}^{b} |F'(t)| dt
-      </me>.
-    </p>
-    <p>
-          <idx><h>integral</h><h>total change</h></idx>
+      We may also be interested in finding the total change of the quantity <m>Q</m>, given by the integral
+      <me>\int_{a}^{b} |F'(t)| dt</me>.
+      <idx><h>integral</h><h>total change</h></idx>
       In this case, all area is positive.
     </p>
     <p>
-      We will use Maple's <c>ApproximateInt()</c><idx><h>integral approximation</h><h>ApproximateInt</h></idx> command to help visualize the net change and total change of a function.
-      In addition to the <c>method=left</c><idx><h>integral approximation</h><h>ApproximateInt!method</h></idx> and <c>method=right</c> parameters,
-      we can also use <c>method=upper</c> and <c>method=lower</c> to ensure that our approximation is an overestimate or an underestimate,
-      respectively.
+      We will use Maple's <c>ApproximateInt()</c> command to help visualize the net change and total change of a function on an interval.
+      In addition to the <c>method=left</c> and <c>method=right</c> parameters, we can also use <c>method=upper</c> and <c>method=lower</c> 
+      to ensure that our approximation is an overestimate or an underestimate, respectively.
+      <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
+      <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
     </p>
-    <aside>
-      <p>
-        You will need to load the <c>Student[Calculus1]</c><idx><h>packages</h><h>Student[Calculus1]</h></idx> package to use the <c>ApproximateInt()</c> command.
-        You can do this by typing <c>with(Student[Calculus1]):</c> at the start of your worksheet.
-      </p>
-    </aside>
+    <p>
+      Don't forget that you will need to load the <c>Student[Calculus1]</c><idx><h>packages</h><h>Student[Calculus1]</h></idx> package to 
+      use the <c>ApproximateInt()</c> command. You can do this by typing <c>with(Student[Calculus1]):</c> at the start of your worksheet.
+    </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
+  <exercises>
+    <exercise>
+      <statement>
         <p>
-          Define the function <m>f(x) = \dfrac{x}{x^2+4}</m>.
-          Plot <m>f(x)</m> on the interval <m>[-5,10]</m>.
+          Assign the function <m>f(x) = \dfrac{x}{x^2+4}</m> using the assignment operator, <c>:=</c>. Plot <m>f(x)</m> on the interval <m>[-5,10]</m>.
         </p>
-      </li>
-      <li>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
         <p>
-          Use the <c>ApproximateInt()</c><idx><h>integral approximation</h><h>ApproximateInt!method</h></idx> command to calculate the <em>net</em>
-          change of <m>f(x)</m> on the interval <m>[-5,10]</m> with <m>15</m> partitions.
-          Use both <c>method=upper</c> and <c>method=lower</c>.
+          Use the <c>ApproximateInt()</c> command to estimate the <em>net</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>. Use both 
+          <c>method=upper</c> and <c>method=lower</c>, with <m>15</m> partitions.
+          <idx><h>integral</h><h>net change</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
         </p>
-      </li>
-      <li>
+      </statement>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Use the <c>ApproximateInt()</c> command with <c>method=right</c> and <m>n</m> partitions to give the Riemann sum for <m>f(x)</m> on the interval <m>[-5,10]</m>.
-          Use the <c>limit()</c>
+          In this exercise, you will determine the exact value of the <em>net</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>, 
+          using a limit of Riemann sums as well as the convnenient <c>Int()</c> (or <c>int()</c>) command.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Use the <c>ApproximateInt()</c> command with <c>method=right</c> and <m>n</m> partitions to give the Riemann sum for <m>f(x)</m> 
+            on the interval <m>[-5,10]</m>. Then, use the <c>limit()</c> command to find the limit of this value as <m>n</m> goes to infinity.
             <idx><h>limit</h></idx>
-          command to find the limit of this value as <m>n</m> goes to infinity.
-          You may need to use the <c>value(%)</c> command in order to get a numerical value.
-          <aside>
-            <p>
-              This <c>value(%)</c>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The <c>ApproximateInt()</c> command will likely only output the net change in summation notation. You may need to force Maple to 
+            convert the summation to a closed form before evaluating the limit. To do this, follow up your <c>ApproximateInt()</c> output with 
+            a <c>value(%)</c> command before using the <c>limit()</c> command. The ditto operator <c>%</c> is a shortcut that reuses the most 
+            recent output.
             <idx><h>value</h></idx>
             <idx><h>ditto operator</h></idx>
-              command will force Maple to evaluate the limit and produce a numerical value.
-            </p>
-          </aside>
-        </p>
-      </li>
-      <li>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Compute <m>\displaystyle\int_{-5}^{10} f(x) \; dx</m> by using the <c>Int()</c> command. Verify that this value matches the limit 
+            of the Riemann sum in the previous part.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You may use the inert <c>Int()</c> command followed by <c>value(%)</c> (this is typically done on the same input line, with a 
+            semicolon between commands) or the <c>int()</c> command, which evaluates immediately.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <statement>
         <p>
-          Compute <m>\displaystyle\int_{-5}^{10} f(x) \; dx</m> by using the <c>Int()</c> command.
-          Verify that this value matches the limit of the Riemann sum in the previous exercise.
+          Use the <c>ApproximateInt()</c> command to estimate the <em>total</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>. Use both 
+          <c>method=upper</c> and <c>method=lower</c>, with <m>15</m> partitions.
+          <idx><h>integral</h><h>total change</h></idx>
+          <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
         </p>
-      </li>
-      <li>
+      </statement>
+      <hint>
         <p>
-          Use the <c>ApproximateInt()</c><idx><h>integral approximation</h><h>ApproximateInt</h></idx> command to calculate the <em>total</em>
-          change<idx><h>integral</h><h>total change</h></idx> of <m>f(x)</m> on the interval <m>[-5,10]</m> with <m>15</m> partitions.
-          Use both <c>method=upper</c> and <c>method=lower</c>.
-            <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
-        <aside>
-            <p>
-              Recall that the <c>abs()</c><idx><h>mathematical functions</h><h>absolute value</h></idx> command is used for absolute values in Maple.
-            </p>
-          </aside>
+          Recall that the <c>abs()</c> command is used for absolute values in Maple.
+          <idx><h>mathematical functions</h><h>absolute value</h></idx>
         </p>
-      </li>
-      <li>
+      </hint>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Use the <c>ApproximateInt()</c> command with <c>method=right</c> and <m>n</m> partitions to give the Riemann sum<idx><h>integral approximation</h><h>Riemann sum</h></idx> for <m>|f(x)|</m> on the interval <m>[-5,10]</m>.
-          Use the <c>limit()</c>
+          In this exercise, you will determine the exact value of the <em>net</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>, 
+          using a limit of Riemann sums as well as the convnenient <c>Int()</c> (or <c>int()</c>) command.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Use the <c>ApproximateInt()</c> command with <c>method=right</c> and <m>n</m> partitions to give the Riemann sum for <m>|f(x)|</m> 
+            on the interval <m>[-5,10]</m>. Then, use the <c>limit()</c> command to find the limit of this value as <m>n</m> goes to infinity.
             <idx><h>limit</h></idx>
-          command to find the limit of this value as <m>n</m> goes to infinity.
-          You may need to use the <c>value(%)</c>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Once again, the <c>ApproximateInt()</c> command will likely only output the net change in summation notation, using an absolute value. 
+            In this case, using the <c>value(%)</c> command might not give you a closed form of the summation! As it turns out, evaluating total 
+            change as the limit of Riemann sums over the whole interval might not be the best way to go here. Don't worry if you can't get Maple 
+            to do what you want. You'll use the <c>Int()</c> command in a moment!
             <idx><h>value</h></idx>
-            <idx><h>ditto operator</h></idx>
-          command in order to get a numerical value.
-        </p>
-      </li>
-      <li>
-        <p>
-          Compute <m>\displaystyle\int_{-5}^{10} |f(x)| \; dx</m> by using the <c>Int()</c> command.
-            <idx><h>integral</h><h>Int</h></idx>
-        Verify that this value matches the limit of the Riemann sum in the previous exercise.
-          <aside>
-            <p>
-              Think about how you would evaluate this integral if you could not integrate the absolute value function.
-              In general, computing <m>\displaystyle\int_{a}^b \abs{f(x)} \, dx</m> is difficult.
-            </p>
-          </aside>
-        </p>
-      </li>
-      <li>
-        <p>
-          In a new paragraph,
-          describe the difference between the net area and the total area bounded by the function <m>f(x)</m> and the <m>x</m>-axis on the interval <m>[-5,10]</m>.
-          <aside>
-            <p>
-              The net area and the total area between a curve and the <m>x</m>-axis can be different quantities.
-              It is important to know when they are different and when they are the same.
-            </p>
-          </aside>
-            <idx><h>integral</h><h>net change</h></idx>
-        </p>
-      </li>
-    </ol>
-  </subsection>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Compute <m>\displaystyle\int_{-5}^{10} f(x) \; dx</m> by using the <c>Int()</c> (or <c>int()</c> command. 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In a couple sentances, describe how you could go about evaluating the <em>total</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>
+            without needing to use the absolute value function.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Consider how the absolute value function acts on <m>f(x)</m> in intervals where the function is positive or negative.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+  </exercises>
 </section>
