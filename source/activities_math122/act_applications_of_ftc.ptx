@@ -2,153 +2,179 @@
   <title>Applications of the Fundamental Theorem of Calculus</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:limits}, pg.
-          <xref ref="chp_limits"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:equation_solvers}, pg.
-          <xref ref="chp_equation_solvers"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:derivative}, pg.
-          <xref ref="chp_derivative"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:definite_and_indefinite_Integrals}, pg.
-          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
-        </p>
-      </li>
-    </ul>
+		<p>
+			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			<ul>
+			<li><xref ref="chp_equation_solvers" text="title" /></li>
+			<li><xref ref="chp_limits" text="title" /></li>
+			<li><xref ref="chp_derivative" text="title" /></li>
+			<li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+			</ul>
+		</p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      In this activity,
-      you will need to make use of the Fundamental Theorem of Calculus in order to solve two applied problems.
+      In this activity, you will need to make use of the Fundamental Theorem of Calculus in order to solve two applied problems.
       In particular, you will need to use the result
-      <me>
-        \frac{d}{dx} \int_a^x f(t) \, dt = f(x)
-      </me>.
-    </p>
-    <p>
-          <idx><h>integral</h><h></h></idx>
+      <me>\frac{d}{dx} \int_a^x f(t) \, dt = f(x)</me>.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          In this exercise,
-          our goal is to evaluate <m>\displaystyle\lim_{x \rightarrow 0} \dfrac{\int_{0}^x \sin(t^2) \; dt}{x^3}</m>.
-            <idx><h>limit</h></idx>
-            <idx><h>plot</h></idx>
-            <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>
-          <ol>
-            <aside>
-              <p>
-                L'H&#xf4;pital's Rule states that if the limit
-                <me>
-                  \lim_{x\rightarrow a}\frac{f(x)}{g(x)}
-                </me>
-                is indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>,
-                if <m>f</m> and <m>g</m> are differentiable at <m>a</m>,
-                and if <m>g'(x) \neq 0</m> near <m>a</m>, then
-                <me>
-                  \lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}
-                </me>,
-                assuming that this limit exists.
-              </p>
-            </aside>
-            <li>
-              <p>
-                Define the function <m>s(x) = \dfrac{\int_{0}^x \sin(t^2) \; dt}{x^3}</m>.
-                Plot the graph of <m>s(x)</m> over the interval <m>[-1,1]</m>.
-                Try to estimate <m>\displaystyle\lim_{x\rightarrow0}s(x)</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Is there an easy integration technique that you could use to integrate <m>\displaystyle\int_{0}^x \sin(t^2) \; dt</m> by hand?
-                If not, why?
-              </p>
-            </li>
-            <li>
-              <p>
-                What is the indeterminate form of the limit?
-              </p>
-            </li>
-            <li>
-              <p>
-                Apply L'H&#xf4;pital's Rule by hand, in the space below.
-                Check your answer by using the <c>limit()</c> command to evaluate <m>\displaystyle\lim_{x\rightarrow0}s(x)</m>.
-              </p>
-            </li>
-          </ol>
+          In this exercise, your goal is to evaluate a challenging limit problem:
+          <me>\displaystyle\lim_{x \rightarrow 0} \dfrac{\int_{0}^x \sin(t^2) \; dt}{x^3}</me>.
+          Start by assigning the function <m>s(x) = \dfrac{\int_{0}^x \sin(t^2) \; dt}{x^3}</m> using the assignment operator,
+          <c>:=</c>.
+          <idx><h>integral</h><h></h></idx>
+          <idx><h>limit</h></idx>
         </p>
-        \begin{fullwidth} \fbox{<m>\displaystyle\lim_{x \rightarrow 0} \dfrac{\displaystyle\int_{0}^x \sin(t^2) \; dt}{x^3}=</m>  } \end{fullwidth}
-      </li>
-      <li>
+        <aside>
+          <p>
+            L'H&#xf4;pital's Rule states that if the limit
+            <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)}</me>
+            is indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>, if <m>f</m> and <m>g</m> are differentiable at 
+            <m>a</m>, and if <m>g'(x) \neq 0</m> near <m>a</m>, then
+            <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}</me>,
+            assuming that this limit exists.
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            To start, try visualizing the problem. Plot the graph of <m>s(x)</m> over the interval <m>[-1,1]</m>.
+            See if you can estimate <m>\displaystyle\lim_{x\rightarrow0}s(x)</m> from the plot.
+            <idx><h>plot</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The integral function in the numerator is what makes this limit problem so challenging. Try evaluating 
+            <m>\int_{0}^x \sin(t^2) \; dt</m> using the <c>Int()</c> or <c>int()</c> command. Notice how Maple evaluates the 
+            function, but not in terms of elementary functions.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            There is no easy integration technique for this integral. You'll notice that Maple evaluates the integral in terms 
+            of the Fresnel S function, a transcendental function named after Augustin-Jean Fresnel. 
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Luckily, you should not need to evaluate this integral in order to evaluate the limit. Instead, you may apply 
+            l'H&#xf4;pital's rule, so long as the limit is indeterminant of the form <m>0/0</m> or <m>\infty/\infty</m>. 
+            Which of these two indeterminant forms is applicable?
+            <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Applying l'H&#xf4;pital's rule to the limit allows you to differentiate the numerator and denominator and obtain 
+            a new expression for the limit as <m>x \to 0</m>. Use the <c>diff()</c> command to differentiate the numerator and 
+            denominator of <m>s(x)</m> and see how the Fundamental Theorem of Calculus is applied.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You can differentiate the numerator of <m>s(x)</m> by using the <c>numer()</c> function:
+          </p>
+          <console prompt="> ">
+            <input>diff(numer(s(x)), x)</input>
+          </console>
+          <p>
+            Similarly, you can differentiate the denominator of <m>s(x)</m> using the <c>demon()</c> function.
+          </p>
+          <p>
+            Try making a new fraction using both of these functions together.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            You should have noticed that the new limit after applying l'H&#xf4;pital's rule is indeterminant of the form 
+            <m>0/0</m>. Try applying l'H&#xf4;pital's rule again, this time finding the second derivatives of the numerator 
+            and denominator.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You can find the second derivative of the numerator of <m>s(x)</m> using
+          </p>
+          <console prompt=">">
+            <input>diff(numer(s(x)), x, x)</input>
+          </console>
+          <p>
+            and switching to <c>denom()</c> for the denominator.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            After applying l'H&#xf4;pital's rule twice, you should be able to evaluate the limit. Confirm your answer 
+            by using the <c>limit()</c> command to evaluate <m>\displaystyle\lim_{x\rightarrow0}s(x)</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          In this exercise,
-          our goal is to find a function <m>f</m> and a number <m>a</m> that satisfy the equation
+          In this exercise, your goal is to solve for a function <m>f</m> and for a number <m>a</m> that satisfy the equation
           <men xml:id="eq_ftc_equation">
             6 + \displaystyle\int_{a}^x \dfrac{f(t)}{t^2} dt = 2\sqrt{x}
           </men>.
-          <ol>
-            <li>
-              <p>
-                Assign equation <xref ref="eq_ftc_equation"/> to a name of your choice,
-                such as <c>eqn</c>.
-                <aside>
-                  <p>
-                    The <c>diff()</c>
-            <idx><h>derivative</h><h>diff</h></idx>
-                    command can be used to differentiate an equation with respect to an independent variable.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                In the space below,
-                differentiate both sides of the equation with respect to <m>x</m> and apply the Fundamental Theorem of Calculus.
-                Check your answer by using the <c>diff()</c> command on the equation you assigned in the previous step. \begin{fullwidth} \fbox{
-                <me>
-                  6 + \displaystyle\int_{a}^x \dfrac{f(t)}{t^2} dt = 2\sqrt{x}
-                </me>
-                } \end{fullwidth} <idx><h>solving equations</h><h>solve</h></idx>
-              </p>
-            </li>
-            <li>
-              <p>
-                Solve the resulting equation for <m>f(x)</m> using the <c>solve()</c> command.
-              </p>
-            </li>
-            <li>
-              <p>
-                Replace <m>f(t)</m> in equation <xref ref="eq_ftc_equation"/> with the function that you solved for in part (c).
-                Make sure to use <m>t</m> as the variable.
-                Assign this to a new name in Maple.
-              </p>
-            </li>
-            <li>
-              <p>
-                Evaluate the integral in the equation and solve for <m>a</m> in Maple.
-              </p>
-            </li>
-          </ol>
+          Start by assigning equation <xref ref="eq_ftc_equation"/> to a name of your choice,such as <c>eqn</c>.
         </p>
-      </li>
-    </ol>
-  </subsection>
+        <aside>
+          <p>
+            The <c>diff()</c> command can be used to differentiate an equation with respect to an independent variable.
+            <idx><h>derivative</h><h>diff</h></idx>
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            To solve for the function <m>f</m>, you can differentiate both sides of the equation and apply the FTC. Use the 
+            <c>diff()</c> command on your equation to differentiate both sides. Then, solve for <m>f(x)</m> using the 
+            <c>solve()</c> command.
+            <idx><h>solving equations</h><h>solve</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Substitute the solution for <m>f</m> into equation <xref ref="eq_ftc_equation"/> and assign it to a new name, such as 
+            <c>eqn2</c>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Make sure that you are using <m>t</m> as the variable in the integrand when substituting you solution for <m>f</m>.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the integral in the equation and solve for <m>a</m> using the <c>solve()</c> command.
+            <idx><h>solving equations</h><h>solve</h></idx>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>
