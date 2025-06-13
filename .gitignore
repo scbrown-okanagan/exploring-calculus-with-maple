@@ -9,6 +9,9 @@
 output
 published
 
+# don't track image generating cache
+.cache
+
 # don't track assets generated from source
 generated-assets
 
