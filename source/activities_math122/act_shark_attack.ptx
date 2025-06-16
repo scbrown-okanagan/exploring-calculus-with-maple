@@ -2,49 +2,34 @@
   <title>Shark Attack</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:assignment_operator}, pg.
-          <xref ref="chp_assignment_operator"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:equation_solvers}, pg.
-          <xref ref="chp_equation_solvers"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:definite_and_indefinite_Integrals}, pg.
-          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
-        </p>
-      </li>
-    </ul>
+		<p>
+			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			<ul>
+			<li><xref ref="chp_assignment_operator" text="title" /></li>
+			<li><xref ref="chp_equation_solvers" text="title" /></li>
+			<li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+			</ul>
+		</p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      In this activity,
-      you will determine whether you can swim to safety before a shark attacks.
-      You will need to use piecewise functions and the Net Change Theorem to find the outcome.
-    </p>
-    <p>
-      \tikzset{ ragged border/.style={ decoration={random steps,
-      segment length=1mm, amplitude=0.5mm}, decorate, } }
+      In this activity, you will determine whether you can swim to safety before a shark attacks. You will need to use piecewise 
+      functions and the Net Change Theorem to find the outcome.
     </p>
     <figure xml:id="fig_shark_attack">
       <caption>An illustration of the shark trying to catch you as you swim to shore.</caption>
       <image>
-<latex-image>
-<![CDATA[\begin{tikzpicture}\fill[cyan!30] decorate[ragged border]{ (0,2) -- (8,2) } -- (8,0) -- (0,0) -- cycle;
-\fill[yellow!30] decorate[ragged border]{ (8,2) -- (8,0) } -- (9,0) -- (9,2) -- cycle;
-\draw (1.5,1) node {<image width="73%" source="images/shark.png"/> };
-\draw (5,1) node {<image width="7%" source="images/swimmer.png"/> };
-\draw[|-|] (1.5,3) node [above] {\(\SI{0}{m}\)} -- (5,3) node [above] {\(\SI{50}{m}\)};
-\draw[|-|] (5,3) -- (8,3) node [above] {\(\SI{70}{m}\)};\end{tikzpicture}]]>
-</latex-image>
+        <latex-image>
+          \begin{tikzpicture}
+            \fill[cyan!30] decorate[ragged border]{ (0,2) -- (8,2) } -- (8,0) -- (0,0) -- cycle;
+            \fill[yellow!30] decorate[ragged border]{ (8,2) -- (8,0) } -- (9,0) -- (9,2) -- cycle;
+            \draw (1.5,1) node {\includegraphics{images/shark.png}};
+            \draw (5,1) node {\includegraphics[scale=0.075]{images/swimmer.png}};
+            \draw[|-|] (1.5,3) node [above] {\(\SI{0}{m}\)} -- (5,3) node [above] {\(\SI{50}{m}\)};
+            \draw[|-|] (5,3) -- (8,3) node [above] {\(\SI{70}{m}\)};
+          \end{tikzpicture}
+        </latex-image>
       </image>
     </figure>
     <p>
@@ -64,25 +49,27 @@
     <aside>
       <title>-2cm</title>
       <image>
-<latex-image>
-<![CDATA[\begin{tikzpicture}\begin{axis}[
-width=\textwidth,
-height=0.8\textwidth,
-clip=false,
-axis lines=middle,
-xlabel={\(t\)},
-ylabel={\(v\)},
-xlabel style={below right},
-ylabel style={above left},
-xmin=-0.5, xmax=8, xtick={0},
-ymin=-2, ymax=15, ytick={0,13}
-]
-\addplot [domain=0:2.6, samples=100] {5*x};
-\addplot [domain=2.6:8, samples=100] {13};
-\draw [dashed] (axis cs:2.6,13) -- (axis cs:2.6,0);
-\draw (axis cs:2.6,0) node [below] {\(t_1\)};
-\end{axis}\end{tikzpicture}]]>
-</latex-image>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+            width=\textwidth,
+            height=0.8\textwidth,
+            clip=false,
+            axis lines=middle,
+            xlabel={\(t\)},
+            ylabel={\(v\)},
+            xlabel style={below right},
+            ylabel style={above left},
+            xmin=-0.5, xmax=8, xtick={0},
+            ymin=-2, ymax=15, ytick={0,13}
+            ]
+              \addplot [domain=0:2.6, samples=100] {5*x};
+              \addplot [domain=2.6:8, samples=100] {13};
+              \draw [dashed] (axis cs:2.6,13) -- (axis cs:2.6,0);
+              \draw (axis cs:2.6,0) node [below] {\(t_1\)};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
       </image>
     </aside>
   </subsection>

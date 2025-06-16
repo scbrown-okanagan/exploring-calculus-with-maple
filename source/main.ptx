@@ -75,6 +75,7 @@
 \def\labelLink#1#2{\Hyperlink{#2}}
 \def\docLink#1#2{\Hyperlink{#2}}
 \def\endmaplespreadsheet{\end{tabular}\end{center}\MapleTableCellfalse} -->
+\usepackage{siunitx}
 \newcommand{\lrp}[1]{\left(#1\right)}
 \newcommand{\lrb}[1]{\left[#1\right]}
 \newcommand{\lrbrace}[1]{\left\lbrace#1\right\rbrace}
@@ -105,6 +106,7 @@
 \usetikzlibrary{through,intersections,decorations,shadows,fadings}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+\tikzset{ ragged border/.style={ decoration={random steps, segment length=1mm, amplitude=0.5mm}, decorate, } }
 </latex-image-preamble>
   </docinfo>
   <book>
