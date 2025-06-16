@@ -2,122 +2,175 @@
   <title>Average Value of a Function on a Shrinking Interval</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:limits}, pg.
-          <xref ref="chp_limits"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:definite_and_indefinite_Integrals}, pg.
-          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
-        </p>
-      </li>
-    </ul>
+		<p>
+			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			<ul>
+			<li><xref ref="chp_limits" text="title" /></li>
+			<li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+			</ul>
+		</p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
       The average value of a function<idx><h>average value of a function</h></idx> <m>f</m> on the interval <m>[a,b]</m> is defined as
-      <me>
-        f_{ave} = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx
-      </me>.
-    </p>
-    <p>
+      <me>f_{avg} = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx</me>.
+      <idx><h>average value of a function</h></idx>
       In this activity, we will investigate the function
-      <me>
-        f(x) = \sqrt{1 + x^3}
-      </me>
-      over a shrinking interval where <m>a = 2</m> fixed and <m>b</m> approaches <m>a</m>.
-      To do this, we can let <m>b=2+h</m> and take the limit as <m>h \rightarrow 0</m>.
-      Specifically, we will determine the value of the integral
-      <me>
-        \displaystyle\lim_{h \rightarrow 0} \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx
-      </me>.
-    </p>
-    <p>
+      <me>f(x) = \sqrt{1 + x^3}</me>
+      over a shrinking interval where <m>a = 2</m> is fixed and <m>b</m> approaches <m>a</m>. To do this, we can let <m>b=2+h</m> and take the limit as 
+      <m>h \rightarrow 0</m>. Specifically, we will determine the value of the integral
+      <me>\displaystyle\lim_{h \to 0} \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx</me>.
       For convenience, we can view
-      <me>
-        avg(h) = \frac{1}{h}\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx
-      </me>
-      as a function of <m>h</m>.
-      This function gives the average value of
+      <men xml:id="eq_avg_from_2">avg(h) = \frac{\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx}{h}</men>
+      as a function of <m>h</m>. This function gives the average value of <m>f(x) = \sqrt{1 + x^3}</m> over the interval <m>[2,2+h]</m>.
     </p>
     <p>
-      <m>f(x) = \sqrt{1 + x^3}</m> over the interval <m>[2,2+h]</m>.
+      In this activity, you will ultimately need to determine the limit of <m>avg(h)</m> as <m>h \to 0</m>.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <aside>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          Note that you should use <m>h</m> as the independent variable of this function.
+          In this exercise, you will use function defined in equation <xref ref="eq_avg_from_2"/> to determine and visualize the average value of <m>f(x) = \sqrt{1 + x^3}</m>
+          over the interval <m>[2,4]</m>.
         </p>
-      </aside>
-      <li>
-        <p>
-          Assign the function <m>avg(h) = \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          Use this function to find the average value of
-          <m>f(x) = \sqrt{1+x^3}</m> on the interval <m>[2,4]</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          Plot
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Start by assigning <m>f(x) = \sqrt{1 + x^3}</m> and the <m>avg(h)</m> function given in equation <xref ref="eq_avg_from_2"/> using the assignment operator, <c>:=</c>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The <m>avg(h)</m> function can also be defined as
+            <me>avg(h) = \frac{\displaystyle\int_{2}^{2+h} f(x)\, dx}{h}</me>,
+            assuming that you have assigned <m>f(x)</m> in Maple first. Note that you should use <m>h</m> as the independent variable of this function.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the <m>avg(h)</m> function to find the average value of <m>f(x) = \sqrt{1+x^3}</m> on the interval <m>[2,4]</m>.
+            <idx><h>average value of a function</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot <m>avg(2)</m> and <m>f(x)</m> on the same axes over the interval <m>[2,4]</m>. Does <m>avg(2)</m> appear to be the average value of
+            <m>f(x) = \sqrt{1+x^3}</m> on the interval <m>[2,4]</m>?
             <idx><h>plot</h></idx>
-          <m>avg(2)</m> and <m>\sqrt{1+x^3}</m> on the same axes over the interval <m>[2,4]</m>.
-          Does <m>avg(2)</m> appear to be the average value of
-          <m>f(x) = \sqrt{1+x^3}</m> on the interval <m>[2,4]</m>?
-        </p>
-      </li>
-      <li>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <statement>
         <p>
-          Plot <m>avg(h)</m> over the interval <m>h\in[-1,1]</m>.
-          Estimate the value <m>\displaystyle\lim_{h \rightarrow 0} \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx</m> from your graph.
+          Try to determine the average value of <m>f(x)</m> as the interval width shrinks to zero (<m>h \to 0</m>) graphically. Plot <m>avg(h)</m> over the interval 
+          <m>h\in[-1,1]</m> and estimate the value
+          <me>\displaystyle\lim_{h \to 0} \dfrac{\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx}{h}</me>
+          from your graph.
         </p>
-      </li>
-      <li>
+      </statement>
+    </exercise>
+    <exercise xml:id="ex_average_value_limit">
+      <introduction>
         <p>
-          Is there an easy integration technique that you could use to integrate <m>\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3}\, dx</m> by hand?
-          If not, why?
+          In this exercise, you will determine the value the limit analytically, using Maple to assist with methods that you would otherwise use on paper.
         </p>
-      </li>
-      <li xml:id="ex_average_value_limit">
+        <aside>
+          <p>
+            L'H&#xf4;pital's Rule states that if the limit
+            <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)}</me>
+            is indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>, if <m>f</m> and <m>g</m> are differentiable at 
+            <m>a</m>, and if <m>g'(x) \neq 0</m> near <m>a</m>, then
+            <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}</me>,
+            assuming that this limit exists.
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Try evaluating the integral <m>\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3} \; dt</m> using the <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands. Notice how 
+            Maple evaluates the function, but not in terms of elementary functions.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            There is no easy integration technique for this integral. You'll notice that Maple evaluates the integral in terms of the Elliptic F function, a transcendental 
+            function. 
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Luckily, you should not need to evaluate this integral in order to evaluate the limit. Instead, you may apply l'H&#xf4;pital's rule, so long as the limit is 
+            indeterminant of the form <m>0/0</m> or <m>\infty/\infty</m>. Which of these two indeterminant forms is applicable?
+            <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Applying l'H&#xf4;pital's rule to the limit results in
+            <me>
+              \lim_{h \to 0} avg(h)
+              = \lim_{h \to 0}\frac{\displaystyle\int_{2}^{2+h} f(x)\, dx}{h}
+              = \lim_{h \to 0}\frac{\frac{d}{dh}\displaystyle\int_{2}^{2+h} f(x)\, dx}{\frac{d}{dh}h}
+            </me>.
+            Obviously <m>\frac{d}{dh}h=1</m> in the denominator, but you will need to apply the Fundamental Theorem of Calculus for the numerator. Use the <c>diff()</c> 
+            command to evaluate 
+            <me>\dfrac{d}{dh}\displaystyle\int_{2}^{2+h} f(x)\, dx</me>
+            and see how the Fundamental Theorem of Calculus is applied.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Using this result, determine <m>\displaystyle\lim_{h \to 0} avg(h)</m> on your own.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Determine <m>\displaystyle\lim_{h \rightarrow 0} \dfrac{1}{h} \displaystyle\int_{2}^{2+h} \sqrt{1 + x^3} \,dx</m> by hand using L'H&#xf4;pital's Rule in the space below.
-          Make sure to state the indeterminate form.
-          <aside>
-            <p>
-              L'H&#xf4;pital's Rule states that if the limit
-              <me>
-                \lim_{x\rightarrow a}\frac{f(x)}{g(x)}
-              </me>
-              is indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>,
-              if <m>f</m> and <m>g</m> are differentiable at <m>a</m>,
-              and if <m>g'(x) \neq 0</m> near <m>a</m>, then
-              <me>
-                \lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}
-              </me>,
-              assuming that this limit exists.
-            </p>
-          </aside>
-    <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>   \fbox{<m>\displaystyle\lim_{h \rightarrow 0} \dfrac{\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3} \,dx}{h}=</m>  }
+          Finally, it's time to let Maple evaluate this limit, letting the power of the <c>limit()</c> command and the Limit Methods Tutor do all the work.
         </p>
-      </li>
-      <li>
-        <p>
-          Check your answer to <xref ref="ex_average_value_limit">question</xref>
-          by using the <c>limit()</c> command to evaluate <m>\displaystyle\lim_{h\rightarrow0}avg(h)</m>.
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Check your answer to <xref ref="ex_average_value_limit">question</xref> by using the <c>limit()</c> command to evaluate <m>\displaystyle\lim_{h \to 0} avg(h)</m>.
             <idx><h>limit</h></idx>
-        </p>
-      </li>
-    </ol>
-  </subsection>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the Limit Methods Tutor to evaluate <m>\displaystyle\lim_{h \to 0} avg(h)</m> to see how l'H&#xf4;pital's Rule is applied, along with a variety of limit 
+            laws.
+            <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>
+            <idx><h>limit</h><h>tutor</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            After opening the Limit Methods Tutor, you can simply type <m>avg(h)</m> for the function. Just don't forget to change the variable to <m>h</m>!
+          </p>
+        </hint>
+      </task>
+    </exercise>
+  </exercises>
 </section>

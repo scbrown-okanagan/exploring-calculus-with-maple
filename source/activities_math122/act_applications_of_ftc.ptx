@@ -55,7 +55,7 @@
         <statement>
           <p>
             The integral function in the numerator is what makes this limit problem so challenging. Try evaluating 
-            <m>\int_{0}^x \sin(t^2) \; dt</m> using the <c>Int()</c> or <c>int()</c> command. Notice how Maple evaluates the 
+            <m>\int_{0}^x \sin(t^2) \; dt</m> using the <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands. Notice how Maple evaluates the 
             function, but not in terms of elementary functions.
           </p>
         </statement>
