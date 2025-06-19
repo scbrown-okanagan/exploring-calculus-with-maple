@@ -1,73 +1,73 @@
 <section xml:id="sec_volumes_of_revolution">
   <title>Volumes of Revolution</title>
-  <introduction>
-    <p>
-          <idx><h>volume of revolution</h></idx>
-    </p>
-  </introduction>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:equation_solvers}, pg.
-          <xref ref="chp_equation_solvers"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:implicit_functions}, pg.
-          <xref ref="chp_implicit_functions"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:definite_and_indefinite_Integrals}, pg.
-          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_equation_solvers" text="title" /></li>
+        <li><xref ref="chp_implicit_functions" text="title" /></li>
+        <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      Volumes of Revolution are often very challenging to visualize on paper.
-      Luckily, Maple has an interactive way of visualizing the volume obtained by revolving a region about a central axis.
-      In this activity,
-      we will use the Volume of Revolution Tutor to find and plot the volume of a region rotated about a vertical axis or horizontal axis.
+      Volumes of Revolution are often very challenging to visualize on paper. Luckily, Maple has an interactive way of 
+      visualizing the volume obtained by revolving a region about a central axis. In this activity, we will use the Volume 
+      of Revolution Tutor to find and plot the volume of a region rotated about a vertical axis or horizontal axis.
+    </p>
+    <p>
+      The Volume of Revolution Tutor is able to determine the volume of the solid obtained by revolution using either the 
+      disks/washers method or the method of cylindrical shells. You can learn more about how to access and use this tutor in 
+      <xref ref="sec_volume_of_revolution_tutor"/>.
     </p>
   </subsection>
+  <exercises>
+    <exercise>
+      <introduction>
+        <p>
+          In the first three exercises of this activity, you will be working with the region bounded by the functions 
+          <m>f(x)=x^5-x^3</m> and <m>g(x)=\sin(x)</m>, where <m>x \geq 0</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Assign these two functions in Maple using the assignment operator, <c>:=</c>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the graphs of <m>f(x)</m> and <m>g(x)</m> on the same set of axes to view the region that you will be 
+            revolving about an axis in the next couple exercies.
+            <idx><h>plot</h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            As you can see from your plot, the functions intersect at <m>x_1=0</m> and at another value where <m>x_2&gt;0</m>. 
+            Solve for this second value, <m>x_2</m> where the functions intersect and assign it to <c>x2</c>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            An example of finding intersection points is given in <xref ref="sec_solvingsystemeqs"/>.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+  </exercises>
+  <!--TODO: Switch order of next two exercises. Make disks/washers one use int() or Int() command. Make the other use only the tutor
+  with an option task if students know the shells method -->
   <subsection>
     <title>Exercises:</title>
     <ol>
-      <li>
-        <p>
-          Define the two functions <m>f(x)=x^5-x^3</m> and <m>g(x)=\sin(x)</m> in Maple.
-        </p>
-      </li>
-      <li>
-        <ol>
-          <li>
-            <p>
-              Plot the graphs of <m>f(x)</m> and <m>g(x)</m> on the same set of axes.
-            <idx><h>plot</h></idx>
-        </p>
-          </li>
-          <li>
-            <p>
-              Find the points of intersection of the curves <m>f(x)</m> and <m>g(x)</m>,
-              where <m>x\geq0</m>.
-              You can assign this to an expression and use the expression name in the tutor.
-            </p>
-          </li>
-        </ol>
-        <aside>
-          <p>
-            An example of finding intersection points is given on <xref ref="sec_solvingsystemeqs">page</xref>.
-          </p>
-        </aside>
-            <idx><h>solving equations</h><h>intersection points</h></idx>
-      </li>
       <li>
         <p>
           Suppose that the region between the curves <m>f(x)</m> and <m>g(x)</m>,

@@ -2,13 +2,13 @@
   <title>Areas Between Curves</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-		<p>
-			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
-			<ul>
-			<li><xref ref="chp_equation_solvers" text="title" /></li>
-			<li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
-			</ul>
-		</p>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_equation_solvers" text="title" /></li>
+        <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
