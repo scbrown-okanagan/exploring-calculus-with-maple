@@ -17,6 +17,14 @@
       In this activity, you will determine whether you can swim to safety before a shark attacks. You will need to use piecewise 
       functions and the Net Change Theorem to find the outcome.
     </p>
+    <p>
+      Suppose that you are surfing on the ocean and there is a shark 50 metres behind you, at rest (i.e. <m>v(0)=0</m>).
+    </p>
+    <p>
+      The shark senses you and begins accelerating toward you at a rate of 5 m/s<m>^2</m>, up to a top speed of 13 m/s. You see the shark coming 
+      and begin swimming towards shore at a speed of 2 m/s. Assume there is no time needed for you to accelerate up to your top speed. If the 
+      shore is 20 m away from you (and 70 m away from the shark), do you make it to shore before the shark attacks?
+    </p>
     <figure xml:id="fig_shark_attack">
       <caption>An illustration of the shark trying to catch you as you swim to shore.</caption>
       <image>
@@ -25,7 +33,7 @@
             \fill[cyan!30] decorate[ragged border]{ (0,2) -- (8,2) } -- (8,0) -- (0,0) -- cycle;
             \fill[yellow!30] decorate[ragged border]{ (8,2) -- (8,0) } -- (9,0) -- (9,2) -- cycle;
             \draw (1.5,1) node {\scalebox{-0.2}[0.2]{\includegraphics{external/images/shark.png}}};
-            \draw (5,1) node {\includegraphics[scale=0.075]{external/images/swimmer.png}};
+            \draw (5,1) node {\includegraphics[scale=0.05]{external/images/swimmer.png}};
             \draw[|-|] (1.5,3) node [above] {\(\SI{0}{m}\)} -- (5,3) node [above] {\(\SI{50}{m}\)};
             \draw[|-|] (5,3) -- (8,3) node [above] {\(\SI{70}{m}\)};
           \end{tikzpicture}
@@ -33,151 +41,158 @@
       </image>
     </figure>
     <p>
-      Suppose that you are surfing on the ocean and there is a shark
-      <m>\SI{50}{m}</m> behind you, at rest (i.e.
-      <m>v(0)=0</m>).
+      For convenience, we will let the shark's initial position be <m>0</m> m and your initial position be <m>50</m> m. This means that the shore 
+      is at a position of <m>70</m> m.
     </p>
-    <p>
-      The shark senses you and begins accelerating toward you at a rate of <m>\SI{5}{m/s^2}</m>,
-      up to a top speed of <m>\SI{13}{m/s}</m>.
-      You see the shark coming and begin swimming towards shore at a speed of <m>\SI{2}{m/s}</m>.
-      Assume there is no time needed for you to accelerate up to your top speed.
-      If the shore is <m>\SI{20}{m}</m> away from you
-      (and <m>\SI{70}{m}</m> away from the shark),
-      do you make it to shore before the shark attacks?
-    </p>
-    <aside>
-      <title>-2cm</title>
-      <image>
-        <latex-image>
-          \begin{tikzpicture}
-            \begin{axis}[
-            width=\textwidth,
-            height=0.8\textwidth,
-            clip=false,
-            axis lines=middle,
-            xlabel={\(t\)},
-            ylabel={\(v\)},
-            xlabel style={below right},
-            ylabel style={above left},
-            xmin=-0.5, xmax=8, xtick={0},
-            ymin=-2, ymax=15, ytick={0,13}
-            ]
-              \addplot [domain=0:2.6, samples=100] {5*x};
-              \addplot [domain=2.6:8, samples=100] {13};
-              \draw [dashed] (axis cs:2.6,13) -- (axis cs:2.6,0);
-              \draw (axis cs:2.6,0) node [below] {\(t_1\)};
-            \end{axis}
-          \end{tikzpicture}
-        </latex-image>
-      </image>
-    </aside>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li xml:id="ex_sharktime">
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          Calculate the time <m>t_1</m> it takes for the shark to reach its top speed of <m>13</m> m/s if it accelerates at <m>5</m> m/s<sup>2</sup>.
-          Note that the shark will no longer accelerate after <m>t_1</m> seconds,
-          since it has reached its top speed.
-          <aside>
-            <p>
-              The shark's velocity will contain an acceleration term for <m>0 \le t \le t_1</m>
-              (where <m>t_1</m> is the time you find in <xref ref="ex_sharktime">exercise</xref>)
-              but will not have an acceleration term after <m>t_1</m> seconds.
-            </p>
-          </aside>
+          In this exercise, you will create a function that gives the position of the shark at time <m>t</m>, relative to its initial position.
         </p>
-      </li>
-      <li>
-        <p>
-          Define a piecewise function for the shark's velocity using the <c>piecewise()</c> command and assign this to <m>sharkvelocity(t)</m>.
-          This velocity function should be linearly increasing if
-          <m>0 \leq t \leq t_1</m> and constant if <m>t > t_1</m>.
-          <aside>
-            <p>
-              You can read how to define piecewise functions on <xref ref="sec_piecewise">page</xref>.
-            </p>
-          </aside>
+        <aside>
+          <p>
+            The shark's distance function will contain an acceleration term for <m>0 \le t \le t_1</m> (where <m>t_1</m> is the time you find in 
+            <xref ref="ex_sharktime">exercise</xref>) but will not have an acceleration term after <m>t_1</m> seconds.
+          </p>
+        </aside>
+      </introduction>
+      <task xml:id="ex_sharktime">
+        <statement>
+          <p>
+            Calculate by hand or using Maple how long it takes for the shark to reach its top speed of 13 m/s if it accelerates at 5 m/s<m>^2</m>.
+            Assign this time to <c>t1</c>. Note that the shark will no longer accelerate after <m>t_1</m> seconds, since it has reached its top speed.
+          </p>
+        </statement>
+      </task>
+      <task xml:id="ex_sharkvelocity">
+        <statement>
+          <p>
+            Define a piecewise function for the shark's velocity using the <c>piecewise()</c> command and assign this to <c>sharkvelocity(t)</c>. This 
+            velocity function should be linearly increasing for <m>0 \leq t \leq t_1</m> while the shark accelerates and then constant for <m>t &gt; t_1</m>.
             <idx><h>mathematical functions</h><h>piecewise</h></idx>
-        </p>
-      </li>
-      <li>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You can read how to define piecewise functions in <xref ref="sec_piecewise"/>.
+          </p>
+        </hint>
+        <hint>
+          <p>
+            The shark's velocity function should look similar to the graph below.
+          </p>
+          <image>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                width=\textwidth,
+                height=0.8\textwidth,
+                clip=false,
+                axis lines=middle,
+                xlabel={\(t\)},
+                ylabel={\(v\)},
+                xlabel style={below right},
+                ylabel style={above left},
+                xmin=-0.5, xmax=8, xtick={0},
+                ymin=-2, ymax=15, ytick={0,13}
+                ]
+                  \addplot [domain=0:2.6, samples=100] {5*x};
+                  \addplot [domain=2.6:8, samples=100] {13};
+                  \draw [dashed] (axis cs:2.6,13) -- (axis cs:2.6,0);
+                  \draw (axis cs:2.6,0) node [below] {\(t_1\)};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Integrate <m>sharkvelocity(t)</m> with respect to <m>t</m> to find the position function for the shark. Assign this piecewise position function to 
+            something like <c>sharkposition</c>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <statement>
         <p>
-          Integrate <m>sharkvelocity(t)</m> to find the distance function for the shark.
+          Since your swim velocity is constant, determining your position function is much simpler. Assign the function <m>swimvelocity(t) = 2</m> and integrate 
+          <m>swimvelocity(t)</m> with respect to <m>t</m> to find your displacement function (the net change from your initial position). Add 50 to this distance 
+          function for your initial position and assign it to <c>swimposition</c>.
         </p>
-      </li>
-      <li>
+      </statement>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Since your velocity is constant at <m>2</m> m/s, assign the function <m>swimvelocity(t) = 2</m>.
+          It's time to see if you can swim as far as the shore before the shark catches up to you!
         </p>
-      </li>
-      <li>
-        <p>
-          Integrate <m>swimvelocity(t)</m> to find your distance function.
-          <aside>
-            <p>
-              Try using the <c>solve()</c> command first,
-              then change it to <c>fsolve()</c> if necessary.
-            </p>
-          </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot the position functions for you and the shark on the same graph. Be sure that your position graph includes your 50 m head start. Adjust your plot so 
+            that you can see the moment that the shark catches up to you.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You may wish to specify colours for each function so that you can tell which function is which.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Determine the time that the shark catches up to you. Solve for when the position function of the shark is equal to your position function.
             <idx><h>solving equations</h><h>solve</h></idx>
             <idx><h>solving equations</h><h>fsolve</h></idx>
-        </p>
-      </li>
-      <li>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            In this question, you are solving for time, <m>t</m>. You can try using the <c>solve()</c> command first, then change it to <c>fsolve()</c> if necessary.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the shark's position at this time and determine the position of the shark when it will catch you. Will you have make it to the shore safely?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Since you start <m>50</m> m ahead of the shark (<m>d(0)=50</m>),
-          add the <m>50</m> m to your distance function and set this equal to the distance function for the shark.
-          Solve this equation to find the total time required for the shark to catch up to you.
-          <aside>
-            <p>
-              For convenience,
-              we will let the shark's initial position be <m>0</m> m and your initial position be <m>50</m> m.
-              This means the shore is at a position of <m>70</m> m.
-            </p>
-          </aside>
+          Instead of swimming, let's suppose you hop on your board and surf the nearest wave away from the shark. The wave accelerates you at <m>2</m> m/s<m>^2</m> 
+          initially up to a top speed of <m>4</m> m/s.
         </p>
-      </li>
-      <li>
-        <p>
-          Plug this time into the shark's distance formula to determine the distance the shark travels while it is pursuing you.
-          Will you make it to the shore safely?
-          Explain your answer in a new paragraph.
-          <aside>
-            <p>
-              You may wish to specify colours for each function so that you can tell which function is which.
-            </p>
-          </aside>
-        </p>
-      </li>
-      <li>
-        <p>
-          Plot the distance functions for you and the shark on the same graph.
-          Be sure to include your <m>50</m> m head start in your distance function.
-          Adjust your plot so that you can see the moment that the shark catches up to you.
-        </p>
-      </li>
-      <li>
-        <p>
-          Instead of swimming,
-          let's suppose you surf the nearest wave away from the shark,
-          accelerating you at <m>2</m> m/s<m>^2</m>.
-          Starting from rest,
-          the wave accelerates you to a top speed of <m>4</m> m/s.
-          Define a new piecewise function and assign it to <m>surfvelocity(t)</m>.
-          Repeating your previous steps,
-          determine the distance that the shark must travel before it catches you.
-          Will you make it to the shore safely?
-          <aside>
-            <p>
-              In this case,
-              your surfing velocity function will be similar to the shark's velocity function.
-            </p>
-          </aside>
-        </p>
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Define a new piecewise function for the velocity of surfing the way and assign it to <m>surfvelocity(t)</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The piecewise function for your surfing velocity will be similar to the one you set up for the shark in exercise <xref ref="ex_sharkvelocity"/>.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Repeating the steps from a previous exercise, determine the position of the shark when it will catch you. Will you make it to the shore safely?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>
