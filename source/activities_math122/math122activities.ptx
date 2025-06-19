@@ -21,7 +21,7 @@
   <xi:include  href="act_applications_of_ftc.ptx"/>
   <xi:include  href="act_average_value_of_function.ptx"/>
   <xi:include  href="act_shark_attack.ptx"/>
-  <xi:include  href="act_area_problem.ptx"/>
+  <xi:include  href="act_areas_between_curves.ptx"/>
   <xi:include  href="act_volumes_of_revolution.ptx"/>
   <xi:include  href="act_golden_gate_bridge_problem.ptx"/>
   <xi:include  href="act_infinite_integrals.ptx"/>
