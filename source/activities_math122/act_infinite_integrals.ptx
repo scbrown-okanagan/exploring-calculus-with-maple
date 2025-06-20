@@ -1,148 +1,139 @@
 <section xml:id="sec_infinite_integrals">
   <title>Infinite Integrals</title>
-  <introduction>
-    <p>
-          <idx><h>integral</h><h>improper</h></idx>
-    </p>
-  </introduction>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:plotting_functions}, pg.
-          <xref ref="chp_plotting_functions"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:assignment_operator}, pg.
-          <xref ref="chp_assignment_operator"></xref>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:definite_and_indefinite_Integrals}, pg.
-          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_plotting_functions" text="title" /></li>
+        <li><xref ref="chp_assignment_operator" text="title" /></li>
+        <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      Infinite integrals are used in a variety of applications,
-      including finding solutions to differential equations by way of the Laplace transform.
-      Infinite integrals can be challenging to evaluate by hand,
-      but in this activity we will see that Maple can handle infinite integrals easily.
+      Infinite integrals are used in a variety of applications, including finding solutions to differential equations by way of the 
+      Laplace transform. Infinite integrals can be challenging to evaluate by hand, but in this activity you will see that Maple can 
+      handle infinite integrals easily.
+      <idx><h>integral</h><h>improper</h></idx>
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
-        <ol>
-          <li>
-            <p>
-              Define the function <m>f(x) = \dfrac{1}{\sqrt{2-x}}</m> in Maple.
-              <aside>
-                <p>
-                  Don't forget to use <c>sqrt()</c> when defining this function.
-                </p>
-              </aside>
-            <idx><h>mathematical functions</h><h>square root</h></idx>
-            </p>
-          </li>
-          <li>
-            <p>
-              Plot <m>f(x)</m>.
-            <idx><h>plot</h><h></h></idx>
-        </p>
-          </li>
-          <li>
-            <p>
-              Evaluate the integral <m>\displaystyle\int_{-\infty}^{-1} f(x) dx</m>.
-            <idx><h>integral</h><h></h></idx>
-        </p>
-          </li>
-        </ol>
-        <aside>
-          <p>
-            It is important to check that the function does not have any points of discontinuity before you integrate.
-          </p>
-        </aside>
-      </li>
-      <li>
-        <ol>
-          <li>
-            <p>
-              Define the function <m>g(x) = x{ e}^{-x^2}</m> in Maple.
-              <aside>
-                <p>
-                  Don't forget to use <c>exp()</c> when defining this function.
-                </p>
-              </aside>
-            </p>
-          </li>
-          <li>
-            <p>
-              Plot <m>g(x)</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Evaluate the integral <m>\displaystyle\int_{-\infty}^{\infty} g(x) dx</m>.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li>
-        <ol>
-          <li>
-            <p>
-              Define the function <m>h(x) = \dfrac{\ln x}{x}</m> in Maple.
-            </p>
-          </li>
-          <li>
-            <p>
-              Plot <m>h(x)</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Evaluate the integral <m>\displaystyle\int_{1}^{\infty} h(x) dx</m>.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          The Laplace transform for a function <m>J(t)</m> is given by the improper integral
-          <me>
-            F(s) = \displaystyle\int_{0}^{\infty} J(t){ e}^{-st} dt
-          </me>.
-          <ol>
-            <li>
-              <p>
-                We will assume that <m>s</m> is positive.
-                You will need to type <c>assume(s, positive)</c> on a new line so that Maple will understand this assumption.
-            <idx><h>assume</h></idx>
-        <aside>
-                  <p>
-                    In your output,
-                    <m>s\!\sim</m> means that <m>s</m> is now assumed to be a positive value.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                Evaluate the Laplace transform of <m>J(t) = t</m>.
-              </p>
-            </li>
-          </ol>
+          Assign the function <m>r(x) = \dfrac{1}{\sqrt{2-x}}</m> using the assignment operator, <c>:=</c>.
+          <idx><h>mathematical functions</h><h>square root</h></idx>
         </p>
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+             Plot <m>r(x)</m>.
+             <idx><h>plot</h><h></h></idx>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the integral <m>\displaystyle\int_{-\infty}^{-1} r(x) dx</m>.
+            <idx><h>integral</h><h></h></idx>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Assign the function <m>g(x) = x{ e}^{-x^2}</m> in Maple.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot <m>g(x)</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The exponential function, <m>{ e}^x</m>, in Maple may be typed as <c>exp(x)</c>. You may also use the palette toolbar to use the proper <m>e</m>.
+            You may not simply type the letter `e` for the natural exponential function.
+            <idx><h>mathematical functions</h><h>exponential</h></idx>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the integral <m>\displaystyle\int_{-\infty}^{\infty} g(x) dx</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Assign the function <m>h(x) = \dfrac{\ln x}{x}</m> in Maple.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot <m>h(x)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the integral <m>\displaystyle\int_{1}^{\infty} h(x) dx</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          The Laplace transform of a function <m>f(t)</m> is an integral operation given by
+          <men xml:id="eq_laplace">
+            \mathcal{L}\lbrace f \rbrace(s) = \displaystyle\int_{0}^{\infty} f(t){ e}^{-st} dt
+          </men>. Note that this integral involves the integrating variable, <m>t</m>, as well as a second variable, <m>s</m>. 
+          The result after the definite integral is a function of <m>s</m>, assuming that the integral is convergent.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            You will need to begin by telling Maple to assume that <m>s</m> is a positive real number (as opposed to a complex number). To do 
+            this, run the following command on a new line: 
+          </p>
+          <console prompt="> ">
+            <input>assume(s, positive)</input>
+          </console>
+          <p>
+            Maple will now assume that <m>s</m> can only be a real-valued variable. However, it defaults to showing this assumption by 
+            outputting a tilde character <m>\sim</m> whenever the variable shows up in output. You can hide assumptions on variables by 
+            running a second command:
+            <idx><h>assume</h></idx>
+          </p>
+          <console prompt="> ">
+            <input>interface(showassumed=0);</input>
+          </console>
+          <p>
+            Run both of these commands so that you can evaluate the Laplace transform in part (b).
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the Laplace transform of <m>f(t) = t</m> using the integral in equation <xref ref="eq_laplace"/>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>
