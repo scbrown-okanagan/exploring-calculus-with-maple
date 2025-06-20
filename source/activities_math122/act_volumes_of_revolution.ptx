@@ -5,6 +5,7 @@
     <p>
       Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
       <ul>
+        <li><xref ref="chp_plotting_functions" text="title" /></li>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
         <li><xref ref="chp_implicit_functions" text="title" /></li>
         <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
@@ -62,106 +63,117 @@
         </hint>
       </task>
     </exercise>
-  </exercises>
-  <!--TODO: Switch order of next two exercises. Make disks/washers one use int() or Int() command. Make the other use only the tutor
-  with an option task if students know the shells method -->
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
+    <exercise>
+      <introduction>
         <p>
-          Suppose that the region between the curves <m>f(x)</m> and <m>g(x)</m>,
-          with <m>x \geq 0</m>,
-          is revolved around the line <m>x=\pi</m> to obtain a solid.
-          <ol>
-            <li>
-              <p>
-                Using the <c>Int()</c> command,
-                calculate the volume of revolution.
-              </p>
-            </li>
-            <li>
-              <p>
-                Use the Volume of Revolution Tutor to plot the solid and confirm your answer in part (a).
-                <aside>
-                  <p>
-                    An example of using the Volume of Revolution Tutor can be found on <xref ref="sec_volume_of_revolution_tutor">page</xref>.
-                  </p>
-                </aside>
-              </p>
-            </li>
-          </ol>
+          In this exercise,  you will determine the volume of the solid obtained by revolving the region between the curves <m>f(x)</m> and 
+          <m>g(x)</m> (with <m>x \geq 0</m>) around the horizontal line <m>y=-4</m>.
         </p>
-      </li>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Using the <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands, calculate the volume of revolution using the washer 
+            method.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the Volume of Revolution Tutor to plot the solid and confirm your answer in part (a).
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Suppose that the region between the curves <m>f(x)</m> and <m>g(x)</m>,
-          with <m>x \geq 0</m>,
-          is revolved around the line <m>y=-4</m> to obtain a solid.
-          <ol>
-            <li>
-              <p>
-                Use the Volume of Revolution Tutor to calculate the volume of the solid.
-                Before closing the tutor, copy the text at the bottom
-                (in the Maple Command box).
-                <aside>
-                  <p>
-                    You will need to include the <c>Student[Calculus1]</c> package by typing <c>with(Student[Calculus1]):</c> on a new line before the <c>VolumeOfRevolution()</c> command will work.
-                  </p>
-                </aside>
+          In this exercise,  you will determine the volume of the solid obtained by revolving the region between the curves <m>f(x)</m> and 
+          <m>g(x)</m> (with <m>x \geq 0</m>) around the vertical line <m>x=\pi</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            (Optional) If you are familiar with method of cylindrical shells, use this method to calculate the volume of the solid using the 
+            <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the Volume of Revolution Tutor to calculate the volume of the solid. Before closing the tutor, copy the text at the bottom 
+            (in the Maple Command box).
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Paste this command onto a new line and change <c>'output'=plot</c> to <c>'output'=value</c> to output the volume of the resulting solid.
             <idx><h>volume of revolution</h><h>VolumeOfRevolution</h></idx>
-              </p>
-            </li>
-            <li>
-              <p>
-                Paste this command onto a new line and change <c>'output'=plot</c> to <c>'output'=value</c> to output the volume of the resulting solid.
             <idx><h>volume of revolution</h><h>VolumeOfRevolution!output options</h></idx>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-      <li>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You will need to include the <c>Student[Calculus1]</c> package by typing <c>with(Student[Calculus1]):</c> on a new line before the 
+            <c>VolumeOfRevolution()</c> command will work.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
           Suppose you want to find the volume of an egg that has an elliptical shape defined in the <m>xy</m>-plane by <m>\dfrac{x^2}{2}+y^2=1</m>.
-          <ol>
-            <aside>
-              <p>
-                Don't forget to include the <c>plots</c> package before using <c>implicitplot()</c>.
-              </p>
-            </aside>
-            <li>
-              <p>
-                Plot the curve using the <c>implicitplot()</c> command.
-                <aside>
-                  <p>
-                    When plotting the ellipse, it may initially look like a circle.
-                    This is because Maple does not use the same scaling for each axis.
-                    Try clicking on the plot and using the <image width="50%" source="images/1-1.png"/> button in the top menu.
-                  </p>
-                </aside>
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot the curve using the <c>implicitplot()</c> command.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Don't forget to include the <c>plots</c> package before using <c>implicitplot()</c>.
             <idx><h>packages</h><h>plots</h></idx>
-              </p>
-            </li>
-            <li>
-              <p>
-                Solve the equation of the curve for <m>y</m> to get the equations of the top and bottom halves of the ellipse.
-              </p>
-            </li>
-            <li>
-              <p>
-                Find the <m>x</m>-intercepts of this ellipse.
-              </p>
-            </li>
-            <li>
-              <p>
-                Use the Volume of Revolution Tutor or the <c>Int()</c> command to calculate the area of the solid obtained by revolving the top half of the ellipse about the <m>x</m>-axis.
+          </p>
+        </hint>
+        <hint>
+          <p>
+            When plotting the ellipse, it may initially look like a circle. This is because Maple does not use the same scaling for each axis. Try 
+            clicking on the plot and using the <m>1:1</m> button in the top menu.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Solve the equation of the curve for <m>y</m> to get the equations of the top and bottom halves of the ellipse.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the <m>x</m>-intercepts of this ellipse.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the Volume of Revolution Tutor or your choice of either the <c>int()</c> or <c>Int()</c> commands to calculate the volume of the solid 
+            obtained by revolving the top half of the ellipse about the <m>x</m>-axis.
             <idx><h>integral</h><h>Int</h></idx>
-        </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-    </ol>
-  </subsection>
+            <idx><h>integral</h><h>int</h></idx>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>

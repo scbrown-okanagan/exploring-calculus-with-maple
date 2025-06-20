@@ -23,7 +23,7 @@
   <xi:include  href="act_shark_attack.ptx"/>
   <xi:include  href="act_areas_between_curves.ptx"/>
   <xi:include  href="act_volumes_of_revolution.ptx"/>
-  <xi:include  href="act_golden_gate_bridge_problem.ptx"/>
+  <xi:include  href="act_arc_length_golden_gate.ptx"/>
   <xi:include  href="act_infinite_integrals.ptx"/>
   <xi:include  href="act_probability.ptx"/>
   <xi:include  href="act_motion_of_a_mass_connected_to_a_spring.ptx"/>

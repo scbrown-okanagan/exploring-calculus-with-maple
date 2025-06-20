@@ -1,0 +1,227 @@
+<section xml:id="sec_golden_gate_bridge_problem">
+  <title>Arc Length and The Golden Gate Bridge Problem</title>
+  <subsection>
+    <title>Recommended Tutorials:</title>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_plotting_functions" text="title" /></li>
+        <li><xref ref="chp_equation_solvers" text="title" /></li>
+        <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Introduction:</title>
+    <p>
+      Arc length is the distance between two points along a section of a curve. If this curve can be represented by a function <m>y=f(x)</m>,
+      then we can calculate the length of this curve from <m>x=a</m> to <m>x=b</m> with the formula
+      <men xml:id="eq_arclength">
+        L = \displaystyle\int_{a}^b \sqrt{1 + [f^{\prime}(x)]^2}\, dx
+      </men>.
+      <idx><h>arc length</h></idx>
+      In this activity, you will determine the arc length of a variety of functions and curves. You can then apply equation 
+      <xref ref="eq_arclength"/> above to determine the length of the cable that holds up the Golden Gate Bridge.
+    </p>
+  </subsection>
+  <exercises>
+    <exercise>
+      <introduction>
+        <p>
+          Begin by assigning the function <m>f(x) = \cos(\sin(x))</m> using the assignment operator, <c>:=</c>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot the graph of the function.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Determine the arc length of this curve between the points <m>(0,1)</m> and <m>(\pi,1)</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Remember that you must type <c>Pi</c> in Maple for <m>\pi</m>, or use the palettes toolbar.
+            <idx><h>Pi</h></idx>
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Consider the curve <m>y^2 = x^3</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot the graph of the curve using <c>implicitplot()</c>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Since this is an implicit curve, you will need to ensure that you have loaded the <c>plots</c> package. You can do this with 
+            the command <c>with(plots)</c>. It is typically a good idea to load packages at the top of your worksheet.
+            <idx><h>packages</h><h>plots</h></idx>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Solve the equation of the curve for <m>y</m> to get the equations of the top and bottom halves of the curves as functions.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Determine the arc length of this curve between the points <m>(1,1)</m> and <m>(4,8)</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          Consider the function <m>x = \frac{1}{3}\sqrt{y}\,(y-3)</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Plot the graph of the function. Since <m>x</m> is defined as a function of <m>y</m>, you may require plotting 
+            the equation of the curve using <c>implicitplot()</c>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            You may need to include multiplication between <m>\sqrt{y}</m> and <m>(y-3)</m> in the equation of this curve.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Determine the arc length of this curve for <m>1 \leq y \leq 9</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            In this exercise, since <m>x</m> is a function of <m>y</m>, equation <xref ref="eq_arclength"/> should be an integral 
+            in terms of <m>y</m>.
+          </p>
+        </hint>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+          The main span of the Golden Gate Bridge is 1280 metres long, as shown in <xref ref="fig_goldengate">Figure</xref>. The top 
+          of each of the towers is 230 metres above the surface of the water. Letting the <m>x</m>-axis be the surface of the water and 
+          the <m>y</m>-axis be at the centre of the bridge, you may assume that the Golden Gate Bridge cable takes the shape of a 
+          catenary over the main span with its lowest point at <m>(0,70)</m>, corresponding to a height of 70 metres above the water. 
+        </p>
+        <p>
+          The general form for a catenary passing through its lowest point at <m>(0,k)</m> is
+          <men xml:id="eq_catenary">
+            g(x) = a\left(\cosh\left(\tfrac{x}{a}\right)-1\right)+k
+          </men>,
+          or equivalently,
+          <me>
+            g(x) = a\left(\frac{{ e}^{x/a} + { e}^{-x/a}}{2}-1\right)+k
+          </me>.
+        </p>
+        <figure xml:id="fig_goldengate">
+          <caption>The approximate dimensions of the Golden Gate Bridge.</caption>
+          <image source="images/goldengate.png"/>
+        </figure>
+        <p>
+          In this exercise, you will determine the length of the main span cable (between the two towers).
+        </p>
+        <aside>
+          <p>
+            A catenary is a curve that an idealized hanging chain or cable assumes under its own weight when supported only at its ends.
+          </p>
+          <p>
+            Equation <xref ref="eq_catenary"/> makes use of the hyperbolic trigonometric functions, <m>\cosh()</m> and <m>\sinh()</m>. These 
+            functions are analogs of the ordinary circul trigonometricfunctions; just as the points <m>(\cos(t), \sin(t))</m> form a circle 
+            with a unit radius, the points <m>(\cosh(t), \sinh(t))</m> form the right half of the equilateral hyperbola.
+            <idx><h>mathematical functions</h><h>hyperbolic functions!sinh</h></idx>
+            <idx><h>mathematical functions</h><h>hyperbolic functions!cosh</h></idx>
+          </p>
+        </aside>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Using equation <xref ref="eq_catenary"/> and the points provided in <xref ref="fig_goldengatesimple">Figure</xref>, assign the proper
+            value to <m>k</m>. 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the coordinates of the top of one of the towers from <xref ref="fig_goldengatesimple">Figure</xref>, as well as the <c>fsolve()</c> 
+            command to determine the value of <m>a</m> for this catenary. Assign this value to <m>a</m>.
+            <idx><h>solving equations</h><h>fsolve</h></idx>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Recall that the centre of the bridge deck is at the coordinates <m>(0,70)</m>. The catenary should look something like the figure below.
+          </p>
+          <image>
+            <latex-image> 
+              \begin{tikzpicture}
+                \begin{axis}[ 
+                  width=6cm, height=5cm,
+                  axis lines=middle,
+                  xlabel={\(x\)}, ylabel={\(y\)},
+                  xlabel style={below right},
+                  ylabel style={above left},
+                  xmin=-800, xmax=800, xtick={-640,0,640},
+                  ymin=0, ymax=300, ytick={0,70,230}, yticklabels={}
+                ] 
+                  \addplot [domain=-640:640, samples=100] {1305.828246*cosh(0.0007657974952*x) - 1235.828246};
+                  \addplot [domain=-800:800, samples=100] {70};
+                  \addplot[mark=*] coordinates {(-640,230)};
+                  \draw(axis cs:-640,230) node [above right] {\((-640,230)\)};
+                  \addplot[mark=*] coordinates {(640,230)};
+                  \draw(axis cs:640,230) node [above left] {\((640,230)\)};
+                  \addplot[mark=*] coordinates {(0,70)};
+                  \draw(axis cs:0,70) node [below] {\((0,70)\)};
+                  \draw [dashed] (axis cs:-640,0) -- (axis cs:-640,230);
+                  \draw [dashed] (axis cs:640,0) -- (axis cs:640,230);
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Using your assigned values of <m>k</m> and <m>a</m>, assign the function in <xref ref="eq_catenary"/> and determine the length of one 
+            of the cables for the main span.
+          </p>
+        </statement>
+      </task>
+      <conclusion>
+        <p>
+          Interesting facts: The Golden Gate Bridge cable is almost a catenary and almost a parabola, but not quite either (because of the weight 
+          of the cables, the suspender ropes, and the roadway). The actual cable length is 2,332 metres, from shore to shore. The main cables of the 
+          Golden Gate Bridge are nearly one metre in diameter (actually, 0.91 metres) and the total length of galvanized steel wire used in both 
+          main cables is 129,000 km.
+        </p>
+      </conclusion>
+    </exercise>
+  </exercises>
+</section>
