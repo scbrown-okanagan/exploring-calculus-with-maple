@@ -124,26 +124,16 @@
       <introduction>
         <p>
           The main span of the Golden Gate Bridge is 1280 metres long, as shown in <xref ref="fig_goldengate">Figure</xref>. The top 
-          of each of the towers is 230 metres above the surface of the water. Letting the <m>x</m>-axis be the surface of the water and 
-          the <m>y</m>-axis be at the centre of the bridge, you may assume that the Golden Gate Bridge cable takes the shape of a 
-          catenary over the main span with its lowest point at <m>(0,70)</m>, corresponding to a height of 70 metres above the water. 
-        </p>
-        <p>
-          The general form for a catenary passing through its lowest point at <m>(0,k)</m> is
-          <men xml:id="eq_catenary">
-            g(x) = a\left(\cosh\left(\tfrac{x}{a}\right)-1\right)+k
-          </men>,
-          or equivalently,
-          <me>
-            g(x) = a\left(\frac{{ e}^{x/a} + { e}^{-x/a}}{2}-1\right)+k
-          </me>.
+          of each of the towers is 230 metres above the surface of the water. 
         </p>
         <figure xml:id="fig_goldengate">
           <caption>The approximate dimensions of the Golden Gate Bridge.</caption>
           <image source="images/goldengate.png"/>
         </figure>
         <p>
-          In this exercise, you will determine the length of the main span cable (between the two towers).
+          Letting the <m>x</m>-axis be the surface of the water and the <m>y</m>-axis be at the centre of the bridge, you may assume 
+          that the Golden Gate Bridge cable takes the shape of a catenary over the main span with its lowest point at <m>(0,70)</m>, 
+          corresponding to a height of 70 metres above the water. 
         </p>
         <aside>
           <p>
@@ -157,28 +147,22 @@
             <idx><h>mathematical functions</h><h>hyperbolic functions!cosh</h></idx>
           </p>
         </aside>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-            Using equation <xref ref="eq_catenary"/> and the points provided in <xref ref="fig_goldengatesimple">Figure</xref>, assign the proper
-            value to <m>k</m>. 
-          </p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Use the coordinates of the top of one of the towers from <xref ref="fig_goldengatesimple">Figure</xref>, as well as the <c>fsolve()</c> 
-            command to determine the value of <m>a</m> for this catenary. Assign this value to <m>a</m>.
-            <idx><h>solving equations</h><h>fsolve</h></idx>
-          </p>
-        </statement>
-        <hint>
-          <p>
-            Recall that the centre of the bridge deck is at the coordinates <m>(0,70)</m>. The catenary should look something like the figure below.
-          </p>
-          <image>
+        <p>
+          The general form for a catenary passing through its lowest point at <m>(0,k)</m> is
+          <men xml:id="eq_catenary">
+            g(x) = a\left(\cosh\left(\tfrac{x}{a}\right)-1\right)+k
+          </men>,
+          or equivalently,
+          <me>
+            g(x) = a\left(\frac{{ e}^{x/a} + { e}^{-x/a}}{2}-1\right)+k
+          </me>.
+        </p>
+        <p>
+          This gives a more simplistic model of the main span cable, as shown in <xref ref="fig_goldengatesimple"/>.
+        </p>
+        <figure xml:id="fig_goldengatesimple">
+          <caption>A catenary model of the main span cable.</caption> 
+          <image width="60%">
             <latex-image> 
               \begin{tikzpicture}
                 \begin{axis}[ 
@@ -204,7 +188,27 @@
               \end{tikzpicture}
             </latex-image>
           </image>
-        </hint>
+        </figure>
+        <p>
+          In this exercise, you will determine the length of the main span cable (between the two towers).
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Using equation <xref ref="eq_catenary"/> and the points provided in <xref ref="fig_goldengatesimple">Figure</xref>, assign the proper
+            value to <m>k</m>. 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the coordinates of the top of one of the towers from <xref ref="fig_goldengatesimple">Figure</xref>, as well as the <c>fsolve()</c> 
+            command to determine the value of <m>a</m> for this catenary. Assign this value to <m>a</m>.
+            <idx><h>solving equations</h><h>fsolve</h></idx>
+          </p>
+        </statement>
       </task>
       <task>
         <statement>
