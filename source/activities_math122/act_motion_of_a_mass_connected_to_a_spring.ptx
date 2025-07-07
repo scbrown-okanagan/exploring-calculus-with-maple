@@ -2,58 +2,41 @@
   <title>Motion of a Mass Connected to a Spring</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:differential_equations}, pg.
-          <xref ref="chp_differential_equations"></xref>
-            <idx><h>differential equations</h><h></h></idx>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_differential_equations" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
-    <aside>
-      <p>
-        <image width="50%" source="images/mass_spring.png"/>
-      </p>
-    </aside>
     <p>
-      According to Hooke's law (<m>F=-kx</m>) and Newton's second law (<m>F=ma</m>),
-      the differential equation for the motion of a mass (<m>m</m>) on the end of a spring is
-      <me>
-        m \frac{d^2x}{dt^2}=-kx
-      </me>,
+      According to Hooke's law (<m>F=-kx</m>) and Newton's second law (<m>F=ma</m>), the differential equation for the motion 
+      of a mass (<m>m</m>) on the end of a spring is
+      <me>m \frac{d^2x}{dt^2}=-kx</me>,
+      where <m>k</m> is the spring constant (a measure of the stiffness of the spring). This equation assumes no damping (resistance).
+      The displacement of the mass from equilibrium is denoted by <m>x</m>, and thus <m>\frac{dx}{dt}</m> is the velocity, and 
+      <m>\frac{d^2x}{dt^2}</m> is the acceleration.
+      <idx><h>differential equations</h><h>hooke's law</h></idx>
     </p>
+    <figure xml:id="fig_mass_spring">
+      <caption>A simple mass-spring system.</caption>
+      <image width="50%" source="images/mass_spring.png"/>
+    </figure>
     <p>
-          <idx><h>differential equations</h><h>hooke's law</h></idx>
-      where <m>k</m> is the spring constant (a measure of the stiffness of the spring).
-      This equation assumes no damping
-      (resistance).
-      The displacement of the mass from equilibrium is denoted by <m>x</m>,
-      and thus <m>\frac{dx}{dt}</m> is the velocity,
-      and <m>\frac{d^2x}{dt^2}</m> is the acceleration.
-    </p>
-    <p>
-      If we add damping (resistance) to the spring,
-      then the damping is opposite the direction of the motion and proportional to the velocity.
-      Therefore we have the equation,
-      <me>
-        m \frac{d^2x}{dt^2}=-kx-c\frac{dx}{dt}
-      </me>,
+      If we add damping (resistance) to the spring, then the damping is opposite the direction of the motion and proportional to 
+      the velocity. Therefore we have the equation,
+      <me>m \frac{d^2x}{dt^2}=-kx-c\frac{dx}{dt}</me>,
       where <m>c</m> is the damping constant.
     </p>
     <p>
-      For the exercises,
-      we will assume that the mass is <m>m=2</m>-kg and the spring constant is <m>k=3</m> kg/s<m>^2</m>.
-      We will look at the equation of motion with no damping (<m>c=0</m>),
-      overdamping (<m>c=4</m> kg/s), and underdamping
+      In the following exercises, you will assume that the mass is <m>m=2</m> kg and the spring constant is <m>k=3</m> kg/s<m>^2</m>.
+      You will look at the equation of motion with no damping (<m>c=0</m>), overdamping (<m>c=4</m> kg/s), and underdamping 
       (<m>c=0.5</m> kg/s).
     </p>
     <p>
-      In all cases,
-      we will use the initial conditions <m>x(0)=1</m> m and <m>x'(0)=-1</m> m/s.
+      In all cases, you will use the initial conditions <m>x(0)=1</m> m and <m>x'(0)=-1</m> m/s.
     </p>
   </subsection>
   <subsection>
