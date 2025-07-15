@@ -1,12 +1,9 @@
-<section xml:id="sec_deleting_intputs">
+<section xml:id="sec_deleting_inputs">
   <title>Deleting Inputs</title>
-  <aside>
-    <p>
-      It's a good habit to delete unnecessary Maple inputs.
-    </p>
-  </aside>
   <p>
-    Delete a section of Maple Input or Text using Ctrl+Delete.
-    You will notice that hitting backspace will not delete a section by default.
+    Delete a section of Maple Input or Text using Ctrl+Delete. You will notice that hitting backspace will not delete a section by default.
+  </p>
+  <p>
+    It's a good habit to delete unnecessary Maple inputs.
   </p>
 </section>

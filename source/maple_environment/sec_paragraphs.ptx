@@ -1,19 +1,18 @@
 <section xml:id="sec_paragraphs">
   <title>Paragraphs</title>
-  <aside>
+  <!--<aside>
     <p>
       <image width="50%" source="images/InsertParagraph.png"/>
     </p>
-  </aside>
+  </aside>-->
   <p>
-    <em>Paragraphs</em> are used for text,
-    rather than for computation.
-    Hitting Enter simply creates a new line of text and does not try to display a result.
+    <em>Paragraphs</em> are used for text, rather than for computation. Hitting Enter simply creates a new line of text and does not try to display a result.
     <ul>
       <li>
         <p>
-          Create new text after the current line with the <image width="4%" source="images/new_text.png"/> button.
+          Create new text after the current line with the button in the top insert menu.
         </p>
+        <image width="4%" source="images/new_text.png"/>
       </li>
       <li>
         <p>

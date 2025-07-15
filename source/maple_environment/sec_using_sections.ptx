@@ -5,16 +5,19 @@
     At the top of a section, you can create a section title.
     An arrow to the left of the title will allow you to expand or collapse that section.
     Subsections may be created inside other sections.
+  </p>
+  <aside>
+    <p>
+      You may wish to highlight several execution groups or paragraphs with the mouse before combining them into one section.
+    </p>
+  </aside>
+  <p>
     <ul>
-      <aside>
-        <p>
-          You may wish to highlight several execution groups or paragraphs with the mouse before combining them into one section.
-        </p>
-      </aside>
       <li>
         <p>
-          Use the <image width="10%" source="images/new_section.png"/> buttons to create or remove sections.
+          Use the buttons in the top toolbar to create or remove sections.
         </p>
+        <image width="10%" source="images/new_section.png"/>
       </li>
       <li>
         <p>

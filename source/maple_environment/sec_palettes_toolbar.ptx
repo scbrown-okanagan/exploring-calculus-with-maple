@@ -5,19 +5,19 @@
   </p>
   <figure>
     <caption>Opening and closing the palettes toolbar.</caption>
-    \adjincludegraphics[width=0.495\textwidth]{tutorials/figures/palettes1.png}\hspace{.2cm}
-    \adjincludegraphics[width=0.505\textwidth]{tutorials/figures/palettes2.png}
+    <sidebyside widths = "45% 45%" margins="auto" valign="middle">
+      <image source="images/palettes1.png"/>
+      <image source="images/palettes2.png"/>
+    </sidebyside>
   </figure>
   <p>
-    With the palettes toolbar open,
-    you can see several palettes that are available.
+    With the palettes toolbar open, you can see several palettes that are available.
     These can be used to quickly access common operations and procedures by clicking on the appropriate buttons.
     Each palette can be expanded or closed.
     The Expression palette is especially useful for common functions.
   </p>
-  <aside>
-    <p>
-      \adjincludegraphics[scale=0.6,trim={0 {.3\height} 0 0},clip]{tutorials/figures/palettes3.png}
-    </p>
-  </aside>
+  <figure>
+    <caption>Many common functions and operations can be in the Expression and Calculus pallettes.</caption>
+    <image width="40%" source="images/palettes3.png"/>
+  </figure>
 </section>

@@ -1,10 +1,8 @@
 <section xml:id="sec_execution_groups">
   <title>Execution Groups</title>
   <p>
-    Maple input is used for computations and must use recognizable commands.
-    Maple output gives the result of the computation after hitting the Enter key.
-    Together, Maple input and output are called an
-    <em>execution group</em>.
+    Maple input is used for computations and must use recognizable commands. Maple output gives the result of the 
+    computation after hitting the Enter key. Together, Maple input and output are called an <em>execution group</em>.
     <ul>
       <li>
         <p>
@@ -27,9 +25,9 @@
   <p>
     Maple input is preceded by the <m>></m> character (sometimes called a "carrot"). Maple output is displayed in the centre of the following line.
   </p>
-  <aside>
+  <!--<aside>
     <image width="50%" source="images/InsertInput.png"/>
-  </aside>
+  </aside>-->
   <console prompt="> ">
     <input>2 + 2;</input>
   </console>
@@ -39,15 +37,11 @@
   </console>  
   <p><me>4</me></p>
   <p>
-    If at any point you wish to correct a previous Maple input line,
-    you may simply go back to that line and modify it.
-    However, there will be no change to the output until you hit Enter.
-    You do not need to be at the end of the line in order to run it.
+    If at any point you wish to correct a previous Maple input line, you may simply go back to that line and modify it.
+    However, there will be no change to the output until you hit Enter. You do not need to be at the end of the line in order to run it.
   </p>
   <p>
-    You may wish to have more than one calculation or command on a single Maple input.
-    For more information on this,
-    see <xref ref="chp_basics_of_maple_syntax">Tutorial</xref>
-    on <xref ref="chp_basics_of_maple_syntax">page</xref>.
+    You may wish to have more than one calculation or command on a single Maple input. For more information on this,
+    see <xref ref="chp_basics_of_maple_syntax" text="title"/>.
   </p>
 </section>
