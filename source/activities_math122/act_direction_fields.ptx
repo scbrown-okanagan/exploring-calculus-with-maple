@@ -1,183 +1,159 @@
 <section xml:id="sec_direction_fields">
-  <title>Direction Fields</title>
+  <title>Direction Fields for Populations</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:differential_equations}, pg.
-          <xref ref="chp_differential_equations"></xref>
-            <idx><h>differential equations</h></idx>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_differential_equations" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
-      In this activity,
-      you will use direction fields to predict the population dynamics for a population of rabbits.
-      Suppose that you have a population of rabbits and <m>P(t)</m> is the number of rabbits at time <m>t</m>.
-    </p>
-    <aside>
-      <p>
-        You will need to include the <c>DETools</c> package to use the <c>DEplot()</c> command.
-      </p>
-    </aside>
-    <p>
-          <idx><h>differential equations</h><h>DETools</h></idx>
-          <idx><h>packages</h><h>differential equations!DETools!DEplot()</h></idx>
+      In this activity, you will use direction fields to predict the population dynamics for a population of rabbits. You will need 
+      to include the <c>DETools</c> package in your Maple worksheet to use the <c>DEplot()</c> command.
+      <idx><h>differential equations</h><h>DETools</h></idx>
+      <idx><h>packages</h><h>differential equations!DETools!DEplot()</h></idx>
     </p>
     <p>
-      We can model the population of rabbits using a basic model
+      Suppose that you have a population of rabbits and <m>P(t)</m> is the number of rabbits at time <m>t</m>. A basic model for the 
+      population of rabbits could be given as 
       <men xml:id="eq_rabbits_basic">
         \frac{dP}{dt}=\alpha P - \beta P
       </men>,
       where <m>\alpha</m> is the birth rate and <m>\beta</m> is the death rate.
     </p>
     <p>
-      Equation <xref ref="eq_rabbits_basic"/> does not consider limitations due to habitat and food supply.
-      If we wish to use a more accurate model,
-      then we can consider the logistic growth model
+      However, equation <xref ref="eq_rabbits_basic"/> does not consider limitations due to habitat and food supply. If you wish to use 
+      a more accurate model, then you may consider the logistic growth model
       <men xml:id="eq_rabbits_logistic">
         \frac{dP}{dt}= kP \left(1-\frac{P}{M}\right)
       </men>,
-      where <m>k</m> is the relative growth rate and <m>M</m> is the carrying capacity
-      (the maximum population that is sustainable).
+      where <m>k</m> is the relative growth rate and <m>M</m> is the carrying capacity (the maximum population that is sustainable).
     </p>
     <p>
-      The death rate of the rabbits
-      (due to hunting)
-      can be added to this logistic model to obtain the differential equation
+      The death rate of the rabbits (due to hunting) can be added to this logistic model to obtain the differential equation
       <men xml:id="eq_rabbits_logistic_hunted">
         \frac{dP}{dt}=kP \left(1-\frac{P}{M}\right)-bP
       </men>,
       where <m>b</m> is the hunting rate.
     </p>
     <p>
-      We will examine solutions to equations <xref ref="eq_rabbits_basic"/><ndash/><xref ref="eq_rabbits_logistic_hunted"/> using two different initial conditions:
-      <m>P(0)=1</m> and <m>P(0)=50</m>.
+      In the following exercises, you will examine solutions to equations <xref ref="eq_rabbits_basic"/><ndash/><xref ref="eq_rabbits_logistic_hunted"/> 
+      using two  different initial conditions: <m>P(0)=1</m> and <m>P(0)=50</m>.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <aside>
-      <p>
-        Remember to use <m>P(t)</m> and not just <m>P</m> in your differential equation.
-      </p>
-    </aside>
-    <ol>
-      <li>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
           Consider the basic population model in equation <xref ref="eq_rabbits_basic"/>.
-          <ol>
-            <li>
-              <p>
-                Draw the direction field using <m>\alpha=2</m> and <m>\beta=1</m>,
-                including both initial conditions given.
-              </p>
-            </li>
-            <li>
-              <p>
-                Draw the direction field using <m>\alpha=1</m> and <m>\beta=2</m>,
-                including both initial conditions given.
-              </p>
-            </li>
-            <li>
-              <p>
-                In a new paragraph in your worksheet,
-                describe what you can conclude about the importance of the death to birth rate comparison.
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-      <li xml:id="ex_rabbits_logistic">
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Draw the direction field using <m>\alpha=2</m> and <m>\beta=1</m>, including both initial conditions given.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Remember to use <m>P(t)</m> and not just <m>P</m> in your differential equation.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Draw the direction field using <m>\alpha=1</m> and <m>\beta=2</m>, including both initial conditions given.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In a new paragraph in your worksheet, describe what you can conclude about the importance of the death to birth rate comparison.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise xml:id="ex_rabbits_logistic">
+      <introduction>
         <p>
           Consider the logistic growth model in equation <xref ref="eq_rabbits_logistic"/>.
-          <ol>
-            <li>
-              <p>
-                Draw the direction field using <m>k=2</m> and <m>M=30</m>,
-                including both of the initial conditions given.
-    <idx><h>differential equations</h><h>DEplot</h></idx>
-</p>
-            </li>
-            <li>
-              <p>
-                In a new paragraph, describe what you observe about the solutions.
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Draw the direction field using <m>k=2</m> and <m>M=30</m>, including both of the initial conditions given.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In a new paragraph, describe what you observe about the solutions.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
           Consider the logistic growth model in equation <xref ref="eq_rabbits_logistic_hunted"/>.
-          <ol>
-            <li>
-              <p>
-                Draw the direction field using <m>k=2</m>, <m>M=30</m>,
-                and <m>b=1</m>, including both of the initial conditions given.
-              </p>
-            </li>
-            <li>
-              <p>
-                In a new paragraph in your worksheet,
-                describe what changed from <xref ref="ex_rabbits_logistic">exercise</xref>
-                by adding the death rate to the differential equation.
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-    </ol>
-    <p>
-      Most mammal population growth is dependent upon other species in the region,
-      via an interconnected food web.
-      One simple predator-prey model is the Lotka-Volterra model
-      <md>
-        <mrow xml:id="eq_rabbits_lotka_volterra" number="yes">\frac{dx}{dt} \amp = \alpha x-\beta xy</mrow>
-        <mrow>\frac{dy}{dt} \amp = \gamma xy-\delta y,\nonumber</mrow>
-      </md>
-    </p>
-    <aside>
-      <p>
-        Make sure you insert multiplication between <m>x(t)</m> and <m>y(t)</m> here,
-        otherwise Maple will think you want to use a variable called <m>xy</m>.
-      </p>
-    </aside>
-    <p>
-      where <m>x(t)</m> is the population of prey and <m>y(t)</m> is the population of predators.
-      In this equation, the prey grow and are eaten by predators.
-      The predators' growth depends on eating the prey and the predators have a death rate.
-    </p>
-    <ol>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Draw the direction field using <m>k=2</m>, <m>M=30</m>, and <m>b=1</m>, including both of the initial conditions given.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In a new paragraph in your worksheet, describe what changed from <xref ref="ex_rabbits_logistic">exercise</xref> by adding 
+            the death rate to the differential equation.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the Lotka-Volterra model in equation <xref ref="eq_rabbits_lotka_volterra"/>.
+          Most mammal population growth is dependent upon other species in the region, via an interconnected food web. One simple 
+          predator-prey model is the Lotka-Volterra model
+          <md>
+            <mrow xml:id="eq_rabbits_lotka_volterra" number="yes">\frac{dx}{dt} \amp = \alpha x-\beta xy</mrow>
+            <mrow>\frac{dy}{dt} \amp = \gamma xy-\delta y,\nonumber</mrow>
+          </md>
+          where <m>x(t)</m> is the population of prey and <m>y(t)</m> is the population of predators. In this equation, the prey grow and 
+          are eaten by predators. The predators' growth depends on eating the prey and the predators have a death rate.
         </p>
-        <ol>
-          <li>
-            <p>
-              Go to Tools, Tutors, Differential Equations, DE Plots,
-              select Lotka-Volterra Model, and then DEPlot.
-              If you want,
-              you can change the parameters or the initial conditions.
-              Then click quit to plot it on your Maple worksheet.
-            </p>
-          </li>
-          <li>
-            <p>
-              In a new paragraph,
-              explain what the prey and predator populations do on this direction field.
-              Notice that the prey is on the <m>x</m>-axis and the predator is on the <m>y</m>-axis of the direction field.
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Open the DE Plots Tutor from the Tools menu, under Tutors and Differential Equations. Select the Lotka-Volterra Model and click 
+            DEPlot. Try changing the parameters and the initial conditions to get a sense of how the prey population <m>x(t)</m> and predator 
+            population <m>y(t)</m> are connected. Then click quit to display a plot on your Maple worksheet.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In a new paragraph, explain what the prey and predator populations do on this direction field. Notice that the prey is on the 
+            <m>x</m>-axis and the predator is on the <m>y</m>-axis of the direction field.
             <idx><h>differential equations</h><h>DETools</h></idx>
             <idx><h>packages</h><h>differential equations!DETools!DEplot()</h></idx>
-            </p>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </subsection>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>
