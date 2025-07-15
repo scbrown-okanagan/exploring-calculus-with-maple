@@ -2,147 +2,148 @@
   <title>Series Convergence and Divergence</title>
   <subsection>
     <title>Recommended Tutorials:</title>
-    <ul>
-      <li>
-        <p>
-          \nameref{chp:definite_and_indefinite_Integrals}, pg.
-          <xref ref="chp_definite_and_indefinite_Integrals"></xref>
-            <idx><h>integral</h></idx>
-            <idx><h>integral</h><h>improper</h></idx>
-        </p>
-      </li>
-      <li>
-        <p>
-          \nameref{chp:sequence_and_sseries}, pg.
-          <xref ref="chp_sequence_and_sseries"></xref>
-            <idx><h>sequences and series</h><h></h></idx>
-        </p>
-      </li>
-    </ul>
+    <p>
+      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      <ul>
+        <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
+        <li><xref ref="chp_sequence_and_sseries" text="title" /></li>
+      </ul>
+    </p>
   </subsection>
   <subsection>
     <title>Introduction:</title>
     <p>
       An infinite series is a summation of the form
-      <me>
-        \sum_{n=0}^{\infty} a_n = a_0 + a_1 + a_2 + \dots
-      </me>.
-    </p>
-    <p>
-      For example, we can look at the geometric series
+      <me>\sum_{n=0}^{\infty} a_n = a_0 + a_1 + a_2 + \dots</me>.
+      <idx><h>sequences and series</h><h></h></idx>
+      A common type of infinite series is the geometric series, where each term in the series is obtained by multiplying 
+      the previous term by a fixed ratio, such as
       <men xml:id="eq_geometric_series">
         \sum_{n=0}^{\infty} \frac{1}{2^n} = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots
       </men>.
-    </p>
-    <p>
       To understand the result of the sum in equation <xref ref="eq_geometric_series"/>, we can add the first few terms,
-      one at a time.
+      called a partial sum. Looking at a sequence of partial sums, one at a time, may give an indication of the sum of the 
+      infinite series.
       <md>
         <mrow>1+\frac{1}{2} \amp = \frac{3}{2}</mrow>
         <mrow>1+\frac{1}{2}+\frac{1}{4} \amp = \frac{7}{4}</mrow>
         <mrow>1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8} \amp = \frac{15}{8}</mrow>
+        <mrow>1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots+\frac{1}{2^n} \amp = \frac{2^{n+1}-1}{2^n}</mrow>
       </md>
     </p>
     <p>
-      By looking at these partial sums,
-      we can see that the sum is approaching the value <m>2</m>.
-      We say that this series is <em>convergent</em>.
-      In other cases, the partial sums do not approach a finite value.
-      We say that these series are <em>divergent.</em>
+      By looking at these partial sums, we can see that the sum is approaching the value <m>2</m>. We say that this series 
+      is <em>convergent</em>. In other cases, the partial sums do not approach a finite value. We say that these series are
+      <em>divergent.</em>
       <idx><h>sequences and series</h><h>divergent</h></idx>
       <idx><h>sequences and series</h><h>convergent</h></idx>
     </p>
     <p>
-      In this activity,
-      we will use Maple to evaluate whether a series is convergent or divergent.
-      Maple will give the value of the sum for a convergent series and will give the value <m>\infty</m> or <m>-\infty</m> if the series is divergent.
-          <idx><h>infinity</h></idx>
+      In this activity, you will use Maple's <c>Sum()</c> command to quickly evaluate whether a series is convergent or divergent. 
+      Maple will give the value of the sum for a convergent series and will give the value <m>\infty</m> or <m>-\infty</m> if the 
+      series is divergent.
+      <idx><h>infinity</h></idx>
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li>
+  <exercises>
+    <exercise>
+      <introduction>
         <p>
-          For each of the following series,
-          set up the series symbolically using the <c>Sum()</c> command.
-          Then, use the <c>value(%)</c> command to evaluate the sum and determine if it converges.
-            <idx><h>sequences and series</h><h>Sum</h></idx>
-            <idx><h>value</h></idx>
-            <idx><h>ditto operator</h></idx>
-          <aside>
-            <p>
-              For (b), make sure you use "<c>Pi</c>" for <m>\pi</m> and place multiplication between the <m>n</m> and <c>Pi</c>.
-            </p>
-          </aside>
-            <idx><h>Pi</h></idx>
-          <ol>
-            <li>
-              <p>
-                <m>\displaystyle\sum_{n=0}^{\infty} \dfrac{4^n}{n!}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle\sum_{n=0}^{\infty} \sin(n\pi)\arctan(n)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle\sum_{n=1}^{\infty} \ln(n)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle\sum_{n=1}^{\infty} \dfrac{n!}{n^2}</m>
-              </p>
-            </li>
-          </ol>
+          For each of the following series, set up the series symbolically using the <c>Sum()</c> command. Then, use the <c>value(%)</c> 
+          command to evaluate the sum and determine if it converges.
+          <idx><h>sequences and series</h><h>Sum</h></idx>
+          <idx><h>value</h></idx>
+          <idx><h>ditto operator</h></idx>
         </p>
-      </li>
-    </ol>
-    <p>
-      The Integral Test for Convergence states that for a non-negative,
-      monotonically decreasing function <m>f(n)</m> and an integer <m>N</m>,
-      the infinite series
-      <me>
-        \sum_{n=N}^{\infty} f(n)
-      </me>
-      converges to a real number if and only if the improper integral
-      <me>
-        \int_N^{\infty} f(x)\,dx
-      </me>
-      is finite.
-      From this, we can also conclude that if the integral diverges,
-      then the series diverges as well.
-    </p>
-    <ol>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\displaystyle\sum_{n=0}^{\infty} \dfrac{4^n}{n!}</m>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The <m>!</m> is the factorial symbol, defined as
+            <md>
+              <mrow> n! \amp = n(n-1)(n-2)\cdots(3)(2)(1) </mrow>
+              <mrow> 0! \amp = 1 </mrow>
+            </md>.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\displaystyle\sum_{n=0}^{\infty} \sin(n\pi)\arctan(n)</m>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Make sure to use <c>Pi</c> for <m>\pi</m> (or use the palettes toolbar) and place multiplication between the <m>n</m> and <m>\pi</m>.
+            <idx><h>Pi</h></idx>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\displaystyle\sum_{n=1}^{\infty} \ln(n)</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\displaystyle\sum_{n=1}^{\infty} \dfrac{n!}{n^2}</m>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Consider the series
+          Another method for determining convergence or divergence of an infinite series is by comparing the series to a improper integral. 
+          This only applies to very specific infinite series.
+        </p>
+        <p>
+          The Integral Test for Convergence states that for a non-negative, monotonically decreasing function <m>f(n)</m> and an integer <m>N</m>,
+          the infinite series
+          <me> \sum_{n=N}^{\infty} f(n) </me>
+          converges to a real number if and only if the improper integral
+          <me> \int_N^{\infty} f(x)\,dx </me>
+          is finite. From this, we can also conclude that if the integral diverges, then the series diverges as well.
+          <idx><h>integral</h></idx>
+          <idx><h>integral</h><h>improper</h></idx>
+        </p>
+        <p>
+          In this exercise you will determine the convergence or divergence of the series
           <me>
             \sum_{n=3}^{\infty}\dfrac{3}{n^2-3n+2}
-          </me>.
+          </me>
+          using the Integral Test.
         </p>
-        <ol>
-          <li>
-            <p>
-              Graph the function <m>f(x) = \dfrac{3}{x^2-3x+2}</m> to see that the function is non-negative and monotonically decreasing over the interval <m>[3,\infty)</m>.
-              <aside>
-                <p>
-                  After plotting <m>f(x)</m>,
-                  try to think about why this series starts at <m>n=3</m>.
-                </p>
-              </aside>
-            </p>
-          </li>
-          <li>
-            <p>
-              Use the Integral Test to determine whether or not the series converges or diverges.
-            </p>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Graph the function <m>f(x) = \dfrac{3}{x^2-3x+2}</m> to see that the function is non-negative and monotonically decreasing over the 
+            interval <m>[3,\infty)</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            After plotting <m>f(x)</m>, try to think about why this series starts at <m>N=3</m>.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate the integral given in the Integral Test to determine whether or not the series converges or diverges.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>
