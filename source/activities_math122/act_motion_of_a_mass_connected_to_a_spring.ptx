@@ -39,176 +39,180 @@
       In all cases, you will use the initial conditions <m>x(0)=1</m> m and <m>x'(0)=-1</m> m/s.
     </p>
   </subsection>
-  <subsection>
-    <title>Exercises:</title>
-    <ol>
-      <li xml:id="ex_mass_spring_nodamping">
+  <exercises>
+    <exercise xml:id="ex_mass_spring_nodamping">
+      <introduction>
         <p>
           Consider the equation of motion of a <m>2</m>-kg mass attached to a spring with <m>k=3</m> kg/s<m>^2</m>.
-          <me>
-            2 x''(t) = -3 x(t)
-          </me>.
-          <ol>
-            <li>
-              <p>
-                Solve the differential equation using the given initial conditions.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the solution of the differential equation.
-                <aside>
-                  <p>
-                    The <c>rhs()</c> command may be used to refer to only the right hand side of the differential equation solution.
-                    You can use this command to assign a name to the solution.
-                  </p>
-                </aside>
-              </p>
-            </li>
-            <li>
-              <p>
-                Insert a new paragraph and describe what you observe about the motion of a mass on the spring.
-    <idx><h>differential equations</h><h>rhs()</h></idx>
-</p>
-            </li>
-          </ol>
+          <me>2 x''(t) = -3 x(t)</me>.
         </p>
-      </li>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Solve the differential equation using the given initial conditions.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the solution of the differential equation.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The <c>rhs()</c> command may be used to refer to only the right hand side of the differential equation solution. You can use this 
+            command to assign a name to the solution.
+            <idx><h>differential equations</h><h>rhs()</h></idx>
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Insert a new paragraph and describe what you observe about the motion of a mass on the spring.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
           Consider the equation of motion of a <m>2</m>-kg mass attached to a spring with <m>k=3</m> kg/s<m>^2</m> and a damping constant of <m>c=4</m> kg/s.
           This is considered <em>overdamping</em>.
-          <me>
-            2 x''(t) = -3 x(t) - 4 x'(t)
-          </me>.
-          <aside>
+          <me>2 x''(t) = -3 x(t) - 4 x'(t)</me>.
+        </p>
+        <aside>
             <p>
-              The solutions to these differential equations will be sine and cosine functions of the form
-              <me>
-                \sin(kt) \text{ and }  \cos(kt)
-              </me>.
-            </p>
-            <p>
+              Solutions to these differential equations typically involve sine and cosine functions of the form
+              <me>\sin(kt) \text{ and }  \cos(kt)</me>.
               The period <m>T</m> of these oscillations may be found using the formula
-              <me>
-                T=\frac{2\pi}{k}
-              </me>.
+              <me>T=\frac{2\pi}{k}</me>.
+              <idx><h>mathematical functions</h><h>sine</h></idx>
+              <idx><h>mathematical functions</h><h>cosine</h></idx>
             </p>
           </aside>
-            <idx><h>mathematical functions</h><h>sine</h></idx>
-            <idx><h>mathematical functions</h><h>cosine</h></idx>
-          <ol>
-            <li>
-              <p>
-                Solve the differential equation using the given initial conditions.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the solution of the differential equation.
-              </p>
-            </li>
-            <li>
-              <p>
-                Insert a new paragraph and describe what you observe about the motion of a mass on the spring with overdamping.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-      <li xml:id="ex_mass_spring_underdamping">
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Solve the differential equation using the given initial conditions.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the solution of the differential equation.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Insert a new paragraph and describe what you observe about the motion of a mass on the spring with overdamping.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise xml:id="ex_mass_spring_underdamping">
+      <introduction>
         <p>
-          Consider the equation of motion of a <m>2</m>-kg mass attached to a spring with <m>k=3</m> kg/s<m>^2</m> and a damping constant of <m>c=0.5</m><nbsp/>kg/s.
-          This is considered <em>underdamping</em>.
-          <me>
-            2 x''(t) = -3 x(t) - 0.5 x'(t)
-          </me>.
-          <ol>
-            <li>
-              <p>
-                Solve the differential equation using the given initial conditions.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the solution of the differential equation.
-              </p>
-            </li>
-            <li>
-              <p>
-                Insert a new paragraph and describe what you observe about the motion of a mass on the spring with underdamping.
-              </p>
-            </li>
-          </ol>
+          Consider the equation of motion of a <m>2</m>-kg mass attached to a spring with <m>k=3</m> kg/s<m>^2</m> and a damping constant of 
+          <m>c=0.5</m><nbsp/>kg/s. This is considered <em>underdamping</em>.
+          <me> 2 x''(t) = -3 x(t) - 0.5 x'(t)</me>.
         </p>
         <aside>
           <p>
-            To solve these differential equations algebraically you assume that solutions are of the form
-            <m>x(t)={ e}^{rt}</m> and then plug it into the differential equation to get the
-            <q>characteristic equation</q>
-            to solve for <m>r</m>.
-            If the roots are complex, you will have oscillations
-            (sine and cosine functions)
-            and if the roots are real, then you have strictly exponential solutions.
-            Notice that the overdamped case has no oscillations whereas the underdamping and no-damping cases have oscillations in their solutions.
+            To solve these differential equations algebraically, you assume that solutions are of the form <m>x(t)={ e}^{rt}</m> and then plug 
+            it into the differential equation to get the <q>characteristic equation</q> to solve for <m>r</m>. If the roots are complex, then you 
+            will have oscillations (sine and cosine functions) and if the roots are real, then you have strictly exponential solutions. Notice 
+            that the overdamped case has no oscillations whereas the underdamping and no-damping cases have oscillations in their solutions.
+            <idx><h>mathematical functions</h><h>exponential</h></idx>
           </p>
         </aside>
-    <idx><h>mathematical functions</h><h>exponential</h></idx>
-      </li>
-      <li xml:id="ex_mass_spring_forcing">
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Solve the differential equation using the given initial conditions.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the solution of the differential equation.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Insert a new paragraph and describe what you observe about the motion of a mass on the spring with underdamping.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise xml:id="ex_mass_spring_forcing">
+      <introduction>
         <p>
-          Suppose we wish to force the spring to oscillate at a given frequency.
-          Let's add a forcing term <m>3 \sin(2t)</m> to the undamped equation of motion from <xref ref="ex_mass_spring_nodamping">exercise</xref>.
-          <me>
-            2x''(t) = -3 x(t) + 3\sin(2t)
-          </me>
-          <ol>
-            <li>
-              <p>
-                Solve the differential equation using the given initial conditions.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the differential equation solution.
-              </p>
-            </li>
-            <li>
-              <p>
-                Insert a new paragraph and describe what you observe about the motion of a mass on the spring with
-                <em>forcing and no damping</em>.
-              </p>
-            </li>
-          </ol>
+          Suppose you wish to force the spring to oscillate at a given frequency. Let's add a forcing term <m>3 \sin(2t)</m> to the undamped 
+          equation of motion from <xref ref="ex_mass_spring_nodamping">exercise</xref>.
+          <me>2x''(t) = -3 x(t) + 3\sin(2t)</me>
         </p>
-      </li>
-      <li>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Solve the differential equation using the given initial conditions.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the differential equation solution.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Insert a new paragraph and describe what you observe about the motion of a mass on the spring with forcing and no damping.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
+      <introduction>
         <p>
-          Let's add damping to equation of motion from <xref ref="ex_mass_spring_forcing">exercise</xref>
-          with a damping constant of <m>0.5</m> kg/s.
-          <me>
-            2x''(t) = -3 x(t) - 0.5 x'(t) + 3\sin(2t)
-          </me>
-          <ol>
-            <li>
-              <p>
-                Solve the differential equation using the given initial conditions.
-              </p>
-            </li>
-            <li>
-              <p>
-                Plot the differential equation solution.
-              </p>
-            </li>
-            <li>
-              <p>
-                Insert a new paragraph and describe what you observe about the motion of a mass on the spring with
-                <em>forcing and underdamping</em>.
-              </p>
-            </li>
-          </ol>
+          Let's add damping to equation of motion from <xref ref="ex_mass_spring_forcing">exercise</xref> with a damping constant of <m>0.5</m> kg/s.
+          <me>2x''(t) = -3 x(t) - 0.5 x'(t) + 3\sin(2t)</me>
         </p>
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Solve the differential equation using the given initial conditions.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Plot the differential equation solution.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Insert a new paragraph and describe what you observe about the motion of a mass on the spring with forcing and underdamping.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+  </exercises>
 </section>
