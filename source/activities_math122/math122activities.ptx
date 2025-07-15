@@ -8,7 +8,13 @@
         <li><xref ref="sec_visualizing_the_net_change_theorem" text="title" /></li>
         <li><xref ref="sec_area_problem" text="title" /></li>
         <li><xref ref="sec_infinite_integrals" text="title" /></li>
-        <li>One of <xref ref="sec_motion_of_a_mass_connected_to_a_spring" text="title" />, <xref ref="sec_tank_mixing_problem" text="title" />, and <xref ref="sec_direction_fields" text="title" /></li>
+        <li><p>At least one of the following differential equation activities:</p>
+          <ul>
+            <li><xref ref="sec_motion_of_a_mass_connected_to_a_spring" text="title" /></li>
+            <li><xref ref="sec_tank_mixing_problem" text="title" /></li>
+            <li><xref ref="sec_direction_fields" text="title" /></li>
+          </ul>
+        </li>
         <li><xref ref="sec_series_convergence_and_divergence" text="title" /></li>
         <li><xref ref="sec_taylor_series" text="title" /></li>
       </ul>
