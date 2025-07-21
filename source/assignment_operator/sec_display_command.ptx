@@ -1,101 +1,76 @@
 <section xml:id="sec_display_command">
   <title>Assigning Plots and the <c>display()</c> Command</title>
   <p>
-    You can use the assignment operator to assign just about any type of output to a variable name,
-    including plots.
+    You can use the assignment operator to assign just about any type of output to a variable name, including plots.
     This can be useful when different types of plots need to be displayed on the same graph.
     You can assign the output of several <c>plot()</c> commands to variables and then 'display' them all on the same set of axes.
   </p>
   <p>
-    To make use of the <c>display()</c> command,
-    you need to include the <c>plots</c> package.
-    Packages are loaded using the <c>with()</c> command,
-    where the name of the package appears within the parentheses.
-    The command
-        <idx><h>packages</h><h>plots</h></idx>
-        <idx><h>packages</h><h>with</h></idx> \begin{maplegroup} \begin{mapleinput} {with(plots); } \end{mapleinput} \relax \begin{maplelatex} {[plots:-animate, plots:-animate3d, plots:-animatecurve, plots:-arrow, plots:-changecoords, plots:-complexplot, plots:-complexplot3d, plots:-conformal, plots:-conformal3d, plots:-contourplot, plots:-contourplot3d, plots:-coordplot, plots:-coordplot3d, plots:-densityplot, plots:-display, plots:-dualaxisplot, plots:-fieldplot, plots:-fieldplot3d, plots:-gradplot, plots:-gradplot3d, plots:-implicitplot, plots:-implicitplot3d, plots:-inequal, plots:-interactive, plots:-interactiveparams, plots:-intersectplot, plots:-listcontplot, plots:-listcontplot3d, plots:-listdensityplot, plots:-listplot, plots:-listplot3d, plots:-loglogplot, plots:-logplot, plots:-matrixplot, plots:-multiple, plots:-odeplot, plots:-pareto, plots:-plotcompare, plots:-pointplot, plots:-pointplot3d, plots:-polarplot, plots:-polygonplot, plots:-polygonplot3d, plots:-polyhedra_supported, plots:-polyhedraplot, plots:-rootlocus, plots:-semilogplot, plots:-setcolors, plots:-setoptions, plots:-setoptions3d, plots:-shadebetween, plots:-spacecurve, plots:-sparsematrixplot, plots:-surfdata, plots:-textplot, plots:-textplot3d, plots:-tubeplot]}{
+    To make use of the <c>display()</c> command, you need to include the <c>plots</c> package.
+    Packages are loaded using the <c>with()</c> command, where the name of the package appears within the parentheses.
+    <idx><h>packages</h><h>plots</h></idx>
+    <idx><h>packages</h><h>with</h></idx>
+  </p>
+  <p>
+    A package does not need to be loaded more than once in your document.
+    However, you will need to reload the package if you have previously closed the document.
+  </p>
+  <console prompt="> ">
+    <input>with( plots );</input>
+  </console>
+  <p>
+    <md>
+      <mrow> \amp [animate,animate3d,animatecurve,arrow,changecoords, </mrow>
+      <mrow> \amp complexplot,complexplot3d,conformal,conformal3d,contourplot, </mrow>
+      <mrow> \amp contourplot3d,coordplot,coordplot3d,densityplot,display, </mrow>
+      <mrow> \amp \vdots </mrow>
+      <mrow> \amp spacecurve,sparsematrixplot,surfdata,textplot,textplot3d,tubeplot] </mrow>
+    </md>
+  </p>
+  <p>
+    Loading a package will typically display all of the commands that are included in the package. However, if a full colon is added, then the package is loaded but the output is hidden.
+  </p>
+  <console prompt="> ">
+    <input>with( plots ):</input>
+  </console>
+  <p>
+    With the <c>plots</c> package loaded, plotting options can be defined for each plot individually and assigned to a name.
+    Full colons are recommended at the end of each line to hide the output of the individual plot.
+    The <c>display()</c> command handles the job of combining the output of the multiple plots together.
+    <idx><h>plot</h></idx>
+    <idx><h>plot</h><h>axes intervals</h></idx>
+    <idx><h>plot</h><h>line style</h></idx>
+    <idx><h>display</h></idx>
+  </p>
+  <console prompt="> ">
+    <input>p1(x) := (x+2)^2 + 2*(x+2) - 5;</input>
+  </console>
+  <p>
     <me>
-      \displaystyle [\textit{animate},\textit{animate3d},\textit{animatecurve} \cdots]
+      \displaystyle p1\, := \,x\mapsto  \left( x+2 \right) ^{2}+2\,x-1
     </me>
   </p>
+  <console prompt="> ">
+    <input>p2(x) := 3*(x-4)^3 - 2*(x-4)^2 - (x-4) + 1;</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    will display all of the commands that are included in the package.
-    If a full colon is added,
-    then the package is loaded but the output is hidden.
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {with(plots): } \end{mapleinput} \end{maplegroup}
-  </p>
-  <p>
-    With the <c>plots</c> package loaded,
-    plotting options can be defined for each plot individually and assigned to a name.
-    Multiple plots can then be displayed together.
-  </p>
-  <aside>
-    <p>
-      A package does not need to be loaded more than once in your document.
-      However, you will need to reload the package if you have previously closed the document.
-    </p>
-  </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {p1(x) := (x+2)\symbol{94}2 + 2*(x+2) - 5;
-    p2(x) := 3*(x-4)\symbol{94}3 - 2*(x-4)\symbol{94}2 - (x-4) + 1;
-    p3(x) := x - 3; } \end{mapleinput} \relax \begin{maplelatex} {p1 := proc (x) options operator,
-    arrow; (x+2)^2+2*x-1 end proc}{
     <me>
-      \displaystyle \textit{p1}\, := \,x\mapsto  \left( x+2 \right) ^{2}+2\,x-1
+      \displaystyle p2\, := \,x\mapsto 3\, \left( x-4 \right) ^{3}-2\, \left( x-4 \right) ^{2}-x+5
     </me>
   </p>
+  <console prompt="> ">
+    <input>p3(x) := x - 3;</input>
+  </console>
   <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {p2 := proc (x) options operator,
-    arrow; 3*(x-4)^3-2*(x-4)^2-x+5 end proc}{
     <me>
-      \displaystyle \textit{p2}\, := \,x\mapsto 3\, \left( x-4 \right) ^{3}-2\, \left( x-4 \right) ^{2}-x+5
+      \displaystyle p3\, := \,x\mapsto x-3
     </me>
   </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {p3 := proc (x) options operator, arrow;
-    x-3 end proc}{
-    <me>
-      \displaystyle \textit{p3}\, := \,x\mapsto x-3
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-        <idx><h>plot</h></idx>
-        <idx><h>plot</h><h>axes intervals</h></idx>
-        <idx><h>plot</h><h>line style</h></idx>
-        <idx><h>display</h></idx>
-  </p>
-  <aside>
-    <p>
-      Full colons are used at the end of each line here to hide the output of the individual plot.
-    </p>
-  </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {A := plot(p1(x),
-    x=-6..0, y=-6..3, linestyle=dot): } \end{mapleinput} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {B := plot(p2(x),
-    x=-0..10, y=-10..10,
-    style=point): } \end{mapleinput} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {C := plot(p3(x),
-    x=-10..10,
-    y=-10..10): } \end{mapleinput} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {display([A,B,C]); } \end{mapleinput} \relax  \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Plotting_Functionsplot2d4-eps-converted-to.pdf\vskip.5\MaplePlotHeight  \end{maplegroup} \begin{maplegroup} \begin{mapleinput}  \end{mapleinput} \end{maplegroup} \begin{Maple Normal}{ \begin{Maple Normal}{ {
-    <me>
-      \displaystyle
-    </me>
-  </p>
-  <p>
-    } }\end{Maple Normal} }\end{Maple Normal} \begin{Maple Normal}{ \begin{Maple Normal}{ {
-    <me>
-      \displaystyle
-    </me>
-  </p>
-  <p>
-    } }\end{Maple Normal} }\end{Maple Normal}
-  </p>
+  <console prompt="> ">
+    <input>A := plot(p1(x), x=-6..0, y=-6..3, linestyle=dot):</input>
+    <input>B := plot(p2(x), x=-0..10, y=-10..10, style=point):</input>
+    <input>C := plot(p3(x), x=-10..10, y=-10..10):</input>
+    <input>display([A,B,C]);</input>
+  </console>
+  <image source="images/Plotting_Functionsplot2d4-eps-converted-to" width="50%"/>
 </section>

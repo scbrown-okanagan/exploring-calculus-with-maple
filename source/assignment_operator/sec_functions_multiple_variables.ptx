@@ -2,57 +2,48 @@
   <title>Functions of More than One Variable</title>
   <p>
     We can also define functions of multiple variables and use the notation the same way as one variable functions.
+    <idx><h>mathematical functions</h><h>multivariable functions</h></idx>
   </p>
+  <console prompt="> ">
+    <input>g(x,y) := sin(x) - cos(y);</input>
+  </console>
   <p>
-        <idx><h>mathematical functions</h><h>sine</h></idx>
-        <idx><h>mathematical functions</h><h>cosine</h></idx>
-        <idx><h>mathematical functions</h><h>multivariable functions</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {g(x,y) := sin(x) - cos(y); } \end{mapleinput} \relax \begin{maplelatex} {g := proc (x, y) options operator, arrow;
-    sin(x)-cos(y) end proc}{
+    <idx><h>mathematical functions</h><h>sine</h></idx>
+    <idx><h>mathematical functions</h><h>cosine</h></idx>
     <me>
       \displaystyle g\, := \,( {x,y} )\mapsto \sin \left( x \right) -\cos \left( y \right)
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    This function may be evaluated at a point, given as an ordered pair:
   </p>
+  <console prompt="> ">
+    <input>g(0, Pi);</input>
+  </console>
   <p>
-    Evaluating at a point:
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {g(0, Pi); } \end{mapleinput} \relax \begin{maplelatex} {1}{
+    <idx><h>Pi</h></idx>
     <me>
       \displaystyle 1
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-        <idx><h>Pi</h></idx>
-  </p>
-  <p>
     An example of a function of more than one variable is the volume of a circular cylinder.
   </p>
+  <console prompt="> ">
+    <input>cylindervol(r,h) := Pi*r^2*h;</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {cylindervol(r,h) := Pi*r\symbol{94}2*h; } \end{mapleinput} \relax \begin{maplelatex} {cylindervol := proc (r, h) options operator,
-    arrow; Pi*r^2*h end proc}{
+    <idx><h>Pi</h></idx>
     <me>
-      \displaystyle \textit{cylindervol}\, := \,( {r,h} )\mapsto \pi\,{r}^{2}h
+      \displaystyle cylindervol\, := \,( {r,h} )\mapsto \pi\,{r}^{2}h
     </me>
   </p>
+  <console prompt="> ">
+    <input>cylindervol(3,5);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {cylindervol(3,5); } \end{mapleinput} \relax \begin{maplelatex} {45*Pi}{
     <me>
       \displaystyle 45\,\pi
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>
