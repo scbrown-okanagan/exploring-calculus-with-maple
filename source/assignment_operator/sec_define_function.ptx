@@ -1,62 +1,85 @@
 <section xml:id="sec_define_function">
-  <title>Defining a Function</title>
+  <title>Defining Functions and using Function Notation</title>
   <p>
-    Instead of defining an expression,
-    it is sometimes more useful to define a function.
+    Instead of defining an expression, it is sometimes more useful to define a function.
     A function specifies the variables that are included in the expression.
-    This allows us to substitute values into our functions easily using function notation,
-    such as <m>f(5)</m>.
+    This allows us to substitute values into our functions easily using function notation, such as <m>f(5)</m>.
   </p>
   <aside>
     <p>
-      If you have properly defined a function,
-      you should see an arrow (<m>\rightarrow</m>) in your output.
-      If you do not see an arrow within the output,
-      then you have not defined the function properly.
+      If you have properly defined a function, you should see an arrow (<m>\mapsto</m>) in your output.
+      If you do not see an arrow within the output, then you have not defined the function properly.
     </p>
   </aside>
+  <console prompt="> ">
+    <input>f(x) := sin(x) - exp(x);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {f(x) := sin(x) - exp(x); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator, arrow;
-    sin(x)-exp(x) end proc}{
+    <idx><h>mathematical functions</h><h>sine</h></idx>
+    <idx><h>mathematical functions</h><h>exponential</h></idx>
     <me>
       \displaystyle f\, := \,x\mapsto \sin \left( x \right) -{{ e}^{x}}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    Make sure that the variable in the function name matches the variable in the function, since we often use functions of <m>t</m> or other variables besides <m>x</m>.
   </p>
-  <aside>
-    <p>
-      Make sure that the variable in the function name matches the variable in the function.
-    </p>
-  </aside>
+  <console prompt="> ">
+    <input>g(t) := -4.9*t^2 + 5*t + 20;</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {g(t) := -4.9*t\symbol{94}2 + 5*t + 20; } \end{mapleinput} \relax \begin{maplelatex} {g := proc (t) options operator,
-    arrow; (-1)*4.9*t^2+5*t+20 end proc}{
     <me>
       \displaystyle g\, := \,t\mapsto - 4.9\,{t}^{2}+5\,t+20
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    A function's name does not have to be a single letter. In fact, it is often a good idea to have a function's name correspond to what the function represents.
   </p>
+  <console prompt="> ">
+    <input>area(r) := Pi*r^2;</input>
+  </console>
   <p>
-    A function's name does not have to be a single letter.
-    In fact, it is often a good idea to have a function's name correspond to what the function represents.
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {area(r) := Pi*r\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {area := proc (r) options operator,
-    arrow; Pi*r^2 end proc}{
+    <idx><h>mathematical functions</h><h>Pi</h></idx>
     <me>
-      \displaystyle \textit{area}\, := \,r\mapsto \pi\,{r}^{2}
+      \displaystyle area\, := \,r\mapsto \pi\,{r}^{2}
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
   <aside>
     <p>
-      <image width="80%" source="images/palettefunc.png"/>
+      There is also a shortcut for defining a function in the palettes toolbar. In this notation, <m>a</m> is the variable and <m>y</m> is the definition of the function.
     </p>
+    <image width="80%" source="images/palettefunc.png"/>
   </aside>
+  <p>
+    Once we have defined a function, we can use function notation much like we would in class.
+    For example, now that <m>f(x)</m> is defined, rather than using the <c>subs()</c> command to substitute <m>x=0</m> into the function,
+    we can now simply type <m>f(0)</m>.
+  </p>
+  <console prompt="> ">
+    <input>f(0);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle -1
+    </me>
+  </p>
+  <p>
+    It is easy to substitute an expression into a function using function notation.
+  </p>
+  <console prompt="> ">
+    <input>h(x) := 2*x^2 - 3*x;</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle h\, := \,x\mapsto 2\,{x}^{2}-3\,x
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>h(x+1);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle 2\, \left( x+1 \right) ^{2}-3\,x-3
+    </me>
+  </p>
 </section>

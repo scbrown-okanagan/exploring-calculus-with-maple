@@ -1,41 +1,45 @@
 <section xml:id="sec_function_notation">
   <title>Using Function Notation</title>
   <p>
-    Once we have defined a function,
-    we can use function notation much like we would in class.
-    For example,
-    instead of defining an expression involving <m>x</m> to a name such as <c>expr</c> and then using the <c>subs()</c> command to substitute <m>x=0</m> into <c>expr</c>,
-    we can now use the function <m>f(x)</m> as assigned in <xref ref="sec_define_function">Section</xref> and type <m>f(0)</m>.
+    Once we have defined a function, we can use function notation much like we would in class.
+    For example, instead of defining an expression involving <m>x</m> to a name such as <c>expr</c> and then using the <c>subs()</c> command to substitute <m>x=0</m> into <c>expr</c>,
+    we can now use the function <m>f(x)</m> as assigned in <xref ref="sec_define_function" text="title"/> and type <m>f(0)</m>.
   </p>
+  <console prompt="> ">
+    <input>f(x) := sin(x) - exp(x);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {f(0); } \end{mapleinput} \relax \begin{maplelatex} {-1}{
+    <idx><h>mathematical functions</h><h>sine</h></idx>
+    <idx><h>mathematical functions</h><h>exponential</h></idx>
+    <me>
+      \displaystyle f\, := \,x\mapsto \sin \left( x \right) -{{ e}^{x}}
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>f(0);</input>
+  </console>
+  <p>
     <me>
       \displaystyle -1
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
     It is easy to substitute an expression into a function using function notation.
   </p>
+  <console prompt="> ">
+    <input>g(x) := 2*x^2 - 3*x;</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {g(x) := 2*x\symbol{94}2 - 3*x; } \end{mapleinput} \relax \begin{maplelatex} {g := proc (x) options operator,
-    arrow; 2*x^2-3*x end proc}{
     <me>
       \displaystyle g\, := \,x\mapsto 2\,{x}^{2}-3\,x
     </me>
   </p>
+  <console prompt="> ">
+    <input>g(x+1);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {g(x+1); } \end{mapleinput} \relax \begin{maplelatex} {2*(x+1)^2-3*x-3}{
     <me>
       \displaystyle 2\, \left( x+1 \right) ^{2}-3\,x-3
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>

@@ -1,71 +1,60 @@
 <section xml:id="sec_making_substitutions">
   <title>Making a Substitution into an Expression</title>
   <p>
-    Let's suppose you have assigned an expression a name,
-    and wish to replace one of its variables with a value or expression.
-    As an example,
-    we will assign an expression a name of <c>expr</c> and then substitute the numerical value for <m>\pi</m>,
-    which is denoted as <c>Pi</c> in Maple,
-    into <c>expr</c>.
+    Let's suppose you have assigned an expression a name, and wish to replace one of its variables with a value or expression.
+    As an example, we will assign an expression a name of <c>expr</c> and then substitute the numerical value for <m>\pi</m>,
+    which is denoted as <c>Pi</c> in Maple, into <c>expr</c>.
     The command used to substitute a value into an expression is <c>subs()</c>.
   </p>
+  <console prompt="> ">
+    <input>expr := sin(x) - 1;</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {expr := sin(x) - 1; } \end{mapleinput} \relax \begin{maplelatex} {expr := sin(x)-1}{
+    <idx><h>mathematical functions</h><h>sine</h></idx>
     <me>
-      \displaystyle \textit{expr}\, := \,\sin \left( x \right) -1
+      \displaystyle expr\, := \,\sin \left( x \right) -1
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
   <aside>
     <p>
-      Always be sure to use a capital P in <c>Pi</c> for the mathematical constant.
-      You can also find <m>\pi</m> in the palettes toolbar.
+      <idx><h>Pi</h></idx>
+      Always be sure to use a capital P in <c>Pi</c> for the mathematical constant. You can also find <m>\pi</m> in the palettes toolbar.
     </p>
   </aside>
+  <console prompt="> ">
+    <input>subs(x = Pi, expr);</input>
+  </console>
   <p>
-        <idx><h>Pi</h></idx>
-        <idx><h>mathematical functions</h><h>sine</h></idx>
-        <idx><h>mathematical functions</h><h>exponential</h></idx>
-        <idx><h>ditto operator</h></idx>
-        <idx><h>mathematical functions</h><h>tangent</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {subs(x = Pi, expr); } \end{mapleinput} \relax \begin{maplelatex} {sin(Pi)-1}{
     <me>
       \displaystyle \sin \left( \pi  \right) -1
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    The order of the parameters in the <c>subs()</c> command is important. For example, giving the expression before the substitution will give an error:
   </p>
-  <aside>
-    <p>
-      The order of the parameters in the <c>subs()</c> command is important.
-      For example,
-      <c>> subs(expr,x = Pi);</c> would cause an error.
-    </p>
-  </aside>
+  <console prompt="> ">
+    <input>subs(expr,x = Pi);</input>
+    <output>
+      Error, invalid input: subs received sin(x)-1, 
+      which is not valid for its 1st argument
+    </output>
+  </console>
   <p>
-    You can make use of the % shortcut if you wish,
-    but recall that it is best used on the same Maple input:
+    You can make use of the % shortcut if you wish, but recall that it is best used on the same Maple input:
+    <idx><h>ditto operator</h></idx>
   </p>
+  <console prompt="> ">
+    <input>x^2 + 3*x - 4; subs(x = 2, %);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {x\symbol{94}2 + 3*x - 4;
-    subs(x = 2, } \end{mapleinput} \relax\begin{maplelatex} {x^2+3*x-4}{
     <me>
       \displaystyle {x}^{2}+3\,x-4
     </me>
   </p>
   <p>
-    } \end{maplelatex} \begin{maplelatex} {6}{
     <me>
       \displaystyle 6
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
   <p>
     You can also substitute one expression into another:
@@ -75,22 +64,21 @@
       Note that using the <c>subs()</c> command does not permanently assign the substitution.
     </p>
   </aside>
+  <console prompt="> ">
+    <input>expr2 := tan(2*x) + 1;</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {expr2 := tan(2*x) + 1; } \end{mapleinput} \relax \begin{maplelatex} {expr2 := tan(2*x)+1}{
+    <idx><h>mathematical functions</h><h>tangent</h></idx>
     <me>
-      \displaystyle \textit{expr2}\, := \,\tan \left( 2\,x \right) +1
+      \displaystyle expr2\, := \,\tan \left( 2\,x \right) +1
     </me>
   </p>
+  <console prompt="> ">
+    <input>subs(x = a+h, expr2);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {subs(x = a+h, expr2); } \end{mapleinput} \relax \begin{maplelatex} {tan(2*a+2*h)+1}{
     <me>
       \displaystyle \tan \left( 2\,a+2\,h \right) +1
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} \end{mapleinput} \end{maplegroup}
   </p>
 </section>
