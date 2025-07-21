@@ -1,48 +1,40 @@
 <section xml:id="sec_expanding_expressions">
   <title>Expanding Expressions</title>
   <p>
-    You can ask Maple to expand any expression with the <c>expand()</c> command,
-    including products of polynomials and rational functions.
+    You can ask Maple to expand any expression with the <c>expand()</c> command, including products of polynomials and rational functions.
     Maple will also expand various logarithmic and trigonometric expressions.
-  </p>
-  <p>
-        <idx><h>expand</h></idx>
-        <idx><h>mathematical functions</h><h>cosine</h></idx>
-        <idx><h>mathematical functions</h><h>tangent</h></idx>
+    <idx><h>expand</h></idx>
   </p>
   <aside>
     <p>
-      The multiplication operation *
-      (or a space in 2D Math mode)
-      is not required between numerical coefficients and variable.
+      The multiplication operation * (or a space in 2D Math mode) is not required between numerical coefficients and variables.
       However, multiplication between multiple variables is required.
     </p>
   </aside>
+  <console prompt="> ">
+    <input>expand((2*x + 3*y)^6);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {expand((2*x + 3*y)\symbol{94}6); } \end{mapleinput} \relax \begin{maplelatex} {64*x^6+576*x^5*y+2160*x^4*y^2+4320*x^3*y^3+4860*x^2*y^4+2916*x*y^5+729*y^6}{
     <me>
       \displaystyle 64\,x^6+576\,x^5y+2160\,x^4y^2+4320\,x^3y^3+4860\,x^2y^4+2916\,xy^5+729\,y^6
     </me>
   </p>
+  <console prompt="> ">
+    <input>expand(cos(2*x));</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {expand(cos(2*x)); } \end{mapleinput} \relax \begin{maplelatex} {2*cos(x)^2-1}{
+    <idx><h>mathematical functions</h><h>cosine</h></idx>
     <me>
       \displaystyle 2\, \left( \cos \left( x \right)  \right) ^{2}-1
     </me>
   </p>
+  <console prompt="> ">
+    <input>expand(tan(a + b));</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {expand(tan(a + b)); } \end{mapleinput} \relax \begin{maplelatex} {(tan(a)+tan(b))/(1-tan(a)*tan(b))}{
+    <idx><h>mathematical functions</h><h>tangent</h></idx>
     <me>
       \displaystyle {\frac {\tan \left( a \right) +\tan \left( b \right) }{1-\tan \left( a \right) \tan \left( b \right) }}
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>
