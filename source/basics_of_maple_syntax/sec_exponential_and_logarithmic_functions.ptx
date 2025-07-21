@@ -1,16 +1,11 @@
 <section xml:id="sec_exponential_and_logarithmic_functions">
   <title>Exponential and Logarithmic Functions</title>
   <p>
-        <idx><h>mathematical functions</h><h>exponential</h></idx>
-        <idx><h>mathematical functions</h><h>logarithmic</h></idx>
-  </p>
-  <p>
-    Another common command that we will frequently use is <c>exp()</c>.
-    This is meant to be used as the exponential function.
-    Unfortunately,
-    simply typing in <m>{ e}^x</m> using the <sq>e</sq> key on the keyboard will not perform the correct operation.
-    Instead, Maple treats <sq>e</sq> as it does any other letter,
-    such as <sq>x</sq> or <sq>y</sq>.
+    Another common command that we will frequently use is <c>exp()</c>. This is meant to be used as the exponential function.
+    Unfortunately, simply typing in <m>{ e}^x</m> using the <sq>e</sq> key on the keyboard will not perform the correct operation.
+    Instead, Maple treats <sq>e</sq> as it does any other letter, such as <sq>x</sq> or <sq>y</sq>.
+    <idx><h>mathematical functions</h><h>exponential</h></idx>
+    <idx><h>mathematical functions</h><h>exponential function</h></idx>
   </p>
   <aside>
     <p>
@@ -18,20 +13,33 @@
       Similarly, you can get the numerical value <m>{ e}</m> by clicking on its button in the Common Symbols palette.
     </p>
   </aside>
+  <console prompt="> ">
+    <input>exp(a);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {exp(a); } \end{mapleinput} \relax \begin{maplelatex} {exp(a)}{
     <me>
       \displaystyle {{ e}^{a}}
     </me>
   </p>
   <p>
-    } <idx><h>mathematical functions</h><h>exponential function</h></idx> \end{maplelatex} \end{maplegroup}
+    We will mostly be using the natural logarithm in calculus, but Maple provides commands for logarithms with different bases:
+    <idx><h>mathematical functions</h><h>logarithmic</h></idx>
+    <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx>
   </p>
+  <console prompt="> ">
+    <input>ln(a);</input>
+  </console>
   <p>
-    We will mostly be using the natural logarithm in calculus,
-    but Maple provides commands for logarithms with different bases:
-  </p>
+    <me>
+      \displaystyle {\ln(a)}
+    </me>
+  </p>  
+  <console prompt="> ">
+    <input>log10(1000);</input>
+  </console>
   <p>
-    \begin{mapleinput} {ln( );} <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx> \end{mapleinput} \begin{mapleinput} {log( );} <idx><h>mathematical functions</h><h>logarithmic</h></idx> \end{mapleinput} \begin{mapleinput} {log10( );} <idx><h>mathematical functions</h><h>logarithmic</h></idx> \end{mapleinput}
+    <me>
+      \displaystyle {3}
+    </me>
   </p>
 </section>

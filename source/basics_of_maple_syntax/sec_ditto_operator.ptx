@@ -1,67 +1,55 @@
 <section xml:id="sec_ditto_operator">
   <title>The % Shortcut</title>
   <p>
-        <idx><h>ditto operator</h></idx>
-  </p>
-  <p>
     Many of the exercises in the activities will involve executing multiple commands to obtain the answer.
     Often, this means running a command and then running a second command on the result of the first.
-    Although copying and pasting the result from the first command takes less time than typing it out,
-    it often causes many syntax problems.
+    Although copying and pasting the result from the first command takes less time than typing it out, it often causes many syntax problems.
+    <idx><h>ditto operator</h></idx>
   </p>
   <p>
-    Fortunately, Maple provides us with the % shortcut,
-    also called the ditto operator.
-    Every time a command is run, its output is temporarily stored,
-    much like a scientific calculator will remember what is currently on its screen.
+    Fortunately, Maple provides us with the <c>%</c> shortcut, also called the ditto operator.
+    Every time a command is run, its output is temporarily stored, much like a scientific calculator will remember what is currently on its screen.
     Using the % symbol within another command will use the result of the first command automatically.
   </p>
   <p>
     The trouble with this shortcut comes from the fact that you can run Maple input anywhere on the page <em>in any order</em>!
-    In the example below,
-    you will only get the correct output if you run the second line <em>immediately</em>
-    after running the first line.
+    In the example below, you will only get the correct output if you run the second line <em>immediately</em> after running the first line.
   </p>
+  <console prompt="> ">
+    <input>x^2 + 5;</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {x\symbol{94}2 + 5; } \end{mapleinput} \relax \begin{maplelatex} {x^2+5}{
     <me>
       \displaystyle {x}^{2}+5
     </me>
   </p>
+  <console prompt="> ">
+    <input>sqrt(%);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup} <idx><h>mathematical functions</h><h>square root</h></idx> \begin{maplegroup} \begin{mapleinput} {sqrt( } \end{mapleinput} \relax \begin{maplelatex} {sqrt(x^2+5)}{
+    <idx><h>mathematical functions</h><h>square root</h></idx>
     <me>
       \displaystyle \sqrt{{x}^{2}+5}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    To make better use of the % shotcut,
-    it is the best practice to combine the two consecutive commands on the same Maple input:
+    To make better use of the % shotcut, it is the best practice to combine the two consecutive commands on the same Maple input:
   </p>
   <aside>
     <p>
-      The % shorcut in Maple works much like the <em>ANS</em>
-      button on many scientific calculators.
+      The % shorcut in Maple works much like the <c>ANS</c> button on many scientific calculators.
       The % will only remember the output of whatever input was run most recently.
     </p>
   </aside>
+  <console prompt="> ">
+    <input>x^2 + 5; sqrt(%);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {x\symbol{94}2 - 4;
-    sqrt( } \end{mapleinput} \relax \begin{maplelatex} {x^2-4}{
     <me>
       \displaystyle {x}^{2}-4
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \begin{maplelatex} {sqrt(x^2+5)}{
     <me>
       \displaystyle \sqrt{{x}^{2}+5}
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>

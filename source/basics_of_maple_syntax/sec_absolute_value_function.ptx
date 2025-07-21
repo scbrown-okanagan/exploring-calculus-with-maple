@@ -1,19 +1,16 @@
 <section xml:id="sec_absolute_value_function">
   <title>Absolute Value Function</title>
   <p>
-        <idx><h>mathematical functions</h><h>absolute value</h></idx>
-  </p>
-  <p>
     The absolute value function in Maple can be typed out using the <c>abs()</c> command.
     There is also an absolute value button under the Expression palette if you prefer that method.
+    <idx><h>mathematical functions</h><h>absolute value</h></idx>
   </p>
+  <console prompt="> ">
+    <input>abs(a);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {abs(a); } \end{mapleinput} \relax \begin{maplelatex} {abs(a)}{
     <me>
       \displaystyle {|a|}
     </me>
-  </p>
-  <p>
-    } <idx><h>mathematical functions</h><h>absolute value</h></idx> \end{maplelatex} \end{maplegroup}
   </p>
 </section>

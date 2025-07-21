@@ -1,32 +1,38 @@
 <section xml:id="sec_trigonometric_and_inverse_trigonometric_functions">
   <title>Trigonometric and Inverse Trigonometric Functions</title>
   <p>
-    Trigonometric functions can be typed directly into a Maple input using parentheses.
-    For inverse trigonometric functions,
-    it is generally considered better to use the
-    <m>\arctan()</m> notation instead of <m>\tan^{-1}()</m> notation.
-  </p>
-  <p>
-        <idx><h>mathematical functions</h><h>inverse cosine</h></idx>
-        <idx><h>mathematical functions</h><h>inverse cotangent</h></idx>
-        <idx><h>mathematical functions</h><h>inverse cosecant</h></idx>
-        <idx><h>mathematical functions</h><h>inverse secant</h></idx>
-        <idx><h>mathematical functions</h><h>inverse sine</h></idx>
-        <idx><h>mathematical functions</h><h>inverse tangent</h></idx>
-        <idx><h>mathematical functions</h><h>cosine</h></idx>
-        <idx><h>mathematical functions</h><h>cotangent</h></idx>
-        <idx><h>mathematical functions</h><h>cosecant</h></idx>
-        <idx><h>mathematical functions</h><h>secant</h></idx>
-        <idx><h>mathematical functions</h><h>sine</h></idx>
-        <idx><h>mathematical functions</h><h>tangent</h></idx>
+    Trigonometric functions can be typed directly into a Maple input using parentheses. For inverse trigonometric functions,
+    it is generally considered better to use the <m>\arctan()</m> notation instead of <m>\tan^{-1}()</m> notation.
+    <idx><h>mathematical functions</h><h>sine</h></idx>
+    <idx><h>mathematical functions</h><h>cosine</h></idx>
+    <idx><h>mathematical functions</h><h>tangent</h></idx>
+    <idx><h>mathematical functions</h><h>cosecant</h></idx>
+    <idx><h>mathematical functions</h><h>secant</h></idx>
+    <idx><h>mathematical functions</h><h>cotangent</h></idx>
+    <idx><h>mathematical functions</h><h>inverse sine</h></idx>
+    <idx><h>mathematical functions</h><h>inverse cosine</h></idx>
+    <idx><h>mathematical functions</h><h>inverse tangent</h></idx>
+    <idx><h>mathematical functions</h><h>inverse cosecant</h></idx>
+    <idx><h>mathematical functions</h><h>inverse secant</h></idx>
+    <idx><h>mathematical functions</h><h>inverse cotangent</h></idx>
   </p>
   <aside>
     <p>
       In recent versions of Maple,
       you can type <m>\sin^2(x)</m> and Maple will correctly interpret this as <m>\big(\sin(x)\big)^2</m>.
     </p>
-  </aside>
-  <p>
-    \begin{mapleinput} {arccos( )} \end{mapleinput} \begin{mapleinput} {arccot( )} \end{mapleinput} \begin{mapleinput} {arccsc( )} \end{mapleinput} \begin{mapleinput} {arcsec( )} \end{mapleinput} \begin{mapleinput} {arcsin( )} \end{mapleinput} \begin{mapleinput} {arctan( )} \end{mapleinput} \begin{mapleinput} {cos( )} \end{mapleinput} \begin{mapleinput} {cot( )} \end{mapleinput} \begin{mapleinput} {csc( )} \end{mapleinput} \begin{mapleinput} {sec( )} \end{mapleinput} \begin{mapleinput} {sin( )} \end{mapleinput} \begin{mapleinput} {tan( )} \end{mapleinput}
-  </p>
+  </aside><console prompt="> ">
+    <input>sin(x);</input>
+    <input>cos(x);</input>
+    <input>tan(x);</input>
+    <input>csc(x);</input>
+    <input>sec(x);</input>
+    <input>tan(x);</input>
+    <input>arcsin(x);</input>
+    <input>arccos(x);</input>
+    <input>arctan(x);</input>
+    <input>arccsc(x);</input>
+    <input>arcsec(x);</input>
+    <input>arccot(x);</input>
+  </console>
 </section>
