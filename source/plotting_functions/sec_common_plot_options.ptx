@@ -4,118 +4,84 @@
     <xref ref="tbl_plot_options">Table</xref>
     lists the most frequently used optional parameters.
   </p>
+  <aside>
+    <p>
+      Plotting commands generate graphs by connecting many points together. The number of points generated is typically more than sufficient.
+      However, setting <c>numpoints = 30000</c> may help if a graph does not appear smooth.
+      Using too large of a value may cause Maple to become unresponsive (see <xref ref="chp_implicit_functions" text="title"/>).
+    </p>
+  </aside>
   <table xml:id="tbl_plot_options">
     <title>A list of common optional parameters for the <c>plot()</c> command</title>
+    <idx><h>plot</h><h>axes intervals</h></idx>
+    <idx><h>plot</h><h>colours</h></idx>
+    <idx><h>plot</h><h>discontinuities</h></idx>
+    <idx><h>plot</h><h>line style</h></idx>
+    <idx><h>plot</h><h>gridlines</h></idx>
+    <idx><h>plot</h><h>plot resolution</h></idx>
+    <idx><h>plot</h><h>plot resolution</h></idx>
+    <idx><h>plot</h><h>scaling</h></idx>
     <tabular>
-      <row bottom="minor">
-        <cell></cell>
-        <cell></cell>
-      </row>
-      <row>
+      <col width="30%"/>
+      <col width="60%"/>
+      <row header="yes" bottom="medium">
         <cell>Parameter</cell>
         <cell>Description</cell>
       </row>
-      <row bottom="minor">
-        <cell></cell>
-        <cell></cell>
-      </row>
       <row>
         <cell><c>x=a..b</c></cell>
-        <cell>Plot over the interval <m>x\in[a,b]</m>.
-          <idx><h>plot</h><h>axes intervals</h></idx>
-        </cell>
+        <cell><p>Plot over the interval <m>x\in[a,b]</m>.</p></cell>
       </row>
       <row>
         <cell><c>y=c..d</c></cell>
-        <cell>Plot over the interval <m>y\in[c,d]</m>.
-          <idx><h>plot</h><h>axes intervals</h></idx>
-        </cell>
+        <cell><p>Plot over the interval <m>y\in[c,d]</m>.</p></cell>
       </row>
       <row>
         <cell><c>colour=</c><em>cname</em></cell>
-        <cell>Specify the colour of the graph.
-          <idx><h>plot</h><h>colours</h></idx>
-        </cell>
+        <cell><p>Specify the colour of the graph. A list of plot colours can be found by typing <c>?colours</c> on a new Maple input.</p></cell>
       </row>
       <row>
         <cell><c>discont=true</c></cell>
-        <cell>Show discontinuities in a function.
-          <idx><h>plot</h><h>axes intervals</h></idx>
-          <idx><h>plot</h><h>discontinuities</h></idx>
-        </cell>
+        <cell><p>Show discontinuities in a function. This may need to be included to properly display the discontinuities in certain functions when you plot them.</p></cell>
       </row>
       <row>
         <cell><c>linestyle=</c><em>lstyle</em></cell>
-        <cell>Specify the style of the line (<c>solid</c>, <c>dash</c>, <c>dot</c>, etc.).
-          <idx><h>plot</h><h>line style</h></idx>
-        </cell>
+        <cell><p>Specify the style of the line (<c>solid</c>, <c>dash</c>, <c>dot</c>, etc.).</p></cell>
       </row>
       <row>
         <cell><c>gridlines=true</c></cell>
-        <cell>Include gridlines.
-          <idx><h>plot</h><h>gridlines</h></idx>
-        </cell>
+        <cell><p>Include gridlines.</p></cell>
       </row>
       <row>
         <cell><c>numpoints=</c><em>n</em></cell>
-        <cell>Set the minimum number of points plotted for a smoother graph (Default <m>200</m>).
-          <idx><h>plot</h><h>plot resolution</h></idx>
-        </cell>
+        <cell><p>Set the minimum number of points plotted for a smoother graph (Default <m>200</m>).</p></cell>
       </row>
       <row>
         <cell><c>grid=[ m  ,n ]</c></cell>
-        <cell>Set the number of initial points used to plot a graph (Default <m>26 \times 26</m>).
-          <idx><h>plot</h><h>plot resolution</h></idx>
-        </cell>
+        <cell><p>Set the number of initial points used to plot a graph (Default <m>26 \times 26</m>).</p></cell>
       </row>
       <row>
         <cell><c>scaling=constrained</c></cell>
-        <cell>Force axes to use the same scale (so a circle should appear perfectly round).
-          <idx><h>plot</h><h>scaling</h></idx>
-        </cell>
-      </row>
-      <row bottom="minor">
-        <cell></cell>
-        <cell></cell>
+        <cell><p>Force axes to use the same scale (so a circle should appear perfectly round).</p></cell>
       </row>
     </tabular>
   </table>
-  <aside>
-    <p>
-      A list of plot colours can be found by typing <c>?colours</c> on a new Maple input.
-    </p>
-  </aside>
-  <aside>
-    <p>
-      Plotting commands often generate more than the minimum number of points.
-      Setting <c>numpoints = 30000</c> may help if a graph does not appear smooth.
-      Using too large of a value may cause Maple to become unresponsive
-      (see <xref ref="chp_implicit_functions">Tutorial</xref>).
-    </p>
-  </aside>
   <p>
-    The <c>discont=true</c> parameter may need to be included to properly display the discontinuities in certain functions when you plot them.
+    For some functions with vertical asymptotes, Maple does not always display the discontinuities correctly. 
+    Setting the parameter <c>discont=true</c> may properly display the discontinuities in these functions.
   </p>
   <aside>
-    <title>-.1cm</title>
-    <p>
-      <image width="92.5%" source="images/Plotting_Functionsplot2d2b-eps-converted-to.png"/>
-    </p>
+    <p>Without setting <c>discont=true</c>, some versions of Maple will display the graph of <m>\tan(x)</m> as a continuous function.</p>
+    <image width="100%" source="images/Plotting_Functionsplot2d2b-eps-converted-to"/>
   </aside>
+  <console prompt="> ">
+    <input>plot(tan(x), x=-2*Pi..2*Pi, y=-10..10, linestyle=dash, discont=true);</input>
+  </console>
+  <image width="50%" source="images/Plotting_Functionsplot2d3-eps-converted-to"/>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {plot(tan(x),
-    x=-2*Pi..2*Pi, y=-10..10, linestyle=dash,
-    discont=true); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Plotting_Functionsplot2d3-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    In some modern versions of Maple, the graph of <m>\tan(x)</m> above can be obtained even without including the <c>discont=true</c> option in the <c>plot( )</c> command.
   </p>
-  <aside>
-    <title>-.8cm</title>
-    <p>
-      An example of a function that cannot be properly displayed without the <c>discont=true</c> parameter can be found on <xref ref="sec_limits_and_piecewise_functions">page</xref>.
-    </p>
-  </aside>
   <p>
-    In some modern versions of Maple,
-    the graph of <m>\tan(x)</m> above can be obtained even without including the <c>discont=true</c> option in the <c>plot( )</c> command.
+    An example of a function that cannot be properly displayed without the <c>discont=true</c> parameter can be found in <xref ref="sec_limits_and_piecewise_functions" text="title"/>.
   </p>
 </section>

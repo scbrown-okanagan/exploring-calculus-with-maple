@@ -13,11 +13,11 @@
   <console prompt="> ">
 		<input>plot( sin( cos(x) ) );</input>
 	</console>
-	<image source="Plotting_Functionsplot2d1a-eps-converted-to"></image>
+	<image source="images/Plotting_Functionsplot2d1a-eps-converted-to" width="50%"></image>
   <p>
     It is often useful to specify the interval for the <m>x</m>-axis.
     Choose left and right endpoint for the <m>x</m>-axis that are appropriate for your graph.
-        <idx><h>plot</h><h>axes intervals</h></idx>
+    <idx><h>plot</h><h>axes intervals</h></idx>
   </p>
   <aside>
     <p>
@@ -25,11 +25,10 @@
       then make sure to specify the interval as <c>t=a..b</c>.
     </p>
   </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {plot(sin(cos(x)),
-    x=-10..10); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Plotting_Functionsplot2d1b-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-  </p>
+  <console prompt="> ">
+    <input>plot(sin(cos(x)), x=-10..10);</input>
+  </console>
+  <image source="images/Plotting_Functionsplot2d1b-eps-converted-to" width="50%"></image>
   <aside>
     <p>
       The order of the parameters in the <c>plot()</c> command is important.
@@ -38,12 +37,9 @@
   </aside>
   <p>
     You can also specify the interval for the <m>y</m>-axis for your graph.
-        <idx><h>plot</h><h>axes intervals</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {plot(sin(cos(x)),
-    x=-10..10,
-    y=-5..5);<idx><h>plot</h><h>axes intervals</h></idx> } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Plotting_Functionsplot2d1c-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-  </p>
+    <idx><h>plot</h><h>axes intervals</h></idx>
+  </p><console prompt="> ">
+    <input>plot(sin(cos(x)), x=-10..10, y=-5..5);</input>
+  </console>
+  <image source="images/Plotting_Functionsplot2d1c-eps-converted-to" width="50%"></image>
 </section>

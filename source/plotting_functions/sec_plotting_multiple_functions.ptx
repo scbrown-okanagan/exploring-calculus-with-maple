@@ -18,16 +18,13 @@
       and green.
     </p>
   </aside>
+  <console prompt="> ">
+    <input>plot( [exp(x), sin(x) + cos(x)], x=-10..10, 
+        y=-5..5, colour=[black, blue] );</input>
+  </console>
+  <image source="images/Plotting_Functionsplot2d2a-eps-converted-to" width="50%"/>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {plot([exp(x),
-    sin(x) + cos(x)], x=-10..10, y=-5..5, colour=[black,
-    blue]); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Plotting_Functionsplot2d2a-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-  </p>
-  <p>
-    If you need several complicated graphs to display at once,
-    you may wish to explore the potential of the <c>display()</c> command,
-    found in <xref ref="sec_display_command">section</xref>
-    on <xref ref="sec_display_command">page</xref>.
+    If you need several complicated graphs to display at once, you may wish to explore the potential of the <c>display()</c> command,
+    found in <xref ref="sec_display_command" text="title"/>.
   </p>
 </section>
