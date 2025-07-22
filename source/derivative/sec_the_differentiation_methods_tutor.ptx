@@ -1,51 +1,68 @@
 <section xml:id="sec_the_differentiation_methods_tutor">
   <title>The Differentiation Methods Tutor</title>
-  <introduction>
+  <p>
+    The Differentiation Methods tutor is useful for showing each individual differentiation rule as a separate step when finding the derivative of a given function.
+  </p>
+  <figure>
+    <caption>Opening up the Differentiation Methods tutor using menus.</caption>
+    <image source="images/DiffTutorLoad1-eps-converted-to" width="80%"/>
+  </figure>
+  <figure>
+    <caption>Opening up the Differentiation Methods tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
+    <image source="images/DiffTutorLoad2-eps-converted-to" width="80%"/>
+  </figure>
+  <example>
+    <title>Differentiating <m>x^2\cos(x)</m> using the Product, Power, and Cosine Rules</title>
     <p>
-      The Differentiation Methods tutor is useful for showing each individual differentiation rule as a separate step when finding the derivative of a given function.
+      This example will use the differentiation methods tutor to show how various differentiation rules are applied to <m>x^2\cos(x)</m>.
     </p>
-    <figure>
-      <caption>Opening up the Differentiation Methods tutor using menus.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/DiffTutorLoad1-eps-converted-to.pdf}
-    </figure>
-    <figure>
-      <caption>Opening up the Differentiation Methods tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/DiffTutorLoad2-eps-converted-to.pdf}
-    </figure>
-  </introduction>
-  <subsection>
-    <title>Differentiating <m>x^2\cos(x)</m> using Product and Power Rules</title>
-    <figure>
-      <caption>Using the Get Hint button gives you suggestions as to what differentiation rule to use.</caption>
-      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.6\height} 0 0},clip]{tutorials/figures/DiffTutorQ1-1-eps-converted-to.pdf}
-      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.3\height} 0 0},clip]{tutorials/figures/DiffTutorQ1-2-eps-converted-to.pdf}
-    </figure>
-    <aside>
-      <p>
-        When typing out the function in the tutor,
-        you will not have access to the palettes toolbar in Maple.
-        You will need to type out commands such as <c>sqrt()</c> for square roots.
-        You must also include the symbol * for multiplication.
-      </p>
-    </aside>
-    <figure>
-      <caption>If a rule cannot be applied, then the tutor will provide additional hints.</caption>
-      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.28\height} 0 0},clip]{tutorials/figures/DiffTutorQ1-3-eps-converted-to.pdf}
-    </figure>
-    <figure>
-      <caption>Using the product rule, the power rule, and the derivative of <m>\cos(x)</m> to differentiate <m>x^2\cos(x)</m>.</caption>
-      <image width="80%" source="images/DiffTutorQ1-4-eps-converted-to.png"/>
-    </figure>
-  </subsection>
-  <subsection>
-    <title>Differentiating <m>\frac{\sin(x)}{x\tan(x)}</m> using Rewrite and Quotient Rule</title>
-    <figure>
-      <caption>Using the Rewrite button allows you to replace an expression with another equivalent expression.</caption>
-      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.2\height} 0 0},clip]{tutorials/figures/DiffTutorQ2-1-eps-converted-to.pdf}
-    </figure>
-    <figure>
-      <caption>Applying the quotient rule to differentiate <m>\frac{\sin(x)}{x\tan(x)}</m>.</caption>
-      \adjincludegraphics[width=0.8\textwidth,trim={0 {0.3\height} 0 0},clip]{tutorials/figures/DiffTutorQ2-3-eps-converted-to.pdf}
-    </figure>
-  </subsection>
+    <p>
+      To begin, make sure that the function is typed in properly. You will not have access to the palettes toolbar in Maple, so
+      you will need to type out commands such as <c>sqrt()</c> for square roots. You must also include the symbol * for multiplication.
+    </p>
+    <p>
+      You will also need to ensure that the correct variable is specified. Then you can click Start to begin.
+    </p>
+    <p>
+      If you are unsure which rule should be applied, you can ask for a hint.
+    </p>
+    <image source="images/DiffTutorQ1-1-eps-converted-to" width="50%"/>
+    <p>
+      Click on an appropriate differentiation rule to see the specific rule applied, along with the resulting expression.
+      If a rule cannot be applied, then the tutor will provide additional hints.
+    </p>
+    <image source="images/DiffTutorQ1-2-eps-converted-to" width="50%"/>
+    <p>
+      With the product rule applied, you can continue on to use the power and cosine rules.
+    </p>
+    <sidebyside widths = "45% 45%" margins="auto" valign="middle">
+      <image source="images/DiffTutorQ1-3-eps-converted-to"/>
+      <image source="images/DiffTutorQ1-4-eps-converted-to"/>
+    </sidebyside>
+  </example>
+  <example>
+    <title>Differentiating <m>\frac{\sin(x)}{x\tan(x)}</m> by Simplifying and the Quotient Rule</title>
+    <p>
+      This example will show how to rewrite <m>\frac{\sin(x)}{x\tan(x)}</m> in a simpler form in order to apply the quotient rule.
+    </p>
+    <p>
+      Once the function is typed in properly, make sure that the variable is properly set and click Start.
+      In its original form, this expression requires both the product and quotient rules for differentiation. However, by rewriting
+      <me>
+        \tan(x) = \dfrac{\sin(x)}{\cos(x)}
+      </me>,
+      the expression can be simplified to only require a quotient rule,
+    </p>
+    <p>
+      This simplification can be done by selecting the <q>Rewrite</q> rule and applying the given change.
+    </p>
+    <image source="images/DiffTutorQ2-1-eps-converted-to" width="50%"/>
+    <p>
+      After applying the simplification, the quotient rule can be applied directly.
+    </p>
+    <image source="images/DiffTutorQ2-3-eps-converted-to" width="50%"/>
+    <p>
+      Applying the remaining differentiation rules is left as an exercise to the reader.
+    </p>
+  </example>
 </section>

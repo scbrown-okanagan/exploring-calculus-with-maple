@@ -1,115 +1,98 @@
 <section xml:id="sec_the_diff_command">
   <title>The <c>diff()</c> Command</title>
-  <introduction>
+  <idx><h>derivative</h><h>diff</h></idx>
+  <p>
+    The <c>diff()</c> command is probably the most basic way of finding the derivative of an expression.
+    The first parameter is the expression to be differentiated and the second parameter is the variable that the expression is to be differentiated with respect to.
+  </p>
+  <console prompt="> ">
+    <input>diff(arctan(t), t);</input>
+  </console>
+  <p>
+    <idx><h>mathematical functions</h><h>inverse tangent</h></idx>
+    <me>
+      \displaystyle  \frac{1}{{t}^{2}+1}
+    </me>
+  </p>
+  <p>
+    If you have assigned a function, then make sure to use proper function notation inside the <c>diff()</c> command.
+    As we will discover in <xref ref="sec_derivs_using_function_notation" text="title"/>, there is simpler method for evaluating derivatives using function notation.
+  </p>
+  <console prompt="> ">
+    <input>f(x) := sin(x);</input>
+  </console>
+  <p>
+    <idx><h>mathematical functions</h><h>sine</h></idx>
+    <me>
+      \displaystyle f\, := \,x\mapsto \sin \left( x \right)
+    </me>
+  </p>
+  <p>
+    Make sure that you are taking the derivative with respect to the desired variable.
+    Assigning a name to the derivative allows you to more easily substitute values into the derivative and determine the slope
+    of a tangent line at a given point.
+  </p>
+  <console prompt="> ">
+    <input>deriv1 := diff(f(x), x);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle deriv1\, := \,\cos \left( x \right)
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>slope := subs(x = Pi/2, deriv1); simplify(%);</input>
+  </console>
+  <p>
+    <idx><h>subs</h></idx>
+    <idx><h>Pi</h></idx>
+    <idx><h>simplify</h></idx>
+    <idx><h>ditto operator</h></idx>
+    <me>
+      \displaystyle slope\, := \,\cos \left( \pi/2 \right)
+    </me>
+    <me>
+      \displaystyle  0
+    </me>
+  </p>
+  <p>
+    Higher derivatives can be evaluated by applying the <c>diff()</c> command multiple times in a row.
+    <idx><h>derivative</h><h>diff!higher derivatives</h></idx>
+  </p>
+  <console prompt="> ">
+    <input>diff(arctan(t), t); diff(%, t);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle  \frac{1}{{t}^{2}+1}
+    </me>
+    <me>
+      \displaystyle -\,{\frac {2t}{ \left( {t}^{2}+1 \right) ^{2}}}
+    </me>
+  </p>
+  <p>
+    Higher derivatives can also be calculated in a single command by specifying the variable repetitively or using the $ notation, as shown below.
+  </p>
+  <aside>
     <p>
-      The <c>diff()</c> command is probably the most basic way of finding the derivative of an expression.
-      The first parameter is the expression to be differentiated and the second parameter is the variable that the expression is to be differentiated with respect to.
-          <idx><h>derivative</h><h>diff</h></idx>
-          <idx><h>mathematical functions</h><h>inverse tangent</h></idx>
-          <idx><h>mathematical functions</h><h>sine</h></idx>
-          <idx><h>subs</h></idx>
-          <idx><h>simplify</h></idx>
-          <idx><h>ditto operator</h></idx>
-          <idx><h>Pi</h></idx> \begin{maplegroup} \begin{mapleinput} {diff(arctan(t), t); } \end{mapleinput} \relax \begin{maplelatex} {1/(t^2+1)}{
-      <me>
-        \displaystyle  \frac{1}{{t}^{2}+1}
-      </me>
+      There are shortcuts for the <c>diff()</c> command that are found in the palettes toolbar. This includes higher derivatives as well.
     </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      If you have assigned a function,
-      then make sure to use proper function notation inside the <c>diff()</c> command.
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {f(x) := sin(x); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator, arrow;
-      sin(x) end proc}{
-      <me>
-        \displaystyle f\, := \,x\mapsto \sin \left( x \right)
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        Make sure that you are taking the derivative with respect to the desired variable.
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {deriv1 := diff(f(x),
-      x); } \end{mapleinput} \relax \begin{maplelatex} {deriv1 := cos(x)}{
-      <me>
-        \displaystyle \textit{deriv1}\, := \,\cos \left( x \right)
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {slope := subs(x = Pi/2, deriv1);
-      simplify( } \end{mapleinput} \relax \begin{maplelatex} {slope := cos((1/2)*Pi)}{
-      <me>
-        \displaystyle \textit{slope}\, := \,\cos \left( \pi/2 \right)
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {0.}{
-      <me>
-        \displaystyle  0
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </introduction>
-  <subsection>
-    <title>Higher Derivatives using <c>diff()</c></title>
-    <p>
-      Higher derivatives can be evaluated by applying the <c>diff()</c> command multiple times,
-      by specifying the variable repetitively,
-      or using the $ notation, as shown below.
-          <idx><h>derivative</h><h>diff!higher derivatives</h></idx>
-      \begin{maplegroup} \begin{mapleinput} {diff(arctan(t), t);
-      diff( } \end{mapleinput} \relax \begin{maplelatex} {1/(t^2+1)}{
-      <me>
-        \displaystyle  \frac{1}{{t}^{2}+1}
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {-2*t/(t^2+1)^2}{
-      <me>
-        \displaystyle -\,{\frac {2t}{ \left( {t}^{2}+1 \right) ^{2}}}
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {diff(f(x),
-      x, x); } \end{mapleinput} \relax \begin{maplelatex} {-sin(x)}{
-      <me>
-        \displaystyle -\sin \left( x \right)
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        <image width="80%" source="images/palettediff.png"/>
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {diff(f(x),
-      x$2); } \end{mapleinput} \relax \begin{maplelatex} {-sin(x)}{
-      <me>
-        \displaystyle -\sin \left( x \right)
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </subsection>
+    <image source="images/palettediff.png"/>
+  </aside>
+  <console prompt="> ">
+    <input>diff(f(x), x, x);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle -\sin \left( x \right)
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>diff(f(x), x$2);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle -\sin \left( x \right)
+    </me>
+  </p>
 </section>

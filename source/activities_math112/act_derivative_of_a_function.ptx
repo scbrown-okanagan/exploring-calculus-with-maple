@@ -147,7 +147,7 @@
         </statement>
         <hint>
           <p>
-            An example of finding minimum and maximum values on a closed interval can be found in <xref ref="subsec_closed_interval_method"/>.
+            An example of finding minimum and maximum values on a closed interval can be found in <xref ref="ex_closed_interval_method"/>.
           </p>
         </hint>
       </task>

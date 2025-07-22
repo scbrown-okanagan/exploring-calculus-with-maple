@@ -1,41 +1,35 @@
 <section xml:id="sec_the_derivatives_tutor">
   <title>The Derivatives Tutor</title>
-  <introduction>
-    <p>
-          <idx><h>derivative</h><h>tutor</h></idx>
-    </p>
-    <p>
-      The Derivatives tutor is a useful way for visualising the graphs of the first
-      (and second)
-      derivatives of a given function.
-    </p>
-    <figure>
-      <caption>Opening up the Derivatives tutor using menus.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/DerivativeTutorLoad1-eps-converted-to.pdf}
-    </figure>
-    <figure>
-      <caption>Opening up the Derivatives tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/DerivativeTutorLoad2-eps-converted-to.pdf}
-    </figure>
-  </introduction>
-  <subsection>
+  <idx><h>derivative</h><h>tutor</h></idx>
+  <p>
+    The Derivatives tutor is a useful way for visualising the graphs of the first (and second) derivatives of a given function.
+  </p>
+  <figure>
+    <caption>Opening up the Derivatives tutor using menus.</caption>
+    <image source="images/DerivativeTutorLoad1-eps-converted-to" width="80%"/>
+  </figure>
+  <figure>
+    <caption>Opening up the Derivatives tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
+    <image source="images/DerivativeTutorLoad2-eps-converted-to" width="80%"/>
+  </figure>
+  <example>
     <title>Visualising the Derivative of <m>(x-1)^2\sin(x)</m></title>
-    <figure>
-      <caption>The Derivatives tutor displays the given function <m>f(x)</m> as well as its derivative(s) <m>f'(x)</m> (and optionally <m>f''(x)</m>).</caption>
-      <image width="80%" source="images/DerivativeTutorQ1-1-eps-converted-to.png"/>
-      \vspace{-1cm}
-    </figure>
-    <aside>
-      <p>
-        When typing out the function in the tutor,
-        you will not have access to the palettes toolbar in Maple.
-        You will need to type out commands such as <c>sqrt()</c> for square roots.
-        You must also include the symbol * for multiplication.
-      </p>
-    </aside>
-    <figure>
-      <caption>You can optionally specify the axes ranges as well as <m>1:1</m> scaling.</caption>
-      \adjincludegraphics[width=\textwidth,trim={{0.2\width} 0 0 0},clip]{tutorials/figures/DerivativeTutorQ1-2-eps-converted-to.pdf}
-    </figure>
-  </subsection>
+    <p>
+      This example will illustrate how to use the interactive derivatives viewer to visualise the derivatives of <m>(x-1)^2\sin(x)</m>.
+    </p>
+    <p>
+      First, you will need to start by typing out the function in the tutor. Unfortunately, you will not have access to the palettes toolbar in Maple, so
+      you will need to type out commands such as <c>sqrt()</c> for square roots. You must also include the symbol * for multiplication.
+    </p>
+    <p>
+      You will also need to give an interval <m>[a,b]</m>. Without the palettes toolbar, you will need to type <c>Pi</c> for the mathematical constant.
+      <idx><h>Pi</h></idx>
+    </p>
+    <image source="images/DerivativeTutorQ1-1-eps-converted-to" width="80%"/>
+    <p>
+      The Derivatives tutor displays the given function <m>f(x)</m> as well as <m>f'(x)</m> (and <m>f''(x)</m> if the box is ticked).
+      You can optionally specify the axes ranges as well as <m>1:1</m> scaling.
+    </p>
+    <image source="images/DerivativeTutorQ1-2-eps-converted-to" width="80%"/>
+  </example>
 </section>
