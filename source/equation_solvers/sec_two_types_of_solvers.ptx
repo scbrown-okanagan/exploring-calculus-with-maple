@@ -1,68 +1,41 @@
 <section xml:id="sec_two_types_of_solvers">
   <title>Two Types of Solvers</title>
+  <aside>
+    <p>
+      In most of the exercises in the activities, you may ignore complex solutions involving <m>\displaystyle I= \sqrt{-1}</m>.
+    </p>
+  </aside>
   <p>
-    We will make use of two different equations solvers in Maple:
+    We will make use of two different equations solvers in Maple. Each solver behaves quite differently and has its own strengths and weaknesses.
+    <ul>
+      <li>
+        <p>
+          <c>solve()</c>
+          <idx><h>solving equations</h><h>solve</h></idx>
+          <ul>
+            <li>This solver attempts to solve an equation and then display the solutions in their exact form.</li>
+            <li>This solver will give both real and complex solutions. Complex solutions will involve the imaginary value <m>\displaystyle I= \sqrt{-1}</m>.</li>
+            <li>Solutions to high-degree polynomials can be very large and may be displayed symbolically using <q><em>RootOf</em></q> placeholders.</li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          <c>fsolve()</c>
+          <idx><h>solving equations</h><h>fsolve</h></idx>
+          <ul>
+            <li>This solver uses numerical approximation methods and displays the solutions in decimal form.</li>
+            <li>This solver will give real solutions only.</li>
+            <li>The number of digits displayed for a numerical value will be determined by the number assigned to <c>Digits</c>.</li>
+            <li>Some solutions may not be found by the methods used by the solver.</li>
+          </ul>
+        </p>
+      </li>
+    </ul>
   </p>
-  <ul>
-    <li>
-      <p>
-        <c>solve()</c>
-      </p>
-      <ul>
-        <li>
-          <p>
-            This solver attempts to solve an equation and then display the solutions in their exact form.
-            <aside>
-              <p>
-                Maple will give complex solutions using {I = sqrt(-1)}{<m>\displaystyle I= \sqrt{-1}</m>}. For most of the exercises in the activities,
-                these solutions can be ignored.
-              </p>
-            </aside>
-          </p>
-        </li>
-        <li>
-          <p>
-            This solver will give both real and complex solutions.
-          </p>
-        </li>
-        <li>
-          <p>
-            Solutions to high-degree polynomials can be very large and may be displayed symbolically using
-            <q><em>RootOf</em></q>
-            placeholders.
-          </p>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <p>
-        <c>fsolve()</c>
-        <ul>
-          <li>
-            <p>
-              This solver uses numerical approximation methods and displays the solutions in decimal form.
-            </p>
-          </li>
-          <li>
-            <p>
-              This solver will give real solutions with the number of digits assigned to <c>Digits</c>.
-              <aside>
-                <p>
-                  It is a good idea to see the output of both solvers to decide which output is more useful.
-                  A good strategy is to use <c>solve()</c> and see if the output is helpful.
-                  If it is not,
-                  then type an <c>f</c> at the start of that input and rerun the new command.
-                </p>
-              </aside>
-            </p>
-          </li>
-          <li>
-            <p>
-              Some solutions may not be found by the methods used by the solver.
-            </p>
-          </li>
-        </ul>
-      </p>
-    </li>
-  </ul>
+  <p>
+    It is a good idea to see the output of both solvers to decide which output is more useful.
+    A good strategy is to use <c>solve()</c> and see if the output is helpful.
+    If it is not, then you can go back to your command, change it to <c>fsolve()</c>, and rerun the new command.
+  </p>
 </section>
