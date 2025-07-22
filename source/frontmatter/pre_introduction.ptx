@@ -61,7 +61,7 @@
     </p>
     <image width="60%" source="images/mapleupdate.png"/>
 	</paragraphs>
-	<paragraphs xml:id="pt_Activities">
+	<paragraphs>
 		<title>Organizing Files in your OneDrive</title>
 		<p>
 			You are given your own personal cloud storage through your college Microsoft account. You can find this folder by opening up File Explorer on a school computer.
@@ -76,7 +76,7 @@
 			The files that you have saved on your OneDrive folder on campus can be accessed from home through a browser by installing OneDrive on a personal device.
 		</p>
 	</paragraphs>
-	<paragraphs xml:id="pt_Activities">
+	<paragraphs>
 		<title>File Types</title>
 		<p>
 			The files that Maple saves are only readable through Maple. However, you can find the Export As tool under the File menu.

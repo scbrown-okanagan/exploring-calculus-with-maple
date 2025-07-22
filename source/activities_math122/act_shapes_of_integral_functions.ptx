@@ -77,7 +77,7 @@
         <hint>
           <p>
             When you use the <c>fsolve()</c><idx><h>solving equations</h><h>fsolve</h></idx> command, you can specify an interval in which 
-            you wish to search for solutions. An example of this can be found on <xref ref="eg_fsolve_interval">page</xref>.
+            you wish to search for solutions. An example of this can be found in <xref ref="sec_solving_an_equation_of_one_variable" text="title"/>.
           </p>
         </hint>
       </task>

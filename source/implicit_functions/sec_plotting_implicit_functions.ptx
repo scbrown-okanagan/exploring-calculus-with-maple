@@ -29,8 +29,9 @@
   </p>
   <p>
     Most of the implicit functions used in this lab manual will produce smooth curves when plotted.
-    See <xref ref="fig_plotresolution">Figure</xref>
-    if your plot appears to have jagged edges.
+    However, if your plot appears to have jagged edges, then you may wish to set the optional parameter <c>numpoints=30000</c>. 
+    This increases the number of points plotted to make a smoother graph. The higher that <c>numpoints</c> is set to, the smoother the graph may be.
+    Be careful not to set too high of a number to avoid Maple freezing.
   </p>
   <aside>
     <p>

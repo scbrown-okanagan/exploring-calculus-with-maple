@@ -113,29 +113,32 @@
     <title>Exploring Calculus with Maple</title>
 	  <subtitle>PreTeXt Edition</subtitle>
     <frontmatter>
-      <titlepage>
+      <bibinfo>
         <author>
           <personname>Stephen Brown</personname>
-		  <department>Department of Mathematics and Statistics</department>
+          <department>Department of Mathematics and Statistics</department>
           <institution>Okanagan College</institution>
           <email>scbrown@okanagan.bc.ca</email>
         </author>
+      </bibinfo>
+      <titlepage>
+        <titlepage-items/>
       </titlepage>
-	  <xi:include href="./frontmatter/pre_lab_syllabus.ptx"/>
-	  <xi:include href="./frontmatter/pre_introduction.ptx"/>
+      <xi:include href="./frontmatter/pre_lab_syllabus.ptx"/>
+      <xi:include href="./frontmatter/pre_introduction.ptx"/>
     </frontmatter>
     <part xml:id="prt_calc1_activities">
       <title>Calculus I</title>
-        <xi:include href="./activities_math112/math112activities.ptx"/>
-        <xi:include href="./activities_math112/lab_test_review_math_112.ptx"/>
+      <xi:include href="./activities_math112/math112activities.ptx"/>
+      <xi:include href="./activities_math112/lab_test_review_math_112.ptx"/>
     </part>
     <part xml:id="prt_calc2_activities">
       <title>Calculus II</title>
-        <xi:include href="./activities_math122/math122activities.ptx"/>
-        <xi:include href="./activities_math122/lab_test_review_math_122.ptx"/>
+      <xi:include href="./activities_math122/math122activities.ptx"/>
+      <xi:include href="./activities_math122/lab_test_review_math_122.ptx"/>
     </part>
     <part xml:id="prt_tutorials">
-    <title>Tutorials</title>
+      <title>Tutorials</title>
       <xi:include href="./maple_environment/chp_maple_environment.ptx"/>
       <xi:include href="./basics_of_maple_syntax/chp_basics_of_maple_syntax.ptx"/>
       <xi:include href="./basic_operations/chp_basic_operations.ptx"/>

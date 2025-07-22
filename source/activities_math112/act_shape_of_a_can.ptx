@@ -18,7 +18,7 @@
     </p>
     <figure>
       <caption>A simple can in the shape of a circular cylinder.</caption>
-      <image width="50%;">
+      <image width="50%">
         <latex-image>
           <![CDATA[\begin{tikzpicture}
           \draw (0,0) ellipse (1.25 and 0.5);
