@@ -1,133 +1,99 @@
 <section xml:id="sec_one_sided_limits">
   <title>One-Sided Limits</title>
-  <introduction>
+  <p>
+    For one-sided limits, you will need to add an additional parameter to the <c>limit()</c> command,
+    specifying which side (left or right) to approach the value from.
+    In the case of a vertical asymptote, these limits will be equal to <m>\pm \infty</m>.
+  </p>
+  <console prompt="> ">
+    <input>L(x) := 1/x;</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle L\, := \,x\mapsto {x}^{-1}
+    </me>
+  </p>
+  <aside>
     <p>
-      For one-sided limits,
-      you will need to add an additional parameter to the <c>limit()</c> command,
-      specifying which side
-      (left or right)
-      to approach the value from.
-      In the case of a vertical asymptote,
-      these limits will be equal to <m>\pm \infty</m>.
+      Some versions of Maple may not properly display graphs of functions that contain vertical asymptotes.
+      Include <c>discont=true</c> as a parameter in the <c>plot( )</c> command when required.
+      <idx><h>plot</h><h>discontinuities</h></idx>
     </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {L(x) := 1/x; } \end{mapleinput} \relax \begin{maplelatex} {L := proc (x) options operator,
-      arrow; 1/x end proc}{
-      <me>
-        \displaystyle L\, := \,x\mapsto {x}^{-1}
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        Some versions of Maple may not properly display graphs of functions that contain vertical asymptotes.
-        Include <c>discont=true</c> as a parameter in the <c>plot( )</c> command when required.
-            <idx><h>plot</h><h>discontinuities</h></idx>
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {plot(L(x),
-      x=-3..3, y=-5..5); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/Limitsplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {limit(L(x), x=0, right); }
-          <idx><h>limit</h><h>one-sided</h></idx>
-      \end{mapleinput} \relax \begin{maplelatex} {infinity}{
-      <me>
-        \displaystyle \infty
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {limit(L(x), x=0, left); }
-          <idx><h>limit</h><h>one-sided</h></idx>
-      \end{mapleinput} \relax \begin{maplelatex} {-infinity}{
-      <me>
-        \displaystyle -\infty
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {
-    </p>
-    <p>
-      } \end{mapleinput} \end{maplegroup}
-    </p>
-  </introduction>
-  <subsection xml:id="subsec_vertical_asymptotes">
+  </aside>
+  <console prompt="> ">
+    <input>plot(L(x), x=-3..3, y=-5..5);</input>
+  </console>
+  <image source="images/Limitsplot2d1-eps-converted-to" width="50%"/>
+  <console prompt="> ">
+    <input>limit(L(x), x=0, right);</input>
+  </console>
+  <p>
+    <idx><h>limit</h><h>one-sided</h></idx>
+    <me>
+      \displaystyle \infty
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>limit(L(x), x=0, left);</input>
+  </console>
+  <p>
+    <idx><h>limit</h><h>one-sided</h></idx>
+    <me>
+      \displaystyle -\infty
+    </me>
+  </p>
+  <example xml:id="ex_vertical_asymptotes">
     <title>Vertical Asymptotes and One-Sided Limits</title>
     <p>
-      In this example,
-      we will examine a rational function and use limits to determine its vertical asymptotes.
+      In this example, we will examine a rational function and use limits to determine its vertical asymptotes.
     </p>
+    <console prompt="> ">
+      <input>f(x) := (x^2-x-6)/(x^2-8*x+15);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {f(x) := (x\symbol{94}2-x-6)/(x\symbol{94}2-8*x+15); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
-      arrow; (x^2-x-6)/(x^2-8*x+15) end proc}{
       <me>
         \displaystyle f\, := \,x\mapsto {\frac {{x}^{2}-x-6}{{x}^{2}-8\,x+15}}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
       We can factor the denominator to find the domain of <m>f(x)</m> and predict where we might find vertical asymptotes.
+      There is a useful <c>denom()</c> command for this that we can use for the denominator of <m>f(x)</m>.
+      <idx><h>mathematical functions</h><h>denominator</h></idx>
     </p>
-    <aside>
-      <p>
-        There is a useful <c>denom()</c><idx><h>mathematical functions</h><h>denominator</h></idx> command that Maple provides.
-        You can type <c>denom(f(x))</c> to get the denominator of <m>f(x)</m>.
-      </p>
-    </aside>
+    <console prompt="> ">
+      <input>factor( denom( f(x) ) );</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {factor(x\symbol{94}2-8*x+15); } \end{mapleinput} \relax \begin{maplelatex} {(x-3)*(x-5)}{
       <me>
         \displaystyle  \left( x-3 \right)  \left( x-5 \right)
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      It looks like <m>x=3</m> and <m>x=5</m> are not in the domain of <m>f(x)</m>.
+      It looks like <m>x=3</m> and <m>x=5</m> are not in the domain of <m>f(x)</m>, though it is not clear if they are vertical asymptotes.
       We can find the limit of <m>f(x)</m> as <m>x \rightarrow 3</m>.
     </p>
+    <console prompt="> ">
+      <input>limit(f(x), x=3);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {limit(f(x),
-      x=3); } \end{mapleinput} \relax \begin{maplelatex} {-5/2}{
       <me>
         \displaystyle -5/2
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      Since this limit exists but <m>f(3)</m> does not,
-      this is a <em>removable discontinuity</em>
-      and not a vertical asymptote.
+      Since this limit exists but <m>f(3)</m> does not, this is a <em>removable discontinuity</em> and not a vertical asymptote.
       Now we can find the limit of <m>f(x)</m> as <m>x \rightarrow 5</m>.
     </p>
+    <console prompt="> ">
+      <input>limit(f(x), x=5);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {limit(f(x),
-      x=5); } \end{mapleinput} \relax \begin{maplelatex} {undefined}{
       <me>
         \displaystyle \textit{undefined}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      Even though this limit does not exist,
-      we cannot automatically conclude that <m>f(x)</m> has a vertical asymptote at <m>x=5</m>.
+      Even though this limit does not exist, we cannot automatically conclude that <m>f(x)</m> has a vertical asymptote at <m>x=5</m>.
       We need to compute the one-sided limits to see if there is asymptotic behaviour.
     </p>
     <aside>
@@ -136,26 +102,24 @@
         Try typing <c>?Asymptotes</c> to learn more.
       </p>
     </aside>
+    <console prompt="> ">
+      <input>limit(f(x), x=5, left);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {limit(f(x),
-      x=5, left); } \end{mapleinput} \begin{mapleinput} {limit(f(x),
-      x=5, right); } \end{mapleinput} \relax \begin{maplelatex} {-infinity}{
       <me>
         \displaystyle -\infty
       </me>
     </p>
+    <console prompt="> ">
+      <input>limit(f(x), x=5, right);</input>
+    </console>
     <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {infinity}{
       <me>
         \displaystyle \infty
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      Since these limits are given as <m>\pm \infty</m>, we know that <m>f(x)</m> has a vertical asymptote at <m>x=5</m>.
     </p>
-    <p>
-      Since these limits are given as <m>\pm \infty</m>,
-      we know that <m>f(x)</m> has a vertical asymptote at <m>x=5</m>.
-    </p>
-  </subsection>
+  </example>
 </section>

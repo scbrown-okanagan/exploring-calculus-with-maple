@@ -1,0 +1,46 @@
+<section xml:id="sec_limits_tutorial">
+  <title>Limits</title>
+  <p>
+    We can use the <c>limit()</c> command to evaluate the limit of a function as <m>x</m> approaches <m>a</m>.
+    The <c>limit()</c> command needs two parameters.
+    The first parameter is the expression and the second parameter gives the value for a variable to approach.
+    <idx><h>limit</h></idx>
+  </p>
+  <aside>
+    <p>
+      There is a convenient shortcut for limits found on the palettes toolbar.
+      <idx><h>limit</h></idx>
+    </p>
+    <image width="50%" source="images/palettelimit.png"/>
+  </aside>
+  <p>
+    The order of the parameters in the <c>limit()</c> command is important.
+    An error message will be displayed if you switch the order of the parameters in the command and then try to execute it.
+  </p><console prompt="> ">
+    <input>f(x) := x^2 + 2*x -4;</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle f\, := \,x\mapsto {x}^{2}+2\,x-4
+    </me>
+  </p><console prompt="> ">
+    <input>limit(f(x), x=3);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle 11
+    </me>
+  </p>
+  <p>
+    In this next example, it is important to note that <m>h=0</m> here means that <m>h</m> <em>approaches</em> <m>0</m>, but we are not simply substituting <m>h=0</m> into the expression.
+    In fact, this expression is undefined at <m>h=0</m>.
+  </p>
+  <console prompt="> ">
+    <input>limit((f(x+h) - f(x))/h, h=0);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle 2x+2
+    </me>
+  </p>
+</section>

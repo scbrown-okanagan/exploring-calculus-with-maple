@@ -1,70 +1,63 @@
 <section xml:id="sec_limitmethodstutor">
   <title>The Limit Methods Tutor</title>
-  <introduction>
+  <idx><h>limit</h><h>tutor</h></idx>
     <p>
-          <idx><h>limit</h><h>tutor</h></idx>
       The Limit Methods tutor will walk you through each step needed to evaluate a limit, including all of the limit laws learned in class.
       The tutor will open in a new interactive window and will output all steps in your Maple worksheet once the window is closed.
     </p>
     <figure>
       <caption>Opening up the Limit Methods tutor using menus.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/LimitTutorLoad-eps-converted-to.pdf}
+      <image width="90%" source="images/LimitTutorLoad-eps-converted-to"/>
     </figure>
     <figure>
       <caption>Opening up the Limit Methods tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/LimitTutorLoad2-eps-converted-to.pdf}
+      <image width="90%" source="images/LimitTutorLoad2-eps-converted-to"/>
     </figure>
-  </introduction>
-  <subsection>
+  <example>
     <title>Using Limit Laws for a One-sided Limit</title>
+    <idx><h>limit</h><h>tutor!one-sided</h></idx>
     <p>
-          <idx><h>limit</h><h>tutor!one-sided</h></idx>
       This example will illustrate all of the steps required to evaluate
       <me>
         \displaystyle\lim_{x \rightarrow 2^+} \frac{x-2}{x^2-x-2}
       </me>.
     </p>
-    <figure>
-      <caption>Begin by typing out the function, the variable name, and the value that you want the variable to approach. The direction can be specified in the drop down menu to the right of the variable information. Hit Start. You can click on individual limit laws to see whether they apply to the given limit.</caption>
-      \adjincludegraphics[width=0.9\textwidth,trim={0 {0.2\height} 0 0},clip]{tutorials/figures/LimitTutorQ1-1-eps-converted-to.pdf}
-      \vspace{-1cm}
-    </figure>
-    <aside>
-      <p>
-        When typing out the function in the tutor,
-        you will not have access to the palettes toolbar in Maple.
-        You will need to type out commands such as <c>sqrt()</c> for square roots.
-        You must also include the symbol * for multiplication.
-      </p>
-    </aside>
-    <figure>
-      <caption>You can press the Next Step or All Steps buttons to have Maple show you a step-by-step solution.</caption>
-      <image width="90%" source="images/LimitTutorQ1-2-eps-converted-to.png"/>
-      <image width="90%" source="images/LimitTutorQ1-3-eps-converted-to.png"/>
-    </figure>
-  </subsection>
-  <subsection>
-    <title>Using Limit Laws for a Limit at Infinity</title>
     <p>
-          <idx><h>limit</h><h>tutor!at infinity</h></idx>
+      Begin by typing out the function, the variable name, and the value that you want the variable to approach.
+      When typing out the function in the tutor, you will not have access to the palettes toolbar in Maple, so you will need to type out commands such as <c>sqrt()</c> for square roots.
+      You must also include the symbol * for multiplication.
+      The direction can be specified in the drop down menu to the right of the variable information. 
+    </p>
+    <p>
+      Once you have completed these steps, hit Start to see the limit in the output preview. You can click on individual limit laws to see whether they apply to the given limit.
+    </p>
+    <image source="images/LimitTutorQ1-1-eps-converted-to" width="50%"/>
+    <p>
+      You may also simply click the Next Step or All Steps buttons to have Maple show you a step-by-step solution.
+    </p>
+    <sidebyside widths = "45% 45%" margins="auto" valign="middle">
+      <image source="images/LimitTutorQ1-2-eps-converted-to"/>
+      <image source="images/LimitTutorQ1-3-eps-converted-to"/>
+    </sidebyside>
+  </example>
+  <example>
+    <title>Using Limit Laws for a Limit at Infinity</title>
+    <idx><h>limit</h><h>tutor!at infinity</h></idx>
+    <p>   
       In this example, we will see all of the limit laws used to evaluate
       <me>
         \displaystyle\lim_{x \rightarrow -\infty} \frac{2x-1}{\sqrt{x^2-x+3}}
       </me>.
+      Once again, you will need to type out commands such as <c>sqrt()</c> for square roots and include * for multiplication. In this case, we may use exponents for the square root.
+      For a limit as <m>x \rightarrow \infty</m> or <m>x \rightarrow -\infty</m>, Maple recognizes the word <c>infinity</c>.
     </p>
-    <figure>
-      <caption>For a limit as <m>x \rightarrow \infty</m> or <m>x \rightarrow -\infty</m>, Maple recognizes the word <c>infinity</c>.</caption>
-      <image width="73%" source="images/LimitTutorQ2-1-eps-converted-to.png"/>
-    </figure>
-    <aside>
-      <p>
-        An alternate method for inputting the function into the tutor involves the <c>sqrt()</c> command.
-      </p>
-    </aside>
-    <figure>
-      <caption>You can click the Next Step or All Steps buttons to have Maple show you a step-by-step solution.</caption>
-      <image width="73%" source="images/LimitTutorQ2-2-eps-converted-to.png"/>
-      <image width="73%" source="images/LimitTutorQ2-3-eps-converted-to.png"/>
-    </figure>
-  </subsection>
+    <image width="50%" source="images/LimitTutorQ2-1-eps-converted-to"/>
+    <p>
+      With the initialization complete, you are free to use the Next Step and All Steps button to see how to evaluate the limit using limit laws.
+    </p>
+    <sidebyside widths = "45% 45%" margins="auto" valign="middle">
+      <image source="images/LimitTutorQ2-2-eps-converted-to"/>
+      <image source="images/LimitTutorQ2-3-eps-converted-to"/>
+    </sidebyside>
+  </example>
 </section>

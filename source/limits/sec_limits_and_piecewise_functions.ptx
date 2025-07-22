@@ -1,72 +1,62 @@
 <section xml:id="sec_limits_and_piecewise_functions">
   <title>Limits and Piecewise Functions</title>
+  <idx><h>mathematical functions</h><h>piecewise</h></idx>
   <p>
     A piecewise function is a good opportunity to practice plotting discontinuities and investigating one- and two-sided limits.
-        <idx><h>mathematical functions</h><h>piecewise</h></idx>
-    \begin{maplegroup} \begin{mapleinput} {P(x) := piecewise(x&lt;=-1, x\symbol{94}2, x&lt;=1, -x, 1&lt;
-    x , x-4); } \end{mapleinput} \relax \begin{maplelatex} {P := proc (x) options operator, arrow;
-    piecewise(x &lt;= -1, x^2, x &lt;= 1, -x, 1 &lt; x, x-4) end proc}{
+  </p>
+  <console prompt="> ">
+    <input>P(x) := piecewise(x &lt;= -1, x^2, x &lt;= 1, -x, 1 &lt; x , x-4);</input>
+  </console>
+  <p>
     <me>
       \displaystyle P\, := \,x\mapsto \begin{cases}{x}^{2}\amp x\leq -1 \\ -x\amp x\leq 1 \\ x-4\amp 1\lt  x \end{cases}
     </me>
   </p>
+  <console prompt="> ">
+    <input>P(x);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {P(x); } \end{mapleinput} \relax \begin{maplelatex} {piecewise(x &lt;= -1, x^2, x &lt;= 1, -x, 1 &lt;
-    x, x-4)}{
     <me>
       \displaystyle \begin{cases}{x}^{2}\amp  x\leq -1 \\ -x\amp  x\leq 1 \\ x-4\amp 1\lt  x \end{cases}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    It is necessary to include the <c>discont=true</c> parameter in the <c>plot( )</c> command here so that the jump discontinuity is properly displayed in the graph of this piecewise function.
+    Unfortunately, even with the <c>discont=true</c> option, Maple does not include an open dot at <m>(1,-3)</m>.
+    <idx><h>plot</h></idx>
+    <idx><h>plot</h><h>discontinuities</h></idx>
   </p>
-  <aside>
-    <p>
-      It is necessary to include the <c>discont=true</c> parameter in the <c>plot( )</c> command here so that the jump discontinuity is properly displayed in the graph of this piecewise function.
-    </p>
-  </aside>
-  <aside>
-    <p>
-      Unfortunately,
-      even with the <c>discont=true</c> option, Maple does not include an open dot at <m>(1,-3)</m>.
-    </p>
-  </aside>
+  <console prompt="> ">
+    <input>plot(P(x), x=-4..4, y=-5..5, discont=true);</input>
+  </console>
+  <image source="images/Limitsplot2d2-eps-converted-to" width="50%"/>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {plot(P(x),
-    x=-4..4, y=-5..5, discont=true); } \end{mapleinput} \relax  \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Limitsplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight  \end{maplegroup}
-        <idx><h>plot</h></idx>
-        <idx><h>plot</h><h>discontinuities</h></idx>
-        <idx><h>limit</h></idx>
-        <idx><h>limit</h><h>one-sided</h></idx> \begin{maplegroup} \begin{mapleinput} {limit(P(x), x=1); } \end{mapleinput} \relax \begin{maplelatex} {undefined}{
+    A piecewise function such as this can provide some interesting results when looking at one- and two-sided limits.
+    <idx><h>limit</h></idx>
+    <idx><h>limit</h><h>one-sided</h></idx>
+  </p>
+  <console prompt="> ">
+    <input>limit(P(x), x=1);</input>
+  </console>
+  <p>
     <me>
       \displaystyle \textit{undefined}
     </me>
   </p>
+  <console prompt="> ">
+    <input>limit(P(x), x=1, left);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {limit(P(x),
-    x=1, left); } \end{mapleinput} \relax \begin{maplelatex} {-1}{
     <me>
       \displaystyle -1
     </me>
   </p>
+  <console prompt="> ">
+    <input>limit(P(x), x=1, right);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {limit(P(x),
-    x=1, right); } \end{mapleinput} \relax \begin{maplelatex} {-3}{
     <me>
       \displaystyle -3
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>
