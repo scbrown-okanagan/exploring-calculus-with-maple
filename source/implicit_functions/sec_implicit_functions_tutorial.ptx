@@ -1,76 +1,67 @@
 <section xml:id="sec_implicit_functions_tutorial">
   <title>Implicit Functions</title>
   <p>
-    An implicit function cannot be defined as a normal function.
-    Instead, the curve is defined as an
-    <em>equation</em> of multiple variables.
-    It is easiest to assign a name to the entire equation,
-    including the <m>=</m> sign.
+    An implicit function defines a relationship between two (or more) variables differently from an explicit function.
+    As opposed to an explicit function that can be written in the form of
+    <me>
+      y = f(x)
+    </me>,
+    an implicit function is defined as an <em>equation</em> of multiple variables. It is often the case that this equation cannot be solved for 
+    one variable explicitly in terms of the other. In Maple, it is easiest to assign a name to the entire equation, including the <m>=</m> sign.
   </p>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {E := y\symbol{94}2 = x\symbol{94}3 - 2*x + 1; } \end{mapleinput} \relax \begin{maplelatex} {E := y^2 = x^3-2*x+1}{
+    The elliptic curve <m>y^2 = x^3 - 2*x + 1</m> is a simple example. It cannot be written as a single function of the form <m>y = f(x)</m>, 
+    since for a given value of <m>x</m>, there may be two different <m>y</m>-values.
+  </p>
+  <console prompt="> ">
+    <input>E := y^2 = x^3 - 2*x + 1;</input>
+  </console>
+  <p>
     <me>
       \displaystyle E\, := \,{y}^{2}={x}^{3}-2\,x+1
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    To find points on the curve, we can substitute a value for <m>x</m> and solve for <m>y</m>.
   </p>
+  <console prompt="> ">
+    <input>subs(x=2, E); solve(%,x);</input>
+  </console>
   <p>
-        <idx><h>subs</h></idx>
-        <idx><h>solving equations</h><h>solve</h></idx>
-        <idx><h>ditto operator</h></idx>
-  </p>
-  <p>
-    To find points on the curve,
-    we can substitute a value for <m>x</m> and solve for <m>y</m>.
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {subs(x=2, E); } \end{mapleinput} \relax \begin{maplelatex} {y^2 = 5}{
+    <idx><h>subs</h></idx>
+    <idx><h>solving equations</h><h>solve</h></idx>
+    <idx><h>ditto operator</h></idx>
     <me>
       \displaystyle {y}^{2}=5
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {solve( } \end{mapleinput} \relax \begin{maplelatex} {sqrt(5), -sqrt(5)}{
     <me>
       \displaystyle  \sqrt{5},\,- \sqrt{5}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    Although many implicit functions cannot be expressed as a single function <m>y=f(x)</m>, it may be possible to split up implicit functions into explicit functions by solving for <m>y</m>.
   </p>
+  <console prompt="> ">
+    <input>L := x^2 + (y - surd(x^2,3))^2 = 1;</input>
+  </console>
+  <aside>
+    <p>
+      Here, the command <c>surd(x^2,3)</c> is equivalent to <m>\sqrt[3]{x^2}</m>.
+      You may also use <c>root[3](x^2)</c>, although the results may vary. Maple is built to work with complex numbers, which lead to some unusual behaviours with roots and exponents.
+    </p>
+  </aside>
   <p>
-    Many implicit functions cannot be expressed as a single function <m>y=f(x)</m>.
-    However, it may be possible to split up implicit functions into explicit functions by solving for <m>y</m>.
-  </p>
-  <p>
-    <idx><h>mathematical functions</h><h>nth root@<m>n</m><sup>th</sup> root</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {L := x\symbol{94}2 + (y - root[3](x\symbol{94}2))\symbol{94}2 = 1; } \end{mapleinput} \relax \begin{maplelatex} {L := x^2+(y-(x^2)^(1/3))^2 = 1}{
+    <idx><h>mathematical functions</h><h><m>n</m>th root</h></idx>
     <me>
       \displaystyle L\, := \,{x}^{2}+ \left( y-\sqrt [3]{{x}^{2}} \right) ^{2}=1
     </me>
   </p>
+  <console prompt="> ">
+    <input>solve(L, y);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <aside>
-    <p>
-      Here, the command <c>root[3]()</c> is equivalent to <m>\sqrt[3]{(~)}</m>.
-    </p>
-  </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {solve(L, y); } \end{mapleinput} \relax \begin{maplelatex} {(x^2)^(1/3)+sqrt(-x^2+1), (x^2)^(1/3)-sqrt(-x^2+1)}{
     <me>
       \displaystyle \sqrt [3]{{x}^{2}}+ \sqrt{-{x}^{2}+1},\,\sqrt [3]{{x}^{2}}- \sqrt{-{x}^{2}+1}
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>

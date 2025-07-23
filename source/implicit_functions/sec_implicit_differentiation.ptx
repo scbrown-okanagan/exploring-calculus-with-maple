@@ -1,150 +1,114 @@
 <section xml:id="sec_implicit_differentiation">
   <title>Implicit Differentiation</title>
+  <idx><h>implicit functions</h><h>implicitdiff</h></idx>
   <p>
     We need to use the <c>implicitdiff()</c> command to find the derivative of an implicit function.
     It is easiest to first assign a name to the equation.
   </p>
+  <console prompt="> ">
+    <input>E := y^2 = x^3 - 2*x + 1;</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {E := y = x\symbol{94}2 + x; } \end{mapleinput} \relax \begin{maplelatex} {E := y = x^2+x}{
+    <idx><h>assignment operator</h><h>implicit function</h></idx>
     <me>
-      \displaystyle E\, := \,y={x}^{2}+x
+      \displaystyle E\, := \,{y}^{2}={x}^{3}-2\,x+1
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>dydx := implicitdiff(E, y, x);</input>
+  </console>
+  <!--<image source="images/Implicit_Functions_and_Differentiationplot2d1-eps-converted-to" width="50%"/>-->
+  <p>
+    <me>
+      \displaystyle dydx\, := \,\frac{3x^2 - 2}{2y}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    The order in which you list the variables matters; the first variable is treated as the dependent variable and the second variable is treated as the independent variable.
+    To find <m>dy/dx</m>, you must use <c>implicitdiff(E,y,x)</c> and to find <m>dx/dy</m>, you must use <c>implicitdiff(E,x,y)</c>.
   </p>
+  <console prompt="> ">
+    <input>dxdy := implicitdiff(E, y, x);</input>
+  </console>
   <p>
-        <idx><h>assignment operator</h><h>implicit function</h></idx>
-        <idx><h>packages</h><h>with</h></idx>
-        <idx><h>packages</h><h>plots</h></idx>
-        <idx><h>implicit functions</h><h>implicitplot!changing axes</h></idx>
-        <idx><h>implicit functions</h><h>implicitplot!plot resolution</h></idx>
-        <idx><h>implicit functions</h><h>implicitdiff</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {with(plots): } \end{mapleinput} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {implicitplot(E, x=-5..5, y=-5..5); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Implicit_Functions_and_Differentiationplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {dydx := implicitdiff(E, y, x); } \end{mapleinput} \relax \begin{maplelatex} {dydx := 2*x+1}{
     <me>
-      \displaystyle \textit{dydx}\, := \,2\,x+1
+      \displaystyle dydx\, := \,\frac{2y}{3x^2 - 2}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    When trying to find the slope of a tangent line at a point on an implicit curve, it helps to plot the curve first.
+    There may be several different <m>y</m>-values for a single <m>x</m>-value on the curve.
   </p>
+  <console prompt="> ">
+    <input>L := x^2 + (y - root[3](x^2))^2 = 1;</input>
+  </console>
   <p>
-    The order in which you list the variables matters;
-    the first variable is treated as the dependent variable and the second variable is treated as the independent variable.
-  </p>
-  <aside>
-    <p>
-      To find <m>dy/dx</m>,
-      you must use <c>implicitdiff(E,y,x)</c> and to find <m>dx/dy</m>,
-      you must use <c>implicitdiff(E,x,y)</c>.
-    </p>
-  </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {dxdy := implicitdiff(E, x, y); } \end{mapleinput} \relax \begin{maplelatex} {dxdy := 1/(2*x+1)}{
-    <me>
-      \displaystyle \textit{dxdy}\, := \, \frac{1}{2\,x+1}
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    When trying to find the slope of a tangent line at a point on an implicit curve,
-    it helps to plot the curve first.
-  </p>
-  <p>
-    <idx><h>mathematical functions</h><h>nth root@<m>n</m><sup>th</sup> root</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {L := x\symbol{94}2 + (y - root[3](x\symbol{94}2))\symbol{94}2 = 1; } \end{mapleinput} \relax \begin{maplelatex} {L := x^2+(y-(x^2)^(1/3))^2 = 1}{
+    <idx><h>mathematical functions</h><h><m>n</m>th root</h></idx>
     <me>
       \displaystyle L\, := \,{x}^{2}+ \left( y-\sqrt [3]{{x}^{2}} \right) ^{2}=1
     </me>
   </p>
+  <console prompt="> ">
+    <input>with(plots):</input>
+    <input>implicitplot(L, x=-1.2..1.2, y=-1.2..1.8);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    <idx><h>packages</h><h>with</h></idx>
+    <idx><h>packages</h><h>plots</h></idx>
+    <idx><h>implicit functions</h><h>implicitplot</h></idx>
   </p>
+  <image source="images/Implicit_Functions_and_Differentiationplot2d2-eps-converted-to" width="50%"/>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {implicitplot(L, x=-1.2..1.2, y=-1.2..1.8); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Implicit_Functions_and_Differentiationplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    To find the points on the curve at a specific <m>x</m> value, you must first substitute the value into the equation and then solve for the <m>y</m>-coordinates.
+    Here, we can find the <m>y</m>-coordinates on the curve when <m>x=0.5</m>.
   </p>
+  <console prompt="> ">
+    <input>subs(x=0.5, L); yCoords := fsolve(%);</input>
+  </console>
   <p>
-    To find the points on the curve at a specific <m>x</m> value,
-    you must first substitute the value and then solve for the <m>y</m>-coordinates.
-  </p>
-  <p>
-        <idx><h>subs</h></idx>
-        <idx><h>solving equations</h><h>fsolve</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {subs(x=0.5, L);
-    yCoords := fsolve( } \end{mapleinput} \relax \begin{maplelatex} {.25+(y-.6299605249)^2 = 1}{
+    <idx><h>subs</h></idx>
+    <idx><h>solving equations</h><h>fsolve</h></idx>
     <me>
       \displaystyle  0.25+ \left( y- 0.6299605249 \right) ^{2}=1
     </me>
-  </p>
-  <p>
-    } \end{maplelatex}
-  </p>
-  <aside>
-    <p>
-      Notice that a list of two <m>y</m>-coordinates is assigned to a single name here.
-      You could assign the individual values to unique names.
-    </p>
-  </aside>
-  <p>
-    \begin{maplelatex} {yCoords := 1.495985929, -.2360648789}{
     <me>
-      \displaystyle \textit{yCoords}\, := \, 1.495985929,\,- 0.2360648789
+      \displaystyle yCoords\, := \, 1.495985929,\,- 0.2360648789
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    Notice that two <m>y</m>-coordinates are assigned to <m>yCoords</m> here. This means that <m>yCoords</m> is now a <em>list</em>.
+    Lists can contain many objects and have a definite order. To use the first value in this list, you would need to type <c>yCoords[1]</c> 
+    and to use the second value in this list, you would need to type <c>yCoords[2]</c>.
+    If you prefer, you may assign the individual values to unique names.
   </p>
   <p>
-    Then you can find the slopes of the tangent lines by computing the derivative with <c>implicitdiff()</c> and substituting the <m>x</m> and <m>y</m> values for each point.
+    To find the slopes of the two tangent lines to the curve at <m>x=0.5</m>, we start by computing the derivative with <c>implicitdiff()</c>. 
   </p>
+  <console prompt="> ">
+    <input>dydx := implicitdiff(L, y, x);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {dydx := implicitdiff(L, y, x); } \end{mapleinput} \relax \begin{maplelatex} {dydx := x*(-3*(x^2)^(2/3)-2*(x^2)^(1/3)+2*y)/(3(x^2)^(2/3)*y-x^2)}{
     <me>
-      \displaystyle \textit{dydx}\, := \,{\frac {x \left( -3\, \left( {x}^{2} \right) ^{2/3}-2\,\sqrt [3]{{x}^{2}}+2\,y \right) }{ 3\left(y\left( {x}^{2} \right) ^{2/3}-{x}^{2}\right)}}
+      \displaystyle dydx\, := \,{\frac {x \left( -3\, \left( {x}^{2} \right) ^{2/3}-2\,\sqrt [3]{{x}^{2}}+2\,y \right) }{ 3\left(y\left( {x}^{2} \right) ^{2/3}-{x}^{2}\right)}}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    Now we can substitute <m>x=0.5</m> and the <m>y</m> value for each of the two points to determine the slopes.
   </p>
+  <console prompt="> ">
+    <input>subs(x=0.5, y=yCoords[1], dydx);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {subs(x=0.5, y=yCoords[1], dydx); } \end{mapleinput} \relax \begin{maplelatex} {.2625970976}{
     <me>
       \displaystyle  0.2625970976
     </me>
   </p>
+  <console prompt="> ">
+    <input>subs(x=0.5, y=yCoords[2], dydx);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <aside>
-    <p>
-       <c>yCoords</c> is the name that both values are assigned to.
-       To refer to an individual value,
-       we use the index of the desired value in square brackets after the name <c>yCoords</c>.
-    </p>
-  </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {subs(x=0.5, y=yCoords[2], dydx); } \end{mapleinput} \relax \begin{maplelatex} {1.417297636}{
     <me>
       \displaystyle  1.417297636
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>

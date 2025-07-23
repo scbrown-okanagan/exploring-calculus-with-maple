@@ -1,47 +1,60 @@
 <section xml:id="sec_plotting_implicit_functions">
   <title>Plotting Implicit Functions</title>
   <p>
-    The <c>implicitplot()</c> command can be used to plot implicit functions.
-    It requires use of the <c>plots</c> package.
-    Unlike the normal <c>plot()</c> command,
-    each curve that is being plotted must be in the form of an
-    <em>equation</em> of two variables,
-    including the <m>=</m> sign.
-    Additionally, you must specify an interval for
-    <em>both</em> variables.
-  </p>
-  <aside>
-    <p>
-      The <c>plots</c> package can be loaded using the <c>with()</c> command.
-      This only needs to be loaded once per Maple worksheet and needs to be run each time you open a new or previously closed document.
-    </p>
-  </aside>
-  <p>
-        <idx><h>packages</h><h>with</h></idx>
-        <idx><h>packages</h><h>plots</h></idx>
+    The <c>implicitplot()</c> command can be used to plot implicit functions and requires that the <c>plots</c> package is loaded first.
+    Packages are loaded using the <c>with()</c> command and it is typically a good idea to load any necessary packages at the top of your worksheet.
+    Loading a package only needs to be done once per Maple worksheet, but needs to be run each time you open a new or previously closed document.
+    <idx><h>packages</h><h>with</h></idx>
+    <idx><h>packages</h><h>plots</h></idx>
   </p>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {with(plots): } \end{mapleinput} \end{maplegroup}
+    Unlike the normal <c>plot()</c> command, each curve that is being plotted must be in the form of an <em>equation</em> of two variables,
+    including the <m>=</m> sign. Additionally, you must specify an interval for <em>both</em> variables.
   </p>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {implicitplot(E, x=-5..5, y=-5..5); }<idx><h>implicit functions</h><h>implicitplot!changing axes</h></idx> \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/Implicit_Functions_and_Graphsplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    Below are the graphs of the two implicit curves defined in <xref ref="sec_implicit_functions_tutorial" text="title"/>.
   </p>
+  <console prompt="> ">
+    <input>with(plots):</input>
+  </console>
+  <console prompt="> ">
+    <input>E := y^2 = x^3 - 2*x + 1;</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle E\, := \,{y}^{2}={x}^{3}-2\,x+1
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>implicitplot(E, x=-5..5, y=-5..5);</input>
+  </console>
+  <image source="images/Implicit_Functions_and_Graphsplot2d2-eps-converted-to" width="50%"/>
   <p>
     Most of the implicit functions used in this lab manual will produce smooth curves when plotted.
-    However, if your plot appears to have jagged edges, then you may wish to set the optional parameter <c>numpoints=30000</c>. 
+    However, if your plot appears to have jagged edges as shown in <xref ref="fig_implicitplot_numpoints"/>, then you may wish to set the optional parameter <c>numpoints=30000</c>. 
     This increases the number of points plotted to make a smoother graph. The higher that <c>numpoints</c> is set to, the smoother the graph may be.
     Be careful not to set too high of a number to avoid Maple freezing.
+    <idx><h>implicit functions</h><h>implicitplot!plot resolution</h></idx>
   </p>
-  <aside>
-    <p>
-          <idx><h>implicit functions</h><h>implicitplot!plot resolution</h></idx>
-    </p>
-    <p>
-      <image width="25%" source="images/Implicit_Functions_and_Graphsplot2d1-eps-converted-to.png"/>
-    </p>
-  </aside>
+  <figure xml:id="fig_implicitplot_numpoints">
+    <caption>An example of an <c>implicitplot()</c> output where <c>numpoints</c> is set too low.</caption>
+    <image source="images/Implicit_Functions_and_Graphsplot2d1-eps-converted-to" width="50%"/>
+  </figure>
+  <console prompt="> ">
+    <input>L := x^2 + (y - surd(x^2,3))^2 = 1;</input>
+  </console>
   <p>
-        <idx><h>implicit functions</h><h>implicitplot!filledregions</h></idx> \begin{maplegroup} \begin{mapleinput} {implicitplot(L, x=-1.2..1.2, y=-1.2..1.8, coloring = ["red","blue"], filledregions=true); } <idx><h>implicit functions</h><h>implicitplot!colour</h></idx> \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot: tutorials/figures/Implicit_Functions_and_Graphsplot2d3-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+    <idx><h>mathematical functions</h><h><m>n</m>th root</h></idx>
+    <me>
+      \displaystyle L\, := \,{x}^{2}+ \left( y-\sqrt [3]{{x}^{2}} \right) ^{2}=1
+    </me>
   </p>
+  <console prompt="> ">
+    <input>implicitplot(L, x=-1.2..1.2, y=-1.2..1.8, 
+  coloring = ["red","blue"], filledregions=true);</input>
+  </console>
+  <p>
+        <idx><h>implicit functions</h><h>implicitplot!filledregions</h></idx>
+  </p>
+  <image source="images/Implicit_Functions_and_Graphsplot2d3-eps-converted-to" width="50%"/>
 </section>

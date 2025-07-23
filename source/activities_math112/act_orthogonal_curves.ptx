@@ -75,7 +75,7 @@
             <idx><h>solving equations</h><h>removing <c>RootOf()</c></h></idx>
           </p>
           <p>
-            A similar example is detailed in <xref ref="subsec_orthocurves"/>.
+            A similar example is detailed in <xref ref="ex_orthocurves"/>.
           </p>
         </hint>
       </task>

@@ -1,303 +1,258 @@
 <section xml:id="sec_applications_of_implicit_differentiation">
   <title>Applications of Implicit Differentiation</title>
-  <introduction>
-    <p>
-      In these examples,
-      we will make use of the <c>implicitdiff()</c> and <c>implicitplot()</c> commands.
-    </p>
-  </introduction>
-  <subsection xml:id="subsec_implicittanline">
+  <p>
+    In these examples, we will make use of the <c>implicitdiff()</c> and <c>implicitplot()</c> commands.
+  </p>
+  <example xml:id="ex_implicittanline">
     <title>Finding the Equation of a Tangent Line</title>
+    <idx><h>lines</h><h>tangent line!implicit function</h></idx>
     <p>
-          <idx><h>lines</h><h>tangent line!implicit function</h></idx>
-    </p>
-    <p>
-      In this example,
-      we will find the equations of the tangent lines to the circle of radius <m>4</m>,
-      centred at the point <m>(1,1)</m>, where <m>x=3</m>.
+      In this example, we will find the equations of the tangent lines to the circle of radius <m>4</m>, centred at the point <m>(1,1)</m>, where <m>x=3</m>.
+      Once these equations are assigned, we will plot the circle and the two tangent together in one single <c>implicitplot()</c> command.
     </p>
     <aside>
       <p>
-        The equation of a circle that is centred at the point <m>(a,b)</m> and has radius <m>r</m> is
+        The general equation of a circle that is centred at the point <m>(a,b)</m> and has radius <m>r</m> is
         <me>
           (x-a)^2+(y-b)^2=r^2
         </me>.
       </p>
     </aside>
+    <console prompt="> ">
+      <input>circle := (x-1)\symbol{94}2 + (y-1)\symbol{94}2 = 16;</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {circle := (x-1)\symbol{94}2 + (y-1)\symbol{94}2 = 16; } \end{mapleinput} \relax \begin{maplelatex} {circle := (x-1)^2+(y-1)^2 = 16}{
       <me>
-        \displaystyle \textit{circle}\, := \,{(x-1)}^{2}+{(y-1)}^{2}=16
+        \displaystyle circle\, := \,{(x-1)}^{2}+{(y-1)}^{2}=16
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
     </p>
     <p>
       We need to find the <m>y</m>-coordinates by substituting <m>x=3</m> and solving for <m>y</m>.
     </p>
+    <console prompt="> ">
+      <input>subs(x=3, circle); yCoords:=solve(%);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {subs(x=3, circle);
-      yCoords:=solve( } \end{mapleinput} \relax \begin{maplelatex} {4+(y-1)^2 = 16}{
+      <idx><h>subs</h></idx>
       <me>
         \displaystyle 4+(y-1)^2 = 16
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {yCoords := 1+2\sqrt{3}, 1-2\sqrt(3)}{
       <me>
-        \displaystyle \textit{yCoords}\, := \, 1+2\sqrt{3},\,1-2\sqrt{3}
+        \displaystyle yCoords\, := \, 1+2\sqrt{3},\,1-2\sqrt{3}
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
     </p>
     <p>
       The derivative <m>\tfrac{dy}{dx}</m> can be found using <c>implicitdiff()</c>.
-      Then, by substituting the two points,
-      we can find the slopes of both tangent lines.
+      Then, by substituting the two points, we can find the slopes of both tangent lines.
     </p>
+    <console prompt="> ">
+      <input>dydx := implicitdiff(circle, y, x);</input>
+    </console>
     <p>
-          <idx><h>implicit functions</h><h>implicitdiff</h></idx>
-          <idx><h>subs</h></idx>
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {dydx := implicitdiff(circle,
-      y, x); } \end{mapleinput} \relax \begin{maplelatex} {dydx := -(x-1)/(y-1)}{
+      <idx><h>implicit functions</h><h>implicitdiff</h></idx>
       <me>
-        \displaystyle \textit{dydx}\, := \,-{\frac {x-1}{y-1}}
+        \displaystyle dydx\, := \,-{\frac {x-1}{y-1}}
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
     </p>
     <aside>
       <p>
-        Make sure that you choose different names when assigning values.
-        We will need both slopes later.
+        Make sure that you choose different names for each slope when assigning them. We will need each of these values 
+        later in order to assign the equations of the tangent lines.
       </p>
     </aside>
+    <console prompt="> ">
+      <input>m1 := subs(x=3, y=yCoords[1], dydx);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {m1 := subs(x=3, y=yCoords[1], dydx); } \end{mapleinput} \relax \begin{maplelatex} {m1 := -\frac{1}{3}\sqrt{3}}{
+      <idx><h>subs</h></idx>
       <me>
-        \displaystyle \textit{m1}\, := \,-\frac{1}{3}\sqrt{3}
+        \displaystyle m\mathit{1}\, := \,-\frac{1}{3}\sqrt{3}
+      </me>
+    </p>
+    <console prompt="> ">
+      <input>m2 := subs(x=3, y=yCoords[2], dydx);</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle m\mathit{2}\, := \,\frac{1}{3}\sqrt{3}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {m2 := subs(x=3, y=yCoords[2], dydx); } \end{mapleinput} \relax \begin{maplelatex} {m2 :=\frac{1}{3}\sqrt{3}}{
+      Recall that the equation of a line passing through <m>(x_0,y_0)</m> with slope <m>m</m> can be written in the form
       <me>
-        \displaystyle \textit{m2}\, := \,\frac{1}{3}\sqrt{3}
-      </me>
+        y = m (x - x_0) + y_0
+      </me>.
+      If we wish to plot the circle and the two tangent lines together using a single <c>implicitplot()</c> command, they will 
+      need to be defined as <em>equations</em> involving an equals <m>=</m> sign. Each of these equations can then be expanded 
+      out to see the lines in their typical <m>y=mx+b</m> form.
     </p>
+    <aside>
+      <p>
+        Both <c>line1</c> and <c>line2</c> are defined with the inclusion of <m>y=</m>, making them equations that <c>implicitplot()</c> can plot.
+      </p>
+    </aside>
+    <console prompt="> ">
+      <input>line1 := y = m1*(x-3) + yCoords[1]; expand(%);</input>
+    </console>
     <p>
-      } \end{maplelatex} \end{maplegroup} Thinking ahead,
-      in order to plot both lines using <c>implicitplot()</c>,
-      they will need to be defined as <em>equations</em>.
-    </p>
-    <p>
-          <idx><h>subs</h></idx>
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {line1 := y = m1*(x-3) + yCoords[1];expand(%); } \end{mapleinput} \relax \begin{maplelatex} {line1 := y = -\frac{1}{3}\sqrt{3}(x-3)+1+2\sqrt{3}}{
       <me>
-        \displaystyle \textit{line1}\, := \,y=-\frac{1}{3}\sqrt{3}(x-3)+1+2\sqrt{3}
+        \displaystyle line\mathit{1}\, := \,y=-\frac{1}{3}\sqrt{3}(x-3)+1+2\sqrt{3}
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \begin{maplelatex} {y = -\frac{1}{3}\sqrt{3}x+3\sqrt{3}+1}{
       <me>
         \displaystyle  y=-\frac{1}{3}\sqrt{3}x+3\sqrt{3}+1
       </me>
     </p>
+    <console prompt="> ">
+      <input>line2 := y = m2*(x-3) + yCoords[2]; expand(%);</input>
+    </console>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        Both <c>line1</c> and <c>line2</c> are defined with the inclusion of <m>y=</m>,
-        making them equations that <c>implicitplot()</c> can plot.
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {line2 := y = m2*(x-3) + yCoords[2];expand(%); } \end{mapleinput} \relax \begin{maplelatex} {line2 := y = \frac{1}{3}\sqrt{3}(x-3)+1-2\sqrt{3}}{
       <me>
-        \displaystyle \textit{line2}\, := \,y=\frac{1}{3}\sqrt{3}(x-3)+1-2\sqrt{3}
+        \displaystyle line\mathit{2}\, := \,y=\frac{1}{3}\sqrt{3}(x-3)+1-2\sqrt{3}
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \begin{maplelatex} {y = \frac{1}{3}\sqrt{3}x-3\sqrt{3}+1}{
       <me>
         \displaystyle  y=\frac{1}{3}\sqrt{3}x-3\sqrt{3}+1
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
       We can now plot the circle and the two lines together.
-    </p>
-    <p>
-          <idx><h>packages</h><h>plots</h></idx>
-          <idx><h>implicit functions</h><h>implicitplot!scaling</h></idx>
-          <idx><h>implicit functions</h><h>implicitplot!multiple curves</h></idx>
-          <idx><h>implicit functions</h><h>implicitplot!changing axes</h></idx>
-          <idx><h>implicit functions</h><h>implicitplot!plot resolution</h></idx>
-          <idx><h>implicit functions</h><h>implicitplot!colour</h></idx>
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {with(plots): } \end{mapleinput} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {implicitplot([circle, line1,
-      line2], x=-8..8, y=-8..8, colour=[red,blue,green], scaling=constrained); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/ImplicitTangentCircle.eps\vskip.5\MaplePlotHeight \end{maplegroup}
+      Using the <c>scaling=constrained</c> parameter will produce a proper circle and avoid it being stretched either vertically or horizontally.
+      <idx><h>packages</h><h>plots</h></idx>
+      <idx><h>implicit functions</h><h>implicitplot!scaling</h></idx>
+      <idx><h>implicit functions</h><h>implicitplot!multiple curves</h></idx>
+      <idx><h>implicit functions</h><h>implicitplot!changing axes</h></idx>
+      <idx><h>implicit functions</h><h>implicitplot!plot resolution</h></idx>
+      <idx><h>implicit functions</h><h>implicitplot!colour</h></idx>
     </p>
     <aside>
       <p>
-        Using the <c>scaling=constrained</c> parameter will produce a proper circle in your worksheet.
         The graph can also be scaled without using the <c>scaling=constrained</c> parameter;
-        simply click on the graph and then click on the <image width="50%" source="images/1-1.png"/> button in the plot toolbar at the top of the page.
+        simply click on the graph and then click on the 1:1 button in the plot toolbar at the top of the page.
       </p>
+      <image width="30%" source="images/1-1.png"/>
     </aside>
-  </subsection>
-  <subsection xml:id="subsec_orthocurves">
+    <console prompt="> ">
+      <input>with(plots):</input>
+      <input>implicitplot( [circle, line1, line2], x=-8..8, y=-8..8, 
+    colour=[red,blue,green], scaling=constrained);</input>
+    </console>
+    <image source="images/ImplicitTangentCircle-eps-converted-to" width="50%"/>
+  </example>
+  <example xml:id="ex_orthocurves">
     <title>Orthogonal Curves</title>
     <p>
-      In this example, we will show that the curves
-      <m>x^2 - y^2 = 8</m> and <m>-xy =~3</m> are always perpendicular (orthogonal) at their intersection points.
+      In this example, we will show that the implicit curves <m>x^2 - y^2 = 8</m> and <m>-xy =~3</m> are always orthogonal (perpendicular) at their intersection points.
+      We'll start by assigning names to these two equations so that we can plot the two curves using <c>implicitplot()</c>.
     </p>
+    <console prompt="> ">
+      <input>curve1 := x\symbol{94}2 - y\symbol{94}2 = 8;</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {curve1 := x\symbol{94}2 - y\symbol{94}2 = 8; } \end{mapleinput} \relax \begin{maplelatex} {curve1 := x^2-y^2 = 8}{
       <me>
-        \displaystyle \textit{curve1}\, := \,{x}^{2}-{y}^{2}=8
+        \displaystyle curve\mathit{1}\, := \,{x}^{2}-{y}^{2}=8
       </me>
     </p>
+    <aside>
+      <p>
+        We must include multiplication between <m>x</m> and <m>y</m> here, otherwise Maple will think we want to use a variable called <m>xy</m>.
+      </p>
+    </aside>
+    <console prompt="> ">
+      <input>curve2 := -x*y = 3;</input>
+    </console>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {curve2 := -x*y = 3; } \end{mapleinput} \relax \begin{maplelatex} {curve2 := -x*y = 23}{
       <me>
-        \displaystyle \textit{curve2}\, := \,-xy=3
+        \displaystyle curve\mathit{2}\, := \,-xy=3
       </me>
     </p>
+    <console prompt="> ">
+      <input>with(plots):</input>
+      <input>implicitplot([curve1, curve2], x=-5..5, y=-5..5, 
+    colour=[red, blue], scaling=constrained);</input>
+    </console>
+    <aside>
+      <p>
+        Using the <c>scaling=constrained</c> parameter is very important in this application. This will avoid having Maple stretch the graph 
+        horizontally or vertically, which will preserve the angles of intersection that we are looking for.
+      </p>
+    </aside>
+    <image source="images/OrthogonalCurves2-eps-converted-to" width="50%"/>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      From the graphs of these two curves, it appears that their intersections are perpendicular.
+      This can be proven by showing that the derivative of one curve is equal to the negative reciprocal of the other, or that they multiply to equal <m>-1</m>.
     </p>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {with(plots): } \end{mapleinput} \end{maplegroup}
+      The intersection points are any points <m>(x,y)</m> that satisfy both of the equations of these two implicit curves. They can be found using a single
+      <c>solve()</c> (or <c>fsolve()</c>) command, so long as it is given both equations and the two variables, <m>x</m> and <m>y</m>.
+      <idx><h>solving equations</h><h>intersection points</h></idx>
     </p>
     <aside>
       <p>
-        We must include multiplication between <m>x</m> and <m>y</m> here,
-        otherwise Maple will think we want to use a variable called <m>xy</m>.
+        Using the option <c>explicit=true</c> here will avoid the use of <em>RootOf</em> in the output.
+        Optionally, using <c>fsolve()</c> may be preferable. 
       </p>
     </aside>
+    <console prompt="> ">
+      <input>solve( {curve1, curve2}, {x, y}, explicit = true);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {implicitplot([curve1,
-      curve2], x=-5..5, y=-5..5, colour=[red,
-      blue], scaling=constrained); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/OrthogonalCurves2.eps\vskip.5\MaplePlotHeight \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        Using the <c>scaling=constrained</c> parameter will preserve right angles in your worksheet.
-      </p>
-    </aside>
-    <p>
-      From the graphs of these two curves,
-      it appears that their intersections are perpendicular.
-      This can be proven by showing that the derivative of one curve is equal to the negative reciprocal of the other,
-      or that they multiply to equal <m>-1</m>.
-    </p>
-    <p>
-      The intersection points can be found by solving a system of equations.
-    </p>
-    <p>
-          <idx><h>solving equations</h><h>intersection points</h></idx>
-          <idx><h>implicit functions</h><h>implicitdiff</h></idx>
-          <idx><h>subs</h></idx>
-    </p>
-    <aside>
-      <p>
-        Using the option <c>explicit=true</c> here will avoid the use of
-        <em>RootOf</em> in the output.
-        Optionally, using <c>fsolve()</c> may be preferable.
-        Points involving <m>I</m> are imaginary points and should not be considered.
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {solve(\{curve1,
-      curve2\}, \{x, y\}, explicit = true); } \end{mapleinput} \relax \begin{maplelatex} {{x = -3, y = 1}, {x = 3, y = -1}, {x = I, y = 3*I}, {x = -I, y = -3*I}}{
       <me>
         \displaystyle  \left\{ x=-3,y=1 \right\} ,\, \left\{ x=3,y=-1 \right\} ,\, \left\{ x=I,y=3\,I \right\} ,\, \left\{ x= -I,y=-3\,I \right\}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      Points involving <m>I</m> are imaginary points and should not be considered. Therefore, the only two intersection points are <m>(-3,1)</m> and <m>(3,-1)</m>,
+      which agrees with what we see from the graph.
     </p>
     <p>
-      The derivatives of both curves can be found implicitly using the <c>implicitdiff()</c> command.
+      The derivatives of both curves can be found implicitly using the <c>implicitdiff()</c> command. They can be assigned two different names for easy comparison later.
+      <idx><h>implicit functions</h><h>implicitdiff</h></idx>
     </p>
+    <console prompt="> ">
+      <input>dydx1 := implicitdiff(curve1, y, x);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {dydx1 := implicitdiff(curve1,
-      y, x); } \end{mapleinput} \relax \begin{maplelatex} {dydx1 := x/y}{
       <me>
-        \displaystyle \textit{dydx1}\, := \,{\frac {x}{y}}
+        \displaystyle dydx\mathit{1}\, := \,{\frac {x}{y}}
+      </me>
+    </p>
+    <console prompt="> ">
+      <input>dydx2 := implicitdiff(curve2, y, x);</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle dydx\mathit{2}\, := \,-{\frac {y}{x}}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      To show that the slopes are negative reciprocals at a particular intersection point, the <m>x</m>- and <m>y</m>-values can be substituted into the two derivatives.
+      <idx><h>subs</h></idx>
     </p>
+    <console prompt="> ">
+      <input>subs(x=-3, y=1, dydx1); subs(x=-3, y=1, dydx2);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {dydx2 := implicitdiff(curve2,
-      y, x); } \end{mapleinput} \relax \begin{maplelatex} {dydx2 := -y/x}{
-      <me>
-        \displaystyle \textit{dydx2}\, := \,-{\frac {y}{x}}
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      To show that the slopes are negative reciprocals,
-      a point can be substituted into the two derivatives.
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {subs(x=-3, y=1, dydx1); } \end{mapleinput} \relax \begin{maplelatex} {-3}{
       <me>
         \displaystyle -3
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \begin{mapleinput} {subs(x=-3, y=1, dydx2); } \end{mapleinput} \relax \begin{maplelatex} {\frac{1}{3}}{
       <me>
         \displaystyle \frac{1}{3}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      Alternatively,
-      it can be shown that the derivatives are negative reciprocals of each other in general.
+      Alternatively, it can be shown that the derivatives are negative reciprocals of each other for any point <m>(x,y)</m> where both slopes are defined.
     </p>
     <aside>
       <p>
         Recall that two slopes <m>m_1</m> and <m>m_2</m> are perpendicular if <m>m_1 m_2 = -1</m>.
       </p>
     </aside>
+    <console prompt="> ">
+      <input>dydx1*dydx2;</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {dydx1*dydx2; } \end{mapleinput} \relax \begin{maplelatex} {-1}{
       <me>
         \displaystyle -1
       </me>
     </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </subsection>
+  </example>
 </section>

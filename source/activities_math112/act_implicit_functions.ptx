@@ -28,7 +28,7 @@
         <p>
           Start by assigning the equation of a circle with radius <m>5</m> and centre at the origin to the name <c>circle</c>.
           In the following exercise, you will be determining the equations of two tangent lines to this circle and plotting them with the circle. 
-          A very similar example may be found in <xref ref="subsec_implicittanline"/>.
+          A very similar example may be found in <xref ref="ex_implicittanline"/>.
         </p>
       </introduction>
       <task>
