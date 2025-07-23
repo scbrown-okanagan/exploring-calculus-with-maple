@@ -23,7 +23,7 @@
     <input>surd(a, 3);</input>
   </console>
   <p>
-    <idx><h>mathematical functions</h><h>nth root@<m>n</m>th root</h></idx>
+    <idx><h>mathematical functions</h><h><m>n</m>th root</h></idx>
     <me>
       \displaystyle \sqrt [3]{a}
     </me>

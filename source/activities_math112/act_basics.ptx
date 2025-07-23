@@ -144,7 +144,7 @@
 			</task>
 			<task>
 				<statement>
-					<p><m>surd(x,3)</m><idx><h>mathematical functions</h><h>nth root@<m>n</m>th root</h></idx></p>
+					<p><m>surd(x,3)</m><idx><h>mathematical functions</h><h><m>n</m>th root</h></idx></p>
 				</statement>
 			</task>
 			<conclusion>

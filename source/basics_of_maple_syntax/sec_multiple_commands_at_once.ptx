@@ -4,7 +4,7 @@
     As you may have noticed, each time that we have used Maple input in this tutorial, there is a semicolon <c>;</c> at the end of the line.
     This used to be required in older versions of Maple, though it is no longer mandatory in modern versions.
     <idx><h>mathematical functions</h><h>exponential</h></idx>
-    <idx><h>mathematical functions</h><h>nth root@<m>n</m>th root</h></idx>
+    <idx><h>mathematical functions</h><h><m>n</m>th root</h></idx>
   </p>
   <p>
     The reason why the semicolon continues to be important is because it tells Maple when one command ends and another begins.
