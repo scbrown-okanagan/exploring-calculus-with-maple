@@ -1,133 +1,83 @@
 <section xml:id="sec_approximating_a_definite_integral">
   <title>Approximating the Value of a Definite Integral</title>
   <p>
-    We can also set up an integral to use numerical approximation on.
+    The <c>ApproximateInt()</c> command is commonly used to approximate the value of a definite integral,
+    particularly when the exact value is computationally difficult, even by computer. 
+    To use the command for this purpose, it can be useful to assign a name to an definite integral calculation, using 
+    the <c>Int()</c> command. This capitalized version of the command is used to symbolically create an integral 
+    without trying to compute it.
+    <idx><h>integral</h><h>Int</h></idx>
   </p>
-  <aside>
-    <p>
-      Use of the <c>Int()</c> command will be fully explained in <xref ref="chp_definite_and_indefinite_Integrals">Tutorial</xref>
-      on <xref ref="chp_definite_and_indefinite_Integrals">page</xref>.
-    </p>
-  </aside>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {int1 := Int(x\symbol{94}2, x=0..2); } \end{mapleinput} \relax \begin{maplelatex} {int1 := Int(x^2, x = 0 .. 2)}{
+    Use of the <c>Int()</c> command is fully explained in <xref ref="chp_definite_and_indefinite_Integrals" text="title"/>.
+  </p>
+  <console prompt="> ">
+    <input>int1 := Int(x^2, x=0..2);</input>
+  </console>
+  <p>
     <me>
-      \displaystyle \textit{int1}\, := \,\int _{0}^{2}\!{x}^{2}{dx}
+      \displaystyle int\mathit{1}\, := \,\int _{0}^{2}\!{x}^{2}{dx}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    We can evaluate this integral with <m>4</m> subintervals (each called a <c>partition</c>) using three different methods.
+    We will start with the midpoint rule.
+    <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
   </p>
+  <console prompt="> ">
+    <input>ApproximateInt(int1, method=midpoint, output=value, partition=4);</input>
+  </console>
   <p>
-        <idx><h>integral</h><h>Int</h></idx>
-  </p>
-  <p>
-    We can evaluate this integral with <m>4</m> subintervals using three different methods.
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1, method=midpoint,
-    output=value,
-    partition=4); } \end{mapleinput} \relax \begin{maplelatex} {21/8}{
     <me>
       \displaystyle {\frac {21}{8}}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    The <c>method=trapezoid</c> option uses trapezoids instead of rectangles to approximate the area.
+    This is an average of the left-hand and right-hand rules for rectangle approximation.
   </p>
+  <console prompt="> ">
+    <input>ApproximateInt(int1, method=trapezoid, output=value, partition=4);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1,
-    method=trapezoid, output=value,
-    partition=4); } \end{mapleinput} <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
-  </p>
-  <aside>
-    <p>
-      The <c>method=trapezoid</c> parameter uses trapezoid shapes instead of rectangles to approximate the area.
-      This usually gives a more accurate estimate of the area.
-    </p>
-  </aside>
-  <p>
-    \relax \begin{maplelatex} {11/4}{
     <me>
       \displaystyle \frac{11}{4}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    Simpson's rule is quite a bit more involved. This method uses the right-hand point, left-hand point, and midpoint in each 
+    subinterval (<c>partition</c>). It then fits a parabola through these three points and determines the area between each 
+    parabolic arc and the <m>x</m>-axis. As a result, it tends to be the most accurate.
   </p>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1, method=simpson,
-    output=value,
-    partition=4); } \end{mapleinput} \relax \begin{maplelatex} {8/3}{
+    Because of the extra sample point in each partition, the approximation uses twice as many sample points as there are 
+    subintervals. For this reason, when we set <c>partition=4</c>, we would typically use <m>n=8</m> for the formulas 
+    used in class.
+  </p>
+  <console prompt="> ">
+    <input>ApproximateInt(int1, method=simpson, output=value, partition=4);</input>
+  </console>
+  <p>
     <me>
       \displaystyle \frac{8}{3}
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    To visualize the approximation using any of the above methods, we use the option <c>output=plot</c>.
   </p>
+  <console prompt="> ">
+    <input>ApproximateInt(int1, method=trapezoid, output=plot, partition=2);</input>
+  </console>
+  <image source="images/numerical_integration_using_ApproximateIntplot2d1-eps-converted-to" width="50%"/>
   <p>
-        <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
+    Maple can also give the summation form for any of the above approximations.
   </p>
-  <aside>
-    <p>
-      When using Simpson's rule,
-      an additional sample point is used per subinterval.
-      So, if <m>n</m> subintervals are used,
-      then the number of sample points is <m>2n</m>.
-    </p>
-  </aside>
+  <console prompt="> ">
+    <input>ApproximateInt(int1, method=trapezoid, output=sum, partition=4);</input>
+  </console>
   <p>
-    Simpson's rule uses twice as many sample points as the other two methods used here.
-    If we wish to have <m>4</m> points used for Simpson's rule,
-    we use <c>partition=2</c>.
-  </p>
-  <p>
-    To visualize the approximation using any of the above methods,
-    we use the option <c>output=plot</c>.
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1,
-    method=trapezoid, output=plot,
-    partition=2); } \end{mapleinput}
-  </p>
-  <aside>
-    <p>
-      Notice that trapezoidal shapes are used instead of rectangles.
-    </p>
-  </aside>
-  <p>
-    \relax \vskip.5\MaplePlotHeight Plot:
-    tutorials/figures/numerical_integration_using_ApproximateIntplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-  </p>
-  <p>
-        <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
-        <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
-        <idx><h>integral approximation</h><h>ApproximateInt!method</h></idx>
-        <idx><h>integral approximation</h><h>ApproximateInt!output options</h></idx>
-        <idx><h>integral approximation</h><h>ApproximateInt!partition</h></idx>
-  </p>
-  <p>
-    Maple can also give the Riemann sum for any of the above approximations.
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {ApproximateInt(int1,
-    method=trapezoid, output=sum,
-    partition=4); } \end{mapleinput}
-  </p>
-  <aside>
-    <p>
-      The <c>output=sum</c> shows you what the expanded summation looks like
-      <em>before</em> it is evaluated.
-    </p>
-  </aside>
-  <p>
-    \relax \begin{maplelatex} {(1/4)*(Sum((1/4)*i^2+((1/2)*i+1/2)^2, i = 0 .. 3))}{
     <me>
       \displaystyle \frac{1}{4}\,\sum _{i=0}^{3}\frac{1}{4}\,{i}^{2}+ \left( \frac{1}{2}\,i+\frac{1}{2} \right) ^{2}
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>
