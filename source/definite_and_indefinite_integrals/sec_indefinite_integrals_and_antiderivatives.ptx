@@ -1,83 +1,67 @@
 <section xml:id="sec_indefinite_integrals_and_antiderivatives">
   <title>Indefinite Integrals and Antiderivatives</title>
+  <idx><h>integral</h><h>int!indefinite</h></idx>
+  <idx><h>integral</h><h>Int!indefinite</h></idx>
   <p>
-    If we do not have limits of integration we still can use the <c>Int()</c> and <c>int()</c> commands to show and evaluate the integrals respectively.
+    The <c>Int()</c> and <c>int()</c> commands may also be used for indefinite integrals.
+    As mentioned in <xref ref="sec_definite_integrals" text="title"/>, the inert command <c>Int()</c> displays the integral, and <c>int()</c> evaluates the integral directly.
+    Either command may be used for finding an antiderivative of a given function.
   </p>
+  <console prompt="> ">
+    <input>Int(sin(x), x);</input>
+  </console>
   <p>
-        <idx><h>integral</h><h>int!indefinite</h></idx>
-        <idx><h>integral</h><h>Int!indefinite</h></idx>
-        <idx><h>mathematical functions</h><h>square root</h></idx>
-  </p>
-  <aside>
-    <p>
-      Recall that <c>Int()</c> displays the integral and <c>int()</c> evaluates the integral.
-    </p>
-  </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {Int(sin(x),
-    x); } \end{mapleinput} \relax \begin{maplelatex} {Int(sin(x), x)}{
     <me>
       \displaystyle \int \!\sin \left( x \right) {dx}
     </me>
   </p>
+  <console prompt="> ">
+    <input>int(sin(x), x);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {int(sin(x),
-    x); } \end{mapleinput} \relax \begin{maplelatex} {-cos(x)}{
     <me>
       \displaystyle -\cos \left( x \right)
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    Notice that Maple does not include the addition of the constant of integration <m>+C</m> when evaluating indefinite integrals.
   </p>
-  <aside>
-    <p>
-      Maple does not include the addition of the constant of integration <m>+C</m> when evaluating indefinite integrals.
-    </p>
-  </aside>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {p(x) := 1/sqrt(1 + x\symbol{94}2); } \end{mapleinput} \relax \begin{maplelatex} {p := proc (x) options operator,
-    arrow; 1/sqrt(1+x^2) end proc}{
+    The inert <c>Int()</c> command can be combined with the <c>value()</c> command to display the integral symbolically and then compute the 
+    indefinite integral.
+  </p>
+  <console prompt="> ">
+    <input>p(x) := 1/sqrt(1 + x^2);</input>
+  </console>
+  <p>
+    <idx><h>mathematical functions</h><h>square root</h></idx>
     <me>
       \displaystyle p\, := \,x\mapsto {\frac {1}{\sqrt {{x}^{2}+1}}}
     </me>
   </p>
+  <console prompt="> ">
+    <input>Int(p(x), x); value(%);</input>
+  </console>
   <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {Int(p(x),
-    x); } \end{mapleinput} \relax \begin{maplelatex} {Int(1/sqrt(x^2+1), x)}{
     <me>
       \displaystyle \int \! \left(  \sqrt{{x}^{2}+1} \right) ^{-1}{dx}
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
   <aside>
     <p>
       The function arcsinh<m>()</m> is called the inverse hyperbolic sine function.
       Functions like <m>\cosh()</m> and <m>\sinh()</m> are called hyperbolic functions.
-      These functions are analogs of the ordinary trigonometric,
-      or circular,
-      functions;
+      These functions are analogs of the ordinary trigonometric, or circular, functions;
       just as the points <m>(\cos(t), \sin(t))</m> form a circle with a unit radius,
       the points <m>(\cosh(t), \sinh(t))</m> form the right half of the equilateral hyperbola.
+      <idx><h>mathematical functions</h><h>inverse hyperbolic sine</h></idx>
+      <idx><h>mathematical functions</h><h>hyperbolic functions!sinh</h></idx>
+      <idx><h>mathematical functions</h><h>hyperbolic functions!cosh</h></idx>
     </p>
   </aside>
   <p>
-        <idx><h>mathematical functions</h><h>inverse hyperbolic sine</h></idx>
-        <idx><h>mathematical functions</h><h>hyperbolic functions!sinh</h></idx>
-        <idx><h>mathematical functions</h><h>hyperbolic functions!cosh</h></idx> \begin{maplegroup} \begin{mapleinput} {int(p(x), x); } \end{mapleinput} \relax \begin{maplelatex} {arcsinh(x)}{
     <me>
-      \displaystyle \textit{arcsinh} \left( x \right)
+      \displaystyle \arcsinh \left( x \right)
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
   </p>
 </section>

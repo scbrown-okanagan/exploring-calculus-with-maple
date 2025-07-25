@@ -1,153 +1,165 @@
 <section xml:id="sec_definite_integrals">
   <title>Definite Integrals</title>
-  <introduction>
+  <idx><h>integral</h><h>int!definite</h></idx>
+  <idx><h>integral</h><h>Int!definite</h></idx>
+  <p>
+    The <c>int()</c> and <c>Int()</c> commands allows us to compute definite and indefinite directly. It is important to know the difference between these two commands:
+    <ul>
+      <li>
+        <p>
+          <c>int()</c>
+          <ul>
+            <li>This command outputs the the result of the definite or indefinite integral (whenever possible).</li>
+            <li>The palettes toolbar includes definite and indefinite shortcuts that are equivalent to this command.</li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          <c>Int()</c>
+          <ul>
+            <li>This is the <q>inert</q> form of the command, which outputs only the definite or indefinite integral itself, without computing the result.</li>
+            <li>This version of the command makes it possible to assign a name to the integral and use it in other commands.</li>
+            <li>The <c>value()</c> command may be applied to the output of an <c>Int()</c> command to compute the result of integration.</li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+    Always remember that capitalization is important in Maple.
+  </p>
+  <p>
+    To see the difference between the two version, we can evaluate the definite integral of <m>f(x) = \frac{1}{x^2+1}</m> over the interval <m>[-3,3]</m>.
+    <idx><h>plot</h><h>axes intervals</h></idx>
+  </p>
+  <console prompt="> ">
+    <input>f(x) := 1/(1+x^2);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle f\, := \,x\mapsto  \frac{1}{ {x}^{2}+1 }
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>plot(f(x), x=-3..3);</input>
+  </console>
+  <image source="images/Definite_And_Indefinite_Integralsplot2d1-eps-converted-to" width="50%"/>
+  <p>
+    We use the <c>Int()</c> command to display the integral, and the <c>int()</c> command to evaluate the integral.
+    The <c>evalf()</c> command may be used to evaluate the result as a decimal.
+  </p>
+  <console prompt="> ">
+    <input>Int(f(x), x=-3..3);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle \int _{-3}^{3}\! \frac{1}{ {x}^{2}+1 }\,{dx}
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>int(f(x), x=-3..3); evalf(%)</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle 2\,\arctan \left( 3 \right)
+    </me>
+    <me>
+      \displaystyle  2.498091544
+    </me>
+  </p>
+  <example>
+    <title>The Net Area under <m>g(x) = \ln(x)</m> on <m>[1,10]</m></title>
+    <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx>
+    <idx><h>integral</h><h>int!definite</h></idx>
     <p>
-      We now turn our attention to using the Fundamental Theorem of Calculus to calculate definite integrals to
-      (in most cases)
-      obtain the area underneath a curve.
+        In this example, we will use a definite integral to determine the net area bounded by <m>g(x) = \ln(x)</m> and the <m>x</m>-axis over the interval <m>[1,10]</m>.
+        We'll start by assigning the function and looking at a graph of the function to get a better sense of the area.
+        <idx><h>plot</h><h>axes intervals</h></idx>
     </p>
+    <console prompt="> ">
+      <input>g(x) := ln(x);</input>
+    </console>
     <p>
-      The <c>int()</c> command allows us to compute integrals
-      (both definite and indefinite)
-      directly.
-      The <c>Int()</c> command allows us to symbolically view the integral,
-      or assign it to a variable to use later for other computations or calculations.
-      Capitalization is important in Maple.
-    </p>
-  </introduction>
-  <subsection>
-    <title>The Definite Integral <m>\displaystyle\int_{-3}^{3}\frac{1}{x^2+1}\  dx</m></title>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {f(x) := 1/(1+x\symbol{94}2); } \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
-      arrow; 1/(1+x^2) end proc}{
-      <me>
-        \displaystyle f\, := \,x\mapsto  \frac{1}{ {x}^{2}+1 }
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {plot(f(x),
-      x=-3..3); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/Definite_And_Indefinite_Integralsplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-    </p>
-    <p>
-          <idx><h>plot</h><h>axes intervals</h></idx>
-          <idx><h>integral</h><h>int!definite</h></idx>
-          <idx><h>integral</h><h>Int!definite</h></idx>
-    </p>
-    <p>
-      We use the <c>Int()</c> command to display the integral,
-      and the <c>int()</c> command to evaluate the integral.
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {Int(f(x),
-      x=-3..3); } \end{mapleinput}
-    </p>
-    <aside>
-      <p>
-        Note the capital
-        <q>I</q>
-        in this command.
-        This prevents Maple from automatically evaluating the integral.
-      </p>
-    </aside>
-    <p>
-      \relax \begin{maplelatex} {Int(1/(x^2+1), x = -3 .. 3)}{
-      <me>
-        \displaystyle \int _{-3}^{3}\! \frac{1}{ {x}^{2}+1 }\,{dx}
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {int(f(x), x=-3..3);
-      evalf( } \end{mapleinput} \relax \begin{maplelatex} {2*arctan(3)}{
-      <me>
-        \displaystyle 2\,\arctan \left( 3 \right)
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \begin{maplelatex} {2.498091544}{
-      <me>
-        \displaystyle  2.498091544
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </subsection>
-  <subsection>
-    <title>The Definite Integral <m>\displaystyle\int_{1}^{10} \ln(x) \  dx</m></title>
-    <p>
-          <idx><h>mathematical functions</h><h>logarithmic@natural logarithmic</h></idx>
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {g(x) := ln(x); } \end{mapleinput} \relax \begin{maplelatex} {g := proc (x) options operator, arrow;
-      ln(x) end proc}{
       <me>
         \displaystyle g\, := \,x\mapsto \ln  \left( x \right)
       </me>
     </p>
+    <console prompt="> ">
+      <input>plot(g(x), x=1..10);</input>
+    </console>
+    <image source="images/Definite_And_Indefinite_Integralsplot2d2-eps-converted-to" width="50%"/>
     <p>
-      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {plot(g(x),
-      x=1..10); } \end{mapleinput} \relax  \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/Definite_And_Indefinite_Integralsplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight  \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {int(g(x),
-      x=1..10);
-      evalf( } \end{mapleinput} \relax \begin{maplelatex} {-9+10*ln(2)+10*ln(5)}{
+      We'll use the inert command <c>Int()</c> to see how the integral is set up. This can then be combined with <c>value(%)</c> and <c>evalf(%)</c> to have the result computed 
+      exactly and as a rounded decimal.
+      <idx><h>evalf</h></idx>
+      <idx><h>ditto operator</h></idx>
+    </p>
+    <console prompt="> ">
+      <input>Int(g(x), x=1..10); value(%); evalf(%);</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle \int _{1}^{10}\! \ln(x)\,{dx}
+      </me>
       <me>
         \displaystyle -9+10\,\ln  \left( 2 \right) +10\,\ln  \left( 5 \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \begin{maplelatex} {14.02585093}{
       <me>
         \displaystyle  14.02585093
       </me>
     </p>
+  </example>
+  <example>
+    <title>An Improper Integral</title>
+    <idx><h>integral</h><h>int!improper</h></idx>
+    <idx><h>integral</h><h>Int!improper</h></idx>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      The <c>int()</c> and <c>Int()</c> commands can also be used to compute improper definite integrals.
+      In this example, we will determine whether the integral 
+      <me>
+        \displaystyle \int_{1}^{\infty}\! \frac{1}{x^2}{dx}
+      </me>
+      is convergent and if so, its exact value.
     </p>
     <p>
-          <idx><h>plot</h><h>axes intervals</h></idx>
-          <idx><h>integral</h><h>int!definite</h></idx>
-          <idx><h>evalf</h></idx>
-          <idx><h>ditto operator</h></idx>
+      To begin, we will assign the function and take a look at its graph. The <c>plot()</c> command may be able to plot a function over an infinite interval.
+      This can produce unpredictable results, so sometimes it is better to simply choose a closed interval with large values of <m>x</m> instead.
     </p>
-  </subsection>
-  <subsection>
-    <title>Improper Integrals</title>
+    <console prompt="> ">
+      <input>h(x) := 1/x^2; </input>
+    </console>
     <p>
-          <idx><h>integral</h><h>int!improper</h></idx>
-          <idx><h>integral</h><h>Int!improper</h></idx>
-    </p>
-    <p>
-      The <c>int()</c> and <c>Int()</c> commands can also be used to compute improper integrals.
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {h(x) := 1/x\symbol{94}2; } \end{mapleinput} \relax \begin{maplelatex} {h := proc (x) options operator,
-      arrow; 1/x^2 end proc}{
       <me>
         \displaystyle h\, := \,x\mapsto {x}^{-2}
       </me>
     </p>
+    <console prompt="> ">
+      <input>plot(h(x), x=0..infinity);</input>
+    </console>
+    <image source="images/Definite_And_Indefinite_Integralsplot2d3-eps-converted-to" width="50%"/>
     <p>
-      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {plot(h(x),
-      x=0..infinity); } \end{mapleinput} \relax  \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/Definite_And_Indefinite_Integralsplot2d3-eps-converted-to.pdf\vskip.5\MaplePlotHeight  \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {Int(h(x),
-      x=1..infinity); } \end{mapleinput} \relax \begin{maplelatex} {Int(1/x^2, x = 1 .. infinity)}{
+      We'll start with the inert command, to see how the improper integral is set up. For <m>\infty</m> in Maple, we type <c>infinity</c>.
+    </p>
+    <console prompt="> ">
+      <input>Int(h(x), x=1..infinity);</input>
+    </console>
+    <p>
       <me>
         \displaystyle \int _{1}^{\infty }\!{x}^{-2}{dx}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup} \begin{maplegroup} \begin{mapleinput} {int(h(x),
-      x=1..infinity); } \end{mapleinput} \relax \begin{maplelatex} {1}{
+      Next we'll calculate the result using the lowercase <c>int()</c> command to see if the result is finite.
+    </p>
+    <console prompt="> ">
+      <input>int(h(x), x=1..infinity);</input>
+    </console>
+    <p>
       <me>
         \displaystyle 1
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      Since the result is finite, this improper integral is convergent.
     </p>
-  </subsection>
+  </example>
 </section>

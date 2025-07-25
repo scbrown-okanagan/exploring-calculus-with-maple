@@ -1,107 +1,94 @@
 <section xml:id="sec_volume_of_revolution_tutor">
   <title>Volumes of Revolution</title>
-  <introduction>
+  <idx><h>volume of revolution</h><h>tutor</h></idx>
+  <p>
+    The Volume of Revolution tutor is used to evaluate the volume of a solid obtained by revolving a region about a specified horizontal or vertical axis.
+  </p>
+  <figure>
+    <caption>Opening up the Volume of Revolution tutor using menus.</caption>
+    <image source="images/VoRTutorLoad1-eps-converted-to" width="90%"/>
+  </figure>
+  <figure>
+    <caption>Opening up the Volume of Revolution tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
+    <idx><h>packages</h><h>Student[Calculus1]</h></idx>
+    <image source="images/VoRTutorLoad2-eps-converted-to" width="90%"/>
+  </figure>
+  <example xml:id="ex_revolution_horizontal">
+    <title>Volume Obtained by Rotating a Region about a Horizontal Axis</title>
     <p>
-          <idx><h>volume of revolution</h><h>tutor</h></idx>
-          <idx><h>packages</h><h>Student[Calculus1]</h></idx>
+      In this example, we will determine the volume of the solid obtained by revolving the region bounded by <m>y=x^2-4</m> and <m>y=-x^2+4</m> about <m>y=4</m>.
     </p>
     <p>
-      The Volume of Revolution tutor is used to evaluate the volume of a solid obtained by rotating a region about a specified horizontal or vertical axis.
+      It is a good idea to begin by plotting the two-dimensional region to help find the intersection points of the two curves.
+      <idx><h>plot</h><h>multiple functions</h></idx>
+      <idx><h>plot</h><h>axes intervals</h></idx>
     </p>
-    <figure>
-      <caption>Opening up the Volume of Revolution tutor using menus.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/VoRTutorLoad1-eps-converted-to.pdf}
-    </figure>
-    <figure>
-      <caption>Opening up the Volume of Revolution tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
-      \adjincludegraphics[width=\textwidth]{tutorials/figures/VoRTutorLoad2-eps-converted-to.pdf}
-    </figure>
-  </introduction>
-  <subsection>
-    <title>Volume Obtained by Rotating the Region Bounded by the Parabolas <m>y=x^2-4</m> and <m>y=-x^2+4</m> about <m>y=2</m></title>
+    <console prompt="> ">
+      <input>plot( [-x^2+4, x^2-4], x=-2..2);</input>
+    </console>
+    <image source="images/volumeofrevolutionplot2d1-eps-converted-to" width="50%"/>
     <p>
-          <idx><h>plot</h><h>multiple functions</h></idx>
-          <idx><h>plot</h><h>axes intervals</h></idx>
-          <idx><h>volume of revolution</h><h>tutor</h></idx>
+      As we can see from the graph, the intersection points occur at <m>(-2,0)</m> and <m>(2,0)</m>. This is easy to confirm by solving the system of two equations 
+      for <m>x</m> and <m>y</m>. This can be done with a single <c>solve()</c> or <c>fsolve()</c> command, as explained in <xref ref="ex_solvesystem"/>.
     </p>
     <p>
-      It is a good idea to begin by plotting the two-dimensional regions to find the intersection points of the two curves.
+      Now we can load up the Volume of Revolution Tutor and enter the functions. When typing out the function in the tutor, you will not have access to the palettes 
+      toolbar in Maple, so you will need to type out commands such as <c>sqrt()</c> for square roots and include the symbol * for multiplication.
+      Be sure to set the correct variable and interval for the variable along with the information about the axis of revolution.
     </p>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {plot([-x\symbol{94}2+4, x\symbol{94}2-4], x=-2..2); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/volumeofrevolutionplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+      In this case, the Line of Revolution should be set to Horizontal, with a distance from the <m>x</m>-axis as <m>4</m>. Click Display when you have everything set up correctly.
     </p>
+    <image source="images/VoRTutorQ1-1-eps-converted-to" width="50%"/>
     <p>
-      In the Volume of Revolution Tutor,
-      be sure to enter the functions,
-      the interval for the variable,
-      and the information about the axis of revolution.
+      It's a good idea to copy the code in the Maple Command box at the bottom of the tutor so that it can be pasted into a new Maple input in your worksheet.
+      This code uses the <c>VolumeOfRevolution()</c> command, which has many options that may be changed to give various types of output. You can use this command 
+      to simply output the 3D graph of the solid:
     </p>
-    <figure>
-      <caption>Setting the Volume of Revolution tutor to revolve the region about a horizontal axis.</caption>
-      <image width="90%" source="images/VoRTutorQ1-1-eps-converted-to.png"/>
-    </figure>
-    <aside>
-      <p>
-        When typing in the functions in the tutor,
-        you will not have access to the palettes toolbar in Maple.
-        You will need to type out commands such as <c>sqrt()</c> for square roots.
-        You must also include the symbol * for multiplication.
-      </p>
-    </aside>
+    <console prompt="> ">
+      <input>with(Student[Calculus1]):</input>
+      <input>VolumeOfRevolution(-x^2+4, x^2+4, -2..2, 'axis'=horizontal, 
+    'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false, 
+    'showregion'=false, 'method'=midpoint, 'partition'= 6, 
+    'output'=plot);</input>
+    </console>
+    <image source="images/volumeofrevolutionplot3d1-eps-converted-to" width="50%"/>
     <p>
-      The Maple Command at the bottom of the tutor can be copied and pasted into a new Maple input in your worksheet.
-      You can then change the various options in that command to output the plot of the solid,
-      the integral used to obtain the volume,
-      or the numerical value of the volume.
+      Changing the <c>output</c> option will can give you the exact value of the volume or the integral used to obtain the volume.
     </p>
+    <console prompt="> ">
+      <input>VolumeOfRevolution(-x^2+4, x^2+4, -2..2, 'axis'=horizontal, 
+    'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false,
+    'showregion'=false, 'method'=midpoint, 'partition'= 6,
+    'output'=integral);</input>
+    </console>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {with(Student[Calculus1]): } \end{mapleinput} \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        Using the output from the Volume of Revolution Tutor and changing the <c>output</c> option will let you display the region,
-        the value of the volume, and the integral used to obtain the volume.
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {VolumeOfRevolution(-x\symbol{94}2+4, x\symbol{94}2+4, -2..2, 'axis'=horizontal, 'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false, 'showregion'=false, 'method'=midpoint, 'partition'= 6, 'output'=plot); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/volumeofrevolutionplot3d1-eps-converted-to.png\vskip.5\MaplePlotHeight \end{maplegroup}
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {VolumeOfRevolution(-x\symbol{94}2+4, x\symbol{94}2+4, -2..2, 'axis'=horizontal, 'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false, 'showregion'=false, 'method'=midpoint, 'partition'= 6, 'output'=integral); } \end{mapleinput} \relax \begin{maplelatex} {Int(16*Pi*x^2, x = -2 .. 2)}{
       <me>
-        \displaystyle \int_{-2}^{2}\!16\,\pi\,{x}^{2}\,{ d}x
+        \displaystyle \int_{-2}^{2}\! \,\pi\,\left((x^2-8)^{2}-x^4\right)\,{ d}x
+      </me>
+    </p>
+    <console prompt="> ">
+      <input>VolumeOfRevolution(-x^2+4, x^2+4, -2..2, 'axis'=horizontal,
+    'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false,
+    'showregion'=false, 'method'=midpoint, 'partition'= 6,
+    'output'=value);</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle {\frac {512\,\pi}{3}}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      From this code, you can also easily change other options, such as the <c>axis</c> (horizontal or vertical) and <c>distancefromaxis</c>.
     </p>
+  </example>
+  <example xml:id="ex_revolution_vertical">
+    <title>Volume Obtained by Rotating a Region about a Horizontal Axis</title>
     <p>
-          <idx><h>volume of revolution</h><h>tutor</h></idx>
+      In this example, we will determine the volume of the solid obtained by revolving the region bounded by <m>y=x^2-4</m> and <m>y=-x^2+4</m> about <m>x=-3</m>.
+      Since this is the same region as described in <xref ref="ex_revolution_horizontal"/>, most of the steps are the same.
+      However, in this case we must set the Line of Revolution information to be a vertical axis with an offset of <m>-3</m> from the <m>y</m>-axis.
     </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {VolumeOfRevolution(-x\symbol{94}2+4, x\symbol{94}2+4, -2..2, 'axis'=horizontal, 'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false, 'showregion'=false, 'method'=midpoint, 'partition'= 6, 'output'=value); } \end{mapleinput} \relax \begin{maplelatex} {(256/3)*Pi}{
-      <me>
-        \displaystyle {\frac {256\,\pi}{3}}
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </subsection>
-  <subsection>
-    <title>Volume Obtained by Rotating the Region Bounded by the Parabolas <m>y=x^2-4</m> and <m>y=-x^2+4</m> about <m>x=-3</m></title>
-    <p>
-      In this case, we will revolve the same region as above,
-      but around a vertical axis.
-    </p>
-    <p>
-          <idx><h>volume of revolution</h><h>tutor</h></idx>
-    </p>
-    <figure>
-      <caption>Setting the Volume of Revolution tutor to revolve the region about a vertical axis.</caption>
-      <image width="90%" source="images/VoRTutorQ1-2-eps-converted-to.png"/>
-    </figure>
-  </subsection>
+    <image source="images/VoRTutorQ1-2-eps-converted-to" width="50%"/>
+  </example>
 </section>
