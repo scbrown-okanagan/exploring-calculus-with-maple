@@ -230,7 +230,7 @@
 				<p>
 					<em>(Optional)</em> Go back to the top of your worksheet and change the second line to: <c>> Digits := 50;</c>. Now run the entire worksheet by clicking on the button at the top toolbar:
 				</p>
-        <image width="5%" source="images/execute_button.png"/>
+        		<image width="5%" source="images/execute_button-eps-converted-to"/>
 			</statement>
 		</exercise>
 	</exercises>
