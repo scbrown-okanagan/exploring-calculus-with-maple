@@ -1,109 +1,74 @@
 <section xml:id="sec_direction_fields_tutorial">
   <title>Direction Fields</title>
-  <introduction>
+  <p>
+    A direction field is a way to visualise the family of functions that make up the general solution to a first-order differential equation.
+    At every point on the graph, a short arrow is draw that represents the slope of the tangent line to a solution curve passing through that point.
+    This can be quite useful to get a visual interpretation of how solutions to a differential equation behave.
+  </p>
+  <p>
+    We use the <c>DEplot()</c> to plot the direction field for a differential equation and it requires that the <c>DETools</c> package is loaded first.
+    Packages are loaded using the <c>with()</c> command and it is typically a good idea to load any necessary packages at the top of your worksheet.
+    Loading a package only needs to be done once per Maple worksheet, but needs to be run each time you open a new or previously closed document.
+    <idx><h>packages</h><h>DETools</h></idx>
+  </p>
+  <p>
+    As an example, we will take a look at the direction field for the differential equation
+    <me>
+      y'=x^2\sin(y)
+    </me>.
+    It is best to assign a name to this equation so that we can use the <c>DEplot()</c> command multiple times conveniently.
+    <idx><h>mathematical functions</h><h>sine</h></idx>
+  </p>
+<console prompt="> ">
+  <input>de2 := y'(x) = x^2 * sin(y(x));</input>
+</console>
+  <p>
+    <me>
+      \displaystyle de\mathit{2}\, := \,{\frac {d}{dx}}y \left( x \right) ={x}^{2}\sin \left( y \left( x \right)  \right)
+    </me>
+  </p>
+  <p>
+    The required parameters for the <c>DEplot()</c> command are the differential equation, the function for which it is to be solved for,
+    and the ranges of the two variables.
+    <idx><h>differential equations</h><h>DEplot</h></idx>
+    <idx><h>differential equations</h><h>DEplot!axes intervals</h></idx>
+  </p>
+  <console prompt="> ">
+    <input>with(DETools):</input>
+    <input>DEplot(de2, y(x), x=-2..2, y=-2..2);</input>
+  </console>
+  <image source="images/direction_fieldsplot2d1-eps-converted-to" width="50%"/>
+  <p>
+    The above direction field allows us to track a <q>solution curve</q> for any particular initial condition.
+    To track this curve, we start at a point <m>(x_0, y_0)</m> and follow the directions of the arrows.
+    This will give us the <em>one</em> unique curve that satisfies the initial condition <m>y(x_0)=y_0</m>.
+  </p>
+  <p>
+    Maple will plot a particular solution if the initial condition is placed inside square brackets and included as an additional parameter in the <c>DEplot()</c> command.
+    <idx><h>differential equations</h><h>DEplot!solution curves</h></idx>
+    <idx><h>differential equations</h><h>DEplot!linecolour</h></idx>
+  </p>
+  <p>
+    Suppose we wish to add the initial condition <m>y(0)=1</m> and view the particular solution on the direction field.
+  </p>
+  <console prompt="> ">
+    <input>DEplot(de2, y(x), x=-2..2, y=-2..2, [y(0) = 1]);</input>
+  </console>
+  <image source="images/direction_fieldsplot2d2-eps-converted-to" width="50%"/>
+  <p>
+    Notice that this curve goes through the point <m>(0,1)</m> and follows the direction of the arrows from the direction field.
+  </p>
+  <p>
+    Multiple particular solutions can be plotted at once. Here we plot the solutions that correspond to the initial conditions <m>y(0)=1</m> and <m>y(2)=-1</m>:
+  </p>
+  <aside>
     <p>
-          <idx><h>packages</h><h>DETools</h></idx>
+      The <c>linecolour = </c><em>colour</em> parameter is used to adjust the colour of the solution curves, rather than the direction field.
     </p>
-    <p>
-      A direction field is a way to plot an entire family of solutions on a graph.
-      Each arrow on this direction field represents the slope of the tangent line at every point in the graph's range.
-      To access this command,
-      we need to import the <c>DETools</c> package.
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {with(DETools): } \end{mapleinput} \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        The <c>DETools</c> package must be loaded to use the <c>DEplot()</c> command.
-      </p>
-    </aside>
-    <p>
-          <idx><h>mathematical functions</h><h>sine</h></idx>
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {de2 := y'(x) = x\symbol{94}2 * sin(y(x)); } \end{mapleinput} \relax
-    </p>
-    <aside>
-      <p>
-        This differential equation may be written as <m>y'=x^2\sin(y)</m>.
-      </p>
-    </aside>
-    <p>
-      \begin{maplelatex} {de2 := y'(x) = x^2*sin(y(x))}{
-      <me>
-        \displaystyle \textit{de2}\, := \,{\frac {d}{dx}}y \left( x \right) ={x}^{2}\sin \left( y \left( x \right)  \right)
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-    <p>
-      We can use <c>DEplot()</c> to plot the direction field for the differential equation.
-      The required parameters for the <c>DEplot()</c> command are the differential equation,
-      the function for which it is to be solved for,
-      and the ranges of the two variables.
-    </p>
-    <p>
-          <idx><h>differential equations</h><h>DEplot</h></idx>
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {DEplot(de2, y(x),
-      x=-2..2, y=-2..2); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/direction_fieldsplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-    </p>
-    <p>
-      The above direction field allows us to track a "solution curve" for any particular initial condition.
-      To track this curve, we start at a point
-      <m>(x_0, y_0)</m> and follow the directions of the arrows.
-      This will give us the <em>one</em>
-      unique curve that satisfies the initial condition <m>y(x_0)=y_0</m>.
-    </p>
-    <aside>
-      <p>
-        Square brackets must be placed around the initial condition of a particular solution when plotting a solution curve.
-      </p>
-    </aside>
-    <p>
-      Maple will plot a particular solution if the initial condition is placed inside square brackets and included as an additional parameter in the <c>DEplot()</c> command.
-    </p>
-  </introduction>
-  <subsection>
-    <title>Plotting Solution Curves on a Direction Field</title>
-    <p>
-          <idx><h>differential equations</h><h>DEplot!axes intervals</h></idx>
-          <idx><h>differential equations</h><h>DEplot!solution curves</h></idx>
-          <idx><h>differential equations</h><h>DEplot!linecolour</h></idx>
-    </p>
-    <p>
-      If we want to force the <c>DEplot()</c> command to show a solution for one particular initial condition,
-      say <m>y(0)=1</m>, we add the parameter as follows:
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {DEplot(de2, y(x),
-      x=-2..2, y=-2..2, [y(0) = 1]); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/direction_fieldsplot2d2-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        Notice that this curve goes through the point <m>(0,1)</m> and follows the direction of the arrows from the direction field.
-      </p>
-    </aside>
-    <p>
-      We now plot the solutions that correspond to the initial conditions <m>y(0)=1</m> and <m>y(2)=-1</m>:
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {DEplot(de2,
-      y(x), x=-2..2, y=-2..2, [y(0) = 1, y(2) = -1], linecolour=[blue,
-      cyan]); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/direction_fieldsplot2d3-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        The <c>linecolour = </c><em>colour</em>
-        parameter is used to adjust the colour of the solution curves,
-        rather than the direction field.
-      </p>
-    </aside>
-  </subsection>
+  </aside>
+  <console prompt="> ">
+    <input>DEplot(de2, y(x), x=-2..2, y=-2..2, [y(0) = 1, y(2) = -1], 
+  linecolour=[blue, cyan]);</input>
+  </console>
+  <image source="images/direction_fieldsplot2d3-eps-converted-to" width="50%"/>
 </section>

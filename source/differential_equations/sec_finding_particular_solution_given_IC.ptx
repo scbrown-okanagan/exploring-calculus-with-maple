@@ -5,41 +5,51 @@
         <idx><h>differential equations</h><h>dsolve!initial condition</h></idx>
   </p>
   <p>
-    The constant <m>A</m> from the above example is arbitrary,
-    meaning that the function <m>y(x)=A{ e}^{1/3\,{x}^{3}}</m> is always a solution for the original differential equation,
-    no matter the value of <m>A</m>.
+    In <xref ref="sec_finding_general_solution_to_DE"/>, we saw that solving a differential equation may result in one or more arbitrary constants in the solution.
+    This general solution is essentially an entire family of functions that are collectively all solutions to the differential equation.
+    However, if we are given additional information about the function in the form of an <em>initial condition</em>, we may be able to give a more specific function as a solution.
   </p>
   <p>
-    If we are given an <em>initial condition</em>
-    of the form <m>y(x_0)=y_0</m> for constants <m>x_0</m> and <m>y_0</m>,
-    then we can find a unique solution for the differential equation.
-    This will give us a new value for <m>A</m> every time we change the initial condition.
+    These initial conditions are typically written in the form <m>y(x_0)=y_0</m> for constants <m>x_0</m> and <m>y_0</m>. This means that when <m>x=x_0</m>, we must have <m>y=y_0</m>
+    and the solution is a curve that passes through the point <m>(x_0,y_0)</m>.
+    The combination of a differential equation with one or more initial conditions is known as an initial value problem and the solution is known as a <em>particular solution</em>.
   </p>
   <p>
-    For example,
-    suppose that the function <m>y(x)</m> goes through the point <m>(0,5)</m>.
-    In this case, we have the initial condition <m>y(0)=5</m>.
+    Continuing the example from <xref ref="sec_finding_general_solution_to_DE"/>, we saw that the differential equation
+    <me>
+      y'=x^2y
+    </me>
+    has the general solution <m>y(x) = A\,{{ e}^{1/3\,{x}^{3}}}</m>. Now suppose that we add the initial condition <m>y(0)=5</m> so that the function <m>y(x)</m> goes through the point <m>(0,5)</m>.
+    In this case, we have the initial value problem
+    <me>
+      \left\lbrace \begin{array}{l}
+        y'= x^2y \\
+        y(0) = 5
+      \end{array}\right.
+    </me>.
   </p>
   <p>
-    To include this initial condition when solving the differential equation in Maple,
-    we add it into the <c>dsolve()</c> command as follows: \begin{maplegroup} \begin{mapleinput} {dsolve([de1,
-    y(0) = 5], y(x)); } \end{mapleinput}
+    To include this initial condition when solving the differential equation in Maple, we add it into the <c>dsolve()</c> command.
+    The initial value problem (differential equation and conditions) must be input within square brackets to create a list.
   </p>
+  <console prompt="> ">
+    <input>de1 := y'(x)= x^2*y(x);</input>
+  </console>
   <p>
-    \relax \begin{maplelatex} {y(x) = 5*exp((1/3)*x^3)}{
+    <idx><h>assignment operator</h><h>differential equations</h></idx>
+    <me>
+      \displaystyle de\mathit{1}\, := \,{\frac {d}{dx}}y \left( x \right) ={x}^{2}y \left( x \right)
+    </me>
+  </p>
+  <console prompt="> ">
+    <input>dsolve( [de1, y(0) = 5], y(x));</input>
+  </console>
+  <p>
     <me>
       \displaystyle y \left( x \right) =5\,{{ e}^{1/3\,{x}^{3}}}
     </me>
   </p>
   <p>
-    } \end{maplelatex}
-  </p>
-  <aside>
-    <p>
-      The particular solution to <m>y'=x^2y</m> with the initial condition <m>y(0)=5</m> is <m>y \left( x \right) =5\,{{ e}^{1/3\,{x}^{3}}}</m>.
-    </p>
-  </aside>
-  <p>
-    \end{maplegroup}
+    The particular solution to <m>y'=x^2y</m> with the initial condition <m>y(0)=5</m> is <m>y \left( x \right) =5\,{{ e}^{1/3\,{x}^{3}}}</m>.
   </p>
 </section>
