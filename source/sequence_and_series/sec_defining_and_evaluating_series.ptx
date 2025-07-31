@@ -3,118 +3,76 @@
   <p>
     We use the capitalized <c>Sum()</c> command to display the summation notation for a series symbolically.
     This also makes it possible to assign a name to the sum and use it in other commands later.
+    Much like with sequences, we need an expression for a generic term in the series using an index, such as <m>k</m>.
+    We then specify the range for the index that generates the terms in that sequence that are to be summed.
+    <idx><h>sequences and series</h><h>Sum</h></idx>
   </p>
   <p>
-    Much like with sequences,
-    we need a generating function involving an index, such as <m>k</m>.
-    We then specify the range of indices for the terms in that sequence that are to be summed.
+    For a simple example, we can add the five values from the sequence <m>\left\lbrace2k^2-k\right\rbrace_{k=1}^5</m> in <xref ref="sec_sequences"/>.
+    This is a finite series, since only finitely many terms are summed.
   </p>
-  <aside>
-    <p>
-      This is a called a <em>finite</em> sum,
-      since only finitely many terms are summed.
-    </p>
-  </aside>
+  <console prompt="> ">
+    <input>s1 := Sum(2*k^2-k, k=1..5);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {s1 := Sum(2*k\symbol{94}2-k, k=1..5); } \end{mapleinput} \relax \begin{maplelatex} {s1 := Sum(2*k^2-k, k = 1 .. 5)}{
     <me>
-      \displaystyle \textit{s1}\, := \,\sum _{k=1}^{5}2\,{k}^{2}-k
+      \displaystyle s\mathit{1}\, := \,\sum _{k=1}^{5}2\,{k}^{2}-k
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    We may use the <c>value()</c> command on the result of a capitalized <c>Sum()</c> command to display the result.
+    Alternatively, the lowercase <c>sum()</c> command directly evaluates the value of the sum, without displaying the series.
+    <idx><h>value</h></idx>
+    <idx><h>sequences and series</h><h>sum</h></idx>
   </p>
+  <console prompt="> ">
+    <input>value(s1);</input>
+  </console>
   <p>
-        <idx><h>sequences and series</h><h>Sum</h></idx>
+    <me>
+      \displaystyle 95
+    </me>
   </p>
+  <console prompt="> ">
+    <input>sum(2*k^2-k, k=1..5);</input>
+  </console>
   <p>
-    We use the lowercase <c>sum()</c> command to calculate the value of the sum.
-    We may also use the <c>value()</c> command on the result of a capitalized <c>Sum()</c> command.
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {value(s1); } \end{mapleinput} \relax \begin{maplelatex} {95}{
     <me>
       \displaystyle 95
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    To determine the value of an infinite sequence, we can use <c>infinity</c> as the a bound on the index.
+    The value of an infinite sum may be a value (in the case of a convergent sum) or <m>\pm\infty</m> (in the case of a divergent sum).
+    <idx><h>sequences and series</h><h>infinite series</h></idx>
   </p>
+  <console prompt="> ">
+    <input>Sum((2/3)^k, k=0..infinity); value(%);</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {sum(2*k\symbol{94}2-k, k=1..5); } \end{mapleinput} \relax \begin{maplelatex} {95}{
     <me>
-      \displaystyle 95
+      \displaystyle \sum _{k=0}^{\infty } \left( 2/3 \right) ^{k}
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-        <idx><h>value</h></idx>
-        <idx><h>sequences and series</h><h>sum</h></idx>
-  </p>
-  <p>
-    To determine the value of the sum of infinitely many terms,
-    we can use <c>infinity</c> as the a bound on the index.
-    The value of an infinite sum may be a value
-    (in the case of a convergent sum)
-    or <m>\pm\infty</m>
-    (in the case of a divergent sum).
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {s2 := Sum((2/3)\symbol{94}k, k=0..infinity); } \end{mapleinput}
-  </p>
-  <aside>
-    <p>
-      The infinite sum <m>\displaystyle\sum_{k=0}^{\infty} \left(\dfrac{2}{3}\right)^k</m> is said to be convergent.
-    </p>
-  </aside>
-  <p>
-    \relax \begin{maplelatex} {s2 := Sum((2/3)^k, k = 0 .. infinity)}{
-    <me>
-      \displaystyle \textit{s2}\, := \,\sum _{k=0}^{\infty } \left( 2/3 \right) ^{k}
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {value(s2); } \end{mapleinput} \relax \begin{maplelatex} {3}{
     <me>
       \displaystyle 3
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    This infinite series gives us a finite sum, so it is said to be convergent.
   </p>
+  <console prompt="> ">
+    <input>Sum(sin(k)+1, k=1..infinity); value(%)</input>
+  </console>
   <p>
-    \begin{maplegroup} \begin{mapleinput} {s3 := Sum(sin(k)+1, k=1..infinity); } \end{mapleinput}
-  </p>
-  <aside>
-    <p>
-      The infinite sum <m>\,\,\,\,\displaystyle\sum_{k=1}^{\infty} (\sin(k)+1)</m> is said to be divergent.
-    </p>
-  </aside>
-  <p>
-    \relax \begin{maplelatex} {s3 := Sum(sin(k)+1, k = 1 .. infinity)}{
+    <idx><h>mathematical functions</h><h>sine</h></idx>
     <me>
-      \displaystyle \textit{s3}\, := \,\sum _{k=1}^{\infty }\sin \left( k \right) +1
+      \displaystyle \sum _{k=1}^{\infty }\sin \left( k \right) +1
     </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-        <idx><h>mathematical functions</h><h>sine</h></idx>
-        <idx><h>sequences and series</h><h>infinite series</h></idx>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput} {value(s3); } \end{mapleinput} \relax \begin{maplelatex} {infinity}{
     <me>
       \displaystyle \infty
     </me>
   </p>
   <p>
-    } \end{maplelatex} \end{maplegroup}
+    The infinite sum <m>\,\,\,\,\displaystyle\sum_{k=1}^{\infty} (\sin(k)+1)</m> is said to be divergent.
   </p>
 </section>

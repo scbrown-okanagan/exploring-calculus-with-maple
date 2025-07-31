@@ -1,0 +1,48 @@
+<section xml:id="sec_sequences">
+  <title>Defining a Sequence</title>
+  <p>
+    The shortest way to list the terms in a sequence is using the $ symbol in Maple.
+    As an example, we may wish to list the elements of the sequence
+    <me>
+      \displaystyle\left\lbrace3k^2+2\right\rbrace_{k=0}^3
+    </me>.
+    This should give four integers that follow the form of <m>3k^2+2</m> from index <m>k=0</m> up to <m>k=3</m>.
+    <idx><h>sequences and series</h><h>$ notation</h></idx>
+  </p>
+  <p>
+    A dollar symbol is used after the expression of a generic term of the sequence, followed by specifying an interval for the index.
+  </p>
+  <console prompt="> ">
+    <input>3*k^2+2 $ k=0..3;</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle 2,\,5,\,14,\,29
+    </me>
+  </p>
+  <p>
+    The index does not have to start at zero. Here are five integers of the sequence <m>\left\lbrace2k^2-k\right\rbrace_{k=1}^5</m>:
+  </p>
+  <console prompt="> ">
+    <input>2*k^2-k $ k=1..5;</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle 1,\,6,\,15,\,28,\,45
+    </me>
+  </p>
+  <p>
+    We can also list the terms in a sequence by using the <c>seq()</c> command.
+    This command essentially performs the same operation as the $ symbol.
+    Here is that same sequence again, using the <c>seq()</c> command.
+    <idx><h>sequences and series</h><h>seq</h></idx>
+  </p>
+  <console prompt="> ">
+    <input>seq(2*k^2-k, k=1..5);</input>
+  </console>
+  <p>
+    <me>
+      \displaystyle 1,\,6,\,15,\,28,\,45
+    </me>
+  </p>
+</section>

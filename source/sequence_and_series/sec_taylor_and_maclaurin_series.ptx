@@ -1,121 +1,103 @@
 <section xml:id="sec_taylor_and_maclaurin_series">
   <title>Taylor and Maclaurin Series</title>
-  <introduction>
+  <idx><h>sequences and series</h><h>Taylor and Maclaurin series</h></idx>
+  <p>
+    One use of series is to find the Taylor series expansion of a function.
+    Recall that the Taylor series of a function <m>f(x)</m> centred at <m>x=a</m>, is the sum
+    <me>
+      \sum_{k=0}^{\infty} \dfrac{f^{(k)}(a)}{k!}(x-a)^k
+    </me>.
+    A special case of a Taylor series that is centred at <m>a=0</m> is known as a Maclaurin series.
+  </p>
+  <p>
+    In Maple, the <c>taylor()</c> command outputs the first few terms of the Taylor series. It uses <q>big O</q> notation as a placeholder 
+    to represent the remaining terms of higher degree. The number of terms displayed may be specified.
+    In this example, we can see the Taylor series expansion of <m>f(x)=sin(x)</m> centred at <m>x=5</m>, with terms up to (but not including)
+    degree four.
+  </p>
+  <console prompt="> ">
+    <input>taylor(sin(x), x = 5, 4);</input>
+  </console>
+  <p>
+    <me>
+      \begin{array}{l}\displaystyle \sin \left( 5 \right) +\cos \left( 5 \right)  \left( x-5 \right) -\frac{1}{2}\,\sin \left( 5 \right)  \left( x-5 \right) ^{2}\\ \displaystyle -\frac{1}{6}\,\cos \left( 5 \right)  \left( x-5 \right) ^{3}+O \left(  \left( x-5 \right) ^{4} \right) \end{array}
+    </me>
+  </p>
+  <p>
+    The first <m>n</m> terms of a Taylor series is known as an <m>n</m>th degree Taylor polynomial approximation of <m>f(x)</m>.
+    Depending on the convergence of the series, this polynomial approximation will have a very similar shape to the function in 
+    an interval centred at <m>x=a</m>.
+    The <c>convert()</c> command can be used to eliminate higher terms of the series and give a Taylor polynomial of a desired degree.
+  </p>
+  <example>
+    <title>Maclaurin Series of <m>{ e}^x</m></title>
     <p>
-          <idx><h>sequences and series</h><h>Taylor and Maclaurin series</h></idx>
+      The function <m>f(x)=e^x</m> has a very simple pattern with its higher derivatives, particularly evaluated at <m>x=0</m>, 
+      so it provides for a very simple example of a Maclaurin series.
+      Since a Maclaurin series is a Taylor series centred at <m>a=0</m>, we must specify <m>x=0</m> in the <c>taylor()</c> command.
+      <idx><h>mathematical functions</h><h>exponential</h></idx>
     </p>
+    <console prompt="> ">
+      <input>taylor(exp(x), x = 0);</input>
+    </console>
     <p>
-      One use of series is to find the Taylor series expansion of a function.
-      Recall that the Taylor series of a function <m>f(x)</m>,
-      centred at <m>x=a</m>, is the sum
-      <me>
-        \sum_{k=0}^{\infty} \dfrac{f^{(k)}(a)}{n!}(x-a)^k
-      </me>.
-    </p>
-    <p>
-      A Taylor series that is centred at <m>x=0</m> is known as a Maclaurin series.
-    </p>
-  </introduction>
-  <subsection>
-    <title>Maclaurin Series Expansion of <m>{ e}^x</m></title>
-    <p>
-          <idx><h>mathematical functions</h><h>exponential</h></idx>
-          <idx><h>sequences and series</h><h>Taylor and Maclaurin series!taylor</h></idx>
-    </p>
-    <aside>
-      <p>
-        Maple has given <m>7</m> terms as an output.
-        The <m>O(x^6)</m> term in this expression means "plus a bunch more terms with power <m>6</m> and higher".
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {taylor(exp(x),
-      x = 0); } \end{mapleinput} \relax \begin{maplelatex} {1+x+(1/2)*x^2+(1/6)*x^3+(1/24)*x^4+(1/120)*x^5+O(x^6)}{
       <me>
         \displaystyle 1+x+\frac{1}{2}\,{x}^{2}+\frac{1}{6}\,{x}^{3}+\frac{1}{24}\,{x}^{4}+\frac{1}{120}\,{x}^{5}+O \left( {x}^{6} \right)
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      By default, Maple has given <m>7</m> terms as an output here.
+      The <m>O(x^6)</m> term in this expression means "plus a bunch more terms with power <m>6</m> and higher".
+      We can specify the order (related to number of terms) of the Taylor series by adding a number as the final argument to the command.
     </p>
+    <console prompt="> ">
+      <input>taylor(exp(x), x = 0, 10);</input>
+    </console>
     <p>
-      We can specify the order
-      (related to number of terms)
-      of the Taylor series by adding a number as the final argument to the command.
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {taylor(exp(x),
-      x = 0, 10); } \end{mapleinput} \relax \begin{maplelatex} {1+x+(1/2)*x^2+(1/6)*x^3+(1/24)*x^4+(1/120)*x^5+(1/720)*x^6+(1/5040)*x^7+(1/40320)*x^8+(1/362880)*x^9+O(x^10)} {
       <me>
         \begin{array}{l}\displaystyle 1+x+\frac{1}{2}\,{x}^{2}+\frac{1}{6}\,{x}^{3}+\frac{1}{24}\,{x}^{4}+\frac{1}{120}\,{x}^{5}\\ \displaystyle +{\frac {1}{720}}\,{x}^{6}+{\frac {1}{5040}}\,{x}^{7}+{\frac {1}{40320}}\,{x}^{8}+{\frac {1}{362880}}\,{x}^{9}+O \left( {x}^{10} \right) \end{array}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      Using this additional option, Maple has displayed all the terms with powers less than <m>10</m>.
     </p>
-    <aside>
-      <p>
-        In this example, Maple has displayed all the terms with powers less than <m>10</m>.
-      </p>
-    </aside>
-  </subsection>
-  <subsection>
-    <title>Taylor Series Expansion of <m>\sin(x)</m>, Centred at <m>x=5</m></title>
+  </example>
+  <example>
+    <title>Comparing a Function to its Taylor Polynomial</title>
+    <idx><h>sequences and series</h><h>Taylor and Maclaurin series!convert to polynomial</h></idx>
+    <idx><h>plot</h><h>axes intervals</h></idx>
+    <idx><h>plot</h><h>multiple functions</h></idx>
     <p>
-          <idx><h>sequences and series</h><h>Taylor and Maclaurin series!taylor</h></idx>
-          <idx><h>mathematical functions</h><h>sine</h></idx>
+      We can see how closely the a Taylor polynomial resembles the original function by plotting them on the same axes.
+      In this example, we will compare the graph of <m>f(x)=\sin(x)</m> to its Taylor polynomial approximation centred at <m>x=0</m>.
     </p>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {taylor(sin(x),
-      x = 5, 4); } \end{mapleinput} \relax \begin{maplelatex} {sin(5)+cos(5)*(x-5)-(1/2)*sin(5)*(x-5)^2-(1/6)*cos(5)*(x-5)^3+O((x-5)^4)} {
-      <me>
-        \begin{array}{l}\displaystyle \sin \left( 5 \right) +\cos \left( 5 \right)  \left( x-5 \right) -\frac{1}{2}\,\sin \left( 5 \right)  \left( x-5 \right) ^{2}\\ \displaystyle -\frac{1}{6}\,\cos \left( 5 \right)  \left( x-5 \right) ^{3}+O \left(  \left( x-5 \right) ^{4} \right) \end{array}
-      </me>
+      To begin, we construct the Taylor series expansion of <m>\sin(x)</m>, which will output the series using <q>big O</q> notation.
+      This needs to be converted to a polynomial with finitely many terms. 
+      The <c>convert()</c> command lets Maple know that we wish for the
+      <idx><h>ditto operator</h></idx>
     </p>
+    <console prompt="> ">
+      <input>taylor(sin(x), x = 0, 10); poly := convert(%);</input>
+    </console>
     <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </subsection>
-  <subsection>
-    <title>Comparing the Graphs of <m>\sin(x)</m> and its Maclaurin Series</title>
-    <p>
-      We can see how closely the Maclaurin
-      (or Taylor)
-      series expansion resembles the original function by plotting them on the same axes.
-      To plot the Taylor series we need to get rid of the final term <m>O(\ldots)</m>.
-      We use the <c>convert()</c> command to do this.
-    </p>
-    <p>
-          <idx><h>sequences and series</h><h>Taylor and Maclaurin series!convert to polynomial</h></idx>
-          <idx><h>ditto operator</h></idx>
-          <idx><h>plot</h><h>axes intervals</h></idx>
-          <idx><h>plot</h><h>multiple functions</h></idx>
-    </p>
-    <aside>
-      <p>
-        This <c>convert()</c> command lets Maple know that we wish for the result to be a truncated polynomial.
-      </p>
-    </aside>
-    <p>
-      \begin{maplegroup} \begin{mapleinput} {taylor(sin(x), x = 0, 10);
-      poly := convert( } \end{mapleinput} \relax \begin{maplelatex} {x-(1/6)*x^3+(1/120)*x^5-(1/5040)*x^7+(1/362880)*x^9+O(x^11)}{
       <me>
         \displaystyle x-\frac{1}{6}\,{x}^{3}+{\frac {1}{120}}\,{x}^{5}-{\frac {1}{5040}}\,{x}^{7}+{\frac {1}{362880}}\,{x}^{9}+O \left( {x}^{11} \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \begin{maplelatex} {poly := x-(1/6)*x^3+(1/120)*x^5-(1/5040)*x^7+(1/362880)*x^9}{
       <me>
-        \displaystyle \textit{poly}\, := \,x-\frac{1}{6}\,{x}^{3}+{\frac {1}{120}}\,{x}^{5}-{\frac {1}{5040}}\,{x}^{7}+{\frac {1}{362880}}\,{x}^{9}
+        \displaystyle poly\, := \,x-\frac{1}{6}\,{x}^{3}+{\frac {1}{120}}\,{x}^{5}-{\frac {1}{5040}}\,{x}^{7}+{\frac {1}{362880}}\,{x}^{9}
       </me>
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      Now that we have assigned a name to the Taylor polynomial, it can be plotted alongside <m>\sin(x)</m> to see how the shape of the Taylor 
+      polynomial expression converges to the function around <m>x=0</m>.
     </p>
+    <console prompt="> ">
+      <input>plot( [sin(x), poly], x = -4*Pi..4*Pi, y = -10..10);</input>
+    </console>
+    <image source="images/Taylor_and_Maclaurin_Seriesplot2d1-eps-converted-to" width="50%"/>
     <p>
-      \begin{maplegroup} \begin{mapleinput} {plot([sin(x),
-      poly], x = -4*Pi..4*Pi, y = -10..10); } \end{mapleinput} \relax \vskip.5\MaplePlotHeight Plot:
-      tutorials/figures/Taylor_and_Maclaurin_Seriesplot2d1-eps-converted-to.pdf\vskip.5\MaplePlotHeight \end{maplegroup}
+      As we can see the Taylor polynomial and the original function <m>\sin(x)</m> have a very similar shape around the origin.
     </p>
-  </subsection>
+  </example>
 </section>
