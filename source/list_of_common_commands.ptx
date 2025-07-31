@@ -1,351 +1,422 @@
 <appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_list_of_common_commands">
   <title>List of Common Commands</title>
-  <p>
-    \begin{fullwidth} \begin{longtable}{p{0.33\linewidth} p{0.66\linewidth}} \multicolumn{2}{l}{<em>Keyboard Shortcuts</em>}
-  </p>
-  <p>
-    \hline Ctrl+J, Ctrl+K &amp; New execution group (after or before current line)
-  </p>
-  <p>
-    Ctrl+Shift+J, Ctrl+Shift+K &amp; New paragraph (after or before current line)
-  </p>
-  <p>
-    Ctrl+T &amp; Convert line to Paragraph
-  </p>
-  <p>
-    Ctrl+M &amp; Convert line to Maple input
-  </p>
-  <p>
-    Ctrl+. &amp; Indent section
-  </p>
-  <p>
-    Ctrl+, &amp; Unindent section
-  </p>
-  <p>
-    Ctrl+Delete &amp; Delete section
-  </p>
-  <p>
-    F4 &amp; Merge consecutive execution groups
-  </p>
-  <p>
-    F5 &amp; Toggle between Text, Nonexecutable Math, and Math types
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Common Expressions</em>}
-  </p>
-  <p>
-    \hline exp(x) &amp; The exponential function
-  </p>
-  <p>
-    sqrt(x) &amp; The square root function
-  </p>
-  <p>
-    abs(x) &amp; The absolute value function
-  </p>
-  <p>
-    surd(x,n) &amp; The primitive <m>n</m><sup>th</sup> root,
-    <m>x^{1/n}</m>
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Manipulating Expressions</em>}
-  </p>
-  <p>
-    \hline name := expression &amp; Assigns an expression to a variable
-  </p>
-  <p>
-    subs(x=a, expression) &amp; Evaluate an expression at <m>x = a</m>
-  </p>
-  <p>
-    evalf(expression) &amp; Evaluate the given expression as a
-    (floating point)
-    decimal
-  </p>
-  <p>
-    factor(expression) &amp; Factor the given expression
-  </p>
-  <p>
-    simplify(expression) &amp; Simplify the given expression
-  </p>
-  <p>
-    expand(expression) &amp; Expand the given expression
-  </p>
-  <p>
-    collect(expression,var) &amp; Collect terms of the expression by the specified variable
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Solving Equations</em>}
-  </p>
-  <p>
-    \hline solve(equation,var) &amp; Solves the given equation for the specified variable
-  </p>
-  <p>
-    fsolve(equation,var) &amp; Solves the given equation for the specified variable (as a decimal)
-  </p>
-  <p>
-    fsolve(equation,var=a..b) &amp; Solves the given equation for the specified variable
-    (as a decimal)
-    on the interval <m>[a,b]</m>
-  </p>
-  <p>
-    solve(\{eqn1,eqn2\},\{var1,var2\}) &amp; Solves a system of equations for all specified variables
-  </p>
-  <p>
-    fsolve(\{eqn1,eqn2\},\{var1,var2\}) &amp; Solves a system of equations for all specified variables (as a decimal)
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Defining Functions</em>}
-  </p>
-  <p>
-    \hline name(var) := expression &amp; Assigns a function of the specified variable
-  </p>
-  <p>
-    name := unapply(expression,var) &amp; Convert an expression to a function of the specified variable
-  </p>
-  <p>
-    name(var) := piecewise(condition, &amp; Create a piecewise function of the specified variable where
-  </p>
-  <p>
-    expr,…,condition,expr,…) &amp;
-    each condition is an interval
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Plotting Functions</em>}
-  </p>
-  <p>
-    \hline plot(f(x),x=a..b) &amp; Plot the given function,
-    <m>f(x)</m>, over the interval <m>[a,b]</m>
-  </p>
-  <p>
-    plot([f(x),g(x)],x=a..b) &amp; Plot two functions,
-    <m>f(x)</m> and <m>g(x)</m>, over the interval <m>[a,b]</m>
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Additional Plot Parameters</em>
-    (Include these after necessary parameters)}
-  </p>
-  <p>
-    y=c..d &amp; Only plot the range <m>c \leq y \leq d</m>
-  </p>
-  <p>
-    discont=true &amp; Includes discontinuities in a plot
-  </p>
-  <p>
-    colour=blue &amp; Specify the colour for a graph (black, blue,
-    red, etc.)
-  </p>
-  <p>
-    linestyle=dotted &amp; Specify the style of the line (dash,
-    dot, etc.)
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Limits</em>}
-  </p>
-  <p>
-    \hline limit(expression,var=a) &amp; Find the limit of the expression as var approaches <m>a</m>
-  </p>
-  <p>
-    limit(expression,var=a,right) &amp; Find the limit of the expression as var approaches <m>a</m> from the right
-  </p>
-  <p>
-    limit(expression,var=a,left) &amp; Find the limit of the expression as var approaches <m>a</m> from the left
-  </p>
-  <p>
-    limit(expression,var=infinity) &amp; Find the limit of the expression as var approaches infinity
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Derivatives</em>}
-  </p>
-  <p>
-    \hline diff(expression,var) &amp; The derivative of the given expression with respect to variable
-  </p>
-  <p>
-    diff(expression,var,var) &amp; The second derivative of the given expression with respect to variable
-  </p>
-  <p>
-    diff(expression,var$2) &amp; The second derivative of the given expression with respect to variable
-  </p>
-  <p>
-    f'(var) &amp; The derivative of the function <m>f</m> with respect to variable
-  </p>
-  <p>
-    f\symbol{94}(n)(var) &amp; The nth derivative of the function <m>f</m> with respect to variable
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Implicit Functions</em>
-    (requires "plots" package for plotting)}
-  </p>
-  <p>
-    \hline implicitplot(equation,x=a..b,y=c..d) &amp; Plot the implicit function over the specified region
-  </p>
-  <p>
-    implicitdiff(equation,y,x) &amp; The derivative of the implicit function,
-    given as <m>dy/dx</m>
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Riemann Sums and Numerical Integration</em>
-    (requires "Student[Calculus1]" package)}
-  </p>
-  <p>
-    \hline ApproximateInt(f(x),x=a..b) &amp; Approximate the definite integral of <m>f(x)</m> from <m>x=a</m> to <m>x=b</m>
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Additional ApproximateInt Parameters</em>
-    (Include these after necessary parameters)}
-  </p>
-  <p>
-    method=left &amp; Choose left rectangles for approximation
-  </p>
-  <p>
-    method=right &amp; Choose right rectangles for approximation
-  </p>
-  <p>
-    method=lower &amp; Choose lower bound rectangles for approximation
-  </p>
-  <p>
-    method=upper &amp; Choose upper bound rectangles for approximation
-  </p>
-  <p>
-    method=midpoint &amp; Choose midpoint rectangles for approximation
-  </p>
-  <p>
-    method=trapezoid &amp; Choose trapezoid rule approximation
-  </p>
-  <p>
-    method=simpson &amp; Choose Simpson's rule approximation
-  </p>
-  <p>
-    output=sum &amp; Output summation notation for given approximation method
-  </p>
-  <p>
-    output=value &amp; Output exact value of approximation
-  </p>
-  <p>
-    output=plot &amp; Output graph of integrand function and approximation
-  </p>
-  <p>
-    output=animation &amp; Output animation of approximation as <m>n</m> increases
-  </p>
-  <p>
-    partition=n &amp; Use <m>n</m> equally spaced subintervals for approximation
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Sequences and Series</em>}
-  </p>
-  <p>
-    \hline expression $ var=a..b &amp; Display the sequence of the expression from var = <m>a</m> up to var = <m>b</m>
-  </p>
-  <p>
-    seq(expression,var=a..b) &amp; Display the sequence of the expression from var = <m>a</m> up to var = <m>b</m>
-  </p>
-  <p>
-    Sum(expression,var=a..b) &amp; Display the sum for the expression from var = <m>a</m> up to var = <m>b</m>)
-  </p>
-  <p>
-    sum(expression,var=a..b) &amp; Give the value of the sum of the expression from var = <m>a</m> up to var = <m>b</m>
-  </p>
-  <p>
-    taylor(f(x),x=a,n) &amp; Give the Taylor series expansion of <m>f(x)</m> about <m>x=a</m>,
-    including terms up to power <m>n-1</m>
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Integrals</em>}
-  </p>
-  <p>
-    \hline Int(f(x),x) &amp; The indefinite integral, display "inert" form
-  </p>
-  <p>
-    int(f(x),x) &amp; The indefinite integral, evaluated
-  </p>
-  <p>
-    Int(f(x),x=a..b) &amp; The definite integral over the specified interval,
-    display "inert" form
-  </p>
-  <p>
-    int(f(x),x=a..b) &amp; The definite integral over the specified interval,
-    evaluated
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Differential Equations</em>}
-  </p>
-  <p>
-    \hline dsolve(DE, y(x)) &amp; Solves the given differential equation for <m>y(x)</m>
-  </p>
-  <p>
-    dsolve([DE, ICs], y(x)) &amp; Solves the given differential equation with initial conditions for <m>y(x)</m>
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Direction Fields</em> (Requires
-    <q>DEtools</q>
-    package)}
-  </p>
-  <p>
-    \hline DEplot(DE,y(x),x=a..b,y=a..b) &amp; Plot the direction field for the differential equation <m>dy/dx</m>
-  </p>
-  <p>
-    DEplot(DE,y(x),x=a..b,y=a..b,[ICs]) &amp; Plot the direction field for the differential equation <m>dy/dx</m> with initial conditions
-  </p>
-  <p>
-    &amp;
-  </p>
-  <p>
-    \multicolumn{2}{l}{<em>Additional DEplot Parameters</em>
-    (Include these after necessary parameters)}
-  </p>
-  <p>
-    arrows=line &amp; Use lines for the direction field, rather than arrows
-  </p>
-  <p>
-    colour=black &amp; Change arrow colour
-  </p>
-  <p>
-    linecolour=blue &amp; Change solution curve colour
-  </p>
-  <p>
-    \end{longtable}\end{fullwidth}
-  </p>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Keyboard Shortcuts</cell>
+    </row>
+    <row>
+      <cell>Ctrl+J, Ctrl+K</cell>
+      <cell><p>New execution group (after or before current line)</p></cell>
+    </row>
+    <row>
+      <cell>Ctrl+Shift+J, Ctrl+Shift+K</cell>
+      <cell><p>New paragraph (after or before current line)</p></cell>
+    </row>
+    <row>
+      <cell>Ctrl+T</cell>
+      <cell><p>Convert line to Paragraph</p></cell>
+    </row>
+    <row>
+      <cell>Ctrl+M</cell>
+      <cell><p>Convert line to Maple input</p></cell>
+    </row>
+    <row>
+      <cell>Ctrl+.</cell>
+      <cell><p>Indent section</p></cell>
+    </row>
+    <row>
+      <cell>Ctrl+,</cell>
+      <cell><p>Unindent section</p></cell>
+    </row>
+    <row>
+      <cell>Ctrl+Delete</cell>
+      <cell><p>Delete section</p></cell>
+    </row>
+    <row>
+      <cell>F4</cell>
+      <cell><p>Merge consecutive execution groups</p></cell>
+    </row>
+    <row>
+      <cell>F5</cell>
+      <cell><p>Toggle between Text, Nonexecutable Math, and Math types</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Common Expressions</cell>
+    </row>
+    <row>
+      <cell>exp(x)</cell>
+      <cell><p>The natural exponential function</p></cell>
+    </row>
+    <row>
+      <cell>sqrt(x)</cell>
+      <cell><p>The square root function</p></cell>
+    </row>
+    <row>
+      <cell>surd(x,n)</cell>
+      <cell><p>The primitive <m>n</m>th root, <m>\sqrt[n]{x}</m></p></cell>
+    </row>
+    <row>
+      <cell>abs()</cell>
+      <cell><p>The absolute value function</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Manipulating Expressions</cell>
+    </row>
+    <row>
+      <cell>name := expression</cell>
+      <cell><p>Assignment operator</p></cell>
+    </row>
+    <row>
+      <cell>subs(x=a, expression)</cell>
+      <cell><p>Evaluate an expression at <m>x = a</m></p></cell>
+    </row>
+    <row>
+      <cell>evalf(expression)</cell>
+      <cell><p>Evaluate the given expression as a  decimal</p></cell>
+    </row>
+    <row>
+      <cell>factor(expression)</cell>
+      <cell><p>Factor the given expression</p></cell>
+    </row>
+    <row>
+      <cell>simplify(expression)</cell>
+      <cell><p>Simplify the given expression</p></cell>
+    </row>
+    <row>
+      <cell>expand(expression)</cell>
+      <cell><p>Expand the given expression</p></cell>
+    </row>
+    <row>
+      <cell>collect(expression,var)</cell>
+      <cell><p>Collect terms of the expression by the specified variable</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Solving Equations</cell>
+    </row>
+    <row>
+      <cell>solve(equation,var)</cell>
+      <cell><p>Solves the given equation for the specified variable</p></cell>
+    </row>
+    <row>
+      <cell>fsolve(equation,var)</cell>
+      <cell><p>Solves the given equation for the specified variable (as a decimal)</p></cell>
+    </row>
+    <row>
+      <cell>fsolve(equation,var=a..b)</cell>
+      <cell><p>Solves the given equation for the specified variable (as a decimal) on the interval <m>[a,b]</m></p></cell>
+    </row>
+    <row>
+      <cell>solve( {eqn1,eqn2},{var1,var2})</cell>
+      <cell><p>Solves a system of equations for all specified variables</p></cell>
+    </row>
+    <row>
+      <cell>fsolve({eqn1,eqn2},{var1,var2})</cell>
+      <cell><p>Solves a system of equations for all specified variables (as a decimal)</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Defining Functions</cell>
+    </row>
+    <row>
+      <cell>name(var) := expression</cell>
+      <cell><p>Assigns a function of the specified variable</p></cell>
+    </row>
+    <row>
+      <cell>name := unapply(expression,var)</cell>
+      <cell><p>Convert an expression to a function of the specified variable</p></cell>
+    </row>
+    <row>
+      <cell><p>name(var) := piecewise(condition,expr, ..., condition,expr)</p></cell>
+      <cell><p>Create a piecewise function of the specified variable where each condition is an interval</p></cell>
+    </row>
+    <row>
+      <cell></cell>
+      <cell><p></p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Plotting Functions</cell>
+    </row>
+    <row>
+      <cell>plot(f(x),x=a..b)</cell>
+      <cell><p>Plot the given function, <m>f(x)</m>, over the interval <m>[a,b]</m></p></cell>
+    </row>
+    <row>
+      <cell>plot([f(x),g(x)],x=a..b)</cell>
+      <cell><p>Plot two functions, <m>f(x)</m> and <m>g(x)</m>, over the interval <m>[a,b]</m></p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Additional Plot Parameters (Include these after necessary parameters)</cell>
+    </row>
+    <row>
+      <cell>y=c..d</cell>
+      <cell><p>Only plot the range <m>c \leq y \leq d</m></p></cell>
+    </row>
+    <row>
+      <cell>discont=true</cell>
+      <cell><p>Includes discontinuities in a plot</p></cell>
+    </row>
+    <row>
+      <cell>colour=blue</cell>
+      <cell><p>Specify the colour for a graph (black, blue, red, etc.)</p></cell>
+    </row>
+    <row>
+      <cell>linestyle=dotted</cell>
+      <cell><p>Specify the style of the line (dash, dot, etc.)</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Limits</cell>
+    </row>
+    <row>
+      <cell>limit(expression,var=a)</cell>
+      <cell><p>Find the limit of the expression as var approaches <m>a</m></p></cell>
+    </row>
+    <row>
+      <cell>limit(expression,var=a,right)</cell>
+      <cell><p>Find the limit of the expression as var approaches <m>a</m> from the right</p></cell>
+    </row>
+    <row>
+      <cell>limit(expression,var=a,left)</cell>
+      <cell><p>Find the limit of the expression as var approaches <m>a</m> from the left</p></cell>
+    </row>
+    <row>
+      <cell>limit(expression,var=infinity)</cell>
+      <cell><p>Find the limit of the expression as var approaches infinity</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Derivatives</cell>
+    </row>
+    <row>
+      <cell>diff(expression,var)</cell>
+      <cell><p>The derivative of the given expression with respect to variable</p></cell>
+    </row>
+    <row>
+      <cell>diff(expression,var,var)</cell>
+      <cell><p>The second derivative of the given expression with respect to variable</p></cell>
+    </row>
+    <row>
+      <cell>diff(expression,var$2)</cell>
+      <cell><p>The second derivative of the given expression with respect to variable</p></cell>
+    </row>
+    <row>
+      <cell>f'(var)</cell>
+      <cell><p>The derivative of the function <m>f</m> with respect to variable</p></cell>
+    </row>
+    <row>
+      <cell>f^(n)(var)</cell>
+      <cell><p>The <m>n</m>th derivative of the function <m>f</m> with respect to variable</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Implicit Functions (requires "plots" package for plotting)</cell>
+    </row>
+    <row>
+      <cell>implicitplot(equation,x=a..b,y=c..d)</cell>
+      <cell><p>Plot the implicit function over the specified region</p></cell>
+    </row>
+    <row>
+      <cell>implicitdiff(equation,y,x)</cell>
+      <cell><p>The derivative of the implicit function, given as <m>dy/dx</m></p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Riemann Sums and Numerical Integration (requires "Student[Calculus1]" package)</cell>
+    </row>
+    <row>
+      <cell>ApproximateInt(f(x),x=a..b)</cell>
+      <cell><p>Approximate the definite integral of <m>f(x)</m> from <m>x=a</m> to <m>x=b</m></p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Additional ApproximateInt Parameters (Include these after necessary parameters)</cell>
+    </row>
+    <row>
+      <cell>method=left</cell>
+      <cell><p>Choose left rectangles for approximation</p></cell>
+    </row>
+    <row>
+      <cell>method=right</cell>
+      <cell><p>Choose right rectangles for approximation</p></cell>
+    </row>
+    <row>
+      <cell>method=lower</cell>
+      <cell><p>Choose lower bound rectangles for approximation</p></cell>
+    </row>
+    <row>
+      <cell>method=upper</cell>
+      <cell><p>Choose upper bound rectangles for approximation</p></cell>
+    </row>
+    <row>
+      <cell>method=midpoint</cell>
+      <cell><p>Choose midpoint rectangles for approximation</p></cell>
+    </row>
+    <row>
+      <cell>method=trapezoid</cell>
+      <cell><p>Choose trapezoid rule approximation</p></cell>
+    </row>
+    <row>
+      <cell>method=simpson</cell>
+      <cell><p>Choose Simpson's rule approximation</p></cell>
+    </row>
+    <row>
+      <cell>output=sum</cell>
+      <cell><p>Output summation notation for given approximation method</p></cell>
+    </row>
+    <row>
+      <cell>output=value</cell>
+      <cell><p>Output exact value of approximation</p></cell>
+    </row>
+    <row>
+      <cell>output=plot</cell>
+      <cell><p>Output graph of integrand function and approximation</p></cell>
+    </row>
+    <row>
+      <cell>output=animation</cell>
+      <cell><p>Output animation of approximation as <m>n</m> increases</p></cell>
+    </row>
+    <row>
+      <cell>partition=n</cell>
+      <cell><p>Use <m>n</m> equally spaced subintervals for approximation</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Sequences and Series</cell>
+    </row>
+    <row>
+      <cell>expression $ var=a..b</cell>
+      <cell><p>Display the sequence of the expression from var = <m>a</m> up to var = <m>b</m></p></cell>
+    </row>
+    <row>
+      <cell>seq(expression,var=a..b)</cell>
+      <cell><p>Display the sequence of the expression from var = <m>a</m> up to var = <m>b</m></p></cell>
+    </row>
+    <row>
+      <cell>Sum(expression,var=a..b)</cell>
+      <cell><p>Display the sum for the expression from var = <m>a</m> up to var = <m>b</m></p></cell>
+    </row>
+    <row>
+      <cell>sum(expression,var=a..b)</cell>
+      <cell><p>Give the value of the sum of the expression from var = <m>a</m> up to var = <m>b</m></p></cell>
+    </row>
+    <row>
+      <cell>taylor(f(x),x=a,n)</cell>
+      <cell><p>Give the Taylor series expansion of <m>f(x)</m> about <m>x=a</m>, including terms up to power <m>n-1</m></p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Integrals</cell>
+    </row>
+    <row>
+      <cell>Int(f(x),x)</cell>
+      <cell><p>The indefinite integral, display "inert" form</p></cell>
+    </row>
+    <row>
+      <cell>int(f(x),x)</cell>
+      <cell><p>The indefinite integral, evaluated</p></cell>
+    </row>
+    <row>
+      <cell>Int(f(x),x=a..b)</cell>
+      <cell><p>The definite integral over the specified interval, display "inert" form</p></cell>
+    </row>
+    <row>
+      <cell>int(f(x),x=a..b)</cell>
+      <cell><p>The definite integral over the specified interval, evaluated</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Differential Equations</cell>
+    </row>
+    <row>
+      <cell>dsolve(DE, y(x))</cell>
+      <cell><p>Solves the given differential equation for <m>y(x)</m></p></cell>
+    </row>
+    <row>
+      <cell>dsolve([DE, ICs], y(x))</cell>
+      <cell><p>Solves the given differential equation with initial conditions for <m>y(x)</m></p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Direction Fields (Requires DEtools package)</cell>
+    </row>
+    <row>
+      <cell>DEplot(DE,y(x),x=a..b,y=a..b)</cell>
+      <cell><p>Plot the direction field for the differential equation <m>dy/dx</m></p></cell>
+    </row>
+    <row>
+      <cell>DEplot(DE,y(x),x=a..b,y=a..b,[ICs])</cell>
+      <cell><p>Plot the direction field for the differential equation <m>dy/dx</m> with initial conditions</p></cell>
+    </row>
+  </tabular>
+  <tabular>
+    <col width="33%"/>
+    <col width="67%"/>
+    <row header="yes" bottom="medium">
+      <cell colspan="2">Additional DEplot Parameters (Include these after necessary parameters)</cell>
+    </row>
+    <row>
+      <cell>arrows=line</cell>
+      <cell><p>Use lines for the direction field, rather than arrows</p></cell>
+    </row>
+    <row>
+      <cell>colour=black</cell>
+      <cell><p>Change arrow colour</p></cell>
+    </row>
+    <row>
+      <cell>linecolour=blue</cell>
+      <cell><p>Change solution curve colour</p></cell>
+    </row>
+  </tabular>
 </appendix>
