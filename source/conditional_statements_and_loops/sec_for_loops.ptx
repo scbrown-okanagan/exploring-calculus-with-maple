@@ -1,248 +1,84 @@
 <section xml:id="sec_for_loops">
   <title><c>for</c> Loops</title>
-  <introduction>
+  <idx><h>loops</h><h>for</h></idx>
     <p>
       <sq>For</sq> loops allow us to carry out a computation repeatedly for an entire range of values.
-      We can also combine these loops with conditional statements like <sq>if</sq> and <sq>else</sq>.
+      We can also combine these loops with conditional statements like <sq>if</sq> and <sq>else</sq>, as we will see in <xref ref="sec_for_loops_with_conditionals"/>.
       To use a <sq>for</sq> loop, we are required to type
     </p>
+    <console prompt="> ">
+      <input>for i from a to b do
+    ...
+    ...
+  end do
+      </input>
+    </console>
     <p>
-          <idx><h>loops</h><h>for</h></idx>
+      where <m>i</m> is a <q>dummy variable</q>, referred to as an index.
+      On the first iteration of the loop, the index begins at <m>a</m>.
+      At the end of each iteration, the index is incremented by one.
+      In the last iteration, the index will be equal to <m>b</m> and the loop will terminate.
+      This means that the lines of code within the loop will be executed a set number of times.
     </p>
-    <p>
-       <c>for i from a to b do</c>
-    </p>
-    <p>
-      <m>\cdots</m>
-    </p>
-    <p>
-      <m>\cdots</m>
-    </p>
-    <p>
-       <c>end do</c>
-    </p>
-    <p>
-      where <m>i</m> is a
-      <q>dummy variable</q>, referred to as an index.
-      On the first iteration of the loop,
-      the index begins at <m>a</m>.
-      At the end of each iteration,
-      the index is incremented by one.
-      In the last iteration, the index will be equal to <m>b</m>.
-    </p>
-  </introduction>
-  <subsection>
+  <example>
     <title>Outputting the First <m>n</m> Derivatives</title>
+    <idx><h>mathematical functions</h><h>sine</h></idx>
     <p>
       We will use a basic <sq>for</sq> loop to output the first <m>10</m> derivatives of the function <m>f(x)=\sin(2x)</m>.
-      To do this, we will use the <c>diff()</c> command.
-      The <sq>for</sq> loop will output the <m>k</m><sup>th</sup> derivative,
-      starting from <m>k=1</m> and ending at <m>k=10</m>.
+      To do this, we will use the <c>diff()</c> command within the loop.
+      The <sq>for</sq> loop will output the <m>k</m>th derivative, starting from <m>k=1</m> and ending at <m>k=10</m>.
     </p>
     <aside>
       <p>
-        Recall that <c>diff(f(x),
-        x$k)</c> is the <m>k</m><sup>th</sup> derivative of <m>f</m> with respect to <m>x</m>.
-        Use of the <c>diff()</c> command is explained in <xref ref="chp_derivative">Tutorial</xref>,
-        <xref ref="chp_derivative">page</xref>.
+        Recall that <c>diff(f(x), x$k)</c> is the <m>k</m>th derivative of <m>f</m> with respect to <m>x</m>.
+        Use of the <c>diff()</c> command is explained in <xref ref="chp_derivative" text="title"/>.
+        <idx><h>derivative</h><h>diff!higher derivatives</h></idx>
       </p>
     </aside>
+    <console prompt="> ">
+      <input>f(x) := sin(2*x);</input>
+    </console>
     <p>
-          <idx><h>mathematical functions</h><h>sine</h></idx>
-          <idx><h>derivative</h><h>diff!higher derivatives</h></idx>
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput}
-    </p>
-<pre>
-> f(x) := sin(2*x);
-</pre>
-    <p>
-      \end{mapleinput} \relax \begin{maplelatex} {f := proc (x) options operator,
-      arrow; sin(2*x) end proc}{
       <me>
         \displaystyle f\, := \,x\mapsto \sin \left( 2\,x \right)
       </me>
     </p>
+    <console prompt="> ">
+      <input>for k from 1 to 10 do
+    diff(f(x), x$k)
+  end do</input>
+    </console>
     <p>
-      } \end{maplelatex} \begin{mapleinput}
-    </p>
-<pre>
-> for k from 1 to 10 do
-diff(f(x), x$k)
-end do
-</pre>
-    <p>
-      \end{mapleinput}
-    </p>
-    <p>
-      \relax \begin{maplelatex} {2*cos(2*x)}{
       <me>
         \displaystyle 2\,\cos \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {-4*sin(2*x)}{
       <me>
         \displaystyle -4\,\sin \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {-8*cos(2*x)}{
       <me>
         \displaystyle -8\,\cos \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {16*sin(2*x)}{
       <me>
         \displaystyle 16\,\sin \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {32*cos(2*x)}{
       <me>
         \displaystyle 32\,\cos \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {-64*sin(2*x)}{
       <me>
         \displaystyle -64\,\sin \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {-128*cos(2*x)}{
       <me>
         \displaystyle -128\,\cos \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {256*sin(2*x)}{
       <me>
         \displaystyle 256\,\sin \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {512*cos(2*x)}{
       <me>
         \displaystyle 512\,\cos \left( 2\,x \right)
       </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {-1024*sin(2*x)}{
       <me>
         \displaystyle -1024\,\sin \left( 2\,x \right)
       </me>
     </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </subsection>
-  <subsection>
-    <title>Outputting the Primes up to <m>50</m></title>
-    <p>
-          <idx><h>loops</h><h>for</h></idx>
-          <idx><h>isprime</h></idx>
-    </p>
-    <p>
-      Let's say we want to find all of the prime integers from <m>1</m> to <m>50</m>.
-      If we enter \begin{maplegroup} \begin{mapleinput}
-    </p>
-<pre>
-> for i from 1 to 50 do
-print(i);
-end do
-</pre>
-    <p>
-      \end{mapleinput} \end{maplegroup}
-    </p>
-    <aside>
-      <p>
-        You can use Shift+Enter to create multiple lines within the same Maple input.
-      </p>
-    </aside>
-    <p>
-      into Maple, it will output all the integers from <m>1</m> to <m>50</m>,
-      rather than only the prime integers.
-      We include an <sq>if</sq> statement that makes use of the <c>isprime()</c> command to only output primes.
-    </p>
-    <p>
-      \begin{maplegroup} \begin{mapleinput}
-    </p>
-<pre>
-> for i from 1 to 50 do
-if isprime(i) then
-print(i);
-end if
-end do
-</pre>
-    <p>
-      \end{mapleinput} \relax
-    </p>
-    <aside>
-      <p>
-        Since we do not want Maple to do anything for a composite integer
-        (an integer that is not prime),
-        we can omit the 'else' component of this 'if' statement.
-      </p>
-    </aside>
-    <p>
-      \begin{maplelatex} {2}{
-      <me>
-        \displaystyle 2
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {3}{
-      <me>
-        \displaystyle 3
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {5}{
-      <me>
-        \displaystyle 5
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {7}{
-      <me>
-        \displaystyle 7
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {11}{
-      <me>
-        \displaystyle 11
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {13}{
-      <me>
-        \displaystyle 13
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {17}{
-      <me>
-        \displaystyle 17
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \relax \begin{maplelatex} {19}{
-      <me>
-        \displaystyle 19
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \begin{maplelatex} {...}{
-      <me>
-        \vdots
-      </me>
-    </p>
-    <p>
-      } \end{maplelatex} \end{maplegroup}
-    </p>
-  </subsection>
+  </example>
 </section>

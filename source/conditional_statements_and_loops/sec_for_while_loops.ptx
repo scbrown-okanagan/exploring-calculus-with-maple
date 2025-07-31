@@ -1,107 +1,148 @@
 <section xml:id="sec_for_while_loops">
   <title><c>for</c>/<c>while</c> Loops</title>
-  <p>
-        <idx><h>loops</h><h>while</h></idx>
-  </p>
-  <p>
-    Adding a <sq>while</sq> is a short way of adding an inherent <sq>if</sq> for every value of the <sq>for</sq> loop.
-    In the next example,
-    we add <c><sq>while i\symbol{94}2 &lt; 100</sq></c> to check that the square of the index <m>i</m> is less than <m>100</m> every time it increases in value.
-    The moment that this condition is no longer met, the loop terminates.
-  </p>
-  <p>
-    Let's say we want to add the first few squares together:
-    <m>1^2+2^2+3^2+\cdots</m> until <m>i^2</m> becomes greater than or equal to <m>100</m>.
-    Instead of adding an <sq>if</sq> statement every time the loop increases,
-    we can do the same thing with a <sq>while</sq>:
-  </p>
-  <aside>
+    <idx><h>loops</h><h>for</h></idx>
+    <idx><h>loops</h><h>while</h></idx>
     <p>
-      We assign an initial total of <m>0</m> so that we can add a value to it for each iteration of the loop.
-      <c>total := total + i</c>\string^<c>2</c> adds <m>i^2</m> to the current value of <c>total</c> before reassigning the new value.
+      <sq>For</sq> loops allow us to carry out a computation repeatedly for an entire range of values.
+      We can also combine these loops with conditional statements like <sq>if</sq> and <sq>else</sq>, as we will see in <xref ref="sec_for_loops_with_conditionals"/>.
+      To use a <sq>for</sq> loop, we are required to type
     </p>
-  </aside>
-  <p>
-    \begin{maplegroup} \begin{mapleinput}
-  </p>
-<pre>
-> total := 0:
-> for i from 1 while i^2 &lt; 100 do
-total := total + i^2
-end do
-</pre>
-  <p>
-    \end{mapleinput} \relax \begin{maplelatex} {total := 1}{
-    <me>
-      \displaystyle \textit{total}\, := \,1
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 5}{
-    <me>
-      \displaystyle \textit{total}\, := \,5
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 14}{
-    <me>
-      \displaystyle \textit{total}\, := \,14
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 30}{
-    <me>
-      \displaystyle \textit{total}\, := \,30
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 55}{
-    <me>
-      \displaystyle \textit{total}\, := \,55
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 91}{
-    <me>
-      \displaystyle \textit{total}\, := \,91
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 140}{
-    <me>
-      \displaystyle \textit{total}\, := \,140
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 204}{
-    <me>
-      \displaystyle \textit{total}\, := \,204
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {total := 285}{
-    <me>
-      \displaystyle \textit{total}\, := \,285
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup} \begin{Maple Normal}{ \begin{Maple Normal}{ {
-    <me>
-      \displaystyle
-    </me>
-  </p>
-  <p>
-    } }\end{Maple Normal} }\end{Maple Normal}
-  </p>
-  <p>
-        <idx><h>loops</h><h>while</h></idx>
-  </p>
-  <aside>
+    <console prompt="> ">
+      <input>for i from a to b do
+    ...
+    ...
+  end do
+      </input>
+    </console>
     <p>
-      This loop has calculated the value
+      where <m>i</m> is a <q>dummy variable</q>, referred to as an index.
+      On the first iteration of the loop, the index begins at <m>a</m>.
+      At the end of each iteration, the index is incremented by one.
+      In the last iteration, the index will be equal to <m>b</m> and the loop will terminate.
+      This means that the lines of code within the loop will be executed a set number of times.
+    </p>
+  <example>
+    <title>Outputting the First <m>n</m> Derivatives</title>
+    <idx><h>mathematical functions</h><h>sine</h></idx>
+    <p>
+      We will use a basic <sq>for</sq> loop to output the first <m>10</m> derivatives of the function <m>f(x)=\sin(2x)</m>.
+      To do this, we will use the <c>diff()</c> command within the loop.
+      The <sq>for</sq> loop will output the <m>k</m>th derivative, starting from <m>k=1</m> and ending at <m>k=10</m>.
+    </p>
+    <aside>
+      <p>
+        Recall that <c>diff(f(x), x$k)</c> is the <m>k</m>th derivative of <m>f</m> with respect to <m>x</m>.
+        Use of the <c>diff()</c> command is explained in <xref ref="chp_derivative" text="title"/>.
+        <idx><h>derivative</h><h>diff!higher derivatives</h></idx>
+      </p>
+    </aside>
+    <console prompt="> ">
+      <input>f(x) := sin(2*x);</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle f\, := \,x\mapsto \sin \left( 2\,x \right)
+      </me>
+    </p>
+    <console prompt="> ">
+      <input>for k from 1 to 10 do
+    diff(f(x), x$k)
+  end do</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle 2\,\cos \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle -4\,\sin \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle -8\,\cos \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle 16\,\sin \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle 32\,\cos \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle -64\,\sin \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle -128\,\cos \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle 256\,\sin \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle 512\,\cos \left( 2\,x \right)
+      </me>
+      <me>
+        \displaystyle -1024\,\sin \left( 2\,x \right)
+      </me>
+    </p>
+  </example>
+  <p>
+    Adding a <c>while</c> is a short way of adding a condition to the <c>for</c> loop. This additional condition may terminate the loop early once its condition is no longer met.
+  </p>
+  <example>
+    <title>Summing Squares Using a While Loop</title>
+    <p>
+      In this example, let's say we want to add the first few squares together:
+      <me>
+        1^2+2^2+3^2+\cdots+i^2
+      </me>
+      until <m>i^2</m> becomes greater than or equal to <m>100</m>. We can make this a <c>while</c> condition on the loop: <m>i^2 &lt; 100</m>.
+      This condition will be checked for every iteration on the loop and the moment that this condition is no longer met, the loop terminates.
+    </p>
+    <p>
+      The loop itself will increment <m>i</m> for each iteration. We will need to assign an initial total of zero and add the value of <m>i^2</m> 
+      to it each iteration, reassigning the updated value.
+    </p>
+    <console prompt="> ">
+      <input>total := 0:</input>
+      <input>for i from 1 while i^2 &lt; 100 do
+    total := total + i^2
+  end do</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle \textit{total}\, := \,1
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,5
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,14
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,30
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,55
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,91
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,140
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,204
+      </me>
+      <me>
+        \displaystyle \textit{total}\, := \,285
+      </me>
+      <me>
+        \displaystyle
+      </me>
+    </p>
+    <p>
+      The updated value of the total is displayed at the end of each iteration and the overall sum is
       <me>
         1^2+2^2+3^2+4^2+\cdots+7^2+8^2+9^2=285
       </me>.
+      This example could easily be accomplished using a simple <c>sum()</c> command, although it is useful to understand how to use a <c>for</c>/<c>while</c> loop.
     </p>
-  </aside>
+  </example>
 </section>

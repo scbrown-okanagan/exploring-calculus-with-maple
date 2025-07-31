@@ -1,94 +1,116 @@
 <section xml:id="sec_for_loops_with_conditionals">
-  <title><c>for</c> Loops with Conditionals</title>
+  <title>Combining Loops and Conditionals</title>
+  <idx><h>loops</h><h>for</h></idx>
+  <idx><h>conditional statements</h><h>if/else statements</h></idx>
+  <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
   <p>
     We now combine all of the various conditional statements and loops together into one example.
-    Let's assume we have a function <m>g(x)</m> and want to test whether this function is (i) increasing (<m>g'(x) > 0</m>), (ii) decreasing (<m>g'(x) \lt 0</m>),
-    or (iii) neither (critical point (<m>g'(x) = 0</m>)).
   </p>
-  <p>
-    The loop we have constructed behaves according to the following steps:
-  </p>
-  <p>
-        <idx><h>loops</h><h>for</h></idx>
-    <ol>
-      <li>
-        <p>
-          Begin with the value <m>j=-2</m>.
-          <aside>
-            <p>
-              Note that we can use any letter for the loop index,
-              but the most common choices are <m>i</m>,
-              <m>j</m>, <m>k</m>, and <m>l</m>.
-            </p>
-          </aside>
-        </p>
-      </li>
-      <li>
-        <p>
-          If <m>g'(j)>0</m>, then <m>g</m> is increasing at <m>x=j</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          If <m>g'(j)\lt 0</m>, then <m>g</m> is decreasing at <m>x=j</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          If <m>g'(j)=0</m>,
-          then <m>g</m> is neither increasing nor decreasing at <m>x=j</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          Update <m>j</m> to the next value in the list and repeat steps <m>2</m> through <m>4</m>.
-        </p>
-      </li>
-    </ol>
-  </p>
-  <p>
-    \begin{maplegroup} \begin{mapleinput}
-  </p>
-<pre>
-> g(x) := x^4 - 4*x^3 + 3*x^2:
-> for j in [-2, 0, 4] do
-if subs(x = j, diff(g(x), x)) > 0 then
-print(j, "increasing")
-elif subs(x = j, diff(g(x), x)) &lt; 0 then
-print(j, "decreasing")
-else print(j, "neither")
-end if
-end do
-</pre>
-  <p>
-    \end{mapleinput} \relax \begin{maplelatex} {-2, "decreasing"}{
-    <me>
-      \displaystyle -2,\,\text{ ``decreasing'' }
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {0, "neither"}{
-    <me>
-      \displaystyle 0,\,\text{ ``neither'' }
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \relax \begin{maplelatex} {4, "increasing"}{
-    <me>
-      \displaystyle 4,\,\text{ ``increasing'' }
-    </me>
-  </p>
-  <p>
-    } \end{maplelatex} \end{maplegroup}
-  </p>
-  <p>
-        <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
-        <idx><h>loops</h><h>for</h></idx>
-  </p>
-  <aside>
+  <example>
+    <title>Outputting the Primes up to <m>50</m></title>
     <p>
-      From the output, we an see that <m>g'(-2) \lt 0</m>,
-      <m>g'(0) = 0</m>, and <m>g'(4) > 0</m>.
+      In this example, we will create a small loop through the integers from 1 and to 50, only outputting the integer if it is prime.
     </p>
-  </aside>
+    <p>
+      Creating a loop that prints every integer from 1 to 50 is fairly simple:
+    </p>
+    <aside>
+      <p>
+        You can use Shift+Enter to create multiple lines within the same Maple input.
+      </p>
+    </aside>
+    <console prompt="> ">
+      <input>for i from 1 to 50 do
+      print(i);
+    end do</input>
+    </console>
+    <p>
+      We only need to include an <sq>if</sq> statement inside the loop that runs the <c>print()</c> command when <m>i</m> is prime.
+      We can make use of the <c>isprime()</c> command for this <c>if</c> statment and we do not require an <c>else</c>.
+      <idx><h>isprime</h></idx>
+    </p>
+    <console prompt="> ">
+      <input>for i from 1 to 50 do
+    if isprime(i) then
+      print(i);
+    end if
+  end do</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle 2
+      </me>
+      <me>
+        \displaystyle 3
+      </me>
+      <me>
+        \displaystyle 5
+      </me>
+      <me>
+        \displaystyle 7
+      </me>
+      <me>
+        \displaystyle 11
+      </me>
+      <me>
+        \displaystyle 13
+      </me>
+      <me>
+        \displaystyle 17
+      </me>
+      <me>
+        \displaystyle 19
+      </me>
+      <me>
+        \vdots
+      </me>
+    </p>
+  </example>
+  <example>
+    <p>
+      In this example, we will test to see whether a function <m>g(x)=x^4-4x^3+3x^2</m> is (i) increasing (<m>g'(x) > 0</m>), (ii) decreasing (<m>g'(x) \lt 0</m>),
+      or (iii) neither (critical point (<m>g'(x) = 0</m>)) at a variety of <m>x</m>-values.
+    </p>
+    <aside>
+      <p>
+        Note that we can use any letter for the loop index, but the most common choices are <m>i</m>, <m>j</m>, <m>k</m>, and <m>l</m>.
+      </p>
+    </aside>
+    <p>
+      In this case, the for loop is given an ordered list of values for which to apply the first derivative test. The test performs its iterations 
+      and conditionals as follows:
+      <ol>
+        <li>Begin with the value <m>j=-2</m>.</li>
+        <li>If <m>g'(j)>0</m>, then <m>g</m> is increasing at <m>x=j</m>.</li>
+        <li>If <m>g'(j)\lt 0</m>, then <m>g</m> is decreasing at <m>x=j</m>.</li>
+        <li>If <m>g'(j)=0</m>, then <m>g</m> is neither increasing nor decreasing at <m>x=j</m>.</li>
+        <li>Update <m>j</m> to the next value in the list and repeat steps <m>2</m> through <m>4</m>.</li>
+      </ol>
+      Within each iteration, the value of <m>x</m> is output, along with whether <m>g(x)</m> is increasing, decreasing, or neither at that value.
+    </p>
+    <console prompt="> ">
+      <input>g(x) := x^4 - 4*x^3 + 3*x^2:</input>
+      <input>for j in [-2, 0, 4] do
+    if subs(x = j, diff(g(x), x)) > 0 then
+      print(j, "increasing")
+    elif subs(x = j, diff(g(x), x)) &lt; 0 then
+      print(j, "decreasing")
+    else 
+      print(j, "neither")
+    end if
+  end do</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle -2,\,\text{ "decreasing" }
+      </me>
+      <me>
+        \displaystyle 0,\,\text{ "neither" }
+      </me>
+      <me>
+        \displaystyle 4,\,\text{ "increasing" }
+      </me>
+        From the output, we an see that <m>g'(-2) \lt 0</m>, <m>g'(0) = 0</m>, and <m>g'(4) \gt 0</m>.
+    </p>
+  </example>
 </section>

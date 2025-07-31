@@ -1,63 +1,135 @@
 <section xml:id="sec_if_elif_else_statements">
-  <title><c>if</c>/<c>elif</c>/<c>else</c> Statements</title>
-  <introduction>
+  <title><c>if</c>/<c>else</c> and <c>elif</c> Statements</title>
+  <idx><h>conditional statements</h><h>if/else statements</h></idx>
+  <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
     <p>
-          <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
+      <sq>If</sq> and <sq>else</sq> statements allow us to test various conditions.
+      The result then changes based on whether the given condition is <em>true</em> or <em>false</em>.
     </p>
     <p>
-      The <c>elif</c> (else if) command allows us to add more than one condition to our statement.
-      For example,
-      if we want to test whether a particular number is (i) positive, (ii) negative,
-      or (iii) zero,
-      and wish to have different outputs based on these
-      <em>three</em> possibilities,
-      we can do so with a combination of <c>if</c>,
-      <c>else</c>,
-      and <c>elif</c>.
-    </p>
-  </introduction>
-  <subsection>
-    <title>Using Conditional Statements to Interpret the First Derivative</title>
-    <p>
-      In this example,
-      we will use one of these statements to illustrate the first derivative test in calculus.
-      We would like to answer the following question:
-      for a particular value <m>x=a</m>,
-      is the function <m>g(x)</m> (i) increasing
-      (positive derivative),
-      (ii) decreasing
-      (negative derivative),
-      or (iii) neither increasing nor decreasing (zero derivative)?
+      For example, let's say that someone makes the statement <em>"If it's sunny tomorrow, then I will go for a bike ride."</em>
+      If it is, in fact, sunny tomorrow, then that person <em>will</em> go for a bike ride.
+      In other words, since the "sunny tomorrow" condition becomes TRUE, then the following implication "go for a bike ride" will happen.
     </p>
     <p>
-      \begin{maplegroup} \begin{mapleinput}
-    </p>
-<pre>
-> g(x) := x^4 - 4*x^3 + 3*x^2:
-> a := 0:
-> if subs(x = a, diff(g(x), x)) > 0 then
-print("increasing")
-elif subs(x = a, diff(g(x), x)) &lt; 0 then
-print("decreasing")
-else print("neither")
-end if
-</pre>
-    <p>
-      \end{mapleinput} \relax \begin{maplelatex} {"neither"}{
-      <me>
-        \displaystyle \text{ ``neither'' }
-      </me>
+      As the statement stands now, we have no idea what this person will do if it is <em>not</em> sunny.
+      Perhaps they will still go for a bike ride, perhaps not. We can define this action with an <sq>else</sq> statement.
     </p>
     <p>
-      } \end{maplelatex} \end{maplegroup}
+      In other words, we can define what will happen if it is <em>not sunny</em>.
+      For example: <em>"If it's sunny tomorrow, then I will go for a bike ride. Otherwise, I will read a book at home."</em>
+    </p>
+    <p>
+      From this example, we know that the following are true.
+      <ul>
+        <li>If it's sunny tomorrow, then I will go for a bike ride.</li>
+        <li>If it's not sunny tomorrow, then I read a book at home.</li>
+      </ul>
+    </p>
+  <example>
+    <title>Conditional Based on Numerical Value</title>
+    <p>
+      We will outline this concept with a silly example. We define two variables <m>a=2</m> and <m>b=5</m>.
+      If <m>a\lt b</m> is <em>true</em> (which it is because obviously <m>2</m> is less than <m>5</m>),
+      we print the word "Mario". Otherwise (if it's <em>false</em>), we print the word "Luigi". Therefore,
+      we expect that "Mario" will be printed. \begin{maplegroup} \begin{mapleinput}
     </p>
     <aside>
       <p>
-        This implies that <m>g'(0)</m> is equal to <m>0</m>.
+        You can use Shift+Enter to create multiple lines within the same Maple input and hit Enter to run them all at once.
       </p>
     </aside>
+    <console prompt="> ">
+      <input>a := 2: b := 5:</input>
+      <input>if a &lt; b then
+  print("Mario")
+  else
+  print("Luigi")
+  end if</input>
+    </console>
     <p>
-          <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
+      <me>
+        \displaystyle \text{ "Mario" }
+      </me>
     </p>
-  </subsection>
+  </example>
+  <example>
+    <title>Conditional Based on Even/Odd</title>
+    <p>
+      Now we consider a more useful example.
+      We define a function <m>f(x)</m> and check whether substituting <m>x=2</m> into this function outputs an <em>even</em>
+      number or an <em>odd</em> number.
+    </p>
+    <p>
+      The <c>type()</c> command is used here to check if the expression has the specified property. Maple recognizes a wide variety of different types, 
+      including <c>even</c> and <c>odd</c>.
+    </p>
+    <console prompt="> ">
+      <input>f(x) := x^2 + 3*x - 4:</input>
+      <input>if type(f(2), even) then
+  print(f(2), "even")
+  else
+  print(f(2), "odd")
+  end if</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle 6,\,\text{ "even" }
+      </me>
+    </p>
+  </example>
+  <example>
+    <title>Conditional Based on Finite/Infinite</title>
+    <idx><h>limit</h></idx>
+    <p>
+      In this example, we define a function <m>f(x)</m> and then use an <sq>if</sq> statement to verify whether or not the limit of <m>f(x)</m> as <m>x</m> approaches <m>0</m> is <em>numeric</em>.
+      In other words, we are checking to see whether or not this limit exists (and is finite).
+    </p>
+    <console prompt="> ">
+      <input>f(x) := 1/x:</input>
+      <input>L := limit(f(x), x=0):</input>
+      <input>if type(L, numeric) then
+  print("Limit is defined")
+  else
+  print("Limit is undefined")
+  end if</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle \text{ "Limit is undefined"}
+      </me>
+    </p>
+  </example>
+  <p>
+    The <c>elif</c> (else if) command allows us to add more than one condition to our statement.
+    For example, if we want to test whether a particular number is (i) positive, (ii) negative, or (iii) zero,
+    and wish to have different outputs based on these <em>three</em> possibilities, we can do so with a combination of <c>if</c>, <c>else</c>, and <c>elif</c>.
+  </p>
+  <example>
+    <title>Multiple Conditional Based on Numerical Value</title>
+    <p>
+      In this example, we will use one of these statements to illustrate the first derivative test in calculus.
+      We would like to answer the following question: for a particular value <m>x=a</m>, is the function <m>g(x)</m> (i) increasing
+      (positive derivative), (ii) decreasing (negative derivative), or (iii) neither increasing nor decreasing (zero derivative)?
+    </p>
+    <console prompt="> ">
+      <input>g(x) := x^4 - 4*x^3 + 3*x^2:</input>
+      <input>a := 0:</input>
+      <input>if subs(x = a, diff(g(x), x)) > 0 then
+      print("increasing")
+  elif subs(x = a, diff(g(x), x)) &lt; 0 then
+    print("decreasing")
+  else
+    print("neither")
+  end if</input>
+    </console>
+    <p>
+      <me>
+        \displaystyle \text{ "neither" }
+      </me>
+    </p>
+    <p>
+      This implies that <m>g'(0)</m> is equal to <m>0</m>.
+    </p>
+  </example>
 </section>
