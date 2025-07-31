@@ -41,7 +41,7 @@
   </docinfo>
   <book>
     <title>Exploring Calculus with Maple</title>
-	  <subtitle>PreTeXt Edition</subtitle>
+	  <subtitle>Introductory Calculus</subtitle>
     <frontmatter>
       <bibinfo>
         <author>
@@ -50,10 +50,21 @@
           <institution>Okanagan College</institution>
           <email>scbrown@okanagan.bc.ca</email>
         </author>
+        <copyright>
+          <year>2025</year>
+          <holder>Stephen Brown</holder>
+          <minilicense>Creative Commons BY-SA</minilicense>
+          <shortlicense>
+            Licensed under CC BY-SA 4.0. To view a copy of this license, visit <url href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+          </shortlicense>
+        </copyright>
       </bibinfo>
       <titlepage>
         <titlepage-items/>
       </titlepage>
+      <colophon>
+        <colophon-items/>
+      </colophon>
       <xi:include href="./frontmatter/pre_lab_syllabus.ptx"/>
       <xi:include href="./frontmatter/pre_introduction.ptx"/>
     </frontmatter>
