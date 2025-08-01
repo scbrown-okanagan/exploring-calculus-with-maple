@@ -1,20 +1,1085 @@
 <!DOCTYPE html>
 <html>
-<!--********************************************-->
-<!--*       Generated from PreTeXt source      *-->
-<!--*       on 2025-08-01T19:11:48Z       *-->
-<!--*   A recent stable commit (2022-07-01):   *-->
-<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
-<!--*                                          *-->
-<!--*         https://pretextbook.org          *-->
-<!--*                                          *-->
-<!--********************************************-->
-<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="0; URL='title.html'">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Exploring Calculus with Maple">
-<meta property="book:author" content="Stephen Brown">
-</head>
-<body></body>
+<Head>
+<title>Stephen Brown</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+</Head>  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+body, html {
+  background-image: url('IMG_20180919_131621.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<body class="w3-dark-grey">
+
+<div class="w3-top">
+  <div class="w3-card-4 w3-light-grey">
+    <a href="#" class="w3-bar-item w3-btn">
+      <h1 class="w3-text-red"><i class="fa fa-user-tie fa-fw w3-margin-right w3-text-red"></i>Stephen Brown</h1>
+    </a>
+  </div>
+</div>
+
+<br><br><br><br>
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" >
+  
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+    
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+			<!-- Personal Info Card -->
+      <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
+        <div class="w3-display-container w3-center">
+          <img class="w3-margin-top w3-circle" src="avatar.jpg" style="width:66%" alt="Avatar">
+        </div>
+				
+				<ul class="w3-ul">
+					<li class="w3-bar">
+						<i class="fa fa-briefcase w3-bar-item w3-text-red" style="width:0px" ></i>
+						<div class="w3-bar-item">
+							<span class="w3-large">Professor</span><br>
+							<span>Mathematics & Statistics</span>
+						</div>
+					</li>
+					<li class="w3-bar">
+						<i class="fa fa-building w3-bar-item w3-text-red" style="width:0px" ></i>
+						<div class="w3-bar-item">
+							<span class="w3-large">Okanagan College</span><br>
+							<span>Kelowna, BC</span><br>
+							<span>C Building, Room 104</span>
+						</div>
+					</li>
+					<li class="w3-bar">
+						<i class="fa fa-envelope w3-bar-item w3-text-red" style="width:0px" ></i>
+						<div class="w3-bar-item">
+							<span><a href="mailto:scbrown@okanagan.bc.ca">scbrown@okanagan.bc.ca</a></span>
+						</div>
+					</li>
+					<li class="w3-bar">
+						<i class="fa fa-phone w3-bar-item w3-text-red" style="width:0px" ></i>
+						<div class="w3-bar-item">
+							<span>250-762-5445 ext. 4782</span>
+						</div>
+					</li>
+					<li class="w3-bar">
+						<i class="fa fa-headset w3-bar-item w3-text-red" style="width:0px" ></i>
+						<div class="w3-bar-item">
+							<span><a href="https://discord.com/invite/kRGZBEQ">Find me on Discord</a></span>
+						</div>
+					</li>
+					<li class="w3-bar">
+						<i class="fas fa-video w3-bar-item w3-text-red" style="width:0px" ></i>
+						<div class="w3-bar-item">
+							<span><a href="https://ca01web.zoom.us/j/66373889177?pwd=bmMvWGVVeEtpOExsL1lOU0N1OEdoZz09">Zoom Link</a></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- College Links Card -->
+			<div class="w3-container w3-card w3-light-grey w3-margin-bottom">
+				<div class="w3-container">
+          <p class="w3-large"><b><i class="fa fa-link fa-fw w3-margin-right w3-text-red"></i>Useful College Links</b></p>
+          <button onclick="accordion('College')" class="w3-btn w3-block w3-left-align">
+            <h5 class="w3-text-red">Okanagan College</h5>
+          </button>
+          <div id="College" class="w3-container w3-hide">
+            <ul class="w3-ul">
+              <li class="w3-text-opacity">
+                <a href="https://www.okanagan.bc.ca/success-centres">Success Centres</a>
+              </li>
+              <li class="w3-text-opacity">
+                <a href="https://www.okanagan.bc.ca/accessibility-services">Accessibility Services</a>
+              </li>
+              <li class="w3-text-opacity">
+                <a href="https://www.okanagan.bc.ca/counselling-services">Counselling Services</a>
+              </li>
+              <li class="w3-text-opacity">
+                <a href="https://www.okanagan.bc.ca/office-of-the-registrar/scheduling-office/scheduling-office#finalexam">Final Exam Schedule</a>
+              </li>
+              <li class="w3-text-opacity">
+                <a href="http://webapps-5.okanagan.bc.ca/ok/Calendar/AcademicIntegrity">Academic Integrity Policy</a>
+              </li>
+              <li class="w3-text-opacity">
+                <a href="http://webapps-5.okanagan.bc.ca/ok/Calendar/StudentConduct">Student Conduct Policy</a>
+              </li>
+            </ul>
+          </div>
+          <button onclick="accordion('MathStats')" class="w3-btn w3-block w3-left-align">
+            <h5 class="w3-text-red">Math & Stats Department</h5>
+          </button>
+          <div id="MathStats" class="w3-container w3-hide">
+            <ul class="w3-ul">
+              <li class="w3-text-opacity">
+                <a href="https://www.okanagan.bc.ca/science/math-and-statistics">Department Home Page</a>
+              </li>
+              <li class="w3-text-opacity">
+                <a href="https://webapps-5.okanagan.bc.ca/ok/Calendar/CourseDescriptions?MATH">Math Course Descriptions</a>
+              </li>
+              <li class="w3-text-opacity">
+                <a href="https://webapps-5.okanagan.bc.ca/ok/Calendar/CourseDescriptions?STAT">Stat Course Descriptions</a>
+              </li>
+            </ul>
+          </div>
+          <button onclick="accordion('Resources')" class="w3-btn w3-block w3-left-align">
+            <h5 class="w3-text-red">Other Academic Resources</h5>
+          </button>
+          <div id="Resources" class="w3-container w3-hide">
+            <ul class="w3-ul">
+              <li class="w3-text-opacity">
+                <a href="http://www.bctransferguide.ca/">BC Transfer Guide</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+			
+			<!-- Schedules Card -->
+      <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
+				<button onclick="accordion('Schedules')" class="w3-btn w3-block w3-left-align">
+					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-clock fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Schedules</h2>
+        </button>
+				<div id="Schedules" class="w3-container w3-hide">
+					<!-- Summer Schedule -->
+					<!--					
+					<button onclick="accordion('summer')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2022</b></h6>
+					</button>
+					<div id="summer" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-flat-peter-river">MATH 122 Calculus II, Section 002</li>
+							<li class="w3-flat-emerald">MATH 112 Calculus I, Lab Section L02</li>
+						</ul>
+						<br>
+						<table class="w3-table-all">
+							<thead>
+								<tr class="w3-red">
+									<th>Time</th>
+									<th class="w3-center">M</th>
+									<th class="w3-center">T</th>
+									<th class="w3-center">W</th>
+									<th class="w3-center">R</th>
+									<th class="w3-center">F</th>
+								</tr>
+							</thead>
+							<tr>
+								<td>08:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>08:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>09:00</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>09:30</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>10:00</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>10:30</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>11:00</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>11:30</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>12:00</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>12:30</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>13:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>13:30</td>
+								<td> </td>
+								<td class="w3-flat-emerald"> </td>
+								<td> </td>
+								<td class="w3-flat-emerald"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>14:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<!-- <tr>
+								<td>14:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>15:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>15:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>16:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>16:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>17:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>17:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>18:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+						</table>
+					</div>
+					-->		
+					
+					<!-- Winter Schedule -->
+					<button onclick="accordion('winter')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2023</b></h6>
+					</button>
+					<div id="winter" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-flat-peter-river">MATH 122 Calculus II, Section 002</li>
+							<li class="w3-flat-orange">MATH 222 Calculus IV, Section 001</li>
+							<li class="w3-flat-amethyst">MATH 314 Calculus and Linear Algebra for Business, Section 002</li>
+						</ul>
+						<br>
+						<table class="w3-table-all">
+							<thead>
+								<tr class="w3-red">
+									<th>Time</th>
+									<th class="w3-center">M</th>
+									<th class="w3-center">T</th>
+									<th class="w3-center">W</th>
+									<th class="w3-center">R</th>
+									<th class="w3-center">F</th>
+								</tr>
+							</thead>
+							<tr>
+								<td>08:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>08:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>09:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>09:30</td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>10:00</td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>10:30</td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>11:00</td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>11:30</td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>12:00</td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td class="w3-flat-amethyst"> </td>
+							</tr>
+							<tr>
+								<td>12:30</td>
+								<td class="w3-flat-peter-river"></td>
+								<td> </td>
+								<td class="w3-flat-peter-river"></td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+							</tr>
+							<tr>
+								<td>13:00</td>
+								<td class="w3-flat-peter-river"></td>
+								<td> </td>
+								<td class="w3-flat-peter-river"></td>
+								<td> </td>
+								<td class="w3-flat-peter-river"></td>
+							</tr>
+							<tr>
+								<td>13:30</td>
+								<td class="w3-flat-peter-river"></td>
+								<td> </td>
+								<td class="w3-flat-peter-river"></td>
+								<td> </td>
+								<td class="w3-flat-peter-river"></td>
+							</tr>
+							<tr>
+								<td>14:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<!-- <tr>
+								<td>14:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>15:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>15:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>16:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>16:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>17:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>17:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>18:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr> -->
+						</table>
+					</div>
+					
+					<!-- Fall Schedule -->
+					<button onclick="accordion('fall')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2022</b></h6>
+					</button>
+					<div id="fall" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-flat-peter-river">MATH 112 Calculus I, Section 002</li>
+							<li class="w3-flat-turquoise">MATH 112 Calculus I, Lab Section L01</li>
+							<li class="w3-flat-emerald">MATH 112 Calculus I, Lab Section L02</li>
+							<li class="w3-flat-orange">MATH 212 Calculus III, Section 001</li>							
+							<li class="w3-flat-amethyst">MATH 314 Calculus and Linear Algebra for Business, Section 002</li>
+						</ul>
+						<br>
+						<table class="w3-table-all">
+							<thead>
+								<tr class="w3-red">
+									<th>Time</th>
+									<th class="w3-center">M</th>
+									<th class="w3-center">T</th>
+									<th class="w3-center">W</th>
+									<th class="w3-center">R</th>
+									<th class="w3-center">F</th>
+								</tr>
+							</thead>
+							<tr>
+								<td>08:00</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"></td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td class="w3-flat-peter-river"> </td>
+							</tr>
+							<tr>
+								<td>08:30</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td class="w3-flat-peter-river"> </td>
+							</tr>
+							<tr>
+								<td>09:00</td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+								<td class="w3-flat-peter-river"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>09:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>10:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>10:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>11:00</td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>11:30</td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>12:00</td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+								<td class="w3-flat-amethyst"> </td>
+							</tr>
+							<tr>
+								<td>12:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td class="w3-flat-amethyst"> </td>
+							</tr>
+							<tr>
+								<td>13:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>13:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>14:00</td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+							</tr>
+							<tr>
+								<td>14:30</td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+							</tr>
+							<tr>
+								<td>15:00</td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td class="w3-flat-orange"> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>15:30</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>16:00</td>
+								<td> </td>
+								<td class="w3-flat-turquoise"> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>16:30</td>
+								<td> </td>
+								<td class="w3-flat-turquoise"> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>17:00</td>
+								<td> </td>
+								<td class="w3-flat-emerald"> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>17:30</td>
+								<td> </td>
+								<td class="w3-flat-emerald"> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+							<tr>
+								<td>18:00</td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							</tr>
+						</table>
+					</div>			
+					
+					<button onclick="accordion('Schedules')" class="w3-btn w3-block w3-center-align">
+						<p>Close Schedules</p>
+					</button>
+				</div>
+      </div>
+    
+			<!-- Videos Card -->
+	  <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
+				<button onclick="accordion('Videos')" class="w3-btn w3-block w3-left-align">
+					<h2 class="w3-text-grey w3-padding-16"><i class="fab fa-youtube fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Video Tutorials</h2>
+        </button>
+				<div id="Videos" class="w3-container w3-hide">
+					<h6 class="w3-text-red"><i class="fab fa-youtube fa-fw w3-margin-right"></i><b>Precalculus Tutorials</b></h6>
+					<ul class="w3-ul w3-small">
+						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJcvvNi-FioGu4cAmlHIY8sW">Precalculus</a></li>
+					</ul>
+					<h6 class="w3-text-red"><i class="fab fa-youtube fa-fw w3-margin-right"></i><b>Calculus Tutorials</b></h6>
+					<ul class="w3-ul w3-small">
+						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJcyob69fHzv4UlP5UF6QCrp">Calculus I (Intro Differential Calculus)</a></li>
+						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJdHerE8oCHbPR3qpns6VcmX">Calculus II (Integral Calculus and Series)</a></li>
+						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJfGEXvCdFRbHDMgrg1ck7Ox">Calculus III (Multivariable Calculus)</a></li>
+						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJeZxYhNrWbrqkqMaTrYKXd7">Calculus IV (Vector Calculus)</a></li>
+					</ul>
+					<h6 class="w3-text-red"><i class="fab fa-youtube fa-fw w3-margin-right"></i><b>Business Calculus and Linear Algebra Tutorials</b></h6>
+					<ul class="w3-ul w3-small">
+						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJegREMx1_GCgKYL38aj1AMW">Business Calculus and Linear Algebra</a></li>
+					</ul>
+					
+					<button onclick="accordion('Videos')" class="w3-btn w3-block w3-center-align">
+						<p>Close Video Tutorials</p>
+					</button>
+				</div>
+			</div>
+		
+			<!-- Courses Card -->
+      <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
+				<button onclick="accordion('Courses')" class="w3-btn w3-block w3-left-align">
+					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Courses Taught</h2>
+				</button>
+				<div id="Courses" class="w3-container w3-hide">
+					<button onclick="accordion('W2023')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2023</b></h6>
+					</button>
+					<div id="W2023" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 122 Calculus II</li>
+							<li class="w3-text-opacity">MATH 222 Calculus IV</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+						</ul>
+					</div>
+					<button onclick="accordion('F2022')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2022</b></h6>
+					</button>
+					<div id="F2022" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 212 Calculus III</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+					<button onclick="accordion('S2022')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2022</b></h6>
+					</button>
+					<div id="S2022" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 122 Calculus II</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2022')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2022</b></h6>
+					</button>
+					<div id="W2022" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 122 Calculus II</li>
+							<li class="w3-text-opacity">MATH 222 Calculus IV</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+						</ul>
+					</div>
+					<button onclick="accordion('F2021')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2021</b></h6>
+					</button>
+					<div id="F2021" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 212 Calculus III</li>
+							<li class="w3-text-opacity">MATH 257 Mathematics for Electronic Engineering III</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2021')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2021</b></h6>
+					</button>
+					<div id="W2021" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 122 Calculus II</li>
+							<li class="w3-text-opacity">MATH 222 Calculus IV</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+							<li class="w3-text-opacity">Labs for MATH 122</li>
+						</ul>
+					</div>
+					<button onclick="accordion('F2020')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2020</b></h6>
+					</button>
+					<div id="F2020" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 120 Precalculus</li>
+							<li class="w3-text-opacity">MATH 257 Mathematics for Electronic Engineering III</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2020')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2020</b> </h6>
+					</button>
+					<div id="W2020" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
+							<li class="w3-text-opacity">MATH 122 Calculus II</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+					
+					<button onclick="accordion('F2019')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2019</b></h6>
+					</button>
+					<div id="F2019" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 212 Calculus III</li>
+							<li class="w3-text-opacity">MATH 251/COSC 221 Discrete Structures</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+						</ul>
+					</div>
+					<button onclick="accordion('S2019')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2019</b></h6>
+					</button>
+					<div id="S2019" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">STAT 121 Elementary Statistics</li>
+							<li class="w3-text-opacity">Labs for STAT 121</li>
+							<li class="w3-text-opacity">COSC 221 Discrete Structures (UBC Okanagan)</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2019')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2019</b></h6>
+					</button>
+					<div id="W2019" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+							<li class="w3-text-opacity">STAT 230/BIOL 202 Elementary Applied Statistics</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+		
+					<button onclick="accordion('F2018')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2018</b></h6>
+					</button>
+					<div id="F2018" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
+							<li class="w3-text-opacity">MATH 212 Calculus III</li>
+							<li class="w3-text-opacity">MATH 251/COSC 221 Discrete Structures</li>
+							<li class="w3-text-opacity">MATH 257 Mathematics for Electronic Engineering III</li>
+						</ul>
+					</div>
+					<button onclick="accordion('S2018')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2018</b></h6>
+					</button>
+					<div id="S2018" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">STAT 121 Elementary Statistics</li>
+							<li class="w3-text-opacity">Labs for STAT 121</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2018')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2018</b></h6>
+					</button>
+					<div id="W2018" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 251/COSC 221 Discrete Structures</li>
+							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+		
+					<button onclick="accordion('F2017')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2017</b></h6>
+					</button>
+					<div id="F2017" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 114 Business Mathematics (x2)</li>
+							<li class="w3-text-opacity">STAT 121 Elementary Statistics</li>
+							<li class="w3-text-opacity">Labs for STAT 121/124</li>
+							<li class="w3-text-opacity">Math 100 Calculus I (UBC Okanagan)</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2017')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2017</b></h6>
+					</button>
+					<div id="W2017" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">STAT 124 Business Statistics</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+							<li class="w3-text-opacity">Labs for MATH 122</li>
+							<li class="w3-text-opacity">Labs for STAT 124</li>
+						</ul>
+					</div>
+		
+					<button onclick="accordion('F2016')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2016</b></h6>
+					</button>
+					<div id="F2016" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 114 Business Mathematics (x2)</li>
+							<li class="w3-text-opacity">MATH 120 Precalculus</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+					<button onclick="accordion('S2016')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2016</b></h6>
+					</button>
+					<div id="S2016" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">Math 200 Calculus III (UBC Okanagan)</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2016')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2016</b></h6>
+					</button>
+					<div id="W2016" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 160 Mathematics for Elementary Teachers</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+							<li class="w3-text-opacity">Labs for STAT 121/124</li>
+						</ul>
+					</div>
+		
+					<button onclick="accordion('F2015')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2015</b></h6>
+					</button>
+					<div id="F2015" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 112 Calculus I</li>
+							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
+							<li class="w3-text-opacity">MATH 120 Precalculus</li>
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2015')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2015</b></h6>
+					</button>
+					<div id="W2015" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">Labs for MATH 112</li>
+						</ul>
+					</div>
+		
+					<button onclick="accordion('F2014')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2014</b></h6>
+					</button>
+					<div id="F2014" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 111 Essential Mathematics for Arts</li>
+							<li class="w3-text-opacity">MATH 114 Business Mathematics (x2)</li>
+						</ul>
+					</div>
+					<button onclick="accordion('S2014')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2014</b></h6>
+					</button>
+					<div id="S2014" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">Math 100 Calculus I (UBC Okanagan)</li>
+						</ul>
+					</div>
+					<button onclick="accordion('W2014')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2014</b></h6>
+					</button>
+					<div id="W2014" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 149 Mathematics for Network Telecommunications Engineering</li>
+							<li class="w3-text-opacity">STAT 124 Business Statistics (x2)</li>
+							<li class="w3-text-opacity">Labs for STAT 121/124</li>
+						</ul>
+					</div>
+		
+					<button onclick="accordion('F2013')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2013</b></h6>
+					</button>
+					<div id="F2013" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
+							<li class="w3-text-opacity">MATH 128 Mathematics for Water Engineering Technology</li>
+						</ul>
+					</div>
+		
+					<button onclick="accordion('F2012')" class="w3-btn w3-block w3-left-align">
+						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2012</b></h6>
+					</button>
+					<div id="F2012" class="w3-container w3-hide">
+						<ul class="w3-ul w3-small">
+							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
+						</ul>
+					</div>
+					<button onclick="accordion('Courses')" class="w3-btn w3-block w3-center-align">
+						<p>Close Courses Taught</p>
+					</button>
+				</div>
+      </div>
+	  
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<!-- <footer class="w3-container w3-red w3-center w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer> -->
+
+<script>
+function accordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
 </html>
