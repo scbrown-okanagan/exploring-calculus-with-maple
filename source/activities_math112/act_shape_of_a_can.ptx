@@ -1,4 +1,4 @@
-<section xml:id="sec_shape_of_a_can">
+<section xml:id="act_shape_of_a_can">
   <title>The Shape of a Can</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -20,14 +20,14 @@
       <caption>A simple can in the shape of a circular cylinder.</caption>
       <image width="50%">
         <latex-image>
-          <![CDATA[\begin{tikzpicture}
-          \draw (0,0) ellipse (1.25 and 0.5);
-          \draw (-1.25,0) -- (-1.25,-2.5);
-          \draw (-1.25,-2.5) arc (180:360:1.25 and 0.5);
-          \draw [dashed] (-1.25,-2.5) arc (180:360:1.25 and -0.5);
-          \draw (1.25,-2.5) -- (1.25,0);
-          \fill [gray,opacity=0.5] (-1.25,0) -- (-1.25,-2.5) arc (180:360:1.25 and 0.5) -- (1.25,0) arc (0:180:1.25 and -0.5);
-          \end{tikzpicture}]]>
+          \begin{tikzpicture}
+            \draw (0,0) ellipse (1.25 and 0.5);
+            \draw (-1.25,0) -- (-1.25,-2.5);
+            \draw (-1.25,-2.5) arc (180:360:1.25 and 0.5);
+            \draw [dashed] (-1.25,-2.5) arc (180:360:1.25 and -0.5);
+            \draw (1.25,-2.5) -- (1.25,0);
+            \fill [gray,opacity=0.5] (-1.25,0) -- (-1.25,-2.5) arc (180:360:1.25 and 0.5) -- (1.25,0) arc (0:180:1.25 and -0.5);
+          \end{tikzpicture}
         </latex-image>
       </image>
     </figure>
@@ -83,9 +83,9 @@
       <introduction>
         <p>
           Since each of the circles will effectively use an entire hexagonal area from the sheet metal, you will need to calculate the area of a 
-          hexagon that circumscribes a circle of radius <m>r</m>, as shown in <xref ref="hexagoncircle"/>
+          hexagon that circumscribes a circle of radius <m>r</m>, as shown in <xref ref="fig_hexagoncircle"/>
         </p>
-        <figure xml:id="hexagoncircle">
+        <figure xml:id="fig_hexagoncircle">
           <caption>A hexagon circumscribing a circle.</caption>
           <image width="60%">
               <latex-image>
@@ -105,7 +105,7 @@
       <task>
         <statement>
           <p>
-            The hexagon shown in <xref ref="hexagoncircle"/> consists of six equal triangles, each with a base <m>b</m> and height <m>h</m>. Using trigonometry, 
+            The hexagon shown in <xref ref="fig_hexagoncircle"/> consists of six equal triangles, each with a base <m>b</m> and height <m>h</m>. Using trigonometry, 
             determine the length of <m>b</m> in terms of <m>r</m>. Then, determine the area of one of these triangles using
             <me>A = \frac{1}{2}br</me>.
           </p>

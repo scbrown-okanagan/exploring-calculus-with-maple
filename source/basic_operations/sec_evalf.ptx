@@ -1,4 +1,4 @@
-<section>
+<section xml:id="sec_expressing_as_decimal">
   <title>Expressing a Result as a Decimal</title>
   <p>
     Maple tries to use exact, symbolic values whenever it can.

@@ -1,6 +1,6 @@
-<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_introduction">
+<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="pre_introduction">
   <title>Introduction to Maple</title>
-  <paragraphs xml:id="sec_the_maple_computer_algebra_system">
+  <paragraphs>
   	<title>The Maple Computer Algebra System</title>
 	  <p>
 			In lab, you will be using the latest version of Maple, which is a symbolic and numeric computing environment.
@@ -10,13 +10,13 @@
 			having basic knowledge of a computer algebra system is a very useful tool.
 	  </p>
 	</paragraphs>
-	<paragraphs xml:id="how_to_use_this_manual">
+	<paragraphs>
 		<title>How to Use This Manual</title>
 		<p>
 			This book is divided into three main parts:
 		</p>
 		<p>
-			<xref ref="prt_calc1_activities">Part</xref> and <xref ref="prt_calc2_activities">Part</xref>
+			<xref ref="prt_differential_calculus">Part</xref> and <xref ref="prt_integral_calculus">Part</xref>
 			consist of activities for you to complete. These activities are divided into two chapters: Calculus I and Calculus II.
 			Each activity focuses on one topic from that course and contains a list of exercises for you to complete with Maple.
 			Some of these exercises may give very explicit instructions for typing a command into Maple,
@@ -35,7 +35,7 @@
 			so it is a good idea to thoroughly read through all of the relevant tutorials as you progress through lab.
 		</p>
 	</paragraphs>
-	<paragraphs xml:id="sec_accessing_maple">
+	<paragraphs>
 		<title>Accessing Maple and Saving Your Work</title>
 		<p>
 			Maple is installed on all lab computers as well as on computers in the library.

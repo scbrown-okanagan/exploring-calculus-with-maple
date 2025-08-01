@@ -1,4 +1,4 @@
-<section xml:id="sec_newtons_method">
+<section xml:id="act_newtons_method">
   <title>Newton's Method</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -64,32 +64,34 @@
       <caption>Using three iterations of Newton's Method to approximate the root <m>r</m>.</caption>
       <image>
         <latex-image>
-          <![CDATA[\begin{tikzpicture}\begin{axis}[
-          width=\linewidth,
-          height=0.4\linewidth,
-          axis lines=middle,
-          xlabel={\(x\)},
-          ylabel={\(y\)},
-          xlabel style={below right},
-          ylabel style={above left},
-          xmin=-10, xmax=80, xtick={0},
-          ymin=-20, ymax=120, ytick={0}
-          ]
-          \addplot [domain=-10:100, samples=100, thick] {1.05^(x+30)-10};
-          \addplot [domain=51.06267696:70, samples=100] {6.415967957*x-327.6164992};
-          \addplot [domain=34.49325000:51.06267696, samples=100] {2.546792633*x-87.84715498};
-          \addplot [domain=22.80985278:34.49325000, samples=100] {1.134746996*x-25.88341192};
-          \addplot[mark=*] coordinates {(17.19363282,0)} node [below] {\(r\)};
-          \addplot[mark=*] coordinates {(70,0)} node [below] {\(x_0\)};
-          \addplot +[mark=none] coordinates {(70,0) (70, 121.5012578)};
-          \addplot[mark=*] coordinates {(51.06267696,0)} node [below] {\(x_1\)};
-          \addplot +[mark=none] coordinates {(51.062676960,0) (51.06267696, 42.19889452)};
-          \addplot[mark=*] coordinates {(34.49325000,0)} node [below] {\(x_2\)};
-          \addplot +[mark=none] coordinates {(34.49325000,0) (34.49325000, 13.25769989)};
-          \addplot[mark=*] coordinates {(22.80985278,0)} node [below] {\(x_3\)};
-          \addplot +[mark=none] coordinates {(22.80985278,0) (22.80985278, 3.15236232)};
-          \draw(axis cs:55,75) node {\(f(x)\)};
-          \end{axis}\end{tikzpicture}]]>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=\linewidth,
+              height=0.4\linewidth,
+              axis lines=middle,
+              xlabel={\(x\)},
+              ylabel={\(y\)},
+              xlabel style={below right},
+              ylabel style={above left},
+              xmin=-10, xmax=80, xtick={0},
+              ymin=-20, ymax=120, ytick={0}
+            ]
+              \addplot [domain=-10:100, samples=100, thick] {1.05^(x+30)-10};
+              \addplot [domain=51.06267696:70, samples=100] {6.415967957*x-327.6164992};
+              \addplot [domain=34.49325000:51.06267696, samples=100] {2.546792633*x-87.84715498};
+              \addplot [domain=22.80985278:34.49325000, samples=100] {1.134746996*x-25.88341192};
+              \addplot[mark=*] coordinates {(17.19363282,0)} node [below] {\(r\)};
+              \addplot[mark=*] coordinates {(70,0)} node [below] {\(x_0\)};
+              \addplot +[mark=none] coordinates {(70,0) (70, 121.5012578)};
+              \addplot[mark=*] coordinates {(51.06267696,0)} node [below] {\(x_1\)};
+              \addplot +[mark=none] coordinates {(51.062676960,0) (51.06267696, 42.19889452)};
+              \addplot[mark=*] coordinates {(34.49325000,0)} node [below] {\(x_2\)};
+              \addplot +[mark=none] coordinates {(34.49325000,0) (34.49325000, 13.25769989)};
+              \addplot[mark=*] coordinates {(22.80985278,0)} node [below] {\(x_3\)};
+              \addplot +[mark=none] coordinates {(22.80985278,0) (22.80985278, 3.15236232)};
+              \draw(axis cs:55,75) node {\(f(x)\)};
+            \end{axis}
+          \end{tikzpicture}
         </latex-image>
       </image>
     </figure>
@@ -123,7 +125,7 @@
             after each iteration.
           </p>
           <p>
-            See <xref ref="sec_newtonsmethod"/> for an example.
+            See <xref ref="sec_newtons_method"/> for an example.
           </p>
         </hint>
       </task>

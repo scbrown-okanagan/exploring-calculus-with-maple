@@ -1,17 +1,17 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Calc1Activities">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_differential_activities">
   <title>Weekly Activities</title>
   <introduction>
     <p>
       The following activities are considered core and should be covered during the semester:
       <ul>
-        <li><xref ref="sec_creating_a_maple_worksheet" text="title" /></li>
-        <li><xref ref="sec_basics" text="title" /></li>
-        <li><xref ref="sec_assignment_operator_and_creating_functions" text="title" /></li>
-        <li><xref ref="sec_solving_equations_in_maple" text="title" /></li>
-        <li><xref ref="sec_limits" text="title" /></li>
-        <li><xref ref="sec_derivative_of_a_function" text="title" /></li>
-        <li><xref ref="sec_implicit_functions" text="title" /></li>
-        <li><xref ref="sec_newtons_method" text="title" /></li>
+        <li><xref ref="act_creating_a_maple_worksheet" text="title" /></li>
+        <li><xref ref="act_basics" text="title" /></li>
+        <li><xref ref="act_assignment_operator_and_creating_functions" text="title" /></li>
+        <li><xref ref="act_solving_equations_in_maple" text="title" /></li>
+        <li><xref ref="act_limits" text="title" /></li>
+        <li><xref ref="act_derivative_of_a_function" text="title" /></li>
+        <li><xref ref="act_implicit_functions" text="title" /></li>
+        <li><xref ref="act_newtons_method" text="title" /></li>
       </ul>
     </p>
   </introduction>

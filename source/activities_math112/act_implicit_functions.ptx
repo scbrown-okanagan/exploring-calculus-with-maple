@@ -1,4 +1,4 @@
-<section xml:id="sec_implicit_functions">
+<section xml:id="act_implicit_functions">
   <title>Implicit Functions</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -176,7 +176,7 @@
             but the second equation is the curve itself.
           </p>
           <p>
-            An example of solving a system of equations can be found in <xref ref="sec_solvingsystemeqs"/>.
+            An example of solving a system of equations can be found in <xref ref="sec_solving_a_system"/>.
           </p>
         </hint>
       </task>

@@ -1,4 +1,4 @@
-<section xml:id="sec_limits_and_asymptotes">
+<section xml:id="act_limits_and_asymptotes">
   <title>Limits and Asymptotes</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -87,7 +87,7 @@
             should not need to retype any part of the function:
           </p>
           <console prompt="> ">
-            <input>factor(denom(g(x))</input>
+            <input>factor(denom(g(x)))</input>
           </console>
         </hint>
       </task>

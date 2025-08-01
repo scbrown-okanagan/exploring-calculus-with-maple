@@ -15,5 +15,5 @@
   </introduction>
   <xi:include  href="sec_finding_general_solution_to_DE.ptx"/>
   <xi:include  href="sec_finding_particular_solution_given_IC.ptx"/>
-  <xi:include  href="sec_direction_fields_tutorial.ptx"/>
+  <xi:include  href="sec_direction_fields.ptx"/>
 </chapter>

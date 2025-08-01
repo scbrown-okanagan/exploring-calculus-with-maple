@@ -1,4 +1,4 @@
-<section xml:id="sec_solving_equations_in_maple">
+<section xml:id="act_solving_equations_in_maple">
   <title>Solving Equations in Maple</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -144,7 +144,7 @@
           <p>
             There are multiple ways that you can solve for both! You may start by solving <m>x=\frac{3}{x}</m> to find the <m>x</m>-coordinate
             first and then use <c>subs()</c> to find <m>y</m>. Instead, you may want to solve a system of equations in one command. An example 
-            is provided in <xref ref="sec_solvingsystemeqs"/>
+            is provided in <xref ref="sec_solving_a_system"/>
           </p>
         </hint>
       </task>

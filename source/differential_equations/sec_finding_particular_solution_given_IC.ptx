@@ -1,11 +1,11 @@
-<section xml:id="sec_finding_particular_solution_given_IC">
+<section xml:id="sec_finding_particular_solution_given_ic">
   <title>Finding the Particular Solution given Initial Conditions</title>
   <p>
         <idx><h>differential equations</h><h>dsolve!particular solution</h></idx>
         <idx><h>differential equations</h><h>dsolve!initial condition</h></idx>
   </p>
   <p>
-    In <xref ref="sec_finding_general_solution_to_DE"/>, we saw that solving a differential equation may result in one or more arbitrary constants in the solution.
+    In <xref ref="sec_finding_general_solution_to_de"/>, we saw that solving a differential equation may result in one or more arbitrary constants in the solution.
     This general solution is essentially an entire family of functions that are collectively all solutions to the differential equation.
     However, if we are given additional information about the function in the form of an <em>initial condition</em>, we may be able to give a more specific function as a solution.
   </p>
@@ -15,7 +15,7 @@
     The combination of a differential equation with one or more initial conditions is known as an initial value problem and the solution is known as a <em>particular solution</em>.
   </p>
   <p>
-    Continuing the example from <xref ref="sec_finding_general_solution_to_DE"/>, we saw that the differential equation
+    Continuing the example from <xref ref="sec_finding_general_solution_to_de"/>, we saw that the differential equation
     <me>
       y'=x^2y
     </me>

@@ -21,33 +21,35 @@
       <caption>A simple design for the initial hill of a roller coaster.</caption>
       <image>
         <latex-image>
-          <![CDATA[\begin{tikzpicture}\begin{axis}[
-          width=\textwidth,
-          height=0.5\textwidth,
-          axis lines=middle,
-          xlabel={\(x\)},
-          ylabel={\(y\)},
-          xlabel style={below right},
-          ylabel style={above left},
-          xmin=-10, xmax=320, xtick={0,100,200,300},
-          ymin=-10, ymax=120, ytick={0,25,50,75,100}
-          ]
-          \addplot [domain=-10:100, samples=100] {0.8*x};
-          \addplot [domain=100:130, samples=100, dashed] {0.8*x};
-          \addplot [domain= 70:100, samples=100, dashed] {(-0.012)*x^2+3.2*x-120};
-          \addplot [domain=100:200, samples=100] {(-0.012)*x^2+3.2*x-120};
-          \addplot [domain=200:220, samples=100, dashed] {(-0.012)*x^2+3.2*x-120};
-          \addplot [domain=170:200, samples=100, dashed] {0.017*x^2+((-1)*8.4)*x+1040};
-          \addplot [domain=200:320, samples=100] {0.017*x^2+((-1)*8.4)*x+1040};
-          \addplot[mark=*] coordinates {(50,40)};
-          \draw [dashed] (axis cs:100,0) -- (axis cs:100,80);
-          \addplot[mark=*] coordinates {(100,80)};
-          \draw(axis cs:50,30) node [rotate=42] {\(slope = 0.8\)};
-          \addplot[mark=*] coordinates {(200,40)};
-          \draw [dashed] (axis cs:200,0) -- (axis cs:200,40);
-          \draw(axis cs:210,40) node [rotate=-60] {\(slope = -1.6\)};
-          \addplot[mark=*] coordinates {(300,50)} node [left] {\(height=50~\)};
-          \end{axis}\end{tikzpicture}]]>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=\textwidth,
+              height=0.5\textwidth,
+              axis lines=middle,
+              xlabel={\(x\)},
+              ylabel={\(y\)},
+              xlabel style={below right},
+              ylabel style={above left},
+              xmin=-10, xmax=320, xtick={0,100,200,300},
+              ymin=-10, ymax=120, ytick={0,25,50,75,100}
+            ]
+              \addplot [domain=-10:100, samples=100] {0.8*x};
+              \addplot [domain=100:130, samples=100, dashed] {0.8*x};
+              \addplot [domain= 70:100, samples=100, dashed] {(-0.012)*x^2+3.2*x-120};
+              \addplot [domain=100:200, samples=100] {(-0.012)*x^2+3.2*x-120};
+              \addplot [domain=200:220, samples=100, dashed] {(-0.012)*x^2+3.2*x-120};
+              \addplot [domain=170:200, samples=100, dashed] {0.017*x^2+((-1)*8.4)*x+1040};
+              \addplot [domain=200:320, samples=100] {0.017*x^2+((-1)*8.4)*x+1040};
+              \addplot[mark=*] coordinates {(50,40)};
+              \draw [dashed] (axis cs:100,0) -- (axis cs:100,80);
+              \addplot[mark=*] coordinates {(100,80)};
+              \draw(axis cs:50,30) node [rotate=42] {\(slope = 0.8\)};
+              \addplot[mark=*] coordinates {(200,40)};
+              \draw [dashed] (axis cs:200,0) -- (axis cs:200,40);
+              \draw(axis cs:210,40) node [rotate=-60] {\(slope = -1.6\)};
+              \addplot[mark=*] coordinates {(300,50)} node [left] {\(height=50~\)};
+            \end{axis}
+          \end{tikzpicture}
         </latex-image>
       </image>
     </figure>

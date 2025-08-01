@@ -39,10 +39,10 @@
       \tikzset{ ragged border/.style={ decoration={random steps, segment length=1mm, amplitude=0.5mm}, decorate, } }
     </latex-image-preamble>
   </docinfo>
-  <book>
+  <book xml:id="contents">
     <title>Exploring Calculus with Maple</title>
 	  <subtitle>Introductory Calculus</subtitle>
-    <frontmatter>
+    <frontmatter xml:id="title">
       <bibinfo>
         <author>
           <personname>Stephen Brown</personname>
@@ -62,21 +62,21 @@
       <titlepage>
         <titlepage-items/>
       </titlepage>
-      <colophon>
+      <colophon xml:id="copyright">
         <colophon-items/>
       </colophon>
-      <xi:include href="./frontmatter/pre_lab_syllabus.ptx"/>
+      <xi:include href="./frontmatter/pre_lab_description.ptx"/>
       <xi:include href="./frontmatter/pre_introduction.ptx"/>
     </frontmatter>
-    <part xml:id="prt_calc1_activities">
-      <title>Calculus I</title>
-      <xi:include href="./activities_math112/math112activities.ptx"/>
-      <xi:include href="./activities_math112/lab_test_review_math_112.ptx"/>
+    <part xml:id="prt_differential_calculus">
+      <title>Differential Calculus</title>
+      <xi:include href="./activities_math112/chp_activities_differential.ptx"/>
+      <xi:include href="./activities_math112/chp_review_differential.ptx"/>
     </part>
-    <part xml:id="prt_calc2_activities">
-      <title>Calculus II</title>
-      <xi:include href="./activities_math122/math122activities.ptx"/>
-      <xi:include href="./activities_math122/lab_test_review_math_122.ptx"/>
+    <part xml:id="prt_integral_calculus">
+      <title>Integral Calculus</title>
+      <xi:include href="./activities_math122/chp_activities_integral.ptx"/>
+      <xi:include href="./activities_math122/chp_review_integral.ptx"/>
     </part>
     <part xml:id="prt_tutorials">
       <title>Tutorials</title>
@@ -92,14 +92,14 @@
       <xi:include href="./riemann_sums_and_area_approximation/chp_riemann_sums_and_area_approximation.ptx"/>
       <xi:include href="./definite_and_indefinite_integrals/chp_definite_and_indefinite_integrals.ptx"/>
       <xi:include href="./differential_equations/chp_differential_equations.ptx"/>
-      <xi:include href="./sequence_and_series/chp_sequence_and_series.ptx"/>
+      <xi:include href="./sequences_and_series/chp_sequences_and_series.ptx"/>
       <xi:include href="./conditional_statements_and_loops/chp_conditional_statements_and_loops.ptx"/>    
     </part>
-    <backmatter>
-      <xi:include href="./list_of_common_errors.ptx"/>
-      <xi:include href="./list_of_common_commands.ptx"/>
-      <xi:include href="./bibliography.ptx"/>
-      <index>
+    <backmatter xml:id="backmatter">
+      <xi:include href="./backmatter/app_common_errors.ptx"/>
+      <xi:include href="./backmatter/app_common_commands.ptx"/>
+      <!--<xi:include href="./backmatter/bibliography.ptx"/>-->
+      <index xml:id="the-index">
         <title>Index</title>
         <index-list/>
       </index>

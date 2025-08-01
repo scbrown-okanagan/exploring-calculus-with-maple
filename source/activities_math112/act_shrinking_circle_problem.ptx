@@ -1,4 +1,4 @@
-<section xml:id="sec_shrinking_circle_problem">
+<section xml:id="act_shrinking_circle_problem">
   <title>A Shrinking Circle Problem</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -35,26 +35,28 @@
       <caption>What happens to the point <m>R</m> as the radius of the thicker circle <m>C_2</m> shrinks?</caption>
       <image>
         <latex-image>
-          <![CDATA[\begin{tikzpicture}\begin{axis}[
-          width=0.8\linewidth,
-          axis lines=middle,
-          xlabel={\(x\)},
-          ylabel={\(y\)},
-          xlabel style={below right},
-          ylabel style={above left},
-          xmin=-2, xmax=4, xtick={-1,0,1,2,3},
-          ymin=-2, ymax=2, ytick={-1,0,1},
-          axis equal image
-          ]
-          \addplot[domain=-2:4] {1.500000000-.4514162296*x};
-          \addplot[mark=*] coordinates {(0,1.5)} node [above right] {\(P (0,r)\)};
-          \addplot[mark=*] coordinates {(1.125000000,0.9921567417)} node [above right] {\(Q\)};
-          \addplot[mark=*] coordinates {(3.322875656,0)} node [above right] {\(R\)};
-          \draw(axis cs:0,0) [very thick, red] circle[radius=1.5];
-          \draw(axis cs:-0.8,0.8) node {\(C_2\)};
-          \draw(axis cs:1,0) circle[radius=1];
-          \draw(axis cs:0.5,0.5) node {\(C_1\)};
-          \end{axis}\end{tikzpicture}]]>
+          \begin{tikzpicture}
+            \begin{axis}[
+              width=0.8\linewidth,
+              axis lines=middle,
+              xlabel={\(x\)},
+              ylabel={\(y\)},
+              xlabel style={below right},
+              ylabel style={above left},
+              xmin=-2, xmax=4, xtick={-1,0,1,2,3},
+              ymin=-2, ymax=2, ytick={-1,0,1},
+              axis equal image
+            ]
+              \addplot[domain=-2:4] {1.500000000-.4514162296*x};
+              \addplot[mark=*] coordinates {(0,1.5)} node [above right] {\(P (0,r)\)};
+              \addplot[mark=*] coordinates {(1.125000000,0.9921567417)} node [above right] {\(Q\)};
+              \addplot[mark=*] coordinates {(3.322875656,0)} node [above right] {\(R\)};
+              \draw(axis cs:0,0) [very thick, red] circle[radius=1.5];
+              \draw(axis cs:-0.8,0.8) node {\(C_2\)};
+              \draw(axis cs:1,0) circle[radius=1];
+              \draw(axis cs:0.5,0.5) node {\(C_1\)};
+            \end{axis}
+          \end{tikzpicture}
         </latex-image>
       </image>
     </figure>
@@ -92,7 +94,7 @@
       <hint>
         <p>
           You can find the point of intersection with a single <c>solve()</c> command, using both equations and solving for 
-          <m>x</m> and <m>y</m> at once. See <xref ref="sec_solvingsystemeqs"/> for an example.
+          <m>x</m> and <m>y</m> at once. See <xref ref="sec_solving_a_system"/> for an example.
         </p>
       </hint>
       <hint>

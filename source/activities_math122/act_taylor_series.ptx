@@ -1,4 +1,4 @@
-<section xml:id="sec_taylor_series">
+<section xml:id="act_taylor_series">
   <title>Taylor and Maclaurin Series</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -6,7 +6,7 @@
       Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_plotting_functions"/></li>
-        <li><xref ref="chp_sequence_and_sseries" text="title" /></li>
+        <li><xref ref="chp_sequences_and_series" text="title" /></li>
       </ul>
     </p>
   </subsection>

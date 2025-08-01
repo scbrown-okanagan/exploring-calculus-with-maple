@@ -1,22 +1,22 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Calc2Activities">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_activities_integral">
   <title>Weekly Activities</title>  
   <introduction>
     <p>
       The following activities are considered core and should be covered during the semester:
       <ul>
-        <li><xref ref="sec_riemann_sums_for_monotonic_functions" text="title" /></li>
-        <li><xref ref="sec_visualizing_the_net_change_theorem" text="title" /></li>
-        <li><xref ref="sec_area_problem" text="title" /></li>
-        <li><xref ref="sec_infinite_integrals" text="title" /></li>
+        <li><xref ref="act_riemann_sums_for_monotonic_functions" text="title" /></li>
+        <li><xref ref="act_visualizing_the_net_change_theorem" text="title" /></li>
+        <li><xref ref="act_area_problem" text="title" /></li>
+        <li><xref ref="act_infinite_integrals" text="title" /></li>
         <li><p>At least one of the following differential equation activities:</p>
           <ul>
-            <li><xref ref="sec_motion_of_a_mass_connected_to_a_spring" text="title" /></li>
-            <li><xref ref="sec_tank_mixing_problem" text="title" /></li>
-            <li><xref ref="sec_direction_fields" text="title" /></li>
+            <li><xref ref="act_motion_of_a_mass_connected_to_a_spring" text="title" /></li>
+            <li><xref ref="act_tank_mixing_problem" text="title" /></li>
+            <li><xref ref="act_direction_fields" text="title" /></li>
           </ul>
         </li>
-        <li><xref ref="sec_series_convergence_and_divergence" text="title" /></li>
-        <li><xref ref="sec_taylor_series" text="title" /></li>
+        <li><xref ref="act_series_convergence_and_divergence" text="title" /></li>
+        <li><xref ref="act_taylor_series" text="title" /></li>
       </ul>
     </p>
   </introduction>

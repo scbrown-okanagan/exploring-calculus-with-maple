@@ -1,4 +1,4 @@
-<section xml:id="sec_volumes_of_revolution">
+<section xml:id="act_volumes_of_revolution">
   <title>Volumes of Revolution</title>
   <subsection>
     <title>Recommended Tutorials:</title>
@@ -58,7 +58,6 @@
         </statement>
         <hint>
           <p>
-            An example of finding intersection points is given in <xref ref="sec_solvingsystemeqs"/>.
           </p>
         </hint>
       </task>

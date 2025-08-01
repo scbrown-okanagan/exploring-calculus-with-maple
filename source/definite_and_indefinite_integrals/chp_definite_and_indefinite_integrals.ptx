@@ -2,7 +2,7 @@
   <title>Definite and Indefinite Integrals</title>
   <xi:include  href="sec_definite_integrals.ptx"/>
   <xi:include  href="sec_indefinite_integrals_and_antiderivatives.ptx"/>
-  <xi:include  href="sec_the_integration_methods_tutor.ptx"/>
+  <xi:include  href="sec_integration_methods_tutor.ptx"/>
   <xi:include  href="sec_volume_of_revolution_tutor.ptx"/>
   <xi:include  href="sec_arc_length.ptx"/>
 </chapter>

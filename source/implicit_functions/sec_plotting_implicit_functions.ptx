@@ -12,7 +12,7 @@
     including the <m>=</m> sign. Additionally, you must specify an interval for <em>both</em> variables.
   </p>
   <p>
-    Below are the graphs of the two implicit curves defined in <xref ref="sec_implicit_functions_tutorial" text="title"/>.
+    Below are the graphs of the two implicit curves defined in <xref ref="sec_implicit_functions" text="title"/>.
   </p>
   <console prompt="> ">
     <input>with(plots):</input>

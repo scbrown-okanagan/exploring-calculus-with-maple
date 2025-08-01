@@ -1,6 +1,6 @@
-<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chp_lab_syllabus">
+<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="pre_lab_description">
   <title>Lab Description</title>
-  <paragraphs xml:id="sec_purpose_of_lab">
+  <paragraphs>
     <title>Purpose of Lab</title>
     <p>
       Your lab section is designed to supplement the content that you are learning in lecture.
@@ -9,7 +9,7 @@
       It is the goal of the lab to aid in your understanding of calculus as well as introduce you to the tools of mathematics that are available through computers.
     </p>
   </paragraphs>
-  <paragraphs xml:id="sec_lab_expectations">
+  <paragraphs>
     <title>Lab Expectations</title>
     <p>
       Each week you will work on a new activity from this lab manual.
@@ -90,7 +90,7 @@
       You are permitted to have this manual during the test.
     </p>
   </paragraphs>
-	<paragraphs xml:id="sec_lab_test">
+	<paragraphs>
 		<title>Lab Test</title>
 		<p>
       During your lab test, you will be permitted the following materials:
