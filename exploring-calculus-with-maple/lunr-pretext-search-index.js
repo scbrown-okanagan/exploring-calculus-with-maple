@@ -1369,27 +1369,27 @@ var ptx_lunr_docs = [
   "body": "  Instead of swimming, let's suppose you hop on your board and surf the nearest wave away from the shark. The wave accelerates you at m\/s initially up to a top speed of m\/s.     Define a new piecewise function for the velocity of surfing the way and assign it to .    The piecewise function for your surfing velocity will be similar to the one you set up for the shark in exercise .      Repeating the steps from a previous exercise, determine the position of the shark when it will catch you. Will you make it to the shore safely?    "
 },
 {
-  "id": "act_area_problem",
+  "id": "act_areas_between_curves",
   "level": "1",
-  "url": "act_area_problem.html",
+  "url": "act_areas_between_curves.html",
   "type": "Section",
   "number": "3.8",
   "title": "Areas Between Curves",
   "body": " Areas Between Curves   Recommended Tutorials:  Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:        Introduction:  Consider two functions, and . We can find the total area between these two curves over an interval by integrating the absolute value of the difference between these two functions. In other words, . integral total area If over that interval, then the absolute value can be dropped. However, if over that interval, then the absolute value can be dropped and the order of subtraction reversed.   If for some subintervals of and for other subintervals of , then the integral must be split into these subintervals to handle the absolute value accordingly. This process typically involves having to solve for the intersection points of the functions. However, Maple handles this process automatically.   In other circumstances, we may be interested in the net area between and . For example, if and both represent rates of change of some quantity, then the net area will give us the net difference between the two quantities over an interval. The net area may be negative, while the total area will always be positive. integral net area       In this exercise, you will find the area of the region bounded by the curves and ultimately, determine the value of that gives an exact area of 576.     To begin, you should view the region between the two curves. Choose a nonzero value for and plot and using your choice of . Adjust the view as necessary and estimate the -coordinates of the two points of intersection.    Maple will not be able to plot these two curves on the -plane without substituting in some value of , since would be viewed as an unexpected third variable in the equation of each curve.      Repeat the steps in the previous part for a different nonzero value for .      Use the solve() (or fsolve() ) command to find the -coordinates of the two intersection points of and . These -coordinates should be dependant on . solving equations solve       Set up an equation where the integral giving the area between and is equal to 576 and solve the equation for using the solve() (or fsolve() ) command. solving equations solve  solving equations fsolve     The integral may be set up using the int() or Int() command.       Suppose that two runners are competing in a two-minute sprint. After seconds, the velocity of runner A is given by and the velocity of runner B is given by . Both velocities are in m\/s. Start by assigning each of these functions, using the assignment operator, := .   Since velocity is a rate of change of position, integrating velocity over an interval of time gives the net change in position, called displacement. Integrating the difference of two velocity functions gives the net difference between the two displacements.      Plot both velocity functions on the same axes for duration of minutes (use ,since is in seconds). Using your graph, try to guess which runner makes it the farthest distance in minutes.    Make sure that you defined the exponential function properly in the two velocity functions. You can use the exp() function for or use the palettes toolbar. You cannot use the letter e on the keyboard for the exponential function. mathematical functions exponential     It is a good idea to choose colours for each function so that you can tell them apart on your plot.      Find the net area between and on the interval . This corresponds to the net difference in displacement during the race. Which runner made it the farthest distance in minutes? By how many metres?      "
 },
 {
-  "id": "act_area_problem-4-1",
+  "id": "act_areas_between_curves-4-1",
   "level": "2",
-  "url": "act_area_problem.html#act_area_problem-4-1",
+  "url": "act_areas_between_curves.html#act_areas_between_curves-4-1",
   "type": "Exercise",
   "number": "3.8.3.1",
   "title": "",
   "body": "  In this exercise, you will find the area of the region bounded by the curves and ultimately, determine the value of that gives an exact area of 576.     To begin, you should view the region between the two curves. Choose a nonzero value for and plot and using your choice of . Adjust the view as necessary and estimate the -coordinates of the two points of intersection.    Maple will not be able to plot these two curves on the -plane without substituting in some value of , since would be viewed as an unexpected third variable in the equation of each curve.      Repeat the steps in the previous part for a different nonzero value for .      Use the solve() (or fsolve() ) command to find the -coordinates of the two intersection points of and . These -coordinates should be dependant on . solving equations solve       Set up an equation where the integral giving the area between and is equal to 576 and solve the equation for using the solve() (or fsolve() ) command. solving equations solve  solving equations fsolve     The integral may be set up using the int() or Int() command.    "
 },
 {
-  "id": "act_area_problem-4-2",
+  "id": "act_areas_between_curves-4-2",
   "level": "2",
-  "url": "act_area_problem.html#act_area_problem-4-2",
+  "url": "act_areas_between_curves.html#act_areas_between_curves-4-2",
   "type": "Exercise",
   "number": "3.8.3.2",
   "title": "",
