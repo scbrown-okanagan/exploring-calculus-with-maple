@@ -1216,27 +1216,27 @@ var ptx_lunr_docs = [
   "body": "  In this exercise, you will determine the error bounds for Simpson's rules, which depends on the maximum value of over the interval. Also note that partition=4 actually correponds to , since there is an additional sample point in each partition, resulting in twice as many subintervals. integral approximation error      Plot over the interval and notice that the maximum value of occurs at one of the two endpoints of the interval.      Evaluate at the -value of this endpoint where it reaches a maximum. This gives the value of in the error formula .      Compute using formula .    Don't forget that when using partition=4 .    "
 },
 {
-  "id": "act_max_and_min_problems_for_integrals",
+  "id": "act_shapes_of_integral_functions",
   "level": "1",
-  "url": "act_max_and_min_problems_for_integrals.html",
+  "url": "act_shapes_of_integral_functions.html",
   "type": "Section",
   "number": "3.4",
   "title": "Describing the Shapes of Integral Functions",
   "body": " Describing the Shapes of Integral Functions   Recommended Tutorials:  Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:           Introduction:  In this activity, we will examine two functions that are defined by integrals, in the form . integral We may view these integral functions as the accumulated area under a function over an interval from to , where is the variable of the function . Integral functions frequently appear in analysis and in differential equations. Determining critical points and inflection points of integral functions is incredibly important in the analysis of these types of problems.   Recall that a critical point of a function occurs when or when does not exist. shapes of curves critical number   An inflection point of is a point at which the concavity of changes. shapes of curves inflection point        The sine integral function is important in electrical engineering. Note that by defining in the piecewise definition above, is a continuous function. mathematical functions piecewise    By the Fundamental Theorem of Calculus, . where . Known as the function, this is used in signal processing and the theory of Fourier transforms.      The sine integral function is already defined in Maple, so you don't have to manually assign it. Plot the graph of over the interval . plot       On the graph of , you will notice that there are many local minimum and maximum values. Use the fsolve() command to find the critical numbers of corresponding to the location of the absolute minimum and maximum values. shapes of curves critical number  shapes of curves minimum  shapes of curves maximum     When you use the fsolve() solving equations fsolve command, you can specify an interval in which you wish to search for solutions. An example of this can be found in .      What are the absolute minimum and maximum values of ?      There is an inflection point just to the right of the absolute maximum value. Use the second derivative and the fsolve() command to find its location. shapes of curves inflection point  solving equations fsolve       Use the limit() command to find the horizontal asymptote(s) of . limit  asymptote horizontal     Recall that if and is finite, then is a horizontal asymptote of .       Assign the integral function using the assignment operator, := . integral      Plot the integral function, . Try to specify a plot interval that gives you a good idea of the shape of . plot       Use the second derivative, , to determine where is concave up and where is concave down. derivative     You may make use of the factor() or solve() commands to help determine where equals zero or is undefined. From there, your graph may help determine where is positive or negative.      Determine the inflection points of . shapes of curves inflection point       "
 },
 {
-  "id": "act_max_and_min_problems_for_integrals-4-1",
+  "id": "act_shapes_of_integral_functions-4-1",
   "level": "2",
-  "url": "act_max_and_min_problems_for_integrals.html#act_max_and_min_problems_for_integrals-4-1",
+  "url": "act_shapes_of_integral_functions.html#act_shapes_of_integral_functions-4-1",
   "type": "Exercise",
   "number": "3.4.3.1",
   "title": "",
   "body": "  The sine integral function is important in electrical engineering. Note that by defining in the piecewise definition above, is a continuous function. mathematical functions piecewise    By the Fundamental Theorem of Calculus, . where . Known as the function, this is used in signal processing and the theory of Fourier transforms.      The sine integral function is already defined in Maple, so you don't have to manually assign it. Plot the graph of over the interval . plot       On the graph of , you will notice that there are many local minimum and maximum values. Use the fsolve() command to find the critical numbers of corresponding to the location of the absolute minimum and maximum values. shapes of curves critical number  shapes of curves minimum  shapes of curves maximum     When you use the fsolve() solving equations fsolve command, you can specify an interval in which you wish to search for solutions. An example of this can be found in .      What are the absolute minimum and maximum values of ?      There is an inflection point just to the right of the absolute maximum value. Use the second derivative and the fsolve() command to find its location. shapes of curves inflection point  solving equations fsolve       Use the limit() command to find the horizontal asymptote(s) of . limit  asymptote horizontal     Recall that if and is finite, then is a horizontal asymptote of .    "
 },
 {
-  "id": "act_max_and_min_problems_for_integrals-4-2",
+  "id": "act_shapes_of_integral_functions-4-2",
   "level": "2",
-  "url": "act_max_and_min_problems_for_integrals.html#act_max_and_min_problems_for_integrals-4-2",
+  "url": "act_shapes_of_integral_functions.html#act_shapes_of_integral_functions-4-2",
   "type": "Exercise",
   "number": "3.4.3.2",
   "title": "",
