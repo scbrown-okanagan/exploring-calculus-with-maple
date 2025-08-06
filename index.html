@@ -1,1085 +1,1238 @@
 <!DOCTYPE html>
-<html>
-<Head>
-<title>Stephen Brown</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
-</Head>  
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-body, html {
-  background-image: url('IMG_20180919_131621.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>
-<body class="w3-dark-grey">
+<html lang="en">
 
-<div class="w3-top">
-  <div class="w3-card-4 w3-light-grey">
-    <a href="#" class="w3-bar-item w3-btn">
-      <h1 class="w3-text-red"><i class="fa fa-user-tie fa-fw w3-margin-right w3-text-red"></i>Stephen Brown</h1>
-    </a>
-  </div>
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stephen Brown's Personal Page</title>
 
-<br><br><br><br>
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/icon.ico" type="image/x-icon">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" >
-  
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-    
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-			<!-- Personal Info Card -->
-      <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
-        <div class="w3-display-container w3-center">
-          <img class="w3-margin-top w3-circle" src="avatar.jpg" style="width:66%" alt="Avatar">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+ 
+  <!--
+    font awesome
+  --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/profile.png" alt="Stephen Brown" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Stephen Brown">Stephen Brown</h1>
+
+          <p class="title">College Professor</p>
         </div>
-				
-				<ul class="w3-ul">
-					<li class="w3-bar">
-						<i class="fa fa-briefcase w3-bar-item w3-text-red" style="width:0px" ></i>
-						<div class="w3-bar-item">
-							<span class="w3-large">Professor</span><br>
-							<span>Mathematics & Statistics</span>
-						</div>
-					</li>
-					<li class="w3-bar">
-						<i class="fa fa-building w3-bar-item w3-text-red" style="width:0px" ></i>
-						<div class="w3-bar-item">
-							<span class="w3-large">Okanagan College</span><br>
-							<span>Kelowna, BC</span><br>
-							<span>C Building, Room 104</span>
-						</div>
-					</li>
-					<li class="w3-bar">
-						<i class="fa fa-envelope w3-bar-item w3-text-red" style="width:0px" ></i>
-						<div class="w3-bar-item">
-							<span><a href="mailto:scbrown@okanagan.bc.ca">scbrown@okanagan.bc.ca</a></span>
-						</div>
-					</li>
-					<li class="w3-bar">
-						<i class="fa fa-phone w3-bar-item w3-text-red" style="width:0px" ></i>
-						<div class="w3-bar-item">
-							<span>250-762-5445 ext. 4782</span>
-						</div>
-					</li>
-					<li class="w3-bar">
-						<i class="fa fa-headset w3-bar-item w3-text-red" style="width:0px" ></i>
-						<div class="w3-bar-item">
-							<span><a href="https://discord.com/invite/kRGZBEQ">Find me on Discord</a></span>
-						</div>
-					</li>
-					<li class="w3-bar">
-						<i class="fas fa-video w3-bar-item w3-text-red" style="width:0px" ></i>
-						<div class="w3-bar-item">
-							<span><a href="https://ca01web.zoom.us/j/66373889177?pwd=bmMvWGVVeEtpOExsL1lOU0N1OEdoZz09">Zoom Link</a></span>
-						</div>
-					</li>
-				</ul>
-			</div>
-			
-			<!-- College Links Card -->
-			<div class="w3-container w3-card w3-light-grey w3-margin-bottom">
-				<div class="w3-container">
-          <p class="w3-large"><b><i class="fa fa-link fa-fw w3-margin-right w3-text-red"></i>Useful College Links</b></p>
-          <button onclick="accordion('College')" class="w3-btn w3-block w3-left-align">
-            <h5 class="w3-text-red">Okanagan College</h5>
-          </button>
-          <div id="College" class="w3-container w3-hide">
-            <ul class="w3-ul">
-              <li class="w3-text-opacity">
-                <a href="https://www.okanagan.bc.ca/success-centres">Success Centres</a>
-              </li>
-              <li class="w3-text-opacity">
-                <a href="https://www.okanagan.bc.ca/accessibility-services">Accessibility Services</a>
-              </li>
-              <li class="w3-text-opacity">
-                <a href="https://www.okanagan.bc.ca/counselling-services">Counselling Services</a>
-              </li>
-              <li class="w3-text-opacity">
-                <a href="https://www.okanagan.bc.ca/office-of-the-registrar/scheduling-office/scheduling-office#finalexam">Final Exam Schedule</a>
-              </li>
-              <li class="w3-text-opacity">
-                <a href="http://webapps-5.okanagan.bc.ca/ok/Calendar/AcademicIntegrity">Academic Integrity Policy</a>
-              </li>
-              <li class="w3-text-opacity">
-                <a href="http://webapps-5.okanagan.bc.ca/ok/Calendar/StudentConduct">Student Conduct Policy</a>
-              </li>
-            </ul>
-          </div>
-          <button onclick="accordion('MathStats')" class="w3-btn w3-block w3-left-align">
-            <h5 class="w3-text-red">Math & Stats Department</h5>
-          </button>
-          <div id="MathStats" class="w3-container w3-hide">
-            <ul class="w3-ul">
-              <li class="w3-text-opacity">
-                <a href="https://www.okanagan.bc.ca/science/math-and-statistics">Department Home Page</a>
-              </li>
-              <li class="w3-text-opacity">
-                <a href="https://webapps-5.okanagan.bc.ca/ok/Calendar/CourseDescriptions?MATH">Math Course Descriptions</a>
-              </li>
-              <li class="w3-text-opacity">
-                <a href="https://webapps-5.okanagan.bc.ca/ok/Calendar/CourseDescriptions?STAT">Stat Course Descriptions</a>
-              </li>
-            </ul>
-          </div>
-          <button onclick="accordion('Resources')" class="w3-btn w3-block w3-left-align">
-            <h5 class="w3-text-red">Other Academic Resources</h5>
-          </button>
-          <div id="Resources" class="w3-container w3-hide">
-            <ul class="w3-ul">
-              <li class="w3-text-opacity">
-                <a href="http://www.bctransferguide.ca/">BC Transfer Guide</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div><br>
 
-    <!-- End Left Column -->
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:scbrown@okanagan.bc.ca" class="contact-link">scbrown@okanagan.bc.ca</a>
+            </div>
+
+          </li>
+
+          <!--<li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+            </div>
+
+          </li>-->
+
+          <!--<li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 23, 1982</time>
+            </div>
+
+          </li>-->
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Kelowna, British Columbia, Canada</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.youtube.com/@stephen-brown" class="social-link">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/stephenbrown007/" class="social-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/scbrown-okanagan/" class="social-link">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.flickr.com/photos/stephen-brown" class="social-link">
+              <i class="fa-brands fa-flickr"></i>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <!--<nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Teaching</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>-->
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a college professor in the Mathematics and Statistics department at Okanagan College, located in Kelowna, Canada.
+			You may also occasionally find me at the University of British Columbia's Okanagan campus.
+          </p>
+
+          <p>
+            Education is my passion and I thoroughly enjoy teaching a variety of courses with a particular focus on first- and second-year calculus courses. When I'm not teaching, I am enjoying a plethora of hobbies that keep me busy and enoying the beautiful Okanagan.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <i class="fa-solid fa-graduation-cap fa-xl"></i>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Education</h4>
+
+                <p class="service-item-text">
+                  Delivering high quality first and second year lectures in an engaging environment
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <i class="fa-solid fa-person-biking fa-xl"></i>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cycling</h4>
+
+                <p class="service-item-text">
+                  Road cycling in a local cycling club and attending organized cycling events
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <i class="fa-solid fa-person-skiing fa-xl"></i>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Skiing</h4>
+
+                <p class="service-item-text">
+                  Downhill, cross-country, and backcountry skiing throughout the BC interior
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <i class="fa-solid fa-camera fa-xl"></i>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  Enthusiast photographer with a particular interest in landscape and travel
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <i class="fa-solid fa-music fa-xl"></i>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Musician</h4>
+
+                <p class="service-item-text">
+                  Proficient pianist and beginner guitarist
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <i class="fa-solid fa-martini-glass-citrus fa-xl"></i>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mixologist</h4>
+
+                <p class="service-item-text">
+                  Home bartender, whisky enthusiast, and amateur mixologist
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <!--<section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>-->
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <!--<section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>-->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="teaching" data-page="teaching">
+
+        <header>
+          <h2 class="h2 article-title">Teaching</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <!--<article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article> -->
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <!--<article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>-->
+
     </div>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-			
-			<!-- Schedules Card -->
-      <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
-				<button onclick="accordion('Schedules')" class="w3-btn w3-block w3-left-align">
-					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-clock fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Schedules</h2>
-        </button>
-				<div id="Schedules" class="w3-container w3-hide">
-					<!-- Summer Schedule -->
-					<!--					
-					<button onclick="accordion('summer')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2022</b></h6>
-					</button>
-					<div id="summer" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-flat-peter-river">MATH 122 Calculus II, Section 002</li>
-							<li class="w3-flat-emerald">MATH 112 Calculus I, Lab Section L02</li>
-						</ul>
-						<br>
-						<table class="w3-table-all">
-							<thead>
-								<tr class="w3-red">
-									<th>Time</th>
-									<th class="w3-center">M</th>
-									<th class="w3-center">T</th>
-									<th class="w3-center">W</th>
-									<th class="w3-center">R</th>
-									<th class="w3-center">F</th>
-								</tr>
-							</thead>
-							<tr>
-								<td>08:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>08:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>09:00</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>09:30</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>10:00</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>10:30</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>11:00</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>11:30</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>12:00</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>12:30</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>13:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>13:30</td>
-								<td> </td>
-								<td class="w3-flat-emerald"> </td>
-								<td> </td>
-								<td class="w3-flat-emerald"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>14:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<!-- <tr>
-								<td>14:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>15:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>15:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>16:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>16:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>17:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>17:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>18:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-						</table>
-					</div>
-					-->		
-					
-					<!-- Winter Schedule -->
-					<button onclick="accordion('winter')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2023</b></h6>
-					</button>
-					<div id="winter" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-flat-peter-river">MATH 122 Calculus II, Section 002</li>
-							<li class="w3-flat-orange">MATH 222 Calculus IV, Section 001</li>
-							<li class="w3-flat-amethyst">MATH 314 Calculus and Linear Algebra for Business, Section 002</li>
-						</ul>
-						<br>
-						<table class="w3-table-all">
-							<thead>
-								<tr class="w3-red">
-									<th>Time</th>
-									<th class="w3-center">M</th>
-									<th class="w3-center">T</th>
-									<th class="w3-center">W</th>
-									<th class="w3-center">R</th>
-									<th class="w3-center">F</th>
-								</tr>
-							</thead>
-							<tr>
-								<td>08:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>08:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>09:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>09:30</td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>10:00</td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>10:30</td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>11:00</td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>11:30</td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>12:00</td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td class="w3-flat-amethyst"> </td>
-							</tr>
-							<tr>
-								<td>12:30</td>
-								<td class="w3-flat-peter-river"></td>
-								<td> </td>
-								<td class="w3-flat-peter-river"></td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-							</tr>
-							<tr>
-								<td>13:00</td>
-								<td class="w3-flat-peter-river"></td>
-								<td> </td>
-								<td class="w3-flat-peter-river"></td>
-								<td> </td>
-								<td class="w3-flat-peter-river"></td>
-							</tr>
-							<tr>
-								<td>13:30</td>
-								<td class="w3-flat-peter-river"></td>
-								<td> </td>
-								<td class="w3-flat-peter-river"></td>
-								<td> </td>
-								<td class="w3-flat-peter-river"></td>
-							</tr>
-							<tr>
-								<td>14:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<!-- <tr>
-								<td>14:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>15:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>15:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>16:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>16:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>17:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>17:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>18:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr> -->
-						</table>
-					</div>
-					
-					<!-- Fall Schedule -->
-					<button onclick="accordion('fall')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2022</b></h6>
-					</button>
-					<div id="fall" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-flat-peter-river">MATH 112 Calculus I, Section 002</li>
-							<li class="w3-flat-turquoise">MATH 112 Calculus I, Lab Section L01</li>
-							<li class="w3-flat-emerald">MATH 112 Calculus I, Lab Section L02</li>
-							<li class="w3-flat-orange">MATH 212 Calculus III, Section 001</li>							
-							<li class="w3-flat-amethyst">MATH 314 Calculus and Linear Algebra for Business, Section 002</li>
-						</ul>
-						<br>
-						<table class="w3-table-all">
-							<thead>
-								<tr class="w3-red">
-									<th>Time</th>
-									<th class="w3-center">M</th>
-									<th class="w3-center">T</th>
-									<th class="w3-center">W</th>
-									<th class="w3-center">R</th>
-									<th class="w3-center">F</th>
-								</tr>
-							</thead>
-							<tr>
-								<td>08:00</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"></td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td class="w3-flat-peter-river"> </td>
-							</tr>
-							<tr>
-								<td>08:30</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td class="w3-flat-peter-river"> </td>
-							</tr>
-							<tr>
-								<td>09:00</td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-								<td class="w3-flat-peter-river"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>09:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>10:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>10:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>11:00</td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>11:30</td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>12:00</td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-								<td class="w3-flat-amethyst"> </td>
-							</tr>
-							<tr>
-								<td>12:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td class="w3-flat-amethyst"> </td>
-							</tr>
-							<tr>
-								<td>13:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>13:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>14:00</td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-							</tr>
-							<tr>
-								<td>14:30</td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-							</tr>
-							<tr>
-								<td>15:00</td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td class="w3-flat-orange"> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>15:30</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>16:00</td>
-								<td> </td>
-								<td class="w3-flat-turquoise"> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>16:30</td>
-								<td> </td>
-								<td class="w3-flat-turquoise"> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>17:00</td>
-								<td> </td>
-								<td class="w3-flat-emerald"> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>17:30</td>
-								<td> </td>
-								<td class="w3-flat-emerald"> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-							<tr>
-								<td>18:00</td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-								<td> </td>
-							</tr>
-						</table>
-					</div>			
-					
-					<button onclick="accordion('Schedules')" class="w3-btn w3-block w3-center-align">
-						<p>Close Schedules</p>
-					</button>
-				</div>
-      </div>
-    
-			<!-- Videos Card -->
-	  <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
-				<button onclick="accordion('Videos')" class="w3-btn w3-block w3-left-align">
-					<h2 class="w3-text-grey w3-padding-16"><i class="fab fa-youtube fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Video Tutorials</h2>
-        </button>
-				<div id="Videos" class="w3-container w3-hide">
-					<h6 class="w3-text-red"><i class="fab fa-youtube fa-fw w3-margin-right"></i><b>Precalculus Tutorials</b></h6>
-					<ul class="w3-ul w3-small">
-						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJcvvNi-FioGu4cAmlHIY8sW">Precalculus</a></li>
-					</ul>
-					<h6 class="w3-text-red"><i class="fab fa-youtube fa-fw w3-margin-right"></i><b>Calculus Tutorials</b></h6>
-					<ul class="w3-ul w3-small">
-						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJcyob69fHzv4UlP5UF6QCrp">Calculus I (Intro Differential Calculus)</a></li>
-						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJdHerE8oCHbPR3qpns6VcmX">Calculus II (Integral Calculus and Series)</a></li>
-						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJfGEXvCdFRbHDMgrg1ck7Ox">Calculus III (Multivariable Calculus)</a></li>
-						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJeZxYhNrWbrqkqMaTrYKXd7">Calculus IV (Vector Calculus)</a></li>
-					</ul>
-					<h6 class="w3-text-red"><i class="fab fa-youtube fa-fw w3-margin-right"></i><b>Business Calculus and Linear Algebra Tutorials</b></h6>
-					<ul class="w3-ul w3-small">
-						<li class="w3-text-opacity"><a href="https://www.youtube.com/playlist?list=PLr8L1shPJLJegREMx1_GCgKYL38aj1AMW">Business Calculus and Linear Algebra</a></li>
-					</ul>
-					
-					<button onclick="accordion('Videos')" class="w3-btn w3-block w3-center-align">
-						<p>Close Video Tutorials</p>
-					</button>
-				</div>
-			</div>
-		
-			<!-- Courses Card -->
-      <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
-				<button onclick="accordion('Courses')" class="w3-btn w3-block w3-left-align">
-					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-chalkboard-teacher fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Courses Taught</h2>
-				</button>
-				<div id="Courses" class="w3-container w3-hide">
-					<button onclick="accordion('W2023')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2023</b></h6>
-					</button>
-					<div id="W2023" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 122 Calculus II</li>
-							<li class="w3-text-opacity">MATH 222 Calculus IV</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-						</ul>
-					</div>
-					<button onclick="accordion('F2022')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2022</b></h6>
-					</button>
-					<div id="F2022" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 212 Calculus III</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-					<button onclick="accordion('S2022')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2022</b></h6>
-					</button>
-					<div id="S2022" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 122 Calculus II</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2022')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2022</b></h6>
-					</button>
-					<div id="W2022" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 122 Calculus II</li>
-							<li class="w3-text-opacity">MATH 222 Calculus IV</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-						</ul>
-					</div>
-					<button onclick="accordion('F2021')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2021</b></h6>
-					</button>
-					<div id="F2021" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 212 Calculus III</li>
-							<li class="w3-text-opacity">MATH 257 Mathematics for Electronic Engineering III</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2021')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2021</b></h6>
-					</button>
-					<div id="W2021" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 122 Calculus II</li>
-							<li class="w3-text-opacity">MATH 222 Calculus IV</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-							<li class="w3-text-opacity">Labs for MATH 122</li>
-						</ul>
-					</div>
-					<button onclick="accordion('F2020')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2020</b></h6>
-					</button>
-					<div id="F2020" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 120 Precalculus</li>
-							<li class="w3-text-opacity">MATH 257 Mathematics for Electronic Engineering III</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2020')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2020</b> </h6>
-					</button>
-					<div id="W2020" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
-							<li class="w3-text-opacity">MATH 122 Calculus II</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-					
-					<button onclick="accordion('F2019')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2019</b></h6>
-					</button>
-					<div id="F2019" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 212 Calculus III</li>
-							<li class="w3-text-opacity">MATH 251/COSC 221 Discrete Structures</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-						</ul>
-					</div>
-					<button onclick="accordion('S2019')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2019</b></h6>
-					</button>
-					<div id="S2019" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">STAT 121 Elementary Statistics</li>
-							<li class="w3-text-opacity">Labs for STAT 121</li>
-							<li class="w3-text-opacity">COSC 221 Discrete Structures (UBC Okanagan)</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2019')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2019</b></h6>
-					</button>
-					<div id="W2019" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-							<li class="w3-text-opacity">STAT 230/BIOL 202 Elementary Applied Statistics</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-		
-					<button onclick="accordion('F2018')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2018</b></h6>
-					</button>
-					<div id="F2018" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
-							<li class="w3-text-opacity">MATH 212 Calculus III</li>
-							<li class="w3-text-opacity">MATH 251/COSC 221 Discrete Structures</li>
-							<li class="w3-text-opacity">MATH 257 Mathematics for Electronic Engineering III</li>
-						</ul>
-					</div>
-					<button onclick="accordion('S2018')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2018</b></h6>
-					</button>
-					<div id="S2018" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">STAT 121 Elementary Statistics</li>
-							<li class="w3-text-opacity">Labs for STAT 121</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2018')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2018</b></h6>
-					</button>
-					<div id="W2018" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 251/COSC 221 Discrete Structures</li>
-							<li class="w3-text-opacity">MATH 314 Calculus and Linear Algebra with Business Applications</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-		
-					<button onclick="accordion('F2017')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2017</b></h6>
-					</button>
-					<div id="F2017" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 114 Business Mathematics (x2)</li>
-							<li class="w3-text-opacity">STAT 121 Elementary Statistics</li>
-							<li class="w3-text-opacity">Labs for STAT 121/124</li>
-							<li class="w3-text-opacity">Math 100 Calculus I (UBC Okanagan)</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2017')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2017</b></h6>
-					</button>
-					<div id="W2017" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">STAT 124 Business Statistics</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-							<li class="w3-text-opacity">Labs for MATH 122</li>
-							<li class="w3-text-opacity">Labs for STAT 124</li>
-						</ul>
-					</div>
-		
-					<button onclick="accordion('F2016')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2016</b></h6>
-					</button>
-					<div id="F2016" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 114 Business Mathematics (x2)</li>
-							<li class="w3-text-opacity">MATH 120 Precalculus</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-					<button onclick="accordion('S2016')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2016</b></h6>
-					</button>
-					<div id="S2016" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">Math 200 Calculus III (UBC Okanagan)</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2016')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2016</b></h6>
-					</button>
-					<div id="W2016" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 160 Mathematics for Elementary Teachers</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-							<li class="w3-text-opacity">Labs for STAT 121/124</li>
-						</ul>
-					</div>
-		
-					<button onclick="accordion('F2015')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2015</b></h6>
-					</button>
-					<div id="F2015" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 112 Calculus I</li>
-							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
-							<li class="w3-text-opacity">MATH 120 Precalculus</li>
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2015')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2015</b></h6>
-					</button>
-					<div id="W2015" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">Labs for MATH 112</li>
-						</ul>
-					</div>
-		
-					<button onclick="accordion('F2014')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2014</b></h6>
-					</button>
-					<div id="F2014" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 111 Essential Mathematics for Arts</li>
-							<li class="w3-text-opacity">MATH 114 Business Mathematics (x2)</li>
-						</ul>
-					</div>
-					<button onclick="accordion('S2014')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Summer 2014</b></h6>
-					</button>
-					<div id="S2014" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">Math 100 Calculus I (UBC Okanagan)</li>
-						</ul>
-					</div>
-					<button onclick="accordion('W2014')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Winter 2014</b></h6>
-					</button>
-					<div id="W2014" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 149 Mathematics for Network Telecommunications Engineering</li>
-							<li class="w3-text-opacity">STAT 124 Business Statistics (x2)</li>
-							<li class="w3-text-opacity">Labs for STAT 121/124</li>
-						</ul>
-					</div>
-		
-					<button onclick="accordion('F2013')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2013</b></h6>
-					</button>
-					<div id="F2013" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
-							<li class="w3-text-opacity">MATH 128 Mathematics for Water Engineering Technology</li>
-						</ul>
-					</div>
-		
-					<button onclick="accordion('F2012')" class="w3-btn w3-block w3-left-align">
-						<h6 class="w3-text-red"><i class="fa fa-calendar-alt fa-fw w3-margin-right"></i><b>Fall 2012</b></h6>
-					</button>
-					<div id="F2012" class="w3-container w3-hide">
-						<ul class="w3-ul w3-small">
-							<li class="w3-text-opacity">MATH 114 Business Mathematics</li>
-						</ul>
-					</div>
-					<button onclick="accordion('Courses')" class="w3-btn w3-block w3-center-align">
-						<p>Close Courses Taught</p>
-					</button>
-				</div>
-      </div>
-	  
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
-</div>
+  </main>
 
-<!-- <footer class="w3-container w3-red w3-center w3-margin-top">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer> -->
 
-<script>
-function accordion(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
