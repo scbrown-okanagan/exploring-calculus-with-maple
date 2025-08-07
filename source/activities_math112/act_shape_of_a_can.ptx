@@ -44,11 +44,11 @@
     </p>
     <figure xml:id="fig_square">
       <caption>Cutting circles in a square pattern.</caption>
-      <image width="50%" source="images/squares.png"/>
+      <image width="50%" source="images/squares-eps-converted-to"/>
     </figure>
     <figure xml:id="fig_hexagon">
       <caption>Cutting circles in a hexagonal pattern.</caption>
-      <image width="50%" source="images/hexagons.png"/>
+      <image width="50%" source="images/hexagons-eps-converted-to"/>
     </figure>
     <p>
       If the circles are cut in a rectangular grid patter as in to <xref ref="fig_square"/>, then you can see right away just how much extra material 
