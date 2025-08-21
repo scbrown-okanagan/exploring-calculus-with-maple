@@ -1,9 +1,9 @@
 <section xml:id="act_shape_of_a_can">
   <title>The Shape of a Can</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
         <li><xref ref="chp_derivative" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       Your goal in this question is to determine the height and radius of a perfectly cylindrical can that gives a total volume of 
       250 mL (250<nbsp/>cm<m>^3</m>) and uses the least amount of material to create.

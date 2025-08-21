@@ -1,9 +1,9 @@
 <section xml:id="act_sweet_16">
   <title>Sweet 16</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
         <li><xref ref="chp_limits" text="title" /></li>
@@ -12,7 +12,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       We all know that <m>16</m> exhibits the following interesting property:
       <me>16 = 2^4 = 4^2.</me>

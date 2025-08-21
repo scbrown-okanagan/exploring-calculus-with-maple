@@ -1,9 +1,9 @@
 <section xml:id="act_golden_gate_bridge_problem">
   <title>Arc Length and The Golden Gate Bridge Problem</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_plotting_functions" text="title" /></li>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
@@ -12,7 +12,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       Arc length is the distance between two points along a section of a curve. If this curve can be represented by a function <m>y=f(x)</m>,
       then we can calculate the length of this curve from <m>x=a</m> to <m>x=b</m> with the formula

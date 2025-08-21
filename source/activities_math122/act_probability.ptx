@@ -1,9 +1,9 @@
 <section xml:id="act_probability">
   <title>Probability</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_assignment_operator" text="title" /></li>
         <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       In this activity, you will use integration to calculate probabilities of continuous random variables. A continuous random variable 
       is a numerical variable, <m>X</m>, that can take on any value within a given range or interval. For example, perhaps <m>X</m> represents

@@ -1,9 +1,9 @@
 <section xml:id="act_infinite_integrals">
   <title>Infinite Integrals</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_plotting_functions" text="title" /></li>
         <li><xref ref="chp_assignment_operator" text="title" /></li>
@@ -12,7 +12,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       Infinite integrals are used in a variety of applications, including finding solutions to differential equations by way of the 
       Laplace transform. Infinite integrals can be challenging to evaluate by hand, but in this activity you will see that Maple can 

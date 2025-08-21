@@ -1,9 +1,9 @@
 <section xml:id="act_visualizing_the_net_change_theorem">
   <title>The Net Change Theorem</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
 		<p>
-			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
 			<ul>
 			<li><xref ref="chp_limits" text="title" /></li>
 			<li><xref ref="chp_riemann_sums_and_area_approximation" text="title" /></li>
@@ -12,7 +12,7 @@
 		</p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       The Net Change Theorem states that if a quantity <m>Q = F(t)</m> is a differentiable function on the interval <m>[a,b]</m>, then
       <md>

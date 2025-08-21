@@ -3,7 +3,7 @@
   <subsection>
     <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_maple_environment" text="title" /></li>
         <li><xref ref="chp_basics_of_maple_syntax" text="title" /></li>
@@ -12,7 +12,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>This activity will give you practice with:
 		<ul>
 			<li>setting up a new worksheet in Maple for future activities.</li>

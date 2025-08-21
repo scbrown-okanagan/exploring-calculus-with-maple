@@ -1,9 +1,9 @@
 <section xml:id="act_orthogonal_curves">
   <title>Orthogonal Curves</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
         <li><xref ref="chp_implicit_functions" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       Orthogonal curves are curves that are perpendicular whenever they intersect. Perpendicular lines are an elementary example of this.
       <idx><h>lines</h><h>perpendicular lines</h></idx>

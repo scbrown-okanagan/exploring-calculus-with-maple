@@ -1,9 +1,9 @@
 <section xml:id="act_average_value_of_function">
   <title>Average Value of a Function on a Shrinking Interval</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
 		<p>
-			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
 			<ul>
 			<li><xref ref="chp_limits" text="title" /></li>
 			<li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
@@ -11,7 +11,7 @@
 		</p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       The average value of a function<idx><h>average value of a function</h></idx> <m>f</m> on the interval <m>[a,b]</m> is defined as
       <me>f_{avg} = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx</me>.

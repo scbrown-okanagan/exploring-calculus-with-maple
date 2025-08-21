@@ -1,9 +1,9 @@
 <section xml:id="act_shrinking_circle_problem">
   <title>A Shrinking Circle Problem</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
         <li><xref ref="chp_limits" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       Limits may seem trivial when you first learn them, but they are fundamental building blocks in calculus.
       They are used to explain terms like <q>infinitesimally small</q> and <q>infinitely large</q>. It may be interesting 

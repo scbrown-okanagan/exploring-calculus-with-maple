@@ -1,9 +1,9 @@
 <section xml:id="act_implicit_functions">
   <title>Implicit Functions</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
         <li><xref ref="chp_implicit_functions" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       In this activity, you will learn how to plot implicit functions and compute their derivatives. You will need to ensure that 
       the <c>plots</c> package is loaded using the <c>with()</c> command. It is typically a good idea to include packages at the start

@@ -1,9 +1,9 @@
 <section xml:id="act_series_convergence_and_divergence">
   <title>Series Convergence and Divergence</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
         <li><xref ref="chp_sequences_and_series" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       An infinite series is a summation of the form
       <me>\sum_{n=0}^{\infty} a_n = a_0 + a_1 + a_2 + \dots</me>.

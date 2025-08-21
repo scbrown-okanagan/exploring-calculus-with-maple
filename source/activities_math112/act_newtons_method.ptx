@@ -1,9 +1,9 @@
 <section xml:id="act_newtons_method">
   <title>Newton's Method</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_derivative" text="title" /></li>
         <li><xref ref="chp_conditional_statements_and_loops" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       Newton's method is a numerical technique that can be used to approximate the roots of a continuous function. Suppose <m>f(x)</m> 
       is a differentiable function and you know that <m>f(x)=0</m> at some root <m>x=r</m>. However, you are unable to solve for <m>r</m> 

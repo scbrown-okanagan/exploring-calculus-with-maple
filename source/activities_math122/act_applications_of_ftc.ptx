@@ -1,9 +1,9 @@
 <section xml:id="act_applications_of_ftc">
   <title>Applications of the Fundamental Theorem of Calculus</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
 		<p>
-			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
 			<ul>
 			<li><xref ref="chp_equation_solvers" text="title" /></li>
 			<li><xref ref="chp_limits" text="title" /></li>
@@ -13,7 +13,7 @@
 		</p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       In this activity, you will need to make use of the Fundamental Theorem of Calculus in order to solve two applied problems.
       In particular, you will need to use the result

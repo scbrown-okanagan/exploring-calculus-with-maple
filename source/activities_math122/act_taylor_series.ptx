@@ -1,9 +1,9 @@
 <section xml:id="act_taylor_series">
   <title>Taylor and Maclaurin Series</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_plotting_functions"/></li>
         <li><xref ref="chp_sequences_and_series" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       The Taylor series of a function <m>f(x)</m> centred at <m>a</m> is the infinite series
       <me>

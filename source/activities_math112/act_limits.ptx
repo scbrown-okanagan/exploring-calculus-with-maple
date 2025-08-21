@@ -1,16 +1,16 @@
 <section xml:id="act_limits">
   <title>Limits</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_limits" text="title" /></li>
       </ul>
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       In this activity, you will use the <c>limit()</c> command to evaluate the limit of an expression or function. This will 
       also include one-sided limits and limits at infinity.

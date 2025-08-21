@@ -1,9 +1,9 @@
 <section xml:id="act_areas_between_curves">
   <title>Areas Between Curves</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
         <li><xref ref="chp_definite_and_indefinite_Integrals" text="title" /></li>
@@ -11,7 +11,7 @@
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       Consider two functions, <m>f(x)</m> and <m>g(x)</m>. We can find the total area between these two curves over an interval 
       <m>a \le x \le b</m> by integrating the absolute value of the difference between these two functions.

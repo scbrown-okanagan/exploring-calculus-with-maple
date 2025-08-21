@@ -1,16 +1,16 @@
 <section xml:id="act_solving_equations_in_maple">
   <title>Solving Equations in Maple</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
         <li><xref ref="chp_equation_solvers" text="title" /></li>
       </ul>
     </p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       In this activity, you will investigate the two main solvers that Maple uses, <c>solve()</c> and <c>fsolve()</c>.
       In some cases, you may find one is much more helpful than the other. Both commands provide unique benefits 

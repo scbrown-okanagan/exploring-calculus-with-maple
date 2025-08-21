@@ -1,9 +1,9 @@
 <section xml:id="act_shark_attack">
   <title>Shark Attack</title>
   <subsection>
-    <title>Recommended Tutorials:</title>
+    <title>Recommended Tutorials</title>
 		<p>
-			Before starting on these exercises, you should familiarize yourself with material covered in the following tutorials:
+			Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
 			<ul>
 			<li><xref ref="chp_assignment_operator" text="title" /></li>
 			<li><xref ref="chp_equation_solvers" text="title" /></li>
@@ -12,7 +12,7 @@
 		</p>
   </subsection>
   <subsection>
-    <title>Introduction:</title>
+    <title>Introduction</title>
     <p>
       In this activity, you will determine whether you can swim to safety before a shark attacks. You will need to use piecewise 
       functions and the Net Change Theorem to find the outcome.
