@@ -47,6 +47,13 @@
 		<exercise>
 			<introduction>
         <p>Now we would like Maple perform all three commands together.</p>
+		
+				<aside>
+					<title>Multi-line commands</title>
+					<p>
+					You can add a line break between commands on the same Maple input without running them with Shift+Enter.
+					</p>
+				</aside>
 			</introduction>
 			<task>
 				<statement>
@@ -70,18 +77,13 @@
 				</statement>
 				<hint>
 					<p>
-						It is a good practice whenever using the % <idx><h>ditto operator</h></idx> shortcut on a previous command to run both commands simultaneously on the same Maple input.
+						Whenever the % shortcut is used on a previous command, it is a good practice to run both commands simultaneously on the same Maple input.
+						<idx><h>ditto operator</h></idx>
 					</p>
 				</hint>
 			</task>
 			<conclusion>
         <p>You should see three outputs now: expanding, simplifying, and factoring.</p>
-				<aside>
-					<title>Multi-line commands</title>
-					<p>
-					You can add a line break between commands on the same Maple input without running them with Shift+Enter.
-					</p>
-				</aside>
 			</conclusion>
 		</exercise>
 		<exercise>

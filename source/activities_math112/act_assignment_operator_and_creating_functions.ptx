@@ -130,7 +130,7 @@
         </hint>
         <hint>
           <p>
-            The mathematical constant <m>\pi = 3.14\cdots</m> must be typed into Maple as <c>Pi</c>.
+            The mathematical constant <m>\pi = 3.14...</m> must be typed into Maple as <c>Pi</c>.
             <idx><h>Pi</h></idx>
           </p>
         </hint>

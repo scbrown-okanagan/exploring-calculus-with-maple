@@ -47,7 +47,7 @@
 			</statement>
 			<hint>
 				<p>
-					Capitalisation is important in Maple code, so always make sure that <c>Digits</c> has a capital D! However, semicolons are optional at the end of each command. They are used when multiple commands are used together on the same Maple input.
+					Capitalization is important in Maple code, so always make sure that <c>Digits</c> has a capital D! However, semicolons are optional at the end of each command. They are used when multiple commands are used together on the same Maple input.
 				</p>
 			</hint>
 		</exercise>
@@ -92,7 +92,7 @@
         </p>
       </statement>
 		</exercise>
-		<exercise>
+		<exercise xml:id="ex-maple-input">
 			<statement>
 				<p>
 					Create a new execution group by using the
@@ -108,7 +108,7 @@
 				</p>
 			</hint>
 		</exercise>
-		<exercise xml:id="ex-maple-input">
+		<exercise>
 			<statement>
 				<p>
 					In a new execution group, evaluate <m>\left(\dfrac{5^2 - 9}{9-5}\right)^2</m>.
@@ -155,7 +155,7 @@
 				</statement>
 				<hint>
 					<p>
-						The mathematical constant <m>\pi = 3.1415926\hdots</m><idx><h>Pi</h></idx> must be typed into Maple as capitalised <c>Pi</c>. Never type <c>pi</c>, unless you only wish to display the Greek letter <m>\pi</m> without its numerical value.
+						The mathematical constant <m>\pi = 3.1415926...</m><idx><h>Pi</h></idx> must be typed into Maple as capitalized <c>Pi</c>. Never type <c>pi</c>, unless you only wish to display the Greek letter <m>\pi</m> without its numerical value.
 					</p>
 				</hint>
 			</task>
@@ -180,23 +180,23 @@
 				</statement>
 			</task>
 		</exercise>
-		<exercise xml:id="ex-evalf">
+		<exercise>
 			<statement>
 				<p>
 					On each of the four Maple inputs you created in <xref ref="ex-builtin-functions" text="type-hybrid"></xref>, add a semicolon at the end of the line, followed by the command <c>evalf(%)</c>. For example:
-				</p>				
+				</p>	
+				<aside>
+					<title>Two commands at once</title>
+					<p>
+						The semicolon <c>;</c> separates commands if you want to run multiple commands on the same Maple input. The ditto operator, <c>%</c> will recall the last output and insert it into the desired command (in this case, <c>evalf()</c>.
+					</p>
+				</aside>			
 				<console prompt="> ">
 					<input>cos(Pi/6); evalf(%);</input>
 				</console>
 				<p>
 					After adding the additional command to each line, run each line a second time to see two outputs: the exact form and the approximate decimal form.
 				</p>
-        <aside>
-          <title>Two commands at once</title>
-          <p>
-            The semicolon <c>;</c> separates commands if you want to run multiple commands on the same Maple input. The ditto operator, <c>%</c> will recall the last output and insert it into the desired command (in this case, <c>evalf()</c>.
-          </p>
-        </aside>
 			</statement>
 		</exercise>
 		<exercise>
@@ -209,7 +209,7 @@
 		<exercise>
 			<statement>
 				<p>
-					Organize your work by using a new section for each of <xref ref="ex-maple-input" text="type-hybrid"></xref>-<xref ref="ex-evalf" text="type-hybrid"></xref> using the
+					Organize your work by using a new section for each of <xref ref="ex-maple-input" text="type-hybrid"></xref>-<xref ref="ex-builtin-functions" text="type-hybrid"></xref> using the
 				</p>
         <image width="10%" source="images/new_section.png"/>
         <p>
