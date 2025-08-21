@@ -57,12 +57,6 @@
       Your lab instructor will be available to assist you with the activity,
       though you will find that many of your questions can be answered by looking through the tutorial sections at the back of this book.
     </p>
-    <aside>
-      <p>
-        Always bring your lab manual along to your lab.
-        Take lots of notes in it!
-      </p>
-    </aside>
   </paragraphs>
   <paragraphs>
     <title>End of lab</title>
@@ -72,7 +66,7 @@
       You are now ready to complete the <em>activity quiz</em>.
       The questions in this quiz should be relatively quick to answer once you have completed the exercises from the activity.
       Often, you can simply copy and paste the output from Maple into the blanks on the quiz.
-      You will be required to <em>submit your Maple work</em> in addition to the quiz.
+      You will be required to <em>submit your Maple work</em> in the final question of the quiz.
     </p>
     <aside>
       <p>
@@ -122,7 +116,7 @@
 		<aside>
 			<p>
 				Don't forget to save your file in your
-				<em>network folder</em>.
+				<em>cloud storage (OneDrive)</em>.
 				This folder is accessible from any computer.
 				Saving your files is explained in detail in the next chapter.
 			</p>

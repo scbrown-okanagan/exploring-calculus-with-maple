@@ -45,11 +45,17 @@
     <frontmatter xml:id="title">
       <bibinfo>
         <author>
-          <personname>Stephen Brown</personname>
+          <personname>Stephen Brown, M.Sc.</personname>
           <department>Department of Mathematics and Statistics</department>
           <institution>Okanagan College</institution>
           <email>scbrown@okanagan.bc.ca</email>
         </author>
+        <editor>
+          <personname>Lindsey Reinholz, Ph.D.</personname>
+          <department>Department of Mathematics and Statistics</department>
+          <institution>Okanagan College</institution>
+          <email>lreinholz@okanagan.bc.ca</email>
+        </editor>
         <copyright>
           <year>2025</year>
           <holder>Stephen Brown</holder>
