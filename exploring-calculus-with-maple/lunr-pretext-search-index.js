@@ -1987,7 +1987,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.5",
   "title": "Using Sections",
-  "body": " Using Sections   Sections are groups of one or more execution groups or paragraphs that are indented together. At the top of a section, you can create a section title. An arrow to the left of the title will allow you to expand or collapse that section. Subsections may be created inside other sections.   You may wish to highlight several execution groups or paragraphs with the mouse before combining them into one section.      Use the buttons in the top toolbar to create or remove sections.     Use Ctrl+. to enclose input in a section.    Use Ctrl+, to remove any section enclosing an input.     "
+  "body": " Using Sections   Sections are groups of one or more execution groups or paragraphs that are indented together. At the top of a section, you can create a section title. An arrow to the left of the title will allow you to expand or collapse that section. Subsections may be created inside other sections.   You may wish to highlight several execution groups or paragraphs with the mouse before combining them into one section.      Use the button in the top toolbar to create a section.     Use Ctrl+. to enclose input in a section.    Use Ctrl+, to remove any section enclosing an input.     "
 },
 {
   "id": "sec_palettes_toolbar",
