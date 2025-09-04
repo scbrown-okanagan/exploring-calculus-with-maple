@@ -54,7 +54,7 @@
 		<exercise>
 			<introduction>
 				<p>
-					Create a new paragraph for text using the button at the top toolbar:
+					Create a new text group using the button at the top toolbar:
 				</p>
 				<image width="4%" source="images/new_text.png"/>
 				<p>
@@ -81,7 +81,15 @@
           <p>The title of the activity.</p>
         </statement>
         <hint>
-          <p>Ctrl+Shift+J and Ctrl+Shift+K are useful shortcuts for creating paragraphs after or before the current line.</p>
+          <p>
+			The new paragraph button also provides a way to enter plain text:
+		  </p>
+			<image width="4%" source="images/new_text.png"/>
+		  <p>
+		  </p>
+		  <p>Inserting paragraphs in this way will merge text and maple prompts together into a single group (as of Maple 2025).
+			Ctrl+Shift+J and Ctrl+Shift+K are useful shortcuts for creating paragraphs after or before the current line in this way.
+  		  </p>
         </hint>
       </task>
 		</exercise>
@@ -230,7 +238,7 @@
 				<p>
 					<em>(Optional)</em> Go back to the top of your worksheet and change the second line to: <c>> Digits := 50;</c>. Now run the entire worksheet by clicking on the button at the top toolbar:
 				</p>
-        		<image width="5%" source="images/execute_button-eps-converted-to"/>
+        		<image width="5%" source="images/execute_worksheet.png"/>
 			</statement>
 		</exercise>
 	</exercises>
