@@ -15,9 +15,9 @@
     <ul>
       <li>
         <p>
-          Use the buttons in the top toolbar to create or remove sections.
+          Use the button in the top toolbar to create a section.
         </p>
-        <image width="10%" source="images/new_section.png"/>
+        <image width="10%" source="images/section.png"/>
       </li>
       <li>
         <p>
