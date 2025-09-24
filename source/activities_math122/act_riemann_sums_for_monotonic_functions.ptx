@@ -26,7 +26,7 @@
       You will need to load the <c>Student[Calculus1]</c> package to use the <c>ApproximateInt()</c> command. You can do 
       with the command <c>with(Student[Calculus1]):</c> in your worksheet. It is typically a good idea to load any necessary 
       packages at the start of your Maple worksheet. If you close and reopen your worksheet, you will need to run the command 
-      to load packages again.
+      to load the packages again.
       <idx><h>packages</h><h>Student[Calculus1]</h></idx>
     </p>
     <p>
@@ -69,7 +69,7 @@
       <task>
         <statement>
           <p>
-            Now suppose a function is monotonically decreasing function on a given interval. Which method will always 
+            Now suppose a function is monotonically decreasing on a given interval. Which method will always 
             be an underestimate? Which method always gives an overestimate? Provide an answer to these questions in your 
             worksheet.
           </p>
@@ -93,7 +93,7 @@
         </statement>
         <hint>
           <p>
-            Don't forget that you can convert an exact value to decimal using the <c>evalf()</c> command. You can set 
+            Don't forget that you can convert an exact value to a decimal using the <c>evalf()</c> command. You can set 
             the accuracy to 15 digits at the top of your worksheet using the command <c>Digits := 15</c>. Note that the 
             first letter is always capitalized in <c>Digits</c>.
             <idx><h>evalf</h></idx>
