@@ -1,4 +1,4 @@
-<section xml:id="act_visualizing_the_net_change_theorem">
+<section xml:id="act_the_net_change_theorem">
   <title>The Net Change Theorem</title>
   <subsection>
     <title>Recommended Tutorials</title>
@@ -64,7 +64,7 @@
       <introduction>
         <p>
           In this exercise, you will determine the exact value of the <em>net</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>, 
-          using a limit of Riemann sums as well as the convnenient <c>Int()</c> (or <c>int()</c>) command.
+          using a limit of Riemann sums as well as the convenient <c>Int()</c> (or <c>int()</c>) command.
         </p>
       </introduction>
       <task>
@@ -96,7 +96,7 @@
         <hint>
           <p>
             You may use the inert <c>Int()</c> command followed by <c>value(%)</c> (this is typically done on the same input line, with a 
-            semicolon between commands) or the <c>int()</c> command, which evaluates immediately.
+            semicolon between commands) or the <c>int()</c> command, which evaluates the integral immediately.
           </p>
         </hint>
       </task>
@@ -120,8 +120,8 @@
     <exercise>
       <introduction>
         <p>
-          In this exercise, you will determine the exact value of the <em>net</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>, 
-          using a limit of Riemann sums as well as the convnenient <c>Int()</c> (or <c>int()</c>) command.
+          In this exercise, you will determine the exact value of the <em>total</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>, 
+          using a limit of Riemann sums as well as the convenient <c>Int()</c> (or <c>int()</c>) command.
         </p>
       </introduction>
       <task>
@@ -134,10 +134,12 @@
         </statement>
         <hint>
           <p>
-            Once again, the <c>ApproximateInt()</c> command will likely only output the net change in summation notation, using an absolute value. 
-            In this case, using the <c>value(%)</c> command might not give you a closed form of the summation! As it turns out, evaluating total 
-            change as the limit of Riemann sums over the whole interval might not be the best way to go here. Don't worry if you can't get Maple 
-            to do what you want. You'll use the <c>Int()</c> command in a moment!
+            Once again, the <c>ApproximateInt()</c> command will likely only output the total change in summation notation, using an absolute value. 
+            In this case, using the <c>value(%)</c> command might not give you a closed form of the summation!
+          </p>
+          <p>
+            As it turns out, evaluating total change as the limit of Riemann sums over the whole interval might not be the best way to go here. 
+            Don't worry if you can't get Maple to do what you want. You'll use the <c>Int()</c> command in a moment!
             <idx><h>value</h></idx>
           </p>
         </hint>
@@ -145,14 +147,14 @@
       <task>
         <statement>
           <p>
-            Compute <m>\displaystyle\int_{-5}^{10} f(x) \; dx</m> by using the <c>Int()</c> (or <c>int()</c> command. 
+            Compute <m>\displaystyle\int_{-5}^{10} |f(x)| \; dx</m> by using the <c>Int()</c> (or <c>int()</c> command. 
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            In a couple sentances, describe how you could go about evaluating the <em>total</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>
+            In a couple sentences, describe how you could go about evaluating the <em>total</em> change of <m>f(x)</m> on the interval <m>[-5,10]</m>
             without needing to use the absolute value function.
           </p>
         </statement>

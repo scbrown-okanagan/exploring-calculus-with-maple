@@ -5,7 +5,7 @@
       The following activities are considered core and should be covered during the semester:
       <ul>
         <li><xref ref="act_riemann_sums_for_monotonic_functions" text="title" /></li>
-        <li><xref ref="act_visualizing_the_net_change_theorem" text="title" /></li>
+        <li><xref ref="act_the_net_change_theorem" text="title" /></li>
         <li><xref ref="act_areas_between_curves" text="title" /></li>
         <li><xref ref="act_infinite_integrals" text="title" /></li>
         <li>
@@ -23,7 +23,7 @@
     </p>
   </introduction>
   <xi:include  href="act_riemann_sums_for_monotonic_functions.ptx"/>
-  <xi:include  href="act_visualizing_the_net_change_theorem.ptx"/>
+  <xi:include  href="act_the_net_change_theorem.ptx"/>
   <xi:include  href="act_approximate_integration.ptx"/>
   <xi:include  href="act_shapes_of_integral_functions.ptx"/>
   <xi:include  href="act_applications_of_ftc.ptx"/>
