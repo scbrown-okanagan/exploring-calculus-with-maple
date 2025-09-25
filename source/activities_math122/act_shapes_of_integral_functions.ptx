@@ -50,7 +50,7 @@
         <aside>
           <p>
             By the Fundamental Theorem of Calculus,
-            <me>\dfrac{d}{dx} Si(x) = \dfrac{\sin(x)}{x}</me>.
+            <me>\dfrac{d}{dx} Si(x) = \dfrac{\sin(x)}{x}</me>,
             where <m>x \ne 0</m>. Known as the <m>sinc(x)</m> function, this is used in signal processing and the theory of Fourier transforms.
           </p>
         </aside>

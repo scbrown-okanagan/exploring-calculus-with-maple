@@ -45,7 +45,7 @@
       <task>
         <statement>
           <p>
-            To start, try visualizing the problem. Plot the graph of <m>s(x)</m> over the interval <m>[-1,1]</m>.
+            Try visualizing the problem by plotting the graph of <m>s(x)</m> over the interval <m>[-1,1]</m>.
             See if you can estimate <m>\displaystyle\lim_{x\rightarrow0}s(x)</m> from the plot.
             <idx><h>plot</h></idx>
           </p>
@@ -56,7 +56,7 @@
           <p>
             The integral function in the numerator is what makes this limit problem so challenging. Try evaluating 
             <m>\int_{0}^x \sin(t^2) \; dt</m> using the <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands. Notice how Maple evaluates the 
-            function, but not in terms of elementary functions.
+            integral, but not in terms of elementary functions.
           </p>
         </statement>
         <hint>
@@ -70,8 +70,8 @@
         <statement>
           <p>
             Luckily, you should not need to evaluate this integral in order to evaluate the limit. Instead, you may apply 
-            l'H&#xf4;pital's rule, so long as the limit is indeterminant of the form <m>0/0</m> or <m>\infty/\infty</m>. 
-            Which of these two indeterminant forms is applicable?
+            l'H&#xf4;pital's rule, so long as the limit is indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>. 
+            Which of these two indeterminate forms is applicable?
             <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>
           </p>
         </statement>
@@ -89,10 +89,10 @@
             You can differentiate the numerator of <m>s(x)</m> by using the <c>numer()</c> function:
           </p>
           <console prompt="> ">
-            <input>diff(numer(s(x)), x)</input>
+            <input>diff(numer(s(x)), x);</input>
           </console>
           <p>
-            Similarly, you can differentiate the denominator of <m>s(x)</m> using the <c>demon()</c> function.
+            Similarly, you can differentiate the denominator of <m>s(x)</m> using the <c>denom()</c> function.
           </p>
           <p>
             Try making a new fraction using both of these functions together.
@@ -102,7 +102,7 @@
       <task>
         <statement>
           <p>
-            You should have noticed that the new limit after applying l'H&#xf4;pital's rule is indeterminant of the form 
+            You should have noticed that the new limit after applying l'H&#xf4;pital's rule is indeterminate of the form 
             <m>0/0</m>. Try applying l'H&#xf4;pital's rule again, this time finding the second derivatives of the numerator 
             and denominator.
           </p>
@@ -111,8 +111,8 @@
           <p>
             You can find the second derivative of the numerator of <m>s(x)</m> using
           </p>
-          <console prompt=">">
-            <input>diff(numer(s(x)), x, x)</input>
+          <console prompt="> ">
+            <input>diff(numer(s(x)), x, x);</input>
           </console>
           <p>
             and switching to <c>denom()</c> for the denominator.
@@ -135,7 +135,7 @@
           <men xml:id="eq_ftc_equation">
             6 + \displaystyle\int_{a}^x \dfrac{f(t)}{t^2} dt = 2\sqrt{x}
           </men>.
-          Start by assigning equation <xref ref="eq_ftc_equation"/> to a name of your choice,such as <c>eqn</c>.
+          Start by assigning equation <xref ref="eq_ftc_equation"/> to a name of your choice, such as <c>eqn</c>.
         </p>
         <aside>
           <p>
@@ -163,7 +163,7 @@
         </statement>
         <hint>
           <p>
-            Make sure that you are using <m>t</m> as the variable in the integrand when substituting you solution for <m>f</m>.
+            Make sure that you are using <m>t</m> as the variable in the integrand when substituting your solution for <m>f</m>.
           </p>
         </hint>
       </task>

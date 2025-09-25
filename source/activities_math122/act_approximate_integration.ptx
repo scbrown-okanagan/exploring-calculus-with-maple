@@ -14,24 +14,24 @@
     <title>Introduction</title>
     <p>
       The trapezoid rule, the midpoint rule, and Simpson's rule are all useful numerical methods for approximating a definite integral of a function 
-      <m>f(x)</m> on a finite interval. Maple's <c>ApproximateInt()</c> command supports each of these techniques, which can be specified setting the 
+      <m>f(x)</m> on a finite interval. Maple's <c>ApproximateInt()</c> command supports each of these techniques, which can be specified by setting the 
       optional <c>method</c> parameter to the desired option.
     </p>
     <p>
       Each of these techniques will have some associated error with its approximation, measured as the difference between the approximated numerical 
-      value and the actual value of the definite integral. For any particular function <m>f(x)</m>, it is possible to calculate the largest possible 
-      error (an upper bound) in its approximation for a finite number of subintervals, <m>n</m>.  In particular:
+      value and the actual value of the definite integral. For any particular function <m>f(x)</m>, it is possible to calculate the largest error 
+      (an upper bound) in its approximation for a finite number of subintervals, <m>n</m>.  In particular:
       <md>
-        <mrow xml:id="eq_traperror" number="yes"> \abs{E_T} \amp\le \dfrac{K(b-a)^3}{12n^2} \amp\amp \text{where } K = \text{ maximum of }|f''(x)|\text{ on the interval}</mrow>
-        <mrow xml:id="eq_miderror" number="yes"> \abs{E_M} \amp\le \dfrac{K(b-a)^3}{24n^2} \amp\amp \text{where } K = \text{ maximum of }|f''(x)|\text{ on the interval} </mrow>
-        <mrow xml:id="eq_simperror" number="yes"> \abs{E_S} \amp\le \dfrac{K(b-a)^5}{180n^4} \amp\amp \text{where } K = \text{ maximum of }|f^{(4)}(x)|\text{ on the interval} </mrow>
+        <mrow xml:id="eq_traperror" number="yes"> \abs{E_T} \amp\le \dfrac{K(b-a)^3}{12n^2}, \quad K = \text{ maximum of }|f''(x)|\text{ on } [a,b]</mrow>
+        <mrow xml:id="eq_miderror" number="yes"> \abs{E_M} \amp\le \dfrac{K(b-a)^3}{24n^2}, \quad K = \text{ maximum of }|f''(x)|\text{ on } [a,b]</mrow>
+        <mrow xml:id="eq_simperror" number="yes"> \abs{E_S} \amp\le \dfrac{K(b-a)^5}{180n^4}, \quad K = \text{ maximum of }|f^{(4)}(x)|\text{ on } [a,b]</mrow>
       </md>
-      Each error bound calculations relies on the width of the interval <m>[a,b]]</m>, the number of subintervals <m>n</m>, and the shape of the 
+      Each error bound calculation relies on the width of the interval <m>[a,b]</m>, the number of subintervals <m>n</m>, and the shape of the 
       function (the second or fourth derivative) on the interval.
     </p>
     <p>
       In this activity, you will use Maple's <c>ApproximateInt()</c> command to help visualize these three approximation methods and then calculate 
-      the error bound associated with them.
+      the error bounds associated with them.
       <idx><h>integral approximation</h><h>ApproximateInt</h></idx>
     </p>
   </subsection>
@@ -39,7 +39,7 @@
     <exercise>
       <statement>
         <p>
-          Assign <m>{ e}^x\sin(x)</m> using the assignment operator, <c>:=</c>, and plot it over the interval <m>[0,1]</m>.
+          Assign <m>f(x) = { e}^x\sin(x)</m> using the assignment operator, <c>:=</c>, and plot it over the interval <m>[0,1]</m>.
         </p>
       </statement>
       <hint>
@@ -154,9 +154,9 @@
     <exercise>
       <introduction>
         <p>
-          In this exercise, you will determine the error bounds for <em>trapezoid</em> and <em>midpoint</em> rules, 
-          since they both depend on the maximum value of <m>\abs{f''(x)}</m> over the interval. You may need to dig 
-          up some knowledge of critical values and extreme values on a closed interval in this exercise.
+          In this exercise, you will determine the error bounds for the <em>trapezoid</em> and <em>midpoint</em> approximations you 
+          obtained in exercises 2 and 3. Both of these error bound calculations depend on the maximum value of <m>\abs{f''(x)}</m> over 
+          the interval. You may need to recall some knowledge of critical values and extreme values on a closed interval to complete this exercise.
           <idx><h>integral approximation</h><h>error</h></idx>
         </p>
       </introduction>
@@ -172,21 +172,21 @@
         <statement>
           <p>
             Find the critical number of <m>|f''(x)|</m> by solving <m>f'''(x)=0</m> for <m>x</m>. Evaluate <m>|f''(x)|</m> at this 
-            <m>x</m>-value to determine the value of <m>K</m> that is used in formulas <xref ref="eq_traperror"/> and <xref ref="eq_traperror"/>.
+            <m>x</m>-value to determine the value of <m>K</m> that is used in formulas <xref ref="eq_traperror"/> and <xref ref="eq_miderror"/>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Compute <m>|E_T|</m> using formula <xref ref="eq_traperror"/>.
+            Compute the upper bound for <m>|E_T|</m> using formula <xref ref="eq_traperror"/>.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Compute <m>|E_M|</m> using formula <xref ref="eq_miderror"/>.
+            Compute the upper bound for <m>|E_M|</m> using formula <xref ref="eq_miderror"/>.
           </p>
         </statement>
       </task>
@@ -194,9 +194,9 @@
     <exercise>
       <introduction>
         <p>
-          In this exercise, you will determine the error bounds for <em>Simpson's</em> rules, which depends on the maximum value of 
-          <m>\abs{f^{(4)}(x)}</m> over the interval. Also note that <c>partition=4</c> actually correponds to <m>n=8</m>, since there 
-          is an additional sample point in each partition, resulting in twice as many subintervals.
+          In this exercise, you will determine the error bound for the approximation you obtained in exercise 4 using <em>Simpson's</em> rule.
+          This error bound calculation depends on the maximum value of <m>\abs{f^{(4)}(x)}</m> over the interval. Also note that <c>partition=4</c> 
+          actually correponds to <m>n=8</m>, since there is an additional sample point in each partition, resulting in twice as many subintervals.
           <idx><h>integral approximation</h><h>error</h></idx>
         </p>
       </introduction>
@@ -219,7 +219,7 @@
       <task>
         <statement>
           <p>
-            Compute <m>|E_S|</m> using formula <xref ref="eq_simperror"/>.
+            Compute the upper bound for <m>|E_S|</m> using formula <xref ref="eq_simperror"/>.
           </p>
         </statement>
         <hint>

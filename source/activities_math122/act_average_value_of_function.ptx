@@ -84,23 +84,23 @@
         <p>
           In this exercise, you will determine the value the limit analytically, using Maple to assist with methods that you would otherwise use on paper.
         </p>
-        <aside>
-          <p>
-            L'H&#xf4;pital's Rule states that if the limit
-            <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)}</me>
-            is indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>, if <m>f</m> and <m>g</m> are differentiable at 
-            <m>a</m>, and if <m>g'(x) \neq 0</m> near <m>a</m>, then
-            <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}</me>,
-            assuming that this limit exists.
-          </p>
-        </aside>
       </introduction>
       <task>
         <statement>
           <p>
-            Try evaluating the integral <m>\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3} \; dt</m> using the <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands. Notice how 
-            Maple evaluates the function, but not in terms of elementary functions.
+            Try evaluating the integral <m>\displaystyle\int_{2}^{2+h} \sqrt{1 + x^3} \; dx</m> using the <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands. Notice how 
+            Maple evaluates the integral, but not in terms of elementary functions.
           </p>
+          <aside>
+            <p>
+              L'H&#xf4;pital's Rule states that if the limit
+              <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)}</me>
+              is indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>, if <m>f</m> and <m>g</m> are differentiable at 
+              <m>a</m>, and if <m>g'(x) \neq 0</m> near <m>a</m>, then
+              <me>\lim_{x\rightarrow a}\frac{f(x)}{g(x)} = \lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}</me>,
+              assuming that this limit exists.
+            </p>
+          </aside>
         </statement>
         <hint>
           <p>
@@ -113,7 +113,7 @@
         <statement>
           <p>
             Luckily, you should not need to evaluate this integral in order to evaluate the limit. Instead, you may apply l'H&#xf4;pital's rule, so long as the limit is 
-            indeterminant of the form <m>0/0</m> or <m>\infty/\infty</m>. Which of these two indeterminant forms is applicable?
+            indeterminate of the form <m>0/0</m> or <m>\infty/\infty</m>. Which of these two indeterminate forms is applicable?
             <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>
           </p>
         </statement>
@@ -145,7 +145,7 @@
     <exercise>
       <introduction>
         <p>
-          Finally, it's time to let Maple evaluate this limit, letting the power of the <c>limit()</c> command and the Limit Methods Tutor do all the work.
+          Finally, it's time to let Maple evaluate this limit, letting the power of the <c>limit()</c> command and the Limit Methods tutor do all the work.
         </p>
       </introduction>
       <task>
@@ -159,7 +159,7 @@
       <task>
         <statement>
           <p>
-            Use the Limit Methods Tutor to evaluate <m>\displaystyle\lim_{h \to 0} avg(h)</m> to see how l'H&#xf4;pital's Rule is applied, along with a variety of limit 
+            Use the Limit Methods tutor to evaluate <m>\displaystyle\lim_{h \to 0} avg(h)</m> to see how l'H&#xf4;pital's Rule is applied, along with a variety of limit 
             laws.
             <idx><h>limit</h><h>l'H&#xf4;pital</h></idx>
             <idx><h>limit</h><h>tutor</h></idx>
@@ -167,7 +167,7 @@
         </statement>
         <hint>
           <p>
-            After opening the Limit Methods Tutor, you can simply type <m>avg(h)</m> for the function. Just don't forget to change the variable to <m>h</m>!
+            After opening the Limit Methods tutor, you can simply type <m>avg(h)</m> for the function. Just don't forget to change the variable to <m>h</m>!
           </p>
         </hint>
       </task>
