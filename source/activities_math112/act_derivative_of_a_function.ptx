@@ -56,7 +56,7 @@
     <exercise>
       <introduction>
         <p>
-          Molten lava can fill a chamber in the earth's crust before it builds up enough pressure to erupt. Suppose that the pressure of lava (in MPa) in a 
+          Molten lava can fill a chamber in the Earth's crust before it builds up enough pressure to erupt. Suppose that the pressure of lava (in MPa) in a 
           chamber is given by the function
           <me>P(t) = 0.47 t^2 { e}^{0.0035 t}</me>,
           where <m>t</m> is the time in months. Start by assigning this function in Maple.
@@ -114,6 +114,11 @@
             <idx><h>plot</h></idx>
           </p>
         </statement>
+        <hint>
+          <p>
+            When specifying an interval for your horizontal axis, make sure that you use <m>t</m> as your variable instead of <m>x</m>.
+          </p>
+        </hint>
       </task>
       <task>
         <statement>
@@ -155,9 +160,10 @@
     <exercise>
       <introduction>
         <p>
-          The higher derivatives of <m>sin(x)</m> and <m>cos(x)</m> form a predictable pattern. What if these derivatives also involve a chain 
-          rule? In this exercise, you'll look for a pattern of derivatives in the function
+          The higher derivatives of <m>\sin(x)</m> and <m>\cos(x)</m> follow a predictable pattern. In this exercise, you will look for a pattern in the derivatives of the function
           <me>g(x)=\sin(2\pi^2 x)</me>.
+          The derivatives of <m>g(x)</m> will require use of the chain rule, which makes calculations more complicated. However, there is still a 
+          predictable pattern of higher derivatives.
         </p>
         <aside>
           <p>
@@ -178,7 +184,7 @@
         </statement>
         <hint>
           <p>
-            To type the mathematical constant <m>\pi = 3.14\cdots</m>, be sure to use <c>Pi</c>.
+            To type the mathematical constant <m>\pi = 3.14\dots</m>, be sure to use <c>Pi</c>.
             <idx><h>Pi</h></idx>
           </p>
         </hint>
@@ -191,7 +197,7 @@
       <task>
         <statement>
           <p>
-            Use Maple to find the first, second, third, and fourth derivative of <m>g(x)</m>.
+            Use Maple to find the first, second, third, and fourth derivatives of <m>g(x)</m>.
             You should notice a pattern. Try to describe this pattern in a paragraph.
             <idx><h>derivative</h><h>diff!higher derivatives</h></idx>
           </p>
@@ -200,7 +206,7 @@
       <task>
         <statement>
           <p>
-            Using your this pattern, try to predict the 77th derivative of <m>g(x)</m>. Then, evaluate the 
+            Using this pattern, try to predict the 77th derivative of <m>g(x)</m>. Then, evaluate the 
             77th derivative directly using a single <c>diff()</c> command.
             <idx><h>derivative</h><h>diff!higher derivatives</h></idx>
           </p>

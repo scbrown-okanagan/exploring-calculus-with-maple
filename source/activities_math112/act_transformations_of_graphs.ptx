@@ -54,7 +54,7 @@
       <task>
         <statement>
           <p>
-            By what amount do you need to shift the graph of <m>\sin (x)</m> to the riught (positive <m>x</m> direction)
+            By what amount do you need to shift the graph of <m>\sin (x)</m> to the right (positive <m>x</m> direction)
             so that it coincides with the graph of <m>\cos (x)</m>? 
             Answer the question in sentence form using a new paragraph.
           </p>
@@ -65,7 +65,7 @@
       <statement>
         <p>
           The graphs of <m>e^x</m> and <m>\ln(x)</m> should appear to be reflected over the line <m>y=x</m> because they are inverses.
-          Plot <m>e^x</m>, <m>\ln(x)</m>, and <m>x</m> together with the option <c>linestyle=[solid,solid,dash</c>] so that the line of reflection is dashed.
+          Plot <m>e^x</m>, <m>\ln(x)</m>, and <m>x</m> together with the option <c>linestyle=[solid,solid,dash]</c> so that the line of reflection is dashed.
           <idx><h>plot</h><h>line style</h></idx>
         </p>
       </statement>
@@ -76,7 +76,7 @@
       </hint>
       <hint>
         <p>
-          An example of plotting transformations of a function can be found on <xref ref="ex_plotting_transformations">page</xref>.
+          An example of plotting transformations of a function can be found in <xref ref="ex_plotting_transformations"/>.
         </p>
       </hint>
     </exercise>
@@ -97,7 +97,7 @@
       </hint>
       <hint>
         <p>
-          An example of plotting transformations of a function can be found in <xref ref="ex_plotting_transformations">page</xref>.
+          An example of plotting transformations of a function can be found in <xref ref="ex_plotting_transformations"/>.
         </p>
       </hint>
       <hint>

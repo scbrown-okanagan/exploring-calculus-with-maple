@@ -3,7 +3,7 @@
   <subsection>
     <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorial:
       <ul>
         <li><xref ref="chp_limits" text="title" /></li>
       </ul>
@@ -38,7 +38,7 @@
         </p>
         <aside>
           <p>
-            Some versions of Maple may not display discontinutes of certain functions properly. Instead, the graph may even appear 
+            Some versions of Maple may not display discontinuities of certain functions properly. Instead, the graph may even appear 
             as connected with a vertical line! In this case, you may include <c>discont=true</c> as a parameter in the <c>plot( )</c> 
             command to fix the graph output.
             <idx><h>plot</h><h>discontinuities</h></idx>
@@ -120,14 +120,6 @@
             Don't forget to use <m>t</m> instead of <m>x</m> when plotting this expression.
           </p>
         </hint>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Evaluate <m>\displaystyle\lim_{t \to 0}\frac{\sin(t)}{\sin(\pi t)}</m> using the <c>limit()</c> command and confirm whether 
-            the two-sided limit exists.
-          </p>
-        </statement>
         <hint>
           <p>
             For the mathematical constant <m>\pi</m>, you can either type <c>Pi</c> or use the palettes toolbar.
@@ -138,6 +130,14 @@
             Do not forget to include a space or multiplication between two consecutive symbols, <m>\pi</m> and <m>t</m>.
           </p>
         </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Evaluate <m>\displaystyle\lim_{t \to 0}\frac{\sin(t)}{\sin(\pi t)}</m> using the <c>limit()</c> command and confirm whether 
+            the two-sided limit exists.
+          </p>
+        </statement>
       </task>
     </exercise>
     <exercise>
@@ -157,7 +157,7 @@
       <introduction>
         <p>
           If you wish to explore all of the limit laws and how they apply to a challenging limit problem, you can see 
-          each step applied individually using the Limit Methods Tutor. In this exercise, you will get to see a step-by-step 
+          each step applied individually using the Limit Methods tutor. In this exercise, you will get to see a step-by-step 
           method for evaluating
           <me>\lim_{x \to -\infty} \sqrt{x^2+x+1}-x</me>.
           <idx><h>limit</h><h>tutor</h></idx>
@@ -166,11 +166,16 @@
       <task>
         <statement>
           <p>
-            Open the Limit Methods Tutor and type in the function <c>sqrt(x^2+x+1)-x</c>. Set the varible to <c>x</c> at <c>infinity</c>
+            Open the Limit Methods tutor and type in the function <c>sqrt(x^2+x+1)-x</c>. Set the varible to <c>x</c> at <c>infinity</c>
             and click Start to initialize the tutor. Click "Next Step" twice to see how Maple rewrites the expression by obtaining a 
             common denominator and dividing by the highest power.
           </p>
         </statement>
+        <hint>
+          <p>
+            An example involving the Limit Methods tutor can be found in <xref ref="sec_limit_methods_tutor"/>.
+          </p>
+        </hint>
       </task>
       <task>
         <statement>

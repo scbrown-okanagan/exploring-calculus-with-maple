@@ -3,7 +3,7 @@
   <subsection>
     <title>Recommended Tutorials</title>
     <p>
-      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
+      Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorial:
       <ul>
         <li><xref ref="chp_limits" text="title" /></li>
       </ul>
@@ -46,7 +46,7 @@
         </p>
         <aside>
           <p>
-            Some versions of Maple may not display discontinutes of certain functions properly. Instead, the graph may even appear 
+            Some versions of Maple may not display discontinuities of certain functions properly. Instead, the graph may even appear 
             as connected with a vertical line! In this case, you may include <c>discont=true</c> as a parameter in the <c>plot( )</c> 
             command to fix the graph output.
             <idx><h>plot</h><h>discontinuities</h></idx>
@@ -87,7 +87,7 @@
             should not need to retype any part of the function:
           </p>
           <console prompt="> ">
-            <input>factor(denom(g(x)))</input>
+            <input>factor(denom(g(x)));</input>
           </console>
         </hint>
       </task>
