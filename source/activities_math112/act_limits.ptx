@@ -159,14 +159,14 @@
           If you wish to explore all of the limit laws and how they apply to a challenging limit problem, you can see 
           each step applied individually using the Limit Methods tutor. In this exercise, you will get to see a step-by-step 
           method for evaluating
-          <me>\lim_{x \to -\infty} \sqrt{x^2+x+1}-x</me>.
+          <me>\lim_{x \to -\infty} \sqrt{x^2+x+1}+x</me>.
           <idx><h>limit</h><h>tutor</h></idx>
         </p>
       </introduction>
       <task>
         <statement>
           <p>
-            Open the Limit Methods tutor and type in the function <c>sqrt(x^2+x+1)-x</c>. Set the varible to <c>x</c> at <c>infinity</c>
+            Open the Limit Methods tutor and type in the function <c>sqrt(x^2+x+1)-x</c>. Set the variable to <c>x</c> at <c>-infinity</c>
             and click Start to initialize the tutor. Click "Next Step" twice to see how Maple rewrites the expression by obtaining a 
             common denominator and dividing by the highest power.
           </p>
