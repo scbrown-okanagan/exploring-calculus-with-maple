@@ -6,7 +6,7 @@
   </p>
   <figure>
     <caption>Opening up the Derivatives tutor using menus.</caption>
-    <image source="images/DerivativeTutorLoad1-eps-converted-to" width="80%"/>
+    <image source="images/education-tutors-maple2025.png" width="80%"/>
   </figure>
   <figure>
     <caption>Opening up the Derivatives tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>

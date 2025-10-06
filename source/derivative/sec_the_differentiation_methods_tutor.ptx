@@ -5,11 +5,11 @@
   </p>
   <figure>
     <caption>Opening up the Differentiation Methods tutor using menus.</caption>
-    <image source="images/DiffTutorLoad1-eps-converted-to" width="80%"/>
+    <image source="images/education-tutors-maple2025.png" width="90%"/>
   </figure>
   <figure>
     <caption>Opening up the Differentiation Methods tutor using commands. The <c>Student[Calculus1]</c> package is required.</caption>
-    <image source="images/DiffTutorLoad2-eps-converted-to" width="80%"/>
+    <image source="images/DiffTutorLoad2-eps-converted-to" width="90%"/>
   </figure>
   <example>
     <title>Differentiating <m>x^2\cos(x)</m> using the Product, Power, and Cosine Rules</title>
