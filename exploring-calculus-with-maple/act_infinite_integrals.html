@@ -101,14 +101,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.12';
+eBookConfig.runestone_version = '7.9.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.a85e2f1fefeea635.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a707b621c77f7e48.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
@@ -668,7 +668,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="act_infinite_integrals-4-2-3-1-1">Evaluate the integral <span class="process-math">\(\displaystyle\int_{-\infty}^{\infty} g(x) dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act_infinite_integrals-4-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Task 3.11.3.2.b"><a href="#act_infinite_integrals-4-2-3" title="Copy heading and permalink for Task 3.11.3.2.b" aria-label="Copy heading and permalink for Task 3.11.3.2.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 3.11.3.2"><a href="#act_infinite_integrals-4-2" title="Copy heading and permalink for Exercise 3.11.3.2" aria-label="Copy heading and permalink for Exercise 3.11.3.2">🔗</a></div></article><article class="exercise exercise-like" id="act_infinite_integrals-4-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="introduction" id="act_infinite_integrals-4-3-1"><div class="para" id="act_infinite_integrals-4-3-1-1">Assign the function <span class="process-math">\(h(x) = \dfrac{\ln x}{x}\)</span> in Maple.<div class="autopermalink" data-description="Paragraph"><a href="#act_infinite_integrals-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="act_infinite_integrals-4-3-1"><div class="para" id="act_infinite_integrals-4-3-1-1">Assign the function <span class="process-math">\(h(x) = \dfrac{\ln(x)}{x}\)</span> in Maple.<div class="autopermalink" data-description="Paragraph"><a href="#act_infinite_integrals-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="act_infinite_integrals-4-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="act_infinite_integrals-4-3-2-1-1">Plot <span class="process-math">\(h(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act_infinite_integrals-4-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -689,7 +689,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div>
 <article class="task exercise-like" id="act_infinite_integrals-4-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="act_infinite_integrals-4-4-2-1-1">You will need to begin by telling Maple to assume that <span class="process-math">\(s\)</span> is a positive real number (as opposed to a complex number). To do this, run the following command on a new line:<div class="autopermalink" data-description="Paragraph"><a href="#act_infinite_integrals-4-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>assume(s, positive)
+</div> <div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>assume(s, positive);
 </b></pre></div> <div class="para" id="act_infinite_integrals-4-4-2-1-3">Maple will now assume that <span class="process-math">\(s\)</span> can only be a real-valued variable. However, it defaults to showing this assumption by outputting a tilde character <span class="process-math">\(\sim\)</span> whenever the variable shows up in output. You can hide assumptions on variables by running a second command: <div class="autopermalink" data-description="Paragraph"><a href="#act_infinite_integrals-4-4-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>interface(showassumed=0);
 </b></pre></div> <div class="para" id="act_infinite_integrals-4-4-2-1-5">Run both of these commands so that you can evaluate the Laplace transform in part (b).<div class="autopermalink" data-description="Paragraph"><a href="#act_infinite_integrals-4-4-2-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
