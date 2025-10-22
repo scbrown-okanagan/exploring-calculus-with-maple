@@ -1,7 +1,7 @@
 <section xml:id="act_direction_fields">
   <title>Direction Fields for Population Growth</title>
   <subsection>
-    <title>Recommended Tutorials</title>
+    <title>Recommended Tutorial</title>
     <p>
       Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
@@ -138,7 +138,7 @@
       <task>
         <statement>
           <p>
-            Open the DE Plots Tutor from the Tools menu, under Tutors and Differential Equations. Select the Lotka-Volterra Model and click 
+            Open the DE Plots tutor, listed under Differential Equations. Select the Lotka-Volterra Model and click 
             DEPlot. Try changing the parameters and the initial conditions to get a sense of how the prey population <m>x(t)</m> and predator 
             population <m>y(t)</m> are connected. Then click quit to display a plot on your Maple worksheet.
           </p>

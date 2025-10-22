@@ -5,8 +5,8 @@
     <p>
       Before starting on these exercises, you should familiarize yourself with the material covered in the following tutorials:
       <ul>
-        <li><xref ref="chp_plotting_functions"/></li>
-        <li><xref ref="chp_sequences_and_series" text="title" /></li>
+        <li><xref ref="chp_plotting_functions" text="title"/></li>
+        <li><xref ref="chp_sequences_and_series" text="title"/></li>
       </ul>
     </p>
   </subsection>
@@ -29,14 +29,14 @@
         <mrow xml:id="eq_taylor3">f(x) \amp \approx f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3</mrow>
       </mdn>.
       Equation <xref ref="eq_taylor1"/> should look familiar; it is the linear approximation formula and the equation of the tangent line to 
-      <m>f(x)</m> at <m>x=a</m>! Similarly, equation <xref ref="eq_taylor2"/> gives quadratic approximation and equation <xref ref="eq_taylor3"/>
+      <m>f(x)</m> at <m>x=a</m>. Similarly, equation <xref ref="eq_taylor2"/> gives quadratic approximation and equation <xref ref="eq_taylor3"/>
       gives cubic approximation.
     </p>
     <p>
-      Comparing the graphs of these Taylor polynomial approximation so the graph of <m>f(x)</m> can reveal information about the <em>interval of 
-      convergence</em> of the Taylor series. This is the interval for <m>x</m> over which the Taylor series convergences to the graph of <m>f(x)</m>.
-      This interval is always centred at <m>x=a</m>. The <em>radius of convergence</em> is exactly half the width of the interval and may be infinite if 
-      the Taylor series converges to <m>f(x)</m> over the entire real number line.
+      Comparing the graphs of these Taylor polynomial approximations to the graph of <m>f(x)</m> can reveal information about the <em>interval of 
+      convergence</em> of the Taylor series. This is the interval for <m>x</m> over which the Taylor series converges to the graph of <m>f(x)</m>.
+      This interval is always centred at <m>x=a</m>. The <em>radius of convergence</em> is exactly half the width of the interval of convergence 
+      and may be infinite if the Taylor series converges to <m>f(x)</m> over the entire real number line.
     </p>
     <p>
       In this activity, you will calculate Taylor series of functions centred at <m>a=0</m>:
@@ -72,22 +72,27 @@
             <idx><h>ditto operator</h></idx>
           </p>
           <p>
-            Examples of finding and plotting Taylor series can be found on <xref ref="sec_taylor_and_maclaurin_series">page</xref>.
+            Examples of finding and plotting Taylor series can be found in <xref ref="sec_taylor_and_maclaurin_series"/>.
           </p>
         </hint>
       </task>
       <task>
         <statement>
           <p>
-            Repeat part (a) using for the <m>5</m>th, <m>11</m>th, and <m>23</m>rd degree Taylor polynomial approximations. Assign each of these 
+            Repeat part (a) for the <m>5</m>th, <m>11</m>th, and <m>23</m>rd degree Taylor polynomial approximations. Assign each of these 
             polynomials to a different name.
           </p>
         </statement>
+        <hint>
+          <p>
+            Note that some powers may not appear in the polynomial if the coefficient for that term is equal to zero.
+          </p>
+        </hint>
       </task>
       <task>
         <statement>
           <p>
-            Plot the graph of <m>f(x)</m> and all four of the Taylor polynomial approximations on a single graph.
+            Plot <m>f(x)</m> and all four of the Taylor polynomial approximations on a single graph.
             <idx><h>plot</h></idx>
           </p>
         </statement>
@@ -107,7 +112,7 @@
       <task>
         <statement>
           <p>
-            If you were to increase the degree infinitely, you should expect that the approximation will converge to the radius of convergence 
+            If you were to increase the degree infinitely, you should expect that the approximation will converge to the function within the radius of convergence 
             on either side of <m>0</m>. In a new paragraph state what you expect the radius of convergence to be.
           </p>
         </statement>
@@ -127,16 +132,11 @@
             Assign each to a new name.
           </p>
         </statement>
-        <hint>
-          <p>
-            Note that some powers may not appear in the polynomial if the coefficient for that term is equal to zero.
-          </p>
-        </hint>
       </task>
       <task>
         <statement>
           <p>
-            Plot the graph of <m>g(x)</m> and all four Taylor polynomial approximations on the same graph. How do the graphs of the Taylor polynomial 
+            Plot <m>g(x)</m> and all four Taylor polynomial approximations on the same graph. How do the graphs of the Taylor polynomial 
             approximations compare to <m>g(x)</m> as the degree increases?
           </p>
         </statement>

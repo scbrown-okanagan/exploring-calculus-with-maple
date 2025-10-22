@@ -29,7 +29,7 @@
       </p>
     </aside>
     <p>
-      Every continuous random variable <m>X</m> has a probability density function or ("pdf"), <m>f</m>. If you want to compute the probability that the 
+      Every continuous random variable <m>X</m> has a probability density function ("pdf"), <m>f</m>. If you want to compute the probability that the 
       value of <m>X</m> lies between <m>a</m> and <m>b</m>, then you integrate <m>f</m> over that interval:
       <me>P(a\lt  X \lt b)=\int_{a}^{b} f(x)dx</me>.
       Similarly, assuming that the domain of <m>f</m> is <m>(-\infty,\infty)</m>, you may also compute the probability that the value of <m>X</m>

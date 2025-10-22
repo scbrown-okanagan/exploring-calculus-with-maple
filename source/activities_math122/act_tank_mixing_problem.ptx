@@ -14,7 +14,7 @@
   <subsection>
     <title>Introduction</title>
     <p>
-      In this activity, you will investigate differential equations that arise from the mixture of fluid in a tank. You will need to have some 
+      In this activity, you will investigate differential equations that arise from the mixture of fluid in a tank. You will need to have a 
       basic understanding of the relationship between mass, volume, and concentration.
     </p>
     <p>
@@ -25,7 +25,7 @@
     </p>
     <p>
       Suppose you are having a wedding and you start with a 5 L tank of coffee that has a concentration of 60 g/L. The wedding guests are 
-      drinking the coffee at a rate of 0.2 L/min. You are refilling the tank at a rate of 0.15 L/min with coffee of a concentration of 50 g/L.
+      drinking the coffee at a rate of 0.2 L/min. You are refilling the tank at a rate of 0.15 L/min with coffee that has a concentration of 50 g/L.
     </p>
     <figure xml:id="fig_coffee_tank">
       <caption>An illustration of the tank of coffee. The initial conditions for the volume and mass of coffee are shown.</caption>
@@ -46,7 +46,7 @@
       </image>
     </figure>
     <p>
-      In the following exercises, you will set up an solve differential equations that describe the mass of coffee in the tank as well as the 
+      In the following exercises, you will set up and solve differential equations that describe the mass of coffee in the tank as well as the 
       concentration of coffee in the tank at a given time.
     </p>
   </subsection>
@@ -102,7 +102,7 @@
         <hint>
           <p>
             The concentration entering the tank, the volume rate in, and the volume rate out are all given. However, the concentration in the tank at time 
-            <m>t</m> will need given as a fraction of mass <m>m(t)</m> divided by volume <m>V(t)</m>. This volume comes from the previous exercise, but 
+            <m>t</m> will need to be given as a fraction of mass <m>m(t)</m> divided by volume <m>V(t)</m>. This volume comes from the previous exercise, but 
             <m>m(t)</m> remains an unknown function until you can solve this differential equation.
           </p>
         </hint>

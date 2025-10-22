@@ -61,16 +61,16 @@
           <p>
             <m>\displaystyle\sum_{n=0}^{\infty} \dfrac{4^n}{n!}</m>
           </p>
-        </statement>
-        <hint>
-          <p>
-            The <m>!</m> is the factorial symbol, defined as
-            <md>
-              <mrow> n! \amp = n(n-1)(n-2)\cdots(3)(2)(1) </mrow>
-              <mrow> 0! \amp = 1 </mrow>
-            </md>.
-          </p>
-        </hint>
+          <aside>
+            <p>
+              The <m>!</m> is the factorial symbol, defined as
+              <md>
+                <mrow> n! \amp = n(n-1)(n-2)\cdots(3)(2)(1) </mrow>
+                <mrow> 0! \amp = 1 </mrow>
+              </md>.
+            </p>
+          </aside>
+        </statement>        
       </task>
       <task>
         <statement>
@@ -140,7 +140,7 @@
       <task>
         <statement>
           <p>
-            Evaluate the integral given in the Integral Test to determine whether or not the series converges or diverges.
+            Evaluate the integral given in the Integral Test to determine whether the series converges or diverges.
           </p>
         </statement>
       </task>
