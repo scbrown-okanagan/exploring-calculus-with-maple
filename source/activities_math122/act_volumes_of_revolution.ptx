@@ -15,12 +15,12 @@
   <subsection>
     <title>Introduction</title>
     <p>
-      Volumes of Revolution are often very challenging to visualize on paper. Luckily, Maple has an interactive way of 
+      Volumes of revolution are often very challenging to visualize on paper. Luckily, Maple has an interactive way of 
       visualizing the volume obtained by revolving a region about a central axis. In this activity, we will use the Volume 
       of Revolution Tutor to find and plot the volume of a region rotated about a vertical axis or horizontal axis.
     </p>
     <p>
-      The Volume of Revolution Tutor is able to determine the volume of the solid obtained by revolution using either the 
+      The Volume of Revolution tutor is able to determine the volume of the solid obtained by revolution using either the 
       disks/washers method or the method of cylindrical shells. You can learn more about how to access and use this tutor in 
       <xref ref="sec_volume_of_revolution_tutor"/>.
     </p>
@@ -44,7 +44,7 @@
         <statement>
           <p>
             Plot the graphs of <m>f(x)</m> and <m>g(x)</m> on the same set of axes to view the region that you will be 
-            revolving about an axis in the next couple exercies.
+            revolving about an axis in the next couple exercises.
             <idx><h>plot</h></idx>
           </p>
         </statement>
@@ -53,11 +53,12 @@
         <statement>
           <p>
             As you can see from your plot, the functions intersect at <m>x_1=0</m> and at another value where <m>x_2&gt;0</m>. 
-            Solve for this second value, <m>x_2</m> where the functions intersect and assign it to <c>x2</c>.
+            Solve for this second value, <m>x_2</m>, where the functions intersect and assign it to <c>x2</c>.
           </p>
         </statement>
         <hint>
           <p>
+            An example of finding intersection points is given <xref ref="ex_functionintersection"/>.
           </p>
         </hint>
       </task>
@@ -80,7 +81,7 @@
       <task>
         <statement>
           <p>
-            Use the Volume of Revolution Tutor to plot the solid and confirm your answer in part (a).
+            Use the Volume of Revolution tutor to plot the solid and confirm your answer in part (a).
           </p>
         </statement>
       </task>
@@ -95,7 +96,7 @@
       <task>
         <statement>
           <p>
-            (Optional) If you are familiar with method of cylindrical shells, use this method to calculate the volume of the solid using the 
+            (Optional) If you are familiar with the method of cylindrical shells, use this method to calculate the volume of the solid using the 
             <c>int()</c> command or <c>Int()</c> and <c>value(%)</c> commands
           </p>
         </statement>
@@ -103,7 +104,7 @@
       <task>
         <statement>
           <p>
-            Use the Volume of Revolution Tutor to calculate the volume of the solid. Before closing the tutor, copy the text at the bottom 
+            Use the Volume of Revolution tutor to calculate the volume of the solid. Before closing the tutor, copy the text at the bottom 
             (in the Maple Command box).
           </p>
         </statement>
@@ -166,7 +167,7 @@
       <task>
         <statement>
           <p>
-            Use the Volume of Revolution Tutor or your choice of either the <c>int()</c> or <c>Int()</c> commands to calculate the volume of the solid 
+            Use the Volume of Revolution tutor or your choice of either the <c>int()</c> or <c>Int()</c> commands to calculate the volume of the solid 
             obtained by revolving the top half of the ellipse about the <m>x</m>-axis.
             <idx><h>integral</h><h>Int</h></idx>
             <idx><h>integral</h><h>int</h></idx>

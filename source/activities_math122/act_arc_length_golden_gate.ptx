@@ -66,7 +66,7 @@
         </statement>
         <hint>
           <p>
-            Since this is an implicit curve, you will need to ensure that you have loaded the <c>plots</c> package. You can do this with 
+            Since this is an implicit curve, you will need to ensure that you load the <c>plots</c> package. You can do this with 
             the command <c>with(plots)</c>. It is typically a good idea to load packages at the top of your worksheet.
             <idx><h>packages</h><h>plots</h></idx>
           </p>
@@ -96,8 +96,8 @@
       <task>
         <statement>
           <p>
-            Plot the graph of the function. Since <m>x</m> is defined as a function of <m>y</m>, you may require plotting 
-            the equation of the curve using <c>implicitplot()</c>.
+            Plot the graph of the function. Since <m>x</m> is defined as a function of <m>y</m>, you may need to use <c>implicitplot()</c> to 
+            plot the equation of the curve.
           </p>
         </statement>
         <hint>
@@ -141,7 +141,7 @@
           </p>
           <p>
             Equation <xref ref="eq_catenary"/> makes use of the hyperbolic trigonometric functions, <m>\cosh()</m> and <m>\sinh()</m>. These 
-            functions are analogs of the ordinary circul trigonometricfunctions; just as the points <m>(\cos(t), \sin(t))</m> form a circle 
+            functions are analogs of the ordinary circular trigonometric functions; just as the points <m>(\cos(t), \sin(t))</m> form a circle 
             with a unit radius, the points <m>(\cosh(t), \sinh(t))</m> form the right half of the equilateral hyperbola.
             <idx><h>mathematical functions</h><h>hyperbolic functions!sinh</h></idx>
             <idx><h>mathematical functions</h><h>hyperbolic functions!cosh</h></idx>

@@ -73,7 +73,7 @@
         <statement>
           <p>
             Use the <c>solve()</c> (or <c>fsolve()</c>) command to find the <m>x</m>-coordinates of the two intersection points of
-            <m>y = x^2 - c^2</m> and <m>y = c^2 - x^2</m>. These <m>x</m>-coordinates should be dependant on <m>c</m>.
+            <m>y = x^2 - c^2</m> and <m>y = c^2 - x^2</m>. These <m>x</m>-coordinates should be dependent on <m>c</m>.
             <idx><h>solving equations</h><h>solve</h></idx>
           </p>
         </statement>
@@ -113,7 +113,7 @@
       <task>
         <statement>
           <p>
-            Plot both velocity functions on the same axes for duration of <m>2</m> minutes (use <m>0 \leq t \leq 120</m>,since <m>t</m> 
+            Plot both velocity functions on the same axes for a duration of <m>2</m> minutes (use <m>0 \leq t \leq 120</m>, since <m>t</m> 
             is in seconds). Using your graph, try to guess which runner makes it the farthest distance in <m>2</m> minutes.
           </p>
         </statement>

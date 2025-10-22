@@ -76,7 +76,7 @@
     <exercise>
       <introduction>
         <p>
-          Assign the function <m>h(x) = \dfrac{\ln x}{x}</m> in Maple.
+          Assign the function <m>h(x) = \dfrac{\ln(x)}{x}</m> in Maple.
         </p>
       </introduction>
       <task>
@@ -111,7 +111,7 @@
             this, run the following command on a new line: 
           </p>
           <console prompt="> ">
-            <input>assume(s, positive)</input>
+            <input>assume(s, positive);</input>
           </console>
           <p>
             Maple will now assume that <m>s</m> can only be a real-valued variable. However, it defaults to showing this assumption by 

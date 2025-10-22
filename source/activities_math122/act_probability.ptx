@@ -15,7 +15,7 @@
     <p>
       In this activity, you will use integration to calculate probabilities of continuous random variables. A continuous random variable 
       is a numerical variable, <m>X</m>, that can take on any value within a given range or interval. For example, perhaps <m>X</m> represents
-      the temperature of a particular classroom, which may be any value within a certain range, such as 20 to 25 degrees celsius.
+      the temperature in a particular classroom, which may be any value within a certain range, such as 20 to 25 degrees Celsius.
     </p>
     <aside>
       <title>Probability Notation</title>
@@ -29,7 +29,7 @@
       </p>
     </aside>
     <p>
-      Every continuous random variable <m>X</m> has a probability density function, <m>f</m>. If you want to compute the probability that the 
+      Every continuous random variable <m>X</m> has a probability density function or ("pdf"), <m>f</m>. If you want to compute the probability that the 
       value of <m>X</m> lies between <m>a</m> and <m>b</m>, then you integrate <m>f</m> over that interval:
       <me>P(a\lt  X \lt b)=\int_{a}^{b} f(x)dx</me>.
       Similarly, assuming that the domain of <m>f</m> is <m>(-\infty,\infty)</m>, you may also compute the probability that the value of <m>X</m>
@@ -43,7 +43,7 @@
       Since a probability is always a value between 0 and 1 (or 100%), a probability density function <m>f</m> must always satisfy the following 
       criteria:
       <mdn>
-        <mrow xml:id="eq_pdf_req1">  0  \leq f(x) \amp \leq 1 </mrow>
+        <mrow xml:id="eq_pdf_req1"> f(x) \amp \geq 0 </mrow>
         <mrow xml:id="eq_pdf_req2"> \int_{-\infty}^{\infty} f(x)dx \amp = 1 </mrow>
       </mdn>
     </p>
@@ -56,7 +56,7 @@
       <title>The Exponential Distribution</title>
       <statement>
         <p>
-          The probability density function for exponential distribution is defined as
+          The probability density function for the exponential distribution is defined as
           <men xml:id="eq_exponential_dist">
             f(x) = \begin{cases} \lambda{ e}^{-\lambda x} \amp  \text{ if }  x \geq 0 \\ 0 \amp  \text{ if }  x\lt 0, \end{cases}
           </men>          
@@ -182,7 +182,7 @@
         <hint>
           <p>
             Make sure to use the proper exponential function (<c>exp()</c> or from the palettes toolbar) as well as the proper numerical value of 
-            <m>pi</m> (<c>Pi</c> or use the palettes toolbar).
+            <m>\pi</m> (<c>Pi</c> or use the palettes toolbar).
             <idx><h>mathematical functions</h><h>exponential</h></idx>
             <idx><h>Pi</h></idx>
           </p>
