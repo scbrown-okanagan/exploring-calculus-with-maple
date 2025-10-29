@@ -1,7 +1,7 @@
 <section xml:id="sec_maple_help">
   <title>Maple Help</title>
   <p>
-    For more information on any of these or other commands (for example, the <c>sin()</c> command),
+    If you would like more information about a particular command (for example, the <c>sin()</c> command),
     you can type a question mark followed by the command name:
   </p>
   <console prompt="> ">

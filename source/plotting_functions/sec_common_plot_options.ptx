@@ -79,7 +79,7 @@
   </console>
   <image width="50%" source="images/Plotting_Functionsplot2d3-eps-converted-to"/>
   <p>
-    In some modern versions of Maple, the graph of <m>\tan(x)</m> above can be obtained even without including the <c>discont=true</c> option in the <c>plot( )</c> command.
+    In some modern versions of Maple, the graph of <m>\tan(x)</m> above can be obtained even without including the <c>discont=true</c> option in the <c>plot()</c> command.
   </p>
   <p>
     An example of a function that cannot be properly displayed without the <c>discont=true</c> parameter can be found in <xref ref="sec_limits_and_piecewise_functions" text="title"/>.

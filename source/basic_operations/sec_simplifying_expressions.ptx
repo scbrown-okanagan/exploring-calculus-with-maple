@@ -2,7 +2,7 @@
   <title>Simplifying Expressions</title>
   <p>
     Likewise, you can also simplify any expression with <c>simplify()</c>. This includes basic simplifications such as collecting like terms as well 
-    as more complicated algebraic simplifications such as canceling and simplifying radicals, exponents, logarithms, trigonometric functions, etc.
+    as more complicated algebraic simplifications such as cancelling and simplifying radicals, exponents, logarithms, trigonometric functions, etc.
     <idx><h>simplify</h></idx>
   </p>
   <console prompt="> ">
@@ -16,7 +16,7 @@
   </p>
   <aside>
     <p>
-      The <c>simplify()</c> command can sometimes produce unexpected results. In some cases, the <c>factor</c> command may be more appropriate.
+      The <c>simplify()</c> command can sometimes produce unexpected results. In some cases, the <c>factor()</c> command may be more appropriate.
       In other cases, you may need to include some optional parameters in the command.
     </p>
   </aside>
@@ -41,7 +41,7 @@
   </p>
   <p>
     Sometimes additional parameters need to be supplied in order for Maple to simplify the expression as you intend.
-    Here, we add the assumption that all variables are positive so that <m>\ln(x)</m> and <m>\ln(y)</m> are defined.
+    In the <c>simplify()</c> command below, we add the assumption that all variables are positive so that <m>\ln(x)</m> and <m>\ln(y)</m> are defined.
   </p>
   <console prompt="> ">
     <input>simplify(ln(3*x^3*y), assume=positive);</input>

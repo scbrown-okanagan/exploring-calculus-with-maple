@@ -1,7 +1,7 @@
 <section xml:id="sec_exponential_and_logarithmic_functions">
   <title>Exponential and Logarithmic Functions</title>
   <p>
-    Another common command that we will frequently use is <c>exp()</c>. This is meant to be used as the exponential function.
+    Another common command that we will frequently use is <c>exp()</c>. This is meant to be used as the natural exponential function.
     Unfortunately, simply typing in <m>{ e}^x</m> using the <sq>e</sq> key on the keyboard will not perform the correct operation.
     Instead, Maple treats <sq>e</sq> as it does any other letter, such as <sq>x</sq> or <sq>y</sq>.
     <idx><h>mathematical functions</h><h>exponential</h></idx>

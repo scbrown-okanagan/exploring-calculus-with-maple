@@ -19,7 +19,7 @@
     </p>
   </aside>
   <console prompt="> ">
-    <input>factor((x^2 + 2*x - 15)/(x^2 + 7*x + 10)</input>
+    <input>factor((x^2 + 2*x - 15)/(x^2 + 7*x + 10));</input>
   </console>
   <p>
     <me>

@@ -80,14 +80,14 @@
       Suppose that we start with a sinusoidal function <m>g(x)</m> with amplitude <m>2</m> and period <m>2</m>.
     </p>
     <console prompt="> ">
-      <input>g(x) := 2*sin(Pi*x); plot( g(x) );</input>
+      <input>g(x) := 2*sin(Pi*x); plot( g(x), x=0..4, y=-4..4 );</input>
     </console>
     <p>
       <idx><h>plot</h></idx>
       <idx><h>Pi</h></idx>
       <idx><h>plot</h><h>axes intervals</h></idx>
       <me>
-        \displaystyle f\, := \,x\mapsto 2 \sin \left(\pi x \right)
+        \displaystyle g\, := \,x\mapsto 2 \sin \left(\pi x \right)
       </me>
     </p>
     <image source="images/transformationsplot2d1-eps-converted-to" width="50%"/>
