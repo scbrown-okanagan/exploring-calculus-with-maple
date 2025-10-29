@@ -87,7 +87,7 @@
         <task>
           <statement>
             <p>
-              give the exact value of the definite integral <m>\dint_{1}^{8} g(x)~dx</m> and evaluate as a decimal with 15 digits.
+              Give the exact value of the definite integral <m>\dint_{1}^{8} g(x)~dx</m> and evaluate as a decimal with 15 digits.
             </p>
           </statement>
           <solution>
@@ -233,7 +233,7 @@
       <exercise>
         <statement>
           <p>
-            Find the volume bounded by the curves <m>y^2 - x^2 = 1</m> and <m>y=2</m> rotated about the <m>x</m>-axis.
+            Find the volume of the solid obtained by revolving the region bounded by the curves <m>y^2 - x^2 = 1</m> and <m>y=2</m> about the <m>x</m>-axis.
             <idx><h>volume of revolution</h></idx>
           </p>
         </statement>
@@ -268,7 +268,7 @@
             At an annual triathlon, the finishing times for male athletes can be modeled by the probability density function
             <me> p(x) = \dfrac{1}{\sigma \sqrt{2\pi}} { e}^{-(x-\mu)^2/2\sigma^2} </me>,
             where <m>\mu = 4313</m> seconds (the average finish time) and <m>\sigma = 583</m> seconds (the standard deviation of finish times).
-            Assign this function in Maple using the specified values of <m>\mu</m> and <m>\sigma</m> and plot the function over the interval <m>[0,6500]</m>..
+            Assign this function in Maple using the specified values of <m>\mu</m> and <m>\sigma</m> and plot the function over the interval <m>[0,6500]</m>.
             <idx><h>integral</h><h>improper</h></idx>
             <idx><h>probability</h></idx>
           </p>
@@ -349,9 +349,14 @@
         <task>
           <statement>
             <p>
-              What does the population of fish approach after a long time? (Take the limit as <m>t</m> tends to infinity or use a plot).
+              What does the population of fish approach after a long time?
             </p>
           </statement>
+          <hint>
+            <p>
+              You may need to take the limit as <m>t</m> tends to infinity or determine the behaviour using a plot.
+            </p>
+          </hint>
           <solution>
             <p>
               <m>7000</m>

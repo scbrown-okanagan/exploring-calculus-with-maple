@@ -121,7 +121,7 @@
       <exercise>
         <statement>
           <p>
-            Sketch the plot of <m>y=\dfrac{ \sqrt{4x^2 + 1} }{2x - 1}</m> and state the equations of vertical and horizontal asymptotes.
+            Sketch the plot of <m>y=\dfrac{ \sqrt{4x^2 + 1} }{2x - 1}</m> and state the equations of the vertical and horizontal asymptotes.
             <idx><h>asymptote</h></idx>
           </p>
         </statement>
