@@ -115,7 +115,7 @@
             <ul>
               <li><m>f(100)</m> must equal <m>L(100)</m> for the two segments to connect.</li>
               <li><m>f'(100)</m> must equal <m>L'(100)</m> for the track to be smooth (differentiable) at the connection point.</li>
-              <li><m>f'(200)=-1.6</m>, according to the third criteria</li>
+              <li><m>f'(200)=-1.6</m>, according to the third criteria.</li>
             </ul>
             Using a single <c>solve()</c> or <c>fsolve()</c> command, solve this system of equations for <m>a</m>, <m>b</m>, and <m>c</m>.
             <idx><h>solving equations</h><h>solve</h></idx>
@@ -142,7 +142,7 @@
         <statement>
           <p>
             Assign the function <m>g(x)=px^2+qx+r</m>, since <m>g(x)</m> must be a quadratic function and you should avoid 
-            using the same coefficients and you used for <m>f(x)</m>.
+            using the same coefficients that you used for <m>f(x)</m>.
           </p>
         </statement>
         <hint>
@@ -158,7 +158,7 @@
             <ul>
               <li><m>g(200)</m> must equal <m>f(200)</m> for the two parabolic segments to connect.</li>
               <li><m>g'(200)</m> must equal <m>f'(200)</m> for the track to be smooth (differentiable) at the connection point.</li>
-              <li><m>g(300)=50</m>, according to the fourth criteria</li>
+              <li><m>g(300)=50</m>, according to the fourth criteria.</li>
             </ul>
             Using a single <c>solve()</c> or <c>fsolve()</c> command, solve this system of equations for <m>p</m>, <m>q</m>, and <m>r</m>.
             <idx><h>solving equations</h><h>solve</h></idx>
@@ -197,7 +197,7 @@
         </statement>
         <hint>
           <p>
-            An example of a piecewise function may be found in <xref ref="sec_piecewise"/>
+            An example of a piecewise function may be found in <xref ref="sec_piecewise"/>.
           </p>
         </hint>
       </task>

@@ -13,7 +13,7 @@
   <subsection>
     <title>Introduction</title>
     <p>
-      Your goal in this question is to determine the height and radius of a perfectly cylindrical can that gives a total volume of 
+      Your goal in this activity is to determine the height and radius of a perfectly cylindrical can that gives a total volume of 
       250 mL (250<nbsp/>cm<m>^3</m>) and uses the least amount of material to create.
     </p>
     <figure>
@@ -69,7 +69,7 @@
           of <m>h</m> and the other side has a length equal to the circumference of the can.
         </p>
         <p>
-          Determine an expression for the area of this rectangle in terms of <m>r</m> and <m>h</m> and assign it to <c>sideArea</c>.
+          Determine an expression for the area of this rectangle in terms of its radius <m>r</m> and height <m>h</m>, and assign it to <c>sideArea</c>.
         </p>
       </statement>
       <hint>
@@ -83,7 +83,7 @@
       <introduction>
         <p>
           Since each of the circles will effectively use an entire hexagonal area from the sheet metal, you will need to calculate the area of a 
-          hexagon that circumscribes a circle of radius <m>r</m>, as shown in <xref ref="fig_hexagoncircle"/>
+          hexagon that circumscribes a circle of radius <m>r</m>, as shown in <xref ref="fig_hexagoncircle"/>.
         </p>
         <figure xml:id="fig_hexagoncircle">
           <caption>A hexagon circumscribing a circle.</caption>
@@ -105,7 +105,7 @@
       <task>
         <statement>
           <p>
-            The hexagon shown in <xref ref="fig_hexagoncircle"/> consists of six equal triangles, each with a base <m>b</m> and height <m>h</m>. Using trigonometry, 
+            The hexagon shown in <xref ref="fig_hexagoncircle"/> consists of six equal triangles, each with a base <m>b</m> and height <m>r</m>. Using trigonometry, 
             determine the length of <m>b</m> in terms of <m>r</m>. Then, determine the area of one of these triangles using
             <me>A = \frac{1}{2}br</me>.
           </p>

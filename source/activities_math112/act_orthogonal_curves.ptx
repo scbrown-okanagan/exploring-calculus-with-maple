@@ -21,7 +21,7 @@
       orthogonal if their derivatives multiply to <m>-1</m> at every point where they intersect.
     </p>
     <p>
-      The majority of curves in this activity are implicit functions, so you will be using the <c>implicitplot()</c> command to visualise them. 
+      The majority of curves in this activity are implicit functions, so you will be using the <c>implicitplot()</c> command to visualize them. 
       Make sure to include the <c>plots</c> package using the <c>with()</c> command near the top of your Maple worksheet.
     </p>
   </subsection>
@@ -29,7 +29,7 @@
     <exercise>
       <introduction>
         <p>
-          In this example, you will show that the curves
+          In this exercise, you will show that
           <me>y^2 - x^2 = 3 \text{ and } xy = 2</me>
           are orthogonal curves. Start by assigning each equation a name, such as <c>curve1</c> and <c>curve2</c>.
         </p>
@@ -38,7 +38,7 @@
         <statement>
           <p>
             Using a single <c>implicitplot()</c> command, plot both curves. The two curves should intersect at two points. If you enforce <m>1:1</m> scaling, 
-            to they appear to be perpendicular at the intersection points?
+            do they appear to be perpendicular at the intersection points?
             <idx><h>implicit functions</h><h>implicitplot!multiple plots</h></idx>
           </p>
         </statement>
@@ -55,8 +55,9 @@
         </hint>
         <hint>
           <p>
-            When using <c>implicitplot</c> on some equations, the graph may not always appear smooth. This was especially common in earlier editions of Maple.
-            If this is ever the case, you may include either <c>numpoints=30000</c> or <c>grid=[250,250]</c> as a parameter to increase the number of plot points.
+            When plotting an equation using the <c>implicitplot()</c> command, the graph may not always appear smooth. This was especially common in earlier editions of Maple.
+            If this is ever the case, you may include either <c>numpoints=30000</c> or <c>grid=[250,250]</c> as a parameter in the <c>implicitplot()</c> command to increase the 
+            number of plot points.
           </p>
         </hint>
       </task>
@@ -114,7 +115,7 @@
       <task>
         <statement>
           <p>
-            Using a single <c>plot()</c> command, visualise these families of curves by plotting all of the following examples in one graph:
+            Using a single <c>plot()</c> command, visualize these families of curves by plotting all of the following examples in one graph:
             <md>
               <mrow> y \amp = -2x^2 \amp x^2 + 2y^2 \amp = 1</mrow>
               <mrow> y \amp =  -x^2 \amp x^2 + 2y^2 \amp = 4</mrow>
@@ -122,7 +123,7 @@
               <mrow> y \amp =   x^2</mrow>
               <mrow> y \amp =  2x^2</mrow>
             </md>
-            Ensure that all five curves of the <m>y=cx^2</m> family are the same colour and all three curves of the <m>x^2 + 2y^2 = k</m> are a single, different 
+            Ensure that all five curves of the <m>y=cx^2</m> family are the same colour and all three curves of the <m>x^2 + 2y^2 = k</m> family are a single, different 
             colour.
             <idx><h>implicit functions</h><h>implicitplot!multiple plots</h></idx>
           </p>
@@ -137,8 +138,8 @@
       <task>
         <statement>
           <p>
-            Assign <xref ref="eq_family1">equation</xref> to <c>family1</c> and equation <xref ref="eq_family2">equation</xref> to <c>family2</c>. Solve the system of equations to find the <m>x</m> 
-            and <m>y</m> coordinates of the four intersection points of the two families of curves. The coordinates of the points should be given expressions 
+            Assign equation <xref ref="eq_family1"/> to <c>family1</c> and equation <xref ref="eq_family2"/> to <c>family2</c>. Solve the system of equations to find the <m>x</m>- 
+            and <m>y</m>-coordinates of the four intersection points of the two families of curves. The coordinates of the points should be given as expressions 
             involving <m>c</m> and <m>k</m>.
           </p>
         </statement>

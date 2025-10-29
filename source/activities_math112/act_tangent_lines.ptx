@@ -56,7 +56,7 @@
         </statement>
         <hint>
           <p>
-            Be sure to assign different names for each tangent line, such as <c>line1</c> and <c>line2</c>. You will unique names 
+            Be sure to assign different names for each tangent line, such as <c>line1</c> and <c>line2</c>. You will need to use unique names 
             so that you can plot each line as well as <m>f(x)</m> in the next step.
           </p>
         </hint>

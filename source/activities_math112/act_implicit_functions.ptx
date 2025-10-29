@@ -15,7 +15,7 @@
     <p>
       In this activity, you will learn how to plot implicit functions and compute their derivatives. You will need to ensure that 
       the <c>plots</c> package is loaded using the <c>with()</c> command. It is typically a good idea to include packages at the start
-      of your Maple worksheet. If you close and reopen your worksheet, you will need to run the command to load packages again.
+      of your Maple worksheet. If you close and reopen your worksheet, you will need to run the command to load the packages again.
     </p>
   </subsection>
   <exercises>
@@ -41,8 +41,9 @@
         </statement>
         <hint>
           <p>
-            When using <c>implicitplot</c> on some equations, the graph may not always appear smooth. This was especially common in earlier editions of Maple.
-            If this is ever the case, you may include either <c>numpoints=30000</c> or <c>grid=[250,250]</c> as a parameter to increase the number of plot points.
+            When plotting an equation using the <c>implicitplot()</c> command, the graph may not always appear smooth. This was especially common in earlier editions of Maple.
+            If this is ever the case, you may include either <c>numpoints=30000</c> or <c>grid=[250,250]</c> as a parameter in the <c>implicitplot()</c> to increase the number 
+            of plot points.
           </p>
         </hint>
       </task>
@@ -79,7 +80,7 @@
         <statement>
           <p>
             Now, determine the equations of the two tangent lines at these points and assign them to <c>line1</c> and <c>line2</c>. Make sure to include the 
-            <c>y=</c> in both equations, since the <c>implicitplot()</c> requires each curve to be given as an equation.
+            <c>y=</c> in both equations, since the <c>implicitplot()</c> command requires each curve to be given as an equation.
           </p>
         </statement>
         <hint>
@@ -167,7 +168,7 @@
         </statement>
         <hint>
           <p>
-            Recall that the a curve has a horizontal tangent line when <m>\frac{dy}{dx} = 0</m>.
+            Recall that a curve has a horizontal tangent line when <m>\frac{dy}{dx} = 0</m>.
           </p>
         </hint>
         <hint>
