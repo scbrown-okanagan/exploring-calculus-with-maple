@@ -50,9 +50,9 @@
       <task>
         <statement>
           <p>
-            To begin, you should view the region between the two curves. Choose a nonzero value for <m>c</m> and plot <m>y = x^2 - c^2</m> 
-            and <m>y=c^2 - x^2</m> using your choice of <m>c</m>. Adjust the view as necessary and estimate the <m>x</m>-coordinates of 
-            the two points of intersection.
+            To begin, you should view the region between the two curves and determine how the intersection points depend on the value of <m>c</m>.
+            Create a plot of <m>y = x^2 - c^2</m> and <m>y=c^2 - x^2</m> using your choice of nonzero <m>c</m> and adjust the view as necessary to the 
+            <m>x</m>-coordinates of the two points of intersection.
           </p>
         </statement>
         <hint>
@@ -61,11 +61,16 @@
             <m>c</m> would be viewed as an unexpected third variable in the equation of each curve.
           </p>
         </hint>
+        <hint>
+          <p>
+            You should not assign a value to <m>c</m> while making these plots. You will need to leave <m>c</m> as an unknown value for this exercise.
+          </p>
+        </hint>
       </task>
       <task>
         <statement>
           <p>
-            Repeat the steps in the previous part for a different nonzero value for <m>c</m>.
+            Repeat the steps in the previous part for multiple different nonzero values for <m>c</m>.
           </p>
         </statement>
       </task>
