@@ -78,7 +78,7 @@
       <idx><h>ditto operator</h></idx>
     </p>
     <console prompt="> ">
-      <input>taylor(sin(x), x = 0, 10); poly := convert(%);</input>
+      <input>taylor(sin(x), x = 0, 10); poly := convert(%,polynom);</input>
     </console>
     <p>
       <me>
