@@ -172,7 +172,7 @@
     <aside>
       <p>
         An even more efficient way of finding the point of intersection of two functions is to solve a system of two variables simultaneously.
-        An example of this can be found in <xref ref="ex_solvesystem"/>
+        An example of this can be found in <xref ref="ex_solvesystem"/>.
       </p>
     </aside>
     <console prompt="> ">
