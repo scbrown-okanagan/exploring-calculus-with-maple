@@ -21,7 +21,7 @@
     </me>
   </p>
   <p>
-    It is necessary to include the <c>discont=true</c> parameter in the <c>plot( )</c> command here so that the jump discontinuity is properly displayed in the graph of this piecewise function.
+    It is necessary to include the <c>discont=true</c> parameter in the <c>plot()</c> command here so that the jump discontinuity is properly displayed in the graph of this piecewise function.
     Unfortunately, even with the <c>discont=true</c> option, Maple does not include an open dot at <m>(1,-3)</m>.
     <idx><h>plot</h></idx>
     <idx><h>plot</h><h>discontinuities</h></idx>

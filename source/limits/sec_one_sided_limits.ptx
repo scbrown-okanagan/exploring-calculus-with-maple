@@ -16,7 +16,7 @@
   <aside>
     <p>
       Some versions of Maple may not properly display graphs of functions that contain vertical asymptotes.
-      Include <c>discont=true</c> as a parameter in the <c>plot( )</c> command when required.
+      Include <c>discont=true</c> as a parameter in the <c>plot()</c> command when required.
       <idx><h>plot</h><h>discontinuities</h></idx>
     </p>
   </aside>
@@ -57,7 +57,7 @@
     </p>
     <p>
       We can factor the denominator to find the domain of <m>f(x)</m> and predict where we might find vertical asymptotes.
-      There is a useful <c>denom()</c> command for this that we can use for the denominator of <m>f(x)</m>.
+      To do this, it is helpful to use the <c>denom()</c> command, which allows us to obtain the denominator of <m>f(x)</m>.
       <idx><h>mathematical functions</h><h>denominator</h></idx>
     </p>
     <console prompt="> ">

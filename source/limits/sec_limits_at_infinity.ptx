@@ -54,7 +54,7 @@
       <me>
         f(t) = \frac{2000}{1+{ e}^{-t+2}}
       </me>,
-      which is known as a logistic function. Logistic functions have many applications, such as population modeling.
+      which is known as a logistic function. Logistic functions have many applications, such as population modelling.
       <idx><h>mathematical functions</h><h>logistic function</h></idx>
       <idx><h>mathematical functions</h><h>exponential function</h></idx>
       <idx><h>plot</h></idx>

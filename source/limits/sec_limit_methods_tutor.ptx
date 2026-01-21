@@ -23,7 +23,7 @@
       </me>.
     </p>
     <p>
-      Begin by typing out the function, the variable name, and the value that you want the variable to approach.
+      Open the Limit Methods tutor and begin by typing out the function, the variable name, and the value that you want the variable to approach.
       When typing out the function in the tutor, you will not have access to the palettes toolbar in Maple, so you will need to type out commands such as <c>sqrt()</c> for square roots.
       You must also include the symbol * for multiplication.
       The direction can be specified in the drop down menu to the right of the variable information. 
