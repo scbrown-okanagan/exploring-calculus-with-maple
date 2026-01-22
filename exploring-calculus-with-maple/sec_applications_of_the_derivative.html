@@ -615,7 +615,7 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_applications_of_the_derivative"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applications of the Derivative</span>
 </h2>
-<div class="para" id="sec_applications_of_the_derivative-2">In the examples below, we will apply the use of derivatives for common tasks related to the shapes of functions. These examples use function notation for derivatives, though the <code class="code-inline tex2jax_ignore">diff()</code> command may also be used.<div class="autopermalink" data-description="Paragraph"><a href="#sec_applications_of_the_derivative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec_applications_of_the_derivative-2">In the examples below, we will use derivatives for common tasks related to the shapes of functions. These examples use function notation for derivatives, though the <code class="code-inline tex2jax_ignore">diff()</code> command may also be used.<div class="autopermalink" data-description="Paragraph"><a href="#sec_applications_of_the_derivative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="ex_equation_of_tangent_line"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding the Equation of a Tangent Line.</span>
@@ -750,7 +750,7 @@ L(x) = f'(a) (x-a) + f(a)\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_closed_interval_method-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>CN1 := 0
+<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>CN1 := 0;
 </b></pre></div>
 <div class="para logical" id="ex_closed_interval_method-14">
 <div class="displaymath process-math">
@@ -762,7 +762,7 @@ L(x) = f'(a) (x-a) + f(a)\text{.}
 </div>
 <div class="para" id="ex_closed_interval_method-15">We can use the <code class="code-inline tex2jax_ignore">fsolve()</code> command over smaller intervals to find the remaining critical numbers.<div class="autopermalink" data-description="Paragraph"><a href="#ex_closed_interval_method-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>CN2:=fsolve(f'(x)=0, x=1..2);
+<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>CN2 := fsolve(f'(x)=0, x=1..2);
 </b></pre></div>
 <div class="para logical" id="ex_closed_interval_method-17">
 <div class="displaymath process-math">
@@ -772,7 +772,7 @@ L(x) = f'(a) (x-a) + f(a)\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex_closed_interval_method-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>CN3:=fsolve(f'(x)=0, x=3..4);
+<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>CN3 := fsolve(f'(x)=0, x=3..4);
 </b></pre></div>
 <div class="para logical" id="ex_closed_interval_method-19">
 <div class="displaymath process-math">
