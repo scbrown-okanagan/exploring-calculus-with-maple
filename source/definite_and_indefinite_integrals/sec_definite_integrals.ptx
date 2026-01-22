@@ -3,14 +3,14 @@
   <idx><h>integral</h><h>int!definite</h></idx>
   <idx><h>integral</h><h>Int!definite</h></idx>
   <p>
-    The <c>int()</c> and <c>Int()</c> commands allows us to compute definite and indefinite directly. It is important to know the difference between these two commands:
+    The <c>int()</c> and <c>Int()</c> commands allow us to compute definite and indefinite integrals directly. It is important to know the difference between these two commands:
     <ul>
       <li>
         <p>
           <c>int()</c>
           <ul>
             <li>This command outputs the the result of the definite or indefinite integral (whenever possible).</li>
-            <li>The palettes toolbar includes definite and indefinite shortcuts that are equivalent to this command.</li>
+            <li>The palettes toolbar includes shortcuts for definite and indefinite integrals that are equivalent to this command.</li>
           </ul>
         </p>
       </li>
@@ -28,7 +28,7 @@
     Always remember that capitalization is important in Maple.
   </p>
   <p>
-    To see the difference between the two version, we can evaluate the definite integral of <m>f(x) = \frac{1}{x^2+1}</m> over the interval <m>[-3,3]</m>.
+    To see the difference between the two versions, we can evaluate the definite integral of <m>f(x) = \frac{1}{x^2+1}</m> over the interval <m>[-3,3]</m>.
     <idx><h>plot</h><h>axes intervals</h></idx>
   </p>
   <console prompt="> ">
@@ -56,7 +56,7 @@
     </me>
   </p>
   <console prompt="> ">
-    <input>int(f(x), x=-3..3); evalf(%)</input>
+    <input>int(f(x), x=-3..3); evalf(%);</input>
   </console>
   <p>
     <me>

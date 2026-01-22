@@ -3,14 +3,14 @@
   <idx><h>arc length</h></idx>
   <p>
     We can use the <c>ArcLength()</c> command to find the arc length of a function over a specified interval.
-    To use the this command, we must load the <c>Student[Calculus1]</c> package.
+    To use this command, we must load the <c>Student[Calculus1]</c> package.
     Packages are loaded using the <c>with()</c> command and it is typically a good idea to load any necessary packages at the top of your worksheet.
     Loading a package only needs to be done once per Maple worksheet, but needs to be run each time you open a new or previously closed document.
     <idx><h>packages</h><h>Student[Calculus1]</h></idx>
   </p>
   <p>
-    We can calculate the arclength for a simple function such as <m>f(x)=x^2</m> over an interval <m>[0,\pi]</m> using a single <c>ArcLength()</c> command.
-    It can be useful to assign the function first.
+    We can use a single <c>ArcLength()</c> command to calculate the arc length for a simple function such as <m>f(x)=x^2</m> over an interval 
+    <m>[0,\pi]</m>. It can be useful to assign the function first.
     <idx><h>evalf</h></idx>
   </p>
   <console prompt="> ">
@@ -22,11 +22,11 @@
     </me>
   </p>
   <p>
-    The <c>ArcLength()</c> command will attempt to give the exact value of the arclength. <c>evalf(%)</c> may be used to display the result as a decimal.
+    The <c>ArcLength()</c> command will attempt to give the exact value of the arc length. Using <c>evalf(%)</c> allows us to display the result as a decimal.
   </p>
   <console prompt="> ">
     <input>with(Student[Calculus1]):</input>
-    <input>ArcLength(f(x), x=0..Pi); evalf(%)</input>
+    <input>ArcLength(f(x), x=0..Pi); evalf(%);</input>
   </console>
   <p>
     <idx><h>Pi</h></idx>
@@ -38,7 +38,7 @@
     </me>
   </p>
   <p>
-    In some cases, the exact value of arclength may not be able to be expressed algebraically, such as in the case of the arclength of <m>g(x) = \sin(x)</m>
+    Sometimes it may not be possible to express the exact value of arc length algebraically, such as in the case of the arc length of <m>g(x) = \sin(x)</m>
     over the interval <m>[0,\pi]</m>.
     <idx><h>mathematical functions</h><h>sine</h></idx>
   </p>
@@ -71,7 +71,7 @@
   </p>
   <p>
     To have a better understanding of why the exact value may not be able to be given algebraically, it can be useful to see what integral is involved to compute 
-    the arclength. To do this, we can add the parameter <c>output = integral</c> to the <c>ArcLength()</c> command.
+    the arc length. To do this, we can add the parameter <c>output = integral</c> to the <c>ArcLength()</c> command.
     <idx><h>arc length</h><h>output=integral</h></idx>
   </p>
   <console prompt="> ">

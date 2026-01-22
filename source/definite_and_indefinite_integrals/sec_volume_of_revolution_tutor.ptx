@@ -24,7 +24,7 @@
       <idx><h>plot</h><h>axes intervals</h></idx>
     </p>
     <console prompt="> ">
-      <input>plot( [-x^2+4, x^2-4], x=-2..2);</input>
+      <input>plot( [-x^2+4, x^2-4], x=-2..2, colour=[red, blue]);</input>
     </console>
     <image source="images/volumeofrevolutionplot2d1-eps-converted-to" width="50%"/>
     <p>
@@ -32,7 +32,7 @@
       for <m>x</m> and <m>y</m>. This can be done with a single <c>solve()</c> or <c>fsolve()</c> command, as explained in <xref ref="ex_solvesystem"/>.
     </p>
     <p>
-      Now we can load up the Volume of Revolution Tutor and enter the functions. When typing out the function in the tutor, you will not have access to the palettes 
+      Now we can load up the Volume of Revolution tutor and enter the functions. When typing out the function in the tutor, you will not have access to the palettes 
       toolbar in Maple, so you will need to type out commands such as <c>sqrt()</c> for square roots and include the symbol * for multiplication.
       Be sure to set the correct variable and interval for the variable along with the information about the axis of revolution.
     </p>
@@ -47,8 +47,8 @@
     </p>
     <console prompt="> ">
       <input>with(Student[Calculus1]):</input>
-      <input>VolumeOfRevolution(-x^2+4, x^2+4, -2..2, 'axis'=horizontal, 
-    'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false, 
+      <input>VolumeOfRevolution(-x^2+4, x^2-4, -2..2, 'axis'=horizontal, 
+    'distancefromaxis' = 4, 'showvolume'=true, 'showsum'=false, 
     'showregion'=false, 'method'=midpoint, 'partition'= 6, 
     'output'=plot);</input>
     </console>
@@ -57,8 +57,8 @@
       Changing the <c>output</c> option will can give you the exact value of the volume or the integral used to obtain the volume.
     </p>
     <console prompt="> ">
-      <input>VolumeOfRevolution(-x^2+4, x^2+4, -2..2, 'axis'=horizontal, 
-    'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false,
+      <input>VolumeOfRevolution(-x^2+4, x^2-4, -2..2, 'axis'=horizontal, 
+    'distancefromaxis' = 4, 'showvolume'=true, 'showsum'=false,
     'showregion'=false, 'method'=midpoint, 'partition'= 6,
     'output'=integral);</input>
     </console>
@@ -68,8 +68,8 @@
       </me>
     </p>
     <console prompt="> ">
-      <input>VolumeOfRevolution(-x^2+4, x^2+4, -2..2, 'axis'=horizontal,
-    'distancefromaxis' = 0, 'showvolume'=true, 'showsum'=false,
+      <input>VolumeOfRevolution(-x^2+4, x^2-4, -2..2, 'axis'=horizontal,
+    'distancefromaxis' = 4, 'showvolume'=true, 'showsum'=false,
     'showregion'=false, 'method'=midpoint, 'partition'= 6,
     'output'=value);</input>
     </console>
@@ -83,7 +83,7 @@
     </p>
   </example>
   <example xml:id="ex_revolution_vertical">
-    <title>Volume Obtained by Rotating a Region about a Horizontal Axis</title>
+    <title>Volume Obtained by Rotating a Region about a Vertical Axis</title>
     <p>
       In this example, we will determine the volume of the solid obtained by revolving the region bounded by <m>y=x^2-4</m> and <m>y=-x^2+4</m> about <m>x=-3</m>.
       Since this is the same region as described in <xref ref="ex_revolution_horizontal"/>, most of the steps are the same.

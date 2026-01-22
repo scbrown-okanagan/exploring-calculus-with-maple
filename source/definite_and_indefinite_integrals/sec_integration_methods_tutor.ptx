@@ -4,7 +4,7 @@
   <p>
     The Integration Methods tutor can be used to evaluate an integral step-by-step, using integration techniques discussed in class.
     You can either manually attempt different techniques on the integral, or let Maple decide which techniques to use.
-    In some cases, Maple may find particularly clever substitutions and techniques that may not be immediately apparent when integration without software.
+    In some cases, Maple may find particularly clever substitutions and techniques that may not be immediately apparent when integrating without software.
   </p>
   <figure>
     <caption>Opening up the Integration Methods tutor using menus.</caption>
@@ -17,9 +17,9 @@
   <example>
     <title>Applying Integration by Parts to an Indefinite Integral</title>
     <p>
-      In this example, we will use the integration methods tutor to apply the method of integration by parts to the indefinite integral
+      In this example, we will use the Integration Methods tutor to apply the method of integration by parts to the indefinite integral
       <me>
-        \displaystyle\int x^2e^x
+        \displaystyle\int x^2e^x \, dx
       </me>.
       After opening the tutor, we begin by typing out the function and the variable name.
       For an indefinite integral, we leave the interval blank and click Start.
@@ -58,7 +58,7 @@
   <example>
     <title>Evaluating a Definite Integral Using Substitution</title>
     <p>
-      In this example, we will use the integration methods tutor to evaluate the definite integral
+      In this example, we will use the Integration Methods tutor to evaluate the definite integral
       <me>
         \displaystyle\int_{-\pi/2}^{\pi/4} x\sin(x^2+1)
       </me>
@@ -66,8 +66,6 @@
     </p>
     <p>
       After opening the tutor, we begin by typing out the function, the variable name, and the interval.
-      When typing out the function in the tutor, you will not have access to the palettes toolbar in Maple, so you will need to type out commands such as <c>sqrt()</c> for square roots.
-      You must also include the symbol * for multiplication.
     </p>
     <p>
       After clicking Start, we can see the integral and click on Next Step to see the integral evaluated one step at a time.
