@@ -28,7 +28,7 @@
     </me>
   </p>
   <p>
-    Make sure that you are taking the derivative with respect to the desired variable.
+    When using the <c>diff()</c> command, make sure that you are taking the derivative with respect to the desired variable.
     Assigning a name to the derivative allows you to more easily substitute values into the derivative and determine the slope
     of a tangent line at a given point.
   </p>

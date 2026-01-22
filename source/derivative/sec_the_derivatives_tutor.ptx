@@ -2,7 +2,7 @@
   <title>The Derivatives Tutor</title>
   <idx><h>derivative</h><h>tutor</h></idx>
   <p>
-    The Derivatives tutor is a useful way for visualising the graphs of the first (and second) derivatives of a given function.
+    The Derivatives tutor is a useful way for visualizing the graphs of the first (and second) derivatives of a given function.
   </p>
   <figure>
     <caption>Opening up the Derivatives tutor using menus.</caption>
@@ -13,9 +13,10 @@
     <image source="images/DerivativeTutorLoad2-eps-converted-to" width="80%"/>
   </figure>
   <example>
-    <title>Visualising the Derivative of <m>(x-1)^2\sin(x)</m></title>
+    <title>Visualizing the Derivative of <m>(x-1)^2\sin(x)</m></title>
     <p>
-      This example will illustrate how to use the interactive derivatives viewer to visualise the derivatives of <m>(x-1)^2\sin(x)</m>.
+      This example will illustrate how to use the interactive derivatives viewer to visualize the derivatives of <m>(x-1)^2\sin(x)</m> on the 
+      interval <m>\left[0,\frac{\pi}{2}\right]</m>.
     </p>
     <p>
       First, you will need to start by typing out the function in the tutor. Unfortunately, you will not have access to the palettes toolbar in Maple, so

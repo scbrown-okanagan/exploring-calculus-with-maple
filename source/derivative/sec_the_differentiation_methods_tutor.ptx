@@ -14,7 +14,7 @@
   <example>
     <title>Differentiating <m>x^2\cos(x)</m> using the Product, Power, and Cosine Rules</title>
     <p>
-      This example will use the differentiation methods tutor to show how various differentiation rules are applied to <m>x^2\cos(x)</m>.
+      This example will use the Differentiation Methods tutor to show how various differentiation rules are applied to <m>x^2\cos(x)</m>.
     </p>
     <p>
       To begin, make sure that the function is typed in properly. You will not have access to the palettes toolbar in Maple, so
@@ -28,7 +28,7 @@
     </p>
     <image source="images/DiffTutorQ1-1-eps-converted-to" width="50%"/>
     <p>
-      Click on an appropriate differentiation rule to see the specific rule applied, along with the resulting expression.
+      You can click on an appropriate differentiation rule to see the specific rule applied, along with the resulting expression.
       If a rule cannot be applied, then the tutor will provide additional hints.
     </p>
     <image source="images/DiffTutorQ1-2-eps-converted-to" width="50%"/>
@@ -62,7 +62,7 @@
     </p>
     <image source="images/DiffTutorQ2-3-eps-converted-to" width="50%"/>
     <p>
-      Applying the remaining differentiation rules is left as an exercise to the reader.
+      Applying the remaining differentiation rules is left as an exercise for the reader.
     </p>
   </example>
 </section>

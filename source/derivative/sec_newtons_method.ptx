@@ -3,7 +3,7 @@
   <idx><h>Newton's method</h><h>NewtonsMethod</h></idx>
   <p>
     Suppose we start with the function <m>f(x) = { e}^x - 2</m>.
-    The root of this function is <m>x = \ln 2</m>, which is found by setting <m>f(x)=0</m> and solving for <m>x</m>.
+    The root of this function is <m>x = \ln(2)</m>, which is found by setting <m>f(x)=0</m> and solving for <m>x</m>.
     To get decimal approximations for roots of functions, we can simply use the <c>fsolve()</c> command.
     <idx><h>mathematical functions</h><h>exponential</h></idx>
     <idx><h>solving equations</h><h>fsolve</h></idx>
@@ -26,7 +26,7 @@
   </p>
   <p>
     Solvers such as the <c>fsolve()</c> command can find decimal approximations for roots such as this very quickly by employing efficient algorithms behind the scenes.
-    In this section, we will use Newton's method, which is very efficient technique for finding roots. 
+    In this section, we will use Newton's method, which is a very efficient technique for finding roots. 
     We need to load the <c>Student[Calculus1]</c> package before we use the <c>NewtonsMethod()</c> command.
     <idx><h>packages</h><h>with</h></idx>
     <idx><h>packages</h><h>Student[Calculus1]</h></idx>
@@ -34,7 +34,7 @@
   <p>
     The <c>NewtonsMethod()</c> command must be given a function as well as an initial value for the variable.
     This initial value should usually be chosen to be close to where we <q>guess</q> that a root should be found.
-    The method relies on calculating the root (or x-intercept) of the tangent line at the specified value, and iterates several times
+    The method relies on calculating the root (or <m>x</m>-intercept) of the tangent line at the specified value, and iterates several times
     for each new root found. In most cases, the roots of these tangent lines quickly converge to a true root of the function.
   </p>
   <p>
@@ -124,7 +124,7 @@
     </me>
   </p>
   <p>
-    You should try playing around with the various <c>output</c> options and setting the number of iterations to various values to see how quickly
+    You should try playing around with the different <c>output</c> options and setting the number of iterations to various values to see how quickly
     Newton's method can reach ten (or more) digits of accuracy.
   </p>
 </section>

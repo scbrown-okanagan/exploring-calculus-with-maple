@@ -1,7 +1,7 @@
 <section xml:id="sec_applications_of_the_derivative">
   <title>Applications of the Derivative</title>
   <p>
-    In the examples below, we will apply the use of derivatives for common tasks related to the shapes of functions.
+    In the examples below, we will use derivatives for common tasks related to the shapes of functions.
     These examples use function notation for derivatives, though the <c>diff()</c> command may also be used.
   </p>
   <example xml:id="ex_equation_of_tangent_line">
@@ -159,7 +159,7 @@
       </me>
     </p>
     <console prompt="> ">
-      <input>CN1 := 0</input>
+      <input>CN1 := 0;</input>
     </console>
     <p>
       <me>
@@ -170,7 +170,7 @@
       We can use the <c>fsolve()</c> command over smaller intervals to find the remaining critical numbers.
     </p>
     <console prompt="> ">
-      <input>CN2:=fsolve(f'(x)=0, x=1..2);</input>
+      <input>CN2 := fsolve(f'(x)=0, x=1..2);</input>
     </console>
     <p>
       <idx><h>solving equations</h><h>fsolve</h></idx>
@@ -180,7 +180,7 @@
       </me>
     </p>
     <console prompt="> ">
-      <input>CN3:=fsolve(f'(x)=0, x=3..4);</input>
+      <input>CN3 := fsolve(f'(x)=0, x=3..4);</input>
     </console>
     <p>
       <me>
