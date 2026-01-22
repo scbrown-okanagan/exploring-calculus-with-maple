@@ -8,7 +8,7 @@
     <idx><h>lines</h><h>tangent line!implicit function</h></idx>
     <p>
       In this example, we will find the equations of the tangent lines to the circle of radius <m>4</m>, centred at the point <m>(1,1)</m>, where <m>x=3</m>.
-      Once these equations are assigned, we will plot the circle and the two tangent together in one single <c>implicitplot()</c> command.
+      Once these equations are assigned, we will plot the circle and the two tangent lines together using a single <c>implicitplot()</c> command.
     </p>
     <aside>
       <p>
@@ -19,7 +19,7 @@
       </p>
     </aside>
     <console prompt="> ">
-      <input>circle := (x-1)\symbol{94}2 + (y-1)\symbol{94}2 = 16;</input>
+      <input>circle := (x-1)^2 + (y-1)^2 = 16;</input>
     </console>
     <p>
       <me>
@@ -144,7 +144,7 @@
       We'll start by assigning names to these two equations so that we can plot the two curves using <c>implicitplot()</c>.
     </p>
     <console prompt="> ">
-      <input>curve1 := x\symbol{94}2 - y\symbol{94}2 = 8;</input>
+      <input>curve1 := x^2 - y^2 = 8;</input>
     </console>
     <p>
       <me>

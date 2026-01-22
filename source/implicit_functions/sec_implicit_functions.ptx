@@ -10,7 +10,7 @@
     one variable explicitly in terms of the other. In Maple, it is easiest to assign a name to the entire equation, including the <m>=</m> sign.
   </p>
   <p>
-    The elliptic curve <m>y^2 = x^3 - 2*x + 1</m> is a simple example. It cannot be written as a single function of the form <m>y = f(x)</m>, 
+    The elliptic curve <m>y^2 = x^3 - 2x + 1</m> is a simple example. It cannot be written as a single function of the form <m>y = f(x)</m>, 
     since for a given value of <m>x</m>, there may be two different <m>y</m>-values.
   </p>
   <console prompt="> ">
