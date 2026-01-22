@@ -23,15 +23,15 @@
         <cell>Description</cell>
       </row>
       <row>
-        <cell><c>method = </c><em>method</em></cell>
+        <cell><c>method =</c> <em>method</em></cell>
         <cell><p>Select the method for approximation (<c>left</c>, <c>right</c>, <c>lower</c>, <c>upper</c>, <c>midpoint</c>, <c>trapezoid</c>, <c>simpson</c>).</p></cell>
       </row>
       <row>
-        <cell><c>output = </c><em>output</em></cell>
+        <cell><c>output =</c> <em>output</em></cell>
         <cell><p>Change how the output is displayed (<c>plot</c>, <c>value</c>, <c>sum</c>).</p></cell>
       </row>
       <row>
-        <cell><c>partition =  n </c></cell>
+        <cell><c>partition =</c>  <em>n</em> </cell>
         <cell><p>Change the number of subintervals to use for approximation.</p></cell>
       </row>
       <row bottom="minor">
@@ -52,11 +52,11 @@
     <title>Approximating Area using Left-hand and Right-hand Rules</title>
     <p>
       In this example, we will approximate the signed area between <m>f(x) = 10 { e}^{-x}</m> and the <m>x</m>-axis using 
-      left-hand and right-hand rectanges. First, we will see how Maple can give the approximate area using a specific number of 
-      subintervals (which Maple calls a <c>partition</c>). These are two common methods that we learn when first calculating Riemann sums.
+      left-hand and right-hand rectangles. These are two common methods that we learn when first calculating Riemann sums.
+      We will see how Maple can give the approximate area using a specific number of subintervals (which Maple calls a <c>partition</c>). 
     </p>
     <p>
-      To start, we will assign function, <m>f(x)</m>. and calculate some approximations.
+      To start, we will assign the function <m>f(x)</m> and calculate some approximations.
       <idx><h>mathematical functions</h><h>exponential</h></idx>
     </p>
     <console prompt="> ">
@@ -68,7 +68,7 @@
       </me>
     </p>
     <p>
-      We will start with using eight subintervals and approximate the area using left-hand and right-hand rectangles. The <c>method</c>
+      We will start by using eight subintervals and approximate the area using left-hand and right-hand rectangles. The <c>method</c>
       needs to be specified as well as the number of partitions. Maple will give the exact value of this Riemann sum, which can be 
       converted to decimal using the <c>evalf()</c> command.
       <idx><h>evalf</h></idx>
@@ -127,10 +127,10 @@
     </p>
   </example>
   <example>
-    <title>Approximating the Area under </title>
+    <title>Approximating the Area under <m>x \sin(x)</m></title>
     <p>
       In this example, we will approximate the signed area between <m>f(x) = x \sin(x)</m> and the <m>x</m>-axis using rectangle approximation.
-      Unlike in the previous example, we will be using altenative methods for determining the height of the rectangle in each subinterval (or <c>partition</c>),
+      Unlike in the previous example, we will be using alternative methods for determining the height of the rectangle in each subinterval (or <c>partition</c>),
       such as <c>upper</c>, <c>lower</c>, and <c>midpoint</c>.
     </p>
     <p>
@@ -148,7 +148,7 @@
     <p>
       The <c>method=upper</c> option always uses the maximum value of <m>f(x)</m> in each subinterval for the height of each rectangle.
       Below is a plot of the rectangles as well as the approximation of area given by the method when using ten subintervals.
-      As you can see, this method gives a very deliberate overestimate of the actual area bouded by this function and the <m>x</m>-axis.
+      As you can see, this method gives a very deliberate overestimate of the actual area bounded by this function and the <m>x</m>-axis.
     </p>
     <console prompt="> ">
       <input>with(Student[Calculus1]):</input>
@@ -175,7 +175,7 @@
       </me>
     </p>
     <p>
-      Finally, the midpoint rule uses the height of each rectangle as the value of the function at the midpoint in each subinterval.
+      Finally, the midpoint rule uses the value of the function at the midpoint in each subinterval as the height of each rectangle.
       Below is a plot of twenty rectangles using the midpoint rule.
     </p>
     <console prompt="> ">

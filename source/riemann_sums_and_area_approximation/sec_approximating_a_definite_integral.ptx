@@ -3,7 +3,7 @@
   <p>
     The <c>ApproximateInt()</c> command is commonly used to approximate the value of a definite integral,
     particularly when the exact value is computationally difficult, even by computer. 
-    To use the command for this purpose, it can be useful to assign a name to an definite integral calculation, using 
+    To use the command for this purpose, it can be useful to assign a name to a definite integral calculation, using 
     the <c>Int()</c> command. This capitalized version of the command is used to symbolically create an integral 
     without trying to compute it.
     <idx><h>integral</h><h>Int</h></idx>
