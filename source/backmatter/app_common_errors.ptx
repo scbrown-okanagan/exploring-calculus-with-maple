@@ -46,7 +46,7 @@
   </paragraphs><paragraphs>
     <title>The <c>%</c> Shortcut Not Working as Intended</title>
     <p>
-      The <c>%</c> shortcut will only use the output command that was last run and not necessarily the output of the command that is on the Maple input immediately above.
+      The <c>%</c> shortcut will only use the output of the command that was last run and not necessarily the output of the command that is on the Maple input immediately above.
       It is usually a good practice to use the <c>%</c> operator on the same line as the previous command to avoid this issue.
     </p>
     <example>
@@ -72,7 +72,7 @@
         </me>
       </p>
       <console prompt="> ">
-        <input>evalf(%)</input>
+        <input>evalf(%);</input>
       </console>
       <p>
         <me>
@@ -206,7 +206,7 @@ input expression: xy</output>
   <paragraphs>
     <title>Changing the Order of the Parameters in a Command</title>
     <p>
-      Many commands have multiple parameters and often the order in which the parameters is listed is important.
+      Many commands have multiple parameters and often the order in which the parameters are listed is important.
       Typing the parameters in an incorrect order in certain commands may cause an error message to be displayed when the command is executed.
     </p>
     <example>
@@ -270,10 +270,15 @@ input expression: xy</output>
     <example>
       <p>
         In this example, the <c>Int()</c> command and <c>int()</c> command behave differently.
-        Using <c>Int()</c> followed by <c>value(%)</c> is a good way to display the integral and then evaluate it.
+        The <c>Int()</c> command outputs the integral itself, whereas the <c>int()</c> command immediately computes the result of the integral.
       </p>
+      <aside>
+        <p>
+            Using <c>Int()</c> followed by <c>value(%)</c> is a good way to display the integral and then evaluate it.
+        </p>
+      </aside>
       <console prompt="> ">
-        <input>Int(2*x, x = 10 .. 13)</input>
+        <input>Int(2*x, x = 10 .. 13);</input>
       </console>
       <p>
         <me>
@@ -281,7 +286,7 @@ input expression: xy</output>
         </me>
       </p>
       <console prompt="> ">
-        <input>int(2*x, x = 10 .. 13)</input>
+        <input>int(2*x, x = 10 .. 13);</input>
       </console>
       <p>
         <me>
