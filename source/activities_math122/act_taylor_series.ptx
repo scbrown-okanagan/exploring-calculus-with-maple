@@ -157,7 +157,7 @@
           possible to write the Taylor series for these functions centred at <m>a=0</m> in their compact forms:
           <mdn>
             <mrow xml:id="eq_taylor_cos">\cos(x)\amp =\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!}</mrow>
-            <mrow xml:id="eq_taylor_ln">\ln(1+x)\amp =\sum_{n=0}^{\infty} \frac{(-1)^{n-1} x^n}{n}</mrow>
+            <mrow xml:id="eq_taylor_ln">\ln(1+x)\amp =\sum_{n=0}^{\infty} \frac{(-1)^n x^{n+1}}{n+1}</mrow>
           </mdn>
         </p>
       </introduction>
@@ -170,7 +170,7 @@
         </statement>
         <hint>
           <p>
-            The first 50 nonzero terms are given by <m>\sum_{n=0}^{50} \frac{(-1)^n x^{2n}}{(2n)!}</m>. You may use the <c>Sum()</c> command or 
+            The first 51 nonzero terms are given by <m>\sum_{n=0}^{50} \frac{(-1)^n x^{2n}}{(2n)!}</m>. You may use the <c>Sum()</c> command or 
             the palettes toolbar to create this expression in your <c>plot()</c> command.
           </p>
         </hint>
