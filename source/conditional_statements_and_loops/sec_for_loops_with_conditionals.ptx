@@ -4,7 +4,7 @@
   <idx><h>conditional statements</h><h>if/else statements</h></idx>
   <idx><h>conditional statements</h><h>if/elif/else statements</h></idx>
   <p>
-    We now combine all of the various conditional statements and loops together into one example.
+    In the following two examples, we combine various conditional statements and loops together.
   </p>
   <example>
     <title>Outputting the Primes up to <m>50</m></title>
@@ -25,7 +25,7 @@
     end do</input>
     </console>
     <p>
-      We only need to include an <sq>if</sq> statement inside the loop that runs the <c>print()</c> command when <m>i</m> is prime.
+      We only need to include an <c>if</c> statement inside the loop that runs the <c>print()</c> command when <m>i</m> is prime.
       We can make use of the <c>isprime()</c> command for this <c>if</c> statment and we do not require an <c>else</c>.
       <idx><h>isprime</h></idx>
     </p>
@@ -77,7 +77,7 @@
       </p>
     </aside>
     <p>
-      In this case, the for loop is given an ordered list of values for which to apply the first derivative test. The test performs its iterations 
+      In this case, the <c>for</c> loop is given an ordered list of values for which to apply the first derivative test. The test performs its iterations 
       and conditionals as follows:
       <ol>
         <li>Begin with the value <m>j=-2</m>.</li>

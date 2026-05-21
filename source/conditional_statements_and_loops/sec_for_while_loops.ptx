@@ -3,9 +3,9 @@
     <idx><h>loops</h><h>for</h></idx>
     <idx><h>loops</h><h>while</h></idx>
     <p>
-      <sq>For</sq> loops allow us to carry out a computation repeatedly for an entire range of values.
+      <c>for</c> loops allow us to carry out a computation repeatedly for an entire range of values.
       We can also combine these loops with conditional statements like <sq>if</sq> and <sq>else</sq>, as we will see in <xref ref="sec_for_loops_with_conditionals"/>.
-      To use a <sq>for</sq> loop, we are required to type
+      To use a <c>for</c> loop, we are required to type
     </p>
     <console prompt="> ">
       <input>for i from a to b do
@@ -25,9 +25,9 @@
     <title>Outputting the First <m>n</m> Derivatives</title>
     <idx><h>mathematical functions</h><h>sine</h></idx>
     <p>
-      We will use a basic <sq>for</sq> loop to output the first <m>10</m> derivatives of the function <m>f(x)=\sin(2x)</m>.
+      We will use a basic <c>for</c> loop to output the first <m>10</m> derivatives of the function <m>f(x)=\sin(2x)</m>.
       To do this, we will use the <c>diff()</c> command within the loop.
-      The <sq>for</sq> loop will output the <m>k</m>th derivative, starting from <m>k=1</m> and ending at <m>k=10</m>.
+      The <c>for</c> loop will output the <m>k</m>th derivative, starting from <m>k=1</m> and ending at <m>k=10</m>.
     </p>
     <aside>
       <p>

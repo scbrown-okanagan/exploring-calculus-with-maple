@@ -32,7 +32,7 @@
       We will outline this concept with a silly example. We define two variables <m>a=2</m> and <m>b=5</m>.
       If <m>a\lt b</m> is <em>true</em> (which it is because obviously <m>2</m> is less than <m>5</m>),
       we print the word "Mario". Otherwise (if it's <em>false</em>), we print the word "Luigi". Therefore,
-      we expect that "Mario" will be printed. \begin{maplegroup} \begin{mapleinput}
+      we expect that "Mario" will be printed.
     </p>
     <aside>
       <p>
@@ -102,13 +102,13 @@
   </example>
   <p>
     The <c>elif</c> (else if) command allows us to add more than one condition to our statement.
-    For example, if we want to test whether a particular number is (i) positive, (ii) negative, or (iii) zero,
+    For example, if we want to test whether a particular number is positive, negative, or zero,
     and wish to have different outputs based on these <em>three</em> possibilities, we can do so with a combination of <c>if</c>, <c>else</c>, and <c>elif</c>.
   </p>
   <example>
     <title>Multiple Conditional Based on Numerical Value</title>
     <p>
-      In this example, we will use one of these statements to illustrate the first derivative test in calculus.
+      In this example, we will use one of conditional statements to illustrate the first derivative test in calculus.
       We would like to answer the following question: for a particular value <m>x=a</m>, is the function <m>g(x)</m> (i) increasing
       (positive derivative), (ii) decreasing (negative derivative), or (iii) neither increasing nor decreasing (zero derivative)?
     </p>
