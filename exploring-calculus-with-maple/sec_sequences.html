@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.10';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -615,7 +615,13 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_sequences"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Defining a Sequence</span>
 </h2>
-<div class="para logical" id="sec_sequences-2">
+<div class="para" id="sec_sequences-2">Suppose we want to generate a list of integers that are <span class="process-math">\(2\)</span> more than a multiple of <span class="process-math">\(3\text{.}\)</span> For example, <span class="process-math">\(32\)</span> is one of these numbers because <span class="process-math">\(32 = 3(10)+2\text{.}\)</span> In other words, we want to create a list of numbers of the form <span class="process-math">\(3k+2\text{.}\)</span> <div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_sequences-3">Or perhaps we want a nice way to express and generate all the odd numbers <span class="process-math">\(1,3,5,7,9,\ldots\)</span> (numbers of the form <span class="process-math">\(2k+1\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_sequences-4">These lists are called <em class="emphasis">sequences</em>. In both of these examples, <span class="process-math">\(k\)</span> is known as an <em class="emphasis">index</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec_sequences-5">
 <div class="para">The shortest way to list the terms in a sequence is using the $ symbol in Maple. As an example, we may wish to list the elements of the sequence</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -623,35 +629,23 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">This should give four integers that follow the form of <span class="process-math">\(3k^2+2\)</span> from index <span class="process-math">\(k=0\)</span> up to <span class="process-math">\(k=3\text{.}\)</span> </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec_sequences-3">A dollar symbol is used after the expression of a generic term of the sequence, followed by specifying an interval for the index.<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec_sequences-6">A dollar symbol is used after the expression of a generic term of the sequence, followed by specifying an interval for the index.<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>3*k^2+2 $ k=0..3;
 </b></pre></div>
-<div class="para logical" id="sec_sequences-5">
+<div class="para logical" id="sec_sequences-8">
 <div class="displaymath process-math">
 \begin{equation*}
 \displaystyle 2,\,5,\,14,\,29
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="sec_sequences-6">The index does not have to start at zero. Here are five integers of the sequence <span class="process-math">\(\left\lbrace2k^2-k\right\rbrace_{k=1}^5\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>2*k^2-k $ k=1..5;
-</b></pre></div>
-<div class="para logical" id="sec_sequences-8">
-<div class="displaymath process-math">
-\begin{equation*}
-\displaystyle 1,\,6,\,15,\,28,\,45
-\end{equation*}
-</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec_sequences-9">We can also list the terms in a sequence by using the <code class="code-inline tex2jax_ignore">seq()</code> command. This command essentially performs the same operation as the $ symbol. Here is that same sequence again, using the <code class="code-inline tex2jax_ignore">seq()</code> command. <div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec_sequences-9">The index does not have to start at zero. Here are five integers of the sequence <span class="process-math">\(\left\lbrace2k^2-k\right\rbrace_{k=1}^5\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>seq(2*k^2-k, k=1..5);
+<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>2*k^2-k $ k=1..5;
 </b></pre></div>
 <div class="para logical" id="sec_sequences-11">
 <div class="displaymath process-math">
@@ -660,6 +654,18 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec_sequences-12">We can also list the terms in a sequence by using the <code class="code-inline tex2jax_ignore">seq()</code> command. This command essentially performs the same operation as the $ symbol. Here is that same sequence again, using the <code class="code-inline tex2jax_ignore">seq()</code> command. <div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>seq(2*k^2-k, k=1..5);
+</b></pre></div>
+<div class="para logical" id="sec_sequences-14">
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle 1,\,6,\,15,\,28,\,45
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec_sequences-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Section 17.1: Defining a Sequence"><a href="#sec_sequences" title="Copy heading and permalink for Section 17.1: Defining a Sequence" aria-label="Copy heading and permalink for Section 17.1: Defining a Sequence">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">

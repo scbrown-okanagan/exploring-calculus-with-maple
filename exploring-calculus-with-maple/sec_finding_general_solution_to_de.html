@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.10';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -644,28 +644,28 @@ y'=x^2y\text{,}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec_finding_general_solution_to_de-6">Now, to solve the differential equation, we use the <code class="code-inline tex2jax_ignore">dsolve()</code> command. This command does not require that any special packages are loaded. This command requires that the differential equation is properly using function notation and also requires the function for which to solve for. <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec_finding_general_solution_to_de-6">Now, to solve the differential equation, we use the <code class="code-inline tex2jax_ignore">dsolve()</code> command. Note that this command can be used without needing to load any special packages. The dsolve() command requires two parameters; the first is the differential equation, which must be properly defined using function notation, and the second is the function that we wish to solve for. <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>dsolve(de1, y(x));
+<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>desoln1 := dsolve(de1, y(x));
 </b></pre></div>
 <div class="para logical" id="sec_finding_general_solution_to_de-8">
 <div class="displaymath process-math">
 \begin{equation*}
-\displaystyle y \left( x \right) = \_C\mathit{1}\,{{ e}^{1/3\,{x}^{3}}}
+\displaystyle desoln1 := y \left( x \right) = \_C\mathit{1}\,{{ e}^{1/3\,{x}^{3}}}
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec_finding_general_solution_to_de-9">Due to the nature of indefinite integration, we can expect an arbitrary constant to appear in the solution. In this case, Maple uses <span class="process-math">\(\_C1\)</span> as an arbitrary coefficient. By default, Maple names the constants <span class="process-math">\(\_C1, \_C2, \_C3, \ldots \text{ etc }\text{.}\)</span> Since this value is arbitrary, this solution is known as a <em class="emphasis">general solution</em> to the differential equation. <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec_finding_general_solution_to_de-10">We can clean this up a bit by substituting a ‘nicer’ constant instead of <span class="process-math">\(\_C1\text{,}\)</span> using the <code class="code-inline tex2jax_ignore">subs()</code> command. <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec_finding_general_solution_to_de-10">We can clean this up a bit by using the <code class="code-inline tex2jax_ignore">subs()</code> command to replace <span class="process-math">\(\_C1\)</span> by a ‘nicer’ constant. <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>desoln := subs(_C1=A, _C1*exp((1/3)*x^3));
+<div class="code-box"><pre class="console clipboardable"><span class="prompt unselectable">&gt; </span><b>desoln2 := subs(_C1=A, rhs(desoln1));
 </b></pre></div>
 <div class="para logical" id="sec_finding_general_solution_to_de-12">
 <div class="displaymath process-math">
 \begin{equation*}
-\displaystyle desoln := A\,{{ e}^{1/3\,{x}^{3}}}
+\displaystyle desoln2 := A\,{{ e}^{1/3\,{x}^{3}}}
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec_finding_general_solution_to_de-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
