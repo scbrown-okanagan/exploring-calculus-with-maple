@@ -42,7 +42,7 @@
     </me>
   </p>
   <p>
-    To determine the value of an infinite sequence, we can use <c>infinity</c> as the a bound on the index.
+    To determine the value of an infinite series, we can use <c>infinity</c> as a bound on the index.
     The value of an infinite sum may be a value (in the case of a convergent sum) or <m>\pm\infty</m> (in the case of a divergent sum).
     <idx><h>sequences and series</h><h>infinite series</h></idx>
   </p>
@@ -61,7 +61,7 @@
     This infinite series gives us a finite sum, so it is said to be convergent.
   </p>
   <console prompt="> ">
-    <input>Sum(sin(k)+1, k=1..infinity); value(%)</input>
+    <input>Sum(sin(k)+1, k=1..infinity); value(%);</input>
   </console>
   <p>
     <idx><h>mathematical functions</h><h>sine</h></idx>

@@ -12,7 +12,7 @@
   <p>
     In Maple, the <c>taylor()</c> command outputs the first few terms of the Taylor series. It uses <q>big O</q> notation as a placeholder 
     to represent the remaining terms of higher degree. The number of terms displayed may be specified.
-    In this example, we can see the Taylor series expansion of <m>f(x)=sin(x)</m> centred at <m>x=5</m>, with terms up to (but not including)
+    In this example, we can see the Taylor series expansion of <m>f(x)=\sin(x)</m> centred at <m>x=5</m>, with terms up to (but not including)
     degree four.
   </p>
   <console prompt="> ">
@@ -24,7 +24,7 @@
     </me>
   </p>
   <p>
-    The first <m>n</m> terms of a Taylor series is known as an <m>n</m>th degree Taylor polynomial approximation of <m>f(x)</m>.
+    The first <m>n+1</m> terms (including terms with zero coefficients) of a Taylor series is known as an <m>n</m>th degree Taylor polynomial approximation of <m>f(x)</m>.
     Depending on the convergence of the series, this polynomial approximation will have a very similar shape to the function in 
     an interval centred at <m>x=a</m>.
     The <c>convert()</c> command can be used to eliminate higher terms of the series and give a Taylor polynomial of a desired degree.
@@ -74,7 +74,7 @@
     <p>
       To begin, we construct the Taylor series expansion of <m>\sin(x)</m>, which will output the series using <q>big O</q> notation.
       This needs to be converted to a polynomial with finitely many terms. 
-      The <c>convert()</c> command lets Maple know that we wish for the
+      The <c>convert()</c> command may be used to convert the infinite series into a finite polynomial.
       <idx><h>ditto operator</h></idx>
     </p>
     <console prompt="> ">
