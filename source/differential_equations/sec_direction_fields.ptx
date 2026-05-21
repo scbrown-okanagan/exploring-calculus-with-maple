@@ -1,12 +1,12 @@
 <section xml:id="sec_direction_fields">
   <title>Direction Fields</title>
   <p>
-    A direction field is a way to visualise the family of functions that make up the general solution to a first-order differential equation.
+    A direction field is a way to visualize the family of functions that make up the general solution to a first-order differential equation.
     At every point on the graph, a short arrow is draw that represents the slope of the tangent line to a solution curve passing through that point.
     This can be quite useful to get a visual interpretation of how solutions to a differential equation behave.
   </p>
   <p>
-    We use the <c>DEplot()</c> to plot the direction field for a differential equation and it requires that the <c>DETools</c> package is loaded first.
+    We use the <c>DEplot()</c> command to plot the direction field for a differential equation and it requires that the <c>DETools</c> package is loaded first.
     Packages are loaded using the <c>with()</c> command and it is typically a good idea to load any necessary packages at the top of your worksheet.
     Loading a package only needs to be done once per Maple worksheet, but needs to be run each time you open a new or previously closed document.
     <idx><h>packages</h><h>DETools</h></idx>

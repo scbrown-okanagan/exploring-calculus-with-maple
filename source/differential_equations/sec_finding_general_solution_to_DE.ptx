@@ -27,16 +27,17 @@
     </me>
   </p>
   <p>
-    Now, to solve the differential equation, we use the <c>dsolve()</c> command. This command does not require that any special packages are loaded.
-    This command requires that the differential equation is properly using function notation and also requires the function for which to solve for.
+    Now, to solve the differential equation, we use the <c>dsolve()</c> command. Note that this command can be used without needing to load any special packages. 
+    The dsolve() command requires two parameters; the first is the differential equation, which must be properly defined using function notation, 
+    and the second is the function that we wish to solve for.
     <idx><h>differential equations</h><h>dsolve</h></idx>
   </p>
   <console prompt="> ">
-    <input>dsolve(de1, y(x));</input>
+    <input>desoln1 := dsolve(de1, y(x));</input>
   </console>
   <p>
     <me>
-      \displaystyle y \left( x \right) = \_C\mathit{1}\,{{ e}^{1/3\,{x}^{3}}}
+      \displaystyle desoln1 := y \left( x \right) = \_C\mathit{1}\,{{ e}^{1/3\,{x}^{3}}}
     </me>
   </p>
   <p>
@@ -46,15 +47,15 @@
     <idx><h>differential equations</h><h>dsolve!general solution</h></idx>
   </p>
   <p>
-    We can clean this up a bit by substituting a <sq>nicer</sq> constant instead of <m>\_C1</m>, using the <c>subs()</c> command.
+    We can clean this up a bit by using the <c>subs()</c> command to replace <m>\_C1</m> by a <sq>nicer</sq> constant.
     <idx><h>subs</h></idx>
   </p>
   <console prompt="> ">
-    <input>desoln := subs(_C1=A, _C1*exp((1/3)*x^3));</input>
+    <input>desoln2 := subs(_C1=A, rhs(desoln1));</input>
   </console>
   <p>
     <me>
-      \displaystyle desoln := A\,{{ e}^{1/3\,{x}^{3}}}
+      \displaystyle desoln2 := A\,{{ e}^{1/3\,{x}^{3}}}
     </me>
   </p>
   <p>
